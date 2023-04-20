@@ -9,7 +9,7 @@ using System.Data;
 
 namespace Controle
 {
-    public class Conexão
+    public class Conexao
     {
         static private string servidor = "localhost";
         static private string db = "bdguizzo";
