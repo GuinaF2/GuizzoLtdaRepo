@@ -1,8 +1,8 @@
 namespace GuizzoLtda
 {
-    public partial class Cadastro : Form
+    public partial class Principal : Form
     {
-        public Cadastro()
+        public Principal()
         {
             InitializeComponent();
         }

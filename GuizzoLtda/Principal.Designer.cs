@@ -1,6 +1,6 @@
 ﻿namespace GuizzoLtda
 {
-    partial class Cadastro
+    partial class Principal
     {
         /// <summary>
         ///  Required designer variable.
