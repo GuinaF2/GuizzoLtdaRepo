@@ -19,11 +19,11 @@ namespace Controle
             int valorCadastro = -1;
             try
             {
-                string SQL = "INSERT INTO tb_usuario(nome, cpf, email, telefone, senha) values(@nome, @cpf, @email, @telefone, @senha)";
+                string SQL = "INSERT INTO tb_usuario(nome, senha) values(@nome, @senha)";
                 //declaração de vetor de campos
-                string[] campos = { "@nome", "@cpf", "@email", "@telefone", "@senha" };
+                string[] campos = { "@nome", "@senha" };
                 //declaração de vetor de informações
-                string[] valores = { modelo.NomeUser, modelo.CpfUser, modelo.EmailUser, modelo.FoneUser, modelo.SenhaUser };
+                string[] valores = { modelo.NomeUser, modelo.SenhaUser };
 
                 if (conexaosql.cadastrar(campos, valores, SQL) >= 1)
                 {
@@ -65,9 +65,9 @@ namespace Controle
         {
             try
             {
-                string sql = "UPDATE tb_usuario set nome=@nome, cpf=@cpf, email=@email, telefone=@telefone, senha=@senha where idusuario= @codigo";
-                string[] campos = { "@nome", "@cpf", "@email", "@telefone", "@senha" };
-                string[] valores = { us.NomeUser, us.CpfUser, us.EmailUser, us.FoneUser, us.SenhaUser };
+                string sql = "UPDATE tb_usuario set nome=@nome, senha=@senha where idusuario= @codigo";
+                string[] campos = { "@nome", "@senha" };
+                string[] valores = { us.NomeUser, us.SenhaUser };
                 if (conexaosql.atualizarDados(us.CodUsuario, campos, valores, sql) >= 1)
                 {
                     return resultado = true;
@@ -87,13 +87,13 @@ namespace Controle
             int registro;
             try
             {
-                string sql = "SELECT COUNT(*) FROM tb_usuario where email=@email and senha=@senha";
+                string sql = "SELECT COUNT(*) FROM tb_usuario where nome=@nome and senha=@senha";
                 MySqlConnection conexaologin = conexaosql.getConexao();
                 conexaologin.Open();
 
                 MySqlCommand cmd = new MySqlCommand(sql, conexaologin);
                 cmd.CommandType = CommandType.Text;
-                cmd.Parameters.AddWithValue("@email", us.EmailUser);
+                cmd.Parameters.AddWithValue("@nome", us.NomeUser);
                 cmd.Parameters.AddWithValue("@senha", us.SenhaUser);
                 registro = Convert.ToInt32(cmd.ExecuteScalar()); //retorna um inteiro
                 conexaologin.Close();
