@@ -18,9 +18,14 @@ namespace GuizzoLtda
 
         private void btnUsuario_Click(object sender, EventArgs e)
         {
-            UsuarioCadLog fusercad = new UsuarioCadLog();
+            FuncionarioCadLog ffunccad = new FuncionarioCadLog();
             this.Hide();
-            fusercad.Show();
+            ffunccad.Show();
+        }
+
+        private void Principal_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
