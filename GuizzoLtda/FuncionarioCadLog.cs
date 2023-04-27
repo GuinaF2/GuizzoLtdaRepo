@@ -16,5 +16,15 @@ namespace GuizzoLtda
         {
             InitializeComponent();
         }
+
+        private void txtSenha_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCadSenha_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

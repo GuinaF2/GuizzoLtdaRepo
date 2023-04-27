@@ -28,12 +28,116 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtLogin = new System.Windows.Forms.TextBox();
+            this.txtSenha = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnCadSenha = new System.Windows.Forms.Button();
+            this.btnLoginFunc = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(309, 155);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(40, 15);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Nome";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(309, 234);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(39, 15);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Senha";
+            // 
+            // txtLogin
+            // 
+            this.txtLogin.Location = new System.Drawing.Point(309, 173);
+            this.txtLogin.Name = "txtLogin";
+            this.txtLogin.Size = new System.Drawing.Size(133, 23);
+            this.txtLogin.TabIndex = 2;
+            // 
+            // txtSenha
+            // 
+            this.txtSenha.Location = new System.Drawing.Point(309, 252);
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.Size = new System.Drawing.Size(133, 23);
+            this.txtSenha.TabIndex = 3;
+            this.txtSenha.TextChanged += new System.EventHandler(this.txtSenha_TextChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(329, 38);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(113, 50);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Login";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(91, 181);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(97, 15);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Primeiro Acesso?";
+            // 
+            // btnCadSenha
+            // 
+            this.btnCadSenha.Location = new System.Drawing.Point(76, 215);
+            this.btnCadSenha.Name = "btnCadSenha";
+            this.btnCadSenha.Size = new System.Drawing.Size(133, 39);
+            this.btnCadSenha.TabIndex = 6;
+            this.btnCadSenha.Text = "Criar Senha";
+            this.btnCadSenha.UseVisualStyleBackColor = true;
+            this.btnCadSenha.Click += new System.EventHandler(this.btnCadSenha_Click);
+            // 
+            // btnLoginFunc
+            // 
+            this.btnLoginFunc.Location = new System.Drawing.Point(309, 308);
+            this.btnLoginFunc.Name = "btnLoginFunc";
+            this.btnLoginFunc.Size = new System.Drawing.Size(133, 39);
+            this.btnLoginFunc.TabIndex = 7;
+            this.btnLoginFunc.Text = "Criar Senha";
+            this.btnLoginFunc.UseVisualStyleBackColor = true;
+            // 
+            // FuncionarioCadLog
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnLoginFunc);
+            this.Controls.Add(this.btnCadSenha);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtSenha);
+            this.Controls.Add(this.txtLogin);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Name = "FuncionarioCadLog";
             this.Text = "FuncionarioCadLog";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private Label label1;
+        private Label label2;
+        private TextBox txtLogin;
+        private TextBox txtSenha;
+        private Label label3;
+        private Label label4;
+        private Button btnCadSenha;
+        private Button btnLoginFunc;
     }
 }

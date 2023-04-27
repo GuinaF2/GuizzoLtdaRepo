@@ -39,9 +39,9 @@
             // 
             // btnUsuario
             // 
-            this.btnUsuario.Location = new System.Drawing.Point(420, 90);
+            this.btnUsuario.Location = new System.Drawing.Point(482, 139);
             this.btnUsuario.Name = "btnUsuario";
-            this.btnUsuario.Size = new System.Drawing.Size(285, 98);
+            this.btnUsuario.Size = new System.Drawing.Size(184, 35);
             this.btnUsuario.TabIndex = 0;
             this.btnUsuario.Text = "Funcionário";
             this.btnUsuario.UseVisualStyleBackColor = true;
@@ -49,9 +49,9 @@
             // 
             // btnAdmin
             // 
-            this.btnAdmin.Location = new System.Drawing.Point(420, 251);
+            this.btnAdmin.Location = new System.Drawing.Point(482, 281);
             this.btnAdmin.Name = "btnAdmin";
-            this.btnAdmin.Size = new System.Drawing.Size(285, 96);
+            this.btnAdmin.Size = new System.Drawing.Size(184, 37);
             this.btnAdmin.TabIndex = 1;
             this.btnAdmin.Text = "Admin";
             this.btnAdmin.UseVisualStyleBackColor = true;
@@ -77,9 +77,9 @@
             // 
             // btnFotoEmp
             // 
-            this.btnFotoEmp.Location = new System.Drawing.Point(67, 352);
+            this.btnFotoEmp.Location = new System.Drawing.Point(58, 347);
             this.btnFotoEmp.Name = "btnFotoEmp";
-            this.btnFotoEmp.Size = new System.Drawing.Size(177, 57);
+            this.btnFotoEmp.Size = new System.Drawing.Size(197, 37);
             this.btnFotoEmp.TabIndex = 4;
             this.btnFotoEmp.Text = "Selecionar";
             this.btnFotoEmp.UseVisualStyleBackColor = true;
