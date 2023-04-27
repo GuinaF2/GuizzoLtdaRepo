@@ -9,6 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="oydmvlnr.3uj~" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Controle\Controle.csproj" />
     <ProjectReference Include="..\Modelos\Modelos.csproj" />
   </ItemGroup>
