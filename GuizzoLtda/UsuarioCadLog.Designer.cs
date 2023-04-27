@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnFuncio = new System.Windows.Forms.Button();
+            this.btnEmpresa = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -43,31 +43,33 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Selecione o tipo de Usuário";
             // 
-            // button1
+            // btnFuncio
             // 
-            this.button1.Location = new System.Drawing.Point(239, 157);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(294, 94);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Funcionário";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnFuncio.Location = new System.Drawing.Point(239, 157);
+            this.btnFuncio.Name = "btnFuncio";
+            this.btnFuncio.Size = new System.Drawing.Size(294, 94);
+            this.btnFuncio.TabIndex = 1;
+            this.btnFuncio.Text = "Funcionário";
+            this.btnFuncio.UseVisualStyleBackColor = true;
+            this.btnFuncio.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btnEmpresa
             // 
-            this.button2.Location = new System.Drawing.Point(239, 301);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(294, 94);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Empresa";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnEmpresa.Location = new System.Drawing.Point(239, 301);
+            this.btnEmpresa.Name = "btnEmpresa";
+            this.btnEmpresa.Size = new System.Drawing.Size(294, 94);
+            this.btnEmpresa.TabIndex = 2;
+            this.btnEmpresa.Text = "Empresa";
+            this.btnEmpresa.UseVisualStyleBackColor = true;
+            this.btnEmpresa.Click += new System.EventHandler(this.btnEmpresa_Click);
             // 
             // UsuarioCadLog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnEmpresa);
+            this.Controls.Add(this.btnFuncio);
             this.Controls.Add(this.label1);
             this.Name = "UsuarioCadLog";
             this.Text = "UsuarioCadLog";
@@ -79,7 +81,7 @@
         #endregion
 
         private Label label1;
-        private Button button1;
-        private Button button2;
+        private Button btnFuncio;
+        private Button btnEmpresa;
     }
 }
