@@ -26,5 +26,10 @@ namespace GuizzoLtda
         {
 
         }
+
+        private void btnLoginFunc_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
