@@ -4,21 +4,21 @@
     {
         //criação das variaveis protegidas
         private int idUsuario;
-        private string cpf;
-        private string email;
         private string nome;
-        private string telefone;
+        private string cpf;
+        private string contato;
+        private string dtnasc;
         private string senha;
         //defino o construtor modelo usuario
 
         public UsuarioModelo()
         {
             idUsuario = 0;
+            nome = ""; 
             cpf = "";
-            email = "";
-            telefone = "";
-            nome = "";
+            contato = "";
             senha = "";
+            dtnasc = "";
         }
 
         public int CodUsuario
@@ -27,27 +27,26 @@
             set { idUsuario = value; }
 
         }
-        public string CpfUser
-        {
-            get { return cpf; }
-            set { cpf = value; }
-        }
-        public string EmailUser
-        {
-            get { return email; }
-            set { email = value; }
-        }
         public string NomeUser
         {
             get { return nome; }
             set { nome = value; }
 
         }
-        public string FoneUser
+        public string CpfUser
         {
-            get { return telefone; }
-            set { telefone = value; }
-
+            get { return cpf; }
+            set { cpf = value; }
+        }
+        public string ContatoUser
+        {
+            get { return contato; }
+            set { contato = value; }
+        }
+        public string NascimentoUser
+        {
+            get { return dtnasc; }
+            set { dtnasc = value; }
         }
         public string SenhaUser
         {

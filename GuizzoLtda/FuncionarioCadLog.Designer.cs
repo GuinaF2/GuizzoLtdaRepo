@@ -35,9 +35,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnLoginFunc = new System.Windows.Forms.Button();
             this.txtContato = new System.Windows.Forms.TextBox();
-            this.txtDtNasc = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.NascimentoDt = new System.Windows.Forms.DateTimePicker();
+            this.txtSenha = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnRetornar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -64,6 +67,7 @@
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(133, 23);
             this.txtLogin.TabIndex = 2;
+            this.txtLogin.TextChanged += new System.EventHandler(this.txtLogin_TextChanged);
             // 
             // txtCpf
             // 
@@ -95,22 +99,15 @@
             // 
             // txtContato
             // 
-            this.txtContato.Location = new System.Drawing.Point(309, 289);
+            this.txtContato.Location = new System.Drawing.Point(309, 279);
             this.txtContato.Name = "txtContato";
             this.txtContato.Size = new System.Drawing.Size(133, 23);
             this.txtContato.TabIndex = 11;
             // 
-            // txtDtNasc
-            // 
-            this.txtDtNasc.Location = new System.Drawing.Point(309, 230);
-            this.txtDtNasc.Name = "txtDtNasc";
-            this.txtDtNasc.Size = new System.Drawing.Size(133, 23);
-            this.txtDtNasc.TabIndex = 10;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(309, 271);
+            this.label5.Location = new System.Drawing.Point(309, 261);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(50, 15);
             this.label5.TabIndex = 9;
@@ -125,13 +122,49 @@
             this.label6.TabIndex = 8;
             this.label6.Text = "Data Nascimento";
             // 
+            // NascimentoDt
+            // 
+            this.NascimentoDt.Location = new System.Drawing.Point(284, 230);
+            this.NascimentoDt.Name = "NascimentoDt";
+            this.NascimentoDt.Size = new System.Drawing.Size(200, 23);
+            this.NascimentoDt.TabIndex = 12;
+            // 
+            // txtSenha
+            // 
+            this.txtSenha.Location = new System.Drawing.Point(309, 329);
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.Size = new System.Drawing.Size(133, 23);
+            this.txtSenha.TabIndex = 14;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(309, 311);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(39, 15);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Senha";
+            // 
+            // btnRetornar
+            // 
+            this.btnRetornar.Location = new System.Drawing.Point(21, 37);
+            this.btnRetornar.Name = "btnRetornar";
+            this.btnRetornar.Size = new System.Drawing.Size(133, 39);
+            this.btnRetornar.TabIndex = 15;
+            this.btnRetornar.Text = "Retornar";
+            this.btnRetornar.UseVisualStyleBackColor = true;
+            this.btnRetornar.Click += new System.EventHandler(this.btnRetornar_Click);
+            // 
             // FuncionarioCadLog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnRetornar);
+            this.Controls.Add(this.txtSenha);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.NascimentoDt);
             this.Controls.Add(this.txtContato);
-            this.Controls.Add(this.txtDtNasc);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnLoginFunc);
@@ -156,8 +189,11 @@
         private Label label3;
         private Button btnLoginFunc;
         private TextBox txtContato;
-        private TextBox txtDtNasc;
         private Label label5;
         private Label label6;
+        private DateTimePicker NascimentoDt;
+        private TextBox txtSenha;
+        private Label label4;
+        private Button btnRetornar;
     }
 }

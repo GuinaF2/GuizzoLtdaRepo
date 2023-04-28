@@ -19,11 +19,11 @@ namespace Controle
             int valorCadastro = -1;
             try
             {
-                string SQL = "INSERT INTO tb_usuario(nome, senha) values(@nome, @senha)";
+                string SQL = "INSERT INTO tb_pessoa(nome,cpf,senha,dtnasc,contato) values(@nome,@cpf,@senha,@dtnasc,@contato)";
                 //declaração de vetor de campos
-                string[] campos = { "@nome", "@senha" };
+                string[] campos = { "@nome", "@cpf", "@senha", "@dtnasc", "@contato" };
                 //declaração de vetor de informações
-                string[] valores = { modelo.NomeUser, modelo.SenhaUser };
+                string[] valores = { modelo.NomeUser, modelo.CpfUser, modelo.SenhaUser, modelo.NascimentoUser, modelo.ContatoUser };
 
                 if (conexaosql.cadastrar(campos, valores, SQL) >= 1)
                 {
@@ -65,7 +65,7 @@ namespace Controle
         {
             try
             {
-                string sql = "UPDATE tb_usuario set nome=@nome, senha=@senha where idusuario= @codigo";
+                string sql = "UPDATE tb_pessoa set nome=@nome, senha=@senha where idpessoa= @codigo";
                 string[] campos = { "@nome", "@senha" };
                 string[] valores = { us.NomeUser, us.SenhaUser };
                 if (conexaosql.atualizarDados(us.CodUsuario, campos, valores, sql) >= 1)
@@ -87,7 +87,7 @@ namespace Controle
             int registro;
             try
             {
-                string sql = "SELECT COUNT(*) FROM tb_usuario where nome=@nome and senha=@senha";
+                string sql = "SELECT COUNT(*) FROM tb_pessoa where nome=@nome and senha=@senha";
                 MySqlConnection conexaologin = conexaosql.getConexao();
                 conexaologin.Open();
 
@@ -115,7 +115,7 @@ namespace Controle
 
                 MySqlCommand cmd = con.CreateCommand();
 
-                cmd.CommandText = "SELECT * from tb_usuario where idusuario = @id";
+                cmd.CommandText = "SELECT * from tb_pessoa where idpessoa = @id";
                 cmd.Parameters.AddWithValue("@id", id);
 
                 MySqlDataReader registro = cmd.ExecuteReader();
@@ -123,10 +123,9 @@ namespace Controle
                 if (registro.HasRows)
                 {
                     registro.Read();
-                    us.CpfUser = registro["cpf"].ToString();
-                    us.EmailUser = registro["email"].ToString();
                     us.NomeUser = registro["nome"].ToString();
-                    us.FoneUser = registro["telefone"].ToString();
+                    us.CpfUser = registro["cpf"].ToString();
+                    us.ContatoUser = registro["contato"].ToString();
                     us.SenhaUser = registro["senha"].ToString();
                 }
                 con.Close();
