@@ -34,12 +34,10 @@ namespace GuizzoLtda
         private void btnLoginFunc_Click(object sender, EventArgs e)
         {
             UsuarioModelo.NomeUser = txtLogin.Text;
-            UsuarioModelo.ContatoUser = txtContato.Text;
-            UsuarioModelo.CpfUser = txtCpf.Text;
-            UsuarioModelo.NascimentoUser = NascimentoDt.Text;
+            
             UsuarioModelo.SenhaUser = txtSenha.Text;
 
-            if (txtLogin.Text == "" || txtCpf.Text == "" || txtContato.Text == "" || NascimentoDt.Text == "")
+            if (txtLogin.Text == "" || txtSenha.Text == "")
             {
                 MessageBox.Show("Erro no cadastro.");
 
