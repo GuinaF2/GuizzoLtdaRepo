@@ -54,6 +54,12 @@
             set { senha = value; }
 
         }
+        public int CodCargo
+        {
+            get { return CodCargo; }
+            set { CodCargo = value; } 
+            
+        }
 
     }
 }

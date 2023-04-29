@@ -144,12 +144,13 @@ namespace Controle
             int registro;
             try
             {
-                string sql = "SELECT COUNT(*) FROM tb_funcionario where nomeuser=@nome and senhauser=@senha";
+                string sql = "SELECT COUNT(*) FROM tb_funcionario where nomeuser=@nome and senhauser=@senha and cargo=2";
                 MySqlConnection conexaologin = conexaosql.getConexao();
                 conexaologin.Open();
 
                 MySqlCommand cmd = new MySqlCommand(sql, conexaologin);
                 cmd.CommandType = CommandType.Text;
+                cmd.Parameters.AddWithValue("@cargo",us.CodCargo);
                 cmd.Parameters.AddWithValue("@nome", us.NomeUser);
                 cmd.Parameters.AddWithValue("@senha", us.SenhaUser);
                 registro = Convert.ToInt32(cmd.ExecuteScalar()); //retorna um inteiro
