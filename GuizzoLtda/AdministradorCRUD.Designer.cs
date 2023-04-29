@@ -28,13 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
+            SaveUpdate = new Button();
+            SaveDelete = new Button();
+            SaveCreate = new Button();
             SuspendLayout();
+            // 
+            // SaveUpdate
+            // 
+            SaveUpdate.Location = new Point(72, 239);
+            SaveUpdate.Name = "SaveUpdate";
+            SaveUpdate.Size = new Size(75, 23);
+            SaveUpdate.TabIndex = 0;
+            SaveUpdate.Text = "Atualizar";
+            SaveUpdate.UseVisualStyleBackColor = true;
+            // 
+            // SaveDelete
+            // 
+            SaveDelete.Location = new Point(72, 304);
+            SaveDelete.Name = "SaveDelete";
+            SaveDelete.Size = new Size(75, 23);
+            SaveDelete.TabIndex = 1;
+            SaveDelete.Text = "Deletar";
+            SaveDelete.UseVisualStyleBackColor = true;
+            // 
+            // SaveCreate
+            // 
+            SaveCreate.Location = new Point(72, 371);
+            SaveCreate.Name = "SaveCreate";
+            SaveCreate.Size = new Size(75, 23);
+            SaveCreate.TabIndex = 2;
+            SaveCreate.Text = "Cadastrar";
+            SaveCreate.UseVisualStyleBackColor = true;
             // 
             // AdministradorCRUD
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(SaveCreate);
+            Controls.Add(SaveDelete);
+            Controls.Add(SaveUpdate);
             Name = "AdministradorCRUD";
             Text = "AdministradorCRUD";
             Load += AdministradorCRUD_Load;
@@ -42,5 +75,9 @@
         }
 
         #endregion
+
+        private Button SaveUpdate;
+        private Button SaveDelete;
+        private Button SaveCreate;
     }
 }
