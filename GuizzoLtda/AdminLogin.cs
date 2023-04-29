@@ -34,8 +34,8 @@ namespace GuizzoLtda
             {
                 MessageBox.Show("Preencha todos os campos.");
 
-                FuncionarioCadLog ffunccadreturn = new FuncionarioCadLog();
-                ffunccadreturn.Show();
+                AdministradorCRUD fadmcrud = new AdministradorCRUD();
+                fadmcrud.Show();
                 Hide();
             }
             else
@@ -49,6 +49,11 @@ namespace GuizzoLtda
                     MessageBox.Show("Usuário ou Senha não encontrados");
                 }
             }
+        }
+
+        private void AdminLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

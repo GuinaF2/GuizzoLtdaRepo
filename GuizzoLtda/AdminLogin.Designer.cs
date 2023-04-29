@@ -103,6 +103,7 @@
             Controls.Add(label1);
             Name = "AdminLogin";
             Text = "AdminLogin";
+            Load += AdminLogin_Load;
             ResumeLayout(false);
             PerformLayout();
         }
