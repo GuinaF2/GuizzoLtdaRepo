@@ -1,4 +1,5 @@
-﻿using Modelos;
+﻿using Controle;
+using Modelos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,9 @@ namespace GuizzoLtda
 {
     public partial class AdminLogin : Form
     {
+        Conexao conexaosql = new Conexao();
+        UsuarioModelo UsuarioModelo = new UsuarioModelo();
+        UsuarioControle Controle = new UsuarioControle();
         public AdminLogin()
         {
             InitializeComponent();
