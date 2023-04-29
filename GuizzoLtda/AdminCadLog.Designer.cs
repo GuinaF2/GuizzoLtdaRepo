@@ -88,11 +88,14 @@
             // 
             // DataGridUsuario
             // 
+            DataGridUsuario.AllowUserToAddRows = false;
+            DataGridUsuario.AllowUserToDeleteRows = false;
             DataGridUsuario.AutoGenerateColumns = false;
             DataGridUsuario.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             DataGridUsuario.DataSource = conexaoBindingSource;
             DataGridUsuario.Location = new Point(364, 196);
             DataGridUsuario.Name = "DataGridUsuario";
+            DataGridUsuario.ReadOnly = true;
             DataGridUsuario.RowTemplate.Height = 25;
             DataGridUsuario.Size = new Size(437, 254);
             DataGridUsuario.TabIndex = 5;

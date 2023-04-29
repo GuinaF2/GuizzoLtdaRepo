@@ -24,8 +24,8 @@ namespace GuizzoLtda
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
-            
+
+
             UsuarioModelo.NomeUser = txtID.Text;
             UsuarioModelo.SenhaUser = txtSenha.Text;
 
