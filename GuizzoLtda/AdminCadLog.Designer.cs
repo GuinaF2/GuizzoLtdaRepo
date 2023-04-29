@@ -176,5 +176,6 @@
         private Button SaveDelete;
         private Label label3;
         private TextBox txtNome;
+        private DataGridViewTextBoxColumn nome;
     }
 }
