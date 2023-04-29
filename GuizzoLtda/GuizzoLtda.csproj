@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Login.mdf" />
     <None Remove="oydmvlnr.3uj~" />
   </ItemGroup>
 
