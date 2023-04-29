@@ -42,7 +42,9 @@ namespace GuizzoLtda
             {
                 if (Controle.logar(UsuarioModelo) >= 1)
                 {
-                    MessageBox.Show("Usuario Encontrado!");
+                    AdministradorCRUD fadmincrud = new AdministradorCRUD();
+                    this.Hide();
+                    fadmincrud.Show();
                 }
                 else
                 {

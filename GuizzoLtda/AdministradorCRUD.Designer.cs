@@ -127,6 +127,7 @@
             dataGridCRUD.RowTemplate.Height = 25;
             dataGridCRUD.Size = new Size(389, 250);
             dataGridCRUD.TabIndex = 9;
+            dataGridCRUD.CellClick += dataGridCRUD_CellContentClick;
             dataGridCRUD.CellContentClick += dataGridCRUD_CellContentClick;
             // 
             // AdministradorCRUD
