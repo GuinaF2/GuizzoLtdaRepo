@@ -24,6 +24,8 @@ namespace GuizzoLtda
 
         private void btnLoginAdmin_Click(object sender, EventArgs e)
         {
+           
+
             UsuarioModelo.NomeUser = txtUserAdm.Text;
 
             UsuarioModelo.SenhaUser = txtSenhaAdm.Text;
@@ -40,7 +42,7 @@ namespace GuizzoLtda
             }
             else
             {
-                if (Controle.logar(UsuarioModelo) >= 1)
+                if (Controle.Login(UsuarioModelo) >= 1)
                 {
                     AdministradorCRUD fadmincrud = new AdministradorCRUD();
                     this.Hide();

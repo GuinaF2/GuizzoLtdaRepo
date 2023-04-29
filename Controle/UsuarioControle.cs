@@ -85,7 +85,7 @@ namespace Controle
                 throw new Exception(ex.Message);
             }
         }
-        public int logar(UsuarioModelo us)
+        public int Login(UsuarioModelo us)
         {
             int registro;
             try
@@ -139,6 +139,29 @@ namespace Controle
             }
             return us;
         }
-        
+        public int LogarAdm(UsuarioModelo us)
+        {
+            int registro;
+            try
+            {
+                string sql = "SELECT COUNT(*) FROM tb_funcionario where nomeuser=@nome and senhauser=@senha";
+                MySqlConnection conexaologin = conexaosql.getConexao();
+                conexaologin.Open();
+
+                MySqlCommand cmd = new MySqlCommand(sql, conexaologin);
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.AddWithValue("@nome", us.NomeUser);
+                cmd.Parameters.AddWithValue("@senha", us.SenhaUser);
+                registro = Convert.ToInt32(cmd.ExecuteScalar()); //retorna um inteiro
+                conexaologin.Close();
+                return registro;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+
     }
 }

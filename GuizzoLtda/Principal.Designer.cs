@@ -39,9 +39,9 @@
             // 
             // btnUsuario
             // 
-            btnUsuario.Location = new Point(482, 139);
+            btnUsuario.Location = new Point(459, 114);
             btnUsuario.Name = "btnUsuario";
-            btnUsuario.Size = new Size(184, 35);
+            btnUsuario.Size = new Size(223, 57);
             btnUsuario.TabIndex = 0;
             btnUsuario.Text = "Funcionário";
             btnUsuario.UseVisualStyleBackColor = true;
@@ -49,9 +49,9 @@
             // 
             // btnAdmin
             // 
-            btnAdmin.Location = new Point(482, 281);
+            btnAdmin.Location = new Point(459, 267);
             btnAdmin.Name = "btnAdmin";
-            btnAdmin.Size = new Size(184, 37);
+            btnAdmin.Size = new Size(223, 55);
             btnAdmin.TabIndex = 1;
             btnAdmin.Text = "Admin";
             btnAdmin.UseVisualStyleBackColor = true;
@@ -69,17 +69,19 @@
             // 
             // PBEmpresa
             // 
+            PBEmpresa.BackColor = SystemColors.MenuBar;
             PBEmpresa.Location = new Point(47, 90);
             PBEmpresa.Name = "PBEmpresa";
             PBEmpresa.Size = new Size(217, 209);
+            PBEmpresa.SizeMode = PictureBoxSizeMode.StretchImage;
             PBEmpresa.TabIndex = 3;
             PBEmpresa.TabStop = false;
             // 
             // btnFotoEmp
             // 
-            btnFotoEmp.Location = new Point(58, 347);
+            btnFotoEmp.Location = new Point(27, 352);
             btnFotoEmp.Name = "btnFotoEmp";
-            btnFotoEmp.Size = new Size(197, 37);
+            btnFotoEmp.Size = new Size(252, 52);
             btnFotoEmp.TabIndex = 4;
             btnFotoEmp.Text = "Selecionar";
             btnFotoEmp.UseVisualStyleBackColor = true;

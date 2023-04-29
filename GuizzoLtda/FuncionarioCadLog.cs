@@ -50,7 +50,7 @@ namespace GuizzoLtda
             }
             else
             {
-                if (Controle.logar(UsuarioModelo) >= 1)
+                if (Controle.Login(UsuarioModelo) >= 1)
                 {
                     FuncionarioMenu ffuncmenu = new FuncionarioMenu();
                     this.Hide();
