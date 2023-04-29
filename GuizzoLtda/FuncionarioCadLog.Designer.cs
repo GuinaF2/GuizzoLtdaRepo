@@ -35,7 +35,6 @@
             txtSenha = new TextBox();
             label4 = new Label();
             btnRetornar = new Button();
-            button1 = new Button();
             SuspendLayout();
             // 
             // label1
@@ -101,21 +100,11 @@
             btnRetornar.UseVisualStyleBackColor = true;
             btnRetornar.Click += btnRetornar_Click;
             // 
-            // button1
-            // 
-            button1.Location = new Point(657, 143);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 0;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            // 
             // FuncionarioCadLog
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(button1);
             Controls.Add(btnRetornar);
             Controls.Add(txtSenha);
             Controls.Add(label4);
@@ -138,6 +127,5 @@
         private TextBox txtSenha;
         private Label label4;
         private Button btnRetornar;
-        private Button button1;
     }
 }
