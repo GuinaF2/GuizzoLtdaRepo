@@ -1,5 +1,6 @@
 ﻿using Modelos;
 using Controle;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -36,10 +37,12 @@ namespace GuizzoLtda
             UsuarioModelo.NomeUser = txtLogin.Text;
             
             UsuarioModelo.SenhaUser = txtSenha.Text;
+            
+            
 
             if (txtLogin.Text == "" || txtSenha.Text == "")
             {
-                MessageBox.Show("Erro no cadastro.");
+                MessageBox.Show("Preencha todos os campos.");
 
                 FuncionarioCadLog ffunccadreturn = new FuncionarioCadLog();
                 ffunccadreturn.Show();
@@ -47,13 +50,13 @@ namespace GuizzoLtda
             }
             else
             {
-                if (Controle.cadastrar(UsuarioModelo) >= 1)
+                if (Controle.logar(UsuarioModelo) >= 1)
                 {
-                    MessageBox.Show("Cadastro com sucesso!");
+                    MessageBox.Show("Usuario Encontrado!");
                 }
                 else
                 {
-                    MessageBox.Show("Erro no cadastro.");
+                    MessageBox.Show("Usuário ou Senha não encontrados");
                 }
             }
         }

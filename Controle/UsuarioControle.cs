@@ -19,12 +19,13 @@ namespace Controle
             int valorCadastro = -1;
             try
             {
-                string SQL = "INSERT INTO tb_pessoa(nome,cpf,senha,dtnasc,contato) values(@nome,@cpf,@senha,@dtnasc,@contato)";
+                string SQL = "INSERT INTO tb_funcionario(nomeuser,senhauser) values(@nome,@senha)";
                 //declaração de vetor de campos
-                string[] campos = { "@nome", "@cpf", "@senha", "@dtnasc", "@contato" };
+                string[] campos = { "@nome","@senha"};
                 //declaração de vetor de informações
-                string[] valores = { modelo.NomeUser, modelo.CpfUser, modelo.SenhaUser, modelo.NascimentoUser, modelo.ContatoUser };
+                string[] valores = { modelo.NomeUser, modelo.SenhaUser };
 
+               
                 if (conexaosql.cadastrar(campos, valores, SQL) >= 1)
                 {
                     valorCadastro = 1;
@@ -87,7 +88,7 @@ namespace Controle
             int registro;
             try
             {
-                string sql = "SELECT COUNT(*) FROM tb_pessoa where nome=@nome and senha=@senha";
+                string sql = "SELECT COUNT(*) FROM tb_funcionario where nomeuser=@nome and senhauser=@senha";
                 MySqlConnection conexaologin = conexaosql.getConexao();
                 conexaologin.Open();
 
