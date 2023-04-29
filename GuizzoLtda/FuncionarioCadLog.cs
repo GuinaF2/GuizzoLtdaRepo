@@ -52,7 +52,9 @@ namespace GuizzoLtda
             {
                 if (Controle.logar(UsuarioModelo) >= 1)
                 {
-                    MessageBox.Show("Usuario Encontrado!");
+                    FuncionarioMenu ffuncmenu = new FuncionarioMenu();
+                    this.Hide();
+                    ffuncmenu.Show();
                 }
                 else
                 {

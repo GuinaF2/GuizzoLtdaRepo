@@ -66,7 +66,8 @@
             // 
             // btnLoginFunc
             // 
-            btnLoginFunc.Location = new Point(309, 358);
+            btnLoginFunc.FlatStyle = FlatStyle.Flat;
+            btnLoginFunc.Location = new Point(299, 341);
             btnLoginFunc.Name = "btnLoginFunc";
             btnLoginFunc.Size = new Size(133, 39);
             btnLoginFunc.TabIndex = 7;
@@ -78,8 +79,10 @@
             // 
             txtSenha.Location = new Point(299, 224);
             txtSenha.Name = "txtSenha";
+            txtSenha.PasswordChar = '*';
             txtSenha.Size = new Size(133, 23);
             txtSenha.TabIndex = 14;
+            txtSenha.UseSystemPasswordChar = true;
             // 
             // label4
             // 
@@ -92,7 +95,8 @@
             // 
             // btnRetornar
             // 
-            btnRetornar.Location = new Point(21, 37);
+            btnRetornar.FlatStyle = FlatStyle.Flat;
+            btnRetornar.Location = new Point(-3, -2);
             btnRetornar.Name = "btnRetornar";
             btnRetornar.Size = new Size(133, 39);
             btnRetornar.TabIndex = 15;
@@ -102,6 +106,7 @@
             // 
             // FuncionarioCadLog
             // 
+            AcceptButton = btnLoginFunc;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
