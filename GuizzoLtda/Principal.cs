@@ -11,9 +11,9 @@ namespace GuizzoLtda
 
         private void btnAdmin_Click(object sender, EventArgs e)
         {
-            AdministradorCRUD fadmincad = new AdministradorCRUD();
+            AdminLogin fadminlog = new AdminLogin();
             this.Hide();
-            fadmincad.Show();
+            fadminlog.Show();
         }
 
         private void btnUsuario_Click(object sender, EventArgs e)
