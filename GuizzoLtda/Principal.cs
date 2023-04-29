@@ -11,7 +11,7 @@ namespace GuizzoLtda
 
         private void btnAdmin_Click(object sender, EventArgs e)
         {
-            AdminCadLog fadmincad = new AdminCadLog();
+            AdministradorCRUD fadmincad = new AdministradorCRUD();
             this.Hide();
             fadmincad.Show();
         }
