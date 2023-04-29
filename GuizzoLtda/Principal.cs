@@ -30,7 +30,21 @@ namespace GuizzoLtda
 
         private void button1_Click(object sender, EventArgs e)
         {
+            try
+            {
+                OpenFileDialog open = new OpenFileDialog();
+                open.Filter = "imagem file |*.png; *.jpg; *.bmp";
 
+                if (open.ShowDialog() == DialogResult.OK)
+                {
+
+                    PBEmpresa.Image = Image.FromFile(open.FileName);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Falha" + ex.Message);
+            }
         }
     }
 }

@@ -30,8 +30,9 @@
         {
             toolStrip1 = new ToolStrip();
             toolStripTextBox2 = new ToolStripSplitButton();
-            toolStripSplitButton1 = new ToolStripSplitButton();
             toolStripSplitButton5 = new ToolStripSplitButton();
+            toolStripSplitButton1 = new ToolStripSplitButton();
+            sadsdasToolStripMenuItem = new ToolStripMenuItem();
             toolStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -46,10 +47,17 @@
             // 
             // toolStripTextBox2
             // 
+            toolStripTextBox2.DropDownItems.AddRange(new ToolStripItem[] { sadsdasToolStripMenuItem });
             toolStripTextBox2.Name = "toolStripTextBox2";
             toolStripTextBox2.Size = new Size(100, 22);
             toolStripTextBox2.Text = "Configurações";
             toolStripTextBox2.Click += toolStripTextBox2_Click;
+            // 
+            // toolStripSplitButton5
+            // 
+            toolStripSplitButton5.Name = "toolStripSplitButton5";
+            toolStripSplitButton5.Size = new Size(68, 22);
+            toolStripSplitButton5.Text = "Retornar";
             // 
             // toolStripSplitButton1
             // 
@@ -57,11 +65,11 @@
             toolStripSplitButton1.Size = new Size(64, 22);
             toolStripSplitButton1.Text = "Sistema";
             // 
-            // toolStripSplitButton5
+            // sadsdasToolStripMenuItem
             // 
-            toolStripSplitButton5.Name = "toolStripSplitButton5";
-            toolStripSplitButton5.Size = new Size(68, 22);
-            toolStripSplitButton5.Text = "Retornar";
+            sadsdasToolStripMenuItem.Name = "sadsdasToolStripMenuItem";
+            sadsdasToolStripMenuItem.Size = new Size(180, 22);
+            sadsdasToolStripMenuItem.Text = "sadsdas";
             // 
             // FuncionarioMenu
             // 
@@ -89,5 +97,6 @@
         private ToolStripSplitButton toolStripSplitButton5;
         private ToolStripSplitButton toolStripSplitButton4;
         private ToolStripSplitButton toolStripSplitButton3;
+        private ToolStripMenuItem sadsdasToolStripMenuItem;
     }
 }
