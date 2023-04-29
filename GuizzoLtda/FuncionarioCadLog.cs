@@ -35,10 +35,10 @@ namespace GuizzoLtda
         private void btnLoginFunc_Click(object sender, EventArgs e)
         {
             UsuarioModelo.NomeUser = txtLogin.Text;
-            
+
             UsuarioModelo.SenhaUser = txtSenha.Text;
-            
-            
+
+
 
             if (txtLogin.Text == "" || txtSenha.Text == "")
             {
