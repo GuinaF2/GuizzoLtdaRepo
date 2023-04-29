@@ -31,16 +31,13 @@
             toolStrip1 = new ToolStrip();
             toolStripTextBox2 = new ToolStripSplitButton();
             toolStripSplitButton1 = new ToolStripSplitButton();
-            toolStripSplitButton2 = new ToolStripSplitButton();
-            toolStripSplitButton3 = new ToolStripSplitButton();
-            toolStripSplitButton4 = new ToolStripSplitButton();
             toolStripSplitButton5 = new ToolStripSplitButton();
             toolStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // toolStrip1
             // 
-            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripTextBox2, toolStripSplitButton5, toolStripSplitButton4, toolStripSplitButton3, toolStripSplitButton2, toolStripSplitButton1 });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripTextBox2, toolStripSplitButton5, toolStripSplitButton1 });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(800, 25);
@@ -59,24 +56,6 @@
             toolStripSplitButton1.Name = "toolStripSplitButton1";
             toolStripSplitButton1.Size = new Size(64, 22);
             toolStripSplitButton1.Text = "Sistema";
-            // 
-            // toolStripSplitButton2
-            // 
-            toolStripSplitButton2.Name = "toolStripSplitButton2";
-            toolStripSplitButton2.Size = new Size(60, 22);
-            toolStripSplitButton2.Text = "Pedido";
-            // 
-            // toolStripSplitButton3
-            // 
-            toolStripSplitButton3.Name = "toolStripSplitButton3";
-            toolStripSplitButton3.Size = new Size(60, 22);
-            toolStripSplitButton3.Text = "Pedido";
-            // 
-            // toolStripSplitButton4
-            // 
-            toolStripSplitButton4.Name = "toolStripSplitButton4";
-            toolStripSplitButton4.Size = new Size(60, 22);
-            toolStripSplitButton4.Text = "Pedido";
             // 
             // toolStripSplitButton5
             // 

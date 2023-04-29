@@ -12,12 +12,12 @@ using System.Windows.Forms;
 
 namespace GuizzoLtda
 {
-    public partial class AdminCadLog : Form
+    public partial class AdministradorCRUD : Form
     {
         Conexao conexaosql = new Conexao();
         UsuarioModelo UsuarioModelo = new UsuarioModelo();
         UsuarioControle Controle = new UsuarioControle();
-        public AdminCadLog()
+        public AdministradorCRUD()
         {
             InitializeComponent();
         }
@@ -38,7 +38,7 @@ namespace GuizzoLtda
                 if (Controle.cadastrar(UsuarioModelo) >= 1)
                 {
                     MessageBox.Show("Usuário Cadastrado.");
-                    AdminCadLog fadmin = new AdminCadLog();
+                    AdministradorCRUD fadmin = new AdministradorCRUD();
                     this.Hide();
                     fadmin.Show();
                 }
@@ -84,7 +84,7 @@ namespace GuizzoLtda
             if (Controle.AtualizarUsuario(UsuarioModelo) == true)
             {
                 MessageBox.Show("Cadastro Atualizado.");
-                AdminCadLog fadmin = new AdminCadLog();
+                AdministradorCRUD fadmin = new AdministradorCRUD();
                 this.Hide();
                 fadmin.Show();
             }
@@ -112,7 +112,7 @@ namespace GuizzoLtda
             }
 
 
-            AdminCadLog fadmin = new AdminCadLog();
+            AdministradorCRUD fadmin = new AdministradorCRUD();
             this.Hide();
             fadmin.Show();
         }

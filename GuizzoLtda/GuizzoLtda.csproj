@@ -9,6 +9,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="AdminCadLog.cs" />
+    <Compile Remove="AdminCadLog.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="AdminCadLog.resx" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Login.mdf" />
     <None Remove="oydmvlnr.3uj~" />
   </ItemGroup>
