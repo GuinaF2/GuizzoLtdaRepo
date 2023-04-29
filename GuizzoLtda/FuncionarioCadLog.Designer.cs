@@ -40,7 +40,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(308, 147);
+            label1.Location = new Point(299, 135);
             label1.Name = "label1";
             label1.Size = new Size(40, 15);
             label1.TabIndex = 0;
@@ -48,7 +48,7 @@
             // 
             // txtLogin
             // 
-            txtLogin.Location = new Point(308, 165);
+            txtLogin.Location = new Point(299, 153);
             txtLogin.Name = "txtLogin";
             txtLogin.Size = new Size(133, 23);
             txtLogin.TabIndex = 2;
@@ -76,7 +76,7 @@
             // 
             // txtSenha
             // 
-            txtSenha.Location = new Point(308, 224);
+            txtSenha.Location = new Point(299, 224);
             txtSenha.Name = "txtSenha";
             txtSenha.Size = new Size(133, 23);
             txtSenha.TabIndex = 14;
@@ -84,7 +84,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(308, 206);
+            label4.Location = new Point(299, 206);
             label4.Name = "label4";
             label4.Size = new Size(39, 15);
             label4.TabIndex = 13;
