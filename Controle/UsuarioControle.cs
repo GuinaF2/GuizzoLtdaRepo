@@ -17,6 +17,7 @@ namespace Controle
         {
             //variável de confirmação do banco
             int valorCadastro = -1;
+
             try
             {
                 string SQL = "INSERT INTO tb_funcionario(nomeuser,senhauser) values(@nome,@senha)";
@@ -42,11 +43,12 @@ namespace Controle
             }
             return valorCadastro;
         }
+
         public bool DeletarUsuario(UsuarioModelo us)
         {
             try
             {
-                string sql = "DELETE from tb_usuario where idusuario = @codigo";
+                string sql = "DELETE from tb_funcionario where idusuario = @codigo";
                 if (conexaosql.deletarDados(us.CodUsuario, sql) >= 1)
                 {
                     return resultado = true;
@@ -66,7 +68,7 @@ namespace Controle
         {
             try
             {
-                string sql = "UPDATE tb_pessoa set nome=@nome, senha=@senha where idpessoa= @codigo";
+                string sql = "UPDATE tb_funcionario set nomeuser=@nome, senhauser=@senha where idfuncionario= @codigo";
                 string[] campos = { "@nome", "@senha" };
                 string[] valores = { us.NomeUser, us.SenhaUser };
                 if (conexaosql.atualizarDados(us.CodUsuario, campos, valores, sql) >= 1)
@@ -137,5 +139,6 @@ namespace Controle
             }
             return us;
         }
+        
     }
 }
