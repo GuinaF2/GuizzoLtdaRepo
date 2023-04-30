@@ -56,7 +56,7 @@ namespace GuizzoLtda
             }
             else
             {
-                if (Controle.Login(UsuarioModelo) >= 1)
+                if (Controle.LogarAdm(UsuarioModelo) >= 1)
                 {
                     AdministradorCRUD fadmincrud = new AdministradorCRUD();
                     this.Hide();
@@ -67,6 +67,13 @@ namespace GuizzoLtda
                     MessageBox.Show("Usuário ou Senha não encontrados");
                 }
             }
+        }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            Principal fprincipalreturn = new Principal();
+            this.Hide();
+            fprincipalreturn.Show();
         }
     }
 }

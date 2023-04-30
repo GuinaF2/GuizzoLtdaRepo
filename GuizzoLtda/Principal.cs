@@ -37,6 +37,11 @@ namespace GuizzoLtda
 
         private void PBEmpresa_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void btnFotoEmp_Click(object sender, EventArgs e)
+        {
             try
             {
                 OpenFileDialog open = new OpenFileDialog();
@@ -52,11 +57,6 @@ namespace GuizzoLtda
             {
                 MessageBox.Show("Falha" + ex.Message);
             }
-        }
-
-        private void btnFotoEmp_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

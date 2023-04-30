@@ -34,6 +34,7 @@
             this.txtUserAdm = new System.Windows.Forms.TextBox();
             this.btnLoginAdmin = new System.Windows.Forms.Button();
             this.txtSenhaAdm = new System.Windows.Forms.TextBox();
+            this.btnReturn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -74,7 +75,7 @@
             this.txtUserAdm.Location = new System.Drawing.Point(275, 170);
             this.txtUserAdm.Name = "txtUserAdm";
             this.txtUserAdm.Size = new System.Drawing.Size(194, 23);
-            this.txtUserAdm.TabIndex = 3;
+            this.txtUserAdm.TabIndex = 1;
             this.txtUserAdm.TextChanged += new System.EventHandler(this.txtUserAdm_TextChanged);
             // 
             // btnLoginAdmin
@@ -84,7 +85,7 @@
             this.btnLoginAdmin.Location = new System.Drawing.Point(260, 363);
             this.btnLoginAdmin.Name = "btnLoginAdmin";
             this.btnLoginAdmin.Size = new System.Drawing.Size(228, 57);
-            this.btnLoginAdmin.TabIndex = 4;
+            this.btnLoginAdmin.TabIndex = 3;
             this.btnLoginAdmin.Text = "Login";
             this.btnLoginAdmin.UseVisualStyleBackColor = true;
             this.btnLoginAdmin.Click += new System.EventHandler(this.btnLoginAdmin_Click_1);
@@ -94,8 +95,19 @@
             this.txtSenhaAdm.Location = new System.Drawing.Point(275, 274);
             this.txtSenhaAdm.Name = "txtSenhaAdm";
             this.txtSenhaAdm.Size = new System.Drawing.Size(194, 23);
-            this.txtSenhaAdm.TabIndex = 5;
+            this.txtSenhaAdm.TabIndex = 2;
             this.txtSenhaAdm.TextChanged += new System.EventHandler(this.txtSenhaAdm_TextChanged);
+            // 
+            // btnReturn
+            // 
+            this.btnReturn.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnReturn.Location = new System.Drawing.Point(0, -1);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Size = new System.Drawing.Size(179, 60);
+            this.btnReturn.TabIndex = 4;
+            this.btnReturn.Text = "Retornar";
+            this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // AdminLogin
             // 
@@ -103,6 +115,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.txtSenhaAdm);
             this.Controls.Add(this.btnLoginAdmin);
             this.Controls.Add(this.txtUserAdm);
@@ -124,5 +137,6 @@
         private TextBox txtUserAdm;
         private Button btnLoginAdmin;
         private TextBox txtSenhaAdm;
+        private Button btnReturn;
     }
 }

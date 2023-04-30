@@ -4,6 +4,7 @@
     {
         //criação das variaveis protegidas
         private int idUsuario;
+        private int cargo;
         private string nome;
         private string cpf;
         private string contato;
@@ -14,6 +15,7 @@
         public UsuarioModelo()
         {
             idUsuario = 0;
+            cargo = 0;
             nome = ""; 
             cpf = "";
             contato = "";
@@ -56,8 +58,8 @@
         }
         public int CodCargo
         {
-            get { return CodCargo; }
-            set { CodCargo = value; } 
+            get { return cargo; }
+            set { cargo = value; } 
             
         }
 
