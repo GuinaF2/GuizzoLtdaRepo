@@ -144,7 +144,7 @@ namespace Controle
             int registro;
             try
             {
-                string sql = "SELECT COUNT(*) FROM tb_funcionario where nomeuser=@nome and senhauser=@senha and cargo=2";
+                string sql = "SELECT COUNT(*) FROM tb_funcionario where nomeuser=@nome and senhauser=@senha and cargo=(2)";
                 MySqlConnection conexaologin = conexaosql.getConexao();
                 conexaologin.Open();
 
