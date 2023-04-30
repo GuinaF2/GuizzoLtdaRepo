@@ -127,6 +127,7 @@
             this.dataGridCRUD.RowTemplate.Height = 25;
             this.dataGridCRUD.Size = new System.Drawing.Size(389, 453);
             this.dataGridCRUD.TabIndex = 9;
+            this.dataGridCRUD.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCRUD_CellContentClick_1);
             // 
             // AdministradorCRUD
             // 

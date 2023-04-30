@@ -117,5 +117,10 @@ namespace GuizzoLtda
                 MessageBox.Show("\t\t    Favor selecionar ID do usuário. \n\nERRO: " + ex.Message);
             }
         }
+
+        private void dataGridCRUD_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
