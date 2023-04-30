@@ -22,17 +22,17 @@ namespace GuizzoLtda
             InitializeComponent();
         }
 
-        private void txtSenha_TextChanged(object sender, EventArgs e)
+        private void txtLogin_TextChanged_1(object sender, EventArgs e)
         {
 
         }
 
-        private void btnCadSenha_Click(object sender, EventArgs e)
+        private void txtSenha_TextChanged_1(object sender, EventArgs e)
         {
 
         }
 
-        private void btnLoginFunc_Click(object sender, EventArgs e)
+        private void btnLoginFunc_Click_1(object sender, EventArgs e)
         {
             UsuarioModelo.NomeUser = txtLogin.Text;
 
@@ -63,12 +63,7 @@ namespace GuizzoLtda
             }
         }
 
-        private void txtLogin_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnRetornar_Click(object sender, EventArgs e)
+        private void btnRetornar_Click_1(object sender, EventArgs e)
         {
             Principal fprincipalreturn = new Principal();
             this.Hide();

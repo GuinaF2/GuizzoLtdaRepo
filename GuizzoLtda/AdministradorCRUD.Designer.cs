@@ -43,30 +43,36 @@
             // 
             // SaveUpdate
             // 
+            this.SaveUpdate.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.SaveUpdate.Location = new System.Drawing.Point(25, 246);
             this.SaveUpdate.Name = "SaveUpdate";
             this.SaveUpdate.Size = new System.Drawing.Size(325, 59);
             this.SaveUpdate.TabIndex = 0;
             this.SaveUpdate.Text = "Atualizar";
             this.SaveUpdate.UseVisualStyleBackColor = true;
+            this.SaveUpdate.Click += new System.EventHandler(this.SaveUpdate_Click_1);
             // 
             // SaveDelete
             // 
+            this.SaveDelete.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.SaveDelete.Location = new System.Drawing.Point(25, 311);
             this.SaveDelete.Name = "SaveDelete";
             this.SaveDelete.Size = new System.Drawing.Size(325, 59);
             this.SaveDelete.TabIndex = 1;
             this.SaveDelete.Text = "Deletar";
             this.SaveDelete.UseVisualStyleBackColor = true;
+            this.SaveDelete.Click += new System.EventHandler(this.SaveDelete_Click_1);
             // 
             // SaveCreate
             // 
+            this.SaveCreate.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.SaveCreate.Location = new System.Drawing.Point(25, 378);
             this.SaveCreate.Name = "SaveCreate";
             this.SaveCreate.Size = new System.Drawing.Size(325, 59);
             this.SaveCreate.TabIndex = 2;
             this.SaveCreate.Text = "Cadastrar";
             this.SaveCreate.UseVisualStyleBackColor = true;
+            this.SaveCreate.Click += new System.EventHandler(this.SaveCreate_Click_1);
             // 
             // label1
             // 
@@ -84,6 +90,7 @@
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(133, 23);
             this.txtID.TabIndex = 4;
+            this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged);
             // 
             // txtNome
             // 
@@ -91,6 +98,7 @@
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(133, 23);
             this.txtNome.TabIndex = 5;
+            this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
             // txtSenha
             // 
@@ -98,6 +106,7 @@
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(133, 23);
             this.txtSenha.TabIndex = 6;
+            this.txtSenha.TextChanged += new System.EventHandler(this.txtSenha_TextChanged);
             // 
             // label2
             // 

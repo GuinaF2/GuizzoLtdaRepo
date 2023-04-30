@@ -54,6 +54,7 @@
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(184, 35);
             this.txtLogin.TabIndex = 2;
+            this.txtLogin.TextChanged += new System.EventHandler(this.txtLogin_TextChanged_1);
             // 
             // label3
             // 
@@ -75,6 +76,7 @@
             this.btnLoginFunc.TabIndex = 4;
             this.btnLoginFunc.Text = "Fazer Login";
             this.btnLoginFunc.UseVisualStyleBackColor = true;
+            this.btnLoginFunc.Click += new System.EventHandler(this.btnLoginFunc_Click_1);
             // 
             // txtSenha
             // 
@@ -85,6 +87,7 @@
             this.txtSenha.Size = new System.Drawing.Size(184, 35);
             this.txtSenha.TabIndex = 3;
             this.txtSenha.UseSystemPasswordChar = true;
+            this.txtSenha.TextChanged += new System.EventHandler(this.txtSenha_TextChanged_1);
             // 
             // label4
             // 
@@ -106,6 +109,7 @@
             this.btnRetornar.TabIndex = 5;
             this.btnRetornar.Text = "Retornar";
             this.btnRetornar.UseVisualStyleBackColor = true;
+            this.btnRetornar.Click += new System.EventHandler(this.btnRetornar_Click_1);
             // 
             // FuncionarioCadLog
             // 

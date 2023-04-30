@@ -59,5 +59,20 @@ namespace GuizzoLtda
         {
 
         }
+
+        private void txtUserAdm_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSenhaAdm_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLoginAdmin_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -46,6 +46,7 @@
             this.btnUsuario.TabIndex = 0;
             this.btnUsuario.Text = "Funcionário";
             this.btnUsuario.UseVisualStyleBackColor = true;
+            this.btnUsuario.Click += new System.EventHandler(this.btnUsuario_Click_1);
             // 
             // btnAdmin
             // 
@@ -56,6 +57,7 @@
             this.btnAdmin.TabIndex = 1;
             this.btnAdmin.Text = "Admin";
             this.btnAdmin.UseVisualStyleBackColor = true;
+            this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click_1);
             // 
             // label1
             // 
@@ -76,6 +78,7 @@
             this.PBEmpresa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PBEmpresa.TabIndex = 3;
             this.PBEmpresa.TabStop = false;
+            this.PBEmpresa.Click += new System.EventHandler(this.PBEmpresa_Click);
             // 
             // btnFotoEmp
             // 
@@ -86,6 +89,7 @@
             this.btnFotoEmp.TabIndex = 4;
             this.btnFotoEmp.Text = "Selecionar";
             this.btnFotoEmp.UseVisualStyleBackColor = true;
+            this.btnFotoEmp.Click += new System.EventHandler(this.btnFotoEmp_Click);
             // 
             // label2
             // 
@@ -101,6 +105,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnFotoEmp);
@@ -110,6 +115,7 @@
             this.Controls.Add(this.btnUsuario);
             this.Name = "Principal";
             this.Text = "Selecione Usuario";
+            this.Load += new System.EventHandler(this.Principal_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.PBEmpresa)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -9,26 +9,33 @@ namespace GuizzoLtda
             InitializeComponent();
         }
 
-        private void btnAdmin_Click(object sender, EventArgs e)
+        private void Principal_Load(object sender, EventArgs e)
         {
-            AdminLogin fadminlog = new AdminLogin();
-            this.Hide();
-            fadminlog.Show();
+
         }
 
-        private void btnUsuario_Click(object sender, EventArgs e)
+        
+
+        private void Principal_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUsuario_Click_1(object sender, EventArgs e)
         {
             FuncionarioCadLog ffunccad = new FuncionarioCadLog();
             this.Hide();
             ffunccad.Show();
         }
 
-        private void Principal_Load(object sender, EventArgs e)
+        private void btnAdmin_Click_1(object sender, EventArgs e)
         {
-
+            AdminLogin fadminlog = new AdminLogin();
+            this.Hide();
+            fadminlog.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void PBEmpresa_Click(object sender, EventArgs e)
         {
             try
             {
@@ -45,6 +52,11 @@ namespace GuizzoLtda
             {
                 MessageBox.Show("Falha" + ex.Message);
             }
+        }
+
+        private void btnFotoEmp_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
