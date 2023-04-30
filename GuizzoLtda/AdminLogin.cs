@@ -22,10 +22,24 @@ namespace GuizzoLtda
             InitializeComponent();
         }
 
-        private void btnLoginAdmin_Click(object sender, EventArgs e)
+        
+        private void AdminLogin_Load(object sender, EventArgs e)
         {
-           
 
+        }
+
+        private void txtUserAdm_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSenhaAdm_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLoginAdmin_Click_1(object sender, EventArgs e)
+        {
             UsuarioModelo.NomeUser = txtUserAdm.Text;
 
             UsuarioModelo.SenhaUser = txtSenhaAdm.Text;
@@ -53,26 +67,6 @@ namespace GuizzoLtda
                     MessageBox.Show("Usuário ou Senha não encontrados");
                 }
             }
-        }
-
-        private void AdminLogin_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtUserAdm_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSenhaAdm_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnLoginAdmin_Click_1(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -24,7 +24,7 @@ namespace GuizzoLtda
 
         private void AdministradorCRUD_Load(object sender, EventArgs e)
         {
-
+           dataGridCRUD.DataSource = conexaosql.verDados("SELECT * FROM tb_funcionario");
         }
 
         private void dataGridCRUD_CellContentClick_1(object sender, DataGridViewCellEventArgs e)

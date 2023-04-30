@@ -136,6 +136,7 @@
             this.dataGridCRUD.RowTemplate.Height = 25;
             this.dataGridCRUD.Size = new System.Drawing.Size(389, 453);
             this.dataGridCRUD.TabIndex = 9;
+            this.dataGridCRUD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCRUD_CellContentClick_1);
             this.dataGridCRUD.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCRUD_CellContentClick_1);
             // 
             // AdministradorCRUD
@@ -155,6 +156,7 @@
             this.Controls.Add(this.SaveUpdate);
             this.Name = "AdministradorCRUD";
             this.Text = "AdministradorCRUD";
+            this.Load += new System.EventHandler(this.AdministradorCRUD_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCRUD)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
