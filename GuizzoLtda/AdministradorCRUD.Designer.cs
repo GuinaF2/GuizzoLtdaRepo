@@ -28,129 +28,127 @@
         /// </summary>
         private void InitializeComponent()
         {
-            SaveUpdate = new Button();
-            SaveDelete = new Button();
-            SaveCreate = new Button();
-            label1 = new Label();
-            txtID = new TextBox();
-            txtNome = new TextBox();
-            txtSenha = new TextBox();
-            label2 = new Label();
-            label3 = new Label();
-            dataGridCRUD = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dataGridCRUD).BeginInit();
-            SuspendLayout();
+            this.SaveUpdate = new System.Windows.Forms.Button();
+            this.SaveDelete = new System.Windows.Forms.Button();
+            this.SaveCreate = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.txtSenha = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dataGridCRUD = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCRUD)).BeginInit();
+            this.SuspendLayout();
             // 
             // SaveUpdate
             // 
-            SaveUpdate.Location = new Point(72, 239);
-            SaveUpdate.Name = "SaveUpdate";
-            SaveUpdate.Size = new Size(75, 23);
-            SaveUpdate.TabIndex = 0;
-            SaveUpdate.Text = "Atualizar";
-            SaveUpdate.UseVisualStyleBackColor = true;
-            SaveUpdate.Click += SaveUpdate_Click;
+            this.SaveUpdate.Location = new System.Drawing.Point(25, 246);
+            this.SaveUpdate.Name = "SaveUpdate";
+            this.SaveUpdate.Size = new System.Drawing.Size(325, 59);
+            this.SaveUpdate.TabIndex = 0;
+            this.SaveUpdate.Text = "Atualizar";
+            this.SaveUpdate.UseVisualStyleBackColor = true;
             // 
             // SaveDelete
             // 
-            SaveDelete.Location = new Point(72, 304);
-            SaveDelete.Name = "SaveDelete";
-            SaveDelete.Size = new Size(75, 23);
-            SaveDelete.TabIndex = 1;
-            SaveDelete.Text = "Deletar";
-            SaveDelete.UseVisualStyleBackColor = true;
-            SaveDelete.Click += SaveDelete_Click;
+            this.SaveDelete.Location = new System.Drawing.Point(25, 311);
+            this.SaveDelete.Name = "SaveDelete";
+            this.SaveDelete.Size = new System.Drawing.Size(325, 59);
+            this.SaveDelete.TabIndex = 1;
+            this.SaveDelete.Text = "Deletar";
+            this.SaveDelete.UseVisualStyleBackColor = true;
             // 
             // SaveCreate
             // 
-            SaveCreate.Location = new Point(72, 371);
-            SaveCreate.Name = "SaveCreate";
-            SaveCreate.Size = new Size(75, 23);
-            SaveCreate.TabIndex = 2;
-            SaveCreate.Text = "Cadastrar";
-            SaveCreate.UseVisualStyleBackColor = true;
-            SaveCreate.Click += SaveCreate_Click;
+            this.SaveCreate.Location = new System.Drawing.Point(25, 378);
+            this.SaveCreate.Name = "SaveCreate";
+            this.SaveCreate.Size = new System.Drawing.Size(325, 59);
+            this.SaveCreate.TabIndex = 2;
+            this.SaveCreate.Text = "Cadastrar";
+            this.SaveCreate.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(25, 68);
-            label1.Name = "label1";
-            label1.Size = new Size(60, 15);
-            label1.TabIndex = 3;
-            label1.Text = "Id Usuario";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(25, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(107, 30);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Id Usuario";
             // 
             // txtID
             // 
-            txtID.Location = new Point(25, 21);
-            txtID.Name = "txtID";
-            txtID.Size = new Size(100, 23);
-            txtID.TabIndex = 4;
+            this.txtID.Location = new System.Drawing.Point(25, 53);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(133, 23);
+            this.txtID.TabIndex = 4;
             // 
             // txtNome
             // 
-            txtNome.Location = new Point(217, 21);
-            txtNome.Name = "txtNome";
-            txtNome.Size = new Size(100, 23);
-            txtNome.TabIndex = 5;
+            this.txtNome.Location = new System.Drawing.Point(25, 125);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(133, 23);
+            this.txtNome.TabIndex = 5;
             // 
             // txtSenha
             // 
-            txtSenha.Location = new Point(411, 21);
-            txtSenha.Name = "txtSenha";
-            txtSenha.Size = new Size(100, 23);
-            txtSenha.TabIndex = 6;
+            this.txtSenha.Location = new System.Drawing.Point(25, 197);
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.Size = new System.Drawing.Size(133, 23);
+            this.txtSenha.TabIndex = 6;
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(217, 68);
-            label2.Name = "label2";
-            label2.Size = new Size(40, 15);
-            label2.TabIndex = 7;
-            label2.Text = "Nome";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(25, 79);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(70, 30);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Nome";
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(411, 68);
-            label3.Name = "label3";
-            label3.Size = new Size(39, 15);
-            label3.TabIndex = 8;
-            label3.Text = "Senha";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(25, 151);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(70, 30);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Senha";
             // 
             // dataGridCRUD
             // 
-            dataGridCRUD.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridCRUD.Location = new Point(411, 203);
-            dataGridCRUD.Name = "dataGridCRUD";
-            dataGridCRUD.RowTemplate.Height = 25;
-            dataGridCRUD.Size = new Size(389, 250);
-            dataGridCRUD.TabIndex = 9;
-            dataGridCRUD.CellClick += dataGridCRUD_CellContentClick;
-            dataGridCRUD.CellContentClick += dataGridCRUD_CellContentClick;
+            this.dataGridCRUD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridCRUD.Location = new System.Drawing.Point(411, 0);
+            this.dataGridCRUD.Name = "dataGridCRUD";
+            this.dataGridCRUD.RowTemplate.Height = 25;
+            this.dataGridCRUD.Size = new System.Drawing.Size(389, 453);
+            this.dataGridCRUD.TabIndex = 9;
             // 
             // AdministradorCRUD
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(dataGridCRUD);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(txtSenha);
-            Controls.Add(txtNome);
-            Controls.Add(txtID);
-            Controls.Add(label1);
-            Controls.Add(SaveCreate);
-            Controls.Add(SaveDelete);
-            Controls.Add(SaveUpdate);
-            Name = "AdministradorCRUD";
-            Text = "AdministradorCRUD";
-            Load += AdministradorCRUD_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridCRUD).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dataGridCRUD);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtSenha);
+            this.Controls.Add(this.txtNome);
+            this.Controls.Add(this.txtID);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.SaveCreate);
+            this.Controls.Add(this.SaveDelete);
+            this.Controls.Add(this.SaveUpdate);
+            this.Name = "AdministradorCRUD";
+            this.Text = "AdministradorCRUD";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCRUD)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
