@@ -72,6 +72,7 @@
             // PBEmpresa
             // 
             this.PBEmpresa.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.PBEmpresa.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.PBEmpresa.Location = new System.Drawing.Point(71, 91);
             this.PBEmpresa.Name = "PBEmpresa";
             this.PBEmpresa.Size = new System.Drawing.Size(217, 209);
