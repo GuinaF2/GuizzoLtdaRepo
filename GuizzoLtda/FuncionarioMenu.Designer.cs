@@ -28,61 +28,67 @@
         /// </summary>
         private void InitializeComponent()
         {
-            toolStrip1 = new ToolStrip();
-            toolStripTextBox2 = new ToolStripSplitButton();
-            toolStripSplitButton5 = new ToolStripSplitButton();
-            toolStripSplitButton1 = new ToolStripSplitButton();
-            sadsdasToolStripMenuItem = new ToolStripMenuItem();
-            toolStrip1.SuspendLayout();
-            SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FuncionarioMenu));
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripTextBox2 = new System.Windows.Forms.ToolStripSplitButton();
+            this.sadsdasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSplitButton5 = new System.Windows.Forms.ToolStripSplitButton();
+            this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
+            this.toolStrip1.SuspendLayout();
+            this.SuspendLayout();
             // 
             // toolStrip1
             // 
-            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripTextBox2, toolStripSplitButton5, toolStripSplitButton1 });
-            toolStrip1.Location = new Point(0, 0);
-            toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(800, 25);
-            toolStrip1.TabIndex = 0;
-            toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripTextBox2,
+            this.toolStripSplitButton5,
+            this.toolStripSplitButton1});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(800, 25);
+            this.toolStrip1.TabIndex = 0;
+            this.toolStrip1.Text = "toolStrip1";
             // 
             // toolStripTextBox2
             // 
-            toolStripTextBox2.DropDownItems.AddRange(new ToolStripItem[] { sadsdasToolStripMenuItem });
-            toolStripTextBox2.Name = "toolStripTextBox2";
-            toolStripTextBox2.Size = new Size(100, 22);
-            toolStripTextBox2.Text = "Configurações";
-            toolStripTextBox2.Click += toolStripTextBox2_Click;
-            // 
-            // toolStripSplitButton5
-            // 
-            toolStripSplitButton5.Name = "toolStripSplitButton5";
-            toolStripSplitButton5.Size = new Size(68, 22);
-            toolStripSplitButton5.Text = "Retornar";
-            // 
-            // toolStripSplitButton1
-            // 
-            toolStripSplitButton1.Name = "toolStripSplitButton1";
-            toolStripSplitButton1.Size = new Size(64, 22);
-            toolStripSplitButton1.Text = "Sistema";
+            this.toolStripTextBox2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sadsdasToolStripMenuItem});
+            this.toolStripTextBox2.Name = "toolStripTextBox2";
+            this.toolStripTextBox2.Size = new System.Drawing.Size(100, 22);
+            this.toolStripTextBox2.Text = "Configurações";
             // 
             // sadsdasToolStripMenuItem
             // 
-            sadsdasToolStripMenuItem.Name = "sadsdasToolStripMenuItem";
-            sadsdasToolStripMenuItem.Size = new Size(180, 22);
-            sadsdasToolStripMenuItem.Text = "sadsdas";
+            this.sadsdasToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("sadsdasToolStripMenuItem.Image")));
+            this.sadsdasToolStripMenuItem.Name = "sadsdasToolStripMenuItem";
+            this.sadsdasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sadsdasToolStripMenuItem.Text = "sadsdas";
+            // 
+            // toolStripSplitButton5
+            // 
+            this.toolStripSplitButton5.Name = "toolStripSplitButton5";
+            this.toolStripSplitButton5.Size = new System.Drawing.Size(68, 22);
+            this.toolStripSplitButton5.Text = "Retornar";
+            // 
+            // toolStripSplitButton1
+            // 
+            this.toolStripSplitButton1.Name = "toolStripSplitButton1";
+            this.toolStripSplitButton1.Size = new System.Drawing.Size(64, 22);
+            this.toolStripSplitButton1.Text = "Sistema";
             // 
             // FuncionarioMenu
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(toolStrip1);
-            Name = "FuncionarioMenu";
-            Text = "FuncionarioMenu";
-            toolStrip1.ResumeLayout(false);
-            toolStrip1.PerformLayout();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.toolStrip1);
+            this.Name = "FuncionarioMenu";
+            this.Text = "FuncionarioMenu";
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
