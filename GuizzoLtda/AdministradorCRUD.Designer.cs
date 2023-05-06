@@ -145,7 +145,7 @@
             this.button1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1.Location = new System.Drawing.Point(0, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(164, 68);
+            this.button1.Size = new System.Drawing.Size(164, 54);
             this.button1.TabIndex = 10;
             this.button1.Text = "Retornar";
             this.button1.UseVisualStyleBackColor = true;

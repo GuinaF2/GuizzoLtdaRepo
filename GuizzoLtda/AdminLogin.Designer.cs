@@ -94,8 +94,10 @@
             // 
             this.txtSenhaAdm.Location = new System.Drawing.Point(275, 274);
             this.txtSenhaAdm.Name = "txtSenhaAdm";
+            this.txtSenhaAdm.PasswordChar = '*';
             this.txtSenhaAdm.Size = new System.Drawing.Size(194, 23);
             this.txtSenhaAdm.TabIndex = 2;
+            this.txtSenhaAdm.UseSystemPasswordChar = true;
             this.txtSenhaAdm.TextChanged += new System.EventHandler(this.txtSenhaAdm_TextChanged);
             // 
             // btnReturn

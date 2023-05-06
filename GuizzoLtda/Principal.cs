@@ -7,14 +7,7 @@ namespace GuizzoLtda
         public Principal()
         {
             InitializeComponent();
-        }
-
-        private void Principal_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        
+        }        
 
         private void Principal_Load_1(object sender, EventArgs e)
         {
