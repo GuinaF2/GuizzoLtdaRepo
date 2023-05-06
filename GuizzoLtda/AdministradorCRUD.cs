@@ -17,6 +17,7 @@ namespace GuizzoLtda
         Conexao conexaosql = new Conexao();
         UsuarioModelo UsuarioModelo = new UsuarioModelo();
         UsuarioControle Controle = new UsuarioControle();
+        int id;
         public AdministradorCRUD()
         {
             InitializeComponent();
@@ -31,7 +32,7 @@ namespace GuizzoLtda
         {
             try
             {
-                int id = Convert.ToInt32(dataGridCRUD.Rows[e.RowIndex].Cells[e.ColumnIndex].Value);
+                id = Convert.ToInt32(dataGridCRUD.Rows[e.RowIndex].Cells[e.ColumnIndex].Value);
                 if (id <= 0)
                 {
                     MessageBox.Show("Favor selecionar ID do usuário");

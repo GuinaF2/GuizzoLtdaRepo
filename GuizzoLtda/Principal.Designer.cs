@@ -34,6 +34,7 @@
             this.PBEmpresa = new System.Windows.Forms.PictureBox();
             this.btnFotoEmp = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.PBEmpresa)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,7 +85,7 @@
             // btnFotoEmp
             // 
             this.btnFotoEmp.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnFotoEmp.Location = new System.Drawing.Point(27, 348);
+            this.btnFotoEmp.Location = new System.Drawing.Point(27, 328);
             this.btnFotoEmp.Name = "btnFotoEmp";
             this.btnFotoEmp.Size = new System.Drawing.Size(305, 52);
             this.btnFotoEmp.TabIndex = 4;
@@ -102,12 +103,23 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Selecione sua Empresa";
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(143, 414);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(60, 15);
+            this.linkLabel1.TabIndex = 7;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "linkLabel1";
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnFotoEmp);
             this.Controls.Add(this.PBEmpresa);
@@ -131,5 +143,6 @@
         private PictureBox PBEmpresa;
         private Button btnFotoEmp;
         private Label label2;
+        private LinkLabel linkLabel1;
     }
 }
