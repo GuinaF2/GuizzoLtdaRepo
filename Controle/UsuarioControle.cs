@@ -164,7 +164,7 @@ namespace Controle
             }
         }
 
-        public int CadastroEmpresa(UsuarioModelo us)
+        public int CadastroEmpresa(UsuarioModelo modelo)
         {
             int valorCadastro = -1;
 
@@ -174,7 +174,7 @@ namespace Controle
                 //declaração de vetor de campos
                 string[] campos = { "@rua", "@bairro", "@cep", "@numero", "@complemento" };
                 //declaração de vetor de informações
-                string[] valores = { };
+                string[] valores = { modelo.RuaUser, modelo.BairroUser, modelo.CepUser, modelo.NumeroUser, modelo.ComplementoUser };
 
 
                 if (conexaosql.cadastrar(campos, valores, SQL) >= 1)
