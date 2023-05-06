@@ -84,6 +84,8 @@
             // 
             // btnFotoEmp
             // 
+            this.btnFotoEmp.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnFotoEmp.AutoSize = true;
             this.btnFotoEmp.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnFotoEmp.Location = new System.Drawing.Point(27, 328);
             this.btnFotoEmp.Name = "btnFotoEmp";

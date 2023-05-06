@@ -10,6 +10,14 @@
         private string contato;
         private string dtnasc;
         private string senha;
+
+        private int idEndereco;
+        private string rua;
+        private string bairro;
+        private string cep;
+        private string numero;
+        private string complemento;
+
         //defino o construtor modelo usuario
 
         public UsuarioModelo()
@@ -21,6 +29,13 @@
             contato = "";
             senha = "";
             dtnasc = "";
+
+            idEndereco = 0;
+            rua = "";
+            bairro = "";
+            cep = "";
+            numero = "";
+            complemento = "";
         }
 
         public int CodUsuario
@@ -62,6 +77,38 @@
             set { cargo = value; } 
             
         }
+        public string RuaUser
+        {
+            get { return rua; }
+            set { rua = value; }
+
+        }
+        public string BairroUser
+        {
+            get { return bairro; }
+            set { bairro = value; }
+
+        }
+        public string CepUser
+        {
+            get { return cep; }
+            set { cep = value; }
+
+        }
+
+        public string NmrUser
+        {
+            get { return numero; }
+            set { numero = value; }
+
+        }
+        public string CompUser
+        {
+            get { return complemento; }
+            set { complemento = value; }
+
+        }
+ 
 
     }
 }

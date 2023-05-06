@@ -3,6 +3,7 @@ using MySql.Data.MySqlClient;
 using System.Data;
 using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
+using System.Reflection;
 
 namespace Controle
 {
@@ -163,6 +164,34 @@ namespace Controle
             }
         }
 
+        public int CadastroEmpresa(UsuarioModelo us)
+        {
+            int valorCadastro = -1;
 
+            try
+            {
+                string SQL = "INSERT INTO tb_endereco(rua,bairro,cep,numero,complemento) values(@rua,@bairro,@cep,@numero,@complemento)";
+                //declaração de vetor de campos
+                string[] campos = { "@rua", "@bairro", "@cep", "@numero", "@complemento" };
+                //declaração de vetor de informações
+                string[] valores = { };
+
+
+                if (conexaosql.cadastrar(campos, valores, SQL) >= 1)
+                {
+                    valorCadastro = 1;
+                }
+                else
+                {
+                    valorCadastro = 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                //Lança erros do sistema
+                throw new Exception(ex.Message);
+            }
+            return valorCadastro;
+        }
     }
 }

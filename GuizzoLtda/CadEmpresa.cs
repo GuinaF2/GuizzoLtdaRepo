@@ -33,7 +33,7 @@ namespace GuizzoLtda
                 {
 
                     Foto = Image.FromFile(Abrirfoto.FileName);
-                    PBEmpresa.Image = Foto;
+                    pbFotoEmp.Image = Foto;
                     File.Copy(Abrirfoto.FileName, caminhofoto);
 
                 }
