@@ -6,6 +6,7 @@ namespace GuizzoLtda
     {
         OpenFileDialog Abrirfoto;
         Image Foto;
+        string caminhofoto= "\\foto";
 
         public Principal()
         {
@@ -40,22 +41,7 @@ namespace GuizzoLtda
 
         private void btnFotoEmp_Click(object sender, EventArgs e)
         {
-            try
-            {
-                Abrirfoto = new OpenFileDialog();
-                Abrirfoto.Filter = "imagem file (*.jng; *.png;)| *.jpg; *.png";
-
-                if (Abrirfoto.ShowDialog() == DialogResult.OK)
-                {
-              
-                    Foto = Image.FromFile(Abrirfoto.FileName);
-                    PBEmpresa.Image = Foto;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Falha" + ex.Message);
-            }
+           
         }
     }
 }
