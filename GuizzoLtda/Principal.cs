@@ -43,5 +43,12 @@ namespace GuizzoLtda
         {
            
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            CadEmpresa fcadastroemp = new CadEmpresa();
+            this.Hide();
+            fcadastroemp.Show();
+        }
     }
 }

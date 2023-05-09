@@ -77,6 +77,13 @@
             set { cargo = value; } 
             
         }
+
+        public int CodEndereco
+        {
+            get { return idEndereco; }
+            set { idEndereco = value; }
+
+        }
         public string RuaUser
         {
             get { return rua; }
