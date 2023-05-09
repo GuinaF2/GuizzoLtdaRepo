@@ -46,6 +46,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtComple = new System.Windows.Forms.TextBox();
             this.txtNumero = new System.Windows.Forms.TextBox();
+            this.btnCadEmpresa = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbFotoEmp)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,7 +57,7 @@
             this.btnEscolherFotoEmp.Name = "btnEscolherFotoEmp";
             this.btnEscolherFotoEmp.Size = new System.Drawing.Size(230, 55);
             this.btnEscolherFotoEmp.TabIndex = 0;
-            this.btnEscolherFotoEmp.Text = "Cadastrar";
+            this.btnEscolherFotoEmp.Text = "Escolher Foto";
             this.btnEscolherFotoEmp.UseVisualStyleBackColor = true;
             this.btnEscolherFotoEmp.Click += new System.EventHandler(this.btnFotoEmp_Click);
             // 
@@ -198,11 +199,23 @@
             this.txtNumero.Size = new System.Drawing.Size(100, 23);
             this.txtNumero.TabIndex = 16;
             // 
+            // btnCadEmpresa
+            // 
+            this.btnCadEmpresa.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnCadEmpresa.Location = new System.Drawing.Point(111, 351);
+            this.btnCadEmpresa.Name = "btnCadEmpresa";
+            this.btnCadEmpresa.Size = new System.Drawing.Size(230, 55);
+            this.btnCadEmpresa.TabIndex = 20;
+            this.btnCadEmpresa.Text = "Cadastrar";
+            this.btnCadEmpresa.UseVisualStyleBackColor = true;
+            this.btnCadEmpresa.Click += new System.EventHandler(this.button1_Click);
+            // 
             // CadEmpresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnCadEmpresa);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtComple);
@@ -249,5 +262,6 @@
         private Label label9;
         private TextBox txtComple;
         private TextBox txtNumero;
+        private Button btnCadEmpresa;
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Controle;
+using Modelos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +15,9 @@ namespace GuizzoLtda
 
     public partial class CadEmpresa : Form
     {
+        UsuarioModelo UsuarioModelo = new UsuarioModelo();
+        UsuarioControle Controle = new UsuarioControle();
+
         OpenFileDialog Abrirfoto;
         Image Foto;
         string caminhofoto = "\\foto";
@@ -47,6 +52,41 @@ namespace GuizzoLtda
         private void pbFotoEmp_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            UsuarioModelo.RuaUser = txtRua.Text;
+
+            UsuarioModelo.BairroUser = txtBairro.Text;
+
+            UsuarioModelo.CepUser = txtCep.Text;
+
+            UsuarioModelo.NmrUser = txtNumero.Text;
+
+            UsuarioModelo.CompUser = txtComple.Text;
+
+            if (txtRua.Text == "" || txtBairro.Text == "" || txtCep.Text == "" || txtNumero.Text == "" || txtComple.Text == "")
+            {
+                MessageBox.Show("Preencha todos os campos.");
+
+                AdministradorCRUD fadmcrud = new AdministradorCRUD();
+                fadmcrud.Show();
+                Hide();
+            }
+            else
+            {
+                if (Controle.CadastroEmpresa(UsuarioModelo) >= 1)
+                {
+                    AdministradorCRUD fadmincrud = new AdministradorCRUD();
+                    this.Hide();
+                    fadmincrud.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Usuário ou Senha não encontrados");
+                }
+            }
         }
     }
 }
