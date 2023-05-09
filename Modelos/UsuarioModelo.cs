@@ -18,6 +18,10 @@
         private string numero;
         private string complemento;
 
+        private string cnpj;
+        private string razao_social;
+        private string inscricao_estadual;
+
         //defino o construtor modelo usuario
 
         public UsuarioModelo()
@@ -36,6 +40,10 @@
             cep = "";
             numero = "";
             complemento = "";
+
+            cnpj = "";
+            razao_social = "";
+            inscricao_estadual = "";
         }
 
         public int CodUsuario
@@ -115,7 +123,25 @@
             set { complemento = value; }
 
         }
- 
+        public string CnpjUser
+        {
+            get { return cnpj; }
+            set { cnpj = value; }
+
+        }
+        public string RazaoSocialUser
+        {
+            get { return razao_social; }
+            set { razao_social = value; }
+
+        }
+        public string InscEstadUser
+        {
+            get { return inscricao_estadual; }
+            set { inscricao_estadual = value; }
+
+        }
+
 
     }
 }

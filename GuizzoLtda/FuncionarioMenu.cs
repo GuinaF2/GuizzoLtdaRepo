@@ -21,5 +21,12 @@ namespace GuizzoLtda
         {
 
         }
+
+        private void abrirPedidoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PedidoFunc fpedidofuncionario = new PedidoFunc();
+            this.Hide();
+            fpedidofuncionario.Show();
+        }
     }
 }

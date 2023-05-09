@@ -66,7 +66,7 @@ namespace GuizzoLtda
 
             UsuarioModelo.CompUser = txtComple.Text;
 
-            if (txtRua.Text == "" || txtBairro.Text == "" || txtCep.Text == "" || txtNumero.Text == "" || txtComple.Text == "")
+            if (txtRua.Text == "" || txtBairro.Text == "" || txtCep.Text == "" || txtNumero.Text == "" || txtComple.Text == "" )
             {
                 MessageBox.Show("Preencha todos os campos.");
 
@@ -76,11 +76,50 @@ namespace GuizzoLtda
             }
             else
             {
-                if (Controle.CadastroEmpresa(UsuarioModelo) >= 1)
+                if (Controle.CadastroEndereco(UsuarioModelo) >= 1)
                 {
-                    AdministradorCRUD fadmincrud = new AdministradorCRUD();
-                    this.Hide();
-                    fadmincrud.Show();
+                    if (Controle.CadastroEmpresa(UsuarioModelo) >= 1)
+                    {
+                        EmpresaMenu fadmincrud = new EmpresaMenu();
+                        this.Hide();
+                        fadmincrud.Show();
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Usuário ou Senha não encontrados");
+                }
+            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            UsuarioModelo.CnpjUser = txtCnpj.Text;
+
+            UsuarioModelo.RazaoSocialUser = txtRazaosoc.Text;
+
+            UsuarioModelo.InscEstadUser = txtIncEstad.Text;
+
+            if (txtCnpj.Text == "" || txtRazaosoc.Text == "" || txtIncEstad.Text == "")
+            {
+                MessageBox.Show("Preencha todos os campos.");
+
+                AdministradorCRUD fadmcrud = new AdministradorCRUD();
+                fadmcrud.Show();
+                Hide();
+            }
+            else
+            {
+                if (Controle.CadastroEndereco(UsuarioModelo) >= 1)
+                {
+                    if (Controle.CadastroEmpresa(UsuarioModelo) >= 1)
+                    {
+                        AdministradorCRUD fadmincrud = new AdministradorCRUD();
+                        this.Hide();
+                        fadmincrud.Show();
+                    }
+
                 }
                 else
                 {

@@ -23,11 +23,11 @@ namespace Controle
             {
                 string SQL = "INSERT INTO tb_funcionario(nomeuser,senhauser) values(@nome,@senha)";
                 //declaração de vetor de campos
-                string[] campos = { "@nome","@senha"};
+                string[] campos = { "@nome", "@senha" };
                 //declaração de vetor de informações
                 string[] valores = { modelo.NomeUser, modelo.SenhaUser };
 
-               
+
                 if (conexaosql.cadastrar(campos, valores, SQL) >= 1)
                 {
                     valorCadastro = 1;
@@ -49,7 +49,7 @@ namespace Controle
         {
             try
             {
-                string sql = "DELETE from tb_funcionario where idusuario = @codigo";
+                string sql = "DELETE from tb_funcionario where idfuncionario = @codigo";
                 if (conexaosql.deletarDados(us.CodUsuario, sql) >= 1)
                 {
                     return resultado = true;
@@ -151,7 +151,7 @@ namespace Controle
 
                 MySqlCommand cmd = new MySqlCommand(sql, conexaologin);
                 cmd.CommandType = CommandType.Text;
-                cmd.Parameters.AddWithValue("@cargo",us.CodCargo);
+                cmd.Parameters.AddWithValue("@cargo", us.CodCargo);
                 cmd.Parameters.AddWithValue("@nome", us.NomeUser);
                 cmd.Parameters.AddWithValue("@senha", us.SenhaUser);
                 registro = Convert.ToInt32(cmd.ExecuteScalar()); //retorna um inteiro
@@ -164,7 +164,7 @@ namespace Controle
             }
         }
 
-        public int CadastroEmpresa(UsuarioModelo modelo)
+        public int CadastroEndereco(UsuarioModelo modelo)
         {
             int valorCadastro = -1;
 
@@ -176,6 +176,34 @@ namespace Controle
                 //declaração de vetor de informações
                 string[] valores = { modelo.RuaUser, modelo.BairroUser, modelo.CepUser, modelo.NmrUser, modelo.CompUser };
 
+
+                if (conexaosql.cadastrar(campos, valores, SQL) >= 1)
+                {
+                    valorCadastro = 1;
+                }
+                else
+                {
+                    valorCadastro = 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                //Lança erros do sistema
+                throw new Exception(ex.Message);
+            }
+            return valorCadastro;
+        }
+        public int CadastroEmpresa(UsuarioModelo modelo)
+        {
+            int valorCadastro = -1;
+
+            try
+            {
+                string SQL = "INSERT INTO tb_cliente(cnpj,razao_social,inscricao_estadual) values(@cnpj,@razao_social,@inscricao_estadual)";
+                //declaração de vetor de campos
+                string[] campos = { "@cnpj", "@razao_social", "@inscricao_estadual" };
+                //declaração de vetor de informações
+                string[] valores = { modelo.CnpjUser, modelo.RazaoSocialUser, modelo.InscEstadUser };
 
                 if (conexaosql.cadastrar(campos, valores, SQL) >= 1)
                 {

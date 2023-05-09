@@ -47,6 +47,7 @@
             this.txtComple = new System.Windows.Forms.TextBox();
             this.txtNumero = new System.Windows.Forms.TextBox();
             this.btnCadEmpresa = new System.Windows.Forms.Button();
+            this.btnCadEndereco = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbFotoEmp)).BeginInit();
             this.SuspendLayout();
             // 
@@ -210,11 +211,23 @@
             this.btnCadEmpresa.UseVisualStyleBackColor = true;
             this.btnCadEmpresa.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnCadEndereco
+            // 
+            this.btnCadEndereco.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnCadEndereco.Location = new System.Drawing.Point(167, 339);
+            this.btnCadEndereco.Name = "btnCadEndereco";
+            this.btnCadEndereco.Size = new System.Drawing.Size(230, 55);
+            this.btnCadEndereco.TabIndex = 21;
+            this.btnCadEndereco.Text = "Cadastrar";
+            this.btnCadEndereco.UseVisualStyleBackColor = true;
+            this.btnCadEndereco.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // CadEmpresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnCadEndereco);
             this.Controls.Add(this.btnCadEmpresa);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
@@ -263,5 +276,6 @@
         private TextBox txtComple;
         private TextBox txtNumero;
         private Button btnCadEmpresa;
+        private Button btnCadEndereco;
     }
 }

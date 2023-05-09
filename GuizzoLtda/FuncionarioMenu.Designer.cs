@@ -28,12 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FuncionarioMenu));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripTextBox2 = new System.Windows.Forms.ToolStripSplitButton();
-            this.sadsdasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSplitButton5 = new System.Windows.Forms.ToolStripSplitButton();
             this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
+            this.abrirPedidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,17 +51,10 @@
             // toolStripTextBox2
             // 
             this.toolStripTextBox2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sadsdasToolStripMenuItem});
+            this.abrirPedidoToolStripMenuItem});
             this.toolStripTextBox2.Name = "toolStripTextBox2";
             this.toolStripTextBox2.Size = new System.Drawing.Size(100, 22);
             this.toolStripTextBox2.Text = "Configurações";
-            // 
-            // sadsdasToolStripMenuItem
-            // 
-            this.sadsdasToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("sadsdasToolStripMenuItem.Image")));
-            this.sadsdasToolStripMenuItem.Name = "sadsdasToolStripMenuItem";
-            this.sadsdasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.sadsdasToolStripMenuItem.Text = "sadsdas";
             // 
             // toolStripSplitButton5
             // 
@@ -75,6 +67,13 @@
             this.toolStripSplitButton1.Name = "toolStripSplitButton1";
             this.toolStripSplitButton1.Size = new System.Drawing.Size(64, 22);
             this.toolStripSplitButton1.Text = "Sistema";
+            // 
+            // abrirPedidoToolStripMenuItem
+            // 
+            this.abrirPedidoToolStripMenuItem.Name = "abrirPedidoToolStripMenuItem";
+            this.abrirPedidoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.abrirPedidoToolStripMenuItem.Text = "Abrir Pedido";
+            this.abrirPedidoToolStripMenuItem.Click += new System.EventHandler(this.abrirPedidoToolStripMenuItem_Click);
             // 
             // FuncionarioMenu
             // 
@@ -103,6 +102,6 @@
         private ToolStripSplitButton toolStripSplitButton5;
         private ToolStripSplitButton toolStripSplitButton4;
         private ToolStripSplitButton toolStripSplitButton3;
-        private ToolStripMenuItem sadsdasToolStripMenuItem;
+        private ToolStripMenuItem abrirPedidoToolStripMenuItem;
     }
 }
