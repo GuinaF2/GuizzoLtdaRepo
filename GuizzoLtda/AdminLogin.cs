@@ -50,17 +50,17 @@ namespace GuizzoLtda
             {
                 MessageBox.Show("Preencha todos os campos.");
 
-                AdministradorCRUD fadmcrud = new AdministradorCRUD();
-                fadmcrud.Show();
+                AdminLogin fadmlogin = new AdminLogin();
+                fadmlogin.Show();
                 Hide();
             }
             else
             {
                 if (Controle.LogarAdm(UsuarioModelo) >= 1)
                 {
-                    AdministradorCRUD fadmincrud = new AdministradorCRUD();
+                    AdminMenu fmenuadm = new AdminMenu();
                     this.Hide();
-                    fadmincrud.Show();
+                    fmenuadm.Show();
                 }
                 else
                 {

@@ -136,9 +136,9 @@ namespace GuizzoLtda
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Principal fprincipalreturn = new Principal();
+            AdminMenu fmenureturn = new AdminMenu();
             this.Hide();
-            fprincipalreturn.Show();
+            fmenureturn.Show();
         }
     }
 }

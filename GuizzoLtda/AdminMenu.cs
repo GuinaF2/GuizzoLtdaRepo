@@ -16,5 +16,12 @@ namespace GuizzoLtda
         {
             InitializeComponent();
         }
+
+        private void abrirPedidoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AdministradorCRUD fadmcrud = new AdministradorCRUD();
+            fadmcrud.Show();
+            Hide();
+        }
     }
 }
