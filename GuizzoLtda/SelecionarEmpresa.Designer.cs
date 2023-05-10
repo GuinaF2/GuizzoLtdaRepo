@@ -54,6 +54,7 @@
             this.dgViewSelEmp.RowTemplate.Height = 25;
             this.dgViewSelEmp.Size = new System.Drawing.Size(450, 389);
             this.dgViewSelEmp.TabIndex = 2;
+            this.dgViewSelEmp.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgViewSelEmp_CellContentClick);
             this.dgViewSelEmp.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgViewSelEmp_CellContentClick);
             // 
             // SelecionarEmpresa

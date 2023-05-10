@@ -119,7 +119,7 @@ namespace Controle
 
                 MySqlCommand cmd = con.CreateCommand();
 
-                cmd.CommandText = "SELECT * from tb_pessoa where idpessoa = @id";
+                cmd.CommandText = "SELECT * from tb_funcionario where idfuncionario = @id";
                 cmd.Parameters.AddWithValue("@id", id);
 
                 MySqlDataReader registro = cmd.ExecuteReader();
@@ -127,10 +127,9 @@ namespace Controle
                 if (registro.HasRows)
                 {
                     registro.Read();
-                    us.NomeUser = registro["nome"].ToString();
-                    us.CpfUser = registro["cpf"].ToString();
-                    us.ContatoUser = registro["contato"].ToString();
-                    us.SenhaUser = registro["senha"].ToString();
+                    us.NomeUser = registro["nomeuser"].ToString();
+                    us.SenhaUser = registro["senhauser"].ToString();
+
                 }
                 con.Close();
             }
