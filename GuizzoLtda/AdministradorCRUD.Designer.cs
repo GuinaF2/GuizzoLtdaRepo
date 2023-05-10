@@ -45,9 +45,9 @@
             // SaveUpdate
             // 
             this.SaveUpdate.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SaveUpdate.Location = new System.Drawing.Point(25, 246);
+            this.SaveUpdate.Location = new System.Drawing.Point(25, 253);
             this.SaveUpdate.Name = "SaveUpdate";
-            this.SaveUpdate.Size = new System.Drawing.Size(325, 59);
+            this.SaveUpdate.Size = new System.Drawing.Size(351, 52);
             this.SaveUpdate.TabIndex = 0;
             this.SaveUpdate.Text = "Atualizar";
             this.SaveUpdate.UseVisualStyleBackColor = true;
@@ -56,9 +56,9 @@
             // SaveDelete
             // 
             this.SaveDelete.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SaveDelete.Location = new System.Drawing.Point(25, 311);
+            this.SaveDelete.Location = new System.Drawing.Point(25, 318);
             this.SaveDelete.Name = "SaveDelete";
-            this.SaveDelete.Size = new System.Drawing.Size(325, 59);
+            this.SaveDelete.Size = new System.Drawing.Size(351, 52);
             this.SaveDelete.TabIndex = 1;
             this.SaveDelete.Text = "Deletar";
             this.SaveDelete.UseVisualStyleBackColor = true;
@@ -67,9 +67,9 @@
             // SaveCreate
             // 
             this.SaveCreate.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SaveCreate.Location = new System.Drawing.Point(25, 378);
+            this.SaveCreate.Location = new System.Drawing.Point(25, 385);
             this.SaveCreate.Name = "SaveCreate";
-            this.SaveCreate.Size = new System.Drawing.Size(325, 59);
+            this.SaveCreate.Size = new System.Drawing.Size(351, 52);
             this.SaveCreate.TabIndex = 2;
             this.SaveCreate.Text = "Cadastrar";
             this.SaveCreate.UseVisualStyleBackColor = true;

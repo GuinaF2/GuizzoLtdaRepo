@@ -17,7 +17,7 @@ namespace GuizzoLtda
 
         private void Principal_Load_1(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnUsuario_Click_1(object sender, EventArgs e)
@@ -41,7 +41,9 @@ namespace GuizzoLtda
 
         private void btnFotoEmp_Click(object sender, EventArgs e)
         {
-           
+            SelecionarEmpresa fselecemp = new SelecionarEmpresa();
+            this.Hide();
+            fselecemp.Show();
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

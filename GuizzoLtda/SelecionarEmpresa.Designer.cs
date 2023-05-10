@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgViewSelEmp = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgViewSelEmp)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -43,26 +43,31 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // dataGridView1
+            // dgViewSelEmp
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(450, 389);
-            this.dataGridView1.TabIndex = 2;
+            this.dgViewSelEmp.AllowUserToAddRows = false;
+            this.dgViewSelEmp.AllowUserToDeleteRows = false;
+            this.dgViewSelEmp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgViewSelEmp.Location = new System.Drawing.Point(0, 0);
+            this.dgViewSelEmp.Name = "dgViewSelEmp";
+            this.dgViewSelEmp.ReadOnly = true;
+            this.dgViewSelEmp.RowTemplate.Height = 25;
+            this.dgViewSelEmp.Size = new System.Drawing.Size(450, 389);
+            this.dgViewSelEmp.TabIndex = 2;
+            this.dgViewSelEmp.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgViewSelEmp_CellContentClick);
             // 
             // SelecionarEmpresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgViewSelEmp);
             this.Controls.Add(this.pictureBox1);
             this.Name = "SelecionarEmpresa";
             this.Text = "SelecionarEmpresa";
+            this.Load += new System.EventHandler(this.SelecionarEmpresa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgViewSelEmp)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -70,6 +75,6 @@
         #endregion
 
         private PictureBox pictureBox1;
-        private DataGridView dataGridView1;
+        private DataGridView dgViewSelEmp;
     }
 }

@@ -32,14 +32,16 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripTextBox2 = new System.Windows.Forms.ToolStripSplitButton();
             this.abrirPedidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
-            this.toolStripSplitButton6 = new System.Windows.Forms.ToolStripSplitButton();
             this.pedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.veiculosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.motoristasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.empresasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSplitButton6 = new System.Windows.Forms.ToolStripSplitButton();
+            this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
             this.encerrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -71,17 +73,33 @@
             // abrirPedidoToolStripMenuItem
             // 
             this.abrirPedidoToolStripMenuItem.Name = "abrirPedidoToolStripMenuItem";
-            this.abrirPedidoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.abrirPedidoToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.abrirPedidoToolStripMenuItem.Text = "Funcionarios";
             this.abrirPedidoToolStripMenuItem.Click += new System.EventHandler(this.abrirPedidoToolStripMenuItem_Click);
             // 
-            // toolStripSplitButton1
+            // pedidosToolStripMenuItem
             // 
-            this.toolStripSplitButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.encerrarToolStripMenuItem});
-            this.toolStripSplitButton1.Name = "toolStripSplitButton1";
-            this.toolStripSplitButton1.Size = new System.Drawing.Size(73, 19);
-            this.toolStripSplitButton1.Text = "Sistema";
+            this.pedidosToolStripMenuItem.Name = "pedidosToolStripMenuItem";
+            this.pedidosToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.pedidosToolStripMenuItem.Text = "Pedidos";
+            // 
+            // veiculosToolStripMenuItem
+            // 
+            this.veiculosToolStripMenuItem.Name = "veiculosToolStripMenuItem";
+            this.veiculosToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.veiculosToolStripMenuItem.Text = "Veiculos";
+            // 
+            // motoristasToolStripMenuItem
+            // 
+            this.motoristasToolStripMenuItem.Name = "motoristasToolStripMenuItem";
+            this.motoristasToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.motoristasToolStripMenuItem.Text = "Motoristas";
+            // 
+            // empresasToolStripMenuItem
+            // 
+            this.empresasToolStripMenuItem.Name = "empresasToolStripMenuItem";
+            this.empresasToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.empresasToolStripMenuItem.Text = "Empresas";
             // 
             // toolStripSplitButton6
             // 
@@ -92,46 +110,41 @@
             this.toolStripSplitButton6.Size = new System.Drawing.Size(73, 19);
             this.toolStripSplitButton6.Text = "Relatorios";
             // 
-            // pedidosToolStripMenuItem
+            // toolStripSplitButton1
             // 
-            this.pedidosToolStripMenuItem.Name = "pedidosToolStripMenuItem";
-            this.pedidosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.pedidosToolStripMenuItem.Text = "Pedidos";
-            // 
-            // veiculosToolStripMenuItem
-            // 
-            this.veiculosToolStripMenuItem.Name = "veiculosToolStripMenuItem";
-            this.veiculosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.veiculosToolStripMenuItem.Text = "Veiculos";
-            // 
-            // motoristasToolStripMenuItem
-            // 
-            this.motoristasToolStripMenuItem.Name = "motoristasToolStripMenuItem";
-            this.motoristasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.motoristasToolStripMenuItem.Text = "Motoristas";
-            // 
-            // empresasToolStripMenuItem
-            // 
-            this.empresasToolStripMenuItem.Name = "empresasToolStripMenuItem";
-            this.empresasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.empresasToolStripMenuItem.Text = "Empresas";
+            this.toolStripSplitButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.encerrarToolStripMenuItem});
+            this.toolStripSplitButton1.Name = "toolStripSplitButton1";
+            this.toolStripSplitButton1.Size = new System.Drawing.Size(73, 19);
+            this.toolStripSplitButton1.Text = "Sistema";
             // 
             // encerrarToolStripMenuItem
             // 
             this.encerrarToolStripMenuItem.Name = "encerrarToolStripMenuItem";
-            this.encerrarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.encerrarToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.encerrarToolStripMenuItem.Text = "Encerrar";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Location = new System.Drawing.Point(392, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(407, 450);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // AdminMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.toolStrip1);
             this.Name = "AdminMenu";
             this.Text = "AdminMenu";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -149,5 +162,6 @@
         private ToolStripSplitButton toolStripSplitButton6;
         private ToolStripSplitButton toolStripSplitButton1;
         private ToolStripMenuItem encerrarToolStripMenuItem;
+        private PictureBox pictureBox1;
     }
 }
