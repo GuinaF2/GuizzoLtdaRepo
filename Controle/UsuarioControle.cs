@@ -163,35 +163,7 @@ namespace Controle
             }
         }
 
-        public int CadastroEndereco(UsuarioModelo modelo)
-        {
-            int valorCadastro = -1;
-
-            try
-            {
-                string SQL = "INSERT INTO tb_endereco(rua,bairro,cep,numero,complemento) values(@rua,@bairro,@cep,@numero,@complemento)";
-                //declaração de vetor de campos
-                string[] campos = { "@rua", "@bairro", "@cep", "@numero", "@complemento" };
-                //declaração de vetor de informações
-                string[] valores = { modelo.RuaUser, modelo.BairroUser, modelo.CepUser, modelo.NmrUser, modelo.CompUser };
-
-
-                if (conexaosql.cadastrar(campos, valores, SQL) >= 1)
-                {
-                    valorCadastro = 1;
-                }
-                else
-                {
-                    valorCadastro = 0;
-                }
-            }
-            catch (Exception ex)
-            {
-                //Lança erros do sistema
-                throw new Exception(ex.Message);
-            }
-            return valorCadastro;
-        }
+        
         public int CadastroEmpresa(UsuarioModelo modelo)
         {
             int valorCadastro = -1;
