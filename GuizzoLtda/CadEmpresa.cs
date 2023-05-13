@@ -15,8 +15,11 @@ namespace GuizzoLtda
 
     public partial class CadEmpresa : Form
     {
-        UsuarioModelo UsuarioModelo = new UsuarioModelo();
-        UsuarioControle Controle = new UsuarioControle();
+        EnderecoModelo EnderecoModelo = new EnderecoModelo();
+        EnderecoControle Controle = new EnderecoControle();
+
+        EmpresaModelo EmpresaModelo = new EmpresaModelo();
+        EmpresaControle Controle = new EmpresaControle();
 
         OpenFileDialog Abrirfoto;
         Image Foto;
@@ -56,15 +59,15 @@ namespace GuizzoLtda
 
         private void button1_Click(object sender, EventArgs e)
         {
-            UsuarioModelo.RuaUser = txtRua.Text;
+            EnderecoModelo.RuaUser = txtRua.Text;
 
-            UsuarioModelo.BairroUser = txtBairro.Text;
+            EnderecoModelo.BairroUser = txtBairro.Text;
 
-            UsuarioModelo.CepUser = txtCep.Text;
+            EnderecoModelo.CepUser = txtCep.Text;
 
-            UsuarioModelo.NmrUser = txtNumero.Text;
+            EnderecoModelo.NmrUser = txtNumero.Text;
 
-            UsuarioModelo.CompUser = txtComple.Text;
+            EnderecoModelo.CompUser = txtComple.Text;
 
             if (txtRua.Text == "" || txtBairro.Text == "" || txtCep.Text == "" || txtNumero.Text == "" || txtComple.Text == "" )
             {
@@ -76,9 +79,9 @@ namespace GuizzoLtda
             }
             else
             {
-                if (Controle.CadastroEndereco(UsuarioModelo) >= 1)
+                if (Controle.CadastroEndereco(EnderecoModelo) >= 1)
                 {
-                    if (Controle.CadastroEmpresa(UsuarioModelo) >= 1)
+                    if (Controle.CadastroEndereco(EnderecoModelo) >= 1)
                     {
                         EmpresaMenu fadmincrud = new EmpresaMenu();
                         this.Hide();
@@ -95,11 +98,11 @@ namespace GuizzoLtda
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            UsuarioModelo.CnpjUser = txtCnpj.Text;
+            EmpresaModelo.CnpjUser = txtCnpj.Text;
 
-            UsuarioModelo.RazaoSocialUser = txtRazaosoc.Text;
+            EmpresaModelo.RazaoSocialUser = txtRazaosoc.Text;
 
-            UsuarioModelo.InscEstadUser = txtIncEstad.Text;
+            EmpresaModelo.InscEstadUser = txtIncEstad.Text;
 
             if (txtCnpj.Text == "" || txtRazaosoc.Text == "" || txtIncEstad.Text == "")
             {
@@ -111,9 +114,9 @@ namespace GuizzoLtda
             }
             else
             {
-                if (Controle.CadastroEndereco(UsuarioModelo) >= 1)
+                if (Controle.CadastroEmpresa(EmpresaModelo) >= 1)
                 {
-                    if (Controle.CadastroEmpresa(UsuarioModelo) >= 1)
+                    if (Controle.CadastroEmpresa(EmpresaModelo) >= 1)
                     {
                         AdministradorCRUD fadmincrud = new AdministradorCRUD();
                         this.Hide();

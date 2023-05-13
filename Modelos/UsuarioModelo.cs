@@ -17,35 +17,29 @@
             idUsuario = 0;
             cargo = 0;
             nome = ""; 
-            senha = "";
-
-            
+            senha = "";            
         }
 
         public int CodUsuario
         {
             get { return idUsuario; }
             set { idUsuario = value; }
-
         }
         public string NomeUser
         {
             get { return nome; }
             set { nome = value; }
-
         }
         
         public string SenhaUser
         {
             get { return senha; }
             set { senha = value; }
-
         }
         public int CodCargo
         {
             get { return cargo; }
             set { cargo = value; } 
-            
         }
     }
 }
