@@ -105,7 +105,7 @@
             this.btnReturn.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnReturn.Location = new System.Drawing.Point(0, -1);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(179, 60);
+            this.btnReturn.Size = new System.Drawing.Size(149, 53);
             this.btnReturn.TabIndex = 4;
             this.btnReturn.Text = "Retornar";
             this.btnReturn.UseVisualStyleBackColor = true;
