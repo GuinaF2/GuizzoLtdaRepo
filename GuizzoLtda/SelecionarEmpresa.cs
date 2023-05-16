@@ -15,8 +15,9 @@ namespace GuizzoLtda
     public partial class SelecionarEmpresa : Form
     {
         Conexao conexaosql = new Conexao();
-        UsuarioModelo UsuarioModelo = new UsuarioModelo();
-        UsuarioControle Controle = new UsuarioControle();
+
+        EmpresaModelo EmpresaModelo = new EmpresaModelo();
+        EmpresaControle Controle = new EmpresaControle();
         int id;
         public SelecionarEmpresa()
         {
@@ -40,13 +41,13 @@ namespace GuizzoLtda
 
                 else
                 {
-                    UsuarioModelo = Controle.CarregaUsuario(id);
+                    EmpresaModelo = Controle.CarregaEmpresa(id);
 
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("\t\t    Favor selecionar ID do usuário. \n\nERRO: " + ex.Message);
+                MessageBox.Show("\t\t    Favor selecionar Empresa. \n\nERRO: " + ex.Message);
             }
         }
     }

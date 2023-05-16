@@ -19,7 +19,7 @@ namespace GuizzoLtda
         EnderecoControle Controle = new EnderecoControle();
 
         EmpresaModelo EmpresaModelo = new EmpresaModelo();
-        EmpresaControle Controle = new EmpresaControle();
+        EmpresaControle Control = new EmpresaControle();
 
         OpenFileDialog Abrirfoto;
         Image Foto;
@@ -114,9 +114,9 @@ namespace GuizzoLtda
             }
             else
             {
-                if (Controle.CadastroEmpresa(EmpresaModelo) >= 1)
+                if (Control.CadastroEmpresa(EmpresaModelo) >= 1)
                 {
-                    if (Controle.CadastroEmpresa(EmpresaModelo) >= 1)
+                    if (Control.CadastroEmpresa(EmpresaModelo) >= 1)
                     {
                         AdministradorCRUD fadmincrud = new AdministradorCRUD();
                         this.Hide();

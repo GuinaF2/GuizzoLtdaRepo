@@ -14,7 +14,7 @@ namespace Controle
         public UsuarioControle()
         {
         }
-        public int cadastrar(UsuarioModelo modelo)
+        public int Cadastrar(UsuarioModelo modelo)
         {
             //variável de confirmação do banco
             int valorCadastro = -1;

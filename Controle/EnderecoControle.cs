@@ -15,7 +15,7 @@ namespace Controle
         {
 
         }
-        public int CadastrarEndereco(EnderecoModelo modelo)
+        public int CadastroEndereco(EnderecoModelo modelo)
         {
             //variável de confirmação do banco
             int valorCadastro = -1;

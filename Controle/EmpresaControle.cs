@@ -1,4 +1,5 @@
 ﻿using Modelos;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,5 +43,36 @@ namespace Controle
                 }
                 return valorCadastro;
             }
+        public EmpresaModelo CarregaEmpresa(int id)
+        {
+            EmpresaModelo us = new EmpresaModelo();
+            try
+            {
+                conexaosql = new Conexao();
+                MySqlConnection con = conexaosql.getConexao();
+                con.Open();
+
+                MySqlCommand cmd = con.CreateCommand();
+
+                cmd.CommandText = "SELECT * from tb_empresa where idcliente = @id";
+                cmd.Parameters.AddWithValue("@id", id);
+
+                MySqlDataReader registro = cmd.ExecuteReader();
+
+                if (registro.HasRows)
+                {
+                    registro.Read();
+                    us.CnpjUser = registro["cnpj"].ToString();
+                    us.RazaoSocialUser = registro["razaosocial"].ToString();
+
+                }
+                con.Close();
+            }
+            catch (System.Exception ex)
+            {
+                throw new System.Exception(ex.Message);
+            }
+            return us;
+        }
     }
 }
