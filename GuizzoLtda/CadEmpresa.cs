@@ -73,9 +73,9 @@ namespace GuizzoLtda
             {
                 MessageBox.Show("Preencha todos os campos.");
 
-                AdministradorCRUD fadmcrud = new AdministradorCRUD();
-                fadmcrud.Show();
-                Hide();
+                CadEmpresa fcadastroreturn = new CadEmpresa();
+                fcadastroreturn.Show();
+                this.Hide();
             }
             else
             {
@@ -89,10 +89,7 @@ namespace GuizzoLtda
                     }
 
                 }
-                else
-                {
-                    MessageBox.Show("Usuário ou Senha não encontrados");
-                }
+               
             }
         }
 
@@ -110,23 +107,22 @@ namespace GuizzoLtda
 
                 CadEmpresa fcadastroreturn = new CadEmpresa();
                 fcadastroreturn.Show();
-                Hide();
+                this.Hide();
             }
             else
             {
                
                     if (Control.CadastroEmpresa(EmpresaModelo) >= 1)
                     {
-                        AdministradorCRUD fadmincrud = new AdministradorCRUD();
-                        this.Hide();
-                        fadmincrud.Show();
+
+                    MessageBox.Show("Usuário Cadastrado com Sucesso");
+                     Principal fprincipalreturn = new Principal();
+                     this.Hide();
+                     fprincipalreturn.Show();
                     }
 
                 
-                else
-                {
-                    MessageBox.Show("Usuário ou Senha não encontrados");
-                }
+               
             }
         }
 
