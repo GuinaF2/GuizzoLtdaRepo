@@ -17,6 +17,7 @@ namespace GuizzoLtda
         Conexao conexaosql = new Conexao();
         UsuarioModelo UsuarioModelo = new UsuarioModelo();
         UsuarioControle Controle = new UsuarioControle();
+
         public AdminLogin()
         {
             InitializeComponent();
@@ -74,6 +75,11 @@ namespace GuizzoLtda
             Principal fprincipalreturn = new Principal();
             this.Hide();
             fprincipalreturn.Show();
+        }
+
+        private void AdminLogin_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -108,14 +108,13 @@ namespace GuizzoLtda
             {
                 MessageBox.Show("Preencha todos os campos.");
 
-                AdministradorCRUD fadmcrud = new AdministradorCRUD();
-                fadmcrud.Show();
+                CadEmpresa fcadastroreturn = new CadEmpresa();
+                fcadastroreturn.Show();
                 Hide();
             }
             else
             {
-                if (Control.CadastroEmpresa(EmpresaModelo) >= 1)
-                {
+               
                     if (Control.CadastroEmpresa(EmpresaModelo) >= 1)
                     {
                         AdministradorCRUD fadmincrud = new AdministradorCRUD();
@@ -123,12 +122,17 @@ namespace GuizzoLtda
                         fadmincrud.Show();
                     }
 
-                }
+                
                 else
                 {
                     MessageBox.Show("Usuário ou Senha não encontrados");
                 }
             }
+        }
+
+        private void CadEmpresa_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

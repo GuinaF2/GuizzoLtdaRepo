@@ -21,7 +21,7 @@ namespace Controle
 
                 try
                 {
-                    string SQL = "INSERT INTO tb_cliente(cnpj,razao_social,inscricao_estadual) values(@cnpj,@razao_social,@inscricao_estadual)";
+                    string SQL = "INSERT INTO tb_empresa(cnpj,razao_social,inscricao_estadual) values(@cnpj,@razao_social,@inscricao_estadual)";
                     //declaração de vetor de campos
                     string[] campos = { "@cnpj", "@razao_social", "@inscricao_estadual" };
                     //declaração de vetor de informações

@@ -78,9 +78,10 @@ namespace GuizzoLtda
             if (Controle.AtualizarUsuario(UsuarioModelo) == true)
             {
                 MessageBox.Show("Cadastro Atualizado.");
-                txtNome.Clear();
-                txtID.Clear();
-                txtSenha.Clear();
+
+                AdministradorCRUD fadmincrud = new AdministradorCRUD();
+                this.Hide();
+                fadmincrud.Show();
             }
             else
             {
@@ -106,9 +107,9 @@ namespace GuizzoLtda
             {
                 MessageBox.Show("Processo cancelado.");
             }
-            txtNome.Clear();
-            txtID.Clear();
-            txtSenha.Clear();
+            AdministradorCRUD fadmincrud = new AdministradorCRUD();
+            this.Hide();
+            fadmincrud.Show();
         }
 
         private void SaveCreate_Click_1(object sender, EventArgs e)
@@ -122,12 +123,12 @@ namespace GuizzoLtda
             }
             else
             {
-                if (Controle.cadastrar(UsuarioModelo) >= 1)
+                if (Controle.Cadastrar(UsuarioModelo) >= 1)
                 {
                     MessageBox.Show("Usuário Cadastrado.");
-                    txtNome.Clear();
-                    txtID.Clear();
-                    txtSenha.Clear();
+                    AdministradorCRUD fadmincrud = new AdministradorCRUD();
+                    this.Hide();
+                    fadmincrud.Show();
                 }
                 else
                 {

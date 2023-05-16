@@ -12,7 +12,7 @@ namespace Controle
     public class Conexao
     {
         static private string servidor = "localhost";
-        static private string db = "dbguizzo";
+        static private string db = "bdguizzo";
         static private string usuario = "root";
         static private string senha = "";
         static private string StrConexao = "server=" + servidor + ";database=" + db + ";user id=" + usuario + ";password=" + senha;

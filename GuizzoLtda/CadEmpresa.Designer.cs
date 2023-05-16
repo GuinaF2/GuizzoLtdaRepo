@@ -300,6 +300,7 @@
             this.Controls.Add(this.btnCadEmpresa);
             this.Name = "CadEmpresa";
             this.Text = "CadEmpresa";
+            this.Load += new System.EventHandler(this.CadEmpresa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbFotoEmp)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
