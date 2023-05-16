@@ -211,7 +211,7 @@
             // btnCadEmpresa
             // 
             this.btnCadEmpresa.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnCadEmpresa.Location = new System.Drawing.Point(277, 393);
+            this.btnCadEmpresa.Location = new System.Drawing.Point(129, 383);
             this.btnCadEmpresa.Name = "btnCadEmpresa";
             this.btnCadEmpresa.Size = new System.Drawing.Size(230, 55);
             this.btnCadEmpresa.TabIndex = 20;
@@ -222,13 +222,12 @@
             // btnCadEndereco
             // 
             this.btnCadEndereco.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnCadEndereco.Location = new System.Drawing.Point(277, 393);
+            this.btnCadEndereco.Location = new System.Drawing.Point(385, 383);
             this.btnCadEndereco.Name = "btnCadEndereco";
             this.btnCadEndereco.Size = new System.Drawing.Size(230, 55);
             this.btnCadEndereco.TabIndex = 21;
             this.btnCadEndereco.Text = "Cadastrar";
             this.btnCadEndereco.UseVisualStyleBackColor = true;
-            this.btnCadEndereco.Visible = false;
             this.btnCadEndereco.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // tabControl1
