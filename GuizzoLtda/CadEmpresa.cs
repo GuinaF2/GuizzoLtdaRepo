@@ -21,9 +21,7 @@ namespace GuizzoLtda
         EmpresaModelo EmpresaModelo = new EmpresaModelo();
         EmpresaControle Control = new EmpresaControle();
 
-        OpenFileDialog Abrirfoto;
-        Image Foto;
-        string caminhofoto = "\\foto";
+       
 
         public CadEmpresa()
         {

@@ -26,7 +26,7 @@ namespace Controle
                            
                     string[] campos = { "@cnpj", "@razao_social", "@inscricao_estadual" };
                     //declaração de vetor de informações
-                    string[] valores = { modelo.CnpjUser, modelo.RazaoSocialUser, modelo.InscEstadUser };
+                    string[] valores = { modelo.LogoEmpresa,modelo.CnpjUser, modelo.RazaoSocialUser, modelo.InscEstadUser };
                     
                  
 
