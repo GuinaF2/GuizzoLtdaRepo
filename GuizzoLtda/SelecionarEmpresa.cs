@@ -1,5 +1,6 @@
 ﻿using Controle;
 using Modelos;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -31,24 +32,30 @@ namespace GuizzoLtda
 
         private void dgViewSelEmp_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            try
+            if (dgViewSelEmp.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
             {
-                id = Convert.ToInt32(dgViewSelEmp.Rows[e.RowIndex].Cells[e.ColumnIndex].Value);
-                if (id <= 0)
-                {
-                    MessageBox.Show("Favor selecionar Empresa");
-                }
+                dgViewSelEmp.CurrentRow.Selected = true;
+                
 
-                else
-                {
-                    EmpresaModelo = Controle.CarregaEmpresa(id);
+                conexaosql = new Conexao();
+                MySqlConnection con = conexaosql.getConexao();
+                con.Open();
 
-                }
+                MySqlCommand cmd = con.CreateCommand();
+
+                cmd.CommandText = "SELECT * from tb_cliente where idcliente = @id";
+                cmd.Parameters.AddWithValue("@id", id);
+                string img = cmd.ExecuteScalar().ToString();
+                pbLogoEmp.Image = Image.FromFile(img);
+                con.Close();
+
+
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("\t\t    Favor selecionar Empresa. \n\nERRO: " + ex.Message);
-            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

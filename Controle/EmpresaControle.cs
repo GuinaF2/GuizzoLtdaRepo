@@ -58,16 +58,15 @@ namespace Controle
 
                 MySqlCommand cmd = con.CreateCommand();
 
-                cmd.CommandText = "SELECT * from tb_empresa where idcliente = @id";
-                cmd.Parameters.AddWithValue("@id", id);
+                cmd.CommandText = "SELECT idcliente from tb_cliente where idcliente = @idcliente";
+                cmd.Parameters.AddWithValue("@idcliente", id);
 
                 MySqlDataReader registro = cmd.ExecuteReader();
 
                 if (registro.HasRows)
                 {
                     registro.Read();
-                    us.CnpjUser = registro["cnpj"].ToString();
-                    us.RazaoSocialUser = registro["razaosocial"].ToString();
+                    
 
                 }
                 con.Close();
@@ -77,6 +76,34 @@ namespace Controle
                 throw new System.Exception(ex.Message);
             }
             return us;
+        }
+
+        public int cadastrarFoto(EmpresaModelo modelo)
+        {
+            //variável de confirmação do banco
+            int valorCadastroempr = -1;
+            try
+            {
+                string SQL = "INSERT INTO tb_cliente(logo) values(@logoemp)";
+                //declaração de vetor de campos
+                string[] campos = { "@logoemp" };
+                //declaração de vetor de informações
+                string[] valores = { modelo.LogoEmpresa };
+                if (conexaosql.cadastrar(campos, valores, SQL) >= 1)
+                {
+                    valorCadastroempr= 1;
+                }
+                else
+                {
+                    valorCadastroempr = 0;
+                }
+            }
+            catch (Exception)
+            {
+                //Lança erros do sistema
+                MessageBox.Show("Erro fatale");
+            }
+            return valorCadastroempr;
         }
     }
 }

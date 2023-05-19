@@ -13,12 +13,14 @@ namespace Modelos
         private int idendereco;
         private string razao_social;
         private string inscricao_estadual;
+        private string logoemp;
         public EmpresaModelo() 
         {
             cnpj = "";
             idendereco = 0;
             razao_social = "";
             inscricao_estadual = "";
+            logoemp = "";
         }
         public string CnpjUser
         {
@@ -42,6 +44,12 @@ namespace Modelos
         {
             get { return idendereco; }
             set { idendereco = value; }
+
+        }
+        public string LogoEmpresa
+        {
+            get { return logoemp; }
+            set { logoemp = value; }
 
         }
     }

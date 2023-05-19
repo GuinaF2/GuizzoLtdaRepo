@@ -32,25 +32,15 @@ namespace GuizzoLtda
 
         private void btnFotoEmp_Click(object sender, EventArgs e)
         {
-            try
+            OpenFileDialog opf = new OpenFileDialog();
+            opf.Filter = "Chose Image(*.jpg;*.png;*.gif)|*.jpg;*.png;*.gif";
+
+            if (opf.ShowDialog() == DialogResult.OK)
             {
-                Abrirfoto = new OpenFileDialog();
-                Abrirfoto.Filter = "imagem file (*.jng; *.png;)| *.jpg; *.png";
-
-                if (Abrirfoto.ShowDialog() == DialogResult.OK)
-                {
-
-                    Foto = Image.FromFile(Abrirfoto.FileName);
-                    pbFotoEmp.Image = Foto;
-                    File.Copy(Abrirfoto.FileName, caminhofoto);
-
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Falha" + ex.Message);
+                pbFotoEmp.Image = Image.FromFile(opf.FileName);
             }
         }
+            
 
         private void pbFotoEmp_Click(object sender, EventArgs e)
         {
@@ -95,6 +85,8 @@ namespace GuizzoLtda
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            EmpresaModelo.LogoEmpresa = pbFotoEmp.ToString();
+
             EmpresaModelo.CnpjUser = txtCnpj.Text;
 
             EmpresaModelo.RazaoSocialUser = txtRazaosoc.Text;
@@ -125,12 +117,16 @@ namespace GuizzoLtda
                 if (Controle.CadastroEndereco(EnderecoModelo) >= 1)
                 {
                     if (Control.CadastroEmpresa(EmpresaModelo) >= 1)
+
                     {
-                        MessageBox.Show("Usuário Cadastrado com Sucesso");
-                        Principal fprincipalreturn = new Principal();
-                        this.Hide();
-                        fprincipalreturn.Show();
-                    }
+                        if (Control.cadastrarFoto(EmpresaModelo) >=1)
+                        {
+                            MessageBox.Show("Usuário Cadastrado com Sucesso");
+                            Principal fprincipalreturn = new Principal();
+                            this.Hide();
+                            fprincipalreturn.Show();
+                        }
+                        }
                 }
                 
                
