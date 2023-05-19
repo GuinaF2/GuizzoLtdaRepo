@@ -101,7 +101,17 @@ namespace GuizzoLtda
 
             EmpresaModelo.InscEstadUser = txtIncEstad.Text;
 
-            if (txtCnpj.Text == "" || txtRazaosoc.Text == "" || txtIncEstad.Text == "")
+            EnderecoModelo.RuaUser = txtRua.Text;
+
+            EnderecoModelo.BairroUser = txtBairro.Text;
+
+            EnderecoModelo.CepUser = txtCep.Text;
+
+            EnderecoModelo.NmrUser = txtNumero.Text;
+
+            EnderecoModelo.CompUser = txtComple.Text;
+
+            if (txtCnpj.Text == "" || txtRazaosoc.Text == "" || txtIncEstad.Text == "" || txtRua.Text == "" || txtBairro.Text == "" || txtCep.Text == "" || txtNumero.Text == "" || txtComple.Text == "")
             {
                 MessageBox.Show("Preencha todos os campos.");
 
@@ -111,16 +121,17 @@ namespace GuizzoLtda
             }
             else
             {
-               
+
+                if (Controle.CadastroEndereco(EnderecoModelo) >= 1)
+                {
                     if (Control.CadastroEmpresa(EmpresaModelo) >= 1)
                     {
-
-                    MessageBox.Show("Usuário Cadastrado com Sucesso");
-                     Principal fprincipalreturn = new Principal();
-                     this.Hide();
-                     fprincipalreturn.Show();
+                        MessageBox.Show("Usuário Cadastrado com Sucesso");
+                        Principal fprincipalreturn = new Principal();
+                        this.Hide();
+                        fprincipalreturn.Show();
                     }
-
+                }
                 
                
             }

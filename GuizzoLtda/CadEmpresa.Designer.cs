@@ -46,7 +46,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtComple = new System.Windows.Forms.TextBox();
             this.txtNumero = new System.Windows.Forms.TextBox();
-            this.btnCadEmpresa = new System.Windows.Forms.Button();
             this.btnCadEndereco = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -208,17 +207,6 @@
             this.txtNumero.Size = new System.Drawing.Size(100, 23);
             this.txtNumero.TabIndex = 16;
             // 
-            // btnCadEmpresa
-            // 
-            this.btnCadEmpresa.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnCadEmpresa.Location = new System.Drawing.Point(129, 383);
-            this.btnCadEmpresa.Name = "btnCadEmpresa";
-            this.btnCadEmpresa.Size = new System.Drawing.Size(230, 55);
-            this.btnCadEmpresa.TabIndex = 20;
-            this.btnCadEmpresa.Text = "Cadastrar";
-            this.btnCadEmpresa.UseVisualStyleBackColor = true;
-            this.btnCadEmpresa.Click += new System.EventHandler(this.button1_Click);
-            // 
             // btnCadEndereco
             // 
             this.btnCadEndereco.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -296,7 +284,6 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btnCadEndereco);
-            this.Controls.Add(this.btnCadEmpresa);
             this.Name = "CadEmpresa";
             this.Text = "CadEmpresa";
             this.Load += new System.EventHandler(this.CadEmpresa_Load);
@@ -331,7 +318,6 @@
         private Label label9;
         private TextBox txtComple;
         private TextBox txtNumero;
-        private Button btnCadEmpresa;
         private Button btnCadEndereco;
         private TabControl tabControl1;
         private TabPage tabPage1;

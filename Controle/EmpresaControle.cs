@@ -21,14 +21,18 @@ namespace Controle
 
                 try
                 {
-                    string SQL = "INSERT INTO tb_empresa(cnpj,razao_social,inscricao_estadual) values(@cnpj,@razao_social,@inscricao_estadual)";
-                    //declaração de vetor de campos
+                    string SQL = "INSERT INTO tb_cliente (cnpj,razao_social,inscricao_estadual,idendereco) values(@cnpj,@razao_social,@inscricao_estadual,(SELECT idendereco FROM tb_endereco ORDER BY idendereco DESC LIMIT 1)) ";
+                //declaração de vetor de campos
+                           
                     string[] campos = { "@cnpj", "@razao_social", "@inscricao_estadual" };
                     //declaração de vetor de informações
                     string[] valores = { modelo.CnpjUser, modelo.RazaoSocialUser, modelo.InscEstadUser };
+                    
+                 
 
-                    if (conexaosql.cadastrar(campos, valores, SQL) >= 1)
+                if (conexaosql.cadastrar(campos, valores, SQL) >= 1)
                     {
+
                         valorCadastro = 1;
                     }
                     else

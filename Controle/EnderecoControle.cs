@@ -27,7 +27,7 @@ namespace Controle
                 string[] campos = { "@rua", "@bairro" ,"@cep","@numero","@complemento"};
                 //declaração de vetor de informações
                 string[] valores = { modelo.RuaUser, modelo.BairroUser, modelo.CepUser, modelo.NmrUser, modelo.CompUser };
-
+                string SQLEnd = null;
 
                 if (conexaosql.cadastrar(campos, valores, SQL) >= 1)
                 {
