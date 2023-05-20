@@ -21,12 +21,12 @@ namespace Controle
 
                 try
                 {
-                    string SQL = "INSERT INTO tb_cliente (cnpj,razao_social,inscricao_estadual,idendereco) values(@cnpj,@razao_social,@inscricao_estadual,(SELECT idendereco FROM tb_endereco ORDER BY idendereco DESC LIMIT 1)) ";
+                    string SQL = "INSERT INTO tb_cliente (cnpj,razao_social,inscricao_estadual,idendereco,logo) values(@cnpj,@razao_social,@inscricao_estadual,(SELECT idendereco FROM tb_endereco ORDER BY idendereco DESC LIMIT 1),@logo) ";
                 //declaração de vetor de campos
                            
-                    string[] campos = { "@cnpj", "@razao_social", "@inscricao_estadual" };
+                    string[] campos = { "@cnpj", "@razao_social", "@inscricao_estadual","@logo" };
                     //declaração de vetor de informações
-                    string[] valores = { modelo.LogoEmpresa,modelo.CnpjUser, modelo.RazaoSocialUser, modelo.InscEstadUser };
+                    string[] valores = { modelo.CnpjUser, modelo.RazaoSocialUser, modelo.InscEstadUser, modelo.LogoEmpresa };
                     
                  
 
@@ -78,32 +78,6 @@ namespace Controle
             return us;
         }
 
-        public int cadastrarFoto(EmpresaModelo modelo)
-        {
-            //variável de confirmação do banco
-            int valorCadastroempr = -1;
-            try
-            {
-                string SQL = "INSERT INTO tb_cliente(logo) values(@logoemp)";
-                //declaração de vetor de campos
-                string[] campos = { "@logoemp" };
-                //declaração de vetor de informações
-                string[] valores = { modelo.LogoEmpresa };
-                if (conexaosql.cadastrar(campos, valores, SQL) >= 1)
-                {
-                    valorCadastroempr= 1;
-                }
-                else
-                {
-                    valorCadastroempr = 0;
-                }
-            }
-            catch (Exception)
-            {
-                //Lança erros do sistema
-                MessageBox.Show("Erro fatale");
-            }
-            return valorCadastroempr;
-        }
+        
     }
 }

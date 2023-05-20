@@ -27,7 +27,7 @@ namespace GuizzoLtda
 
         private void SelecionarEmpresa_Load(object sender, EventArgs e)
         {
-            dgViewSelEmp.DataSource = conexaosql.verDados("SELECT * FROM tb_cliente");
+            dgViewSelEmp.DataSource = conexaosql.verDados("SELECT idcliente, logo FROM tb_cliente");
         }
 
         private void dgViewSelEmp_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -35,19 +35,9 @@ namespace GuizzoLtda
             if (dgViewSelEmp.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
             {
                 dgViewSelEmp.CurrentRow.Selected = true;
-                
 
-                conexaosql = new Conexao();
-                MySqlConnection con = conexaosql.getConexao();
-                con.Open();
 
-                MySqlCommand cmd = con.CreateCommand();
-
-                cmd.CommandText = "SELECT * from tb_cliente where idcliente = @id";
-                cmd.Parameters.AddWithValue("@id", id);
-                string img = cmd.ExecuteScalar().ToString();
-                pbLogoEmp.Image = Image.FromFile(img);
-                con.Close();
+               
 
 
             }
