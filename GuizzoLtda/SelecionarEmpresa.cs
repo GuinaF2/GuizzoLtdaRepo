@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace GuizzoLtda
 {
@@ -27,24 +28,45 @@ namespace GuizzoLtda
 
         private void SelecionarEmpresa_Load(object sender, EventArgs e)
         {
-            dgViewSelEmp.DataSource = conexaosql.verDados("SELECT idcliente, logo FROM tb_cliente");
+            dgViewSelEmp.DataSource = conexaosql.verDados("SELECT idcliente, razao_social,logo FROM tb_cliente");
         }
 
         private void dgViewSelEmp_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgViewSelEmp.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            try
             {
-                dgViewSelEmp.CurrentRow.Selected = true;
+                if (dgViewSelEmp.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+                {
+                    dgViewSelEmp.CurrentRow.Selected = true;
+                    textBox1.Text = dgViewSelEmp.Rows[e.RowIndex].Cells["logo"].Value.ToString();
+                    pbLogoEmp.ImageLocation = textBox1.Text;
 
 
-               
 
 
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Selecione your company plese!!!!!!");
             }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void dgViewSelEmp_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void dgViewSelEmp_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Principal fprincipalreturn = new Principal();
+            this.Hide();
+            fprincipalreturn.Show();
 
         }
     }

@@ -30,6 +30,7 @@
         {
             pbLogoEmp = new PictureBox();
             dgViewSelEmp = new DataGridView();
+            textBox1 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pbLogoEmp).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgViewSelEmp).BeginInit();
             SuspendLayout();
@@ -57,6 +58,15 @@
             dgViewSelEmp.TabIndex = 2;
             dgViewSelEmp.CellClick += dgViewSelEmp_CellContentClick;
             dgViewSelEmp.CellContentClick += dgViewSelEmp_CellContentClick;
+            dgViewSelEmp.CellContentDoubleClick += dgViewSelEmp_CellContentDoubleClick;
+            dgViewSelEmp.CellDoubleClick += dgViewSelEmp_CellDoubleClick;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(447, 428);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(353, 23);
+            textBox1.TabIndex = 3;
             // 
             // SelecionarEmpresa
             // 
@@ -65,17 +75,20 @@
             ClientSize = new Size(800, 450);
             Controls.Add(dgViewSelEmp);
             Controls.Add(pbLogoEmp);
+            Controls.Add(textBox1);
             Name = "SelecionarEmpresa";
             Text = "SelecionarEmpresa";
             Load += SelecionarEmpresa_Load;
             ((System.ComponentModel.ISupportInitialize)pbLogoEmp).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgViewSelEmp).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private PictureBox pbLogoEmp;
         private DataGridView dgViewSelEmp;
+        private TextBox textBox1;
     }
 }
