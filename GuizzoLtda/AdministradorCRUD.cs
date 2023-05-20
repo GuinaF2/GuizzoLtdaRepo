@@ -25,26 +25,22 @@ namespace GuizzoLtda
 
         private void AdministradorCRUD_Load(object sender, EventArgs e)
         {
-           dataGridCRUD.DataSource = conexaosql.verDados("SELECT * FROM tb_funcionario");
+            dataGridCRUD.DataSource = conexaosql.verDados("SELECT * FROM tb_funcionario");
         }
 
         private void dataGridCRUD_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
-                id = Convert.ToInt32(dataGridCRUD.Rows[e.RowIndex].Cells[e.ColumnIndex].Value);
-                if (id <= 0)
+               
+                if (dataGridCRUD)
                 {
-                    MessageBox.Show("Favor selecionar ID do usuário");
+                    
                 }
 
                 else
                 {
-                    UsuarioModelo = Controle.CarregaUsuario(id);
-
-                    txtID.Text = id.ToString();
-                    txtNome.Text = UsuarioModelo.NomeUser;
-                    txtSenha.Text = UsuarioModelo.SenhaUser;
+                    MessageBox.Show("Favor selecionar ID do usuário");
 
                 }
             }
