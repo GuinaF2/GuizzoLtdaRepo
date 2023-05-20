@@ -32,8 +32,8 @@ namespace GuizzoLtda
         {
             try
             {
-               
-                if (dataGridCRUD.Rows[e.RowIndex].Cells[e.ColumnIndex].Value!= null)
+
+                if (dataGridCRUD.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
                 {
                     dataGridCRUD.CurrentRow.Selected = true;
 
