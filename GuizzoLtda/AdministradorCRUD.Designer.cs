@@ -40,7 +40,7 @@
             labelsenha = new Label();
             dataGridCRUD = new DataGridView();
             button1 = new Button();
-            comboBox1 = new ComboBox();
+            cbCargo = new ComboBox();
             labelcargo = new Label();
             toolStrip1 = new ToolStrip();
             toolStripButton1 = new ToolStripButton();
@@ -178,15 +178,15 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
-            // comboBox1
+            // cbCargo
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "1", "2" });
-            comboBox1.Location = new Point(190, 337);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(63, 23);
-            comboBox1.TabIndex = 11;
-            comboBox1.Visible = false;
+            cbCargo.FormattingEnabled = true;
+            cbCargo.Items.AddRange(new object[] { "1", "2" });
+            cbCargo.Location = new Point(190, 337);
+            cbCargo.Name = "cbCargo";
+            cbCargo.Size = new Size(63, 23);
+            cbCargo.TabIndex = 11;
+            cbCargo.Visible = false;
             // 
             // labelcargo
             // 
@@ -275,7 +275,7 @@
             ClientSize = new Size(800, 450);
             Controls.Add(toolStrip1);
             Controls.Add(labelcargo);
-            Controls.Add(comboBox1);
+            Controls.Add(cbCargo);
             Controls.Add(button1);
             Controls.Add(dataGridCRUD);
             Controls.Add(labelsenha);
@@ -321,5 +321,6 @@
         private ToolStripButton toolStripTextBox2;
         private ToolStripButton toolStripTextBox1;
         private ToolStripButton toolStripTextBox3;
+        private ComboBox cbCargo;
     }
 }

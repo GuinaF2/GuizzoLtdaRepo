@@ -147,8 +147,18 @@ namespace GuizzoLtda
         private void toolStripTextBox2_Click(object sender, EventArgs e)
         {
             txtID.Visible = true;
+            labelid.Visible = true;
 
+            txtNome.Visible = true;
+            labelnome.Visible = true;
 
+            txtSenha.Visible = true;
+            labelid.Visible = true;
+
+            cbCargo.Visible = true;
+            labelcargo.Visible = true;
+
+            SaveUpdate.Visible = true;
         }
     }
 }
