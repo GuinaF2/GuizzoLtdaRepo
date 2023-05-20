@@ -239,6 +239,7 @@
             toolStripTextBox1.Name = "toolStripTextBox1";
             toolStripTextBox1.Size = new Size(61, 22);
             toolStripTextBox1.Text = "Cadastrar";
+            toolStripTextBox1.Click += toolStripTextBox1_Click;
             // 
             // toolStripSeparator2
             // 

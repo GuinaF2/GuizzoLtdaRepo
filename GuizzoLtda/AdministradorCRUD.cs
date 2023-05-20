@@ -153,12 +153,29 @@ namespace GuizzoLtda
             labelnome.Visible = true;
 
             txtSenha.Visible = true;
-            labelid.Visible = true;
+            labelsenha.Visible = true;
 
             cbCargo.Visible = true;
             labelcargo.Visible = true;
 
             SaveUpdate.Visible = true;
+        }
+
+        private void toolStripTextBox1_Click(object sender, EventArgs e)
+        {
+            txtID.Visible = false;
+            labelid.Visible = false;
+
+            txtNome.Visible = true;
+            labelnome.Visible = true;
+
+            txtSenha.Visible = true;
+            labelsenha.Visible = true;
+
+            cbCargo.Visible = true;
+            labelcargo.Visible = true;
+
+            SaveCreate.Visible = true;
         }
     }
 }
