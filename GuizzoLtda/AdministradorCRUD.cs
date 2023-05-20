@@ -183,5 +183,12 @@ namespace GuizzoLtda
         {
             MessageBox.Show("Não é possível alterar este campo");
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            AdminMenu fmenureturn = new AdminMenu();
+            this.Hide();
+            fmenureturn.Show();
+        }
     }
 }

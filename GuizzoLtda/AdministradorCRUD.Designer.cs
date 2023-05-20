@@ -39,7 +39,6 @@
             labelnome = new Label();
             labelsenha = new Label();
             dataGridCRUD = new DataGridView();
-            button1 = new Button();
             cbCargo = new ComboBox();
             labelcargo = new Label();
             toolStrip1 = new ToolStrip();
@@ -62,7 +61,7 @@
             SaveUpdate.Name = "SaveUpdate";
             SaveUpdate.Size = new Size(300, 50);
             SaveUpdate.TabIndex = 0;
-            SaveUpdate.Text = "Salvar Tudo";
+            SaveUpdate.Text = "Salvar Alteração";
             SaveUpdate.UseVisualStyleBackColor = true;
             SaveUpdate.Visible = false;
             SaveUpdate.Click += SaveUpdate_Click_1;
@@ -74,7 +73,7 @@
             SaveDelete.Name = "SaveDelete";
             SaveDelete.Size = new Size(300, 50);
             SaveDelete.TabIndex = 1;
-            SaveDelete.Text = "Salvar Tudo";
+            SaveDelete.Text = "Salvar Alteração";
             SaveDelete.UseVisualStyleBackColor = true;
             SaveDelete.Visible = false;
             SaveDelete.Click += SaveDelete_Click_1;
@@ -86,7 +85,7 @@
             SaveCreate.Name = "SaveCreate";
             SaveCreate.Size = new Size(300, 50);
             SaveCreate.TabIndex = 2;
-            SaveCreate.Text = "Salvar Tudo";
+            SaveCreate.Text = "Salvar Cadastro";
             SaveCreate.UseVisualStyleBackColor = true;
             SaveCreate.Visible = false;
             SaveCreate.Click += SaveCreate_Click_1;
@@ -95,7 +94,7 @@
             // 
             labelid.AutoSize = true;
             labelid.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            labelid.Location = new Point(128, 90);
+            labelid.Location = new Point(135, 68);
             labelid.Name = "labelid";
             labelid.Size = new Size(107, 30);
             labelid.TabIndex = 3;
@@ -105,7 +104,7 @@
             // 
             txtID.BackColor = Color.White;
             txtID.Enabled = false;
-            txtID.Location = new Point(128, 136);
+            txtID.Location = new Point(135, 101);
             txtID.Name = "txtID";
             txtID.Size = new Size(125, 23);
             txtID.TabIndex = 4;
@@ -115,7 +114,7 @@
             // txtNome
             // 
             txtNome.BackColor = Color.White;
-            txtNome.Location = new Point(128, 208);
+            txtNome.Location = new Point(135, 160);
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(125, 23);
             txtNome.TabIndex = 5;
@@ -124,7 +123,7 @@
             // txtSenha
             // 
             txtSenha.BackColor = Color.White;
-            txtSenha.Location = new Point(128, 280);
+            txtSenha.Location = new Point(135, 232);
             txtSenha.Name = "txtSenha";
             txtSenha.Size = new Size(125, 23);
             txtSenha.TabIndex = 6;
@@ -134,7 +133,7 @@
             // 
             labelnome.AutoSize = true;
             labelnome.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            labelnome.Location = new Point(128, 162);
+            labelnome.Location = new Point(135, 127);
             labelnome.Name = "labelnome";
             labelnome.Size = new Size(70, 30);
             labelnome.TabIndex = 7;
@@ -144,7 +143,7 @@
             // 
             labelsenha.AutoSize = true;
             labelsenha.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            labelsenha.Location = new Point(128, 234);
+            labelsenha.Location = new Point(135, 199);
             labelsenha.Name = "labelsenha";
             labelsenha.Size = new Size(70, 30);
             labelsenha.TabIndex = 8;
@@ -164,24 +163,11 @@
             dataGridCRUD.CellClick += dataGridCRUD_CellContentClick_1;
             dataGridCRUD.CellContentClick += dataGridCRUD_CellContentClick_1;
             // 
-            // button1
-            // 
-            button1.BackColor = Color.Transparent;
-            button1.FlatStyle = FlatStyle.System;
-            button1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(0, 28);
-            button1.Name = "button1";
-            button1.Size = new Size(108, 46);
-            button1.TabIndex = 10;
-            button1.Text = "Retornar";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
-            // 
             // cbCargo
             // 
             cbCargo.FormattingEnabled = true;
             cbCargo.Items.AddRange(new object[] { "1", "2" });
-            cbCargo.Location = new Point(190, 337);
+            cbCargo.Location = new Point(197, 292);
             cbCargo.Name = "cbCargo";
             cbCargo.Size = new Size(63, 23);
             cbCargo.TabIndex = 11;
@@ -189,7 +175,7 @@
             // labelcargo
             // 
             labelcargo.AutoSize = true;
-            labelcargo.Location = new Point(128, 340);
+            labelcargo.Location = new Point(135, 295);
             labelcargo.Name = "labelcargo";
             labelcargo.Size = new Size(39, 15);
             labelcargo.TabIndex = 12;
@@ -211,7 +197,8 @@
             toolStripButton1.ImageTransparentColor = Color.Magenta;
             toolStripButton1.Name = "toolStripButton1";
             toolStripButton1.Size = new Size(23, 22);
-            toolStripButton1.Text = "toolStripButton1";
+            toolStripButton1.Text = "Retornar";
+            toolStripButton1.Click += toolStripButton1_Click;
             // 
             // toolStripTextBox2
             // 
@@ -272,11 +259,10 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(dataGridCRUD);
             Controls.Add(toolStrip1);
             Controls.Add(labelcargo);
             Controls.Add(cbCargo);
-            Controls.Add(button1);
-            Controls.Add(dataGridCRUD);
             Controls.Add(labelsenha);
             Controls.Add(labelnome);
             Controls.Add(txtSenha);
@@ -308,7 +294,6 @@
         private Label labelnome;
         private Label labelsenha;
         private DataGridView dataGridCRUD;
-        private Button button1;
         private ComboBox comboBox1;
         private Label labelcargo;
         private ToolStrip toolStrip1;
