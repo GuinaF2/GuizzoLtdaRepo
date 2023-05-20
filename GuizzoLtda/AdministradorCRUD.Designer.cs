@@ -100,33 +100,34 @@
             labelid.Size = new Size(107, 30);
             labelid.TabIndex = 3;
             labelid.Text = "Id Usuario";
-            labelid.Visible = false;
             // 
             // txtID
             // 
+            txtID.BackColor = Color.White;
+            txtID.Enabled = false;
             txtID.Location = new Point(128, 136);
             txtID.Name = "txtID";
             txtID.Size = new Size(125, 23);
             txtID.TabIndex = 4;
-            txtID.Visible = false;
+            txtID.Click += txtID_Click;
             txtID.TextChanged += txtID_TextChanged;
             // 
             // txtNome
             // 
+            txtNome.BackColor = Color.White;
             txtNome.Location = new Point(128, 208);
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(125, 23);
             txtNome.TabIndex = 5;
-            txtNome.Visible = false;
             txtNome.TextChanged += txtNome_TextChanged;
             // 
             // txtSenha
             // 
+            txtSenha.BackColor = Color.White;
             txtSenha.Location = new Point(128, 280);
             txtSenha.Name = "txtSenha";
             txtSenha.Size = new Size(125, 23);
             txtSenha.TabIndex = 6;
-            txtSenha.Visible = false;
             txtSenha.TextChanged += txtSenha_TextChanged;
             // 
             // labelnome
@@ -138,7 +139,6 @@
             labelnome.Size = new Size(70, 30);
             labelnome.TabIndex = 7;
             labelnome.Text = "Nome";
-            labelnome.Visible = false;
             // 
             // labelsenha
             // 
@@ -149,7 +149,6 @@
             labelsenha.Size = new Size(70, 30);
             labelsenha.TabIndex = 8;
             labelsenha.Text = "Senha";
-            labelsenha.Visible = false;
             // 
             // dataGridCRUD
             // 
@@ -186,7 +185,6 @@
             cbCargo.Name = "cbCargo";
             cbCargo.Size = new Size(63, 23);
             cbCargo.TabIndex = 11;
-            cbCargo.Visible = false;
             // 
             // labelcargo
             // 
@@ -196,7 +194,6 @@
             labelcargo.Size = new Size(39, 15);
             labelcargo.TabIndex = 12;
             labelcargo.Text = "Cargo";
-            labelcargo.Visible = false;
             // 
             // toolStrip1
             // 
