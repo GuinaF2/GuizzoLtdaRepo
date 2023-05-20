@@ -33,9 +33,13 @@ namespace GuizzoLtda
             try
             {
                
-                if (dataGridCRUD)
+                if (dataGridCRUD.Rows[e.RowIndex].Cells[e.ColumnIndex].Value!= null)
                 {
-                    
+                    dataGridCRUD.CurrentRow.Selected = true;
+
+                    txtID.Text = dataGridCRUD.Rows[e.RowIndex].Cells["idfuncionario"].Value.ToString();
+                    txtNome.Text = dataGridCRUD.Rows[e.RowIndex].Cells["NomeUser"].Value.ToString();
+                    txtSenha.Text = dataGridCRUD.Rows[e.RowIndex].Cells["SenhaUser"].Value.ToString();
                 }
 
                 else
