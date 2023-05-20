@@ -32,25 +32,25 @@
             SaveUpdate = new Button();
             SaveDelete = new Button();
             SaveCreate = new Button();
-            label1 = new Label();
+            labelid = new Label();
             txtID = new TextBox();
             txtNome = new TextBox();
             txtSenha = new TextBox();
-            label2 = new Label();
-            label3 = new Label();
+            labelnome = new Label();
+            labelsenha = new Label();
             dataGridCRUD = new DataGridView();
             button1 = new Button();
             comboBox1 = new ComboBox();
-            label4 = new Label();
+            labelcargo = new Label();
             toolStrip1 = new ToolStrip();
+            toolStripButton1 = new ToolStripButton();
+            toolStripTextBox2 = new ToolStripButton();
             toolStripSeparator1 = new ToolStripSeparator();
-            toolStripTextBox1 = new ToolStripTextBox();
-            toolStripTextBox2 = new ToolStripTextBox();
+            toolStripTextBox1 = new ToolStripButton();
             toolStripSeparator2 = new ToolStripSeparator();
-            toolStripTextBox3 = new ToolStripTextBox();
+            toolStripTextBox3 = new ToolStripButton();
             toolStripSeparator = new ToolStripSeparator();
             ajudaToolStripButton = new ToolStripButton();
-            toolStripButton1 = new ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)dataGridCRUD).BeginInit();
             toolStrip1.SuspendLayout();
             SuspendLayout();
@@ -64,39 +64,43 @@
             SaveUpdate.TabIndex = 0;
             SaveUpdate.Text = "Salvar Tudo";
             SaveUpdate.UseVisualStyleBackColor = true;
+            SaveUpdate.Visible = false;
             SaveUpdate.Click += SaveUpdate_Click_1;
             // 
             // SaveDelete
             // 
             SaveDelete.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            SaveDelete.Location = new Point(25, 280);
+            SaveDelete.Location = new Point(25, 385);
             SaveDelete.Name = "SaveDelete";
             SaveDelete.Size = new Size(300, 50);
             SaveDelete.TabIndex = 1;
             SaveDelete.Text = "Salvar Tudo";
             SaveDelete.UseVisualStyleBackColor = true;
+            SaveDelete.Visible = false;
             SaveDelete.Click += SaveDelete_Click_1;
             // 
             // SaveCreate
             // 
             SaveCreate.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            SaveCreate.Location = new Point(25, 337);
+            SaveCreate.Location = new Point(25, 385);
             SaveCreate.Name = "SaveCreate";
             SaveCreate.Size = new Size(300, 50);
             SaveCreate.TabIndex = 2;
             SaveCreate.Text = "Salvar Tudo";
             SaveCreate.UseVisualStyleBackColor = true;
+            SaveCreate.Visible = false;
             SaveCreate.Click += SaveCreate_Click_1;
             // 
-            // label1
+            // labelid
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(128, 90);
-            label1.Name = "label1";
-            label1.Size = new Size(107, 30);
-            label1.TabIndex = 3;
-            label1.Text = "Id Usuario";
+            labelid.AutoSize = true;
+            labelid.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            labelid.Location = new Point(128, 90);
+            labelid.Name = "labelid";
+            labelid.Size = new Size(107, 30);
+            labelid.TabIndex = 3;
+            labelid.Text = "Id Usuario";
+            labelid.Visible = false;
             // 
             // txtID
             // 
@@ -104,6 +108,7 @@
             txtID.Name = "txtID";
             txtID.Size = new Size(125, 23);
             txtID.TabIndex = 4;
+            txtID.Visible = false;
             txtID.TextChanged += txtID_TextChanged;
             // 
             // txtNome
@@ -112,6 +117,7 @@
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(125, 23);
             txtNome.TabIndex = 5;
+            txtNome.Visible = false;
             txtNome.TextChanged += txtNome_TextChanged;
             // 
             // txtSenha
@@ -120,27 +126,30 @@
             txtSenha.Name = "txtSenha";
             txtSenha.Size = new Size(125, 23);
             txtSenha.TabIndex = 6;
+            txtSenha.Visible = false;
             txtSenha.TextChanged += txtSenha_TextChanged;
             // 
-            // label2
+            // labelnome
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(128, 162);
-            label2.Name = "label2";
-            label2.Size = new Size(70, 30);
-            label2.TabIndex = 7;
-            label2.Text = "Nome";
+            labelnome.AutoSize = true;
+            labelnome.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            labelnome.Location = new Point(128, 162);
+            labelnome.Name = "labelnome";
+            labelnome.Size = new Size(70, 30);
+            labelnome.TabIndex = 7;
+            labelnome.Text = "Nome";
+            labelnome.Visible = false;
             // 
-            // label3
+            // labelsenha
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(128, 234);
-            label3.Name = "label3";
-            label3.Size = new Size(70, 30);
-            label3.TabIndex = 8;
-            label3.Text = "Senha";
+            labelsenha.AutoSize = true;
+            labelsenha.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            labelsenha.Location = new Point(128, 234);
+            labelsenha.Name = "labelsenha";
+            labelsenha.Size = new Size(70, 30);
+            labelsenha.TabIndex = 8;
+            labelsenha.Text = "Senha";
+            labelsenha.Visible = false;
             // 
             // dataGridCRUD
             // 
@@ -161,7 +170,7 @@
             button1.BackColor = Color.Transparent;
             button1.FlatStyle = FlatStyle.System;
             button1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(0, 39);
+            button1.Location = new Point(0, 28);
             button1.Name = "button1";
             button1.Size = new Size(108, 46);
             button1.TabIndex = 10;
@@ -177,15 +186,17 @@
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(63, 23);
             comboBox1.TabIndex = 11;
+            comboBox1.Visible = false;
             // 
-            // label4
+            // labelcargo
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(128, 340);
-            label4.Name = "label4";
-            label4.Size = new Size(39, 15);
-            label4.TabIndex = 12;
-            label4.Text = "Cargo";
+            labelcargo.AutoSize = true;
+            labelcargo.Location = new Point(128, 340);
+            labelcargo.Name = "labelcargo";
+            labelcargo.Size = new Size(39, 15);
+            labelcargo.TabIndex = 12;
+            labelcargo.Text = "Cargo";
+            labelcargo.Visible = false;
             // 
             // toolStrip1
             // 
@@ -196,6 +207,25 @@
             toolStrip1.TabIndex = 13;
             toolStrip1.Text = "toolStrip1";
             // 
+            // toolStripButton1
+            // 
+            toolStripButton1.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            toolStripButton1.Image = (Image)resources.GetObject("toolStripButton1.Image");
+            toolStripButton1.ImageTransparentColor = Color.Magenta;
+            toolStripButton1.Name = "toolStripButton1";
+            toolStripButton1.Size = new Size(23, 22);
+            toolStripButton1.Text = "toolStripButton1";
+            // 
+            // toolStripTextBox2
+            // 
+            toolStripTextBox2.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            toolStripTextBox2.Image = (Image)resources.GetObject("toolStripTextBox2.Image");
+            toolStripTextBox2.ImageTransparentColor = Color.Magenta;
+            toolStripTextBox2.Name = "toolStripTextBox2";
+            toolStripTextBox2.Size = new Size(57, 22);
+            toolStripTextBox2.Text = "Atualizar";
+            toolStripTextBox2.Click += toolStripTextBox2_Click;
+            // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
@@ -203,15 +233,12 @@
             // 
             // toolStripTextBox1
             // 
+            toolStripTextBox1.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            toolStripTextBox1.Image = (Image)resources.GetObject("toolStripTextBox1.Image");
+            toolStripTextBox1.ImageTransparentColor = Color.Magenta;
             toolStripTextBox1.Name = "toolStripTextBox1";
-            toolStripTextBox1.Size = new Size(100, 25);
+            toolStripTextBox1.Size = new Size(61, 22);
             toolStripTextBox1.Text = "Cadastrar";
-            // 
-            // toolStripTextBox2
-            // 
-            toolStripTextBox2.Name = "toolStripTextBox2";
-            toolStripTextBox2.Size = new Size(100, 25);
-            toolStripTextBox2.Text = "Atualizar";
             // 
             // toolStripSeparator2
             // 
@@ -220,8 +247,11 @@
             // 
             // toolStripTextBox3
             // 
+            toolStripTextBox3.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            toolStripTextBox3.Image = (Image)resources.GetObject("toolStripTextBox3.Image");
+            toolStripTextBox3.ImageTransparentColor = Color.Magenta;
             toolStripTextBox3.Name = "toolStripTextBox3";
-            toolStripTextBox3.Size = new Size(100, 25);
+            toolStripTextBox3.Size = new Size(48, 22);
             toolStripTextBox3.Text = "Deletar";
             // 
             // toolStripSeparator
@@ -238,31 +268,22 @@
             ajudaToolStripButton.Size = new Size(23, 22);
             ajudaToolStripButton.Text = "Aju&da";
             // 
-            // toolStripButton1
-            // 
-            toolStripButton1.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            toolStripButton1.Image = (Image)resources.GetObject("toolStripButton1.Image");
-            toolStripButton1.ImageTransparentColor = Color.Magenta;
-            toolStripButton1.Name = "toolStripButton1";
-            toolStripButton1.Size = new Size(23, 22);
-            toolStripButton1.Text = "toolStripButton1";
-            // 
             // AdministradorCRUD
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(toolStrip1);
-            Controls.Add(label4);
+            Controls.Add(labelcargo);
             Controls.Add(comboBox1);
             Controls.Add(button1);
             Controls.Add(dataGridCRUD);
-            Controls.Add(label3);
-            Controls.Add(label2);
+            Controls.Add(labelsenha);
+            Controls.Add(labelnome);
             Controls.Add(txtSenha);
             Controls.Add(txtNome);
             Controls.Add(txtID);
-            Controls.Add(label1);
+            Controls.Add(labelid);
             Controls.Add(SaveCreate);
             Controls.Add(SaveDelete);
             Controls.Add(SaveUpdate);
@@ -281,24 +302,24 @@
         private Button SaveUpdate;
         private Button SaveDelete;
         private Button SaveCreate;
-        private Label label1;
+        private Label labelid;
         private TextBox txtID;
         private TextBox txtNome;
         private TextBox txtSenha;
-        private Label label2;
-        private Label label3;
+        private Label labelnome;
+        private Label labelsenha;
         private DataGridView dataGridCRUD;
         private Button button1;
         private ComboBox comboBox1;
-        private Label label4;
+        private Label labelcargo;
         private ToolStrip toolStrip1;
         private ToolStripButton toolStripButton1;
-        private ToolStripTextBox toolStripTextBox2;
         private ToolStripSeparator toolStripSeparator1;
-        private ToolStripTextBox toolStripTextBox1;
         private ToolStripSeparator toolStripSeparator2;
-        private ToolStripTextBox toolStripTextBox3;
         private ToolStripSeparator toolStripSeparator;
         private ToolStripButton ajudaToolStripButton;
+        private ToolStripButton toolStripTextBox2;
+        private ToolStripButton toolStripTextBox1;
+        private ToolStripButton toolStripTextBox3;
     }
 }

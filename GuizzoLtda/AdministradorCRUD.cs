@@ -143,5 +143,12 @@ namespace GuizzoLtda
             this.Hide();
             fmenureturn.Show();
         }
+
+        private void toolStripTextBox2_Click(object sender, EventArgs e)
+        {
+            txtID.Visible = true;
+
+
+        }
     }
 }
