@@ -146,8 +146,8 @@ namespace GuizzoLtda
 
         private void toolStripTextBox2_Click(object sender, EventArgs e)
         {
-            txtID.Visible = true;
-            labelid.Visible = true;
+            txtID.Visible = false;
+            labelid.Visible = false;
 
             txtNome.Visible = true;
             labelnome.Visible = true;
@@ -159,6 +159,11 @@ namespace GuizzoLtda
             labelcargo.Visible = true;
 
             SaveUpdate.Visible = true;
+            SaveDelete.Visible = false;
+            SaveCreate.Visible = false;
+
+
+            
         }
 
         private void toolStripTextBox1_Click(object sender, EventArgs e)
@@ -176,6 +181,39 @@ namespace GuizzoLtda
             labelcargo.Visible = true;
 
             SaveCreate.Visible = true;
+            SaveUpdate.Visible = false;
+            SaveDelete.Visible = false;
+
+
+            txtNome.Location = new Point(128, 158);
+            labelnome.Location = new Point(128, 112);
+
+            txtSenha.Location = new Point(128, 230);
+            labelsenha.Location = new Point(128, 184);
+
+            cbCargo.Location = new Point(190, 290);
+            labelcargo.Location = new Point(128, 287);
+
+
+        }
+
+        private void toolStripTextBox3_Click(object sender, EventArgs e)
+        {
+            txtID.Visible = true;
+            labelid.Visible = true;
+
+            txtNome.Visible = true;
+            labelnome.Visible = true;
+
+            txtSenha.Visible = true;
+            labelsenha.Visible = true;
+
+            cbCargo.Visible = true;
+            labelcargo.Visible = true;
+
+            SaveCreate.Visible = false;
+            SaveUpdate.Visible = false;
+            SaveDelete.Visible = true;
         }
     }
 }

@@ -254,6 +254,7 @@
             toolStripTextBox3.Name = "toolStripTextBox3";
             toolStripTextBox3.Size = new Size(48, 22);
             toolStripTextBox3.Text = "Deletar";
+            toolStripTextBox3.Click += toolStripTextBox3_Click;
             // 
             // toolStripSeparator
             // 
