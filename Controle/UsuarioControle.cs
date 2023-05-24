@@ -70,9 +70,9 @@ namespace Controle
         {
             try
             {
-                string sql = "UPDATE tb_funcionario set nomeuser=@nome, senhauser=@senha where idfuncionario= @codigo";
-                string[] campos = { "@nome", "@senha" };
-                string[] valores = { us.NomeUser, us.SenhaUser };
+                string sql = "UPDATE tb_funcionario set nomeuser=@nome, senhauser=@senha, cargo=@cargo where idfuncionario= @codigo";
+                string[] campos = { "@nome", "@senha","@cargo" };
+                string[] valores = { us.NomeUser, us.SenhaUser, us.CodCargo.ToString()};
                 if (conexaosql.atualizarDados(us.CodUsuario, campos, valores, sql) >= 1)
                 {
                     return resultado = true;

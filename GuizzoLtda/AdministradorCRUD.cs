@@ -23,12 +23,12 @@ namespace GuizzoLtda
             InitializeComponent();
         }
 
-        private void AdministradorCRUD_Load(object sender, EventArgs e)
+        private void AdministradorCRUD_Load_1(object sender, EventArgs e)
         {
             dataGridCRUD.DataSource = conexaosql.verDados("SELECT * FROM tb_funcionario");
         }
 
-        private void dataGridCRUD_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        private void dataGridCRUD_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
@@ -54,65 +54,7 @@ namespace GuizzoLtda
             }
         }
 
-        private void txtID_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtNome_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSenha_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SaveUpdate_Click_1(object sender, EventArgs e)
-        {
-            UsuarioModelo.CodUsuario = Convert.ToInt32(txtID.Text);
-            UsuarioModelo.NomeUser = txtNome.Text;
-            UsuarioModelo.SenhaUser = txtSenha.Text;
-
-            if (Controle.AtualizarUsuario(UsuarioModelo) == true)
-            {
-                MessageBox.Show("Cadastro Atualizado.");
-
-                AdministradorCRUD fadmincrud = new AdministradorCRUD();
-                this.Hide();
-                fadmincrud.Show();
-            }
-            else
-            {
-                MessageBox.Show("Erro na atualização.");
-            }
-            this.Controls.Clear();
-            this.InitializeComponent();
-        }
-
-        private void SaveDelete_Click_1(object sender, EventArgs e)
-        {
-            UsuarioModelo.CodUsuario = Convert.ToInt32(txtID.Text);
-            var resposta = DialogResult;
-            resposta = MessageBox.Show("Tem certeza que deseja deletar o usuário?", "! Aviso !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (resposta == DialogResult.Yes)
-            {
-                if (Controle.DeletarUsuario(UsuarioModelo) == true)
-                {
-                    MessageBox.Show("Usuário deletado.");
-                }
-            }
-            else if (resposta == DialogResult.No)
-            {
-                MessageBox.Show("Processo cancelado.");
-            }
-            AdministradorCRUD fadmincrud = new AdministradorCRUD();
-            this.Hide();
-            fadmincrud.Show();
-        }
-
-        private void SaveCreate_Click_1(object sender, EventArgs e)
+        private void SaveCreate_Click(object sender, EventArgs e)
         {
             UsuarioModelo.NomeUser = txtID.Text;
             UsuarioModelo.SenhaUser = txtSenha.Text;
@@ -137,58 +79,95 @@ namespace GuizzoLtda
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void SaveDelete_Click(object sender, EventArgs e)
+        {
+            UsuarioModelo.CodUsuario = Convert.ToInt32(txtID.Text);
+            var resposta = DialogResult;
+            resposta = MessageBox.Show("Tem certeza que deseja deletar o usuário?", "! Aviso !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (resposta == DialogResult.Yes)
+            {
+                if (Controle.DeletarUsuario(UsuarioModelo) == true)
+                {
+                    MessageBox.Show("Usuário deletado.");
+                }
+            }
+            else if (resposta == DialogResult.No)
+            {
+                MessageBox.Show("Processo cancelado.");
+            }
+            AdministradorCRUD fadmincrud = new AdministradorCRUD();
+            this.Hide();
+            fadmincrud.Show();
+        }
+
+        private void SaveUpdate_Click(object sender, EventArgs e)
+        {
+            UsuarioModelo.CodUsuario = Convert.ToInt32(txtID.Text);
+            UsuarioModelo.NomeUser = txtNome.Text;
+            UsuarioModelo.SenhaUser = txtSenha.Text;
+
+            if (Controle.AtualizarUsuario(UsuarioModelo) == true)
+            {
+                MessageBox.Show("Cadastro Atualizado.");
+
+                AdministradorCRUD fadmincrud = new AdministradorCRUD();
+                this.Hide();
+                fadmincrud.Show();
+            }
+            else
+            {
+                MessageBox.Show("Erro na atualização.");
+            }
+            this.Controls.Clear();
+            this.InitializeComponent();
+        }
+
+        private void cbCargo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSenha_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNome_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtID_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnReturn_Click(object sender, EventArgs e)
         {
             AdminMenu fmenureturn = new AdminMenu();
             this.Hide();
             fmenureturn.Show();
         }
 
-        private void toolStripTextBox2_Click(object sender, EventArgs e)
+        private void btnAtualizar_Click(object sender, EventArgs e)
         {
-
-
             SaveUpdate.Visible = true;
             SaveDelete.Visible = false;
             SaveCreate.Visible = false;
-
-
-
         }
 
-        private void toolStripTextBox1_Click(object sender, EventArgs e)
+        private void btnCad_Click(object sender, EventArgs e)
         {
-
-
             SaveCreate.Visible = true;
             SaveUpdate.Visible = false;
             SaveDelete.Visible = false;
-
-
-
-
-
         }
 
-        private void toolStripTextBox3_Click(object sender, EventArgs e)
+        private void btnApaga_Click(object sender, EventArgs e)
         {
-
-
             SaveCreate.Visible = false;
             SaveUpdate.Visible = false;
             SaveDelete.Visible = true;
-        }
-
-        private void txtID_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Não é possível alterar este campo");
-        }
-
-        private void toolStripButton1_Click(object sender, EventArgs e)
-        {
-            AdminMenu fmenureturn = new AdminMenu();
-            this.Hide();
-            fmenureturn.Show();
         }
     }
 }
