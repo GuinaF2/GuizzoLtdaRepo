@@ -30,28 +30,7 @@ namespace GuizzoLtda
 
         private void dataGridCRUD_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            try
-            {
-
-                if (dataGridCRUD.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
-                {
-                    dataGridCRUD.CurrentRow.Selected = true;
-
-                    txtID.Text = dataGridCRUD.Rows[e.RowIndex].Cells["idfuncionario"].Value.ToString();
-                    txtNome.Text = dataGridCRUD.Rows[e.RowIndex].Cells["NomeUser"].Value.ToString();
-                    txtSenha.Text = dataGridCRUD.Rows[e.RowIndex].Cells["SenhaUser"].Value.ToString();
-                }
-
-                else
-                {
-                    MessageBox.Show("Favor selecionar ID do usuário");
-
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("\t\t    Favor selecionar ID do usuário. \n\nERRO: " + ex.Message);
-            }
+           
         }
 
         private void SaveCreate_Click(object sender, EventArgs e)
@@ -105,6 +84,7 @@ namespace GuizzoLtda
             UsuarioModelo.CodUsuario = Convert.ToInt32(txtID.Text);
             UsuarioModelo.NomeUser = txtNome.Text;
             UsuarioModelo.SenhaUser = txtSenha.Text;
+            UsuarioModelo.CodCargo = Convert.ToInt32(txtID.Text);
 
             if (Controle.AtualizarUsuario(UsuarioModelo) == true)
             {
@@ -168,6 +148,33 @@ namespace GuizzoLtda
             SaveCreate.Visible = false;
             SaveUpdate.Visible = false;
             SaveDelete.Visible = true;
+        }
+
+        private void dataGridCRUD_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+
+                if (dataGridCRUD.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+                {
+                    dataGridCRUD.CurrentRow.Selected = true;
+
+                    txtID.Text = dataGridCRUD.Rows[e.RowIndex].Cells["idfuncionario"].Value.ToString();
+                    txtNome.Text = dataGridCRUD.Rows[e.RowIndex].Cells["NomeUser"].Value.ToString();
+                    txtSenha.Text = dataGridCRUD.Rows[e.RowIndex].Cells["SenhaUser"].Value.ToString();
+                    cbCargo.Text = dataGridCRUD.Rows[e.RowIndex].Cells["cargo"].Value.ToString();
+                }
+
+                else
+                {
+                    MessageBox.Show("Favor selecionar ID do usuário");
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("\t\t    Favor selecionar ID do usuário. \n\nERRO: " + ex.Message);
+            }
         }
     }
 }

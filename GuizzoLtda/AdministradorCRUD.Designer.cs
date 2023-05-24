@@ -69,7 +69,7 @@
             // SaveDelete
             // 
             this.SaveDelete.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SaveDelete.Location = new System.Drawing.Point(25, 385);
+            this.SaveDelete.Location = new System.Drawing.Point(25, 341);
             this.SaveDelete.Name = "SaveDelete";
             this.SaveDelete.Size = new System.Drawing.Size(300, 50);
             this.SaveDelete.TabIndex = 1;
@@ -81,7 +81,7 @@
             // SaveCreate
             // 
             this.SaveCreate.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SaveCreate.Location = new System.Drawing.Point(25, 385);
+            this.SaveCreate.Location = new System.Drawing.Point(25, 313);
             this.SaveCreate.Name = "SaveCreate";
             this.SaveCreate.Size = new System.Drawing.Size(300, 50);
             this.SaveCreate.TabIndex = 2;
@@ -159,6 +159,7 @@
             this.dataGridCRUD.RowTemplate.Height = 25;
             this.dataGridCRUD.Size = new System.Drawing.Size(389, 453);
             this.dataGridCRUD.TabIndex = 9;
+            this.dataGridCRUD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCRUD_CellClick);
             this.dataGridCRUD.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCRUD_CellContentClick);
             // 
             // cbCargo

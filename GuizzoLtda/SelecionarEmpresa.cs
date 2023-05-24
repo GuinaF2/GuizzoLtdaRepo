@@ -26,12 +26,19 @@ namespace GuizzoLtda
             InitializeComponent();
         }
 
-        private void SelecionarEmpresa_Load(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-            dgViewSelEmp.DataSource = conexaosql.verDados("SELECT idcliente, razao_social,logo FROM tb_cliente");
+
         }
 
-        private void dgViewSelEmp_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgViewSelEmp_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+      
+
+        private void dgViewSelEmp_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
@@ -52,14 +59,9 @@ namespace GuizzoLtda
             }
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void SelecionarEmpresa_Load_1(object sender, EventArgs e)
         {
-
-        }
-
-        private void dgViewSelEmp_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
+            dgViewSelEmp.DataSource = conexaosql.verDados("SELECT idcliente, razao_social,logo FROM tb_cliente");
         }
 
         private void dgViewSelEmp_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -67,7 +69,6 @@ namespace GuizzoLtda
             Principal fprincipalreturn = new Principal();
             this.Hide();
             fprincipalreturn.Show();
-
         }
     }
 }
