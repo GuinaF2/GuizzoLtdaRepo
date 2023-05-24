@@ -57,7 +57,7 @@
             // SaveUpdate
             // 
             this.SaveUpdate.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SaveUpdate.Location = new System.Drawing.Point(25, 385);
+            this.SaveUpdate.Location = new System.Drawing.Point(50, 375);
             this.SaveUpdate.Name = "SaveUpdate";
             this.SaveUpdate.Size = new System.Drawing.Size(300, 50);
             this.SaveUpdate.TabIndex = 0;
@@ -69,7 +69,7 @@
             // SaveDelete
             // 
             this.SaveDelete.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SaveDelete.Location = new System.Drawing.Point(25, 341);
+            this.SaveDelete.Location = new System.Drawing.Point(50, 313);
             this.SaveDelete.Name = "SaveDelete";
             this.SaveDelete.Size = new System.Drawing.Size(300, 50);
             this.SaveDelete.TabIndex = 1;
@@ -81,7 +81,7 @@
             // SaveCreate
             // 
             this.SaveCreate.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SaveCreate.Location = new System.Drawing.Point(25, 313);
+            this.SaveCreate.Location = new System.Drawing.Point(50, 313);
             this.SaveCreate.Name = "SaveCreate";
             this.SaveCreate.Size = new System.Drawing.Size(300, 50);
             this.SaveCreate.TabIndex = 2;

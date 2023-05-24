@@ -27,7 +27,7 @@ namespace Controle
                 //declaração de vetor de informações
                 string[] valores = { modelo.NomeUser, modelo.SenhaUser };
 
-                string SQLEnd = null;
+         
 
                 if (conexaosql.cadastrar(campos, valores, SQL) >= 1)
                 {

@@ -26,7 +26,23 @@ namespace GuizzoLtda
         private void AdministradorCRUD_Load_1(object sender, EventArgs e)
         {
             dataGridCRUD.DataSource = conexaosql.verDados("SELECT * FROM tb_funcionario");
+
+            SaveUpdate.Visible = false;
+            SaveDelete.Visible = false;
+            SaveCreate.Visible = false;
+
+            txtID.Visible = false;
+            txtNome.Visible= false;
+            txtSenha.Visible = false;
+            cbCargo.Visible = false;
+
+            labelcargo.Visible = false;
+            labelid.Visible = false;
+            labelnome.Visible = false;
+            labelsenha.Visible = false;
+
         }
+
 
         private void dataGridCRUD_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -84,7 +100,7 @@ namespace GuizzoLtda
             UsuarioModelo.CodUsuario = Convert.ToInt32(txtID.Text);
             UsuarioModelo.NomeUser = txtNome.Text;
             UsuarioModelo.SenhaUser = txtSenha.Text;
-            UsuarioModelo.CodCargo = Convert.ToInt32(txtID.Text);
+            UsuarioModelo.CodCargo = Convert.ToInt32(cbCargo.Text);
 
             if (Controle.AtualizarUsuario(UsuarioModelo) == true)
             {
@@ -134,13 +150,33 @@ namespace GuizzoLtda
             SaveUpdate.Visible = true;
             SaveDelete.Visible = false;
             SaveCreate.Visible = false;
+
+            txtID.Visible = true;
+            txtNome.Visible = true;
+            txtSenha.Visible = true;
+            cbCargo.Visible = true;
+
+            labelcargo.Visible = true;
+            labelid.Visible = true;
+            labelnome.Visible = true;
+            labelsenha.Visible = true;
         }
 
         private void btnCad_Click(object sender, EventArgs e)
         {
-            SaveCreate.Visible = true;
             SaveUpdate.Visible = false;
             SaveDelete.Visible = false;
+            SaveCreate.Visible = true;
+
+            txtID.Visible = true;
+            txtNome.Visible = true;
+            txtSenha.Visible = true;
+            cbCargo.Visible = false;
+
+            labelcargo.Visible = false;
+            labelid.Visible = true;
+            labelnome.Visible = true;
+            labelsenha.Visible = true;
         }
 
         private void btnApaga_Click(object sender, EventArgs e)
