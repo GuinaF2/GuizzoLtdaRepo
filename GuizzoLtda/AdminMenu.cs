@@ -23,5 +23,12 @@ namespace GuizzoLtda
             fadmcrud.Show();
             Hide();
         }
+
+        private void pedidosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PedidoFunc ffuncpedid = new PedidoFunc();
+            ffuncpedid.Show();
+            Hide();
+        }
     }
 }
