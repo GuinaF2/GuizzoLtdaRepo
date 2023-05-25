@@ -159,6 +159,7 @@
             this.Controls.Add(this.toolStrip1);
             this.Name = "AdminMenu";
             this.Text = "AdminMenu";
+            this.Load += new System.EventHandler(this.AdminMenu_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

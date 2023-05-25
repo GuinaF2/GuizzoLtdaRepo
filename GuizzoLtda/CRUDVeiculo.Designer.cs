@@ -50,6 +50,8 @@
             this.SaveUpdate = new System.Windows.Forms.Button();
             this.dataSeguro = new System.Windows.Forms.DateTimePicker();
             this.labelseguro = new System.Windows.Forms.Label();
+            this.txtIdVeic = new System.Windows.Forms.TextBox();
+            this.labelIdVeic = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridVeiculo)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -150,7 +152,7 @@
             // 
             this.labelrota.AutoSize = true;
             this.labelrota.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelrota.Location = new System.Drawing.Point(120, 160);
+            this.labelrota.Location = new System.Drawing.Point(120, 242);
             this.labelrota.Name = "labelrota";
             this.labelrota.Size = new System.Drawing.Size(128, 30);
             this.labelrota.TabIndex = 22;
@@ -160,7 +162,7 @@
             // 
             this.labeltipo.AutoSize = true;
             this.labeltipo.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labeltipo.Location = new System.Drawing.Point(120, 103);
+            this.labeltipo.Location = new System.Drawing.Point(120, 185);
             this.labeltipo.Name = "labeltipo";
             this.labeltipo.Size = new System.Drawing.Size(126, 30);
             this.labeltipo.TabIndex = 21;
@@ -169,7 +171,7 @@
             // txtRota
             // 
             this.txtRota.BackColor = System.Drawing.Color.White;
-            this.txtRota.Location = new System.Drawing.Point(127, 193);
+            this.txtRota.Location = new System.Drawing.Point(127, 275);
             this.txtRota.Name = "txtRota";
             this.txtRota.Size = new System.Drawing.Size(125, 23);
             this.txtRota.TabIndex = 20;
@@ -177,7 +179,7 @@
             // txtTipo
             // 
             this.txtTipo.BackColor = System.Drawing.Color.White;
-            this.txtTipo.Location = new System.Drawing.Point(127, 136);
+            this.txtTipo.Location = new System.Drawing.Point(127, 218);
             this.txtTipo.Name = "txtTipo";
             this.txtTipo.Size = new System.Drawing.Size(125, 23);
             this.txtTipo.TabIndex = 19;
@@ -185,8 +187,7 @@
             // txtPlaca
             // 
             this.txtPlaca.BackColor = System.Drawing.Color.White;
-            this.txtPlaca.Enabled = false;
-            this.txtPlaca.Location = new System.Drawing.Point(127, 77);
+            this.txtPlaca.Location = new System.Drawing.Point(127, 159);
             this.txtPlaca.Name = "txtPlaca";
             this.txtPlaca.Size = new System.Drawing.Size(125, 23);
             this.txtPlaca.TabIndex = 18;
@@ -195,7 +196,7 @@
             // 
             this.labelplaca.AutoSize = true;
             this.labelplaca.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelplaca.Location = new System.Drawing.Point(120, 44);
+            this.labelplaca.Location = new System.Drawing.Point(120, 126);
             this.labelplaca.Name = "labelplaca";
             this.labelplaca.Size = new System.Drawing.Size(135, 30);
             this.labelplaca.TabIndex = 17;
@@ -204,39 +205,42 @@
             // SaveCreate
             // 
             this.SaveCreate.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SaveCreate.Location = new System.Drawing.Point(50, 312);
+            this.SaveCreate.Location = new System.Drawing.Point(50, 368);
             this.SaveCreate.Name = "SaveCreate";
             this.SaveCreate.Size = new System.Drawing.Size(300, 50);
             this.SaveCreate.TabIndex = 16;
             this.SaveCreate.Text = "Salvar Cadastro";
             this.SaveCreate.UseVisualStyleBackColor = true;
             this.SaveCreate.Visible = false;
+            this.SaveCreate.Click += new System.EventHandler(this.SaveCreate_Click);
             // 
             // SaveDelete
             // 
             this.SaveDelete.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SaveDelete.Location = new System.Drawing.Point(50, 312);
+            this.SaveDelete.Location = new System.Drawing.Point(50, 368);
             this.SaveDelete.Name = "SaveDelete";
             this.SaveDelete.Size = new System.Drawing.Size(300, 50);
             this.SaveDelete.TabIndex = 15;
             this.SaveDelete.Text = "Salvar Alteração";
             this.SaveDelete.UseVisualStyleBackColor = true;
             this.SaveDelete.Visible = false;
+            this.SaveDelete.Click += new System.EventHandler(this.SaveDelete_Click);
             // 
             // SaveUpdate
             // 
             this.SaveUpdate.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SaveUpdate.Location = new System.Drawing.Point(50, 378);
+            this.SaveUpdate.Location = new System.Drawing.Point(50, 368);
             this.SaveUpdate.Name = "SaveUpdate";
             this.SaveUpdate.Size = new System.Drawing.Size(300, 50);
             this.SaveUpdate.TabIndex = 14;
             this.SaveUpdate.Text = "Salvar Alteração";
             this.SaveUpdate.UseVisualStyleBackColor = true;
             this.SaveUpdate.Visible = false;
+            this.SaveUpdate.Click += new System.EventHandler(this.SaveUpdate_Click);
             // 
             // dataSeguro
             // 
-            this.dataSeguro.Location = new System.Drawing.Point(160, 251);
+            this.dataSeguro.Location = new System.Drawing.Point(172, 312);
             this.dataSeguro.Name = "dataSeguro";
             this.dataSeguro.Size = new System.Drawing.Size(200, 23);
             this.dataSeguro.TabIndex = 27;
@@ -245,17 +249,38 @@
             // 
             this.labelseguro.AutoSize = true;
             this.labelseguro.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelseguro.Location = new System.Drawing.Point(12, 245);
+            this.labelseguro.Location = new System.Drawing.Point(24, 306);
             this.labelseguro.Name = "labelseguro";
             this.labelseguro.Size = new System.Drawing.Size(128, 30);
             this.labelseguro.TabIndex = 29;
             this.labelseguro.Text = "Data Seguro";
+            // 
+            // txtIdVeic
+            // 
+            this.txtIdVeic.BackColor = System.Drawing.Color.White;
+            this.txtIdVeic.Enabled = false;
+            this.txtIdVeic.Location = new System.Drawing.Point(127, 88);
+            this.txtIdVeic.Name = "txtIdVeic";
+            this.txtIdVeic.Size = new System.Drawing.Size(125, 23);
+            this.txtIdVeic.TabIndex = 31;
+            // 
+            // labelIdVeic
+            // 
+            this.labelIdVeic.AutoSize = true;
+            this.labelIdVeic.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelIdVeic.Location = new System.Drawing.Point(120, 55);
+            this.labelIdVeic.Name = "labelIdVeic";
+            this.labelIdVeic.Size = new System.Drawing.Size(104, 30);
+            this.labelIdVeic.TabIndex = 30;
+            this.labelIdVeic.Text = "Id Veiculo";
             // 
             // CRUDVeiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtIdVeic);
+            this.Controls.Add(this.labelIdVeic);
             this.Controls.Add(this.labelseguro);
             this.Controls.Add(this.dataSeguro);
             this.Controls.Add(this.dataGridVeiculo);
@@ -303,5 +328,7 @@
         private Button SaveUpdate;
         private DateTimePicker dataSeguro;
         private Label labelseguro;
+        private TextBox txtIdVeic;
+        private Label labelIdVeic;
     }
 }

@@ -44,5 +44,10 @@ namespace GuizzoLtda
             fveiculocrud.Show();
             Hide();
         }
+
+        private void AdminMenu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -57,7 +57,7 @@
             // SaveUpdate
             // 
             this.SaveUpdate.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SaveUpdate.Location = new System.Drawing.Point(50, 375);
+            this.SaveUpdate.Location = new System.Drawing.Point(50, 369);
             this.SaveUpdate.Name = "SaveUpdate";
             this.SaveUpdate.Size = new System.Drawing.Size(300, 50);
             this.SaveUpdate.TabIndex = 0;
@@ -81,7 +81,7 @@
             // SaveCreate
             // 
             this.SaveCreate.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SaveCreate.Location = new System.Drawing.Point(50, 313);
+            this.SaveCreate.Location = new System.Drawing.Point(50, 339);
             this.SaveCreate.Name = "SaveCreate";
             this.SaveCreate.Size = new System.Drawing.Size(300, 50);
             this.SaveCreate.TabIndex = 2;
@@ -264,7 +264,7 @@
             this.ajudaToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.ajudaToolStripButton.Text = "Aju&da";
             // 
-            // AdministradorCRUD
+            // CRUDUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -282,7 +282,7 @@
             this.Controls.Add(this.SaveCreate);
             this.Controls.Add(this.SaveDelete);
             this.Controls.Add(this.SaveUpdate);
-            this.Name = "AdministradorCRUD";
+            this.Name = "CRUDUser";
             this.Text = "AdministradorCRUD";
             this.Load += new System.EventHandler(this.AdministradorCRUD_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCRUD)).EndInit();
