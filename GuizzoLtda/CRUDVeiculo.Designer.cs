@@ -39,17 +39,17 @@
             this.btnApaga = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.ajudaToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.labelsenha = new System.Windows.Forms.Label();
-            this.labelnome = new System.Windows.Forms.Label();
-            this.txtSenha = new System.Windows.Forms.TextBox();
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.txtID = new System.Windows.Forms.TextBox();
-            this.labelid = new System.Windows.Forms.Label();
+            this.labelrota = new System.Windows.Forms.Label();
+            this.labeltipo = new System.Windows.Forms.Label();
+            this.txtRota = new System.Windows.Forms.TextBox();
+            this.txtTipo = new System.Windows.Forms.TextBox();
+            this.txtPlaca = new System.Windows.Forms.TextBox();
+            this.labelplaca = new System.Windows.Forms.Label();
             this.SaveCreate = new System.Windows.Forms.Button();
             this.SaveDelete = new System.Windows.Forms.Button();
             this.SaveUpdate = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
+            this.dataSeguro = new System.Windows.Forms.DateTimePicker();
+            this.labelseguro = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridVeiculo)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -146,60 +146,60 @@
             this.ajudaToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.ajudaToolStripButton.Text = "Aju&da";
             // 
-            // labelsenha
+            // labelrota
             // 
-            this.labelsenha.AutoSize = true;
-            this.labelsenha.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelsenha.Location = new System.Drawing.Point(120, 160);
-            this.labelsenha.Name = "labelsenha";
-            this.labelsenha.Size = new System.Drawing.Size(128, 30);
-            this.labelsenha.TabIndex = 22;
-            this.labelsenha.Text = "Rota Veiculo";
+            this.labelrota.AutoSize = true;
+            this.labelrota.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelrota.Location = new System.Drawing.Point(120, 160);
+            this.labelrota.Name = "labelrota";
+            this.labelrota.Size = new System.Drawing.Size(128, 30);
+            this.labelrota.TabIndex = 22;
+            this.labelrota.Text = "Rota Veiculo";
             // 
-            // labelnome
+            // labeltipo
             // 
-            this.labelnome.AutoSize = true;
-            this.labelnome.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelnome.Location = new System.Drawing.Point(120, 103);
-            this.labelnome.Name = "labelnome";
-            this.labelnome.Size = new System.Drawing.Size(126, 30);
-            this.labelnome.TabIndex = 21;
-            this.labelnome.Text = "Tipo Veiculo";
+            this.labeltipo.AutoSize = true;
+            this.labeltipo.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labeltipo.Location = new System.Drawing.Point(120, 103);
+            this.labeltipo.Name = "labeltipo";
+            this.labeltipo.Size = new System.Drawing.Size(126, 30);
+            this.labeltipo.TabIndex = 21;
+            this.labeltipo.Text = "Tipo Veiculo";
             // 
-            // txtSenha
+            // txtRota
             // 
-            this.txtSenha.BackColor = System.Drawing.Color.White;
-            this.txtSenha.Location = new System.Drawing.Point(127, 193);
-            this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(125, 23);
-            this.txtSenha.TabIndex = 20;
+            this.txtRota.BackColor = System.Drawing.Color.White;
+            this.txtRota.Location = new System.Drawing.Point(127, 193);
+            this.txtRota.Name = "txtRota";
+            this.txtRota.Size = new System.Drawing.Size(125, 23);
+            this.txtRota.TabIndex = 20;
             // 
-            // txtNome
+            // txtTipo
             // 
-            this.txtNome.BackColor = System.Drawing.Color.White;
-            this.txtNome.Location = new System.Drawing.Point(127, 136);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(125, 23);
-            this.txtNome.TabIndex = 19;
+            this.txtTipo.BackColor = System.Drawing.Color.White;
+            this.txtTipo.Location = new System.Drawing.Point(127, 136);
+            this.txtTipo.Name = "txtTipo";
+            this.txtTipo.Size = new System.Drawing.Size(125, 23);
+            this.txtTipo.TabIndex = 19;
             // 
-            // txtID
+            // txtPlaca
             // 
-            this.txtID.BackColor = System.Drawing.Color.White;
-            this.txtID.Enabled = false;
-            this.txtID.Location = new System.Drawing.Point(127, 77);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(125, 23);
-            this.txtID.TabIndex = 18;
+            this.txtPlaca.BackColor = System.Drawing.Color.White;
+            this.txtPlaca.Enabled = false;
+            this.txtPlaca.Location = new System.Drawing.Point(127, 77);
+            this.txtPlaca.Name = "txtPlaca";
+            this.txtPlaca.Size = new System.Drawing.Size(125, 23);
+            this.txtPlaca.TabIndex = 18;
             // 
-            // labelid
+            // labelplaca
             // 
-            this.labelid.AutoSize = true;
-            this.labelid.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelid.Location = new System.Drawing.Point(120, 44);
-            this.labelid.Name = "labelid";
-            this.labelid.Size = new System.Drawing.Size(135, 30);
-            this.labelid.TabIndex = 17;
-            this.labelid.Text = "Placa Veiculo";
+            this.labelplaca.AutoSize = true;
+            this.labelplaca.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelplaca.Location = new System.Drawing.Point(120, 44);
+            this.labelplaca.Name = "labelplaca";
+            this.labelplaca.Size = new System.Drawing.Size(135, 30);
+            this.labelplaca.TabIndex = 17;
+            this.labelplaca.Text = "Placa Veiculo";
             // 
             // SaveCreate
             // 
@@ -234,43 +234,44 @@
             this.SaveUpdate.UseVisualStyleBackColor = true;
             this.SaveUpdate.Visible = false;
             // 
-            // dateTimePicker1
+            // dataSeguro
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(160, 251);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
-            this.dateTimePicker1.TabIndex = 27;
+            this.dataSeguro.Location = new System.Drawing.Point(160, 251);
+            this.dataSeguro.Name = "dataSeguro";
+            this.dataSeguro.Size = new System.Drawing.Size(200, 23);
+            this.dataSeguro.TabIndex = 27;
             // 
-            // label2
+            // labelseguro
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(12, 245);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(128, 30);
-            this.label2.TabIndex = 29;
-            this.label2.Text = "Data Seguro";
+            this.labelseguro.AutoSize = true;
+            this.labelseguro.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelseguro.Location = new System.Drawing.Point(12, 245);
+            this.labelseguro.Name = "labelseguro";
+            this.labelseguro.Size = new System.Drawing.Size(128, 30);
+            this.labelseguro.TabIndex = 29;
+            this.labelseguro.Text = "Data Seguro";
             // 
             // CRUDVeiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.labelseguro);
+            this.Controls.Add(this.dataSeguro);
             this.Controls.Add(this.dataGridVeiculo);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.labelsenha);
-            this.Controls.Add(this.labelnome);
-            this.Controls.Add(this.txtSenha);
-            this.Controls.Add(this.txtNome);
-            this.Controls.Add(this.txtID);
-            this.Controls.Add(this.labelid);
+            this.Controls.Add(this.labelrota);
+            this.Controls.Add(this.labeltipo);
+            this.Controls.Add(this.txtRota);
+            this.Controls.Add(this.txtTipo);
+            this.Controls.Add(this.txtPlaca);
+            this.Controls.Add(this.labelplaca);
             this.Controls.Add(this.SaveCreate);
             this.Controls.Add(this.SaveDelete);
             this.Controls.Add(this.SaveUpdate);
             this.Name = "CRUDVeiculo";
             this.Text = "CRUDVeiculo";
+            this.Load += new System.EventHandler(this.CRUDVeiculo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridVeiculo)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
@@ -291,16 +292,16 @@
         private ToolStripButton btnApaga;
         private ToolStripSeparator toolStripSeparator;
         private ToolStripButton ajudaToolStripButton;
-        private Label labelsenha;
-        private Label labelnome;
-        private TextBox txtSenha;
-        private TextBox txtNome;
-        private TextBox txtID;
-        private Label labelid;
+        private Label labelrota;
+        private Label labeltipo;
+        private TextBox txtRota;
+        private TextBox txtTipo;
+        private TextBox txtPlaca;
+        private Label labelplaca;
         private Button SaveCreate;
         private Button SaveDelete;
         private Button SaveUpdate;
-        private DateTimePicker dateTimePicker1;
-        private Label label2;
+        private DateTimePicker dataSeguro;
+        private Label labelseguro;
     }
 }

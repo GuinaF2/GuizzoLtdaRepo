@@ -77,12 +77,14 @@
             this.toolStripTextBox2.Name = "toolStripTextBox2";
             this.toolStripTextBox2.Size = new System.Drawing.Size(58, 22);
             this.toolStripTextBox2.Text = "Alterar";
+            this.toolStripTextBox2.ButtonClick += new System.EventHandler(this.toolStripTextBox2_ButtonClick);
             // 
             // abrirPedidoToolStripMenuItem
             // 
             this.abrirPedidoToolStripMenuItem.Name = "abrirPedidoToolStripMenuItem";
             this.abrirPedidoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.abrirPedidoToolStripMenuItem.Text = "Funcionarios";
+            this.abrirPedidoToolStripMenuItem.Click += new System.EventHandler(this.abrirPedidoToolStripMenuItem_Click_1);
             // 
             // pedidosToolStripMenuItem
             // 
@@ -96,6 +98,7 @@
             this.veiculosToolStripMenuItem.Name = "veiculosToolStripMenuItem";
             this.veiculosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.veiculosToolStripMenuItem.Text = "Veiculos";
+            this.veiculosToolStripMenuItem.Click += new System.EventHandler(this.veiculosToolStripMenuItem_Click);
             // 
             // motoristasToolStripMenuItem
             // 

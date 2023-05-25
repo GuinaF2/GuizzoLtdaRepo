@@ -17,17 +17,31 @@ namespace GuizzoLtda
             InitializeComponent();
         }
 
-        private void abrirPedidoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            CRUDUser fadmcrud = new CRUDUser();
-            fadmcrud.Show();
-            Hide();
-        }
+       
 
         private void pedidosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             PedidoFunc ffuncpedid = new PedidoFunc();
             ffuncpedid.Show();
+            Hide();
+        }
+
+        private void abrirPedidoToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            CRUDUser fcrudusuario = new CRUDUser();
+            fcrudusuario.Show();
+            Hide();
+        }
+
+        private void toolStripTextBox2_ButtonClick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void veiculosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CRUDVeiculo fveiculocrud = new CRUDVeiculo();
+            fveiculocrud.Show();
             Hide();
         }
     }

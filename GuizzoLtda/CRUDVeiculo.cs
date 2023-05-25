@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Controle;
+using Modelos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,10 @@ namespace GuizzoLtda
 {
     public partial class CRUDVeiculo : Form
     {
+        Conexao conexaosql = new Conexao();
+        VeiculoModelo VeiculoModelo = new VeiculoModelo();
+        VeiculoControle Controle = new VeiculoControle();
+        int id;
         public CRUDVeiculo()
         {
             InitializeComponent();
@@ -30,6 +36,25 @@ namespace GuizzoLtda
         private void btnApaga_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void CRUDVeiculo_Load(object sender, EventArgs e)
+        {
+            dataGridVeiculo.DataSource = conexaosql.verDados("SELECT * FROM tb_veiculo");
+
+            SaveUpdate.Visible = false;
+            SaveDelete.Visible = false;
+            SaveCreate.Visible = false;
+
+            txtPlaca.Visible = false;
+            txtTipo.Visible = false;
+            txtRota.Visible = false;
+            dataSeguro.Visible = false;
+
+            labelseguro.Visible = false;
+            labelplaca.Visible = false;
+            labeltipo.Visible = false;
+            labelrota.Visible = false;
         }
     }
 }
