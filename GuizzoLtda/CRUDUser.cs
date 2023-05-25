@@ -12,13 +12,13 @@ using System.Windows.Forms;
 
 namespace GuizzoLtda
 {
-    public partial class AdministradorCRUD : Form
+    public partial class CRUDUser : Form
     {
         Conexao conexaosql = new Conexao();
         UsuarioModelo UsuarioModelo = new UsuarioModelo();
         UsuarioControle Controle = new UsuarioControle();
         int id;
-        public AdministradorCRUD()
+        public CRUDUser()
         {
             InitializeComponent();
         }
@@ -63,7 +63,7 @@ namespace GuizzoLtda
                 if (Controle.Cadastrar(UsuarioModelo) >= 1)
                 {
                     MessageBox.Show("Usuário Cadastrado.");
-                    AdministradorCRUD fadmincrud = new AdministradorCRUD();
+                    CRUDUser fadmincrud = new CRUDUser();
                     this.Hide();
                     fadmincrud.Show();
                 }
@@ -90,7 +90,7 @@ namespace GuizzoLtda
             {
                 MessageBox.Show("Processo cancelado.");
             }
-            AdministradorCRUD fadmincrud = new AdministradorCRUD();
+            CRUDUser fadmincrud = new CRUDUser();
             this.Hide();
             fadmincrud.Show();
         }
@@ -106,7 +106,7 @@ namespace GuizzoLtda
             {
                 MessageBox.Show("Cadastro Atualizado.");
 
-                AdministradorCRUD fadmincrud = new AdministradorCRUD();
+                CRUDUser fadmincrud = new CRUDUser();
                 this.Hide();
                 fadmincrud.Show();
             }

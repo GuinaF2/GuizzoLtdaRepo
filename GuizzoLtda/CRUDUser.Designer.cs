@@ -1,6 +1,6 @@
 ﻿namespace GuizzoLtda
 {
-    partial class AdministradorCRUD
+    partial class CRUDUser
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdministradorCRUD));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CRUDUser));
             this.SaveUpdate = new System.Windows.Forms.Button();
             this.SaveDelete = new System.Windows.Forms.Button();
             this.SaveCreate = new System.Windows.Forms.Button();

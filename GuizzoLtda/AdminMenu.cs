@@ -19,7 +19,7 @@ namespace GuizzoLtda
 
         private void abrirPedidoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AdministradorCRUD fadmcrud = new AdministradorCRUD();
+            CRUDUser fadmcrud = new CRUDUser();
             fadmcrud.Show();
             Hide();
         }
