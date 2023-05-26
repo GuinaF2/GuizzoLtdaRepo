@@ -28,7 +28,24 @@ namespace GuizzoLtda
             InitializeComponent();
         }
 
-        private void btnFotoEmp_Click(object sender, EventArgs e)
+        
+
+
+        private void pbFotoEmp_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+        
+
+        private void CadEmpresa_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEscolherFotoEmp_Click(object sender, EventArgs e)
         {
             OpenFileDialog abririmg = new OpenFileDialog();
             abririmg.FilterIndex = 2;
@@ -43,15 +60,7 @@ namespace GuizzoLtda
             }
         }
 
-
-        private void pbFotoEmp_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-        private void button1_Click_1(object sender, EventArgs e)
+        private void btnCadEndereco_Click(object sender, EventArgs e)
         {
             string usuariowin = Environment.UserName;
             string letradisco = Path.GetPathRoot(Environment.CurrentDirectory);
@@ -86,9 +95,6 @@ namespace GuizzoLtda
             {
                 MessageBox.Show("Preencha todos os campos.");
 
-                CadEmpresa fcadastroreturn = new CadEmpresa();
-                fcadastroreturn.Show();
-                this.Hide();
             }
             else
             {
@@ -111,7 +117,12 @@ namespace GuizzoLtda
             }
         }
 
-        private void CadEmpresa_Load(object sender, EventArgs e)
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
