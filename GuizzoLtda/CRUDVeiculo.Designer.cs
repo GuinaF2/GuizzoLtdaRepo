@@ -39,10 +39,7 @@
             this.btnApaga = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.ajudaToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.labelrota = new System.Windows.Forms.Label();
             this.labeltipo = new System.Windows.Forms.Label();
-            this.txtRota = new System.Windows.Forms.TextBox();
-            this.txtTipo = new System.Windows.Forms.TextBox();
             this.txtPlaca = new System.Windows.Forms.TextBox();
             this.labelplaca = new System.Windows.Forms.Label();
             this.SaveCreate = new System.Windows.Forms.Button();
@@ -52,6 +49,7 @@
             this.labelseguro = new System.Windows.Forms.Label();
             this.txtIdVeic = new System.Windows.Forms.TextBox();
             this.labelIdVeic = new System.Windows.Forms.Label();
+            this.cbTipo = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridVeiculo)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -67,6 +65,8 @@
             this.dataGridVeiculo.RowTemplate.Height = 25;
             this.dataGridVeiculo.Size = new System.Drawing.Size(389, 453);
             this.dataGridVeiculo.TabIndex = 23;
+            this.dataGridVeiculo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridVeiculo_CellClick);
+            this.dataGridVeiculo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridVeiculo_CellContentClick);
             // 
             // toolStrip1
             // 
@@ -148,46 +148,20 @@
             this.ajudaToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.ajudaToolStripButton.Text = "Aju&da";
             // 
-            // labelrota
-            // 
-            this.labelrota.AutoSize = true;
-            this.labelrota.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelrota.Location = new System.Drawing.Point(120, 242);
-            this.labelrota.Name = "labelrota";
-            this.labelrota.Size = new System.Drawing.Size(128, 30);
-            this.labelrota.TabIndex = 22;
-            this.labelrota.Text = "Rota Veiculo";
-            // 
             // labeltipo
             // 
             this.labeltipo.AutoSize = true;
             this.labeltipo.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labeltipo.Location = new System.Drawing.Point(120, 185);
+            this.labeltipo.Location = new System.Drawing.Point(115, 205);
             this.labeltipo.Name = "labeltipo";
             this.labeltipo.Size = new System.Drawing.Size(126, 30);
             this.labeltipo.TabIndex = 21;
             this.labeltipo.Text = "Tipo Veiculo";
             // 
-            // txtRota
-            // 
-            this.txtRota.BackColor = System.Drawing.Color.White;
-            this.txtRota.Location = new System.Drawing.Point(127, 275);
-            this.txtRota.Name = "txtRota";
-            this.txtRota.Size = new System.Drawing.Size(125, 23);
-            this.txtRota.TabIndex = 20;
-            // 
-            // txtTipo
-            // 
-            this.txtTipo.BackColor = System.Drawing.Color.White;
-            this.txtTipo.Location = new System.Drawing.Point(127, 218);
-            this.txtTipo.Name = "txtTipo";
-            this.txtTipo.Size = new System.Drawing.Size(125, 23);
-            this.txtTipo.TabIndex = 19;
-            // 
             // txtPlaca
             // 
             this.txtPlaca.BackColor = System.Drawing.Color.White;
-            this.txtPlaca.Location = new System.Drawing.Point(127, 159);
+            this.txtPlaca.Location = new System.Drawing.Point(122, 179);
             this.txtPlaca.Name = "txtPlaca";
             this.txtPlaca.Size = new System.Drawing.Size(125, 23);
             this.txtPlaca.TabIndex = 18;
@@ -196,7 +170,7 @@
             // 
             this.labelplaca.AutoSize = true;
             this.labelplaca.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelplaca.Location = new System.Drawing.Point(120, 126);
+            this.labelplaca.Location = new System.Drawing.Point(115, 146);
             this.labelplaca.Name = "labelplaca";
             this.labelplaca.Size = new System.Drawing.Size(135, 30);
             this.labelplaca.TabIndex = 17;
@@ -240,7 +214,7 @@
             // 
             // dataSeguro
             // 
-            this.dataSeguro.Location = new System.Drawing.Point(172, 312);
+            this.dataSeguro.Location = new System.Drawing.Point(173, 290);
             this.dataSeguro.Name = "dataSeguro";
             this.dataSeguro.Size = new System.Drawing.Size(200, 23);
             this.dataSeguro.TabIndex = 27;
@@ -249,7 +223,7 @@
             // 
             this.labelseguro.AutoSize = true;
             this.labelseguro.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelseguro.Location = new System.Drawing.Point(24, 306);
+            this.labelseguro.Location = new System.Drawing.Point(25, 284);
             this.labelseguro.Name = "labelseguro";
             this.labelseguro.Size = new System.Drawing.Size(128, 30);
             this.labelseguro.TabIndex = 29;
@@ -259,7 +233,7 @@
             // 
             this.txtIdVeic.BackColor = System.Drawing.Color.White;
             this.txtIdVeic.Enabled = false;
-            this.txtIdVeic.Location = new System.Drawing.Point(127, 88);
+            this.txtIdVeic.Location = new System.Drawing.Point(122, 108);
             this.txtIdVeic.Name = "txtIdVeic";
             this.txtIdVeic.Size = new System.Drawing.Size(125, 23);
             this.txtIdVeic.TabIndex = 31;
@@ -268,27 +242,39 @@
             // 
             this.labelIdVeic.AutoSize = true;
             this.labelIdVeic.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelIdVeic.Location = new System.Drawing.Point(120, 55);
+            this.labelIdVeic.Location = new System.Drawing.Point(115, 75);
             this.labelIdVeic.Name = "labelIdVeic";
             this.labelIdVeic.Size = new System.Drawing.Size(104, 30);
             this.labelIdVeic.TabIndex = 30;
             this.labelIdVeic.Text = "Id Veiculo";
+            // 
+            // cbTipo
+            // 
+            this.cbTipo.FormattingEnabled = true;
+            this.cbTipo.Items.AddRange(new object[] {
+            "Carro",
+            "Moto",
+            "Caminhão",
+            "Fiorino",
+            "Manual"});
+            this.cbTipo.Location = new System.Drawing.Point(122, 238);
+            this.cbTipo.Name = "cbTipo";
+            this.cbTipo.Size = new System.Drawing.Size(121, 23);
+            this.cbTipo.TabIndex = 32;
             // 
             // CRUDVeiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cbTipo);
             this.Controls.Add(this.txtIdVeic);
             this.Controls.Add(this.labelIdVeic);
             this.Controls.Add(this.labelseguro);
             this.Controls.Add(this.dataSeguro);
             this.Controls.Add(this.dataGridVeiculo);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.labelrota);
             this.Controls.Add(this.labeltipo);
-            this.Controls.Add(this.txtRota);
-            this.Controls.Add(this.txtTipo);
             this.Controls.Add(this.txtPlaca);
             this.Controls.Add(this.labelplaca);
             this.Controls.Add(this.SaveCreate);
@@ -317,10 +303,7 @@
         private ToolStripButton btnApaga;
         private ToolStripSeparator toolStripSeparator;
         private ToolStripButton ajudaToolStripButton;
-        private Label labelrota;
         private Label labeltipo;
-        private TextBox txtRota;
-        private TextBox txtTipo;
         private TextBox txtPlaca;
         private Label labelplaca;
         private Button SaveCreate;
@@ -330,5 +313,6 @@
         private Label labelseguro;
         private TextBox txtIdVeic;
         private Label labelIdVeic;
+        private ComboBox cbTipo;
     }
 }

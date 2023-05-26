@@ -29,13 +29,13 @@ namespace GuizzoLtda
             SaveDelete.Visible = false;
             SaveCreate.Visible = false;
 
+            txtIdVeic.Visible = true;
             txtPlaca.Visible = true;
-            txtRota.Visible = true;
-            txtTipo.Visible = true;
+            cbTipo.Visible = true;
             dataSeguro.Visible = true;
 
+            labelIdVeic.Visible = true;
             labelplaca.Visible = true;
-            labelrota.Visible = true;
             labeltipo.Visible = true;
             labelseguro.Visible = true;
         }
@@ -46,13 +46,13 @@ namespace GuizzoLtda
             SaveDelete.Visible = false;
             SaveCreate.Visible = true;
 
+            txtIdVeic.Visible = true;
             txtPlaca.Visible = true;
-            txtRota.Visible = true;
-            txtTipo.Visible = true;
+            cbTipo.Visible = true;
             dataSeguro.Visible = true;
 
+            labelIdVeic.Visible = true;
             labelplaca.Visible = true;
-            labelrota.Visible = true;
             labeltipo.Visible = true;
             labelseguro.Visible = true;
         }
@@ -63,13 +63,13 @@ namespace GuizzoLtda
             SaveDelete.Visible = true;
             SaveCreate.Visible = false;
 
+            txtIdVeic.Visible = true;
             txtPlaca.Visible = true;
-            txtRota.Visible = true;
-            txtTipo.Visible = true;
+            cbTipo.Visible = true;
             dataSeguro.Visible = true;
 
+            labelIdVeic.Visible = true;
             labelplaca.Visible = true;
-            labelrota.Visible = true;
             labeltipo.Visible = true;
             labelseguro.Visible = true;
         }
@@ -82,15 +82,15 @@ namespace GuizzoLtda
             SaveDelete.Visible = false;
             SaveCreate.Visible = false;
 
+            txtIdVeic.Visible=false;
             txtPlaca.Visible = false;
-            txtTipo.Visible = false;
-            txtRota.Visible = false;
+            cbTipo.Visible = false;
             dataSeguro.Visible = false;
 
+            labelIdVeic.Visible = false;
             labelseguro.Visible = false;
             labelplaca.Visible = false;
             labeltipo.Visible = false;
-            labelrota.Visible = false;
         }
 
         private void SaveDelete_Click(object sender, EventArgs e)
@@ -117,10 +117,10 @@ namespace GuizzoLtda
         private void SaveCreate_Click(object sender, EventArgs e)
         {
             VeiculoModelo.PlacaVeiculo = txtPlaca.Text;
-            VeiculoModelo.TipoVeiculo = txtTipo.Text;
+            VeiculoModelo.TipoVeiculo = cbTipo.Text;
             VeiculoModelo.SeguroVeiculo = dataSeguro.Text;
 
-            if (dataSeguro.Text == "" || txtPlaca.Text == "" || txtTipo.Text == "") 
+            if (dataSeguro.Text == "" || txtPlaca.Text == "" || cbTipo.Text == "") 
             {
                 MessageBox.Show("Erro no cadastro.");
             }
@@ -128,7 +128,7 @@ namespace GuizzoLtda
             {
                 if (Controle.CadastrarVeiculo(VeiculoModelo) >= 1)
                 {
-                    MessageBox.Show("Usuário Cadastrado.");
+                    MessageBox.Show("Veiculo Cadastrado Com Sucesso!");
                     CRUDVeiculo fveiculocrud = new CRUDVeiculo();
                     this.Hide();
                     fveiculocrud.Show();
@@ -144,8 +144,8 @@ namespace GuizzoLtda
         {
             VeiculoModelo.CodVeiculo = Convert.ToInt32(txtIdVeic.Text);
             VeiculoModelo.PlacaVeiculo = txtPlaca.Text;
-            VeiculoModelo.TipoVeiculo = txtTipo.Text;
-            VeiculoModelo.RotaVeiculo = txtRota.Text;
+            VeiculoModelo.TipoVeiculo = cbTipo.Text;
+            VeiculoModelo.SeguroVeiculo = dataSeguro.Text;
 
             if (Controle.AtualizarUsuario(VeiculoModelo) == true)
             {
@@ -161,6 +161,38 @@ namespace GuizzoLtda
             }
             this.Controls.Clear();
             this.InitializeComponent();
+        }
+
+        private void dataGridVeiculo_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+
+                if (dataGridVeiculo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+                {
+                    dataGridVeiculo.CurrentRow.Selected = true;
+
+                    txtIdVeic.Text = dataGridVeiculo.Rows[e.RowIndex].Cells["idveiculo"].Value.ToString();
+                    txtPlaca.Text = dataGridVeiculo.Rows[e.RowIndex].Cells["placa"].Value.ToString();
+                    cbTipo.Text = dataGridVeiculo.Rows[e.RowIndex].Cells["tipo_veiculo"].Value.ToString();
+                    dataSeguro.Text = dataGridVeiculo.Rows[e.RowIndex].Cells["data_seguro"].Value.ToString();
+                }
+
+                else
+                {
+                    MessageBox.Show("Favor selecionar ID do Veiculo");
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("\t\t    Favor selecionar ID do Veiculo. \n\nERRO: " + ex.Message);
+            }
+        }
+
+        private void dataGridVeiculo_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
