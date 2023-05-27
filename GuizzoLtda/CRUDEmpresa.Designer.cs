@@ -37,15 +37,12 @@
             btnReturn = new ToolStripButton();
             btnAtualizar = new ToolStripButton();
             toolStripSeparator1 = new ToolStripSeparator();
-            btnCad = new ToolStripButton();
-            toolStripSeparator2 = new ToolStripSeparator();
             btnApaga = new ToolStripButton();
             toolStripSeparator = new ToolStripSeparator();
             ajudaToolStripButton = new ToolStripButton();
             labelRazaoSocial = new Label();
             txtCnpj = new TextBox();
             labelCnpj = new Label();
-            SaveCreate = new Button();
             SaveDelete = new Button();
             SaveUpdate = new Button();
             txtRazaoSocial = new TextBox();
@@ -58,7 +55,7 @@
             // 
             txtIdCliente.BackColor = Color.White;
             txtIdCliente.Enabled = false;
-            txtIdCliente.Location = new Point(122, 108);
+            txtIdCliente.Location = new Point(122, 94);
             txtIdCliente.Name = "txtIdCliente";
             txtIdCliente.Size = new Size(125, 23);
             txtIdCliente.TabIndex = 44;
@@ -67,7 +64,7 @@
             // 
             labelIdCliente.AutoSize = true;
             labelIdCliente.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            labelIdCliente.Location = new Point(115, 75);
+            labelIdCliente.Location = new Point(115, 61);
             labelIdCliente.Name = "labelIdCliente";
             labelIdCliente.Size = new Size(101, 30);
             labelIdCliente.TabIndex = 43;
@@ -77,7 +74,7 @@
             // 
             labelInscricao.AutoSize = true;
             labelInscricao.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            labelInscricao.Location = new Point(115, 287);
+            labelInscricao.Location = new Point(115, 273);
             labelInscricao.Name = "labelInscricao";
             labelInscricao.Size = new Size(179, 30);
             labelInscricao.TabIndex = 42;
@@ -100,7 +97,7 @@
             // 
             // toolStrip1
             // 
-            toolStrip1.Items.AddRange(new ToolStripItem[] { btnReturn, btnAtualizar, toolStripSeparator1, btnCad, toolStripSeparator2, btnApaga, toolStripSeparator, ajudaToolStripButton });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { btnReturn, btnAtualizar, toolStripSeparator1, btnApaga, toolStripSeparator, ajudaToolStripButton });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(800, 25);
@@ -131,21 +128,6 @@
             toolStripSeparator1.Name = "toolStripSeparator1";
             toolStripSeparator1.Size = new Size(6, 25);
             // 
-            // btnCad
-            // 
-            btnCad.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            btnCad.Image = (Image)resources.GetObject("btnCad.Image");
-            btnCad.ImageTransparentColor = Color.Magenta;
-            btnCad.Name = "btnCad";
-            btnCad.Size = new Size(61, 22);
-            btnCad.Text = "Cadastrar";
-            btnCad.Click += btnCad_Click;
-            // 
-            // toolStripSeparator2
-            // 
-            toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(6, 25);
-            // 
             // btnApaga
             // 
             btnApaga.DisplayStyle = ToolStripItemDisplayStyle.Text;
@@ -174,7 +156,7 @@
             // 
             labelRazaoSocial.AutoSize = true;
             labelRazaoSocial.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            labelRazaoSocial.Location = new Point(115, 205);
+            labelRazaoSocial.Location = new Point(115, 191);
             labelRazaoSocial.Name = "labelRazaoSocial";
             labelRazaoSocial.Size = new Size(130, 30);
             labelRazaoSocial.TabIndex = 38;
@@ -183,7 +165,7 @@
             // txtCnpj
             // 
             txtCnpj.BackColor = Color.White;
-            txtCnpj.Location = new Point(122, 179);
+            txtCnpj.Location = new Point(122, 165);
             txtCnpj.Name = "txtCnpj";
             txtCnpj.Size = new Size(125, 23);
             txtCnpj.TabIndex = 37;
@@ -192,28 +174,16 @@
             // 
             labelCnpj.AutoSize = true;
             labelCnpj.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            labelCnpj.Location = new Point(115, 146);
+            labelCnpj.Location = new Point(115, 132);
             labelCnpj.Name = "labelCnpj";
             labelCnpj.Size = new Size(61, 30);
             labelCnpj.TabIndex = 36;
             labelCnpj.Text = "CNPJ";
             // 
-            // SaveCreate
-            // 
-            SaveCreate.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            SaveCreate.Location = new Point(50, 301);
-            SaveCreate.Name = "SaveCreate";
-            SaveCreate.Size = new Size(300, 50);
-            SaveCreate.TabIndex = 35;
-            SaveCreate.Text = "Salvar Cadastro";
-            SaveCreate.UseVisualStyleBackColor = true;
-            SaveCreate.Visible = false;
-            SaveCreate.Click += SaveCreate_Click;
-            // 
             // SaveDelete
             // 
             SaveDelete.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            SaveDelete.Location = new Point(50, 338);
+            SaveDelete.Location = new Point(50, 368);
             SaveDelete.Name = "SaveDelete";
             SaveDelete.Size = new Size(300, 50);
             SaveDelete.TabIndex = 34;
@@ -237,7 +207,7 @@
             // txtRazaoSocial
             // 
             txtRazaoSocial.BackColor = Color.White;
-            txtRazaoSocial.Location = new Point(122, 258);
+            txtRazaoSocial.Location = new Point(122, 244);
             txtRazaoSocial.Name = "txtRazaoSocial";
             txtRazaoSocial.Size = new Size(125, 23);
             txtRazaoSocial.TabIndex = 45;
@@ -245,7 +215,7 @@
             // txtInscricaoEst
             // 
             txtInscricaoEst.BackColor = Color.White;
-            txtInscricaoEst.Location = new Point(120, 320);
+            txtInscricaoEst.Location = new Point(120, 306);
             txtInscricaoEst.Name = "txtInscricaoEst";
             txtInscricaoEst.Size = new Size(125, 23);
             txtInscricaoEst.TabIndex = 46;
@@ -265,7 +235,6 @@
             Controls.Add(labelRazaoSocial);
             Controls.Add(txtCnpj);
             Controls.Add(labelCnpj);
-            Controls.Add(SaveCreate);
             Controls.Add(SaveDelete);
             Controls.Add(SaveUpdate);
             Name = "CRUDEmpresa";
@@ -288,15 +257,12 @@
         private ToolStripButton btnReturn;
         private ToolStripButton btnAtualizar;
         private ToolStripSeparator toolStripSeparator1;
-        private ToolStripButton btnCad;
-        private ToolStripSeparator toolStripSeparator2;
         private ToolStripButton btnApaga;
         private ToolStripSeparator toolStripSeparator;
         private ToolStripButton ajudaToolStripButton;
         private Label labelRazaoSocial;
         private TextBox txtCnpj;
         private Label labelCnpj;
-        private Button SaveCreate;
         private Button SaveDelete;
         private Button SaveUpdate;
         private TextBox txtRazaoSocial;

@@ -77,7 +77,25 @@ namespace Controle
             }
             return us;
         }
+        public bool DeletarEmpresa(EmpresaModelo us)
+        {
+            try
+            {
+                string sql = "DELETE from tb_cliente where idcliente = @codigo";
+                if (conexaosql.deletarDados(us.CodCliente, sql) >= 1)
+                {
+                    return resultado = true;
+                }
+                else
+                {
+                    return resultado = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
 
-        
     }
 }

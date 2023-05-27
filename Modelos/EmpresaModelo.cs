@@ -9,6 +9,7 @@ namespace Modelos
 {
     public class EmpresaModelo
     {
+        private int idcliente;
         private string cnpj;
         private int idendereco;
         private string razao_social;
@@ -16,11 +17,18 @@ namespace Modelos
         private string logo;
         public EmpresaModelo() 
         {
+            idcliente = 0;
             cnpj = "";
             idendereco = 0;
             razao_social = "";
             inscricao_estadual = "";
             logo = "";
+        }
+        public int CodCliente
+        {
+            get { return idcliente; }
+            set { idcliente = value; }
+
         }
         public string CnpjUser
         {

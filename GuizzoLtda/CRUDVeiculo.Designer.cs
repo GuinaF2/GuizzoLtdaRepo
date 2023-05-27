@@ -208,7 +208,7 @@
             // dataSeguro
             // 
             dataSeguro.CustomFormat = "00/00/0000";
-            dataSeguro.Location = new Point(173, 290);
+            dataSeguro.Location = new Point(74, 290);
             dataSeguro.MaxDate = new DateTime(3000, 12, 31, 0, 0, 0, 0);
             dataSeguro.MinDate = new DateTime(1900, 1, 1, 0, 0, 0, 0);
             dataSeguro.Name = "dataSeguro";
