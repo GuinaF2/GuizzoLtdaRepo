@@ -73,7 +73,7 @@ namespace Controle
         {
             try
             {
-                string sql = "UPDATE tb_veiculo set placa=@placa_motorista, tipo_veiculo=@tipo_veiculo,data_seguro=@seguro_data where idveiculo= @codigo";
+                string sql = "UPDATE tb_veiculo set placa_motorista=@placa_motorista, tipo_veiculo=@tipo_veiculo,seguro_data=@seguro_data where idveiculo= @codigo";
                 string[] campos = { "@placa_motorista", "@tipo_veiculo", "@seguro_data" };
                 string[] valores = { us.PlacaVeiculo, us.TipoVeiculo, us.SeguroVeiculo };
                 if (conexaosql.atualizarDados(us.CodVeiculo, campos, valores, sql) >= 1)

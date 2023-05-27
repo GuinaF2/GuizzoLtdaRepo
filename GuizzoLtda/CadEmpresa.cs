@@ -28,7 +28,7 @@ namespace GuizzoLtda
             InitializeComponent();
         }
 
-        
+
 
 
         private void pbFotoEmp_Click(object sender, EventArgs e)
@@ -38,7 +38,7 @@ namespace GuizzoLtda
 
 
 
-        
+
 
         private void CadEmpresa_Load(object sender, EventArgs e)
         {

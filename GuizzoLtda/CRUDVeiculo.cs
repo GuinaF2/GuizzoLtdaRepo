@@ -173,9 +173,9 @@ namespace GuizzoLtda
                     dataGridVeiculo.CurrentRow.Selected = true;
 
                     txtIdVeic.Text = dataGridVeiculo.Rows[e.RowIndex].Cells["idveiculo"].Value.ToString();
-                    txtPlaca.Text = dataGridVeiculo.Rows[e.RowIndex].Cells["placa"].Value.ToString();
+                    txtPlaca.Text = dataGridVeiculo.Rows[e.RowIndex].Cells["placa_motorista"].Value.ToString();
                     cbTipo.Text = dataGridVeiculo.Rows[e.RowIndex].Cells["tipo_veiculo"].Value.ToString();
-                    dataSeguro.Text = dataGridVeiculo.Rows[e.RowIndex].Cells["data_seguro"].Value.ToString();
+                    dataSeguro.Text = dataGridVeiculo.Rows[e.RowIndex].Cells["seguro_data"].Value.ToString();
                 }
 
                 else

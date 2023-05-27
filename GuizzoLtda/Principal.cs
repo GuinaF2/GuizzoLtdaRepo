@@ -6,18 +6,18 @@ namespace GuizzoLtda
     {
         OpenFileDialog Abrirfoto;
         Image Foto;
-        string caminhofoto= "\\foto";
+        string caminhofoto = "\\foto";
 
         public Principal()
         {
             InitializeComponent();
         }
 
-        
+
 
         private void Principal_Load_1(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btnUsuario_Click_1(object sender, EventArgs e)
@@ -36,7 +36,7 @@ namespace GuizzoLtda
 
         private void PBEmpresa_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btnFotoEmp_Click(object sender, EventArgs e)
