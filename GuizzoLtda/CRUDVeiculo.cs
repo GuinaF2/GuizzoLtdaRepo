@@ -82,7 +82,7 @@ namespace GuizzoLtda
             SaveDelete.Visible = false;
             SaveCreate.Visible = false;
 
-            txtIdVeic.Visible=false;
+            txtIdVeic.Visible = false;
             txtPlaca.Visible = false;
             cbTipo.Visible = false;
             dataSeguro.Visible = false;
@@ -120,7 +120,7 @@ namespace GuizzoLtda
             VeiculoModelo.TipoVeiculo = cbTipo.Text;
             VeiculoModelo.SeguroVeiculo = dataSeguro.Text;
 
-            if (dataSeguro.Text == "" || txtPlaca.Text == "" || cbTipo.Text == "") 
+            if (dataSeguro.Text == "" || txtPlaca.Text == "" || cbTipo.Text == "")
             {
                 MessageBox.Show("Erro no cadastro.");
             }
@@ -191,6 +191,18 @@ namespace GuizzoLtda
         }
 
         private void dataGridVeiculo_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            AdminMenu fmenureturn = new AdminMenu();
+            this.Hide();
+            fmenureturn.Show();
+        }
+
+        private void dataSeguro_ValueChanged(object sender, EventArgs e)
         {
 
         }

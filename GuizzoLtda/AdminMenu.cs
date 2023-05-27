@@ -17,7 +17,7 @@ namespace GuizzoLtda
             InitializeComponent();
         }
 
-       
+
 
         private void pedidosToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -48,6 +48,13 @@ namespace GuizzoLtda
         private void AdminMenu_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void motoristasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CRUDMotorista fmotoristacrud = new CRUDMotorista();
+            fmotoristacrud.Show();
+            Hide();
         }
     }
 }
