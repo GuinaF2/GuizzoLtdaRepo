@@ -32,7 +32,7 @@ namespace GuizzoLtda
             SaveCreate.Visible = false;
 
             txtID.Visible = false;
-            txtNome.Visible= false;
+            txtNome.Visible = false;
             txtSenha.Visible = false;
             cbCargo.Visible = false;
 
@@ -46,7 +46,7 @@ namespace GuizzoLtda
 
         private void dataGridCRUD_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-           
+
         }
 
         private void SaveCreate_Click(object sender, EventArgs e)
@@ -211,6 +211,11 @@ namespace GuizzoLtda
             {
                 MessageBox.Show("\t\t    Favor selecionar ID do usuário. \n\nERRO: " + ex.Message);
             }
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }
