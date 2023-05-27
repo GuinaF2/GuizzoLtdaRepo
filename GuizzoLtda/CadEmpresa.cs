@@ -105,7 +105,7 @@ namespace GuizzoLtda
 
                     {
 
-                        MessageBox.Show("Usuário Cadastrado com Sucesso");
+                        MessageBox.Show("Cliente Cadastrado com Sucesso");
                         Principal fprincipalreturn = new Principal();
                         this.Hide();
                         fprincipalreturn.Show();
