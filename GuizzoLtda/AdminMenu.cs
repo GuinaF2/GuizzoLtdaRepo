@@ -17,12 +17,12 @@ namespace GuizzoLtda
             InitializeComponent();
         }
 
-
+       
 
         private void pedidosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PedidoFunc ffuncpedid = new PedidoFunc();
-            ffuncpedid.Show();
+            CRUDPedido fpedidocrud = new CRUDPedido();
+            fpedidocrud.Show();
             Hide();
         }
 
@@ -48,6 +48,13 @@ namespace GuizzoLtda
         private void AdminMenu_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void empresasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CRUDEmpresa fcrudemp = new CRUDEmpresa();
+            fcrudemp.Show();
+            Hide();
         }
 
         private void motoristasToolStripMenuItem_Click(object sender, EventArgs e)

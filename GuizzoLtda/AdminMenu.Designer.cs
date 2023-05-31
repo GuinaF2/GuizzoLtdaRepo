@@ -29,132 +29,145 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminMenu));
-            toolStrip1 = new ToolStrip();
-            toolStripSeparator1 = new ToolStripSeparator();
-            toolStripTextBox2 = new ToolStripSplitButton();
-            abrirPedidoToolStripMenuItem = new ToolStripMenuItem();
-            pedidosToolStripMenuItem = new ToolStripMenuItem();
-            veiculosToolStripMenuItem = new ToolStripMenuItem();
-            motoristasToolStripMenuItem = new ToolStripMenuItem();
-            empresasToolStripMenuItem = new ToolStripMenuItem();
-            toolStripSeparator2 = new ToolStripSeparator();
-            toolStripSplitButton6 = new ToolStripSplitButton();
-            toolStripSplitButton1 = new ToolStripSplitButton();
-            encerrarToolStripMenuItem = new ToolStripMenuItem();
-            pictureBox1 = new PictureBox();
-            toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            SuspendLayout();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripTextBox2 = new System.Windows.Forms.ToolStripSplitButton();
+            this.abrirPedidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.veiculosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.motoristasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.empresasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSplitButton6 = new System.Windows.Forms.ToolStripSplitButton();
+            this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
+            this.encerrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SuspendLayout();
             // 
             // toolStrip1
             // 
-            toolStrip1.GripStyle = ToolStripGripStyle.Hidden;
-            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripSeparator1, toolStripTextBox2, toolStripSeparator2, toolStripSplitButton6, toolStripSplitButton1 });
-            toolStrip1.Location = new Point(0, 0);
-            toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(800, 25);
-            toolStrip1.TabIndex = 1;
-            toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripSeparator1,
+            this.toolStripTextBox2,
+            this.toolStripSeparator2,
+            this.toolStripSplitButton6,
+            this.toolStripSplitButton1});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(800, 25);
+            this.toolStrip1.TabIndex = 1;
+            this.toolStrip1.Text = "toolStrip1";
             // 
             // toolStripSeparator1
             // 
-            toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(6, 25);
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // toolStripTextBox2
             // 
-            toolStripTextBox2.DropDownItems.AddRange(new ToolStripItem[] { abrirPedidoToolStripMenuItem, pedidosToolStripMenuItem, veiculosToolStripMenuItem, motoristasToolStripMenuItem, empresasToolStripMenuItem });
-            toolStripTextBox2.Name = "toolStripTextBox2";
-            toolStripTextBox2.Size = new Size(58, 22);
-            toolStripTextBox2.Text = "Alterar";
-            toolStripTextBox2.ButtonClick += toolStripTextBox2_ButtonClick;
+            this.toolStripTextBox2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.abrirPedidoToolStripMenuItem,
+            this.pedidosToolStripMenuItem,
+            this.veiculosToolStripMenuItem,
+            this.motoristasToolStripMenuItem,
+            this.empresasToolStripMenuItem});
+            this.toolStripTextBox2.Name = "toolStripTextBox2";
+            this.toolStripTextBox2.Size = new System.Drawing.Size(58, 22);
+            this.toolStripTextBox2.Text = "Alterar";
+            this.toolStripTextBox2.ButtonClick += new System.EventHandler(this.toolStripTextBox2_ButtonClick);
             // 
             // abrirPedidoToolStripMenuItem
             // 
-            abrirPedidoToolStripMenuItem.Name = "abrirPedidoToolStripMenuItem";
-            abrirPedidoToolStripMenuItem.Size = new Size(180, 22);
-            abrirPedidoToolStripMenuItem.Text = "Funcionarios";
-            abrirPedidoToolStripMenuItem.Click += abrirPedidoToolStripMenuItem_Click_1;
+            this.abrirPedidoToolStripMenuItem.Name = "abrirPedidoToolStripMenuItem";
+            this.abrirPedidoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.abrirPedidoToolStripMenuItem.Text = "Funcionarios";
+            this.abrirPedidoToolStripMenuItem.Click += new System.EventHandler(this.abrirPedidoToolStripMenuItem_Click_1);
             // 
             // pedidosToolStripMenuItem
             // 
-            pedidosToolStripMenuItem.Name = "pedidosToolStripMenuItem";
-            pedidosToolStripMenuItem.Size = new Size(180, 22);
-            pedidosToolStripMenuItem.Text = "Pedidos";
-            pedidosToolStripMenuItem.Click += pedidosToolStripMenuItem_Click;
+            this.pedidosToolStripMenuItem.Name = "pedidosToolStripMenuItem";
+            this.pedidosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pedidosToolStripMenuItem.Text = "Pedidos";
+            this.pedidosToolStripMenuItem.Click += new System.EventHandler(this.pedidosToolStripMenuItem_Click);
             // 
             // veiculosToolStripMenuItem
             // 
-            veiculosToolStripMenuItem.Name = "veiculosToolStripMenuItem";
-            veiculosToolStripMenuItem.Size = new Size(180, 22);
-            veiculosToolStripMenuItem.Text = "Veiculos";
-            veiculosToolStripMenuItem.Click += veiculosToolStripMenuItem_Click;
+            this.veiculosToolStripMenuItem.Name = "veiculosToolStripMenuItem";
+            this.veiculosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.veiculosToolStripMenuItem.Text = "Veiculos";
+            this.veiculosToolStripMenuItem.Click += new System.EventHandler(this.veiculosToolStripMenuItem_Click);
             // 
             // motoristasToolStripMenuItem
             // 
-            motoristasToolStripMenuItem.Name = "motoristasToolStripMenuItem";
-            motoristasToolStripMenuItem.Size = new Size(180, 22);
-            motoristasToolStripMenuItem.Text = "Motoristas";
-            motoristasToolStripMenuItem.Click += motoristasToolStripMenuItem_Click;
+            this.motoristasToolStripMenuItem.Name = "motoristasToolStripMenuItem";
+            this.motoristasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.motoristasToolStripMenuItem.Text = "Motoristas";
+            this.motoristasToolStripMenuItem.Click += new System.EventHandler(this.motoristasToolStripMenuItem_Click);
             // 
             // empresasToolStripMenuItem
             // 
-            empresasToolStripMenuItem.Name = "empresasToolStripMenuItem";
-            empresasToolStripMenuItem.Size = new Size(180, 22);
-            empresasToolStripMenuItem.Text = "Empresas";
+            this.empresasToolStripMenuItem.Name = "empresasToolStripMenuItem";
+            this.empresasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.empresasToolStripMenuItem.Text = "Empresas";
+            this.empresasToolStripMenuItem.Click += new System.EventHandler(this.empresasToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
-            toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(6, 25);
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // toolStripSplitButton6
             // 
-            toolStripSplitButton6.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            toolStripSplitButton6.Image = (Image)resources.GetObject("toolStripSplitButton6.Image");
-            toolStripSplitButton6.ImageTransparentColor = Color.Magenta;
-            toolStripSplitButton6.Name = "toolStripSplitButton6";
-            toolStripSplitButton6.Size = new Size(75, 22);
-            toolStripSplitButton6.Text = "Relatorios";
+            this.toolStripSplitButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripSplitButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton6.Image")));
+            this.toolStripSplitButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripSplitButton6.Name = "toolStripSplitButton6";
+            this.toolStripSplitButton6.Size = new System.Drawing.Size(75, 22);
+            this.toolStripSplitButton6.Text = "Relatorios";
             // 
             // toolStripSplitButton1
             // 
-            toolStripSplitButton1.Alignment = ToolStripItemAlignment.Right;
-            toolStripSplitButton1.DropDownItems.AddRange(new ToolStripItem[] { encerrarToolStripMenuItem });
-            toolStripSplitButton1.Name = "toolStripSplitButton1";
-            toolStripSplitButton1.Size = new Size(64, 22);
-            toolStripSplitButton1.Text = "Sistema";
+            this.toolStripSplitButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripSplitButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.encerrarToolStripMenuItem});
+            this.toolStripSplitButton1.Name = "toolStripSplitButton1";
+            this.toolStripSplitButton1.Size = new System.Drawing.Size(64, 22);
+            this.toolStripSplitButton1.Text = "Sistema";
             // 
             // encerrarToolStripMenuItem
             // 
-            encerrarToolStripMenuItem.Name = "encerrarToolStripMenuItem";
-            encerrarToolStripMenuItem.Size = new Size(117, 22);
-            encerrarToolStripMenuItem.Text = "Encerrar";
+            this.encerrarToolStripMenuItem.Name = "encerrarToolStripMenuItem";
+            this.encerrarToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.encerrarToolStripMenuItem.Text = "Encerrar";
             // 
             // pictureBox1
             // 
-            pictureBox1.BorderStyle = BorderStyle.Fixed3D;
-            pictureBox1.Location = new Point(401, 28);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(399, 422);
-            pictureBox1.TabIndex = 2;
-            pictureBox1.TabStop = false;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Location = new System.Drawing.Point(401, 28);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(399, 422);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // AdminMenu
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(pictureBox1);
-            Controls.Add(toolStrip1);
-            Name = "AdminMenu";
-            Text = "AdminMenu";
-            Load += AdminMenu_Load;
-            toolStrip1.ResumeLayout(false);
-            toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.toolStrip1);
+            this.Name = "AdminMenu";
+            this.Text = "AdminMenu";
+            this.Load += new System.EventHandler(this.AdminMenu_Load);
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

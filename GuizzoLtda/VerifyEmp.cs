@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GuizzoLtda
 {
-    public partial class EmpresaMenu : Form
+    public partial class VerifyEmp : Form
     {
-        public EmpresaMenu()
+        public VerifyEmp()
         {
             InitializeComponent();
         }

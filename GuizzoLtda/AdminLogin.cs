@@ -81,5 +81,36 @@ namespace GuizzoLtda
         {
 
         }
+
+        private void btnLoginAdmin_Click(object sender, EventArgs e)
+        {
+            UsuarioModelo.NomeUser = txtUserAdm.Text;
+
+            UsuarioModelo.SenhaUser = txtSenhaAdm.Text;
+
+
+
+            if (txtUserAdm.Text == "" || txtSenhaAdm.Text == "")
+            {
+                MessageBox.Show("Preencha todos os campos.");
+
+                AdminLogin fadmlogin = new AdminLogin();
+                fadmlogin.Show();
+                Hide();
+            }
+            else
+            {
+                if (Controle.LogarAdm(UsuarioModelo) >= 1)
+                {
+                    AdminMenu fmenuadm = new AdminMenu();
+                    this.Hide();
+                    fmenuadm.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Usuário ou Senha não encontrados");
+                }
+            }
+        }
     }
 }

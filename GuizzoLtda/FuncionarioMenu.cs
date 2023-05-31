@@ -28,5 +28,12 @@ namespace GuizzoLtda
             this.Hide();
             fpedidofuncionario.Show();
         }
+
+        private void toolStripButton14_Click(object sender, EventArgs e)
+        {
+            VerifyEmp fempresaver = new VerifyEmp();
+            this.Hide();
+            fempresaver.Show();
+        }
     }
 }
