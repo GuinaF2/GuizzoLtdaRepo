@@ -35,5 +35,12 @@ namespace GuizzoLtda
             this.Hide();
             fempresaver.Show();
         }
+
+        private void toolStripButton16_Click(object sender, EventArgs e)
+        {
+            PedidoFunc fpedidofuncionario = new PedidoFunc();
+            this.Hide();
+            fpedidofuncionario.Show();
+        }
     }
 }

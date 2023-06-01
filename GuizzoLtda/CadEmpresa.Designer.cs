@@ -34,7 +34,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtRazaosoc = new System.Windows.Forms.TextBox();
-            this.txtIncEstad = new System.Windows.Forms.TextBox();
             this.txtBairro = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -45,11 +44,12 @@
             this.btnCadEndereco = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.txtIncEstad = new System.Windows.Forms.MaskedTextBox();
             this.txtCnpj = new System.Windows.Forms.MaskedTextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.txtNumero = new System.Windows.Forms.TextBox();
             this.txtRua = new System.Windows.Forms.MaskedTextBox();
             this.txtCep = new System.Windows.Forms.MaskedTextBox();
-            this.txtNumero = new System.Windows.Forms.MaskedTextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbFotoEmp)).BeginInit();
@@ -119,14 +119,6 @@
             this.txtRazaosoc.Name = "txtRazaosoc";
             this.txtRazaosoc.Size = new System.Drawing.Size(220, 29);
             this.txtRazaosoc.TabIndex = 6;
-            // 
-            // txtIncEstad
-            // 
-            this.txtIncEstad.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtIncEstad.Location = new System.Drawing.Point(30, 185);
-            this.txtIncEstad.Name = "txtIncEstad";
-            this.txtIncEstad.Size = new System.Drawing.Size(220, 29);
-            this.txtIncEstad.TabIndex = 8;
             // 
             // txtBairro
             // 
@@ -221,18 +213,26 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage1.Controls.Add(this.txtIncEstad);
             this.tabPage1.Controls.Add(this.txtCnpj);
             this.tabPage1.Controls.Add(this.txtRazaosoc);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.txtIncEstad);
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(793, 343);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Dados";
+            // 
+            // txtIncEstad
+            // 
+            this.txtIncEstad.Location = new System.Drawing.Point(30, 195);
+            this.txtIncEstad.Mask = "000,000,000,000";
+            this.txtIncEstad.Name = "txtIncEstad";
+            this.txtIncEstad.Size = new System.Drawing.Size(100, 23);
+            this.txtIncEstad.TabIndex = 10;
             // 
             // txtCnpj
             // 
@@ -244,9 +244,9 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.txtNumero);
             this.tabPage2.Controls.Add(this.txtRua);
             this.tabPage2.Controls.Add(this.txtCep);
-            this.tabPage2.Controls.Add(this.txtNumero);
             this.tabPage2.Controls.Add(this.txtBairro);
             this.tabPage2.Controls.Add(this.label7);
             this.tabPage2.Controls.Add(this.label8);
@@ -262,13 +262,24 @@
             this.tabPage2.Text = "Endereço";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // txtNumero
+            // 
+            this.txtNumero.Location = new System.Drawing.Point(42, 218);
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.Size = new System.Drawing.Size(100, 23);
+            this.txtNumero.TabIndex = 23;
+            this.txtNumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumero_KeyPress_1);
+            // 
             // txtRua
             // 
+            this.txtRua.AsciiOnly = true;
             this.txtRua.Location = new System.Drawing.Point(37, 45);
             this.txtRua.Name = "txtRua";
             this.txtRua.ShortcutsEnabled = false;
             this.txtRua.Size = new System.Drawing.Size(225, 23);
             this.txtRua.TabIndex = 22;
+            this.txtRua.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtRua_MaskInputRejected);
+            this.txtRua.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRua_KeyPress);
             // 
             // txtCep
             // 
@@ -280,16 +291,6 @@
             this.txtCep.PromptChar = ' ';
             this.txtCep.Size = new System.Drawing.Size(68, 23);
             this.txtCep.TabIndex = 21;
-            // 
-            // txtNumero
-            // 
-            this.txtNumero.BeepOnError = true;
-            this.txtNumero.Location = new System.Drawing.Point(42, 218);
-            this.txtNumero.Mask = "0000";
-            this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(37, 23);
-            this.txtNumero.TabIndex = 20;
-            this.txtNumero.ValidatingType = typeof(int);
             // 
             // tabPage3
             // 
@@ -343,7 +344,6 @@
         private Label label2;
         private Label label3;
         private TextBox txtRazaosoc;
-        private TextBox txtIncEstad;
         private TextBox txtBairro;
         private Label label5;
         private Label label6;
@@ -357,9 +357,10 @@
         private TabPage tabPage2;
         private TabPage tabPage3;
         private TextBox textBox1;
-        private MaskedTextBox txtNumero;
         private MaskedTextBox txtCep;
         private MaskedTextBox txtCnpj;
         private MaskedTextBox txtRua;
+        private MaskedTextBox txtIncEstad;
+        private TextBox txtNumero;
     }
 }

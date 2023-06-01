@@ -89,6 +89,7 @@
             this.toolStripButton16.Size = new System.Drawing.Size(110, 22);
             this.toolStripButton16.Text = "Confirmar Pedidos";
             this.toolStripButton16.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.toolStripButton16.Click += new System.EventHandler(this.toolStripButton16_Click);
             // 
             // toolStripSeparator3
             // 
@@ -124,9 +125,9 @@
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Location = new System.Drawing.Point(393, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(428, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(408, 450);
+            this.pictureBox1.Size = new System.Drawing.Size(372, 450);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 

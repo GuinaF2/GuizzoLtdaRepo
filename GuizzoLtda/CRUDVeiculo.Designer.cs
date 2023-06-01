@@ -93,6 +93,7 @@
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(23, 22);
             this.btnReturn.Text = "Retornar";
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click_1);
             // 
             // btnAtualizar
             // 

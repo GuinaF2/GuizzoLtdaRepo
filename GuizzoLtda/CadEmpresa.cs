@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace GuizzoLtda
 {
@@ -42,7 +43,7 @@ namespace GuizzoLtda
 
         private void CadEmpresa_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnEscolherFotoEmp_Click(object sender, EventArgs e)
@@ -123,6 +124,30 @@ namespace GuizzoLtda
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNumero_KeyPress(object sender, KeyPressEventArgs e)
+        {
+           
+        }
+
+        private void txtNumero_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            txtNumero.MaxLength = 4;
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtRua_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void txtRua_KeyPress(object sender, KeyPressEventArgs e)
         {
 
         }
