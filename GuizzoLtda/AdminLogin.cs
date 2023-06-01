@@ -70,12 +70,7 @@ namespace GuizzoLtda
             }
         }
 
-        private void btnReturn_Click(object sender, EventArgs e)
-        {
-            Principal fprincipalreturn = new Principal();
-            this.Hide();
-            fprincipalreturn.Show();
-        }
+      
 
         private void AdminLogin_Load_1(object sender, EventArgs e)
         {
@@ -111,6 +106,13 @@ namespace GuizzoLtda
                     MessageBox.Show("Usuário ou Senha não encontrados");
                 }
             }
+        }
+
+        private void btnReturn_Click_1(object sender, EventArgs e)
+        {
+            Principal fprincipalreturn = new Principal();
+            this.Hide();
+            fprincipalreturn.Show();
         }
     }
 }

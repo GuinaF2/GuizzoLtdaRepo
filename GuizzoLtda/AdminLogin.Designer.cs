@@ -101,11 +101,12 @@
             this.btnReturn.ForeColor = System.Drawing.Color.Black;
             this.btnReturn.Location = new System.Drawing.Point(0, -1);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(54, 54);
+            this.btnReturn.Size = new System.Drawing.Size(40, 40);
             this.btnReturn.TabIndex = 4;
             this.btnReturn.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnReturn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click_1);
             // 
             // txtUserAdm
             // 

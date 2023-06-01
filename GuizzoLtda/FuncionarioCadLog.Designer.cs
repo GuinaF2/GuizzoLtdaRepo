@@ -34,7 +34,9 @@
             this.btnLoginFunc = new System.Windows.Forms.Button();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnRetornar = new System.Windows.Forms.Button();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -99,17 +101,25 @@
             this.label4.TabIndex = 13;
             this.label4.Text = "Senha";
             // 
-            // btnRetornar
+            // toolStrip1
             // 
-            this.btnRetornar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRetornar.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnRetornar.Location = new System.Drawing.Point(1, -1);
-            this.btnRetornar.Name = "btnRetornar";
-            this.btnRetornar.Size = new System.Drawing.Size(133, 39);
-            this.btnRetornar.TabIndex = 5;
-            this.btnRetornar.Text = "Retornar";
-            this.btnRetornar.UseVisualStyleBackColor = true;
-            this.btnRetornar.Click += new System.EventHandler(this.btnRetornar_Click_1);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(800, 25);
+            this.toolStrip1.TabIndex = 14;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = global::GuizzoLtda.Properties.Resources._688879_arrows_512x512;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // FuncionarioCadLog
             // 
@@ -117,7 +127,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnRetornar);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnLoginFunc);
@@ -126,6 +136,8 @@
             this.Controls.Add(this.label1);
             this.Name = "FuncionarioCadLog";
             this.Text = "FuncionarioCadLog";
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -139,6 +151,7 @@
         private Button btnLoginFunc;
         private TextBox txtSenha;
         private Label label4;
-        private Button btnRetornar;
+        private ToolStrip toolStrip1;
+        private ToolStripButton toolStripButton1;
     }
 }

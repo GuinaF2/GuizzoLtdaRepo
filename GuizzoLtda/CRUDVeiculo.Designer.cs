@@ -49,7 +49,7 @@
             this.txtIdVeic = new System.Windows.Forms.TextBox();
             this.labelIdVeic = new System.Windows.Forms.Label();
             this.cbTipo = new System.Windows.Forms.ComboBox();
-            this.dataSeguro = new System.Windows.Forms.TextBox();
+            this.dataSeguro = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridVeiculo)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -258,10 +258,14 @@
             // 
             // dataSeguro
             // 
-            this.dataSeguro.Location = new System.Drawing.Point(122, 307);
+            this.dataSeguro.Location = new System.Drawing.Point(122, 325);
+            this.dataSeguro.Mask = "00/00/0000";
             this.dataSeguro.Name = "dataSeguro";
+            this.dataSeguro.PromptChar = ' ';
             this.dataSeguro.Size = new System.Drawing.Size(100, 23);
-            this.dataSeguro.TabIndex = 0;
+            this.dataSeguro.TabIndex = 33;
+            this.dataSeguro.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.dataSeguro_MaskInputRejected);
+            this.dataSeguro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dataSeguro_KeyPress_1);
             // 
             // CRUDVeiculo
             // 
@@ -314,6 +318,6 @@
         private TextBox txtIdVeic;
         private Label labelIdVeic;
         private ComboBox cbTipo;
-        private TextBox dataSeguro;
+        private MaskedTextBox dataSeguro;
     }
 }

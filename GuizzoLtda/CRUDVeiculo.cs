@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace GuizzoLtda
 {
@@ -206,6 +207,35 @@ namespace GuizzoLtda
             AdminMenu fmenureturn = new AdminMenu();
             this.Hide();
             fmenureturn.Show();
+        }
+
+        private void dataSeguro_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataSeguro_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            dataSeguro.MaxLength = 8;
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void dataSeguro_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            
+        }
+
+        private void dataSeguro_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            
+            dataSeguro.MaxLength = 8;
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
         }
     }
 }

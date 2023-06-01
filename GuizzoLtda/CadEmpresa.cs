@@ -151,5 +151,17 @@ namespace GuizzoLtda
         {
 
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            Principal fprincipalreturn = new Principal();
+            this.Hide();
+            fprincipalreturn.Show();
+        }
+
+        private void txtNumero_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

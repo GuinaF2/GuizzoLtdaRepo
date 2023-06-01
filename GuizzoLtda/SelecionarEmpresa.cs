@@ -70,5 +70,12 @@ namespace GuizzoLtda
             this.Hide();
             fprincipalreturn.Show();
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            Principal fprincipalreturn = new Principal();
+            this.Hide();
+            fprincipalreturn.Show();
+        }
     }
 }
