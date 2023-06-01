@@ -45,11 +45,11 @@
             this.SaveCreate = new System.Windows.Forms.Button();
             this.SaveDelete = new System.Windows.Forms.Button();
             this.SaveUpdate = new System.Windows.Forms.Button();
-            this.dataSeguro = new System.Windows.Forms.DateTimePicker();
             this.labelseguro = new System.Windows.Forms.Label();
             this.txtIdVeic = new System.Windows.Forms.TextBox();
             this.labelIdVeic = new System.Windows.Forms.Label();
             this.cbTipo = new System.Windows.Forms.ComboBox();
+            this.dataSeguro = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridVeiculo)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -213,21 +213,11 @@
             this.SaveUpdate.Visible = false;
             this.SaveUpdate.Click += new System.EventHandler(this.SaveUpdate_Click);
             // 
-            // dataSeguro
-            // 
-            this.dataSeguro.CustomFormat = "00/00/0000";
-            this.dataSeguro.Location = new System.Drawing.Point(173, 290);
-            this.dataSeguro.Name = "dataSeguro";
-            this.dataSeguro.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dataSeguro.Size = new System.Drawing.Size(200, 23);
-            this.dataSeguro.TabIndex = 27;
-            this.dataSeguro.Value = new System.DateTime(2023, 5, 30, 0, 0, 0, 0);
-            // 
             // labelseguro
             // 
             this.labelseguro.AutoSize = true;
             this.labelseguro.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelseguro.Location = new System.Drawing.Point(25, 284);
+            this.labelseguro.Location = new System.Drawing.Point(115, 274);
             this.labelseguro.Name = "labelseguro";
             this.labelseguro.Size = new System.Drawing.Size(128, 30);
             this.labelseguro.TabIndex = 29;
@@ -266,16 +256,23 @@
             this.cbTipo.Size = new System.Drawing.Size(121, 23);
             this.cbTipo.TabIndex = 32;
             // 
+            // dataSeguro
+            // 
+            this.dataSeguro.Location = new System.Drawing.Point(122, 307);
+            this.dataSeguro.Name = "dataSeguro";
+            this.dataSeguro.Size = new System.Drawing.Size(100, 23);
+            this.dataSeguro.TabIndex = 0;
+            // 
             // CRUDVeiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dataSeguro);
             this.Controls.Add(this.cbTipo);
             this.Controls.Add(this.txtIdVeic);
             this.Controls.Add(this.labelIdVeic);
             this.Controls.Add(this.labelseguro);
-            this.Controls.Add(this.dataSeguro);
             this.Controls.Add(this.dataGridVeiculo);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.labeltipo);
@@ -313,10 +310,10 @@
         private Button SaveCreate;
         private Button SaveDelete;
         private Button SaveUpdate;
-        private DateTimePicker dataSeguro;
         private Label labelseguro;
         private TextBox txtIdVeic;
         private Label labelIdVeic;
         private ComboBox cbTipo;
+        private TextBox dataSeguro;
     }
 }

@@ -217,5 +217,17 @@ namespace GuizzoLtda
         {
 
         }
+
+        private void btnReturn_Click_1(object sender, EventArgs e)
+        {
+            AdminMenu fmenureturn = new AdminMenu();
+            this.Hide();
+            fmenureturn.Show();
+        }
+
+        private void CRUDUser_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -30,7 +30,7 @@
         {
             this.txtEmpresaid = new System.Windows.Forms.TextBox();
             this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtgPedido = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.labelEmpresaId = new System.Windows.Forms.Label();
             this.btnConfirma = new System.Windows.Forms.Button();
@@ -38,7 +38,10 @@
             this.cbEncerrado = new System.Windows.Forms.CheckBox();
             this.txtDtPedido = new System.Windows.Forms.TextBox();
             this.labelDtPedido = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.btnReturn = new System.Windows.Forms.ToolStripButton();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgPedido)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtEmpresaid
@@ -55,15 +58,15 @@
             this.mySqlCommand1.EnableCaching = false;
             this.mySqlCommand1.Transaction = null;
             // 
-            // dataGridView1
+            // dtgPedido
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(-2, 199);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(803, 251);
-            this.dataGridView1.TabIndex = 1;
-            this.dataGridView1.Visible = false;
+            this.dtgPedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgPedido.Location = new System.Drawing.Point(-2, 199);
+            this.dtgPedido.Name = "dtgPedido";
+            this.dtgPedido.RowTemplate.Height = 25;
+            this.dtgPedido.Size = new System.Drawing.Size(803, 251);
+            this.dtgPedido.TabIndex = 1;
+            this.dtgPedido.Visible = false;
             // 
             // label1
             // 
@@ -90,6 +93,7 @@
             this.btnConfirma.TabIndex = 4;
             this.btnConfirma.Text = "Confirmar";
             this.btnConfirma.UseVisualStyleBackColor = true;
+            this.btnConfirma.Click += new System.EventHandler(this.btnConfirma_Click);
             // 
             // cbAberto
             // 
@@ -129,11 +133,33 @@
             this.labelDtPedido.TabIndex = 8;
             this.labelDtPedido.Text = "Data Pedido";
             // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnReturn});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(800, 25);
+            this.toolStrip1.TabIndex = 9;
+            this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
+            // 
+            // btnReturn
+            // 
+            this.btnReturn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnReturn.Image = global::GuizzoLtda.Properties.Resources._688879_arrows_512x512;
+            this.btnReturn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Size = new System.Drawing.Size(23, 22);
+            this.btnReturn.Text = "toolStripButton1";
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
+            // 
             // PedidoFunc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.labelDtPedido);
             this.Controls.Add(this.txtDtPedido);
             this.Controls.Add(this.cbEncerrado);
@@ -141,11 +167,13 @@
             this.Controls.Add(this.btnConfirma);
             this.Controls.Add(this.labelEmpresaId);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtgPedido);
             this.Controls.Add(this.txtEmpresaid);
             this.Name = "PedidoFunc";
-            this.Text = "PedidoFunc";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.PedidoFunc_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgPedido)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,7 +183,7 @@
 
         private TextBox txtEmpresaid;
         private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
-        private DataGridView dataGridView1;
+        private DataGridView dtgPedido;
         private Label label1;
         private Label labelEmpresaId;
         private Button btnConfirma;
@@ -163,5 +191,7 @@
         private CheckBox cbEncerrado;
         private TextBox txtDtPedido;
         private Label labelDtPedido;
+        private ToolStrip toolStrip1;
+        private ToolStripButton btnReturn;
     }
 }
