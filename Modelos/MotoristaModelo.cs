@@ -10,6 +10,7 @@ namespace Modelos
     {
         private int idMotorista;
         private int idVeiculo;
+        private string nome;
         private string cpf;
         private string registrogeral;
 
@@ -17,6 +18,7 @@ namespace Modelos
         {
             idMotorista = 0;
             idVeiculo= 0;
+            nome = "";
             cpf = "";
             registrogeral = "";
         }
@@ -31,6 +33,12 @@ namespace Modelos
         {
             get { return idVeiculo; }
             set { idVeiculo = value; }
+
+        }
+        public string nomeMotorista
+        {
+            get { return nome; }
+            set { nome = value; }
 
         }
         public string cpfMotorista

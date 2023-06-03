@@ -22,11 +22,11 @@ namespace Controle
 
             try
             {
-                string SQL = "INSERT INTO tb_motorista(nomeuser,senhauser,idveiculo) values(@nome,@senha(SELECT idveiculo FROM tb_veiculo ORDER BY idveiculo DESC LIMIT 1))";
+                string SQL = "INSERT INTO tb_motorista(cpf,registrogeral,nome,idveiculo) values(@cpf,@registrogeral,@nome(SELECT idveiculo FROM tb_veiculo ORDER BY idveiculo DESC LIMIT 1))";
                 //declaração de vetor de campos
-                string[] campos = { "@cpf", "@registrogeral" };
+                string[] campos = { "@cpf", "@registrogeral","@nome" };
                 //declaração de vetor de informações
-                string[] valores = { modelo.cpfMotorista, modelo.RgMotorista };
+                string[] valores = { modelo.cpfMotorista, modelo.RgMotorista, modelo.nomeMotorista };
 
 
 

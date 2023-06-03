@@ -28,85 +28,83 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pbLogoEmp = new System.Windows.Forms.PictureBox();
-            this.dgViewSelEmp = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogoEmp)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgViewSelEmp)).BeginInit();
-            this.toolStrip1.SuspendLayout();
-            this.SuspendLayout();
+            pbLogoEmp = new PictureBox();
+            dgViewSelEmp = new DataGridView();
+            textBox1 = new TextBox();
+            toolStrip1 = new ToolStrip();
+            toolStripButton1 = new ToolStripButton();
+            ((System.ComponentModel.ISupportInitialize)pbLogoEmp).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgViewSelEmp).BeginInit();
+            toolStrip1.SuspendLayout();
+            SuspendLayout();
             // 
             // pbLogoEmp
             // 
-            this.pbLogoEmp.Location = new System.Drawing.Point(447, 0);
-            this.pbLogoEmp.Name = "pbLogoEmp";
-            this.pbLogoEmp.Size = new System.Drawing.Size(353, 451);
-            this.pbLogoEmp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbLogoEmp.TabIndex = 1;
-            this.pbLogoEmp.TabStop = false;
+            pbLogoEmp.Location = new Point(447, 26);
+            pbLogoEmp.Name = "pbLogoEmp";
+            pbLogoEmp.Size = new Size(353, 425);
+            pbLogoEmp.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbLogoEmp.TabIndex = 1;
+            pbLogoEmp.TabStop = false;
             // 
             // dgViewSelEmp
             // 
-            this.dgViewSelEmp.AllowUserToAddRows = false;
-            this.dgViewSelEmp.AllowUserToDeleteRows = false;
-            this.dgViewSelEmp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgViewSelEmp.Location = new System.Drawing.Point(0, 26);
-            this.dgViewSelEmp.Name = "dgViewSelEmp";
-            this.dgViewSelEmp.ReadOnly = true;
-            this.dgViewSelEmp.RowTemplate.Height = 25;
-            this.dgViewSelEmp.Size = new System.Drawing.Size(450, 425);
-            this.dgViewSelEmp.TabIndex = 2;
-            this.dgViewSelEmp.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgViewSelEmp_CellContentClick_1);
-            this.dgViewSelEmp.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgViewSelEmp_CellDoubleClick);
+            dgViewSelEmp.AllowUserToAddRows = false;
+            dgViewSelEmp.AllowUserToDeleteRows = false;
+            dgViewSelEmp.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgViewSelEmp.Location = new Point(0, 26);
+            dgViewSelEmp.Name = "dgViewSelEmp";
+            dgViewSelEmp.ReadOnly = true;
+            dgViewSelEmp.RowTemplate.Height = 25;
+            dgViewSelEmp.Size = new Size(450, 425);
+            dgViewSelEmp.TabIndex = 2;
+            dgViewSelEmp.CellContentClick += dgViewSelEmp_CellContentClick_1;
+            dgViewSelEmp.CellDoubleClick += dgViewSelEmp_CellDoubleClick;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(447, 428);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(353, 23);
-            this.textBox1.TabIndex = 3;
+            textBox1.Location = new Point(447, 428);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(353, 23);
+            textBox1.TabIndex = 3;
             // 
             // toolStrip1
             // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(800, 25);
-            this.toolStrip1.TabIndex = 4;
-            this.toolStrip1.Text = "toolStrip1";
+            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton1 });
+            toolStrip1.Location = new Point(0, 0);
+            toolStrip1.Name = "toolStrip1";
+            toolStrip1.Size = new Size(800, 25);
+            toolStrip1.TabIndex = 4;
+            toolStrip1.Text = "toolStrip1";
             // 
             // toolStripButton1
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = global::GuizzoLtda.Properties.Resources._688879_arrows_512x512;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "toolStripButton1";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            toolStripButton1.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            toolStripButton1.Image = Properties.Resources._688879_arrows_512x512;
+            toolStripButton1.ImageTransparentColor = Color.Magenta;
+            toolStripButton1.Name = "toolStripButton1";
+            toolStripButton1.Size = new Size(23, 22);
+            toolStripButton1.Text = "toolStripButton1";
+            toolStripButton1.Click += toolStripButton1_Click;
             // 
             // SelecionarEmpresa
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.dgViewSelEmp);
-            this.Controls.Add(this.pbLogoEmp);
-            this.Controls.Add(this.textBox1);
-            this.Name = "SelecionarEmpresa";
-            this.Text = "SelecionarEmpresa";
-            this.Load += new System.EventHandler(this.SelecionarEmpresa_Load_1);
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogoEmp)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgViewSelEmp)).EndInit();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(toolStrip1);
+            Controls.Add(dgViewSelEmp);
+            Controls.Add(pbLogoEmp);
+            Controls.Add(textBox1);
+            Name = "SelecionarEmpresa";
+            Text = "SelecionarEmpresa";
+            Load += SelecionarEmpresa_Load_1;
+            ((System.ComponentModel.ISupportInitialize)pbLogoEmp).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgViewSelEmp).EndInit();
+            toolStrip1.ResumeLayout(false);
+            toolStrip1.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

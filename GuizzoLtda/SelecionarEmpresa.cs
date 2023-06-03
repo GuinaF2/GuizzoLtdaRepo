@@ -33,10 +33,10 @@ namespace GuizzoLtda
 
         private void dgViewSelEmp_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
         }
 
-      
+
 
         private void dgViewSelEmp_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {

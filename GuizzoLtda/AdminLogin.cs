@@ -70,7 +70,7 @@ namespace GuizzoLtda
             }
         }
 
-      
+
 
         private void AdminLogin_Load_1(object sender, EventArgs e)
         {

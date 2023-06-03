@@ -29,254 +29,243 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CRUDEmpresa));
-            this.dataGridCRUDEmpresa = new System.Windows.Forms.DataGridView();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.btnReturn = new System.Windows.Forms.ToolStripButton();
-            this.btnAtualizar = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnCad = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnApaga = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.ajudaToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.labelcargo = new System.Windows.Forms.Label();
-            this.cbCargo = new System.Windows.Forms.ComboBox();
-            this.labelsenha = new System.Windows.Forms.Label();
-            this.labelnome = new System.Windows.Forms.Label();
-            this.txtSenha = new System.Windows.Forms.TextBox();
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.txtID = new System.Windows.Forms.TextBox();
-            this.labelid = new System.Windows.Forms.Label();
-            this.SaveCreate = new System.Windows.Forms.Button();
-            this.SaveDelete = new System.Windows.Forms.Button();
-            this.SaveUpdate = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridCRUDEmpresa)).BeginInit();
-            this.toolStrip1.SuspendLayout();
-            this.SuspendLayout();
+            dataGridCRUDEmpresa = new DataGridView();
+            toolStrip1 = new ToolStrip();
+            btnReturn = new ToolStripButton();
+            btnAtualizar = new ToolStripButton();
+            toolStripSeparator1 = new ToolStripSeparator();
+            btnCad = new ToolStripButton();
+            toolStripSeparator2 = new ToolStripSeparator();
+            btnApaga = new ToolStripButton();
+            toolStripSeparator = new ToolStripSeparator();
+            ajudaToolStripButton = new ToolStripButton();
+            labelcargo = new Label();
+            cbCargo = new ComboBox();
+            labelsenha = new Label();
+            labelnome = new Label();
+            txtSenha = new TextBox();
+            txtNome = new TextBox();
+            txtID = new TextBox();
+            labelid = new Label();
+            SaveCreate = new Button();
+            SaveDelete = new Button();
+            SaveUpdate = new Button();
+            ((System.ComponentModel.ISupportInitialize)dataGridCRUDEmpresa).BeginInit();
+            toolStrip1.SuspendLayout();
+            SuspendLayout();
             // 
             // dataGridCRUDEmpresa
             // 
-            this.dataGridCRUDEmpresa.AllowUserToAddRows = false;
-            this.dataGridCRUDEmpresa.AllowUserToDeleteRows = false;
-            this.dataGridCRUDEmpresa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridCRUDEmpresa.Location = new System.Drawing.Point(411, -1);
-            this.dataGridCRUDEmpresa.Name = "dataGridCRUDEmpresa";
-            this.dataGridCRUDEmpresa.ReadOnly = true;
-            this.dataGridCRUDEmpresa.RowTemplate.Height = 25;
-            this.dataGridCRUDEmpresa.Size = new System.Drawing.Size(389, 453);
-            this.dataGridCRUDEmpresa.TabIndex = 23;
+            dataGridCRUDEmpresa.AllowUserToAddRows = false;
+            dataGridCRUDEmpresa.AllowUserToDeleteRows = false;
+            dataGridCRUDEmpresa.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridCRUDEmpresa.Location = new Point(411, -1);
+            dataGridCRUDEmpresa.Name = "dataGridCRUDEmpresa";
+            dataGridCRUDEmpresa.ReadOnly = true;
+            dataGridCRUDEmpresa.RowTemplate.Height = 25;
+            dataGridCRUDEmpresa.Size = new Size(389, 453);
+            dataGridCRUDEmpresa.TabIndex = 23;
             // 
             // toolStrip1
             // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnReturn,
-            this.btnAtualizar,
-            this.toolStripSeparator1,
-            this.btnCad,
-            this.toolStripSeparator2,
-            this.btnApaga,
-            this.toolStripSeparator,
-            this.ajudaToolStripButton});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(800, 25);
-            this.toolStrip1.TabIndex = 26;
-            this.toolStrip1.Text = "toolStrip1";
+            toolStrip1.Items.AddRange(new ToolStripItem[] { btnReturn, btnAtualizar, toolStripSeparator1, btnCad, toolStripSeparator2, btnApaga, toolStripSeparator, ajudaToolStripButton });
+            toolStrip1.Location = new Point(0, 0);
+            toolStrip1.Name = "toolStrip1";
+            toolStrip1.Size = new Size(800, 25);
+            toolStrip1.TabIndex = 26;
+            toolStrip1.Text = "toolStrip1";
             // 
             // btnReturn
             // 
-            this.btnReturn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnReturn.Image = ((System.Drawing.Image)(resources.GetObject("btnReturn.Image")));
-            this.btnReturn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(23, 22);
-            this.btnReturn.Text = "Retornar";
+            btnReturn.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btnReturn.Image = (Image)resources.GetObject("btnReturn.Image");
+            btnReturn.ImageTransparentColor = Color.Magenta;
+            btnReturn.Name = "btnReturn";
+            btnReturn.Size = new Size(23, 22);
+            btnReturn.Text = "Retornar";
             // 
             // btnAtualizar
             // 
-            this.btnAtualizar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btnAtualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnAtualizar.Image")));
-            this.btnAtualizar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnAtualizar.Name = "btnAtualizar";
-            this.btnAtualizar.Size = new System.Drawing.Size(57, 22);
-            this.btnAtualizar.Text = "Atualizar";
+            btnAtualizar.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            btnAtualizar.Image = (Image)resources.GetObject("btnAtualizar.Image");
+            btnAtualizar.ImageTransparentColor = Color.Magenta;
+            btnAtualizar.Name = "btnAtualizar";
+            btnAtualizar.Size = new Size(57, 22);
+            btnAtualizar.Text = "Atualizar";
             // 
             // toolStripSeparator1
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            toolStripSeparator1.Size = new Size(6, 25);
             // 
             // btnCad
             // 
-            this.btnCad.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btnCad.Image = ((System.Drawing.Image)(resources.GetObject("btnCad.Image")));
-            this.btnCad.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnCad.Name = "btnCad";
-            this.btnCad.Size = new System.Drawing.Size(61, 22);
-            this.btnCad.Text = "Cadastrar";
+            btnCad.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            btnCad.Image = (Image)resources.GetObject("btnCad.Image");
+            btnCad.ImageTransparentColor = Color.Magenta;
+            btnCad.Name = "btnCad";
+            btnCad.Size = new Size(61, 22);
+            btnCad.Text = "Cadastrar";
             // 
             // toolStripSeparator2
             // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            toolStripSeparator2.Name = "toolStripSeparator2";
+            toolStripSeparator2.Size = new Size(6, 25);
             // 
             // btnApaga
             // 
-            this.btnApaga.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btnApaga.Image = ((System.Drawing.Image)(resources.GetObject("btnApaga.Image")));
-            this.btnApaga.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnApaga.Name = "btnApaga";
-            this.btnApaga.Size = new System.Drawing.Size(48, 22);
-            this.btnApaga.Text = "Deletar";
+            btnApaga.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            btnApaga.Image = (Image)resources.GetObject("btnApaga.Image");
+            btnApaga.ImageTransparentColor = Color.Magenta;
+            btnApaga.Name = "btnApaga";
+            btnApaga.Size = new Size(48, 22);
+            btnApaga.Text = "Deletar";
             // 
             // toolStripSeparator
             // 
-            this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(6, 25);
+            toolStripSeparator.Name = "toolStripSeparator";
+            toolStripSeparator.Size = new Size(6, 25);
             // 
             // ajudaToolStripButton
             // 
-            this.ajudaToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.ajudaToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("ajudaToolStripButton.Image")));
-            this.ajudaToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.ajudaToolStripButton.Name = "ajudaToolStripButton";
-            this.ajudaToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.ajudaToolStripButton.Text = "Aju&da";
+            ajudaToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            ajudaToolStripButton.Image = (Image)resources.GetObject("ajudaToolStripButton.Image");
+            ajudaToolStripButton.ImageTransparentColor = Color.Magenta;
+            ajudaToolStripButton.Name = "ajudaToolStripButton";
+            ajudaToolStripButton.Size = new Size(23, 22);
+            ajudaToolStripButton.Text = "Aju&da";
             // 
             // labelcargo
             // 
-            this.labelcargo.AutoSize = true;
-            this.labelcargo.Location = new System.Drawing.Point(135, 294);
-            this.labelcargo.Name = "labelcargo";
-            this.labelcargo.Size = new System.Drawing.Size(39, 15);
-            this.labelcargo.TabIndex = 25;
-            this.labelcargo.Text = "Cargo";
+            labelcargo.AutoSize = true;
+            labelcargo.Location = new Point(135, 294);
+            labelcargo.Name = "labelcargo";
+            labelcargo.Size = new Size(39, 15);
+            labelcargo.TabIndex = 25;
+            labelcargo.Text = "Cargo";
             // 
             // cbCargo
             // 
-            this.cbCargo.FormattingEnabled = true;
-            this.cbCargo.Items.AddRange(new object[] {
-            "1",
-            "2"});
-            this.cbCargo.Location = new System.Drawing.Point(197, 291);
-            this.cbCargo.Name = "cbCargo";
-            this.cbCargo.Size = new System.Drawing.Size(63, 23);
-            this.cbCargo.TabIndex = 24;
+            cbCargo.FormattingEnabled = true;
+            cbCargo.Items.AddRange(new object[] { "1", "2" });
+            cbCargo.Location = new Point(197, 291);
+            cbCargo.Name = "cbCargo";
+            cbCargo.Size = new Size(63, 23);
+            cbCargo.TabIndex = 24;
             // 
             // labelsenha
             // 
-            this.labelsenha.AutoSize = true;
-            this.labelsenha.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelsenha.Location = new System.Drawing.Point(135, 198);
-            this.labelsenha.Name = "labelsenha";
-            this.labelsenha.Size = new System.Drawing.Size(70, 30);
-            this.labelsenha.TabIndex = 22;
-            this.labelsenha.Text = "Senha";
+            labelsenha.AutoSize = true;
+            labelsenha.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            labelsenha.Location = new Point(135, 198);
+            labelsenha.Name = "labelsenha";
+            labelsenha.Size = new Size(70, 30);
+            labelsenha.TabIndex = 22;
+            labelsenha.Text = "Senha";
             // 
             // labelnome
             // 
-            this.labelnome.AutoSize = true;
-            this.labelnome.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelnome.Location = new System.Drawing.Point(135, 126);
-            this.labelnome.Name = "labelnome";
-            this.labelnome.Size = new System.Drawing.Size(70, 30);
-            this.labelnome.TabIndex = 21;
-            this.labelnome.Text = "Nome";
+            labelnome.AutoSize = true;
+            labelnome.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            labelnome.Location = new Point(135, 126);
+            labelnome.Name = "labelnome";
+            labelnome.Size = new Size(70, 30);
+            labelnome.TabIndex = 21;
+            labelnome.Text = "Nome";
             // 
             // txtSenha
             // 
-            this.txtSenha.BackColor = System.Drawing.Color.White;
-            this.txtSenha.Location = new System.Drawing.Point(135, 231);
-            this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(125, 23);
-            this.txtSenha.TabIndex = 20;
+            txtSenha.BackColor = Color.White;
+            txtSenha.Location = new Point(135, 231);
+            txtSenha.Name = "txtSenha";
+            txtSenha.Size = new Size(125, 23);
+            txtSenha.TabIndex = 20;
             // 
             // txtNome
             // 
-            this.txtNome.BackColor = System.Drawing.Color.White;
-            this.txtNome.Location = new System.Drawing.Point(135, 159);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(125, 23);
-            this.txtNome.TabIndex = 19;
+            txtNome.BackColor = Color.White;
+            txtNome.Location = new Point(135, 159);
+            txtNome.Name = "txtNome";
+            txtNome.Size = new Size(125, 23);
+            txtNome.TabIndex = 19;
             // 
             // txtID
             // 
-            this.txtID.BackColor = System.Drawing.Color.White;
-            this.txtID.Enabled = false;
-            this.txtID.Location = new System.Drawing.Point(135, 100);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(125, 23);
-            this.txtID.TabIndex = 18;
+            txtID.BackColor = Color.White;
+            txtID.Enabled = false;
+            txtID.Location = new Point(135, 100);
+            txtID.Name = "txtID";
+            txtID.Size = new Size(125, 23);
+            txtID.TabIndex = 18;
             // 
             // labelid
             // 
-            this.labelid.AutoSize = true;
-            this.labelid.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelid.Location = new System.Drawing.Point(135, 67);
-            this.labelid.Name = "labelid";
-            this.labelid.Size = new System.Drawing.Size(107, 30);
-            this.labelid.TabIndex = 17;
-            this.labelid.Text = "Id Usuario";
+            labelid.AutoSize = true;
+            labelid.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            labelid.Location = new Point(135, 67);
+            labelid.Name = "labelid";
+            labelid.Size = new Size(107, 30);
+            labelid.TabIndex = 17;
+            labelid.Text = "Id Usuario";
             // 
             // SaveCreate
             // 
-            this.SaveCreate.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SaveCreate.Location = new System.Drawing.Point(50, 338);
-            this.SaveCreate.Name = "SaveCreate";
-            this.SaveCreate.Size = new System.Drawing.Size(300, 50);
-            this.SaveCreate.TabIndex = 16;
-            this.SaveCreate.Text = "Salvar Cadastro";
-            this.SaveCreate.UseVisualStyleBackColor = true;
-            this.SaveCreate.Visible = false;
+            SaveCreate.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            SaveCreate.Location = new Point(50, 338);
+            SaveCreate.Name = "SaveCreate";
+            SaveCreate.Size = new Size(300, 50);
+            SaveCreate.TabIndex = 16;
+            SaveCreate.Text = "Salvar Cadastro";
+            SaveCreate.UseVisualStyleBackColor = true;
+            SaveCreate.Visible = false;
             // 
             // SaveDelete
             // 
-            this.SaveDelete.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SaveDelete.Location = new System.Drawing.Point(50, 312);
-            this.SaveDelete.Name = "SaveDelete";
-            this.SaveDelete.Size = new System.Drawing.Size(300, 50);
-            this.SaveDelete.TabIndex = 15;
-            this.SaveDelete.Text = "Salvar Alteração";
-            this.SaveDelete.UseVisualStyleBackColor = true;
-            this.SaveDelete.Visible = false;
+            SaveDelete.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            SaveDelete.Location = new Point(50, 312);
+            SaveDelete.Name = "SaveDelete";
+            SaveDelete.Size = new Size(300, 50);
+            SaveDelete.TabIndex = 15;
+            SaveDelete.Text = "Salvar Alteração";
+            SaveDelete.UseVisualStyleBackColor = true;
+            SaveDelete.Visible = false;
             // 
             // SaveUpdate
             // 
-            this.SaveUpdate.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SaveUpdate.Location = new System.Drawing.Point(50, 368);
-            this.SaveUpdate.Name = "SaveUpdate";
-            this.SaveUpdate.Size = new System.Drawing.Size(300, 50);
-            this.SaveUpdate.TabIndex = 14;
-            this.SaveUpdate.Text = "Salvar Alteração";
-            this.SaveUpdate.UseVisualStyleBackColor = true;
-            this.SaveUpdate.Visible = false;
+            SaveUpdate.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            SaveUpdate.Location = new Point(50, 368);
+            SaveUpdate.Name = "SaveUpdate";
+            SaveUpdate.Size = new Size(300, 50);
+            SaveUpdate.TabIndex = 14;
+            SaveUpdate.Text = "Salvar Alteração";
+            SaveUpdate.UseVisualStyleBackColor = true;
+            SaveUpdate.Visible = false;
             // 
             // CRUDEmpresa
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridCRUDEmpresa);
-            this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.labelcargo);
-            this.Controls.Add(this.cbCargo);
-            this.Controls.Add(this.labelsenha);
-            this.Controls.Add(this.labelnome);
-            this.Controls.Add(this.txtSenha);
-            this.Controls.Add(this.txtNome);
-            this.Controls.Add(this.txtID);
-            this.Controls.Add(this.labelid);
-            this.Controls.Add(this.SaveCreate);
-            this.Controls.Add(this.SaveDelete);
-            this.Controls.Add(this.SaveUpdate);
-            this.Name = "CRUDEmpresa";
-            this.Text = "CRUDEmpresa";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridCRUDEmpresa)).EndInit();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(dataGridCRUDEmpresa);
+            Controls.Add(toolStrip1);
+            Controls.Add(labelcargo);
+            Controls.Add(cbCargo);
+            Controls.Add(labelsenha);
+            Controls.Add(labelnome);
+            Controls.Add(txtSenha);
+            Controls.Add(txtNome);
+            Controls.Add(txtID);
+            Controls.Add(labelid);
+            Controls.Add(SaveCreate);
+            Controls.Add(SaveDelete);
+            Controls.Add(SaveUpdate);
+            Name = "CRUDEmpresa";
+            Text = "CRUDEmpresa";
+            ((System.ComponentModel.ISupportInitialize)dataGridCRUDEmpresa).EndInit();
+            toolStrip1.ResumeLayout(false);
+            toolStrip1.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

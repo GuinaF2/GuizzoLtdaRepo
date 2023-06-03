@@ -118,7 +118,9 @@ namespace GuizzoLtda
                     dataGridMotorista.CurrentRow.Selected = true;
 
                     txtIdMoto.Text = dataGridMotorista.Rows[e.RowIndex].Cells["idmotorista"].Value.ToString();
-                    txtCpf.Text = dataGridMotorista.Rows[e.RowIndex].Cells["cpf"].Value.ToString();
+                    txtIdVeiculo.Text = dataGridMotorista.Rows[e.RowIndex].Cells["idveiculo"].Value.ToString();
+                    txtRg.Text = dataGridMotorista.Rows[e.RowIndex].Cells["registrogeral"].Value.ToString();
+                    txtNome.Text = dataGridMotorista.Rows[e.RowIndex].Cells["nome"].Value.ToString();
                     txtRg.Text = dataGridMotorista.Rows[e.RowIndex].Cells["registrogeral"].Value.ToString();
                 }
 
@@ -140,10 +142,14 @@ namespace GuizzoLtda
             SaveDelete.Visible = false;
             SaveCreate.Visible = false;
 
+            txtIdVeiculo.Visible = true;
             txtIdMoto.Visible = true;
+            txtNome.Visible = true;
             txtCpf.Visible = true;
             txtRg.Visible = true;
 
+            labelIdVeiculo.Visible = true;
+            labelNome.Visible = true;
             labelIdMoto.Visible = true;
             labelcpf.Visible = true;
             labelrg.Visible = true;
@@ -155,10 +161,14 @@ namespace GuizzoLtda
             SaveDelete.Visible = false;
             SaveCreate.Visible = true;
 
+            txtIdVeiculo.Visible = true;
             txtIdMoto.Visible = true;
+            txtNome.Visible = true;
             txtCpf.Visible = true;
             txtRg.Visible = true;
 
+            labelNome.Visible=true;
+            labelIdVeiculo.Visible = true;
             labelIdMoto.Visible = true;
             labelcpf.Visible = true;
             labelrg.Visible = true;
@@ -170,10 +180,14 @@ namespace GuizzoLtda
             SaveDelete.Visible = true;
             SaveCreate.Visible = false;
 
+            txtIdVeiculo.Visible = true;
             txtIdMoto.Visible = true;
+            txtNome.Visible = true;
             txtCpf.Visible = true;
             txtRg.Visible = true;
 
+            labelNome.Visible = true;
+            labelIdVeiculo.Visible= true;
             labelIdMoto.Visible = true;
             labelcpf.Visible = true;
             labelrg.Visible = true;
@@ -184,6 +198,11 @@ namespace GuizzoLtda
             AdminMenu fmenureturn = new AdminMenu();
             this.Hide();
             fmenureturn.Show();
+        }
+
+        private void txtIdVeiculo_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
