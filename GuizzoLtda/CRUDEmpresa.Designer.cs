@@ -261,6 +261,7 @@
             Controls.Add(SaveUpdate);
             Name = "CRUDEmpresa";
             Text = "CRUDEmpresa";
+            Load += CRUDEmpresa_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridCRUDEmpresa).EndInit();
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();

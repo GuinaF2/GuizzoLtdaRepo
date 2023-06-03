@@ -49,7 +49,7 @@ namespace Controle
             return valorCadastro;
         }
 
-        public bool DeletarUsuario(VeiculoModelo us)
+        public bool DeletarVeiculo(VeiculoModelo us)
         {
             try
             {
@@ -69,7 +69,7 @@ namespace Controle
             }
         }
 
-        public bool AtualizarUsuario(VeiculoModelo us)
+        public bool AtualizarVeiculo(VeiculoModelo us)
         {
             try
             {
@@ -91,7 +91,7 @@ namespace Controle
             }
         }
         
-        public VeiculoModelo CarregaUsuario(int id)
+        public VeiculoModelo CarregaVeiculo(int id)
         {
             VeiculoModelo us = new VeiculoModelo();
             try

@@ -201,7 +201,7 @@
             // SaveCreate
             // 
             SaveCreate.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            SaveCreate.Location = new Point(50, 368);
+            SaveCreate.Location = new Point(94, 368);
             SaveCreate.Name = "SaveCreate";
             SaveCreate.Size = new Size(300, 50);
             SaveCreate.TabIndex = 16;
@@ -213,7 +213,7 @@
             // SaveDelete
             // 
             SaveDelete.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            SaveDelete.Location = new Point(50, 368);
+            SaveDelete.Location = new Point(72, 368);
             SaveDelete.Name = "SaveDelete";
             SaveDelete.Size = new Size(300, 50);
             SaveDelete.TabIndex = 15;

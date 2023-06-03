@@ -39,16 +39,16 @@ namespace GuizzoLtda
             {
                 MessageBox.Show("Processo cancelado.");
             }
-            CRUDVeiculo fadmincrud = new CRUDVeiculo();
+            CRUDMotorista fmotoristacrud = new CRUDMotorista();
             this.Hide();
-            fadmincrud.Show();
+            fmotoristacrud.Show();
         }
 
         private void SaveCreate_Click(object sender, EventArgs e)
         {
             MotoristaModelo.cpfMotorista = txtCpf.Text;
             MotoristaModelo.RgMotorista = txtRg.Text;
-            MotoristaModelo.nomeMotorista=txtNome.Text;
+            MotoristaModelo.nomeMotorista = txtNome.Text;
 
             if (txtCpf.Text == "" || txtRg.Text == "" || txtNome.Text == "")
             {
@@ -72,18 +72,18 @@ namespace GuizzoLtda
 
         private void SaveUpdate_Click(object sender, EventArgs e)
         {
-            MotoristaModelo.CodVeiculo = Convert.ToInt32(txtIdMoto.Text);
+            MotoristaModelo.CodMotorista = Convert.ToInt32(txtIdMoto.Text);
             MotoristaModelo.cpfMotorista = txtCpf.Text;
             MotoristaModelo.RgMotorista = txtRg.Text;
-            MotoristaModelo.nomeMotorista = txtNome.Text; 
+            MotoristaModelo.nomeMotorista = txtNome.Text;
 
             if (Controle.AtualizarMotorista(MotoristaModelo) == true)
             {
                 MessageBox.Show("Cadastro Atualizado.");
 
-                CRUDVeiculo fveiculocrud = new CRUDVeiculo();
+                CRUDMotorista fmotoristacrud = new CRUDMotorista();
                 this.Hide();
-                fveiculocrud.Show();
+                fmotoristacrud.Show();
             }
             else
             {

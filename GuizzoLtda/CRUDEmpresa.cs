@@ -16,5 +16,10 @@ namespace GuizzoLtda
         {
             InitializeComponent();
         }
+
+        private void CRUDEmpresa_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

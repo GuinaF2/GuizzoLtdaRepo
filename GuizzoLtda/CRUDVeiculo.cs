@@ -98,21 +98,19 @@ namespace GuizzoLtda
         {
             VeiculoModelo.CodVeiculo = Convert.ToInt32(txtIdVeic.Text);
             var resposta = DialogResult;
-            resposta = MessageBox.Show("Tem certeza que deseja deletar o usuário?", "! Aviso !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            resposta = MessageBox.Show("Tem certeza que deseja deletar o Veiculo?", "! Aviso !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (resposta == DialogResult.Yes)
             {
-                if (Controle.DeletarUsuario(VeiculoModelo) == true)
+                if (Controle.DeletarVeiculo(VeiculoModelo) == true)
                 {
-                    MessageBox.Show("Usuário deletado.");
+                    MessageBox.Show("Veiculo deletado.");
                 }
             }
             else if (resposta == DialogResult.No)
             {
                 MessageBox.Show("Processo cancelado.");
             }
-            CRUDVeiculo fadmincrud = new CRUDVeiculo();
-            this.Hide();
-            fadmincrud.Show();
+            
         }
 
         private void SaveCreate_Click(object sender, EventArgs e)
@@ -148,7 +146,7 @@ namespace GuizzoLtda
             VeiculoModelo.TipoVeiculo = cbTipo.Text;
             VeiculoModelo.SeguroVeiculo = dataSeguro.Text;
 
-            if (Controle.AtualizarUsuario(VeiculoModelo) == true)
+            if (Controle.AtualizarVeiculo(VeiculoModelo) == true)
             {
                 MessageBox.Show("Cadastro Atualizado.");
 
