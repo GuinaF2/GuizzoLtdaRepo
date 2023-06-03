@@ -22,7 +22,7 @@ namespace Controle
 
             try
             {
-                string SQL = "INSERT INTO tb_motorista(cpf,registrogeral,nome,idveiculo) values(@cpf,@registrogeral,@nome(SELECT idveiculo FROM tb_veiculo ORDER BY idveiculo DESC LIMIT 1))";
+                string SQL = "INSERT INTO tb_motorista(cpf,registrogeral,nome,idveiculo) values(@cpf,@registrogeral,@nome,(SELECT idveiculo FROM tb_veiculo ORDER BY idveiculo DESC LIMIT 1))";
                 //declaração de vetor de campos
                 string[] campos = { "@cpf", "@registrogeral","@nome" };
                 //declaração de vetor de informações
@@ -71,9 +71,9 @@ namespace Controle
         {
             try
             {
-                string sql = "UPDATE tb_motorista set cpf=@cpf, registrogeral=@registrogeral where idfuncionario= @codigo";
-                string[] campos = { "@cpf", "@registrogeral" };
-                string[] valores = { us.cpfMotorista, us.RgMotorista};
+                string sql = "UPDATE tb_motorista set cpf=@cpf, registrogeral=@registrogeral,nome=@nome where idmotorista= @codigo";
+                string[] campos = { "@cpf", "@registrogeral","@nome" };
+                string[] valores = { us.cpfMotorista, us.RgMotorista, us.nomeMotorista};
                 if (conexaosql.atualizarDados(us.CodMotorista, campos, valores, sql) >= 1)
                 {
                     return resultado = true;
@@ -108,6 +108,7 @@ namespace Controle
                 if (registro.HasRows)
                 {
                     registro.Read();
+                    us.nomeMotorista = registro["nome"].ToString();
                     us.cpfMotorista = registro["cpf"].ToString();
                     us.RgMotorista = registro["registrogeral"].ToString();
 

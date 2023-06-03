@@ -29,271 +29,257 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CRUDVeiculo));
-            this.dataGridVeiculo = new System.Windows.Forms.DataGridView();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.btnReturn = new System.Windows.Forms.ToolStripButton();
-            this.btnAtualizar = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnCad = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnApaga = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.ajudaToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.labeltipo = new System.Windows.Forms.Label();
-            this.txtPlaca = new System.Windows.Forms.TextBox();
-            this.labelplaca = new System.Windows.Forms.Label();
-            this.SaveCreate = new System.Windows.Forms.Button();
-            this.SaveDelete = new System.Windows.Forms.Button();
-            this.SaveUpdate = new System.Windows.Forms.Button();
-            this.labelseguro = new System.Windows.Forms.Label();
-            this.txtIdVeic = new System.Windows.Forms.TextBox();
-            this.labelIdVeic = new System.Windows.Forms.Label();
-            this.cbTipo = new System.Windows.Forms.ComboBox();
-            this.dataSeguro = new System.Windows.Forms.MaskedTextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridVeiculo)).BeginInit();
-            this.toolStrip1.SuspendLayout();
-            this.SuspendLayout();
+            dataGridVeiculo = new DataGridView();
+            toolStrip1 = new ToolStrip();
+            btnReturn = new ToolStripButton();
+            btnAtualizar = new ToolStripButton();
+            toolStripSeparator1 = new ToolStripSeparator();
+            btnCad = new ToolStripButton();
+            toolStripSeparator2 = new ToolStripSeparator();
+            btnApaga = new ToolStripButton();
+            toolStripSeparator = new ToolStripSeparator();
+            ajudaToolStripButton = new ToolStripButton();
+            labeltipo = new Label();
+            txtPlaca = new TextBox();
+            labelplaca = new Label();
+            SaveCreate = new Button();
+            SaveDelete = new Button();
+            SaveUpdate = new Button();
+            labelseguro = new Label();
+            txtIdVeic = new TextBox();
+            labelIdVeic = new Label();
+            cbTipo = new ComboBox();
+            dataSeguro = new MaskedTextBox();
+            ((System.ComponentModel.ISupportInitialize)dataGridVeiculo).BeginInit();
+            toolStrip1.SuspendLayout();
+            SuspendLayout();
             // 
             // dataGridVeiculo
             // 
-            this.dataGridVeiculo.AllowUserToAddRows = false;
-            this.dataGridVeiculo.AllowUserToDeleteRows = false;
-            this.dataGridVeiculo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridVeiculo.Location = new System.Drawing.Point(411, -1);
-            this.dataGridVeiculo.Name = "dataGridVeiculo";
-            this.dataGridVeiculo.ReadOnly = true;
-            this.dataGridVeiculo.RowTemplate.Height = 25;
-            this.dataGridVeiculo.Size = new System.Drawing.Size(389, 453);
-            this.dataGridVeiculo.TabIndex = 23;
-            this.dataGridVeiculo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridVeiculo_CellClick);
-            this.dataGridVeiculo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridVeiculo_CellContentClick);
+            dataGridVeiculo.AllowUserToAddRows = false;
+            dataGridVeiculo.AllowUserToDeleteRows = false;
+            dataGridVeiculo.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridVeiculo.Location = new Point(411, -1);
+            dataGridVeiculo.Name = "dataGridVeiculo";
+            dataGridVeiculo.ReadOnly = true;
+            dataGridVeiculo.RowTemplate.Height = 25;
+            dataGridVeiculo.Size = new Size(389, 453);
+            dataGridVeiculo.TabIndex = 23;
+            dataGridVeiculo.CellClick += dataGridVeiculo_CellClick;
+            dataGridVeiculo.CellContentClick += dataGridVeiculo_CellContentClick;
             // 
             // toolStrip1
             // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnReturn,
-            this.btnAtualizar,
-            this.toolStripSeparator1,
-            this.btnCad,
-            this.toolStripSeparator2,
-            this.btnApaga,
-            this.toolStripSeparator,
-            this.ajudaToolStripButton});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(800, 25);
-            this.toolStrip1.TabIndex = 26;
-            this.toolStrip1.Text = "toolStrip1";
+            toolStrip1.Items.AddRange(new ToolStripItem[] { btnReturn, btnAtualizar, toolStripSeparator1, btnCad, toolStripSeparator2, btnApaga, toolStripSeparator, ajudaToolStripButton });
+            toolStrip1.Location = new Point(0, 0);
+            toolStrip1.Name = "toolStrip1";
+            toolStrip1.Size = new Size(800, 25);
+            toolStrip1.TabIndex = 26;
+            toolStrip1.Text = "toolStrip1";
             // 
             // btnReturn
             // 
-            this.btnReturn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnReturn.Image = ((System.Drawing.Image)(resources.GetObject("btnReturn.Image")));
-            this.btnReturn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(23, 22);
-            this.btnReturn.Text = "Retornar";
-            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click_1);
+            btnReturn.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btnReturn.Image = (Image)resources.GetObject("btnReturn.Image");
+            btnReturn.ImageTransparentColor = Color.Magenta;
+            btnReturn.Name = "btnReturn";
+            btnReturn.Size = new Size(23, 22);
+            btnReturn.Text = "Retornar";
+            btnReturn.Click += btnReturn_Click_1;
             // 
             // btnAtualizar
             // 
-            this.btnAtualizar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btnAtualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnAtualizar.Image")));
-            this.btnAtualizar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnAtualizar.Name = "btnAtualizar";
-            this.btnAtualizar.Size = new System.Drawing.Size(57, 22);
-            this.btnAtualizar.Text = "Atualizar";
-            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
+            btnAtualizar.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            btnAtualizar.Image = (Image)resources.GetObject("btnAtualizar.Image");
+            btnAtualizar.ImageTransparentColor = Color.Magenta;
+            btnAtualizar.Name = "btnAtualizar";
+            btnAtualizar.Size = new Size(57, 22);
+            btnAtualizar.Text = "Atualizar";
+            btnAtualizar.Click += btnAtualizar_Click;
             // 
             // toolStripSeparator1
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            toolStripSeparator1.Size = new Size(6, 25);
             // 
             // btnCad
             // 
-            this.btnCad.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btnCad.Image = ((System.Drawing.Image)(resources.GetObject("btnCad.Image")));
-            this.btnCad.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnCad.Name = "btnCad";
-            this.btnCad.Size = new System.Drawing.Size(61, 22);
-            this.btnCad.Text = "Cadastrar";
-            this.btnCad.Click += new System.EventHandler(this.btnCad_Click);
+            btnCad.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            btnCad.Image = (Image)resources.GetObject("btnCad.Image");
+            btnCad.ImageTransparentColor = Color.Magenta;
+            btnCad.Name = "btnCad";
+            btnCad.Size = new Size(61, 22);
+            btnCad.Text = "Cadastrar";
+            btnCad.Click += btnCad_Click;
             // 
             // toolStripSeparator2
             // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            toolStripSeparator2.Name = "toolStripSeparator2";
+            toolStripSeparator2.Size = new Size(6, 25);
             // 
             // btnApaga
             // 
-            this.btnApaga.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btnApaga.Image = ((System.Drawing.Image)(resources.GetObject("btnApaga.Image")));
-            this.btnApaga.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnApaga.Name = "btnApaga";
-            this.btnApaga.Size = new System.Drawing.Size(48, 22);
-            this.btnApaga.Text = "Deletar";
-            this.btnApaga.Click += new System.EventHandler(this.btnApaga_Click);
+            btnApaga.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            btnApaga.Image = (Image)resources.GetObject("btnApaga.Image");
+            btnApaga.ImageTransparentColor = Color.Magenta;
+            btnApaga.Name = "btnApaga";
+            btnApaga.Size = new Size(48, 22);
+            btnApaga.Text = "Deletar";
+            btnApaga.Click += btnApaga_Click;
             // 
             // toolStripSeparator
             // 
-            this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(6, 25);
+            toolStripSeparator.Name = "toolStripSeparator";
+            toolStripSeparator.Size = new Size(6, 25);
             // 
             // ajudaToolStripButton
             // 
-            this.ajudaToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.ajudaToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("ajudaToolStripButton.Image")));
-            this.ajudaToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.ajudaToolStripButton.Name = "ajudaToolStripButton";
-            this.ajudaToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.ajudaToolStripButton.Text = "Aju&da";
+            ajudaToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            ajudaToolStripButton.Image = (Image)resources.GetObject("ajudaToolStripButton.Image");
+            ajudaToolStripButton.ImageTransparentColor = Color.Magenta;
+            ajudaToolStripButton.Name = "ajudaToolStripButton";
+            ajudaToolStripButton.Size = new Size(23, 22);
+            ajudaToolStripButton.Text = "Aju&da";
             // 
             // labeltipo
             // 
-            this.labeltipo.AutoSize = true;
-            this.labeltipo.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labeltipo.Location = new System.Drawing.Point(115, 205);
-            this.labeltipo.Name = "labeltipo";
-            this.labeltipo.Size = new System.Drawing.Size(126, 30);
-            this.labeltipo.TabIndex = 21;
-            this.labeltipo.Text = "Tipo Veiculo";
+            labeltipo.AutoSize = true;
+            labeltipo.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            labeltipo.Location = new Point(115, 205);
+            labeltipo.Name = "labeltipo";
+            labeltipo.Size = new Size(126, 30);
+            labeltipo.TabIndex = 21;
+            labeltipo.Text = "Tipo Veiculo";
             // 
             // txtPlaca
             // 
-            this.txtPlaca.BackColor = System.Drawing.Color.White;
-            this.txtPlaca.Location = new System.Drawing.Point(122, 179);
-            this.txtPlaca.Name = "txtPlaca";
-            this.txtPlaca.Size = new System.Drawing.Size(125, 23);
-            this.txtPlaca.TabIndex = 18;
+            txtPlaca.BackColor = Color.White;
+            txtPlaca.Location = new Point(122, 179);
+            txtPlaca.Name = "txtPlaca";
+            txtPlaca.Size = new Size(125, 23);
+            txtPlaca.TabIndex = 18;
             // 
             // labelplaca
             // 
-            this.labelplaca.AutoSize = true;
-            this.labelplaca.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelplaca.Location = new System.Drawing.Point(115, 146);
-            this.labelplaca.Name = "labelplaca";
-            this.labelplaca.Size = new System.Drawing.Size(135, 30);
-            this.labelplaca.TabIndex = 17;
-            this.labelplaca.Text = "Placa Veiculo";
+            labelplaca.AutoSize = true;
+            labelplaca.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            labelplaca.Location = new Point(115, 146);
+            labelplaca.Name = "labelplaca";
+            labelplaca.Size = new Size(135, 30);
+            labelplaca.TabIndex = 17;
+            labelplaca.Text = "Placa Veiculo";
             // 
             // SaveCreate
             // 
-            this.SaveCreate.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SaveCreate.Location = new System.Drawing.Point(50, 368);
-            this.SaveCreate.Name = "SaveCreate";
-            this.SaveCreate.Size = new System.Drawing.Size(300, 50);
-            this.SaveCreate.TabIndex = 16;
-            this.SaveCreate.Text = "Salvar Cadastro";
-            this.SaveCreate.UseVisualStyleBackColor = true;
-            this.SaveCreate.Visible = false;
-            this.SaveCreate.Click += new System.EventHandler(this.SaveCreate_Click);
+            SaveCreate.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            SaveCreate.Location = new Point(50, 368);
+            SaveCreate.Name = "SaveCreate";
+            SaveCreate.Size = new Size(300, 50);
+            SaveCreate.TabIndex = 16;
+            SaveCreate.Text = "Salvar Cadastro";
+            SaveCreate.UseVisualStyleBackColor = true;
+            SaveCreate.Visible = false;
+            SaveCreate.Click += SaveCreate_Click;
             // 
             // SaveDelete
             // 
-            this.SaveDelete.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SaveDelete.Location = new System.Drawing.Point(50, 368);
-            this.SaveDelete.Name = "SaveDelete";
-            this.SaveDelete.Size = new System.Drawing.Size(300, 50);
-            this.SaveDelete.TabIndex = 15;
-            this.SaveDelete.Text = "Salvar Alteração";
-            this.SaveDelete.UseVisualStyleBackColor = true;
-            this.SaveDelete.Visible = false;
-            this.SaveDelete.Click += new System.EventHandler(this.SaveDelete_Click);
+            SaveDelete.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            SaveDelete.Location = new Point(50, 368);
+            SaveDelete.Name = "SaveDelete";
+            SaveDelete.Size = new Size(300, 50);
+            SaveDelete.TabIndex = 15;
+            SaveDelete.Text = "Salvar Alteração";
+            SaveDelete.UseVisualStyleBackColor = true;
+            SaveDelete.Visible = false;
+            SaveDelete.Click += SaveDelete_Click;
             // 
             // SaveUpdate
             // 
-            this.SaveUpdate.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SaveUpdate.Location = new System.Drawing.Point(50, 368);
-            this.SaveUpdate.Name = "SaveUpdate";
-            this.SaveUpdate.Size = new System.Drawing.Size(300, 50);
-            this.SaveUpdate.TabIndex = 14;
-            this.SaveUpdate.Text = "Salvar Alteração";
-            this.SaveUpdate.UseVisualStyleBackColor = true;
-            this.SaveUpdate.Visible = false;
-            this.SaveUpdate.Click += new System.EventHandler(this.SaveUpdate_Click);
+            SaveUpdate.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            SaveUpdate.Location = new Point(50, 368);
+            SaveUpdate.Name = "SaveUpdate";
+            SaveUpdate.Size = new Size(300, 50);
+            SaveUpdate.TabIndex = 14;
+            SaveUpdate.Text = "Salvar Alteração";
+            SaveUpdate.UseVisualStyleBackColor = true;
+            SaveUpdate.Visible = false;
+            SaveUpdate.Click += SaveUpdate_Click;
             // 
             // labelseguro
             // 
-            this.labelseguro.AutoSize = true;
-            this.labelseguro.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelseguro.Location = new System.Drawing.Point(115, 274);
-            this.labelseguro.Name = "labelseguro";
-            this.labelseguro.Size = new System.Drawing.Size(128, 30);
-            this.labelseguro.TabIndex = 29;
-            this.labelseguro.Text = "Data Seguro";
+            labelseguro.AutoSize = true;
+            labelseguro.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            labelseguro.Location = new Point(115, 273);
+            labelseguro.Name = "labelseguro";
+            labelseguro.Size = new Size(128, 30);
+            labelseguro.TabIndex = 29;
+            labelseguro.Text = "Data Seguro";
             // 
             // txtIdVeic
             // 
-            this.txtIdVeic.BackColor = System.Drawing.Color.White;
-            this.txtIdVeic.Enabled = false;
-            this.txtIdVeic.Location = new System.Drawing.Point(122, 108);
-            this.txtIdVeic.Name = "txtIdVeic";
-            this.txtIdVeic.Size = new System.Drawing.Size(125, 23);
-            this.txtIdVeic.TabIndex = 31;
+            txtIdVeic.BackColor = Color.White;
+            txtIdVeic.Enabled = false;
+            txtIdVeic.Location = new Point(122, 108);
+            txtIdVeic.Name = "txtIdVeic";
+            txtIdVeic.Size = new Size(125, 23);
+            txtIdVeic.TabIndex = 31;
             // 
             // labelIdVeic
             // 
-            this.labelIdVeic.AutoSize = true;
-            this.labelIdVeic.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelIdVeic.Location = new System.Drawing.Point(115, 75);
-            this.labelIdVeic.Name = "labelIdVeic";
-            this.labelIdVeic.Size = new System.Drawing.Size(104, 30);
-            this.labelIdVeic.TabIndex = 30;
-            this.labelIdVeic.Text = "Id Veiculo";
+            labelIdVeic.AutoSize = true;
+            labelIdVeic.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            labelIdVeic.Location = new Point(115, 75);
+            labelIdVeic.Name = "labelIdVeic";
+            labelIdVeic.Size = new Size(104, 30);
+            labelIdVeic.TabIndex = 30;
+            labelIdVeic.Text = "Id Veiculo";
             // 
             // cbTipo
             // 
-            this.cbTipo.FormattingEnabled = true;
-            this.cbTipo.Items.AddRange(new object[] {
-            "Carro",
-            "Moto",
-            "Caminhão",
-            "Fiorino",
-            "Manual"});
-            this.cbTipo.Location = new System.Drawing.Point(122, 238);
-            this.cbTipo.Name = "cbTipo";
-            this.cbTipo.Size = new System.Drawing.Size(121, 23);
-            this.cbTipo.TabIndex = 32;
+            cbTipo.FormattingEnabled = true;
+            cbTipo.Items.AddRange(new object[] { "Carro", "Moto", "Caminhão", "Fiorino", "Manual" });
+            cbTipo.Location = new Point(122, 238);
+            cbTipo.Name = "cbTipo";
+            cbTipo.Size = new Size(121, 23);
+            cbTipo.TabIndex = 32;
             // 
             // dataSeguro
             // 
-            this.dataSeguro.Location = new System.Drawing.Point(122, 325);
-            this.dataSeguro.Mask = "00/00/0000";
-            this.dataSeguro.Name = "dataSeguro";
-            this.dataSeguro.PromptChar = ' ';
-            this.dataSeguro.Size = new System.Drawing.Size(100, 23);
-            this.dataSeguro.TabIndex = 33;
-            this.dataSeguro.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.dataSeguro_MaskInputRejected);
-            this.dataSeguro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dataSeguro_KeyPress_1);
+            dataSeguro.Location = new Point(122, 306);
+            dataSeguro.Mask = "00/00/0000";
+            dataSeguro.Name = "dataSeguro";
+            dataSeguro.PromptChar = ' ';
+            dataSeguro.Size = new Size(66, 23);
+            dataSeguro.TabIndex = 33;
+            dataSeguro.MaskInputRejected += dataSeguro_MaskInputRejected;
+            dataSeguro.KeyPress += dataSeguro_KeyPress_1;
             // 
             // CRUDVeiculo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataSeguro);
-            this.Controls.Add(this.cbTipo);
-            this.Controls.Add(this.txtIdVeic);
-            this.Controls.Add(this.labelIdVeic);
-            this.Controls.Add(this.labelseguro);
-            this.Controls.Add(this.dataGridVeiculo);
-            this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.labeltipo);
-            this.Controls.Add(this.txtPlaca);
-            this.Controls.Add(this.labelplaca);
-            this.Controls.Add(this.SaveCreate);
-            this.Controls.Add(this.SaveDelete);
-            this.Controls.Add(this.SaveUpdate);
-            this.Name = "CRUDVeiculo";
-            this.Text = "CRUDVeiculo";
-            this.Load += new System.EventHandler(this.CRUDVeiculo_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridVeiculo)).EndInit();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(dataSeguro);
+            Controls.Add(cbTipo);
+            Controls.Add(txtIdVeic);
+            Controls.Add(labelIdVeic);
+            Controls.Add(labelseguro);
+            Controls.Add(dataGridVeiculo);
+            Controls.Add(toolStrip1);
+            Controls.Add(labeltipo);
+            Controls.Add(txtPlaca);
+            Controls.Add(labelplaca);
+            Controls.Add(SaveCreate);
+            Controls.Add(SaveDelete);
+            Controls.Add(SaveUpdate);
+            Name = "CRUDVeiculo";
+            Text = "CRUDVeiculo";
+            Load += CRUDVeiculo_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridVeiculo).EndInit();
+            toolStrip1.ResumeLayout(false);
+            toolStrip1.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

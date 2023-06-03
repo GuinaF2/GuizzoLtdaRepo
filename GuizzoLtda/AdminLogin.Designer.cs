@@ -113,7 +113,7 @@
             txtUserAdm.Location = new Point(275, 181);
             txtUserAdm.Name = "txtUserAdm";
             txtUserAdm.Size = new Size(184, 23);
-            txtUserAdm.TabIndex = 5;
+            txtUserAdm.TabIndex = 1;
             // 
             // AdminLogin
             // 

@@ -225,12 +225,12 @@ namespace GuizzoLtda
 
         private void dataSeguro_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
-            
+
         }
 
         private void dataSeguro_KeyPress_1(object sender, KeyPressEventArgs e)
         {
-            
+
             dataSeguro.MaxLength = 8;
             if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
             {

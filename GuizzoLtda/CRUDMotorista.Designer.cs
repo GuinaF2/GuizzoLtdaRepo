@@ -68,6 +68,7 @@
             dataGridMotorista.Size = new Size(389, 453);
             dataGridMotorista.TabIndex = 23;
             dataGridMotorista.CellClick += dataGridMotorista_CellClick;
+            dataGridMotorista.CellContentClick += dataGridMotorista_CellContentClick;
             // 
             // toolStrip1
             // 
