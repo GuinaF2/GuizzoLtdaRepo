@@ -96,6 +96,27 @@ namespace Controle
                 throw new Exception(ex.Message);
             }
         }
+        public bool AtualizarEmpresa(EmpresaModelo us)
+        {
+            try
+            {
+                string sql = "UPDATE tb_cliente set cnpj=@cnpj, registrogeral=@registrogeral,nome=@nome where idmotorista= @codigo";
+                string[] campos = { "@cpf", "@registrogeral", "@nome" };
+                string[] valores = { us.CnpjUser, us.RazaoSocialUser, us.InscEstadUser };
+                if (conexaosql.atualizarDados(us.CodMotorista, campos, valores, sql) >= 1)
+                {
+                    return resultado = true;
+                }
+                else
+                {
+                    return resultado = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
 
     }
 }

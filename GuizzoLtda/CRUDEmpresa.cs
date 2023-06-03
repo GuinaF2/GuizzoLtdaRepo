@@ -95,12 +95,46 @@ namespace GuizzoLtda
 
         private void SaveDelete_Click(object sender, EventArgs e)
         {
-
+            EmpresaModelo.CodCliente = Convert.ToInt32(txtIdEmpresa.Text);
+            var resposta = DialogResult;
+            resposta = MessageBox.Show("Tem certeza que deseja deletar o Motorista?", "! Aviso !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (resposta == DialogResult.Yes)
+            {
+                if (Controle.DeletarEmpresa(EmpresaModelo) == true)
+                {
+                    MessageBox.Show("Usuário deletado.");
+                }
+            }
+            else if (resposta == DialogResult.No)
+            {
+                MessageBox.Show("Processo cancelado.");
+            }
+            CRUDMotorista fmotoristacrud = new CRUDMotorista();
+            this.Hide();
+            fmotoristacrud.Show();
         }
 
         private void SaveUpdate_Click(object sender, EventArgs e)
         {
+            EmpresaModelo.CodCliente = Convert.ToInt32(txtIdEmpresa.Text);
+            EmpresaModelo.CnpjUser = txtCnpj.Text;
+            EmpresaModelo.RazaoSocialUser = txtRazaoSocial.Text;
+            EmpresaModelo.InscEstadUser = txtInscEstadual.Text;
 
+            if (Controle.AtualizarEmpresa(EmpresaModelo) == true)
+            {
+                MessageBox.Show("Cadastro Atualizado.");
+
+                CRUDMotorista fmotoristacrud = new CRUDMotorista();
+                this.Hide();
+                fmotoristacrud.Show();
+            }
+            else
+            {
+                MessageBox.Show("Erro na atualização.");
+            }
+            this.Controls.Clear();
+            this.InitializeComponent();
         }
 
         private void dataGridCRUDEmpresa_CellClick(object sender, DataGridViewCellEventArgs e)
