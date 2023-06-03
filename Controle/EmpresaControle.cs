@@ -100,10 +100,10 @@ namespace Controle
         {
             try
             {
-                string sql = "UPDATE tb_cliente set cnpj=@cnpj, registrogeral=@registrogeral,nome=@nome where idmotorista= @codigo";
-                string[] campos = { "@cpf", "@registrogeral", "@nome" };
+                string sql = "UPDATE tb_cliente set cnpj=@cnpj, razao_social=@razao_social,inscricao_estadual=@inscricao_estadual where idcliente= @codigo";
+                string[] campos = { "@cnpj", "@razao_social", "@inscricao_estadual" };
                 string[] valores = { us.CnpjUser, us.RazaoSocialUser, us.InscEstadUser };
-                if (conexaosql.atualizarDados(us.CodMotorista, campos, valores, sql) >= 1)
+                if (conexaosql.atualizarDados(us.CodCliente, campos, valores, sql) >= 1)
                 {
                     return resultado = true;
                 }

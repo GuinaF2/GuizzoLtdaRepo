@@ -97,21 +97,21 @@ namespace GuizzoLtda
         {
             EmpresaModelo.CodCliente = Convert.ToInt32(txtIdEmpresa.Text);
             var resposta = DialogResult;
-            resposta = MessageBox.Show("Tem certeza que deseja deletar o Motorista?", "! Aviso !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            resposta = MessageBox.Show("Tem certeza que deseja deletar a Empresa?", "! Aviso !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (resposta == DialogResult.Yes)
             {
                 if (Controle.DeletarEmpresa(EmpresaModelo) == true)
                 {
-                    MessageBox.Show("Usuário deletado.");
+                    MessageBox.Show("Cliente Deletado!.");
                 }
             }
             else if (resposta == DialogResult.No)
             {
-                MessageBox.Show("Processo cancelado.");
+                MessageBox.Show("Processo Cancelado.");
             }
-            CRUDMotorista fmotoristacrud = new CRUDMotorista();
+            CRUDEmpresa fempresacrud = new CRUDEmpresa();
             this.Hide();
-            fmotoristacrud.Show();
+            fempresacrud.Show();
         }
 
         private void SaveUpdate_Click(object sender, EventArgs e)
@@ -125,9 +125,9 @@ namespace GuizzoLtda
             {
                 MessageBox.Show("Cadastro Atualizado.");
 
-                CRUDMotorista fmotoristacrud = new CRUDMotorista();
+                CRUDEmpresa fempresacrud = new CRUDEmpresa();
                 this.Hide();
-                fmotoristacrud.Show();
+                fempresacrud.Show();
             }
             else
             {
