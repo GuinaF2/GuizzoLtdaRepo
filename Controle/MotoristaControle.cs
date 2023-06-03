@@ -15,6 +15,111 @@ namespace Controle
         {
 
         }
+        public int CadastrarMotorista(MotoristaModelo modelo)
+        {
+            //variável de confirmação do banco
+            int valorCadastro = -1;
+
+            try
+            {
+                string SQL = "INSERT INTO tb_motorista(nomeuser,senhauser,idveiculo) values(@nome,@senha(SELECT idveiculo FROM tb_veiculo ORDER BY idveiculo DESC LIMIT 1))";
+                //declaração de vetor de campos
+                string[] campos = { "@cpf", "@registrogeral" };
+                //declaração de vetor de informações
+                string[] valores = { modelo.cpfMotorista, modelo.RgMotorista };
+
+
+
+                if (conexaosql.cadastrar(campos, valores, SQL) >= 1)
+                {
+                    valorCadastro = 1;
+                }
+                else
+                {
+                    valorCadastro = 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                //Lança erros do sistema
+                throw new Exception(ex.Message);
+            }
+            return valorCadastro;
+        }
+
+        public bool DeletarMotorista(MotoristaModelo us)
+        {
+            try
+            {
+                string sql = "DELETE from tb_motorista where idmotorista = @codigo";
+                if (conexaosql.deletarDados(us.CodMotorista, sql) >= 1)
+                {
+                    return resultado = true;
+                }
+                else
+                {
+                    return resultado = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public bool AtualizarMotorista(MotoristaModelo us)
+        {
+            try
+            {
+                string sql = "UPDATE tb_motorista set cpf=@cpf, registrogeral=@registrogeral where idfuncionario= @codigo";
+                string[] campos = { "@cpf", "@registrogeral" };
+                string[] valores = { us.cpfMotorista, us.RgMotorista};
+                if (conexaosql.atualizarDados(us.CodMotorista, campos, valores, sql) >= 1)
+                {
+                    return resultado = true;
+                }
+                else
+                {
+                    return resultado = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+        
+        public MotoristaModelo CarregaUsuario(int id)
+        {
+            MotoristaModelo us = new MotoristaModelo();
+            try
+            {
+                conexaosql = new Conexao();
+                MySqlConnection con = conexaosql.getConexao();
+                con.Open();
+
+                MySqlCommand cmd = con.CreateCommand();
+
+                cmd.CommandText = "SELECT * from tb_motorista where idmotorista = @id";
+                cmd.Parameters.AddWithValue("@id", id);
+
+                MySqlDataReader registro = cmd.ExecuteReader();
+
+                if (registro.HasRows)
+                {
+                    registro.Read();
+                    us.cpfMotorista = registro["cpf"].ToString();
+                    us.RgMotorista = registro["registrogeral"].ToString();
+
+                }
+                con.Close();
+            }
+            catch (System.Exception ex)
+            {
+                throw new System.Exception(ex.Message);
+            }
+            return us;
+        }
 
     }
 }

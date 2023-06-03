@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CRUDMotorista));
-            this.dataGridCRUD = new System.Windows.Forms.DataGridView();
+            this.dataGridMotorista = new System.Windows.Forms.DataGridView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnReturn = new System.Windows.Forms.ToolStripButton();
             this.btnAtualizar = new System.Windows.Forms.ToolStripButton();
@@ -39,32 +39,31 @@
             this.btnApaga = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.ajudaToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.labelcargo = new System.Windows.Forms.Label();
-            this.cbCargo = new System.Windows.Forms.ComboBox();
-            this.labelsenha = new System.Windows.Forms.Label();
-            this.labelnome = new System.Windows.Forms.Label();
-            this.txtSenha = new System.Windows.Forms.TextBox();
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.txtID = new System.Windows.Forms.TextBox();
-            this.labelid = new System.Windows.Forms.Label();
+            this.labelrg = new System.Windows.Forms.Label();
+            this.labelcpf = new System.Windows.Forms.Label();
+            this.txtRg = new System.Windows.Forms.TextBox();
+            this.txtCpf = new System.Windows.Forms.TextBox();
+            this.txtIdMoto = new System.Windows.Forms.TextBox();
+            this.labelIdMoto = new System.Windows.Forms.Label();
             this.SaveCreate = new System.Windows.Forms.Button();
             this.SaveDelete = new System.Windows.Forms.Button();
             this.SaveUpdate = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridCRUD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridMotorista)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridCRUD
+            // dataGridMotorista
             // 
-            this.dataGridCRUD.AllowUserToAddRows = false;
-            this.dataGridCRUD.AllowUserToDeleteRows = false;
-            this.dataGridCRUD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridCRUD.Location = new System.Drawing.Point(411, -1);
-            this.dataGridCRUD.Name = "dataGridCRUD";
-            this.dataGridCRUD.ReadOnly = true;
-            this.dataGridCRUD.RowTemplate.Height = 25;
-            this.dataGridCRUD.Size = new System.Drawing.Size(389, 453);
-            this.dataGridCRUD.TabIndex = 23;
+            this.dataGridMotorista.AllowUserToAddRows = false;
+            this.dataGridMotorista.AllowUserToDeleteRows = false;
+            this.dataGridMotorista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridMotorista.Location = new System.Drawing.Point(411, -1);
+            this.dataGridMotorista.Name = "dataGridMotorista";
+            this.dataGridMotorista.ReadOnly = true;
+            this.dataGridMotorista.RowTemplate.Height = 25;
+            this.dataGridMotorista.Size = new System.Drawing.Size(389, 453);
+            this.dataGridMotorista.TabIndex = 23;
+            this.dataGridMotorista.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridMotorista_CellClick);
             // 
             // toolStrip1
             // 
@@ -91,6 +90,7 @@
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(23, 22);
             this.btnReturn.Text = "Retornar";
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // btnAtualizar
             // 
@@ -100,6 +100,7 @@
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Size = new System.Drawing.Size(57, 22);
             this.btnAtualizar.Text = "Atualizar";
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // toolStripSeparator1
             // 
@@ -114,6 +115,7 @@
             this.btnCad.Name = "btnCad";
             this.btnCad.Size = new System.Drawing.Size(61, 22);
             this.btnCad.Text = "Cadastrar";
+            this.btnCad.Click += new System.EventHandler(this.btnCad_Click);
             // 
             // toolStripSeparator2
             // 
@@ -128,6 +130,7 @@
             this.btnApaga.Name = "btnApaga";
             this.btnApaga.Size = new System.Drawing.Size(48, 22);
             this.btnApaga.Text = "Deletar";
+            this.btnApaga.Click += new System.EventHandler(this.btnApaga_Click);
             // 
             // toolStripSeparator
             // 
@@ -143,102 +146,84 @@
             this.ajudaToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.ajudaToolStripButton.Text = "Aju&da";
             // 
-            // labelcargo
+            // labelrg
             // 
-            this.labelcargo.AutoSize = true;
-            this.labelcargo.Location = new System.Drawing.Point(135, 294);
-            this.labelcargo.Name = "labelcargo";
-            this.labelcargo.Size = new System.Drawing.Size(39, 15);
-            this.labelcargo.TabIndex = 25;
-            this.labelcargo.Text = "Cargo";
+            this.labelrg.AutoSize = true;
+            this.labelrg.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelrg.Location = new System.Drawing.Point(135, 198);
+            this.labelrg.Name = "labelrg";
+            this.labelrg.Size = new System.Drawing.Size(142, 30);
+            this.labelrg.TabIndex = 22;
+            this.labelrg.Text = "Registro Geral";
             // 
-            // cbCargo
+            // labelcpf
             // 
-            this.cbCargo.FormattingEnabled = true;
-            this.cbCargo.Items.AddRange(new object[] {
-            "1",
-            "2"});
-            this.cbCargo.Location = new System.Drawing.Point(197, 291);
-            this.cbCargo.Name = "cbCargo";
-            this.cbCargo.Size = new System.Drawing.Size(63, 23);
-            this.cbCargo.TabIndex = 24;
+            this.labelcpf.AutoSize = true;
+            this.labelcpf.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelcpf.Location = new System.Drawing.Point(135, 126);
+            this.labelcpf.Name = "labelcpf";
+            this.labelcpf.Size = new System.Drawing.Size(45, 30);
+            this.labelcpf.TabIndex = 21;
+            this.labelcpf.Text = "Cpf";
             // 
-            // labelsenha
+            // txtRg
             // 
-            this.labelsenha.AutoSize = true;
-            this.labelsenha.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelsenha.Location = new System.Drawing.Point(135, 198);
-            this.labelsenha.Name = "labelsenha";
-            this.labelsenha.Size = new System.Drawing.Size(70, 30);
-            this.labelsenha.TabIndex = 22;
-            this.labelsenha.Text = "Senha";
+            this.txtRg.BackColor = System.Drawing.Color.White;
+            this.txtRg.Location = new System.Drawing.Point(135, 231);
+            this.txtRg.Name = "txtRg";
+            this.txtRg.Size = new System.Drawing.Size(125, 23);
+            this.txtRg.TabIndex = 20;
             // 
-            // labelnome
+            // txtCpf
             // 
-            this.labelnome.AutoSize = true;
-            this.labelnome.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelnome.Location = new System.Drawing.Point(135, 126);
-            this.labelnome.Name = "labelnome";
-            this.labelnome.Size = new System.Drawing.Size(70, 30);
-            this.labelnome.TabIndex = 21;
-            this.labelnome.Text = "Nome";
+            this.txtCpf.BackColor = System.Drawing.Color.White;
+            this.txtCpf.Location = new System.Drawing.Point(135, 159);
+            this.txtCpf.Name = "txtCpf";
+            this.txtCpf.Size = new System.Drawing.Size(125, 23);
+            this.txtCpf.TabIndex = 19;
             // 
-            // txtSenha
+            // txtIdMoto
             // 
-            this.txtSenha.BackColor = System.Drawing.Color.White;
-            this.txtSenha.Location = new System.Drawing.Point(135, 231);
-            this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(125, 23);
-            this.txtSenha.TabIndex = 20;
+            this.txtIdMoto.BackColor = System.Drawing.Color.White;
+            this.txtIdMoto.Enabled = false;
+            this.txtIdMoto.Location = new System.Drawing.Point(135, 100);
+            this.txtIdMoto.Name = "txtIdMoto";
+            this.txtIdMoto.Size = new System.Drawing.Size(125, 23);
+            this.txtIdMoto.TabIndex = 18;
             // 
-            // txtNome
+            // labelIdMoto
             // 
-            this.txtNome.BackColor = System.Drawing.Color.White;
-            this.txtNome.Location = new System.Drawing.Point(135, 159);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(125, 23);
-            this.txtNome.TabIndex = 19;
-            // 
-            // txtID
-            // 
-            this.txtID.BackColor = System.Drawing.Color.White;
-            this.txtID.Enabled = false;
-            this.txtID.Location = new System.Drawing.Point(135, 100);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(125, 23);
-            this.txtID.TabIndex = 18;
-            // 
-            // labelid
-            // 
-            this.labelid.AutoSize = true;
-            this.labelid.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelid.Location = new System.Drawing.Point(135, 67);
-            this.labelid.Name = "labelid";
-            this.labelid.Size = new System.Drawing.Size(107, 30);
-            this.labelid.TabIndex = 17;
-            this.labelid.Text = "Id Usuario";
+            this.labelIdMoto.AutoSize = true;
+            this.labelIdMoto.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelIdMoto.Location = new System.Drawing.Point(135, 67);
+            this.labelIdMoto.Name = "labelIdMoto";
+            this.labelIdMoto.Size = new System.Drawing.Size(126, 30);
+            this.labelIdMoto.TabIndex = 17;
+            this.labelIdMoto.Text = "Id Motorista";
             // 
             // SaveCreate
             // 
             this.SaveCreate.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SaveCreate.Location = new System.Drawing.Point(50, 338);
+            this.SaveCreate.Location = new System.Drawing.Point(50, 368);
             this.SaveCreate.Name = "SaveCreate";
             this.SaveCreate.Size = new System.Drawing.Size(300, 50);
             this.SaveCreate.TabIndex = 16;
             this.SaveCreate.Text = "Salvar Cadastro";
             this.SaveCreate.UseVisualStyleBackColor = true;
             this.SaveCreate.Visible = false;
+            this.SaveCreate.Click += new System.EventHandler(this.SaveCreate_Click);
             // 
             // SaveDelete
             // 
             this.SaveDelete.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SaveDelete.Location = new System.Drawing.Point(50, 312);
+            this.SaveDelete.Location = new System.Drawing.Point(50, 368);
             this.SaveDelete.Name = "SaveDelete";
             this.SaveDelete.Size = new System.Drawing.Size(300, 50);
             this.SaveDelete.TabIndex = 15;
             this.SaveDelete.Text = "Salvar Alteração";
             this.SaveDelete.UseVisualStyleBackColor = true;
             this.SaveDelete.Visible = false;
+            this.SaveDelete.Click += new System.EventHandler(this.SaveDelete_Click);
             // 
             // SaveUpdate
             // 
@@ -250,28 +235,28 @@
             this.SaveUpdate.Text = "Salvar Alteração";
             this.SaveUpdate.UseVisualStyleBackColor = true;
             this.SaveUpdate.Visible = false;
+            this.SaveUpdate.Click += new System.EventHandler(this.SaveUpdate_Click);
             // 
             // CRUDMotorista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridCRUD);
+            this.Controls.Add(this.dataGridMotorista);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.labelcargo);
-            this.Controls.Add(this.cbCargo);
-            this.Controls.Add(this.labelsenha);
-            this.Controls.Add(this.labelnome);
-            this.Controls.Add(this.txtSenha);
-            this.Controls.Add(this.txtNome);
-            this.Controls.Add(this.txtID);
-            this.Controls.Add(this.labelid);
+            this.Controls.Add(this.labelrg);
+            this.Controls.Add(this.labelcpf);
+            this.Controls.Add(this.txtRg);
+            this.Controls.Add(this.txtCpf);
+            this.Controls.Add(this.txtIdMoto);
+            this.Controls.Add(this.labelIdMoto);
             this.Controls.Add(this.SaveCreate);
             this.Controls.Add(this.SaveDelete);
             this.Controls.Add(this.SaveUpdate);
             this.Name = "CRUDMotorista";
             this.Text = "CRUDMotorista";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridCRUD)).EndInit();
+            this.Load += new System.EventHandler(this.CRUDMotorista_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridMotorista)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -281,7 +266,7 @@
 
         #endregion
 
-        private DataGridView dataGridCRUD;
+        private DataGridView dataGridMotorista;
         private ToolStrip toolStrip1;
         private ToolStripButton btnReturn;
         private ToolStripButton btnAtualizar;
@@ -291,14 +276,12 @@
         private ToolStripButton btnApaga;
         private ToolStripSeparator toolStripSeparator;
         private ToolStripButton ajudaToolStripButton;
-        private Label labelcargo;
-        private ComboBox cbCargo;
-        private Label labelsenha;
-        private Label labelnome;
-        private TextBox txtSenha;
-        private TextBox txtNome;
-        private TextBox txtID;
-        private Label labelid;
+        private Label labelrg;
+        private Label labelcpf;
+        private TextBox txtRg;
+        private TextBox txtCpf;
+        private TextBox txtIdMoto;
+        private Label labelIdMoto;
         private Button SaveCreate;
         private Button SaveDelete;
         private Button SaveUpdate;
