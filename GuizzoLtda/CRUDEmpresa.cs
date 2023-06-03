@@ -21,5 +21,20 @@ namespace GuizzoLtda
         {
 
         }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnApaga_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

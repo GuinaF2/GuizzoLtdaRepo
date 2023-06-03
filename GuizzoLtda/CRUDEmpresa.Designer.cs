@@ -34,22 +34,21 @@
             btnReturn = new ToolStripButton();
             btnAtualizar = new ToolStripButton();
             toolStripSeparator1 = new ToolStripSeparator();
-            btnCad = new ToolStripButton();
-            toolStripSeparator2 = new ToolStripSeparator();
             btnApaga = new ToolStripButton();
             toolStripSeparator = new ToolStripSeparator();
             ajudaToolStripButton = new ToolStripButton();
             labelcargo = new Label();
-            cbCargo = new ComboBox();
-            labelsenha = new Label();
-            labelnome = new Label();
-            txtSenha = new TextBox();
+            labelcnpj = new Label();
+            labelrazaosocial = new Label();
+            txtCnpj = new TextBox();
             txtNome = new TextBox();
-            txtID = new TextBox();
+            txtIdEmpresa = new TextBox();
             labelid = new Label();
-            SaveCreate = new Button();
             SaveDelete = new Button();
             SaveUpdate = new Button();
+            labelinscestad = new Label();
+            txtInscEstadual = new TextBox();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridCRUDEmpresa).BeginInit();
             toolStrip1.SuspendLayout();
             SuspendLayout();
@@ -68,7 +67,7 @@
             // 
             // toolStrip1
             // 
-            toolStrip1.Items.AddRange(new ToolStripItem[] { btnReturn, btnAtualizar, toolStripSeparator1, btnCad, toolStripSeparator2, btnApaga, toolStripSeparator, ajudaToolStripButton });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { btnReturn, btnAtualizar, toolStripSeparator1, btnApaga, toolStripSeparator, ajudaToolStripButton });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(800, 25);
@@ -83,6 +82,7 @@
             btnReturn.Name = "btnReturn";
             btnReturn.Size = new Size(23, 22);
             btnReturn.Text = "Retornar";
+            btnReturn.Click += btnReturn_Click;
             // 
             // btnAtualizar
             // 
@@ -92,25 +92,12 @@
             btnAtualizar.Name = "btnAtualizar";
             btnAtualizar.Size = new Size(57, 22);
             btnAtualizar.Text = "Atualizar";
+            btnAtualizar.Click += btnAtualizar_Click;
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
             toolStripSeparator1.Size = new Size(6, 25);
-            // 
-            // btnCad
-            // 
-            btnCad.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            btnCad.Image = (Image)resources.GetObject("btnCad.Image");
-            btnCad.ImageTransparentColor = Color.Magenta;
-            btnCad.Name = "btnCad";
-            btnCad.Size = new Size(61, 22);
-            btnCad.Text = "Cadastrar";
-            // 
-            // toolStripSeparator2
-            // 
-            toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(6, 25);
             // 
             // btnApaga
             // 
@@ -120,6 +107,7 @@
             btnApaga.Name = "btnApaga";
             btnApaga.Size = new Size(48, 22);
             btnApaga.Text = "Deletar";
+            btnApaga.Click += btnApaga_Click;
             // 
             // toolStripSeparator
             // 
@@ -138,91 +126,71 @@
             // labelcargo
             // 
             labelcargo.AutoSize = true;
-            labelcargo.Location = new Point(135, 294);
+            labelcargo.Location = new Point(85, 299);
             labelcargo.Name = "labelcargo";
-            labelcargo.Size = new Size(39, 15);
+            labelcargo.Size = new Size(72, 15);
             labelcargo.TabIndex = 25;
-            labelcargo.Text = "Cargo";
+            labelcargo.Text = "Alterar Logo";
             // 
-            // cbCargo
+            // labelcnpj
             // 
-            cbCargo.FormattingEnabled = true;
-            cbCargo.Items.AddRange(new object[] { "1", "2" });
-            cbCargo.Location = new Point(197, 291);
-            cbCargo.Name = "cbCargo";
-            cbCargo.Size = new Size(63, 23);
-            cbCargo.TabIndex = 24;
+            labelcnpj.AutoSize = true;
+            labelcnpj.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            labelcnpj.Location = new Point(132, 154);
+            labelcnpj.Name = "labelcnpj";
+            labelcnpj.Size = new Size(55, 30);
+            labelcnpj.TabIndex = 22;
+            labelcnpj.Text = "Cnpj";
             // 
-            // labelsenha
+            // labelrazaosocial
             // 
-            labelsenha.AutoSize = true;
-            labelsenha.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            labelsenha.Location = new Point(135, 198);
-            labelsenha.Name = "labelsenha";
-            labelsenha.Size = new Size(70, 30);
-            labelsenha.TabIndex = 22;
-            labelsenha.Text = "Senha";
+            labelrazaosocial.AutoSize = true;
+            labelrazaosocial.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            labelrazaosocial.Location = new Point(132, 98);
+            labelrazaosocial.Name = "labelrazaosocial";
+            labelrazaosocial.Size = new Size(130, 30);
+            labelrazaosocial.TabIndex = 21;
+            labelrazaosocial.Text = "Razão Social";
             // 
-            // labelnome
+            // txtCnpj
             // 
-            labelnome.AutoSize = true;
-            labelnome.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            labelnome.Location = new Point(135, 126);
-            labelnome.Name = "labelnome";
-            labelnome.Size = new Size(70, 30);
-            labelnome.TabIndex = 21;
-            labelnome.Text = "Nome";
-            // 
-            // txtSenha
-            // 
-            txtSenha.BackColor = Color.White;
-            txtSenha.Location = new Point(135, 231);
-            txtSenha.Name = "txtSenha";
-            txtSenha.Size = new Size(125, 23);
-            txtSenha.TabIndex = 20;
+            txtCnpj.BackColor = Color.White;
+            txtCnpj.Location = new Point(132, 187);
+            txtCnpj.Name = "txtCnpj";
+            txtCnpj.Size = new Size(125, 23);
+            txtCnpj.TabIndex = 20;
             // 
             // txtNome
             // 
             txtNome.BackColor = Color.White;
-            txtNome.Location = new Point(135, 159);
+            txtNome.Location = new Point(132, 131);
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(125, 23);
             txtNome.TabIndex = 19;
             // 
-            // txtID
+            // txtIdEmpresa
             // 
-            txtID.BackColor = Color.White;
-            txtID.Enabled = false;
-            txtID.Location = new Point(135, 100);
-            txtID.Name = "txtID";
-            txtID.Size = new Size(125, 23);
-            txtID.TabIndex = 18;
+            txtIdEmpresa.BackColor = Color.White;
+            txtIdEmpresa.Enabled = false;
+            txtIdEmpresa.Location = new Point(132, 73);
+            txtIdEmpresa.Name = "txtIdEmpresa";
+            txtIdEmpresa.Size = new Size(125, 23);
+            txtIdEmpresa.TabIndex = 18;
             // 
             // labelid
             // 
             labelid.AutoSize = true;
             labelid.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            labelid.Location = new Point(135, 67);
+            labelid.Location = new Point(132, 40);
             labelid.Name = "labelid";
-            labelid.Size = new Size(107, 30);
+            labelid.Size = new Size(116, 30);
             labelid.TabIndex = 17;
-            labelid.Text = "Id Usuario";
-            // 
-            // SaveCreate
-            // 
-            SaveCreate.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            SaveCreate.Location = new Point(50, 338);
-            SaveCreate.Name = "SaveCreate";
-            SaveCreate.Size = new Size(300, 50);
-            SaveCreate.TabIndex = 16;
-            SaveCreate.Text = "Salvar Cadastro";
-            SaveCreate.UseVisualStyleBackColor = true;
-            SaveCreate.Visible = false;
+            labelid.Text = "Id Empresa";
             // 
             // SaveDelete
             // 
             SaveDelete.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            SaveDelete.Location = new Point(50, 312);
+            SaveDelete.Location = new Point(50, 368);
             SaveDelete.Name = "SaveDelete";
             SaveDelete.Size = new Size(300, 50);
             SaveDelete.TabIndex = 15;
@@ -241,22 +209,50 @@
             SaveUpdate.UseVisualStyleBackColor = true;
             SaveUpdate.Visible = false;
             // 
+            // labelinscestad
+            // 
+            labelinscestad.AutoSize = true;
+            labelinscestad.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            labelinscestad.Location = new Point(132, 222);
+            labelinscestad.Name = "labelinscestad";
+            labelinscestad.Size = new Size(179, 30);
+            labelinscestad.TabIndex = 28;
+            labelinscestad.Text = "Inscrição Estadual";
+            // 
+            // txtInscEstadual
+            // 
+            txtInscEstadual.BackColor = Color.White;
+            txtInscEstadual.Location = new Point(132, 255);
+            txtInscEstadual.Name = "txtInscEstadual";
+            txtInscEstadual.Size = new Size(125, 23);
+            txtInscEstadual.TabIndex = 27;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(173, 295);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 29;
+            button1.Text = "Alterar";
+            button1.UseVisualStyleBackColor = true;
+            // 
             // CRUDEmpresa
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button1);
+            Controls.Add(labelinscestad);
+            Controls.Add(txtInscEstadual);
             Controls.Add(dataGridCRUDEmpresa);
             Controls.Add(toolStrip1);
             Controls.Add(labelcargo);
-            Controls.Add(cbCargo);
-            Controls.Add(labelsenha);
-            Controls.Add(labelnome);
-            Controls.Add(txtSenha);
+            Controls.Add(labelcnpj);
+            Controls.Add(labelrazaosocial);
+            Controls.Add(txtCnpj);
             Controls.Add(txtNome);
-            Controls.Add(txtID);
+            Controls.Add(txtIdEmpresa);
             Controls.Add(labelid);
-            Controls.Add(SaveCreate);
             Controls.Add(SaveDelete);
             Controls.Add(SaveUpdate);
             Name = "CRUDEmpresa";
@@ -282,15 +278,17 @@
         private ToolStripSeparator toolStripSeparator;
         private ToolStripButton ajudaToolStripButton;
         private Label labelcargo;
-        private ComboBox cbCargo;
-        private Label labelsenha;
-        private Label labelnome;
-        private TextBox txtSenha;
+        private Label labelcnpj;
+        private Label labelrazaosocial;
+        private TextBox txtCnpj;
         private TextBox txtNome;
-        private TextBox txtID;
+        private TextBox txtIdEmpresa;
         private Label labelid;
         private Button SaveCreate;
         private Button SaveDelete;
         private Button SaveUpdate;
+        private Label labelinscestad;
+        private TextBox txtInscEstadual;
+        private Button button1;
     }
 }
