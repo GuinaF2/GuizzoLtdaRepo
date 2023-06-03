@@ -37,7 +37,7 @@
             btnApaga = new ToolStripButton();
             toolStripSeparator = new ToolStripSeparator();
             ajudaToolStripButton = new ToolStripButton();
-            labelcargo = new Label();
+            labelfoto = new Label();
             labelcnpj = new Label();
             labelrazaosocial = new Label();
             txtCnpj = new TextBox();
@@ -123,14 +123,14 @@
             ajudaToolStripButton.Size = new Size(23, 22);
             ajudaToolStripButton.Text = "Aju&da";
             // 
-            // labelcargo
+            // labelfoto
             // 
-            labelcargo.AutoSize = true;
-            labelcargo.Location = new Point(85, 299);
-            labelcargo.Name = "labelcargo";
-            labelcargo.Size = new Size(72, 15);
-            labelcargo.TabIndex = 25;
-            labelcargo.Text = "Alterar Logo";
+            labelfoto.AutoSize = true;
+            labelfoto.Location = new Point(85, 299);
+            labelfoto.Name = "labelfoto";
+            labelfoto.Size = new Size(72, 15);
+            labelfoto.TabIndex = 25;
+            labelfoto.Text = "Alterar Logo";
             // 
             // labelcnpj
             // 
@@ -190,13 +190,14 @@
             // SaveDelete
             // 
             SaveDelete.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            SaveDelete.Location = new Point(50, 368);
+            SaveDelete.Location = new Point(50, 348);
             SaveDelete.Name = "SaveDelete";
             SaveDelete.Size = new Size(300, 50);
             SaveDelete.TabIndex = 15;
             SaveDelete.Text = "Salvar Alteração";
             SaveDelete.UseVisualStyleBackColor = true;
             SaveDelete.Visible = false;
+            SaveDelete.Click += SaveDelete_Click;
             // 
             // SaveUpdate
             // 
@@ -208,6 +209,7 @@
             SaveUpdate.Text = "Salvar Alteração";
             SaveUpdate.UseVisualStyleBackColor = true;
             SaveUpdate.Visible = false;
+            SaveUpdate.Click += SaveUpdate_Click;
             // 
             // labelinscestad
             // 
@@ -235,6 +237,7 @@
             button1.TabIndex = 29;
             button1.Text = "Alterar";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // CRUDEmpresa
             // 
@@ -246,7 +249,7 @@
             Controls.Add(txtInscEstadual);
             Controls.Add(dataGridCRUDEmpresa);
             Controls.Add(toolStrip1);
-            Controls.Add(labelcargo);
+            Controls.Add(labelfoto);
             Controls.Add(labelcnpj);
             Controls.Add(labelrazaosocial);
             Controls.Add(txtCnpj);
@@ -277,7 +280,7 @@
         private ToolStripButton btnApaga;
         private ToolStripSeparator toolStripSeparator;
         private ToolStripButton ajudaToolStripButton;
-        private Label labelcargo;
+        private Label labelfoto;
         private Label labelcnpj;
         private Label labelrazaosocial;
         private TextBox txtCnpj;
