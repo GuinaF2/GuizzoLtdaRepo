@@ -41,14 +41,14 @@
             labelcnpj = new Label();
             labelrazaosocial = new Label();
             txtCnpj = new TextBox();
-            txtNome = new TextBox();
+            txtRazaoSocial = new TextBox();
             txtIdEmpresa = new TextBox();
             labelid = new Label();
             SaveDelete = new Button();
             SaveUpdate = new Button();
             labelinscestad = new Label();
             txtInscEstadual = new TextBox();
-            button1 = new Button();
+            btnFoto = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridCRUDEmpresa).BeginInit();
             toolStrip1.SuspendLayout();
             SuspendLayout();
@@ -64,6 +64,7 @@
             dataGridCRUDEmpresa.RowTemplate.Height = 25;
             dataGridCRUDEmpresa.Size = new Size(389, 453);
             dataGridCRUDEmpresa.TabIndex = 23;
+            dataGridCRUDEmpresa.CellClick += dataGridCRUDEmpresa_CellClick;
             // 
             // toolStrip1
             // 
@@ -160,13 +161,13 @@
             txtCnpj.Size = new Size(125, 23);
             txtCnpj.TabIndex = 20;
             // 
-            // txtNome
+            // txtRazaoSocial
             // 
-            txtNome.BackColor = Color.White;
-            txtNome.Location = new Point(132, 131);
-            txtNome.Name = "txtNome";
-            txtNome.Size = new Size(125, 23);
-            txtNome.TabIndex = 19;
+            txtRazaoSocial.BackColor = Color.White;
+            txtRazaoSocial.Location = new Point(132, 131);
+            txtRazaoSocial.Name = "txtRazaoSocial";
+            txtRazaoSocial.Size = new Size(125, 23);
+            txtRazaoSocial.TabIndex = 19;
             // 
             // txtIdEmpresa
             // 
@@ -229,22 +230,22 @@
             txtInscEstadual.Size = new Size(125, 23);
             txtInscEstadual.TabIndex = 27;
             // 
-            // button1
+            // btnFoto
             // 
-            button1.Location = new Point(173, 295);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 29;
-            button1.Text = "Alterar";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btnFoto.Location = new Point(173, 295);
+            btnFoto.Name = "btnFoto";
+            btnFoto.Size = new Size(75, 23);
+            btnFoto.TabIndex = 29;
+            btnFoto.Text = "Alterar";
+            btnFoto.UseVisualStyleBackColor = true;
+            btnFoto.Click += button1_Click;
             // 
             // CRUDEmpresa
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(button1);
+            Controls.Add(btnFoto);
             Controls.Add(labelinscestad);
             Controls.Add(txtInscEstadual);
             Controls.Add(dataGridCRUDEmpresa);
@@ -253,7 +254,7 @@
             Controls.Add(labelcnpj);
             Controls.Add(labelrazaosocial);
             Controls.Add(txtCnpj);
-            Controls.Add(txtNome);
+            Controls.Add(txtRazaoSocial);
             Controls.Add(txtIdEmpresa);
             Controls.Add(labelid);
             Controls.Add(SaveDelete);
@@ -284,7 +285,7 @@
         private Label labelcnpj;
         private Label labelrazaosocial;
         private TextBox txtCnpj;
-        private TextBox txtNome;
+        private TextBox txtRazaoSocial;
         private TextBox txtIdEmpresa;
         private Label labelid;
         private Button SaveCreate;
@@ -292,6 +293,6 @@
         private Button SaveUpdate;
         private Label labelinscestad;
         private TextBox txtInscEstadual;
-        private Button button1;
+        private Button btnFoto;
     }
 }

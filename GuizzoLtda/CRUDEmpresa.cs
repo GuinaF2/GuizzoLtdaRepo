@@ -29,15 +29,15 @@ namespace GuizzoLtda
 
             SaveUpdate.Visible = false;
             SaveDelete.Visible = false;
-            SaveCreate.Visible = false;
 
             txtIdEmpresa.Visible = false;
             txtCnpj.Visible = false;
             txtInscEstadual.Visible = false;
-            txtNome.Visible = false;
+            txtRazaoSocial.Visible = false;
 
+            labelfoto.Visible = false;
 
-
+            btnFoto.Visible = false;
             labelid.Visible = false;
             labelinscestad.Visible = false;
             labelcnpj.Visible = false;
@@ -46,20 +46,21 @@ namespace GuizzoLtda
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
-
+            AdminMenu fmenureturn = new AdminMenu();
+            this.Hide();
+            fmenureturn.Show();
         }
 
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
             SaveUpdate.Visible = true;
             SaveDelete.Visible = false;
-            SaveCreate.Visible = false;
 
             txtIdEmpresa.Visible = true;
             txtCnpj.Visible = true;
             txtInscEstadual.Visible = true;
-            txtNome.Visible = true;
-            txtNome.Visible=true;
+            txtRazaoSocial.Visible = true;
+            btnFoto.Visible = true;
 
             labelfoto.Visible = true;
             labelid.Visible = true;
@@ -70,6 +71,20 @@ namespace GuizzoLtda
 
         private void btnApaga_Click(object sender, EventArgs e)
         {
+            SaveUpdate.Visible = false;
+            SaveDelete.Visible = true;
+
+            txtIdEmpresa.Visible = true;
+            txtCnpj.Visible = true;
+            txtInscEstadual.Visible = true;
+            txtRazaoSocial.Visible = true;
+            btnFoto.Visible = true;
+
+            labelfoto.Visible = true;
+            labelid.Visible = true;
+            labelinscestad.Visible = true;
+            labelcnpj.Visible = true;
+            labelrazaosocial.Visible = true;
 
         }
 
@@ -86,6 +101,33 @@ namespace GuizzoLtda
         private void SaveUpdate_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridCRUDEmpresa_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+
+                if (dataGridCRUDEmpresa.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+                {
+                    dataGridCRUDEmpresa.CurrentRow.Selected = true;
+
+                    txtIdEmpresa.Text = dataGridCRUDEmpresa.Rows[e.RowIndex].Cells["idcliente"].Value.ToString();
+                    txtCnpj.Text = dataGridCRUDEmpresa.Rows[e.RowIndex].Cells["cnpj"].Value.ToString();
+                    txtRazaoSocial.Text = dataGridCRUDEmpresa.Rows[e.RowIndex].Cells["razao_social"].Value.ToString();
+                    txtInscEstadual.Text = dataGridCRUDEmpresa.Rows[e.RowIndex].Cells["inscricao_estadual"].Value.ToString();
+                }
+
+                else
+                {
+                    MessageBox.Show("Favor selecionar ID da Empresa");
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("\t\t    Favor selecionar ID do Motorista. \n\nERRO: " + ex.Message);
+            }
         }
     }
 }
