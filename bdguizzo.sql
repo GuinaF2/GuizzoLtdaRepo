@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 27-Maio-2023 às 16:57
+-- Tempo de geração: 03-Jun-2023 às 16:30
 -- Versão do servidor: 10.4.19-MariaDB
 -- versão do PHP: 8.0.6
 
@@ -75,14 +75,15 @@ INSERT INTO `tb_funcionario` (`idfuncionario`, `NomeUser`, `SenhaUser`, `cargo`)
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tb_motoristas`
+-- Estrutura da tabela `tb_motorista`
 --
 
-CREATE TABLE `tb_motoristas` (
+CREATE TABLE `tb_motorista` (
   `idmotorista` int(10) NOT NULL,
   `idveiculo` int(10) NOT NULL,
-  `carteiramotorista` varchar(20) NOT NULL,
-  `roteiro_viagem` varchar(50) DEFAULT NULL
+  `nome` varchar(50) NOT NULL,
+  `registrogeral` varchar(9) NOT NULL,
+  `cpf` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -146,9 +147,9 @@ ALTER TABLE `tb_funcionario`
   ADD PRIMARY KEY (`idfuncionario`);
 
 --
--- Índices para tabela `tb_motoristas`
+-- Índices para tabela `tb_motorista`
 --
-ALTER TABLE `tb_motoristas`
+ALTER TABLE `tb_motorista`
   ADD PRIMARY KEY (`idmotorista`),
   ADD KEY `fk_veiculo` (`idveiculo`);
 
@@ -190,9 +191,9 @@ ALTER TABLE `tb_funcionario`
   MODIFY `idfuncionario` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT de tabela `tb_motoristas`
+-- AUTO_INCREMENT de tabela `tb_motorista`
 --
-ALTER TABLE `tb_motoristas`
+ALTER TABLE `tb_motorista`
   MODIFY `idmotorista` int(10) NOT NULL AUTO_INCREMENT;
 
 --
@@ -218,9 +219,9 @@ ALTER TABLE `tb_cliente`
   ADD CONSTRAINT `fk_endereco2` FOREIGN KEY (`idendereco`) REFERENCES `tb_endereco` (`idendereco`) ON UPDATE CASCADE;
 
 --
--- Limitadores para a tabela `tb_motoristas`
+-- Limitadores para a tabela `tb_motorista`
 --
-ALTER TABLE `tb_motoristas`
+ALTER TABLE `tb_motorista`
   ADD CONSTRAINT `fk_veiculo` FOREIGN KEY (`idveiculo`) REFERENCES `tb_veiculo` (`idveiculo`) ON UPDATE CASCADE;
 
 --
@@ -229,7 +230,7 @@ ALTER TABLE `tb_motoristas`
 ALTER TABLE `tb_pedido`
   ADD CONSTRAINT `fk_cliente` FOREIGN KEY (`idcliente`) REFERENCES `tb_cliente` (`idcliente`) ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_endereco3` FOREIGN KEY (`idendereco`) REFERENCES `tb_endereco` (`idendereco`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `fk_motorista` FOREIGN KEY (`idmotorista`) REFERENCES `tb_motoristas` (`idmotorista`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `fk_motorista` FOREIGN KEY (`idmotorista`) REFERENCES `tb_motorista` (`idmotorista`) ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
