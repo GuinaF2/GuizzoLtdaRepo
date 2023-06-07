@@ -43,7 +43,7 @@ namespace GuizzoLtda
 
         private void CadEmpresa_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btnEscolherFotoEmp_Click(object sender, EventArgs e)
@@ -92,7 +92,9 @@ namespace GuizzoLtda
 
             EnderecoModelo.CompUser = txtComple.Text;
 
-            if (textBox1.Text == "" || txtCnpj.Text == "" || txtRazaosoc.Text == "" || txtIncEstad.Text == "" || txtRua.Text == "" || txtBairro.Text == "" || txtCep.Text == "" || txtNumero.Text == "" || txtComple.Text == "")
+            EnderecoModelo.UniFederalUser = cbUniFed.Text;
+
+            if (cbUniFed.Text == "" || textBox1.Text == "" || txtCnpj.Text == "" || txtRazaosoc.Text == "" || txtIncEstad.Text == "" || txtRua.Text == "" || txtBairro.Text == "" || txtCep.Text == "" || txtNumero.Text == "" || txtComple.Text == "")
             {
                 MessageBox.Show("Preencha todos os campos.");
 
@@ -130,7 +132,7 @@ namespace GuizzoLtda
 
         private void txtNumero_KeyPress(object sender, KeyPressEventArgs e)
         {
-           
+
         }
 
         private void txtNumero_KeyPress_1(object sender, KeyPressEventArgs e)
@@ -160,6 +162,11 @@ namespace GuizzoLtda
         }
 
         private void txtNumero_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbUniFed_TextChanged(object sender, EventArgs e)
         {
 
         }

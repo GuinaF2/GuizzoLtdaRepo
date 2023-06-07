@@ -22,11 +22,11 @@ namespace Controle
 
             try
             {
-                string SQL = "INSERT INTO tb_endereco(rua,bairro,cep,numero,complemento) values(@rua,@bairro,@cep,@numero,@complemento)";
+                string SQL = "INSERT INTO tb_endereco(rua,bairro,cep,numero,complemento,unidade_federal) values(@rua,@bairro,@cep,@numero,@complemento,@unidade_federal)";
                 //declaração de vetor de campos
-                string[] campos = { "@rua", "@bairro" ,"@cep","@numero","@complemento"};
+                string[] campos = { "@rua", "@bairro" ,"@cep","@numero","@complemento","@unidade_federal"};
                 //declaração de vetor de informações
-                string[] valores = { modelo.RuaUser, modelo.BairroUser, modelo.CepUser, modelo.NmrUser, modelo.CompUser };
+                string[] valores = { modelo.RuaUser, modelo.BairroUser, modelo.CepUser, modelo.NmrUser, modelo.CompUser, modelo.UniFederalUser};
                 string SQLEnd = null;
 
                 if (conexaosql.cadastrar(campos, valores, SQL) >= 1)

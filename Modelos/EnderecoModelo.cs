@@ -16,6 +16,7 @@ namespace Modelos
         private string cep;
         private string numero;
         private string complemento;
+        private string unidade_federal;
 
         public EnderecoModelo()
         {
@@ -25,6 +26,7 @@ namespace Modelos
             cep = "";
             numero = "";
             complemento = "";
+            unidade_federal = "";
         }
 
         public int CodEndereco
@@ -62,6 +64,12 @@ namespace Modelos
         {
             get { return complemento; }
             set { complemento = value; }
+
+        }
+        public string UniFederalUser
+        {
+            get { return unidade_federal; }
+            set { unidade_federal= value; }
 
         }
     }

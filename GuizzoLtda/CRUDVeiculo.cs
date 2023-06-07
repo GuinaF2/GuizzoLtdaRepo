@@ -121,7 +121,7 @@ namespace GuizzoLtda
 
             if (dataSeguro.Text == "" || txtPlaca.Text == "" || cbTipo.Text == "")
             {
-                MessageBox.Show("Erro no cadastro.");
+                MessageBox.Show("Campos obrigatórios não preenchidos!");
             }
             else
             {
