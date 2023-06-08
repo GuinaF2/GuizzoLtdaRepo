@@ -52,6 +52,12 @@
             labelIdVeiculo = new Label();
             txtNome = new TextBox();
             txtIdVeiculo = new TextBox();
+            labelcodigo = new Label();
+            labelinfo = new Label();
+            labelcnh = new Label();
+            txtCnh = new TextBox();
+            labeltipocnh = new Label();
+            cbTipoCnh = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dataGridMotorista).BeginInit();
             toolStrip1.SuspendLayout();
             SuspendLayout();
@@ -147,7 +153,7 @@
             // 
             labelrg.AutoSize = true;
             labelrg.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            labelrg.Location = new Point(127, 287);
+            labelrg.Location = new Point(243, 198);
             labelrg.Name = "labelrg";
             labelrg.Size = new Size(142, 30);
             labelrg.TabIndex = 22;
@@ -157,7 +163,7 @@
             // 
             labelcpf.AutoSize = true;
             labelcpf.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            labelcpf.Location = new Point(127, 215);
+            labelcpf.Location = new Point(243, 136);
             labelcpf.Name = "labelcpf";
             labelcpf.Size = new Size(45, 30);
             labelcpf.TabIndex = 21;
@@ -166,7 +172,7 @@
             // txtRg
             // 
             txtRg.BackColor = Color.White;
-            txtRg.Location = new Point(127, 320);
+            txtRg.Location = new Point(243, 231);
             txtRg.Name = "txtRg";
             txtRg.Size = new Size(125, 23);
             txtRg.TabIndex = 20;
@@ -174,7 +180,7 @@
             // txtCpf
             // 
             txtCpf.BackColor = Color.White;
-            txtCpf.Location = new Point(127, 248);
+            txtCpf.Location = new Point(243, 169);
             txtCpf.Name = "txtCpf";
             txtCpf.Size = new Size(125, 23);
             txtCpf.TabIndex = 19;
@@ -183,7 +189,7 @@
             // 
             txtIdMoto.BackColor = Color.White;
             txtIdMoto.Enabled = false;
-            txtIdMoto.Location = new Point(127, 71);
+            txtIdMoto.Location = new Point(22, 131);
             txtIdMoto.Name = "txtIdMoto";
             txtIdMoto.Size = new Size(125, 23);
             txtIdMoto.TabIndex = 18;
@@ -192,11 +198,11 @@
             // 
             labelIdMoto.AutoSize = true;
             labelIdMoto.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            labelIdMoto.Location = new Point(127, 38);
+            labelIdMoto.Location = new Point(22, 98);
             labelIdMoto.Name = "labelIdMoto";
-            labelIdMoto.Size = new Size(126, 30);
+            labelIdMoto.Size = new Size(174, 30);
             labelIdMoto.TabIndex = 17;
-            labelIdMoto.Text = "Id Motorista";
+            labelIdMoto.Text = "Codigo Motorista";
             // 
             // SaveCreate
             // 
@@ -238,7 +244,7 @@
             // 
             labelNome.AutoSize = true;
             labelNome.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            labelNome.Location = new Point(127, 156);
+            labelNome.Location = new Point(243, 77);
             labelNome.Name = "labelNome";
             labelNome.Size = new Size(70, 30);
             labelNome.TabIndex = 30;
@@ -248,16 +254,16 @@
             // 
             labelIdVeiculo.AutoSize = true;
             labelIdVeiculo.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            labelIdVeiculo.Location = new Point(127, 97);
+            labelIdVeiculo.Location = new Point(22, 157);
             labelIdVeiculo.Name = "labelIdVeiculo";
-            labelIdVeiculo.Size = new Size(98, 30);
+            labelIdVeiculo.Size = new Size(152, 30);
             labelIdVeiculo.TabIndex = 29;
-            labelIdVeiculo.Text = "IdVeiculo";
+            labelIdVeiculo.Text = "Codigo Veiculo";
             // 
             // txtNome
             // 
             txtNome.BackColor = Color.White;
-            txtNome.Location = new Point(127, 189);
+            txtNome.Location = new Point(243, 110);
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(125, 23);
             txtNome.TabIndex = 28;
@@ -266,17 +272,81 @@
             // 
             txtIdVeiculo.BackColor = Color.White;
             txtIdVeiculo.Enabled = false;
-            txtIdVeiculo.Location = new Point(127, 130);
+            txtIdVeiculo.Location = new Point(22, 190);
             txtIdVeiculo.Name = "txtIdVeiculo";
             txtIdVeiculo.Size = new Size(125, 23);
             txtIdVeiculo.TabIndex = 27;
             txtIdVeiculo.TextChanged += txtIdVeiculo_TextChanged;
+            // 
+            // labelcodigo
+            // 
+            labelcodigo.AutoSize = true;
+            labelcodigo.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            labelcodigo.Location = new Point(39, 41);
+            labelcodigo.Name = "labelcodigo";
+            labelcodigo.Size = new Size(81, 25);
+            labelcodigo.TabIndex = 31;
+            labelcodigo.Text = "Códigos";
+            // 
+            // labelinfo
+            // 
+            labelinfo.AutoSize = true;
+            labelinfo.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            labelinfo.Location = new Point(243, 41);
+            labelinfo.Name = "labelinfo";
+            labelinfo.Size = new Size(116, 25);
+            labelinfo.TabIndex = 32;
+            labelinfo.Text = "Informações";
+            // 
+            // labelcnh
+            // 
+            labelcnh.AutoSize = true;
+            labelcnh.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            labelcnh.Location = new Point(228, 276);
+            labelcnh.Name = "labelcnh";
+            labelcnh.Size = new Size(167, 21);
+            labelcnh.TabIndex = 34;
+            labelcnh.Text = "Carteira de Habilitação";
+            labelcnh.Click += label1_Click;
+            // 
+            // txtCnh
+            // 
+            txtCnh.BackColor = Color.White;
+            txtCnh.Location = new Point(243, 300);
+            txtCnh.Name = "txtCnh";
+            txtCnh.Size = new Size(125, 23);
+            txtCnh.TabIndex = 33;
+            // 
+            // labeltipocnh
+            // 
+            labeltipocnh.AutoSize = true;
+            labeltipocnh.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            labeltipocnh.Location = new Point(22, 231);
+            labeltipocnh.Name = "labeltipocnh";
+            labeltipocnh.Size = new Size(160, 30);
+            labeltipocnh.TabIndex = 36;
+            labeltipocnh.Text = "Tipo de Carteira";
+            // 
+            // cbTipoCnh
+            // 
+            cbTipoCnh.FormattingEnabled = true;
+            cbTipoCnh.Items.AddRange(new object[] { "A", "B", "C", "D", "E" });
+            cbTipoCnh.Location = new Point(26, 274);
+            cbTipoCnh.Name = "cbTipoCnh";
+            cbTipoCnh.Size = new Size(55, 23);
+            cbTipoCnh.TabIndex = 37;
             // 
             // CRUDMotorista
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(cbTipoCnh);
+            Controls.Add(labeltipocnh);
+            Controls.Add(labelcnh);
+            Controls.Add(txtCnh);
+            Controls.Add(labelinfo);
+            Controls.Add(labelcodigo);
             Controls.Add(labelNome);
             Controls.Add(labelIdVeiculo);
             Controls.Add(txtNome);
@@ -327,5 +397,11 @@
         private Label labelIdVeiculo;
         private TextBox txtNome;
         private TextBox txtIdVeiculo;
+        private Label labelcodigo;
+        private Label labelinfo;
+        private Label labelcnh;
+        private TextBox txtCnh;
+        private Label labeltipocnh;
+        private ComboBox cbTipoCnh;
     }
 }

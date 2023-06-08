@@ -22,11 +22,11 @@ namespace Controle
 
             try
             {
-                string SQL = "INSERT INTO tb_motorista(cpf,registrogeral,nome,idveiculo) values(@cpf,@registrogeral,@nome,(SELECT idveiculo FROM tb_veiculo ORDER BY idveiculo DESC LIMIT 1))";
+                string SQL = "INSERT INTO tb_motorista(cpf,registrogeral,nome,idveiculo,carteiramotorista,tipocarteira) values(@cpf,@registrogeral,@nome,@idveiculo,@carteiramotorista,@tipocarteira)";
                 //declaração de vetor de campos
-                string[] campos = { "@cpf", "@registrogeral","@nome" };
+                string[] campos = { "@cpf", "@registrogeral","@nome" ,"@idveiculo","@carteiramotorista","@tipocarteira"};
                 //declaração de vetor de informações
-                string[] valores = { modelo.cpfMotorista, modelo.RgMotorista, modelo.nomeMotorista };
+                string[] valores = { modelo.cpfMotorista, modelo.RgMotorista, modelo.nomeMotorista, modelo.TipoCnhMotorista, modelo.CnhMotorista, modelo.CodVeiculo.ToString() };
 
 
 
@@ -71,9 +71,9 @@ namespace Controle
         {
             try
             {
-                string sql = "UPDATE tb_motorista set cpf=@cpf, registrogeral=@registrogeral,nome=@nome where idmotorista= @codigo";
-                string[] campos = { "@cpf", "@registrogeral","@nome" };
-                string[] valores = { us.cpfMotorista, us.RgMotorista, us.nomeMotorista};
+                string sql = "UPDATE tb_motorista set cpf=@cpf, registrogeral=@registrogeral,nome=@nome,carteiramotorista=@carteiramotorista,tipocarteira=@tipocarteira,where idmotorista= @codigo";
+                string[] campos = { "@cpf", "@registrogeral","@nome","@carteiramotorista","@tipocarteira"};
+                string[] valores = { us.cpfMotorista, us.RgMotorista, us.nomeMotorista, us.CnhMotorista, us.TipoCnhMotorista };  
                 if (conexaosql.atualizarDados(us.CodMotorista, campos, valores, sql) >= 1)
                 {
                     return resultado = true;
@@ -111,6 +111,8 @@ namespace Controle
                     us.nomeMotorista = registro["nome"].ToString();
                     us.cpfMotorista = registro["cpf"].ToString();
                     us.RgMotorista = registro["registrogeral"].ToString();
+                    us.CnhMotorista = registro["carteiramotorista"].ToString();
+                    us.TipoCnhMotorista = registro["tipocarteira"].ToString();
 
                 }
                 con.Close();

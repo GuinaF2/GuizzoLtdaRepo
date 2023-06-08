@@ -49,8 +49,10 @@ namespace GuizzoLtda
             MotoristaModelo.cpfMotorista = txtCpf.Text;
             MotoristaModelo.RgMotorista = txtRg.Text;
             MotoristaModelo.nomeMotorista = txtNome.Text;
+            MotoristaModelo.CnhMotorista = txtCnh.Text;
+            MotoristaModelo.TipoCnhMotorista = cbTipoCnh.Text;
 
-            if (txtCpf.Text == "" || txtRg.Text == "" || txtNome.Text == "")
+            if (txtCpf.Text == "" || txtRg.Text == "" || txtNome.Text == "" || txtCnh.Text == "" || cbTipoCnh.Text =="")
             {
                 MessageBox.Show("Erro no cadastro.");
             }
@@ -76,6 +78,8 @@ namespace GuizzoLtda
             MotoristaModelo.cpfMotorista = txtCpf.Text;
             MotoristaModelo.RgMotorista = txtRg.Text;
             MotoristaModelo.nomeMotorista = txtNome.Text;
+            MotoristaModelo.CnhMotorista = txtCnh.Text;
+            MotoristaModelo.TipoCnhMotorista = cbTipoCnh.Text;
 
             if (Controle.AtualizarMotorista(MotoristaModelo) == true)
             {
@@ -106,7 +110,13 @@ namespace GuizzoLtda
             txtNome.Visible = false;
             txtCpf.Visible = false;
             txtRg.Visible = false;
+            cbTipoCnh.Visible = false;
+            txtCnh.Visible = false;
 
+            labelcodigo.Visible = false;
+            labeltipocnh.Visible = false;
+            labelcnh.Visible = false;
+            labelinfo.Visible = false;
             labelIdMoto.Visible = false;
             labelIdVeiculo.Visible = false;
             labelcpf.Visible = false;
@@ -128,6 +138,9 @@ namespace GuizzoLtda
                     txtCpf.Text = dataGridMotorista.Rows[e.RowIndex].Cells["cpf"].Value.ToString();
                     txtNome.Text = dataGridMotorista.Rows[e.RowIndex].Cells["nome"].Value.ToString();
                     txtRg.Text = dataGridMotorista.Rows[e.RowIndex].Cells["registrogeral"].Value.ToString();
+                    txtCnh.Text = dataGridMotorista.Rows[e.RowIndex].Cells["carteiramotorista"].Value.ToString();
+                    cbTipoCnh.Text = dataGridMotorista.Rows[e.RowIndex].Cells["tipocarteira"].Value.ToString();
+
                 }
 
                 else
@@ -153,7 +166,13 @@ namespace GuizzoLtda
             txtNome.Visible = true;
             txtCpf.Visible = true;
             txtRg.Visible = true;
+            cbTipoCnh.Visible = true;
+            txtCnh.Visible = true;
 
+            labelcodigo.Visible = true;
+            labeltipocnh.Visible = true;
+            labelcnh.Visible = true;
+            labelinfo.Visible = true;
             labelIdVeiculo.Visible = true;
             labelNome.Visible = true;
             labelIdMoto.Visible = true;
@@ -172,7 +191,13 @@ namespace GuizzoLtda
             txtNome.Visible = true;
             txtCpf.Visible = true;
             txtRg.Visible = true;
+            cbTipoCnh.Visible = true;
+            txtCnh.Visible = true;
 
+            labelcodigo.Visible = true;
+            labeltipocnh.Visible = true;
+            labelcnh.Visible = true;
+            labelinfo.Visible = true;
             labelNome.Visible = true;
             labelIdVeiculo.Visible = true;
             labelIdMoto.Visible = true;
@@ -191,7 +216,13 @@ namespace GuizzoLtda
             txtNome.Visible = true;
             txtCpf.Visible = true;
             txtRg.Visible = true;
+            cbTipoCnh.Visible = true;
+            txtCnh.Visible = true;
 
+            labelcodigo.Visible = true;
+            labeltipocnh.Visible = true;
+            labelcnh.Visible = true;
+            labelinfo.Visible = true;
             labelNome.Visible = true;
             labelIdVeiculo.Visible = true;
             labelIdMoto.Visible = true;
@@ -212,6 +243,11 @@ namespace GuizzoLtda
         }
 
         private void dataGridMotorista_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

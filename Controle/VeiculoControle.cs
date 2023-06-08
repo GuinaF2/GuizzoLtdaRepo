@@ -24,11 +24,11 @@ namespace Controle
 
             try
             {
-                string SQL = "INSERT INTO tb_veiculo(placa_motorista,tipo_veiculo,rota_veiculo,seguro_data) values(@placa_motorista,@tipo_veiculo,@rota_veiculo,@seguro_data)";
+                string SQL = "INSERT INTO tb_veiculo(placa_motorista,tipo_veiculo,seguro_data,renavam) values(@placa_motorista,@tipo_veiculo,@seguro_data,@renavam)";
                 //declaração de vetor de campos
-                string[] campos = { "@placa_motorista", "@tipo_veiculo", "@rota_veiculo", "@seguro_data" };
+                string[] campos = { "@placa_motorista", "@tipo_veiculo", "@seguro_data","@renavam" };
                 //declaração de vetor de informações
-                string[] valores = { modelo.PlacaVeiculo, modelo.TipoVeiculo, modelo.RotaVeiculo,modelo.SeguroVeiculo };
+                string[] valores = { modelo.PlacaVeiculo, modelo.TipoVeiculo,modelo.SeguroVeiculo,modelo.RenavamVeiculo };
 
 
 
@@ -112,7 +112,6 @@ namespace Controle
                     registro.Read();
                     us.PlacaVeiculo = registro["placa_motorista"].ToString();
                     us.TipoVeiculo = registro["tipo_veiculo"].ToString();
-                    us.RotaVeiculo = registro["rota_veiculo"].ToString();
                     us.SeguroVeiculo = registro["seguro_data"].ToString();
 
                 }

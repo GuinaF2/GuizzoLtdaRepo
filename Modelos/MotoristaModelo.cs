@@ -13,6 +13,8 @@ namespace Modelos
         private string nome;
         private string cpf;
         private string registrogeral;
+        private string carteiramotorista;
+        private string tipocarteira;
 
         public MotoristaModelo()
         {
@@ -21,6 +23,8 @@ namespace Modelos
             nome = "";
             cpf = "";
             registrogeral = "";
+            carteiramotorista = "";
+            tipocarteira = "";
         }
 
         public int CodMotorista
@@ -53,7 +57,15 @@ namespace Modelos
             set { registrogeral = value; }
 
         }
-
-        
+        public string CnhMotorista
+        {
+            get { return carteiramotorista; }
+            set { carteiramotorista = value; }
+        }
+        public string TipoCnhMotorista
+        {
+            get { return tipocarteira; }
+            set { tipocarteira = value; }
+        }
     }
 }

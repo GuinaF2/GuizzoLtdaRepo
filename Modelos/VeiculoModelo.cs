@@ -11,9 +11,8 @@ namespace Modelos
         private int idVeiculo;
         private string placa_motorista;
         private string tipo_veiculo;
-        private string rota_veiculo;
         private string seguro_data;
-
+        private string renavam;
 
 
         public VeiculoModelo()
@@ -21,8 +20,8 @@ namespace Modelos
             idVeiculo = 0;
             placa_motorista = "";
             tipo_veiculo = "";
-            rota_veiculo = "";
             seguro_data="";
+            renavam = "";
         }
 
         public int CodVeiculo
@@ -41,15 +40,16 @@ namespace Modelos
             get { return tipo_veiculo; }
             set { tipo_veiculo = value; }
         }
-        public string RotaVeiculo
-        {
-            get { return rota_veiculo; }
-            set { rota_veiculo = value; }
-        }
+ 
         public string SeguroVeiculo
         {
             get { return seguro_data; }
             set { seguro_data = value; }
+        }
+        public string RenavamVeiculo
+        {
+            get { return renavam; }
+            set { renavam = value; }
         }
     }
 }

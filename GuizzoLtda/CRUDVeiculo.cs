@@ -34,7 +34,9 @@ namespace GuizzoLtda
             txtPlaca.Visible = true;
             cbTipo.Visible = true;
             dataSeguro.Visible = true;
+            txtRenavam.Visible = true;
 
+            labelrenavam.Visible = true;
             labelIdVeic.Visible = true;
             labelplaca.Visible = true;
             labeltipo.Visible = true;
@@ -51,7 +53,9 @@ namespace GuizzoLtda
             txtPlaca.Visible = true;
             cbTipo.Visible = true;
             dataSeguro.Visible = true;
+            txtRenavam.Visible = true;
 
+            labelrenavam.Visible = true;
             labelIdVeic.Visible = true;
             labelplaca.Visible = true;
             labeltipo.Visible = true;
@@ -68,7 +72,9 @@ namespace GuizzoLtda
             txtPlaca.Visible = true;
             cbTipo.Visible = true;
             dataSeguro.Visible = true;
+            txtRenavam.Visible = true;
 
+            labelrenavam.Visible = true;
             labelIdVeic.Visible = true;
             labelplaca.Visible = true;
             labeltipo.Visible = true;
@@ -87,7 +93,9 @@ namespace GuizzoLtda
             txtPlaca.Visible = false;
             cbTipo.Visible = false;
             dataSeguro.Visible = false;
+            txtRenavam.Visible = false;
 
+            labelrenavam.Visible = false;
             labelIdVeic.Visible = false;
             labelseguro.Visible = false;
             labelplaca.Visible = false;
@@ -110,7 +118,7 @@ namespace GuizzoLtda
             {
                 MessageBox.Show("Processo cancelado.");
             }
-            
+
         }
 
         private void SaveCreate_Click(object sender, EventArgs e)
@@ -118,8 +126,9 @@ namespace GuizzoLtda
             VeiculoModelo.PlacaVeiculo = txtPlaca.Text;
             VeiculoModelo.TipoVeiculo = cbTipo.Text;
             VeiculoModelo.SeguroVeiculo = dataSeguro.Text;
+            VeiculoModelo.RenavamVeiculo = txtRenavam.Text;
 
-            if (dataSeguro.Text == "" || txtPlaca.Text == "" || cbTipo.Text == "")
+            if (dataSeguro.Text == "" || txtPlaca.Text == "" || cbTipo.Text == "" || txtRenavam.Text == "")
             {
                 MessageBox.Show("Campos obrigatórios não preenchidos!");
             }
@@ -145,6 +154,7 @@ namespace GuizzoLtda
             VeiculoModelo.PlacaVeiculo = txtPlaca.Text;
             VeiculoModelo.TipoVeiculo = cbTipo.Text;
             VeiculoModelo.SeguroVeiculo = dataSeguro.Text;
+            VeiculoModelo.RenavamVeiculo = txtRenavam.Text;
 
             if (Controle.AtualizarVeiculo(VeiculoModelo) == true)
             {
@@ -175,6 +185,7 @@ namespace GuizzoLtda
                     txtPlaca.Text = dataGridVeiculo.Rows[e.RowIndex].Cells["placa_motorista"].Value.ToString();
                     cbTipo.Text = dataGridVeiculo.Rows[e.RowIndex].Cells["tipo_veiculo"].Value.ToString();
                     dataSeguro.Text = dataGridVeiculo.Rows[e.RowIndex].Cells["seguro_data"].Value.ToString();
+                    txtRenavam.Text = dataGridVeiculo.Rows[e.RowIndex].Cells["renavam"].Value.ToString();
                 }
 
                 else
