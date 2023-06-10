@@ -291,7 +291,6 @@
             // 
             // cbUniFed
             // 
-            cbUniFed.Enabled = false;
             cbUniFed.FormattingEnabled = true;
             cbUniFed.Items.AddRange(new object[] { "Acre (AC)", "Alagoas (AL)\t", "Amapá (AP)\t", "Amazonas (AM)\t", "Bahia (BA)\tSalvador\t", "Ceará (CE)\tFortaleza\t", "Distrito Federal (DF)\t", "Espírito Santo (ES)\t", "Goiás (GO)\t", "Maranhão (MA)\t", "Mato Grosso (MT)\t", "Mato Grosso do Sul (MS)", "Minas Gerais (MG)\t", "Pará (PA)\tBelém\t", "Paraíba (PB)\t", "Paraná (PR)\t", "Pernambuco (PE)\t", "Piauí (PI)\tTeresina\t", "Rio de Janeiro (RJ)\t", "Rio Grande do Norte (RN)", "Rio Grande do Sul (RS)", "Rondônia (RO)\t", "Roraima (RR)\t", "Santa Catarina (SC)\t", "São Paulo (SP)\t", "Sergipe (SE)\t", "Tocantins (TO)" });
             cbUniFed.Location = new Point(42, 207);

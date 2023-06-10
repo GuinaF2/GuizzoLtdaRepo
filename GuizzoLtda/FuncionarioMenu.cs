@@ -17,17 +17,6 @@ namespace GuizzoLtda
             InitializeComponent();
         }
 
-        private void toolStripTextBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void abrirPedidoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            PedidoFunc fpedidofuncionario = new PedidoFunc();
-            this.Hide();
-            fpedidofuncionario.Show();
-        }
 
         private void toolStripButton14_Click(object sender, EventArgs e)
         {
@@ -48,6 +37,11 @@ namespace GuizzoLtda
             Principal fprincipalreturn = new Principal();
             this.Hide();
             fprincipalreturn.Show();
+        }
+
+        private void FuncionarioMenu_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

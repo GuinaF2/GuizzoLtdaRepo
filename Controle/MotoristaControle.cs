@@ -18,7 +18,7 @@ namespace Controle
         public int CadastrarMotorista(MotoristaModelo modelo)
         {
             //variável de confirmação do banco
-            int valorCadastro = -1;
+            int valorCadastroMot = -1;
 
             try
             {
@@ -26,17 +26,17 @@ namespace Controle
                 //declaração de vetor de campos
                 string[] campos = { "@cpf", "@registrogeral","@nome" ,"@idveiculo","@carteiramotorista","@tipocarteira"};
                 //declaração de vetor de informações
-                string[] valores = { modelo.cpfMotorista, modelo.RgMotorista, modelo.nomeMotorista, modelo.TipoCnhMotorista, modelo.CnhMotorista, modelo.CodVeiculo.ToString() };
+                string[] valores = { modelo.cpfMotorista, modelo.RgMotorista, modelo.nomeMotorista, modelo.CodVeiculo.ToString(), modelo.CnhMotorista, modelo.TipoCnhMotorista  };
 
 
 
                 if (conexaosql.cadastrar(campos, valores, SQL) >= 1)
                 {
-                    valorCadastro = 1;
+                    valorCadastroMot = 1;
                 }
                 else
                 {
-                    valorCadastro = 0;
+                    valorCadastroMot = 0;
                 }
             }
             catch (Exception ex)
@@ -44,7 +44,7 @@ namespace Controle
                 //Lança erros do sistema
                 throw new Exception(ex.Message);
             }
-            return valorCadastro;
+            return valorCadastroMot;
         }
 
         public bool DeletarMotorista(MotoristaModelo us)

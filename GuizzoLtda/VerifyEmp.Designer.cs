@@ -28,113 +28,164 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            textBox1 = new TextBox();
-            button1 = new Button();
-            textBox2 = new TextBox();
-            label2 = new Label();
-            textBox3 = new TextBox();
-            label3 = new Label();
-            dataGridView1 = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            labelRazaoSoc = new Label();
+            txtRazaoSoc = new TextBox();
+            btnConfirmar = new Button();
+            txtCnpj = new TextBox();
+            labelCnpj = new Label();
+            txtInscriEstad = new TextBox();
+            labelInscEstad = new Label();
+            dgVerEmp = new DataGridView();
+            returnBtn = new Button();
+            btnMenu = new Button();
+            ((System.ComponentModel.ISupportInitialize)dgVerEmp).BeginInit();
             SuspendLayout();
             // 
-            // label1
+            // labelRazaoSoc
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(40, 121);
-            label1.Name = "label1";
-            label1.Size = new Size(72, 15);
-            label1.TabIndex = 0;
-            label1.Text = "Razão Social";
+            labelRazaoSoc.AutoSize = true;
+            labelRazaoSoc.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            labelRazaoSoc.Location = new Point(40, 120);
+            labelRazaoSoc.Name = "labelRazaoSoc";
+            labelRazaoSoc.Size = new Size(97, 21);
+            labelRazaoSoc.TabIndex = 0;
+            labelRazaoSoc.Text = "Razão Social";
             // 
-            // textBox1
+            // txtRazaoSoc
             // 
-            textBox1.Location = new Point(40, 152);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 1;
+            txtRazaoSoc.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtRazaoSoc.Location = new Point(40, 151);
+            txtRazaoSoc.Name = "txtRazaoSoc";
+            txtRazaoSoc.Size = new Size(100, 29);
+            txtRazaoSoc.TabIndex = 1;
+            txtRazaoSoc.Text = " ";
+            txtRazaoSoc.Click += txtRazaoSoc_Click;
+            txtRazaoSoc.TextChanged += txtRazaoSoc_TextChanged;
             // 
-            // button1
+            // btnConfirmar
             // 
-            button1.Location = new Point(40, 328);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 2;
-            button1.Text = "Confirmar";
-            button1.UseVisualStyleBackColor = true;
+            btnConfirmar.ForeColor = SystemColors.ControlText;
+            btnConfirmar.Location = new Point(40, 331);
+            btnConfirmar.Name = "btnConfirmar";
+            btnConfirmar.Size = new Size(148, 36);
+            btnConfirmar.TabIndex = 2;
+            btnConfirmar.Text = "Confirmar";
+            btnConfirmar.UseVisualStyleBackColor = true;
+            btnConfirmar.Click += button1_Click;
             // 
-            // textBox2
+            // txtCnpj
             // 
-            textBox2.Location = new Point(40, 83);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 4;
+            txtCnpj.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtCnpj.Location = new Point(40, 82);
+            txtCnpj.Name = "txtCnpj";
+            txtCnpj.Size = new Size(100, 29);
+            txtCnpj.TabIndex = 4;
             // 
-            // label2
+            // labelCnpj
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(40, 52);
-            label2.Name = "label2";
-            label2.Size = new Size(34, 15);
-            label2.TabIndex = 3;
-            label2.Text = "CNPJ";
+            labelCnpj.AutoSize = true;
+            labelCnpj.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            labelCnpj.Location = new Point(40, 51);
+            labelCnpj.Name = "labelCnpj";
+            labelCnpj.Size = new Size(46, 21);
+            labelCnpj.TabIndex = 3;
+            labelCnpj.Text = "CNPJ";
             // 
-            // textBox3
+            // txtInscriEstad
             // 
-            textBox3.Location = new Point(40, 227);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(100, 23);
-            textBox3.TabIndex = 6;
+            txtInscriEstad.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtInscriEstad.Location = new Point(40, 226);
+            txtInscriEstad.Name = "txtInscriEstad";
+            txtInscriEstad.Size = new Size(100, 29);
+            txtInscriEstad.TabIndex = 6;
             // 
-            // label3
+            // labelInscEstad
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(40, 196);
-            label3.Name = "label3";
-            label3.Size = new Size(101, 15);
-            label3.TabIndex = 5;
-            label3.Text = "Inscrição Estadual";
+            labelInscEstad.AutoSize = true;
+            labelInscEstad.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            labelInscEstad.Location = new Point(40, 195);
+            labelInscEstad.Name = "labelInscEstad";
+            labelInscEstad.Size = new Size(133, 21);
+            labelInscEstad.TabIndex = 5;
+            labelInscEstad.Text = "Inscrição Estadual";
             // 
-            // dataGridView1
+            // dgVerEmp
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(214, 49);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(585, 201);
-            dataGridView1.TabIndex = 7;
+            dgVerEmp.AllowUserToAddRows = false;
+            dgVerEmp.AllowUserToDeleteRows = false;
+            dgVerEmp.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgVerEmp.Location = new Point(146, 107);
+            dgVerEmp.Name = "dgVerEmp";
+            dgVerEmp.ReadOnly = true;
+            dgVerEmp.RowTemplate.Height = 25;
+            dgVerEmp.Size = new Size(643, 260);
+            dgVerEmp.TabIndex = 7;
+            dgVerEmp.Visible = false;
+            dgVerEmp.CellContentClick += dataGridView1_CellContentClick;
+            dgVerEmp.Click += dgVerEmp_Click;
+            // 
+            // returnBtn
+            // 
+            returnBtn.BackColor = SystemColors.Control;
+            returnBtn.BackgroundImage = Properties.Resources._688879_arrows_512x512;
+            returnBtn.BackgroundImageLayout = ImageLayout.Stretch;
+            returnBtn.Location = new Point(0, 0);
+            returnBtn.Name = "returnBtn";
+            returnBtn.Size = new Size(33, 36);
+            returnBtn.TabIndex = 8;
+            returnBtn.TextImageRelation = TextImageRelation.ImageAboveText;
+            returnBtn.UseVisualStyleBackColor = false;
+            returnBtn.Visible = false;
+            returnBtn.Click += button1_Click_1;
+            // 
+            // btnMenu
+            // 
+            btnMenu.BackColor = SystemColors.Control;
+            btnMenu.BackgroundImage = Properties.Resources._688879_arrows_512x512;
+            btnMenu.BackgroundImageLayout = ImageLayout.Stretch;
+            btnMenu.Location = new Point(0, 12);
+            btnMenu.Name = "btnMenu";
+            btnMenu.Size = new Size(33, 36);
+            btnMenu.TabIndex = 9;
+            btnMenu.TextImageRelation = TextImageRelation.ImageAboveText;
+            btnMenu.UseVisualStyleBackColor = false;
+            btnMenu.Click += btnMenu_Click;
             // 
             // VerifyEmp
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1064, 681);
-            Controls.Add(dataGridView1);
-            Controls.Add(textBox3);
-            Controls.Add(label3);
-            Controls.Add(textBox2);
-            Controls.Add(label2);
-            Controls.Add(button1);
-            Controls.Add(textBox1);
-            Controls.Add(label1);
+            Controls.Add(btnMenu);
+            Controls.Add(returnBtn);
+            Controls.Add(dgVerEmp);
+            Controls.Add(txtInscriEstad);
+            Controls.Add(labelInscEstad);
+            Controls.Add(txtCnpj);
+            Controls.Add(labelCnpj);
+            Controls.Add(btnConfirmar);
+            Controls.Add(txtRazaoSoc);
+            Controls.Add(labelRazaoSoc);
             Name = "VerifyEmp";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "VerifyEmp";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += VerifyEmp_Load;
+            ((System.ComponentModel.ISupportInitialize)dgVerEmp).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
-        private TextBox textBox1;
-        private Button button1;
-        private TextBox textBox2;
-        private Label label2;
-        private TextBox textBox3;
-        private Label label3;
-        private DataGridView dataGridView1;
+        private Label labelRazaoSoc;
+        private TextBox txtRazaoSoc;
+        private Button btnConfirmar;
+        private TextBox txtCnpj;
+        private Label labelCnpj;
+        private TextBox txtInscriEstad;
+        private Label labelInscEstad;
+        private DataGridView dgVerEmp;
+        private Button returnBtn;
+        private Button btnMenu;
     }
 }

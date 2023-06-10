@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FuncionarioMenu));
             toolStrip1 = new ToolStrip();
+            toolStripButton2 = new ToolStripButton();
             toolStripSeparator1 = new ToolStripSeparator();
             toolStripButton17 = new ToolStripButton();
             toolStripSeparator2 = new ToolStripSeparator();
@@ -39,7 +40,6 @@
             toolStripSeparator4 = new ToolStripSeparator();
             toolStripButton14 = new ToolStripButton();
             pictureBox1 = new PictureBox();
-            toolStripButton2 = new ToolStripButton();
             toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -52,6 +52,16 @@
             toolStrip1.Size = new Size(800, 25);
             toolStrip1.TabIndex = 0;
             toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripButton2
+            // 
+            toolStripButton2.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            toolStripButton2.Image = Properties.Resources._688879_arrows_512x512;
+            toolStripButton2.ImageTransparentColor = Color.Magenta;
+            toolStripButton2.Name = "toolStripButton2";
+            toolStripButton2.Size = new Size(23, 22);
+            toolStripButton2.Text = "toolStripButton2";
+            toolStripButton2.Click += toolStripButton2_Click;
             // 
             // toolStripSeparator1
             // 
@@ -124,16 +134,6 @@
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             // 
-            // toolStripButton2
-            // 
-            toolStripButton2.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            toolStripButton2.Image = Properties.Resources._688879_arrows_512x512;
-            toolStripButton2.ImageTransparentColor = Color.Magenta;
-            toolStripButton2.Name = "toolStripButton2";
-            toolStripButton2.Size = new Size(23, 22);
-            toolStripButton2.Text = "toolStripButton2";
-            toolStripButton2.Click += toolStripButton2_Click;
-            // 
             // FuncionarioMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -143,6 +143,7 @@
             Controls.Add(pictureBox1);
             Name = "FuncionarioMenu";
             Text = " ";
+            Load += FuncionarioMenu_Load;
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
