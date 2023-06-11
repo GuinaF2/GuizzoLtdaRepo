@@ -35,9 +35,6 @@
             btnAtualizar = new ToolStripButton();
             toolStripSeparator1 = new ToolStripSeparator();
             btnCad = new ToolStripButton();
-            toolStripSeparator2 = new ToolStripSeparator();
-            btnApaga = new ToolStripButton();
-            toolStripSeparator = new ToolStripSeparator();
             ajudaToolStripButton = new ToolStripButton();
             labelcargo = new Label();
             cbCargo = new ComboBox();
@@ -48,8 +45,8 @@
             txtID = new TextBox();
             labelid = new Label();
             SaveCreate = new Button();
-            SaveDelete = new Button();
             SaveUpdate = new Button();
+            toolStripSeparator2 = new ToolStripSeparator();
             ((System.ComponentModel.ISupportInitialize)dataGridCRUD).BeginInit();
             toolStrip1.SuspendLayout();
             SuspendLayout();
@@ -70,7 +67,7 @@
             // 
             // toolStrip1
             // 
-            toolStrip1.Items.AddRange(new ToolStripItem[] { btnReturn, btnAtualizar, toolStripSeparator1, btnCad, toolStripSeparator2, btnApaga, toolStripSeparator, ajudaToolStripButton });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { btnReturn, btnAtualizar, toolStripSeparator1, btnCad, toolStripSeparator2, ajudaToolStripButton });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(800, 25);
@@ -111,26 +108,6 @@
             btnCad.Size = new Size(61, 22);
             btnCad.Text = "Cadastrar";
             btnCad.Click += btnCad_Click_1;
-            // 
-            // toolStripSeparator2
-            // 
-            toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(6, 25);
-            // 
-            // btnApaga
-            // 
-            btnApaga.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            btnApaga.Image = (Image)resources.GetObject("btnApaga.Image");
-            btnApaga.ImageTransparentColor = Color.Magenta;
-            btnApaga.Name = "btnApaga";
-            btnApaga.Size = new Size(48, 22);
-            btnApaga.Text = "Deletar";
-            btnApaga.Click += btnApaga_Click_1;
-            // 
-            // toolStripSeparator
-            // 
-            toolStripSeparator.Name = "toolStripSeparator";
-            toolStripSeparator.Size = new Size(6, 25);
             // 
             // ajudaToolStripButton
             // 
@@ -187,6 +164,7 @@
             txtSenha.Size = new Size(125, 23);
             txtSenha.TabIndex = 33;
             txtSenha.TextChanged += txtSenha_TextChanged;
+            txtSenha.KeyPress += txtSenha_KeyPress;
             // 
             // txtNome
             // 
@@ -197,6 +175,7 @@
             txtNome.TabIndex = 32;
             txtNome.Click += txtNome_Click;
             txtNome.TextChanged += txtNome_TextChanged;
+            txtNome.KeyPress += txtNome_KeyPress;
             // 
             // txtID
             // 
@@ -230,18 +209,6 @@
             SaveCreate.Visible = false;
             SaveCreate.Click += SaveCreate_Click_1;
             // 
-            // SaveDelete
-            // 
-            SaveDelete.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            SaveDelete.Location = new Point(50, 368);
-            SaveDelete.Name = "SaveDelete";
-            SaveDelete.Size = new Size(300, 50);
-            SaveDelete.TabIndex = 28;
-            SaveDelete.Text = "Salvar Alteração";
-            SaveDelete.UseVisualStyleBackColor = true;
-            SaveDelete.Visible = false;
-            SaveDelete.Click += SaveDelete_Click_1;
-            // 
             // SaveUpdate
             // 
             SaveUpdate.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
@@ -253,6 +220,11 @@
             SaveUpdate.UseVisualStyleBackColor = true;
             SaveUpdate.Visible = false;
             SaveUpdate.Click += SaveUpdate_Click_1;
+            // 
+            // toolStripSeparator2
+            // 
+            toolStripSeparator2.Name = "toolStripSeparator2";
+            toolStripSeparator2.Size = new Size(6, 25);
             // 
             // CRUDUser
             // 
@@ -270,7 +242,6 @@
             Controls.Add(txtID);
             Controls.Add(labelid);
             Controls.Add(SaveCreate);
-            Controls.Add(SaveDelete);
             Controls.Add(SaveUpdate);
             Name = "CRUDUser";
             Text = "AdministradorCRUD";
@@ -290,9 +261,6 @@
         private ToolStripButton btnAtualizar;
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripButton btnCad;
-        private ToolStripSeparator toolStripSeparator2;
-        private ToolStripButton btnApaga;
-        private ToolStripSeparator toolStripSeparator;
         private ToolStripButton ajudaToolStripButton;
         private Label labelcargo;
         private ComboBox cbCargo;
@@ -303,7 +271,7 @@
         private TextBox txtID;
         private Label labelid;
         private Button SaveCreate;
-        private Button SaveDelete;
         private Button SaveUpdate;
+        private ToolStripSeparator toolStripSeparator2;
     }
 }

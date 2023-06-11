@@ -30,12 +30,14 @@ namespace GuizzoLtda
 
         private void SaveCreate_Click_1(object sender, EventArgs e)
         {
+
+
             UsuarioModelo.NomeUser = txtNome.Text;
             UsuarioModelo.SenhaUser = txtSenha.Text;
 
             if (txtNome.Text == "" || txtSenha.Text == "")
             {
-                MessageBox.Show("Erro no cadastro.");
+                MessageBox.Show("Preencha todos os campos!");
             }
             else
             {
@@ -47,37 +49,22 @@ namespace GuizzoLtda
                     fadmincrud.Show();
                     dataGridCRUD.Visible = true;
                 }
-                
+
             }
         }
 
-        private void SaveDelete_Click_1(object sender, EventArgs e)
-        {
-            UsuarioModelo.CodUsuario = Convert.ToInt32(txtID.Text);
-            var resposta = DialogResult;
-            resposta = MessageBox.Show("Tem certeza que deseja deletar o usuário?", "! Aviso !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (resposta == DialogResult.Yes)
-            {
-                if (Controle.DeletarUsuario(UsuarioModelo) == true)
-                {
-                    MessageBox.Show("Usuário deletado.");
-                }
-            }
-            else if (resposta == DialogResult.No)
-            {
-                MessageBox.Show("Processo cancelado.");
-            }
-            CRUDUser fadmincrud = new CRUDUser();
-            this.Hide();
-            fadmincrud.Show();
-        }
+        
 
         private void SaveUpdate_Click_1(object sender, EventArgs e)
         {
-            if (txtID.Text == "") 
-            { 
+            if (txtID.Text == "")
+            {
                 MessageBox.Show("Selecione o Id do Usuario");
-                
+                txtNome.Text = String.Empty;
+                txtSenha.Text = String.Empty;
+                txtID.Text = String.Empty;
+                cbCargo.Text = String.Empty;
+
             }
             else
             {
@@ -126,13 +113,14 @@ namespace GuizzoLtda
             dataGridCRUD.Visible = true;
 
             SaveUpdate.Visible = true;
-            SaveDelete.Visible = false;
+ 
             SaveCreate.Visible = false;
 
 
             txtID.Enabled = false;
             txtNome.Enabled = true;
             txtSenha.Enabled = true;
+            cbCargo.Enabled = true;
 
             txtID.Visible = true;
             txtNome.Visible = true;
@@ -161,7 +149,7 @@ namespace GuizzoLtda
             txtSenha.Enabled = true;
 
             SaveUpdate.Visible = false;
-            SaveDelete.Visible = false;
+
             SaveCreate.Visible = true;
 
             txtID.Visible = false;
@@ -190,7 +178,11 @@ namespace GuizzoLtda
             cbCargo.Enabled = false;
 
             cbCargo.Visible = true;
+            txtID.Visible = true;
+            txtNome.Visible = true;
+            txtSenha.Visible = true;
 
+            labelsenha.Visible = true;
             labelcargo.Visible = true;
             labelid.Visible = true;
             labelnome.Visible = true;
@@ -198,7 +190,7 @@ namespace GuizzoLtda
 
             SaveCreate.Visible = false;
             SaveUpdate.Visible = false;
-            SaveDelete.Visible = true;
+
 
             MessageBox.Show("Selecione o ID do Usuario a ser deletado!");
             dataGridCRUD.Focus();
@@ -245,7 +237,7 @@ namespace GuizzoLtda
             dataGridCRUD.DataSource = conexaosql.verDados("SELECT * FROM tb_funcionario");
 
             SaveUpdate.Visible = false;
-            SaveDelete.Visible = false;
+
             SaveCreate.Visible = false;
 
             txtID.Visible = false;
@@ -283,6 +275,16 @@ namespace GuizzoLtda
         {
 
 
+        }
+
+        private void txtNome_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+        }
+
+        private void txtSenha_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = (e.KeyChar == (char)Keys.Space);
         }
     }
 }
