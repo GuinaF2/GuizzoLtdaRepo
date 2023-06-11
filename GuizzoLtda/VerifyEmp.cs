@@ -26,7 +26,7 @@ namespace GuizzoLtda
         private void button1_Click(object sender, EventArgs e)
         {
 
-            (dgVerEmp.DataSource as DataTable).DefaultView.RowFilter = String.Format("razao_social like '%" + txtRazaoSoc.Text + "%'");
+            (dgVerEmp.DataSource as DataTable).DefaultView.RowFilter = String.Format("SELECT razao_social, LOCATE( '%" + txtRazaoSoc.Text + "%'', razao_social) FROM tb_cliente WHERE locate('%" + txtRazaoSoc.Text + "%'', razao_social) > 0");
 
             dgVerEmp.Visible = true;
 

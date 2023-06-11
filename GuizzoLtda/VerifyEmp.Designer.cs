@@ -38,6 +38,7 @@
             dgVerEmp = new DataGridView();
             returnBtn = new Button();
             btnMenu = new Button();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)dgVerEmp).BeginInit();
             SuspendLayout();
             // 
@@ -45,7 +46,7 @@
             // 
             labelRazaoSoc.AutoSize = true;
             labelRazaoSoc.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            labelRazaoSoc.Location = new Point(40, 120);
+            labelRazaoSoc.Location = new Point(88, 134);
             labelRazaoSoc.Name = "labelRazaoSoc";
             labelRazaoSoc.Size = new Size(97, 21);
             labelRazaoSoc.TabIndex = 0;
@@ -54,7 +55,7 @@
             // txtRazaoSoc
             // 
             txtRazaoSoc.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtRazaoSoc.Location = new Point(40, 151);
+            txtRazaoSoc.Location = new Point(88, 165);
             txtRazaoSoc.Name = "txtRazaoSoc";
             txtRazaoSoc.Size = new Size(100, 29);
             txtRazaoSoc.TabIndex = 1;
@@ -64,8 +65,9 @@
             // 
             // btnConfirmar
             // 
+            btnConfirmar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnConfirmar.ForeColor = SystemColors.ControlText;
-            btnConfirmar.Location = new Point(40, 331);
+            btnConfirmar.Location = new Point(73, 331);
             btnConfirmar.Name = "btnConfirmar";
             btnConfirmar.Size = new Size(148, 36);
             btnConfirmar.TabIndex = 2;
@@ -76,7 +78,7 @@
             // txtCnpj
             // 
             txtCnpj.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtCnpj.Location = new Point(40, 82);
+            txtCnpj.Location = new Point(88, 96);
             txtCnpj.Name = "txtCnpj";
             txtCnpj.Size = new Size(100, 29);
             txtCnpj.TabIndex = 4;
@@ -85,7 +87,7 @@
             // 
             labelCnpj.AutoSize = true;
             labelCnpj.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            labelCnpj.Location = new Point(40, 51);
+            labelCnpj.Location = new Point(88, 65);
             labelCnpj.Name = "labelCnpj";
             labelCnpj.Size = new Size(46, 21);
             labelCnpj.TabIndex = 3;
@@ -94,7 +96,7 @@
             // txtInscriEstad
             // 
             txtInscriEstad.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtInscriEstad.Location = new Point(40, 226);
+            txtInscriEstad.Location = new Point(88, 240);
             txtInscriEstad.Name = "txtInscriEstad";
             txtInscriEstad.Size = new Size(100, 29);
             txtInscriEstad.TabIndex = 6;
@@ -103,7 +105,7 @@
             // 
             labelInscEstad.AutoSize = true;
             labelInscEstad.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            labelInscEstad.Location = new Point(40, 195);
+            labelInscEstad.Location = new Point(88, 209);
             labelInscEstad.Name = "labelInscEstad";
             labelInscEstad.Size = new Size(133, 21);
             labelInscEstad.TabIndex = 5;
@@ -143,7 +145,7 @@
             btnMenu.BackColor = SystemColors.Control;
             btnMenu.BackgroundImage = Properties.Resources._688879_arrows_512x512;
             btnMenu.BackgroundImageLayout = ImageLayout.Stretch;
-            btnMenu.Location = new Point(0, 12);
+            btnMenu.Location = new Point(0, 0);
             btnMenu.Name = "btnMenu";
             btnMenu.Size = new Size(33, 36);
             btnMenu.TabIndex = 9;
@@ -151,11 +153,22 @@
             btnMenu.UseVisualStyleBackColor = false;
             btnMenu.Click += btnMenu_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 21.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(73, 9);
+            label1.Name = "label1";
+            label1.Size = new Size(236, 40);
+            label1.TabIndex = 10;
+            label1.Text = "Verificar Empresa";
+            // 
             // VerifyEmp
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1064, 681);
+            Controls.Add(label1);
             Controls.Add(btnMenu);
             Controls.Add(returnBtn);
             Controls.Add(dgVerEmp);
@@ -187,5 +200,6 @@
         private DataGridView dgVerEmp;
         private Button returnBtn;
         private Button btnMenu;
+        private Label label1;
     }
 }

@@ -23,38 +23,17 @@ namespace GuizzoLtda
             InitializeComponent();
         }
 
-        private void AdministradorCRUD_Load_1(object sender, EventArgs e)
-        {
-            dataGridCRUD.DataSource = conexaosql.verDados("SELECT * FROM tb_funcionario");
-
-            SaveUpdate.Visible = false;
-            SaveDelete.Visible = false;
-            SaveCreate.Visible = false;
-
-            txtID.Visible = false;
-            txtNome.Visible = false;
-            txtSenha.Visible = false;
-            cbCargo.Visible = false;
-
-            labelcargo.Visible = false;
-            labelid.Visible = false;
-            labelnome.Visible = false;
-            labelsenha.Visible = false;
-
-        }
-
-
         private void dataGridCRUD_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
-        private void SaveCreate_Click(object sender, EventArgs e)
+        private void SaveCreate_Click_1(object sender, EventArgs e)
         {
-            UsuarioModelo.NomeUser = txtID.Text;
+            UsuarioModelo.NomeUser = txtNome.Text;
             UsuarioModelo.SenhaUser = txtSenha.Text;
 
-            if (txtID.Text == "" || txtSenha.Text == "")
+            if (txtNome.Text == "" || txtSenha.Text == "")
             {
                 MessageBox.Show("Erro no cadastro.");
             }
@@ -74,7 +53,7 @@ namespace GuizzoLtda
             }
         }
 
-        private void SaveDelete_Click(object sender, EventArgs e)
+        private void SaveDelete_Click_1(object sender, EventArgs e)
         {
             UsuarioModelo.CodUsuario = Convert.ToInt32(txtID.Text);
             var resposta = DialogResult;
@@ -95,7 +74,7 @@ namespace GuizzoLtda
             fadmincrud.Show();
         }
 
-        private void SaveUpdate_Click(object sender, EventArgs e)
+        private void SaveUpdate_Click_1(object sender, EventArgs e)
         {
             UsuarioModelo.CodUsuario = Convert.ToInt32(txtID.Text);
             UsuarioModelo.NomeUser = txtNome.Text;
@@ -118,34 +97,15 @@ namespace GuizzoLtda
             this.InitializeComponent();
         }
 
-        private void cbCargo_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void txtSenha_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtNome_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtID_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnReturn_Click(object sender, EventArgs e)
+        private void btnReturn_Click_2(object sender, EventArgs e)
         {
             AdminMenu fmenureturn = new AdminMenu();
             this.Hide();
             fmenureturn.Show();
         }
 
-        private void btnAtualizar_Click(object sender, EventArgs e)
+        private void btnAtualizar_Click_1(object sender, EventArgs e)
         {
             SaveUpdate.Visible = true;
             SaveDelete.Visible = false;
@@ -162,7 +122,7 @@ namespace GuizzoLtda
             labelsenha.Visible = true;
         }
 
-        private void btnCad_Click(object sender, EventArgs e)
+        private void btnCad_Click_1(object sender, EventArgs e)
         {
             SaveUpdate.Visible = false;
             SaveDelete.Visible = false;
@@ -179,7 +139,7 @@ namespace GuizzoLtda
             labelsenha.Visible = true;
         }
 
-        private void btnApaga_Click(object sender, EventArgs e)
+        private void btnApaga_Click_1(object sender, EventArgs e)
         {
             SaveCreate.Visible = false;
             SaveUpdate.Visible = false;
@@ -213,11 +173,6 @@ namespace GuizzoLtda
             }
         }
 
-        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
         private void btnReturn_Click_1(object sender, EventArgs e)
         {
             AdminMenu fmenureturn = new AdminMenu();
@@ -226,6 +181,40 @@ namespace GuizzoLtda
         }
 
         private void CRUDUser_Load(object sender, EventArgs e)
+        {
+            dataGridCRUD.DataSource = conexaosql.verDados("SELECT * FROM tb_funcionario");
+
+            SaveUpdate.Visible = false;
+            SaveDelete.Visible = false;
+            SaveCreate.Visible = false;
+
+            txtID.Visible = false;
+            txtNome.Visible = false;
+            txtSenha.Visible = false;
+            cbCargo.Visible = false;
+
+            labelcargo.Visible = false;
+            labelid.Visible = false;
+            labelnome.Visible = false;
+            labelsenha.Visible = false;
+        }
+
+        private void dataGridCRUD_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txtID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNome_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSenha_TextChanged(object sender, EventArgs e)
         {
 
         }
