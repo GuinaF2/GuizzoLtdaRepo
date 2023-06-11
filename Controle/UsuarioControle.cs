@@ -41,7 +41,7 @@ namespace Controle
             catch (Exception ex)
             {
                 //Lança erros do sistema
-                throw new Exception(ex.Message);
+                MessageBox.Show("Credenciais Já Utilizadas!");
             }
             return valorCadastro;
         }

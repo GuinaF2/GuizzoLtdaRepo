@@ -45,11 +45,9 @@ namespace GuizzoLtda
                     CRUDUser fadmincrud = new CRUDUser();
                     this.Hide();
                     fadmincrud.Show();
+                    dataGridCRUD.Visible = true;
                 }
-                else
-                {
-                    MessageBox.Show("Erro no cadastro.");
-                }
+                
             }
         }
 
@@ -76,25 +74,38 @@ namespace GuizzoLtda
 
         private void SaveUpdate_Click_1(object sender, EventArgs e)
         {
-            UsuarioModelo.CodUsuario = Convert.ToInt32(txtID.Text);
-            UsuarioModelo.NomeUser = txtNome.Text;
-            UsuarioModelo.SenhaUser = txtSenha.Text;
-            UsuarioModelo.CodCargo = Convert.ToInt32(cbCargo.Text);
-
-            if (Controle.AtualizarUsuario(UsuarioModelo) == true)
-            {
-                MessageBox.Show("Cadastro Atualizado.");
-
-                CRUDUser fadmincrud = new CRUDUser();
-                this.Hide();
-                fadmincrud.Show();
+            if (txtID.Text == "") 
+            { 
+                MessageBox.Show("Selecione o Id do Usuario");
+                
             }
             else
             {
-                MessageBox.Show("Erro na atualização.");
+                UsuarioModelo.CodUsuario = Convert.ToInt32(txtID.Text);
+                UsuarioModelo.NomeUser = txtNome.Text;
+                UsuarioModelo.SenhaUser = txtSenha.Text;
+                UsuarioModelo.CodCargo = Convert.ToInt32(cbCargo.Text);
+
+                var resposta = DialogResult;
+                resposta = MessageBox.Show("Tem certeza que deseja atualizar os dados do usuário?", "! Aviso !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (resposta == DialogResult.Yes)
+                {
+                    if (Controle.AtualizarUsuario(UsuarioModelo) == true)
+                    {
+                        MessageBox.Show("Dados Atualizados.");
+                    }
+                    CRUDUser fadmincrud = new CRUDUser();
+                    this.Hide();
+                    fadmincrud.Show();
+                }
+                else if (resposta == DialogResult.No)
+                {
+                    MessageBox.Show("Processo cancelado.");
+                }
+                this.Controls.Clear();
+                this.InitializeComponent();
             }
-            this.Controls.Clear();
-            this.InitializeComponent();
         }
 
 
@@ -107,9 +118,21 @@ namespace GuizzoLtda
 
         private void btnAtualizar_Click_1(object sender, EventArgs e)
         {
+            txtNome.Text = String.Empty;
+            txtSenha.Text = String.Empty;
+            txtID.Text = String.Empty;
+            cbCargo.Text = String.Empty;
+
+            dataGridCRUD.Visible = true;
+
             SaveUpdate.Visible = true;
             SaveDelete.Visible = false;
             SaveCreate.Visible = false;
+
+
+            txtID.Enabled = false;
+            txtNome.Enabled = true;
+            txtSenha.Enabled = true;
 
             txtID.Visible = true;
             txtNome.Visible = true;
@@ -120,34 +143,71 @@ namespace GuizzoLtda
             labelid.Visible = true;
             labelnome.Visible = true;
             labelsenha.Visible = true;
+
+            MessageBox.Show("Selecione o ID do Usuario a ser alterado!");
+            dataGridCRUD.Focus();
         }
 
         private void btnCad_Click_1(object sender, EventArgs e)
         {
+            txtNome.Text = String.Empty;
+            txtSenha.Text = String.Empty;
+            txtID.Text = String.Empty;
+            cbCargo.Text = String.Empty;
+
+            dataGridCRUD.Visible = false;
+            txtID.Enabled = true;
+            txtNome.Enabled = true;
+            txtSenha.Enabled = true;
+
             SaveUpdate.Visible = false;
             SaveDelete.Visible = false;
             SaveCreate.Visible = true;
 
-            txtID.Visible = true;
+            txtID.Visible = false;
             txtNome.Visible = true;
             txtSenha.Visible = true;
             cbCargo.Visible = false;
 
             labelcargo.Visible = false;
-            labelid.Visible = true;
+            labelid.Visible = false;
             labelnome.Visible = true;
             labelsenha.Visible = true;
         }
 
         private void btnApaga_Click_1(object sender, EventArgs e)
         {
+            dataGridCRUD.Visible = true;
+
+            txtNome.Text = String.Empty;
+            txtSenha.Text = String.Empty;
+            txtID.Text = String.Empty;
+            cbCargo.Text = String.Empty;
+
+            txtID.Enabled = false;
+            txtNome.Enabled = false;
+            txtSenha.Enabled = false;
+            cbCargo.Enabled = false;
+
+            cbCargo.Visible = true;
+
+            labelcargo.Visible = true;
+            labelid.Visible = true;
+            labelnome.Visible = true;
+            labelsenha.Enabled = true;
+
             SaveCreate.Visible = false;
             SaveUpdate.Visible = false;
             SaveDelete.Visible = true;
+
+            MessageBox.Show("Selecione o ID do Usuario a ser deletado!");
+            dataGridCRUD.Focus();
+
         }
 
         private void dataGridCRUD_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+
             try
             {
 
@@ -216,6 +276,12 @@ namespace GuizzoLtda
 
         private void txtSenha_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void txtNome_Click(object sender, EventArgs e)
+        {
+
 
         }
     }

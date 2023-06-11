@@ -173,7 +173,7 @@
             // 
             labelnome.AutoSize = true;
             labelnome.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            labelnome.Location = new Point(135, 126);
+            labelnome.Location = new Point(135, 139);
             labelnome.Name = "labelnome";
             labelnome.Size = new Size(70, 30);
             labelnome.TabIndex = 34;
@@ -191,10 +191,11 @@
             // txtNome
             // 
             txtNome.BackColor = Color.White;
-            txtNome.Location = new Point(135, 159);
+            txtNome.Location = new Point(135, 172);
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(125, 23);
             txtNome.TabIndex = 32;
+            txtNome.Click += txtNome_Click;
             txtNome.TextChanged += txtNome_TextChanged;
             // 
             // txtID
@@ -232,7 +233,7 @@
             // SaveDelete
             // 
             SaveDelete.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            SaveDelete.Location = new Point(50, 312);
+            SaveDelete.Location = new Point(50, 368);
             SaveDelete.Name = "SaveDelete";
             SaveDelete.Size = new Size(300, 50);
             SaveDelete.TabIndex = 28;
