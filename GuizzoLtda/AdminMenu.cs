@@ -17,7 +17,7 @@ namespace GuizzoLtda
             InitializeComponent();
         }
 
-       
+
 
         private void pedidosToolStripMenuItem_Click(object sender, EventArgs e)
         {

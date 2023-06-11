@@ -318,6 +318,7 @@
             Controls.Add(SaveDelete);
             Controls.Add(SaveUpdate);
             Name = "CRUDVeiculo";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "CRUDVeiculo";
             Load += CRUDVeiculo_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridVeiculo).EndInit();

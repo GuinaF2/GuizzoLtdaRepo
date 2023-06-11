@@ -54,7 +54,7 @@ namespace GuizzoLtda
             MotoristaModelo.CodVeiculo = Convert.ToInt32(txtIdVeiculo.Text);
             MotoristaModelo.CodMotorista = Convert.ToInt32(txtIdMoto.Text);
 
-            if (txtCpf.Text == "" || txtRg.Text == "" || txtNome.Text == "" || txtCnh.Text == "" || cbTipoCnh.Text =="")
+            if (txtCpf.Text == "" || txtRg.Text == "" || txtNome.Text == "" || txtCnh.Text == "" || cbTipoCnh.Text == "")
             {
                 MessageBox.Show("Erro no cadastro.");
             }

@@ -134,6 +134,7 @@
             Controls.Add(txtLogin);
             Controls.Add(label1);
             Name = "FuncionarioCadLog";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FuncionarioCadLog";
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();

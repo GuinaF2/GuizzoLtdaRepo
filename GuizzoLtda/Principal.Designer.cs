@@ -141,6 +141,7 @@
             Controls.Add(PBEmpresa);
             Controls.Add(button1);
             Name = "Principal";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Selecione Usuario";
             Load += Principal_Load_1;
             ((System.ComponentModel.ISupportInitialize)PBEmpresa).EndInit();

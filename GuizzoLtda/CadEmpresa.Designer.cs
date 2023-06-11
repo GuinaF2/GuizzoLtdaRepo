@@ -371,6 +371,7 @@
             Controls.Add(tabControl1);
             Controls.Add(btnCadEndereco);
             Name = "CadEmpresa";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "CadEmpresa";
             ((System.ComponentModel.ISupportInitialize)pbFotoEmp).EndInit();
             tabControl1.ResumeLayout(false);

@@ -35,6 +35,7 @@
             btnAtualizar = new ToolStripButton();
             toolStripSeparator1 = new ToolStripSeparator();
             btnCad = new ToolStripButton();
+            toolStripSeparator2 = new ToolStripSeparator();
             ajudaToolStripButton = new ToolStripButton();
             labelcargo = new Label();
             cbCargo = new ComboBox();
@@ -46,7 +47,6 @@
             labelid = new Label();
             SaveCreate = new Button();
             SaveUpdate = new Button();
-            toolStripSeparator2 = new ToolStripSeparator();
             ((System.ComponentModel.ISupportInitialize)dataGridCRUD).BeginInit();
             toolStrip1.SuspendLayout();
             SuspendLayout();
@@ -108,6 +108,11 @@
             btnCad.Size = new Size(61, 22);
             btnCad.Text = "Cadastrar";
             btnCad.Click += btnCad_Click_1;
+            // 
+            // toolStripSeparator2
+            // 
+            toolStripSeparator2.Name = "toolStripSeparator2";
+            toolStripSeparator2.Size = new Size(6, 25);
             // 
             // ajudaToolStripButton
             // 
@@ -221,11 +226,6 @@
             SaveUpdate.Visible = false;
             SaveUpdate.Click += SaveUpdate_Click_1;
             // 
-            // toolStripSeparator2
-            // 
-            toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(6, 25);
-            // 
             // CRUDUser
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -244,6 +244,7 @@
             Controls.Add(SaveCreate);
             Controls.Add(SaveUpdate);
             Name = "CRUDUser";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "AdministradorCRUD";
             Load += CRUDUser_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridCRUD).EndInit();

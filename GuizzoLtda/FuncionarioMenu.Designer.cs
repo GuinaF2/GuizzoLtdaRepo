@@ -142,6 +142,7 @@
             Controls.Add(toolStrip1);
             Controls.Add(pictureBox1);
             Name = "FuncionarioMenu";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = " ";
             Load += FuncionarioMenu_Load;
             toolStrip1.ResumeLayout(false);

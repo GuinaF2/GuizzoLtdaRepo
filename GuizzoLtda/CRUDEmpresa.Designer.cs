@@ -260,6 +260,7 @@
             Controls.Add(SaveDelete);
             Controls.Add(SaveUpdate);
             Name = "CRUDEmpresa";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "CRUDEmpresa";
             Load += CRUDEmpresa_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridCRUDEmpresa).EndInit();

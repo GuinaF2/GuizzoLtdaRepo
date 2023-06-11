@@ -261,6 +261,7 @@
             Controls.Add(SaveDelete);
             Controls.Add(SaveUpdate);
             Name = "CRUDPedido";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "CRUDPedido";
             ((System.ComponentModel.ISupportInitialize)dataGridCRUD).EndInit();
             toolStrip1.ResumeLayout(false);

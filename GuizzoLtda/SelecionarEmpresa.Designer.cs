@@ -97,6 +97,7 @@
             Controls.Add(pbLogoEmp);
             Controls.Add(textBox1);
             Name = "SelecionarEmpresa";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "SelecionarEmpresa";
             Load += SelecionarEmpresa_Load_1;
             ((System.ComponentModel.ISupportInitialize)pbLogoEmp).EndInit();

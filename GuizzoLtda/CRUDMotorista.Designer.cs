@@ -363,6 +363,7 @@
             Controls.Add(SaveDelete);
             Controls.Add(SaveUpdate);
             Name = "CRUDMotorista";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "CRUDMotorista";
             Load += CRUDMotorista_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridMotorista).EndInit();
