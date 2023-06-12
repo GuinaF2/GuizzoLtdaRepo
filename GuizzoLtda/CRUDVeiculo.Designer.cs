@@ -49,11 +49,11 @@
             txtIdVeic = new TextBox();
             labelIdVeic = new Label();
             cbTipo = new ComboBox();
-            dataSeguro = new MaskedTextBox();
             txtRenavam = new TextBox();
             labelrenavam = new Label();
             labelespecifics = new Label();
             labeldados = new Label();
+            dataSeguro = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridVeiculo).BeginInit();
             toolStrip1.SuspendLayout();
             SuspendLayout();
@@ -158,16 +158,17 @@
             // txtPlaca
             // 
             txtPlaca.BackColor = Color.White;
-            txtPlaca.Location = new Point(262, 253);
+            txtPlaca.Location = new Point(239, 251);
             txtPlaca.Name = "txtPlaca";
             txtPlaca.Size = new Size(125, 23);
             txtPlaca.TabIndex = 18;
+            txtPlaca.KeyPress += txtPlaca_KeyPress;
             // 
             // labelplaca
             // 
             labelplaca.AutoSize = true;
             labelplaca.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            labelplaca.Location = new Point(255, 220);
+            labelplaca.Location = new Point(232, 218);
             labelplaca.Name = "labelplaca";
             labelplaca.Size = new Size(135, 30);
             labelplaca.TabIndex = 17;
@@ -192,7 +193,7 @@
             SaveDelete.Name = "SaveDelete";
             SaveDelete.Size = new Size(300, 50);
             SaveDelete.TabIndex = 15;
-            SaveDelete.Text = "Salvar Alteração";
+            SaveDelete.Text = "Deletar Usuário";
             SaveDelete.UseVisualStyleBackColor = true;
             SaveDelete.Visible = false;
             SaveDelete.Click += SaveDelete_Click;
@@ -213,7 +214,7 @@
             // 
             labelseguro.AutoSize = true;
             labelseguro.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            labelseguro.Location = new Point(255, 147);
+            labelseguro.Location = new Point(232, 145);
             labelseguro.Name = "labelseguro";
             labelseguro.Size = new Size(128, 30);
             labelseguro.TabIndex = 29;
@@ -240,6 +241,7 @@
             // 
             // cbTipo
             // 
+            cbTipo.DropDownStyle = ComboBoxStyle.DropDownList;
             cbTipo.FormattingEnabled = true;
             cbTipo.Items.AddRange(new object[] { "Carro", "Moto", "Caminhão", "Fiorino", "Manual" });
             cbTipo.Location = new Point(50, 189);
@@ -247,29 +249,19 @@
             cbTipo.Size = new Size(121, 23);
             cbTipo.TabIndex = 32;
             // 
-            // dataSeguro
-            // 
-            dataSeguro.Location = new Point(262, 180);
-            dataSeguro.Mask = "00/00/0000";
-            dataSeguro.Name = "dataSeguro";
-            dataSeguro.PromptChar = ' ';
-            dataSeguro.Size = new Size(66, 23);
-            dataSeguro.TabIndex = 33;
-            dataSeguro.MaskInputRejected += dataSeguro_MaskInputRejected;
-            dataSeguro.KeyPress += dataSeguro_KeyPress_1;
-            // 
             // txtRenavam
             // 
-            txtRenavam.Location = new Point(262, 109);
+            txtRenavam.Location = new Point(239, 107);
             txtRenavam.Name = "txtRenavam";
             txtRenavam.Size = new Size(88, 23);
             txtRenavam.TabIndex = 34;
+            txtRenavam.KeyPress += txtRenavam_KeyPress;
             // 
             // labelrenavam
             // 
             labelrenavam.AutoSize = true;
             labelrenavam.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            labelrenavam.Location = new Point(262, 76);
+            labelrenavam.Location = new Point(239, 74);
             labelrenavam.Name = "labelrenavam";
             labelrenavam.Size = new Size(98, 30);
             labelrenavam.TabIndex = 36;
@@ -289,22 +281,30 @@
             // 
             labeldados.AutoSize = true;
             labeldados.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            labeldados.Location = new Point(262, 34);
+            labeldados.Location = new Point(239, 32);
             labeldados.Name = "labeldados";
             labeldados.Size = new Size(54, 21);
             labeldados.TabIndex = 38;
             labeldados.Text = "Dados";
+            // 
+            // dataSeguro
+            // 
+            dataSeguro.Location = new Point(239, 178);
+            dataSeguro.Name = "dataSeguro";
+            dataSeguro.Size = new Size(100, 23);
+            dataSeguro.TabIndex = 39;
+            dataSeguro.KeyPress += dataSeguro_KeyPress_1;
             // 
             // CRUDVeiculo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(dataSeguro);
             Controls.Add(labeldados);
             Controls.Add(labelespecifics);
             Controls.Add(labelrenavam);
             Controls.Add(txtRenavam);
-            Controls.Add(dataSeguro);
             Controls.Add(cbTipo);
             Controls.Add(txtIdVeic);
             Controls.Add(labelIdVeic);
@@ -350,10 +350,10 @@
         private TextBox txtIdVeic;
         private Label labelIdVeic;
         private ComboBox cbTipo;
-        private MaskedTextBox dataSeguro;
         private TextBox txtRenavam;
         private Label labelrenavam;
         private Label labelespecifics;
         private Label labeldados;
+        private TextBox dataSeguro;
     }
 }

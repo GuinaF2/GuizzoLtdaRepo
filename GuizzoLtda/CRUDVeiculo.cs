@@ -26,34 +26,66 @@ namespace GuizzoLtda
 
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
+            txtIdVeic.Text = String.Empty;
+            txtRenavam.Text = String.Empty;
+            txtPlaca.Text = String.Empty;
+            dataSeguro.Text = String.Empty;
+            cbTipo.Text = String.Empty;
+
             SaveUpdate.Visible = true;
             SaveDelete.Visible = false;
             SaveCreate.Visible = false;
+
+            cbTipo.Enabled=false;
+            txtIdVeic.Enabled = false;
+            txtRenavam.Enabled = false;
+            txtPlaca.Enabled = true;
+            dataSeguro.Enabled = true;
 
             txtIdVeic.Visible = true;
             txtPlaca.Visible = true;
             cbTipo.Visible = true;
             dataSeguro.Visible = true;
             txtRenavam.Visible = true;
+
+            labelespecifics.Visible = true;
+            labeldados.Visible = true;
 
             labelrenavam.Visible = true;
             labelIdVeic.Visible = true;
             labelplaca.Visible = true;
             labeltipo.Visible = true;
             labelseguro.Visible = true;
+            dataGridVeiculo.Visible = true;
         }
 
         private void btnCad_Click(object sender, EventArgs e)
         {
+            txtIdVeic.Text = String.Empty;
+            txtRenavam.Text = String.Empty;
+            txtPlaca.Text = String.Empty;
+            dataSeguro.Text = String.Empty;
+            cbTipo.Text = String.Empty;
+
             SaveUpdate.Visible = false;
             SaveDelete.Visible = false;
             SaveCreate.Visible = true;
+
+            txtIdVeic.Enabled = false;
+            txtRenavam.Enabled = true;
+            txtPlaca.Enabled = true;
+            dataSeguro.Enabled = true;
+            cbTipo.Enabled = true;
 
             txtIdVeic.Visible = true;
             txtPlaca.Visible = true;
             cbTipo.Visible = true;
             dataSeguro.Visible = true;
             txtRenavam.Visible = true;
+            dataGridVeiculo.Visible = false;
+
+            labelespecifics.Visible = true;
+            labeldados.Visible = true;
 
             labelrenavam.Visible = true;
             labelIdVeic.Visible = true;
@@ -64,6 +96,18 @@ namespace GuizzoLtda
 
         private void btnApaga_Click(object sender, EventArgs e)
         {
+            txtIdVeic.Text = String.Empty;
+            txtRenavam.Text = String.Empty;
+            txtPlaca.Text = String.Empty;
+            dataSeguro.Text = String.Empty;
+            cbTipo.Text = String.Empty;
+
+            txtIdVeic.Enabled = false;
+            txtRenavam.Enabled = false;
+            txtPlaca.Enabled = false;
+            cbTipo.Enabled = false;
+            dataSeguro.Enabled = false;
+
             SaveUpdate.Visible = false;
             SaveDelete.Visible = true;
             SaveCreate.Visible = false;
@@ -73,6 +117,10 @@ namespace GuizzoLtda
             cbTipo.Visible = true;
             dataSeguro.Visible = true;
             txtRenavam.Visible = true;
+            dataGridVeiculo.Visible = true;
+
+            labelespecifics.Visible = true;
+            labeldados.Visible = true;
 
             labelrenavam.Visible = true;
             labelIdVeic.Visible = true;
@@ -95,6 +143,9 @@ namespace GuizzoLtda
             dataSeguro.Visible = false;
             txtRenavam.Visible = false;
 
+            labelespecifics.Visible = false;
+            labeldados.Visible = false;
+
             labelrenavam.Visible = false;
             labelIdVeic.Visible = false;
             labelseguro.Visible = false;
@@ -104,14 +155,19 @@ namespace GuizzoLtda
 
         private void SaveDelete_Click(object sender, EventArgs e)
         {
+
             VeiculoModelo.CodVeiculo = Convert.ToInt32(txtIdVeic.Text);
             var resposta = DialogResult;
-            resposta = MessageBox.Show("Tem certeza que deseja deletar o Veiculo?", "! Aviso !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            resposta = MessageBox.Show("Tem Certeza Que Deseja Deletar o Veiculo Selecionado?", "! Aviso !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
             if (resposta == DialogResult.Yes)
             {
                 if (Controle.DeletarVeiculo(VeiculoModelo) == true)
                 {
                     MessageBox.Show("Veiculo deletado.");
+                    CRUDVeiculo fveiculocrud = new CRUDVeiculo();
+                    this.Hide();
+                    fveiculocrud.Show();
                 }
             }
             else if (resposta == DialogResult.No)
@@ -150,26 +206,38 @@ namespace GuizzoLtda
 
         private void SaveUpdate_Click(object sender, EventArgs e)
         {
-            VeiculoModelo.CodVeiculo = Convert.ToInt32(txtIdVeic.Text);
-            VeiculoModelo.PlacaVeiculo = txtPlaca.Text;
-            VeiculoModelo.TipoVeiculo = cbTipo.Text;
-            VeiculoModelo.SeguroVeiculo = dataSeguro.Text;
-            VeiculoModelo.RenavamVeiculo = txtRenavam.Text;
-
-            if (Controle.AtualizarVeiculo(VeiculoModelo) == true)
+            if (txtIdVeic.Text == "")
             {
-                MessageBox.Show("Cadastro Atualizado.");
-
-                CRUDVeiculo fveiculocrud = new CRUDVeiculo();
-                this.Hide();
-                fveiculocrud.Show();
+                MessageBox.Show("Selecione o Id para ser atualizado");
+                txtIdVeic.Text = String.Empty;
+                txtRenavam.Text = String.Empty;
+                txtPlaca.Text = String.Empty;
+                dataSeguro.Text = String.Empty;
+                cbTipo.Text = String.Empty;
             }
             else
             {
-                MessageBox.Show("Erro na atualização.");
+                VeiculoModelo.CodVeiculo = Convert.ToInt32(txtIdVeic.Text);
+                VeiculoModelo.PlacaVeiculo = txtPlaca.Text;
+                VeiculoModelo.TipoVeiculo = cbTipo.Text;
+                VeiculoModelo.SeguroVeiculo = dataSeguro.Text;
+                VeiculoModelo.RenavamVeiculo = txtRenavam.Text;
+
+                if (Controle.AtualizarVeiculo(VeiculoModelo) == true)
+                {
+                    MessageBox.Show("Cadastro Atualizado.");
+
+                    CRUDVeiculo fveiculocrud = new CRUDVeiculo();
+                    this.Hide();
+                    fveiculocrud.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Erro na atualização.");
+                }
+                this.Controls.Clear();
+                this.InitializeComponent();
             }
-            this.Controls.Clear();
-            this.InitializeComponent();
         }
 
         private void dataGridVeiculo_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -246,5 +314,22 @@ namespace GuizzoLtda
                 e.Handled = true;
             }
         }
+
+        private void txtRenavam_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            txtRenavam.MaxLength = 11;
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtPlaca_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            txtPlaca.MaxLength = 7;
+            e.Handled = (e.KeyChar == (char)Keys.Space);
+        }
+
+       
     }
 }

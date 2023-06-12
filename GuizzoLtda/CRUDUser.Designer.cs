@@ -134,6 +134,7 @@
             // 
             // cbCargo
             // 
+            cbCargo.DropDownStyle = ComboBoxStyle.DropDownList;
             cbCargo.FormattingEnabled = true;
             cbCargo.Items.AddRange(new object[] { "1", "2" });
             cbCargo.Location = new Point(197, 291);

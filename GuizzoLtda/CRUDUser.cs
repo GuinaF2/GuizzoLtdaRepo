@@ -279,11 +279,13 @@ namespace GuizzoLtda
 
         private void txtNome_KeyPress(object sender, KeyPressEventArgs e)
         {
+            //Só permite Letras, não permite espaço
             e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
         }
 
         private void txtSenha_KeyPress(object sender, KeyPressEventArgs e)
         {
+            //Permite todo tipo de entrada, não aceita espaços
             e.Handled = (e.KeyChar == (char)Keys.Space);
         }
     }
