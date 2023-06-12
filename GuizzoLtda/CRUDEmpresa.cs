@@ -53,8 +53,20 @@ namespace GuizzoLtda
 
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
+            txtIdEmpresa.Text = String.Empty;
+            txtCnpj.Text = String.Empty;
+            txtInscEstadual.Text = String.Empty;
+            txtRazaoSocial.Text = String.Empty;
+            btnFoto.Text = String.Empty;
+
             SaveUpdate.Visible = true;
             SaveDelete.Visible = false;
+
+            txtIdEmpresa.Enabled = false;
+            txtCnpj.Enabled = true;
+            txtInscEstadual.Enabled = true;
+            txtRazaoSocial.Enabled = true;
+            btnFoto.Enabled = true;
 
             txtIdEmpresa.Visible = true;
             txtCnpj.Visible = true;
@@ -71,8 +83,20 @@ namespace GuizzoLtda
 
         private void btnApaga_Click(object sender, EventArgs e)
         {
+            txtIdEmpresa.Text = String.Empty;
+            txtCnpj.Text = String.Empty;
+            txtInscEstadual.Text = String.Empty;
+            txtRazaoSocial.Text = String.Empty;
+            btnFoto.Text = String.Empty;
+
             SaveUpdate.Visible = false;
             SaveDelete.Visible = true;
+
+            txtIdEmpresa.Enabled = false;
+            txtCnpj.Enabled = false;
+            txtInscEstadual.Enabled = false;
+            txtRazaoSocial.Enabled = false;
+            btnFoto.Enabled = false;
 
             txtIdEmpresa.Visible = true;
             txtCnpj.Visible = true;
