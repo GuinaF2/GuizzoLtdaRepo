@@ -32,7 +32,6 @@
             btnAdmin = new Button();
             label1 = new Label();
             PBEmpresa = new PictureBox();
-            btnFotoEmp = new Button();
             label2 = new Label();
             linkCadEmp = new LinkLabel();
             button1 = new Button();
@@ -83,19 +82,6 @@
             PBEmpresa.TabStop = false;
             PBEmpresa.Click += PBEmpresa_Click;
             // 
-            // btnFotoEmp
-            // 
-            btnFotoEmp.Anchor = AnchorStyles.Top;
-            btnFotoEmp.AutoSize = true;
-            btnFotoEmp.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            btnFotoEmp.Location = new Point(27, 328);
-            btnFotoEmp.Name = "btnFotoEmp";
-            btnFotoEmp.Size = new Size(305, 52);
-            btnFotoEmp.TabIndex = 4;
-            btnFotoEmp.Text = "Selecionar";
-            btnFotoEmp.UseVisualStyleBackColor = true;
-            btnFotoEmp.Click += btnFotoEmp_Click;
-            // 
             // label2
             // 
             label2.AutoSize = true;
@@ -134,7 +120,6 @@
             ClientSize = new Size(800, 450);
             Controls.Add(linkCadEmp);
             Controls.Add(label2);
-            Controls.Add(btnFotoEmp);
             Controls.Add(label1);
             Controls.Add(btnAdmin);
             Controls.Add(btnUsuario);
@@ -156,7 +141,6 @@
         private Button btnAdmin;
         private Label label1;
         public PictureBox PBEmpresa;
-        private Button btnFotoEmp;
         private Label label2;
         private LinkLabel linkCadEmp;
         private Button button1;

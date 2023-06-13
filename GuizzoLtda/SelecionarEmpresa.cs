@@ -28,7 +28,7 @@ namespace GuizzoLtda
             Program.thePictureBox = pbLogoEmp;
         }
 
-        
+
 
 
 
@@ -61,17 +61,11 @@ namespace GuizzoLtda
 
         private void dgViewSelEmp_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            Principal fprincipalreturn = new Principal();
+            
+            Inicio finicioreturn = new Inicio();
             this.Hide();
-            fprincipalreturn.Show();
-
-        }
-
-        private void toolStripButton1_Click(object sender, EventArgs e)
-        {
-            Principal fprincipalreturn = new Principal();
-            this.Hide();
-            fprincipalreturn.Show();
+            finicioreturn.Show();
+            
         }
 
         private void pbLogoEmp_Click(object sender, EventArgs e)

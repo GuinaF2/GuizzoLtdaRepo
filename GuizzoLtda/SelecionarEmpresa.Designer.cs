@@ -32,10 +32,8 @@
             dgViewSelEmp = new DataGridView();
             textBox1 = new TextBox();
             toolStrip1 = new ToolStrip();
-            toolStripButton1 = new ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)pbLogoEmp).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgViewSelEmp).BeginInit();
-            toolStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // pbLogoEmp
@@ -72,23 +70,12 @@
             // 
             // toolStrip1
             // 
-            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton1 });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(800, 25);
             toolStrip1.TabIndex = 4;
             toolStrip1.Text = "toolStrip1";
             toolStrip1.ItemClicked += toolStrip1_ItemClicked;
-            // 
-            // toolStripButton1
-            // 
-            toolStripButton1.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            toolStripButton1.Image = Properties.Resources._688879_arrows_512x512;
-            toolStripButton1.ImageTransparentColor = Color.Magenta;
-            toolStripButton1.Name = "toolStripButton1";
-            toolStripButton1.Size = new Size(23, 22);
-            toolStripButton1.Text = "toolStripButton1";
-            toolStripButton1.Click += toolStripButton1_Click;
             // 
             // SelecionarEmpresa
             // 
@@ -105,8 +92,6 @@
             Load += SelecionarEmpresa_Load_1;
             ((System.ComponentModel.ISupportInitialize)pbLogoEmp).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgViewSelEmp).EndInit();
-            toolStrip1.ResumeLayout(false);
-            toolStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -117,6 +102,5 @@
         private DataGridView dgViewSelEmp;
         private TextBox textBox1;
         private ToolStrip toolStrip1;
-        private ToolStripButton toolStripButton1;
     }
 }
