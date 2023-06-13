@@ -143,6 +143,7 @@
             Name = "Principal";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Selecione Usuario";
+            Activated += Principal_Activated;
             Load += Principal_Load_1;
             ((System.ComponentModel.ISupportInitialize)PBEmpresa).EndInit();
             ResumeLayout(false);
@@ -154,7 +155,7 @@
         private Button btnUsuario;
         private Button btnAdmin;
         private Label label1;
-        private PictureBox PBEmpresa;
+        public PictureBox PBEmpresa;
         private Button btnFotoEmp;
         private Label label2;
         private LinkLabel linkCadEmp;

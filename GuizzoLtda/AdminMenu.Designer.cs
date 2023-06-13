@@ -41,9 +41,9 @@
             toolStripSplitButton6 = new ToolStripSplitButton();
             toolStripSplitButton1 = new ToolStripSplitButton();
             encerrarToolStripMenuItem = new ToolStripMenuItem();
-            pictureBox1 = new PictureBox();
+            pbFotoAdminMenu = new PictureBox();
             toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbFotoAdminMenu).BeginInit();
             SuspendLayout();
             // 
             // toolStrip1
@@ -132,21 +132,22 @@
             encerrarToolStripMenuItem.Size = new Size(117, 22);
             encerrarToolStripMenuItem.Text = "Encerrar";
             // 
-            // pictureBox1
+            // pbFotoAdminMenu
             // 
-            pictureBox1.BorderStyle = BorderStyle.Fixed3D;
-            pictureBox1.Location = new Point(401, 28);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(399, 422);
-            pictureBox1.TabIndex = 2;
-            pictureBox1.TabStop = false;
+            pbFotoAdminMenu.BorderStyle = BorderStyle.Fixed3D;
+            pbFotoAdminMenu.Location = new Point(401, 28);
+            pbFotoAdminMenu.Name = "pbFotoAdminMenu";
+            pbFotoAdminMenu.Size = new Size(399, 422);
+            pbFotoAdminMenu.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbFotoAdminMenu.TabIndex = 2;
+            pbFotoAdminMenu.TabStop = false;
             // 
             // AdminMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(pictureBox1);
+            Controls.Add(pbFotoAdminMenu);
             Controls.Add(toolStrip1);
             Name = "AdminMenu";
             StartPosition = FormStartPosition.CenterScreen;
@@ -154,7 +155,7 @@
             Load += AdminMenu_Load;
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbFotoAdminMenu).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -171,7 +172,7 @@
         private ToolStripSplitButton toolStripSplitButton6;
         private ToolStripSplitButton toolStripSplitButton1;
         private ToolStripMenuItem encerrarToolStripMenuItem;
-        private PictureBox pictureBox1;
+        private PictureBox pbFotoAdminMenu;
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripSeparator toolStripSeparator2;
     }

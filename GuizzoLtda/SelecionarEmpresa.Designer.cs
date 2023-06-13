@@ -40,12 +40,14 @@
             // 
             // pbLogoEmp
             // 
+            pbLogoEmp.InitialImage = null;
             pbLogoEmp.Location = new Point(447, 26);
             pbLogoEmp.Name = "pbLogoEmp";
             pbLogoEmp.Size = new Size(353, 425);
             pbLogoEmp.SizeMode = PictureBoxSizeMode.StretchImage;
             pbLogoEmp.TabIndex = 1;
             pbLogoEmp.TabStop = false;
+            pbLogoEmp.Click += pbLogoEmp_Click;
             // 
             // dgViewSelEmp
             // 
@@ -76,6 +78,7 @@
             toolStrip1.Size = new Size(800, 25);
             toolStrip1.TabIndex = 4;
             toolStrip1.Text = "toolStrip1";
+            toolStrip1.ItemClicked += toolStrip1_ItemClicked;
             // 
             // toolStripButton1
             // 
@@ -110,7 +113,7 @@
 
         #endregion
 
-        private PictureBox pbLogoEmp;
+        public PictureBox pbLogoEmp;
         private DataGridView dgViewSelEmp;
         private TextBox textBox1;
         private ToolStrip toolStrip1;

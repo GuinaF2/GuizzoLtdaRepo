@@ -15,6 +15,7 @@ namespace GuizzoLtda
         public FuncionarioMenu()
         {
             InitializeComponent();
+            pbFotoMenuFunc.Image = Program.thePictureBox.Image;
         }
 
 

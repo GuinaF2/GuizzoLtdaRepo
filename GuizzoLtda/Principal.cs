@@ -1,4 +1,5 @@
 using Microsoft.VisualBasic.Logging;
+using System.Windows.Forms;
 
 namespace GuizzoLtda
 {
@@ -11,13 +12,15 @@ namespace GuizzoLtda
         public Principal()
         {
             InitializeComponent();
+            PBEmpresa.Image = Program.thePictureBox.Image;
+
         }
 
 
 
         private void Principal_Load_1(object sender, EventArgs e)
         {
-
+       
         }
 
         private void btnUsuario_Click_1(object sender, EventArgs e)
@@ -34,7 +37,7 @@ namespace GuizzoLtda
             fadminlog.Show();
         }
 
-        private void PBEmpresa_Click(object sender, EventArgs e)
+        public void PBEmpresa_Click(object sender, EventArgs e)
         {
 
         }
@@ -51,6 +54,11 @@ namespace GuizzoLtda
             CadEmpresa fcadastroemp = new CadEmpresa();
             this.Hide();
             fcadastroemp.Show();
+        }
+
+        private void Principal_Activated(object sender, EventArgs e)
+        {
+           
         }
     }
 }

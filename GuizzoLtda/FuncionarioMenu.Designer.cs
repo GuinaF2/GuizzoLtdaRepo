@@ -39,9 +39,9 @@
             toolStripButton15 = new ToolStripButton();
             toolStripSeparator4 = new ToolStripSeparator();
             toolStripButton14 = new ToolStripButton();
-            pictureBox1 = new PictureBox();
+            pbFotoMenuFunc = new PictureBox();
             toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbFotoMenuFunc).BeginInit();
             SuspendLayout();
             // 
             // toolStrip1
@@ -125,14 +125,15 @@
             toolStripButton14.TextImageRelation = TextImageRelation.TextAboveImage;
             toolStripButton14.Click += toolStripButton14_Click;
             // 
-            // pictureBox1
+            // pbFotoMenuFunc
             // 
-            pictureBox1.BorderStyle = BorderStyle.Fixed3D;
-            pictureBox1.Location = new Point(428, 0);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(372, 450);
-            pictureBox1.TabIndex = 1;
-            pictureBox1.TabStop = false;
+            pbFotoMenuFunc.BorderStyle = BorderStyle.Fixed3D;
+            pbFotoMenuFunc.Location = new Point(428, 28);
+            pbFotoMenuFunc.Name = "pbFotoMenuFunc";
+            pbFotoMenuFunc.Size = new Size(372, 422);
+            pbFotoMenuFunc.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbFotoMenuFunc.TabIndex = 1;
+            pbFotoMenuFunc.TabStop = false;
             // 
             // FuncionarioMenu
             // 
@@ -140,14 +141,14 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(toolStrip1);
-            Controls.Add(pictureBox1);
+            Controls.Add(pbFotoMenuFunc);
             Name = "FuncionarioMenu";
             StartPosition = FormStartPosition.CenterScreen;
             Text = " ";
             Load += FuncionarioMenu_Load;
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbFotoMenuFunc).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -165,7 +166,7 @@
         private ToolStripButton toolStripButton16;
         private ToolStripButton toolStripButton15;
         private ToolStripButton toolStripButton14;
-        private PictureBox pictureBox1;
+        private PictureBox pbFotoMenuFunc;
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripSeparator toolStripSeparator2;
         private ToolStripSeparator toolStripSeparator3;

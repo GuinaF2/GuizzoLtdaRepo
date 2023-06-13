@@ -20,21 +20,15 @@ namespace GuizzoLtda
 
         EmpresaModelo EmpresaModelo = new EmpresaModelo();
         EmpresaControle Controle = new EmpresaControle();
+
         int id;
         public SelecionarEmpresa()
         {
             InitializeComponent();
+            Program.thePictureBox = pbLogoEmp;
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgViewSelEmp_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+        
 
 
 
@@ -61,6 +55,7 @@ namespace GuizzoLtda
 
         private void SelecionarEmpresa_Load_1(object sender, EventArgs e)
         {
+
             dgViewSelEmp.DataSource = conexaosql.verDados("SELECT idcliente, razao_social,logo FROM tb_cliente");
         }
 
@@ -69,6 +64,7 @@ namespace GuizzoLtda
             Principal fprincipalreturn = new Principal();
             this.Hide();
             fprincipalreturn.Show();
+
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -76,6 +72,16 @@ namespace GuizzoLtda
             Principal fprincipalreturn = new Principal();
             this.Hide();
             fprincipalreturn.Show();
+        }
+
+        private void pbLogoEmp_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }
