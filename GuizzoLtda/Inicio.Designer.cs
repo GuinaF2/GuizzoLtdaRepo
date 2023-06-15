@@ -35,7 +35,7 @@
             // SelectEmp
             // 
             SelectEmp.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            SelectEmp.Location = new Point(12, 185);
+            SelectEmp.Location = new Point(24, 192);
             SelectEmp.Name = "SelectEmp";
             SelectEmp.Size = new Size(245, 63);
             SelectEmp.TabIndex = 0;
@@ -53,6 +53,8 @@
             btnAcessarSys.TabIndex = 1;
             btnAcessarSys.Text = "Acessar Sistema";
             btnAcessarSys.UseVisualStyleBackColor = true;
+            btnAcessarSys.EnabledChanged += btnAcessarSys_EnabledChanged;
+            btnAcessarSys.Click += btnAcessarSys_Click;
             // 
             // Inicio
             // 
@@ -63,6 +65,9 @@
             Controls.Add(SelectEmp);
             Name = "Inicio";
             Text = "Inicio";
+            FormClosed += Inicio_FormClosed;
+            Load += Inicio_Load;
+            Leave += Inicio_Leave;
             ResumeLayout(false);
         }
 

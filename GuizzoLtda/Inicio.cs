@@ -15,13 +15,42 @@ namespace GuizzoLtda
         public Inicio()
         {
             InitializeComponent();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             SelecionarEmpresa fselecemp = new SelecionarEmpresa();
             this.Hide();
             fselecemp.Show();
+
+        }
+
+        private void Inicio_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAcessarSys_Click(object sender, EventArgs e)
+        {
+            Principal fcomeco = new Principal();
+            this.Hide();
+            fcomeco.Show();
+        }
+
+        private void Inicio_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+        }
+
+        private void btnAcessarSys_EnabledChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Inicio_Leave(object sender, EventArgs e)
+        {
         }
     }
 }

@@ -12,7 +12,7 @@ namespace GuizzoLtda
         public Principal()
         {
             InitializeComponent();
-            PBEmpresa.Image = Program.thePictureBox.Image;
+
 
         }
 

@@ -46,17 +46,17 @@ namespace GuizzoLtda
 
         private void SaveCreate_Click(object sender, EventArgs e)
         {
+            MotoristaModelo.CodMotorista = Convert.ToInt32(txtIdMoto.Text);
+            MotoristaModelo.CodVeiculo = Convert.ToInt32(txtIdVeiculo.Text);
             MotoristaModelo.cpfMotorista = txtCpf.Text;
             MotoristaModelo.RgMotorista = txtRg.Text;
             MotoristaModelo.nomeMotorista = txtNome.Text;
             MotoristaModelo.CnhMotorista = txtCnh.Text;
             MotoristaModelo.TipoCnhMotorista = cbTipoCnh.Text;
-            MotoristaModelo.CodVeiculo = Convert.ToInt32(txtIdVeiculo.Text);
-            MotoristaModelo.CodMotorista = Convert.ToInt32(txtIdMoto.Text);
 
             if (txtCpf.Text == "" || txtRg.Text == "" || txtNome.Text == "" || txtCnh.Text == "" || cbTipoCnh.Text == "")
             {
-                MessageBox.Show("Erro no cadastro.");
+                MessageBox.Show("Campos obrigatórios não preenchidos");
             }
             else
             {
