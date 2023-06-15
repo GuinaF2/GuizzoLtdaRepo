@@ -1,5 +1,6 @@
 ﻿using Controle;
 using Modelos;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,12 +26,11 @@ namespace GuizzoLtda
 
         private void VerificarEmp_Load(object sender, EventArgs e)
         {
-
+            dgVerEmp.DataSource = conexaosql.verDados("SELECT * FROM tb_cliente");
         }
 
         private void dgVerEmp_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            dgVerEmp.DataSource = conexaosql.verDados("SELECT (idcliente,cnpj,razao_social,inscricao_estadual) FROM tb_cliente");
         }
 
         private void txtRazaoSoc_Click(object sender, EventArgs e)
@@ -47,18 +47,36 @@ namespace GuizzoLtda
 
         private void button1_Click(object sender, EventArgs e)
         {
-            dgVerEmp.Visible = true;
+            
 
-            labelCnpj.Visible = false;
-            labelInscEstad.Visible = false;
-            labelRazaoSoc.Visible = false;
+            try
+            {
+                conexaosql = new Conexao();
+                MySqlConnection con = conexaosql.getConexao();
+                con.Open();
+                MySqlCommand cmd = con.CreateCommand();
 
-            txtCnpj.Visible = false;
-            txtInscriEstad.Visible = false;
-            txtRazaoSoc.Visible = false;
-            btnConfirmar.Visible = false;
-            returnBtn.Visible = true;
-            btnMenu.Visible = false;
+                cmd.CommandText = ("SELECT idcliente,cnpj,razao_social,inscricao_estadual FROM tb_cliente WHERE razao_social=" + txtRazaoSoc.Text);
+                con.Close();
+
+                txtRazaoSoc.Visible = false;
+                txtInscriEstad.Visible = false;
+                txtCnpj.Visible = false;
+
+                labelCnpj.Visible = false;
+                labelInscEstad.Visible = false;
+                labelRazaoSoc.Visible = false;
+                btnConfirmar.Visible = false;
+                btnMenu.Visible = false;
+                dgVerEmp.Visible = true;
+                returnBtn.Visible = true;
+
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(string.Format(ex.Message));
+            }
         }
 
         private void returnBtn_Click(object sender, EventArgs e)

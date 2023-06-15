@@ -3,6 +3,7 @@ using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -22,8 +23,7 @@ namespace Controle
                 try
                 {
                     string SQL = "INSERT INTO tb_cliente (cnpj,razao_social,inscricao_estadual,idendereco,logo) values(@cnpj,@razao_social,@inscricao_estadual,(SELECT idendereco FROM tb_endereco ORDER BY idendereco DESC LIMIT 1),@logo) ";
-                //declaração de vetor de campos
-                           
+                     //declaração de vetor de campos         
                     string[] campos = { "@cnpj", "@razao_social", "@inscricao_estadual","@logo" };
                     //declaração de vetor de informações
                     string[] valores = { modelo.CnpjUser, modelo.RazaoSocialUser, modelo.InscEstadUser, modelo.LogoEmpresa };
@@ -118,5 +118,6 @@ namespace Controle
             }
         }
 
+        
     }
 }

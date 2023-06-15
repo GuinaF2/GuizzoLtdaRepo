@@ -45,38 +45,39 @@
             // labelRazaoSoc
             // 
             labelRazaoSoc.AutoSize = true;
-            labelRazaoSoc.Location = new Point(57, 61);
+            labelRazaoSoc.Location = new Point(45, 60);
             labelRazaoSoc.Name = "labelRazaoSoc";
-            labelRazaoSoc.Size = new Size(90, 15);
+            labelRazaoSoc.Size = new Size(72, 15);
             labelRazaoSoc.TabIndex = 0;
-            labelRazaoSoc.Text = "labelrazaosocial";
+            labelRazaoSoc.Text = "Razão Social";
             // 
             // labelCnpj
             // 
             labelCnpj.AutoSize = true;
-            labelCnpj.Location = new Point(57, 138);
+            labelCnpj.Location = new Point(46, 142);
             labelCnpj.Name = "labelCnpj";
-            labelCnpj.Size = new Size(38, 15);
+            labelCnpj.Size = new Size(32, 15);
             labelCnpj.TabIndex = 1;
-            labelCnpj.Text = "label2";
+            labelCnpj.Text = "Cnpj";
             // 
             // labelInscEstad
             // 
             labelInscEstad.AutoSize = true;
-            labelInscEstad.Location = new Point(57, 211);
+            labelInscEstad.Location = new Point(45, 233);
             labelInscEstad.Name = "labelInscEstad";
-            labelInscEstad.Size = new Size(38, 15);
+            labelInscEstad.Size = new Size(101, 15);
             labelInscEstad.TabIndex = 2;
-            labelInscEstad.Text = "label3";
+            labelInscEstad.Text = "Inscrição Estadual";
             // 
             // label4
             // 
             label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
             label4.Location = new Point(72, 9);
             label4.Name = "label4";
-            label4.Size = new Size(38, 15);
+            label4.Size = new Size(181, 32);
             label4.TabIndex = 3;
-            label4.Text = "label4";
+            label4.Text = "Verificar Cliente";
             // 
             // txtRazaoSoc
             // 
@@ -102,41 +103,49 @@
             // 
             // returnBtn
             // 
+            returnBtn.BackgroundImage = Properties.Resources._688879_arrows_512x512;
+            returnBtn.BackgroundImageLayout = ImageLayout.Stretch;
             returnBtn.Location = new Point(0, 1);
             returnBtn.Name = "returnBtn";
-            returnBtn.Size = new Size(32, 34);
+            returnBtn.Size = new Size(39, 38);
             returnBtn.TabIndex = 7;
-            returnBtn.Text = "button1";
+            returnBtn.TextImageRelation = TextImageRelation.TextBeforeImage;
             returnBtn.UseVisualStyleBackColor = true;
             returnBtn.Click += returnBtn_Click;
             // 
             // btnMenu
             // 
-            btnMenu.Location = new Point(0, 31);
+            btnMenu.BackgroundImage = Properties.Resources._688879_arrows_512x512;
+            btnMenu.BackgroundImageLayout = ImageLayout.Stretch;
+            btnMenu.Location = new Point(0, 1);
             btnMenu.Name = "btnMenu";
-            btnMenu.Size = new Size(32, 34);
+            btnMenu.Size = new Size(39, 38);
             btnMenu.TabIndex = 8;
-            btnMenu.Text = "button2";
+            btnMenu.TextImageRelation = TextImageRelation.TextBeforeImage;
             btnMenu.UseVisualStyleBackColor = true;
             btnMenu.Click += btnMenu_Click;
             // 
             // dgVerEmp
             // 
+            dgVerEmp.AllowUserToAddRows = false;
+            dgVerEmp.AllowUserToDeleteRows = false;
             dgVerEmp.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgVerEmp.Location = new Point(72, 120);
             dgVerEmp.Name = "dgVerEmp";
+            dgVerEmp.ReadOnly = true;
             dgVerEmp.RowTemplate.Height = 25;
             dgVerEmp.Size = new Size(665, 244);
             dgVerEmp.TabIndex = 9;
+            dgVerEmp.Visible = false;
             dgVerEmp.CellContentClick += dgVerEmp_CellContentClick;
             // 
             // btnConfirmar
             // 
-            btnConfirmar.Location = new Point(46, 370);
+            btnConfirmar.Location = new Point(12, 358);
             btnConfirmar.Name = "btnConfirmar";
-            btnConfirmar.Size = new Size(75, 23);
+            btnConfirmar.Size = new Size(179, 47);
             btnConfirmar.TabIndex = 10;
-            btnConfirmar.Text = "btnConfirmar";
+            btnConfirmar.Text = "Confirmar";
             btnConfirmar.UseVisualStyleBackColor = true;
             btnConfirmar.Click += button1_Click;
             // 

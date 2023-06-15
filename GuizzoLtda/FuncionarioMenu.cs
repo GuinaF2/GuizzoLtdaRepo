@@ -21,7 +21,7 @@ namespace GuizzoLtda
 
         private void toolStripButton14_Click(object sender, EventArgs e)
         {
-            VerifyEmp fempresaver = new VerifyEmp();
+            VerificarEmp fempresaver = new VerificarEmp();
             this.Hide();
             fempresaver.Show();
         }
