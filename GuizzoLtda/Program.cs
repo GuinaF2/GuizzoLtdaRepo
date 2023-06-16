@@ -10,11 +10,12 @@ namespace GuizzoLtda
         {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new VerificarEmp());
+                Application.Run(new Inicio());
                 
                 ApplicationConfiguration.Initialize();
 
         }
         public static PictureBox thePictureBox;
+
     }
 }

@@ -35,9 +35,9 @@
             // SelectEmp
             // 
             SelectEmp.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            SelectEmp.Location = new Point(24, 192);
+            SelectEmp.Location = new Point(12, 195);
             SelectEmp.Name = "SelectEmp";
-            SelectEmp.Size = new Size(245, 63);
+            SelectEmp.Size = new Size(337, 84);
             SelectEmp.TabIndex = 0;
             SelectEmp.Text = "Selecionar Empresa";
             SelectEmp.UseVisualStyleBackColor = true;
@@ -47,7 +47,7 @@
             // 
             btnAcessarSys.Enabled = false;
             btnAcessarSys.Font = new Font("Segoe UI", 21.75F, FontStyle.Regular, GraphicsUnit.Point);
-            btnAcessarSys.Location = new Point(415, 179);
+            btnAcessarSys.Location = new Point(451, 195);
             btnAcessarSys.Name = "btnAcessarSys";
             btnAcessarSys.Size = new Size(337, 84);
             btnAcessarSys.TabIndex = 1;

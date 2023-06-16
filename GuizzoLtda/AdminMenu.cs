@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Modelos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,7 +16,7 @@ namespace GuizzoLtda
         public AdminMenu()
         {
             InitializeComponent();
-
+            pbFotoAdminMenu.Image = Program.thePictureBox.Image;
         }
 
 
@@ -63,6 +64,30 @@ namespace GuizzoLtda
             CRUDMotorista fmotoristacrud = new CRUDMotorista();
             fmotoristacrud.Show();
             Hide();
+        }
+
+        private void pbFotoAdminMenu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void encerrarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var resposta = DialogResult;
+            resposta = MessageBox.Show("Tem certeza que deseja sair do sistema?", "! Aviso !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (resposta == DialogResult.Yes)
+            {
+                if (resposta == DialogResult.Yes)
+                {
+                    this.Close();
+                    Principal logout = new Principal();
+                    logout.Show();
+                }
+            }
+            else if (resposta == DialogResult.No)
+            {
+
+            }
         }
     }
 }

@@ -94,7 +94,7 @@ namespace GuizzoLtda
 
             EnderecoModelo.UniFederalUser = cbUniFed.Text;
 
-            if (cbUniFed.Text == "" || textBox1.Text == "" || txtCnpj.Text == "" || txtRazaosoc.Text == "" || txtIncEstad.Text == "" || txtRua.Text == "" || txtBairro.Text == "" || txtCep.Text == "" || txtNumero.Text == "" || txtComple.Text == "")
+            if (cbUniFed.Text == "" || textBox1.Text == "" || txtCnpj.Text == "" || txtRazaosoc.Text == "" || txtIncEstad.Text == "" || txtRua.Text == "" || txtBairro.Text == "" || txtCep.Text == "" || txtNumero.Text == "")
             {
                 MessageBox.Show("Preencha todos os campos.");
 
@@ -130,11 +130,6 @@ namespace GuizzoLtda
 
         }
 
-        private void txtNumero_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
-
         private void txtNumero_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             txtNumero.MaxLength = 4;
@@ -156,7 +151,7 @@ namespace GuizzoLtda
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            Principal fprincipalreturn = new Principal();
+            SelecionarEmpresa fprincipalreturn = new SelecionarEmpresa();
             this.Hide();
             fprincipalreturn.Show();
         }
@@ -169,6 +164,51 @@ namespace GuizzoLtda
         private void cbUniFed_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void CadEmpresa_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtRazaosoc_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+
+
+
+        private void txtComple_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+        }
+
+        private void txtCep_KeyPress_2(object sender, KeyPressEventArgs e)
+        {
+            txtCep.MaxLength = 8;
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtCnpj_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            txtCnpj.MaxLength = 14;
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtIncEstad_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            txtIncEstad.MaxLength = 14;
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
         }
     }
 }

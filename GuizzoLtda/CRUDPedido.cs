@@ -21,5 +21,10 @@ namespace GuizzoLtda
         {
 
         }
+
+        private void CRUDPedido_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

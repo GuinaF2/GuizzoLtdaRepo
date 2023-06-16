@@ -32,8 +32,6 @@
             btnAdmin = new Button();
             label1 = new Label();
             PBEmpresa = new PictureBox();
-            label2 = new Label();
-            linkCadEmp = new LinkLabel();
             button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)PBEmpresa).BeginInit();
             SuspendLayout();
@@ -41,7 +39,7 @@
             // btnUsuario
             // 
             btnUsuario.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            btnUsuario.Location = new Point(425, 105);
+            btnUsuario.Location = new Point(72, 115);
             btnUsuario.Name = "btnUsuario";
             btnUsuario.Size = new Size(261, 89);
             btnUsuario.TabIndex = 1;
@@ -52,7 +50,7 @@
             // btnAdmin
             // 
             btnAdmin.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            btnAdmin.Location = new Point(425, 258);
+            btnAdmin.Location = new Point(72, 268);
             btnAdmin.Name = "btnAdmin";
             btnAdmin.Size = new Size(261, 87);
             btnAdmin.TabIndex = 1;
@@ -64,7 +62,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 21.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(409, 20);
+            label1.Location = new Point(56, 30);
             label1.Name = "label1";
             label1.Size = new Size(284, 40);
             label1.TabIndex = 2;
@@ -73,39 +71,19 @@
             // PBEmpresa
             // 
             PBEmpresa.BackColor = SystemColors.MenuBar;
+            PBEmpresa.BackgroundImageLayout = ImageLayout.Stretch;
             PBEmpresa.BorderStyle = BorderStyle.Fixed3D;
-            PBEmpresa.Location = new Point(71, 91);
+            PBEmpresa.Location = new Point(431, -1);
             PBEmpresa.Name = "PBEmpresa";
-            PBEmpresa.Size = new Size(217, 209);
+            PBEmpresa.Size = new Size(371, 452);
             PBEmpresa.SizeMode = PictureBoxSizeMode.StretchImage;
             PBEmpresa.TabIndex = 3;
             PBEmpresa.TabStop = false;
             PBEmpresa.Click += PBEmpresa_Click;
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 21.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(27, 20);
-            label2.Name = "label2";
-            label2.Size = new Size(305, 40);
-            label2.TabIndex = 5;
-            label2.Text = "Selecione sua Empresa";
-            // 
-            // linkCadEmp
-            // 
-            linkCadEmp.AutoSize = true;
-            linkCadEmp.Location = new Point(92, 409);
-            linkCadEmp.Name = "linkCadEmp";
-            linkCadEmp.Size = new Size(186, 15);
-            linkCadEmp.TabIndex = 7;
-            linkCadEmp.TabStop = true;
-            linkCadEmp.Text = "Não Possui Cadastro? Clique Aqui";
-            linkCadEmp.LinkClicked += linkLabel1_LinkClicked;
-            // 
             // button1
             // 
-            button1.Location = new Point(166, 188);
+            button1.Location = new Point(598, 237);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 0;
@@ -118,8 +96,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             ClientSize = new Size(800, 450);
-            Controls.Add(linkCadEmp);
-            Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(btnAdmin);
             Controls.Add(btnUsuario);
@@ -141,8 +117,6 @@
         private Button btnAdmin;
         private Label label1;
         public PictureBox PBEmpresa;
-        private Label label2;
-        private LinkLabel linkCadEmp;
         private Button button1;
     }
 }

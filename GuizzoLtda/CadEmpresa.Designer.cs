@@ -46,16 +46,16 @@
             tabPage1 = new TabPage();
             toolStrip1 = new ToolStrip();
             toolStripButton1 = new ToolStripButton();
-            txtIncEstad = new MaskedTextBox();
-            txtCnpj = new MaskedTextBox();
             tabPage2 = new TabPage();
+            txtCep = new TextBox();
             cbUniFed = new ComboBox();
             labelunidadefederal = new Label();
             txtNumero = new TextBox();
             txtRua = new MaskedTextBox();
-            txtCep = new MaskedTextBox();
             tabPage3 = new TabPage();
             textBox1 = new TextBox();
+            txtCnpj = new TextBox();
+            txtIncEstad = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pbFotoEmp).BeginInit();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
@@ -124,6 +124,7 @@
             txtRazaosoc.Name = "txtRazaosoc";
             txtRazaosoc.Size = new Size(220, 29);
             txtRazaosoc.TabIndex = 6;
+            txtRazaosoc.KeyPress += txtRazaosoc_KeyPress;
             // 
             // txtBairro
             // 
@@ -190,6 +191,7 @@
             txtComple.Name = "txtComple";
             txtComple.Size = new Size(100, 29);
             txtComple.TabIndex = 17;
+            txtComple.KeyPress += txtComple_KeyPress;
             // 
             // btnCadEndereco
             // 
@@ -218,9 +220,9 @@
             // tabPage1
             // 
             tabPage1.BackColor = Color.WhiteSmoke;
-            tabPage1.Controls.Add(toolStrip1);
             tabPage1.Controls.Add(txtIncEstad);
             tabPage1.Controls.Add(txtCnpj);
+            tabPage1.Controls.Add(toolStrip1);
             tabPage1.Controls.Add(txtRazaosoc);
             tabPage1.Controls.Add(label1);
             tabPage1.Controls.Add(label2);
@@ -251,29 +253,13 @@
             toolStripButton1.Text = "toolStripButton1";
             toolStripButton1.Click += toolStripButton1_Click;
             // 
-            // txtIncEstad
-            // 
-            txtIncEstad.Location = new Point(30, 195);
-            txtIncEstad.Mask = "000,000,000,000";
-            txtIncEstad.Name = "txtIncEstad";
-            txtIncEstad.Size = new Size(100, 23);
-            txtIncEstad.TabIndex = 10;
-            // 
-            // txtCnpj
-            // 
-            txtCnpj.Location = new Point(30, 122);
-            txtCnpj.Mask = "00,000,000/0000,00";
-            txtCnpj.Name = "txtCnpj";
-            txtCnpj.Size = new Size(141, 23);
-            txtCnpj.TabIndex = 9;
-            // 
             // tabPage2
             // 
+            tabPage2.Controls.Add(txtCep);
             tabPage2.Controls.Add(cbUniFed);
             tabPage2.Controls.Add(labelunidadefederal);
             tabPage2.Controls.Add(txtNumero);
             tabPage2.Controls.Add(txtRua);
-            tabPage2.Controls.Add(txtCep);
             tabPage2.Controls.Add(txtBairro);
             tabPage2.Controls.Add(label7);
             tabPage2.Controls.Add(label8);
@@ -289,8 +275,17 @@
             tabPage2.Text = "Endereço";
             tabPage2.UseVisualStyleBackColor = true;
             // 
+            // txtCep
+            // 
+            txtCep.Location = new Point(37, 157);
+            txtCep.Name = "txtCep";
+            txtCep.Size = new Size(100, 23);
+            txtCep.TabIndex = 26;
+            txtCep.KeyPress += txtCep_KeyPress_2;
+            // 
             // cbUniFed
             // 
+            cbUniFed.DropDownStyle = ComboBoxStyle.DropDownList;
             cbUniFed.FormattingEnabled = true;
             cbUniFed.Items.AddRange(new object[] { "Acre (AC)", "Alagoas (AL)\t", "Amapá (AP)\t", "Amazonas (AM)\t", "Bahia (BA)\tSalvador\t", "Ceará (CE)\tFortaleza\t", "Distrito Federal (DF)\t", "Espírito Santo (ES)\t", "Goiás (GO)\t", "Maranhão (MA)\t", "Mato Grosso (MT)\t", "Mato Grosso do Sul (MS)", "Minas Gerais (MG)\t", "Pará (PA)\tBelém\t", "Paraíba (PB)\t", "Paraná (PR)\t", "Pernambuco (PE)\t", "Piauí (PI)\tTeresina\t", "Rio de Janeiro (RJ)\t", "Rio Grande do Norte (RN)", "Rio Grande do Sul (RS)", "Rondônia (RO)\t", "Roraima (RR)\t", "Santa Catarina (SC)\t", "São Paulo (SP)\t", "Sergipe (SE)\t", "Tocantins (TO)" });
             cbUniFed.Location = new Point(42, 207);
@@ -329,17 +324,6 @@
             txtRua.MaskInputRejected += txtRua_MaskInputRejected;
             txtRua.KeyPress += txtRua_KeyPress;
             // 
-            // txtCep
-            // 
-            txtCep.BeepOnError = true;
-            txtCep.ImeMode = ImeMode.NoControl;
-            txtCep.Location = new Point(37, 157);
-            txtCep.Mask = "00000-999";
-            txtCep.Name = "txtCep";
-            txtCep.PromptChar = ' ';
-            txtCep.Size = new Size(68, 23);
-            txtCep.TabIndex = 21;
-            // 
             // tabPage3
             // 
             tabPage3.Controls.Add(pbFotoEmp);
@@ -363,6 +347,22 @@
             textBox1.TabIndex = 2;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
+            // txtCnpj
+            // 
+            txtCnpj.Location = new Point(30, 122);
+            txtCnpj.Name = "txtCnpj";
+            txtCnpj.Size = new Size(171, 23);
+            txtCnpj.TabIndex = 12;
+            txtCnpj.KeyPress += txtCnpj_KeyPress_1;
+            // 
+            // txtIncEstad
+            // 
+            txtIncEstad.Location = new Point(30, 197);
+            txtIncEstad.Name = "txtIncEstad";
+            txtIncEstad.Size = new Size(140, 23);
+            txtIncEstad.TabIndex = 13;
+            txtIncEstad.KeyPress += txtIncEstad_KeyPress_1;
+            // 
             // CadEmpresa
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -373,6 +373,7 @@
             Name = "CadEmpresa";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "CadEmpresa";
+            Load += CadEmpresa_Load_1;
             ((System.ComponentModel.ISupportInitialize)pbFotoEmp).EndInit();
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
@@ -407,14 +408,14 @@
         private TabPage tabPage2;
         private TabPage tabPage3;
         private TextBox textBox1;
-        private MaskedTextBox txtCep;
-        private MaskedTextBox txtCnpj;
         private MaskedTextBox txtRua;
-        private MaskedTextBox txtIncEstad;
         private TextBox txtNumero;
         private ToolStrip toolStrip1;
         private ToolStripButton toolStripButton1;
         private ComboBox cbUniFed;
         private Label labelunidadefederal;
+        private TextBox txtCep;
+        private TextBox txtIncEstad;
+        private TextBox txtCnpj;
     }
 }

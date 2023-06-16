@@ -12,7 +12,7 @@ namespace GuizzoLtda
         public Principal()
         {
             InitializeComponent();
-
+            PBEmpresa.Image = Program.thePictureBox.Image;
 
         }
 
@@ -20,7 +20,7 @@ namespace GuizzoLtda
 
         private void Principal_Load_1(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnUsuario_Click_1(object sender, EventArgs e)
@@ -49,9 +49,7 @@ namespace GuizzoLtda
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            CadEmpresa fcadastroemp = new CadEmpresa();
-            this.Hide();
-            fcadastroemp.Show();
+
         }
 
         private void Principal_Activated(object sender, EventArgs e)

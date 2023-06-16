@@ -129,8 +129,9 @@
             // encerrarToolStripMenuItem
             // 
             encerrarToolStripMenuItem.Name = "encerrarToolStripMenuItem";
-            encerrarToolStripMenuItem.Size = new Size(117, 22);
+            encerrarToolStripMenuItem.Size = new Size(180, 22);
             encerrarToolStripMenuItem.Text = "Encerrar";
+            encerrarToolStripMenuItem.Click += encerrarToolStripMenuItem_Click;
             // 
             // pbFotoAdminMenu
             // 
@@ -141,6 +142,7 @@
             pbFotoAdminMenu.SizeMode = PictureBoxSizeMode.StretchImage;
             pbFotoAdminMenu.TabIndex = 2;
             pbFotoAdminMenu.TabStop = false;
+            pbFotoAdminMenu.Click += pbFotoAdminMenu_Click;
             // 
             // AdminMenu
             // 

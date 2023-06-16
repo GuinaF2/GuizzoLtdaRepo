@@ -28,13 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            labelRazaoSoc = new Label();
             labelCnpj = new Label();
-            labelInscEstad = new Label();
             label4 = new Label();
-            txtRazaoSoc = new TextBox();
             txtCnpj = new TextBox();
-            txtInscriEstad = new TextBox();
             returnBtn = new Button();
             btnMenu = new Button();
             dgVerEmp = new DataGridView();
@@ -42,32 +38,14 @@
             ((System.ComponentModel.ISupportInitialize)dgVerEmp).BeginInit();
             SuspendLayout();
             // 
-            // labelRazaoSoc
-            // 
-            labelRazaoSoc.AutoSize = true;
-            labelRazaoSoc.Location = new Point(45, 60);
-            labelRazaoSoc.Name = "labelRazaoSoc";
-            labelRazaoSoc.Size = new Size(72, 15);
-            labelRazaoSoc.TabIndex = 0;
-            labelRazaoSoc.Text = "Razão Social";
-            // 
             // labelCnpj
             // 
             labelCnpj.AutoSize = true;
-            labelCnpj.Location = new Point(46, 142);
+            labelCnpj.Location = new Point(48, 64);
             labelCnpj.Name = "labelCnpj";
             labelCnpj.Size = new Size(32, 15);
             labelCnpj.TabIndex = 1;
             labelCnpj.Text = "Cnpj";
-            // 
-            // labelInscEstad
-            // 
-            labelInscEstad.AutoSize = true;
-            labelInscEstad.Location = new Point(45, 233);
-            labelInscEstad.Name = "labelInscEstad";
-            labelInscEstad.Size = new Size(101, 15);
-            labelInscEstad.TabIndex = 2;
-            labelInscEstad.Text = "Inscrição Estadual";
             // 
             // label4
             // 
@@ -79,27 +57,12 @@
             label4.TabIndex = 3;
             label4.Text = "Verificar Cliente";
             // 
-            // txtRazaoSoc
-            // 
-            txtRazaoSoc.Location = new Point(46, 91);
-            txtRazaoSoc.Name = "txtRazaoSoc";
-            txtRazaoSoc.Size = new Size(100, 23);
-            txtRazaoSoc.TabIndex = 4;
-            txtRazaoSoc.Click += txtRazaoSoc_Click;
-            // 
             // txtCnpj
             // 
-            txtCnpj.Location = new Point(46, 169);
+            txtCnpj.Location = new Point(48, 91);
             txtCnpj.Name = "txtCnpj";
             txtCnpj.Size = new Size(100, 23);
             txtCnpj.TabIndex = 5;
-            // 
-            // txtInscriEstad
-            // 
-            txtInscriEstad.Location = new Point(46, 267);
-            txtInscriEstad.Name = "txtInscriEstad";
-            txtInscriEstad.Size = new Size(100, 23);
-            txtInscriEstad.TabIndex = 6;
             // 
             // returnBtn
             // 
@@ -141,7 +104,7 @@
             // 
             // btnConfirmar
             // 
-            btnConfirmar.Location = new Point(12, 358);
+            btnConfirmar.Location = new Point(48, 339);
             btnConfirmar.Name = "btnConfirmar";
             btnConfirmar.Size = new Size(179, 47);
             btnConfirmar.TabIndex = 10;
@@ -157,13 +120,9 @@
             Controls.Add(btnConfirmar);
             Controls.Add(btnMenu);
             Controls.Add(returnBtn);
-            Controls.Add(txtInscriEstad);
             Controls.Add(txtCnpj);
-            Controls.Add(txtRazaoSoc);
             Controls.Add(label4);
-            Controls.Add(labelInscEstad);
             Controls.Add(labelCnpj);
-            Controls.Add(labelRazaoSoc);
             Controls.Add(dgVerEmp);
             Name = "VerificarEmp";
             Text = "VerificarEmp";

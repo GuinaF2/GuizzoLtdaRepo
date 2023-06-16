@@ -26,6 +26,7 @@ namespace GuizzoLtda
         {
             InitializeComponent();
             Program.thePictureBox = pbLogoEmp;
+
         }
 
 
@@ -61,13 +62,7 @@ namespace GuizzoLtda
 
         private void dgViewSelEmp_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            Inicio comeco = new Inicio();
-
-            comeco.btnAcessarSys.Enabled = true;
-            Inicio finicioreturn = new Inicio();
-            this.Hide();
-            finicioreturn.Show();
-
+            this.Close();
         }
 
         private void pbLogoEmp_Click(object sender, EventArgs e)
@@ -76,6 +71,18 @@ namespace GuizzoLtda
         }
 
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void linkCadEmp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            CadEmpresa fcadastro = new CadEmpresa();
+            this.Hide();
+            fcadastro.Show();
+        }
+
+        private void SelecionarEmpresa_FormClosing(object sender, FormClosingEventArgs e)
         {
 
         }

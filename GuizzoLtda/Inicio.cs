@@ -20,11 +20,10 @@ namespace GuizzoLtda
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-            SelecionarEmpresa fselecemp = new SelecionarEmpresa();
-            this.Hide();
-            fselecemp.Show();
-
+            var form2Obj = new SelecionarEmpresa();
+            form2Obj.Shown += (o, args) => { btnAcessarSys.Enabled = false; };
+            form2Obj.FormClosed += (o, args) => { btnAcessarSys.Enabled = true; };
+            form2Obj.Show();
         }
 
         private void Inicio_Load(object sender, EventArgs e)

@@ -263,6 +263,7 @@
             Name = "CRUDPedido";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "CRUDPedido";
+            Load += CRUDPedido_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridCRUD).EndInit();
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();

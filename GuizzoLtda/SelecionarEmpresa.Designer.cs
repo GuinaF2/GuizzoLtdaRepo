@@ -32,6 +32,7 @@
             dgViewSelEmp = new DataGridView();
             textBox1 = new TextBox();
             toolStrip1 = new ToolStrip();
+            linkCadEmp = new LinkLabel();
             ((System.ComponentModel.ISupportInitialize)pbLogoEmp).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgViewSelEmp).BeginInit();
             SuspendLayout();
@@ -77,11 +78,24 @@
             toolStrip1.Text = "toolStrip1";
             toolStrip1.ItemClicked += toolStrip1_ItemClicked;
             // 
+            // linkCadEmp
+            // 
+            linkCadEmp.AutoSize = true;
+            linkCadEmp.Location = new Point(614, 10);
+            linkCadEmp.Name = "linkCadEmp";
+            linkCadEmp.Size = new Size(186, 15);
+            linkCadEmp.TabIndex = 8;
+            linkCadEmp.TabStop = true;
+            linkCadEmp.Text = "Não Possui Cadastro? Clique Aqui";
+            linkCadEmp.LinkClicked += linkCadEmp_LinkClicked;
+            // 
             // SelecionarEmpresa
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            ControlBox = false;
+            Controls.Add(linkCadEmp);
             Controls.Add(toolStrip1);
             Controls.Add(dgViewSelEmp);
             Controls.Add(pbLogoEmp);
@@ -89,6 +103,7 @@
             Name = "SelecionarEmpresa";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "SelecionarEmpresa";
+            FormClosing += SelecionarEmpresa_FormClosing;
             Load += SelecionarEmpresa_Load_1;
             ((System.ComponentModel.ISupportInitialize)pbLogoEmp).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgViewSelEmp).EndInit();
@@ -102,5 +117,6 @@
         private DataGridView dgViewSelEmp;
         private TextBox textBox1;
         private ToolStrip toolStrip1;
+        private LinkLabel linkCadEmp;
     }
 }
