@@ -96,6 +96,8 @@ namespace Controle
                 throw new Exception(ex.Message);
             }
         }
+
+        
         public bool AtualizarEmpresa(EmpresaModelo us)
         {
             try
