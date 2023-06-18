@@ -28,11 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            txtEmpresaid = new TextBox();
             mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             dtgPedido = new DataGridView();
-            label1 = new Label();
-            labelEmpresaId = new Label();
             btnConfirma = new Button();
             cbAberto = new CheckBox();
             cbEncerrado = new CheckBox();
@@ -44,13 +41,6 @@
             toolStrip1.SuspendLayout();
             SuspendLayout();
             // 
-            // txtEmpresaid
-            // 
-            txtEmpresaid.Location = new Point(19, 56);
-            txtEmpresaid.Name = "txtEmpresaid";
-            txtEmpresaid.Size = new Size(100, 23);
-            txtEmpresaid.TabIndex = 0;
-            // 
             // mySqlCommand1
             // 
             mySqlCommand1.CacheAge = 0;
@@ -61,29 +51,12 @@
             // dtgPedido
             // 
             dtgPedido.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgPedido.Location = new Point(-2, 199);
+            dtgPedido.Location = new Point(0, 198);
             dtgPedido.Name = "dtgPedido";
             dtgPedido.RowTemplate.Height = 25;
             dtgPedido.Size = new Size(803, 251);
             dtgPedido.TabIndex = 1;
             dtgPedido.Visible = false;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(19, 38);
-            label1.Name = "label1";
-            label1.Size = new Size(0, 15);
-            label1.TabIndex = 2;
-            // 
-            // labelEmpresaId
-            // 
-            labelEmpresaId.AutoSize = true;
-            labelEmpresaId.Location = new Point(19, 38);
-            labelEmpresaId.Name = "labelEmpresaId";
-            labelEmpresaId.Size = new Size(62, 15);
-            labelEmpresaId.TabIndex = 3;
-            labelEmpresaId.Text = "EmpresaId";
             // 
             // btnConfirma
             // 
@@ -119,7 +92,7 @@
             // 
             // txtDtPedido
             // 
-            txtDtPedido.Location = new Point(19, 110);
+            txtDtPedido.Location = new Point(19, 86);
             txtDtPedido.Name = "txtDtPedido";
             txtDtPedido.Size = new Size(100, 23);
             txtDtPedido.TabIndex = 7;
@@ -127,7 +100,7 @@
             // labelDtPedido
             // 
             labelDtPedido.AutoSize = true;
-            labelDtPedido.Location = new Point(19, 92);
+            labelDtPedido.Location = new Point(19, 68);
             labelDtPedido.Name = "labelDtPedido";
             labelDtPedido.Size = new Size(71, 15);
             labelDtPedido.TabIndex = 8;
@@ -164,10 +137,7 @@
             Controls.Add(cbEncerrado);
             Controls.Add(cbAberto);
             Controls.Add(btnConfirma);
-            Controls.Add(labelEmpresaId);
-            Controls.Add(label1);
             Controls.Add(dtgPedido);
-            Controls.Add(txtEmpresaid);
             Name = "PedidoFunc";
             StartPosition = FormStartPosition.CenterScreen;
             Load += PedidoFunc_Load;
@@ -179,12 +149,8 @@
         }
 
         #endregion
-
-        private TextBox txtEmpresaid;
         private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
         private DataGridView dtgPedido;
-        private Label label1;
-        private Label labelEmpresaId;
         private Button btnConfirma;
         private CheckBox cbAberto;
         private CheckBox cbEncerrado;

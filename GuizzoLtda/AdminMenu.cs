@@ -89,5 +89,12 @@ namespace GuizzoLtda
 
             }
         }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            AdminLogin freturnlogin = new AdminLogin();
+            freturnlogin.Show();
+            Hide();
+        }
     }
 }

@@ -36,17 +36,17 @@
             toolStripSeparator2 = new ToolStripSeparator();
             btnConfirmarPedi = new ToolStripButton();
             toolStripSeparator3 = new ToolStripSeparator();
-            btnDevolucao = new ToolStripButton();
-            toolStripSeparator4 = new ToolStripSeparator();
             btnVerifyEmp = new ToolStripButton();
             pbFotoMenuFunc = new PictureBox();
+            toolStripSeparator5 = new ToolStripSeparator();
+            toolStripButton3 = new ToolStripButton();
             toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbFotoMenuFunc).BeginInit();
             SuspendLayout();
             // 
             // toolStrip1
             // 
-            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton2, toolStripSeparator1, toolStripButton17, toolStripSeparator2, btnConfirmarPedi, toolStripSeparator3, btnDevolucao, toolStripSeparator4, btnVerifyEmp });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton2, toolStripSeparator1, toolStripButton17, toolStripSeparator2, btnConfirmarPedi, toolStripSeparator3, btnVerifyEmp, toolStripSeparator5, toolStripButton3 });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(800, 25);
@@ -74,8 +74,8 @@
             toolStripButton17.Image = (Image)resources.GetObject("toolStripButton17.Image");
             toolStripButton17.ImageTransparentColor = Color.Magenta;
             toolStripButton17.Name = "toolStripButton17";
-            toolStripButton17.Size = new Size(83, 22);
-            toolStripButton17.Text = "Emissão NF-E";
+            toolStripButton17.Size = new Size(125, 22);
+            toolStripButton17.Text = "Emissão Documentos";
             toolStripButton17.TextImageRelation = TextImageRelation.TextAboveImage;
             // 
             // toolStripSeparator2
@@ -99,30 +99,14 @@
             toolStripSeparator3.Name = "toolStripSeparator3";
             toolStripSeparator3.Size = new Size(6, 25);
             // 
-            // btnDevolucao
-            // 
-            btnDevolucao.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            btnDevolucao.Image = (Image)resources.GetObject("btnDevolucao.Image");
-            btnDevolucao.ImageTransparentColor = Color.Magenta;
-            btnDevolucao.Name = "btnDevolucao";
-            btnDevolucao.Size = new Size(112, 22);
-            btnDevolucao.Text = "Solicitar Devolução";
-            btnDevolucao.TextImageRelation = TextImageRelation.TextAboveImage;
-            btnDevolucao.Click += toolStripButton15_Click;
-            // 
-            // toolStripSeparator4
-            // 
-            toolStripSeparator4.Name = "toolStripSeparator4";
-            toolStripSeparator4.Size = new Size(6, 25);
-            // 
             // btnVerifyEmp
             // 
             btnVerifyEmp.DisplayStyle = ToolStripItemDisplayStyle.Text;
             btnVerifyEmp.Image = (Image)resources.GetObject("btnVerifyEmp.Image");
             btnVerifyEmp.ImageTransparentColor = Color.Magenta;
             btnVerifyEmp.Name = "btnVerifyEmp";
-            btnVerifyEmp.Size = new Size(93, 22);
-            btnVerifyEmp.Text = "Verificar Cliente";
+            btnVerifyEmp.Size = new Size(102, 22);
+            btnVerifyEmp.Text = "Encontrar Cliente";
             btnVerifyEmp.TextImageRelation = TextImageRelation.TextAboveImage;
             btnVerifyEmp.Click += toolStripButton14_Click;
             // 
@@ -135,6 +119,21 @@
             pbFotoMenuFunc.SizeMode = PictureBoxSizeMode.StretchImage;
             pbFotoMenuFunc.TabIndex = 1;
             pbFotoMenuFunc.TabStop = false;
+            // 
+            // toolStripSeparator5
+            // 
+            toolStripSeparator5.Name = "toolStripSeparator5";
+            toolStripSeparator5.Size = new Size(6, 25);
+            // 
+            // toolStripButton3
+            // 
+            toolStripButton3.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            toolStripButton3.Image = (Image)resources.GetObject("toolStripButton3.Image");
+            toolStripButton3.ImageTransparentColor = Color.Magenta;
+            toolStripButton3.Name = "toolStripButton3";
+            toolStripButton3.Size = new Size(98, 22);
+            toolStripButton3.Text = "Verificar Pedidos";
+            toolStripButton3.TextImageRelation = TextImageRelation.TextAboveImage;
             // 
             // FuncionarioMenu
             // 
@@ -165,13 +164,13 @@
         private ToolStripSplitButton toolStripSplitButton3;
         private ToolStripButton toolStripButton17;
         private ToolStripButton btnConfirmarPedi;
-        private ToolStripButton btnDevolucao;
         private ToolStripButton btnVerifyEmp;
         private PictureBox pbFotoMenuFunc;
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripSeparator toolStripSeparator2;
         private ToolStripSeparator toolStripSeparator3;
-        private ToolStripSeparator toolStripSeparator4;
         private ToolStripButton toolStripButton2;
+        private ToolStripSeparator toolStripSeparator5;
+        private ToolStripButton toolStripButton3;
     }
 }

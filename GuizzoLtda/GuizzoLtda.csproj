@@ -52,4 +52,8 @@
     <Folder Include="IMAGES\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="GMap.NET.Windows" Version="1.9.0" />
+  </ItemGroup>
+
 </Project>
