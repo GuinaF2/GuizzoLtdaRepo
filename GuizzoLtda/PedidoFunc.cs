@@ -44,8 +44,6 @@ namespace GuizzoLtda
 
             txtDtPedido.Visible = false;
             labelDtPedido.Visible = false;
-            txtEmpresaid.Visible = false;
-            labelEmpresaId.Visible = false;
             cbAberto.Visible = false;
             cbEncerrado.Visible = false;
             btnConfirma.Visible = false;
