@@ -39,17 +39,21 @@
             btnApaga = new ToolStripButton();
             toolStripSeparator = new ToolStripSeparator();
             ajudaToolStripButton = new ToolStripButton();
-            labelcargo = new Label();
-            cbCargo = new ComboBox();
-            labelsenha = new Label();
-            labelnome = new Label();
-            txtSenha = new TextBox();
-            txtNome = new TextBox();
-            txtID = new TextBox();
-            labelid = new Label();
+            txtIdCliente = new TextBox();
             SaveCreate = new Button();
             SaveDelete = new Button();
             SaveUpdate = new Button();
+            txtIdMoto = new TextBox();
+            txtDataPed = new TextBox();
+            txtIdPedido = new TextBox();
+            labelidpedido = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            label6 = new Label();
+            label7 = new Label();
+            label8 = new Label();
+            textBox2 = new TextBox();
+            textBox3 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridCRUD).BeginInit();
             toolStrip1.SuspendLayout();
             SuspendLayout();
@@ -136,83 +140,19 @@
             ajudaToolStripButton.Size = new Size(23, 22);
             ajudaToolStripButton.Text = "Aju&da";
             // 
-            // labelcargo
+            // txtIdCliente
             // 
-            labelcargo.AutoSize = true;
-            labelcargo.Location = new Point(135, 294);
-            labelcargo.Name = "labelcargo";
-            labelcargo.Size = new Size(39, 15);
-            labelcargo.TabIndex = 25;
-            labelcargo.Text = "Cargo";
-            // 
-            // cbCargo
-            // 
-            cbCargo.FormattingEnabled = true;
-            cbCargo.Items.AddRange(new object[] { "1", "2" });
-            cbCargo.Location = new Point(197, 291);
-            cbCargo.Name = "cbCargo";
-            cbCargo.Size = new Size(63, 23);
-            cbCargo.TabIndex = 24;
-            // 
-            // labelsenha
-            // 
-            labelsenha.AutoSize = true;
-            labelsenha.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            labelsenha.Location = new Point(135, 198);
-            labelsenha.Name = "labelsenha";
-            labelsenha.Size = new Size(70, 30);
-            labelsenha.TabIndex = 22;
-            labelsenha.Text = "Senha";
-            // 
-            // labelnome
-            // 
-            labelnome.AutoSize = true;
-            labelnome.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            labelnome.Location = new Point(135, 126);
-            labelnome.Name = "labelnome";
-            labelnome.Size = new Size(70, 30);
-            labelnome.TabIndex = 21;
-            labelnome.Text = "Nome";
-            // 
-            // txtSenha
-            // 
-            txtSenha.BackColor = Color.White;
-            txtSenha.Location = new Point(135, 231);
-            txtSenha.Name = "txtSenha";
-            txtSenha.Size = new Size(125, 23);
-            txtSenha.TabIndex = 20;
-            // 
-            // txtNome
-            // 
-            txtNome.BackColor = Color.White;
-            txtNome.Location = new Point(135, 159);
-            txtNome.Name = "txtNome";
-            txtNome.Size = new Size(125, 23);
-            txtNome.TabIndex = 19;
-            // 
-            // txtID
-            // 
-            txtID.BackColor = Color.White;
-            txtID.Enabled = false;
-            txtID.Location = new Point(135, 100);
-            txtID.Name = "txtID";
-            txtID.Size = new Size(125, 23);
-            txtID.TabIndex = 18;
-            // 
-            // labelid
-            // 
-            labelid.AutoSize = true;
-            labelid.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            labelid.Location = new Point(135, 67);
-            labelid.Name = "labelid";
-            labelid.Size = new Size(107, 30);
-            labelid.TabIndex = 17;
-            labelid.Text = "Id Usuario";
+            txtIdCliente.BackColor = Color.White;
+            txtIdCliente.Enabled = false;
+            txtIdCliente.Location = new Point(202, 171);
+            txtIdCliente.Name = "txtIdCliente";
+            txtIdCliente.Size = new Size(125, 23);
+            txtIdCliente.TabIndex = 18;
             // 
             // SaveCreate
             // 
             SaveCreate.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            SaveCreate.Location = new Point(50, 338);
+            SaveCreate.Location = new Point(52, 298);
             SaveCreate.Name = "SaveCreate";
             SaveCreate.Size = new Size(300, 50);
             SaveCreate.TabIndex = 16;
@@ -223,7 +163,7 @@
             // SaveDelete
             // 
             SaveDelete.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            SaveDelete.Location = new Point(50, 312);
+            SaveDelete.Location = new Point(52, 331);
             SaveDelete.Name = "SaveDelete";
             SaveDelete.Size = new Size(300, 50);
             SaveDelete.TabIndex = 15;
@@ -234,7 +174,7 @@
             // SaveUpdate
             // 
             SaveUpdate.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            SaveUpdate.Location = new Point(50, 368);
+            SaveUpdate.Location = new Point(52, 365);
             SaveUpdate.Name = "SaveUpdate";
             SaveUpdate.Size = new Size(300, 50);
             SaveUpdate.TabIndex = 14;
@@ -242,21 +182,127 @@
             SaveUpdate.UseVisualStyleBackColor = true;
             SaveUpdate.Visible = false;
             // 
+            // txtIdMoto
+            // 
+            txtIdMoto.BackColor = Color.White;
+            txtIdMoto.Enabled = false;
+            txtIdMoto.Location = new Point(71, 171);
+            txtIdMoto.Name = "txtIdMoto";
+            txtIdMoto.Size = new Size(125, 23);
+            txtIdMoto.TabIndex = 30;
+            // 
+            // txtDataPed
+            // 
+            txtDataPed.BackColor = Color.White;
+            txtDataPed.Location = new Point(270, 242);
+            txtDataPed.Name = "txtDataPed";
+            txtDataPed.Size = new Size(125, 23);
+            txtDataPed.TabIndex = 31;
+            // 
+            // txtIdPedido
+            // 
+            txtIdPedido.BackColor = Color.White;
+            txtIdPedido.Enabled = false;
+            txtIdPedido.Location = new Point(139, 112);
+            txtIdPedido.Name = "txtIdPedido";
+            txtIdPedido.Size = new Size(125, 23);
+            txtIdPedido.TabIndex = 34;
+            // 
+            // labelidpedido
+            // 
+            labelidpedido.AutoSize = true;
+            labelidpedido.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            labelidpedido.Location = new Point(139, 79);
+            labelidpedido.Name = "labelidpedido";
+            labelidpedido.Size = new Size(100, 30);
+            labelidpedido.TabIndex = 33;
+            labelidpedido.Text = "Id Pedido";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(71, 153);
+            label4.Name = "label4";
+            label4.Size = new Size(71, 15);
+            label4.TabIndex = 35;
+            label4.Text = "Id Motorista";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(202, 153);
+            label5.Name = "label5";
+            label5.Size = new Size(57, 15);
+            label5.TabIndex = 36;
+            label5.Text = "Id Cliente";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.Location = new Point(8, 209);
+            label6.Name = "label6";
+            label6.Size = new Size(123, 30);
+            label6.TabIndex = 37;
+            label6.Text = "Nº Volumes";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label7.Location = new Point(139, 209);
+            label7.Name = "label7";
+            label7.Size = new Size(100, 30);
+            label7.TabIndex = 38;
+            label7.Text = "Id Pedido";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label8.Location = new Point(270, 209);
+            label8.Name = "label8";
+            label8.Size = new Size(126, 30);
+            label8.TabIndex = 39;
+            label8.Text = "Data Pedido";
+            // 
+            // textBox2
+            // 
+            textBox2.BackColor = Color.White;
+            textBox2.Enabled = false;
+            textBox2.Location = new Point(8, 242);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(125, 23);
+            textBox2.TabIndex = 40;
+            // 
+            // textBox3
+            // 
+            textBox3.BackColor = Color.White;
+            textBox3.Enabled = false;
+            textBox3.Location = new Point(139, 242);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(125, 23);
+            textBox3.TabIndex = 41;
+            // 
             // CRUDPedido
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(textBox3);
+            Controls.Add(textBox2);
+            Controls.Add(label8);
+            Controls.Add(label7);
+            Controls.Add(label6);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(txtIdPedido);
+            Controls.Add(labelidpedido);
+            Controls.Add(txtDataPed);
+            Controls.Add(txtIdMoto);
             Controls.Add(dataGridCRUD);
             Controls.Add(toolStrip1);
-            Controls.Add(labelcargo);
-            Controls.Add(cbCargo);
-            Controls.Add(labelsenha);
-            Controls.Add(labelnome);
-            Controls.Add(txtSenha);
-            Controls.Add(txtNome);
-            Controls.Add(txtID);
-            Controls.Add(labelid);
+            Controls.Add(txtIdCliente);
             Controls.Add(SaveCreate);
             Controls.Add(SaveDelete);
             Controls.Add(SaveUpdate);
@@ -289,10 +335,25 @@
         private Label labelnome;
         private TextBox txtSenha;
         private TextBox txtNome;
-        private TextBox txtID;
+        private TextBox txtIdCliente;
         private Label labelid;
         private Button SaveCreate;
         private Button SaveDelete;
         private Button SaveUpdate;
+        private TextBox textBox1;
+        private Label label1;
+        private TextBox txtIdMoto;
+        private Label label2;
+        private Label label3;
+        private TextBox txtDataPed;
+        private TextBox txtIdPedido;
+        private Label labelidpedido;
+        private Label label4;
+        private Label label5;
+        private Label label6;
+        private Label label7;
+        private Label label8;
+        private TextBox textBox2;
+        private TextBox textBox3;
     }
 }

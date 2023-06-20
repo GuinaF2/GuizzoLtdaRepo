@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminMenu));
             toolStrip1 = new ToolStrip();
+            btnReturn = new ToolStripButton();
             toolStripSeparator1 = new ToolStripSeparator();
             toolStripTextBox2 = new ToolStripSplitButton();
             abrirPedidoToolStripMenuItem = new ToolStripMenuItem();
@@ -46,7 +47,8 @@
             toolStripSeparator4 = new ToolStripSeparator();
             toolStripButton2 = new ToolStripButton();
             pbFotoAdminMenu = new PictureBox();
-            btnReturn = new ToolStripButton();
+            toolStripSeparator5 = new ToolStripSeparator();
+            toolStripButton3 = new ToolStripButton();
             toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbFotoAdminMenu).BeginInit();
             SuspendLayout();
@@ -54,12 +56,22 @@
             // toolStrip1
             // 
             toolStrip1.GripStyle = ToolStripGripStyle.Hidden;
-            toolStrip1.Items.AddRange(new ToolStripItem[] { btnReturn, toolStripSeparator1, toolStripTextBox2, toolStripSeparator2, toolStripSplitButton6, toolStripSplitButton1, toolStripSeparator3, toolStripButton1, toolStripSeparator4, toolStripButton2 });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { btnReturn, toolStripSeparator1, toolStripTextBox2, toolStripSeparator2, toolStripSplitButton6, toolStripSplitButton1, toolStripSeparator3, toolStripButton1, toolStripSeparator4, toolStripButton2, toolStripSeparator5, toolStripButton3 });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(800, 25);
             toolStrip1.TabIndex = 1;
             toolStrip1.Text = "toolStrip1";
+            // 
+            // btnReturn
+            // 
+            btnReturn.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btnReturn.Image = Properties.Resources._688879_arrows_512x512;
+            btnReturn.ImageTransparentColor = Color.Magenta;
+            btnReturn.Name = "btnReturn";
+            btnReturn.Size = new Size(23, 22);
+            btnReturn.Text = "toolStripButton1";
+            btnReturn.Click += btnReturn_Click;
             // 
             // toolStripSeparator1
             // 
@@ -77,35 +89,35 @@
             // abrirPedidoToolStripMenuItem
             // 
             abrirPedidoToolStripMenuItem.Name = "abrirPedidoToolStripMenuItem";
-            abrirPedidoToolStripMenuItem.Size = new Size(180, 22);
+            abrirPedidoToolStripMenuItem.Size = new Size(142, 22);
             abrirPedidoToolStripMenuItem.Text = "Funcionarios";
             abrirPedidoToolStripMenuItem.Click += abrirPedidoToolStripMenuItem_Click_1;
             // 
             // pedidosToolStripMenuItem
             // 
             pedidosToolStripMenuItem.Name = "pedidosToolStripMenuItem";
-            pedidosToolStripMenuItem.Size = new Size(180, 22);
+            pedidosToolStripMenuItem.Size = new Size(142, 22);
             pedidosToolStripMenuItem.Text = "Pedidos";
             pedidosToolStripMenuItem.Click += pedidosToolStripMenuItem_Click;
             // 
             // veiculosToolStripMenuItem
             // 
             veiculosToolStripMenuItem.Name = "veiculosToolStripMenuItem";
-            veiculosToolStripMenuItem.Size = new Size(180, 22);
+            veiculosToolStripMenuItem.Size = new Size(142, 22);
             veiculosToolStripMenuItem.Text = "Veiculos";
             veiculosToolStripMenuItem.Click += veiculosToolStripMenuItem_Click;
             // 
             // motoristasToolStripMenuItem
             // 
             motoristasToolStripMenuItem.Name = "motoristasToolStripMenuItem";
-            motoristasToolStripMenuItem.Size = new Size(180, 22);
+            motoristasToolStripMenuItem.Size = new Size(142, 22);
             motoristasToolStripMenuItem.Text = "Motoristas";
             motoristasToolStripMenuItem.Click += motoristasToolStripMenuItem_Click;
             // 
             // empresasToolStripMenuItem
             // 
             empresasToolStripMenuItem.Name = "empresasToolStripMenuItem";
-            empresasToolStripMenuItem.Size = new Size(180, 22);
+            empresasToolStripMenuItem.Size = new Size(142, 22);
             empresasToolStripMenuItem.Text = "Empresas";
             empresasToolStripMenuItem.Click += empresasToolStripMenuItem_Click;
             // 
@@ -164,9 +176,10 @@
             toolStripButton2.Image = (Image)resources.GetObject("toolStripButton2.Image");
             toolStripButton2.ImageTransparentColor = Color.Magenta;
             toolStripButton2.Name = "toolStripButton2";
-            toolStripButton2.Size = new Size(83, 22);
-            toolStripButton2.Text = "Calcular Frete";
+            toolStripButton2.Size = new Size(69, 22);
+            toolStripButton2.Text = "Traçar Rota";
             toolStripButton2.TextImageRelation = TextImageRelation.TextAboveImage;
+            toolStripButton2.Click += toolStripButton2_Click;
             // 
             // pbFotoAdminMenu
             // 
@@ -179,15 +192,20 @@
             pbFotoAdminMenu.TabStop = false;
             pbFotoAdminMenu.Click += pbFotoAdminMenu_Click;
             // 
-            // btnReturn
+            // toolStripSeparator5
             // 
-            btnReturn.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            btnReturn.Image = Properties.Resources._688879_arrows_512x512;
-            btnReturn.ImageTransparentColor = Color.Magenta;
-            btnReturn.Name = "btnReturn";
-            btnReturn.Size = new Size(23, 22);
-            btnReturn.Text = "toolStripButton1";
-            btnReturn.Click += btnReturn_Click;
+            toolStripSeparator5.Name = "toolStripSeparator5";
+            toolStripSeparator5.Size = new Size(6, 25);
+            // 
+            // toolStripButton3
+            // 
+            toolStripButton3.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            toolStripButton3.Image = (Image)resources.GetObject("toolStripButton3.Image");
+            toolStripButton3.ImageTransparentColor = Color.Magenta;
+            toolStripButton3.Name = "toolStripButton3";
+            toolStripButton3.Size = new Size(83, 22);
+            toolStripButton3.Text = "Calcular Frete";
+            toolStripButton3.TextImageRelation = TextImageRelation.TextAboveImage;
             // 
             // AdminMenu
             // 
@@ -227,5 +245,7 @@
         private ToolStripSeparator toolStripSeparator4;
         private ToolStripButton toolStripButton2;
         private ToolStripButton btnReturn;
+        private ToolStripSeparator toolStripSeparator5;
+        private ToolStripButton toolStripButton3;
     }
 }

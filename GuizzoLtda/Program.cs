@@ -10,7 +10,7 @@ namespace GuizzoLtda
         {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new MapaTeste());
+                Application.Run(new Inicio());
                 
                 ApplicationConfiguration.Initialize();
 

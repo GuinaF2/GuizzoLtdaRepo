@@ -96,5 +96,12 @@ namespace GuizzoLtda
             freturnlogin.Show();
             Hide();
         }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            MapaTeste fmapago = new MapaTeste();
+            fmapago.Show();
+            Hide();
+        }
     }
 }

@@ -36,7 +36,7 @@ namespace GuizzoLtda
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
             double lat = Convert.ToDouble(txtLat.Text);
             double lng = Convert.ToDouble(txtLong.Text);
             MapaBr.Position = new PointLatLng(lat, lng);
@@ -94,7 +94,7 @@ namespace GuizzoLtda
             if (MapaBr.Overlays.Count > 0)
             {
                 MapaBr.Overlays.RemoveAt(0);
-                MapaBr.Refresh()   ;
+                MapaBr.Refresh();
             }
         }
     }

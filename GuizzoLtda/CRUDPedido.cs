@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Controle;
+using Modelos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,10 @@ namespace GuizzoLtda
 {
     public partial class CRUDPedido : Form
     {
+        Conexao conexaosql = new Conexao();
+        MotoristaModelo MotoristaModelo = new MotoristaModelo();
+        MotoristaControle Controle = new MotoristaControle();
+        int id;
         public CRUDPedido()
         {
             InitializeComponent();
@@ -24,7 +30,7 @@ namespace GuizzoLtda
 
         private void CRUDPedido_Load(object sender, EventArgs e)
         {
-
+            dataGridCRUD.DataSource = conexaosql.verDados("SELECT * FROM tb_motorista");
         }
     }
 }

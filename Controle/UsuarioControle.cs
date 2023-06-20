@@ -128,11 +128,10 @@ namespace Controle
                 if (registro.HasRows)
                 {
                     registro.Read();
-                    us.CodUsuario = Convert.ToInt32(registro.GetString("idusuario"));
-                    us.NomeUser = registro.GetString("nomeuser");
-                    us.SenhaUser = registro.GetString("senhauser");
+                    us.NomeUser = registro.GetString("nome");
+                    us.CodUsuario = Convert.ToInt32(registro.GetString("idfuncionario"));
+                    us.SenhaUser = registro.GetString("senha");
                     us.CodCargo = Convert.ToInt32(registro.GetString("cargo"));
-
                 }
                 con.Close();
             }

@@ -46,7 +46,6 @@ namespace GuizzoLtda
 
         private void SaveCreate_Click(object sender, EventArgs e)
         {
-            MotoristaModelo.CodMotorista = Convert.ToInt32(txtIdMoto.Text);
             MotoristaModelo.CodVeiculo = Convert.ToInt32(txtIdVeiculo.Text);
             MotoristaModelo.cpfMotorista = txtCpf.Text;
             MotoristaModelo.RgMotorista = txtRg.Text;
@@ -240,9 +239,8 @@ namespace GuizzoLtda
         }
 
         private void txtIdVeiculo_TextChanged(object sender, EventArgs e)
-        {
+        { }
 
-        }
 
         private void dataGridMotorista_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -251,6 +249,23 @@ namespace GuizzoLtda
 
         private void label1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void txtIdVeiculo_Click(object sender, EventArgs e)
+        {
+            SelecionarVeiculo cselectveic = new SelecionarVeiculo();
+            cselectveic.ShowDialog();
+
+            if (cselectveic.DialogResult == DialogResult.OK)
+            {
+                txtIdVeiculo.Text = cselectveic.idped.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Erro. Verifique se selecionou um pedido corretamente.");
+            }
+
 
         }
     }

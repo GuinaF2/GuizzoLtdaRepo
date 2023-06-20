@@ -82,16 +82,16 @@
             // 
             label1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label1.AutoSize = true;
-            label1.Location = new Point(447, 17);
+            label1.Location = new Point(531, 24);
             label1.Name = "label1";
-            label1.Size = new Size(47, 15);
+            label1.Size = new Size(50, 15);
             label1.TabIndex = 2;
-            label1.Text = "Latitute";
+            label1.Text = "Latitude";
             // 
             // txtLat
             // 
             txtLat.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            txtLat.Location = new Point(452, 91);
+            txtLat.Location = new Point(531, 60);
             txtLat.Name = "txtLat";
             txtLat.Size = new Size(99, 23);
             txtLat.TabIndex = 3;
@@ -99,7 +99,7 @@
             // txtLong
             // 
             txtLong.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            txtLong.Location = new Point(451, 169);
+            txtLong.Location = new Point(533, 131);
             txtLong.Name = "txtLong";
             txtLong.Size = new Size(100, 23);
             txtLong.TabIndex = 4;
@@ -108,7 +108,7 @@
             // 
             label2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label2.AutoSize = true;
-            label2.Location = new Point(449, 139);
+            label2.Location = new Point(531, 101);
             label2.Name = "label2";
             label2.Size = new Size(61, 15);
             label2.TabIndex = 5;
@@ -117,9 +117,10 @@
             // button1
             // 
             button1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button1.Location = new Point(547, 319);
+            button1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.Location = new Point(498, 374);
             button1.Name = "button1";
-            button1.Size = new Size(190, 49);
+            button1.Size = new Size(201, 55);
             button1.TabIndex = 6;
             button1.Text = "Confirmar";
             button1.UseVisualStyleBackColor = true;
@@ -128,9 +129,9 @@
             // btnPara
             // 
             btnPara.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnPara.Location = new Point(621, 80);
+            btnPara.Location = new Point(609, 282);
             btnPara.Name = "btnPara";
-            btnPara.Size = new Size(152, 34);
+            btnPara.Size = new Size(179, 57);
             btnPara.TabIndex = 7;
             btnPara.Text = "Adicionar Parada";
             btnPara.UseVisualStyleBackColor = true;
@@ -139,9 +140,9 @@
             // btnClear
             // 
             btnClear.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnClear.Location = new Point(621, 17);
+            btnClear.Location = new Point(415, 219);
             btnClear.Name = "btnClear";
-            btnClear.Size = new Size(152, 38);
+            btnClear.Size = new Size(179, 57);
             btnClear.TabIndex = 8;
             btnClear.Text = "LimparLista";
             btnClear.UseVisualStyleBackColor = true;
@@ -150,9 +151,9 @@
             // btnGetInfo
             // 
             btnGetInfo.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnGetInfo.Location = new Point(619, 139);
+            btnGetInfo.Location = new Point(609, 219);
             btnGetInfo.Name = "btnGetInfo";
-            btnGetInfo.Size = new Size(155, 43);
+            btnGetInfo.Size = new Size(179, 57);
             btnGetInfo.TabIndex = 9;
             btnGetInfo.Text = "Informações da Rota";
             btnGetInfo.UseVisualStyleBackColor = true;
@@ -161,7 +162,7 @@
             // labeldistancia
             // 
             labeldistancia.AutoSize = true;
-            labeldistancia.Location = new Point(449, 216);
+            labeldistancia.Location = new Point(509, 167);
             labeldistancia.Name = "labeldistancia";
             labeldistancia.Size = new Size(55, 15);
             labeldistancia.TabIndex = 10;
@@ -169,9 +170,9 @@
             // 
             // button2
             // 
-            button2.Location = new Point(614, 236);
+            button2.Location = new Point(415, 282);
             button2.Name = "button2";
-            button2.Size = new Size(123, 29);
+            button2.Size = new Size(179, 57);
             button2.TabIndex = 11;
             button2.Text = "Remover Marcações";
             button2.UseVisualStyleBackColor = true;

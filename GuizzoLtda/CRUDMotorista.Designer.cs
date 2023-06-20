@@ -271,11 +271,12 @@
             // txtIdVeiculo
             // 
             txtIdVeiculo.BackColor = Color.White;
-            txtIdVeiculo.Enabled = false;
             txtIdVeiculo.Location = new Point(22, 190);
             txtIdVeiculo.Name = "txtIdVeiculo";
+            txtIdVeiculo.ReadOnly = true;
             txtIdVeiculo.Size = new Size(125, 23);
             txtIdVeiculo.TabIndex = 27;
+            txtIdVeiculo.Click += txtIdVeiculo_Click;
             txtIdVeiculo.TextChanged += txtIdVeiculo_TextChanged;
             // 
             // labelcodigo
@@ -321,7 +322,7 @@
             // 
             labeltipocnh.AutoSize = true;
             labeltipocnh.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            labeltipocnh.Location = new Point(22, 231);
+            labeltipocnh.Location = new Point(22, 224);
             labeltipocnh.Name = "labeltipocnh";
             labeltipocnh.Size = new Size(160, 30);
             labeltipocnh.TabIndex = 36;
@@ -331,7 +332,7 @@
             // 
             cbTipoCnh.FormattingEnabled = true;
             cbTipoCnh.Items.AddRange(new object[] { "A", "B", "C", "D", "E" });
-            cbTipoCnh.Location = new Point(26, 274);
+            cbTipoCnh.Location = new Point(22, 274);
             cbTipoCnh.Name = "cbTipoCnh";
             cbTipoCnh.Size = new Size(55, 23);
             cbTipoCnh.TabIndex = 37;
