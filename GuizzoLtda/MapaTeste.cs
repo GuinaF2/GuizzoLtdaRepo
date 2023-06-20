@@ -42,7 +42,7 @@ namespace GuizzoLtda
             MapaBr.Position = new PointLatLng(lat, lng);
             MapaBr.MinZoom = 5;
             MapaBr.MaxZoom = 10;
-            MapaBr.Zoom = 5;
+            MapaBr.Zoom = 8;
 
 
             PointLatLng point = new PointLatLng(lat, lng);
@@ -91,11 +91,47 @@ namespace GuizzoLtda
 
         private void button2_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            AdminMenu fmenureturn = new AdminMenu();
+            this.Hide();
+            fmenureturn.Show();
+        }
+
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
             if (MapaBr.Overlays.Count > 0)
             {
                 MapaBr.Overlays.RemoveAt(0);
                 MapaBr.Refresh();
             }
+        }
+
+        private void btnCad_Click(object sender, EventArgs e)
+        {
+            _points.Clear();
+        }
+
+        private void btnApaga_Click(object sender, EventArgs e)
+        {
+            var route = GoogleMapProvider.Instance
+                .GetRoute(_points[0], _points[1], false, false, 10);
+            var r = new GMapRoute(route.Points, "My Route");
+            var routes = new GMapOverlay("Routes");
+            routes.Routes.Add(r);
+            MapaBr.Overlays.Add(routes);
+
+            labeldistancia.Text = route.Distance + "Km";
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            _points.Add(new PointLatLng(Convert.ToDouble(txtLat.Text),
+                Convert.ToDouble(txtLong.Text)));
+            MapaBr.Zoom = 14;
         }
     }
 }

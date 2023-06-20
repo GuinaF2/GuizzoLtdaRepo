@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CRUDPedido));
-            dataGridCRUD = new DataGridView();
+            dgPedido = new DataGridView();
             toolStrip1 = new ToolStrip();
             btnReturn = new ToolStripButton();
             btnAtualizar = new ToolStripButton();
@@ -52,23 +52,23 @@
             label6 = new Label();
             label7 = new Label();
             label8 = new Label();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            ((System.ComponentModel.ISupportInitialize)dataGridCRUD).BeginInit();
+            txtVolume = new TextBox();
+            txtTipoPedido = new TextBox();
+            ((System.ComponentModel.ISupportInitialize)dgPedido).BeginInit();
             toolStrip1.SuspendLayout();
             SuspendLayout();
             // 
-            // dataGridCRUD
+            // dgPedido
             // 
-            dataGridCRUD.AllowUserToAddRows = false;
-            dataGridCRUD.AllowUserToDeleteRows = false;
-            dataGridCRUD.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridCRUD.Location = new Point(411, -1);
-            dataGridCRUD.Name = "dataGridCRUD";
-            dataGridCRUD.ReadOnly = true;
-            dataGridCRUD.RowTemplate.Height = 25;
-            dataGridCRUD.Size = new Size(389, 453);
-            dataGridCRUD.TabIndex = 23;
+            dgPedido.AllowUserToAddRows = false;
+            dgPedido.AllowUserToDeleteRows = false;
+            dgPedido.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgPedido.Location = new Point(411, -1);
+            dgPedido.Name = "dgPedido";
+            dgPedido.ReadOnly = true;
+            dgPedido.RowTemplate.Height = 25;
+            dgPedido.Size = new Size(389, 453);
+            dgPedido.TabIndex = 23;
             // 
             // toolStrip1
             // 
@@ -97,6 +97,7 @@
             btnAtualizar.Name = "btnAtualizar";
             btnAtualizar.Size = new Size(57, 22);
             btnAtualizar.Text = "Atualizar";
+            btnAtualizar.Click += btnAtualizar_Click;
             // 
             // toolStripSeparator1
             // 
@@ -111,6 +112,7 @@
             btnCad.Name = "btnCad";
             btnCad.Size = new Size(61, 22);
             btnCad.Text = "Cadastrar";
+            btnCad.Click += btnCad_Click;
             // 
             // toolStripSeparator2
             // 
@@ -125,6 +127,7 @@
             btnApaga.Name = "btnApaga";
             btnApaga.Size = new Size(48, 22);
             btnApaga.Text = "Deletar";
+            btnApaga.Click += btnApaga_Click;
             // 
             // toolStripSeparator
             // 
@@ -152,7 +155,7 @@
             // SaveCreate
             // 
             SaveCreate.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            SaveCreate.Location = new Point(52, 298);
+            SaveCreate.Location = new Point(48, 296);
             SaveCreate.Name = "SaveCreate";
             SaveCreate.Size = new Size(300, 50);
             SaveCreate.TabIndex = 16;
@@ -163,7 +166,7 @@
             // SaveDelete
             // 
             SaveDelete.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            SaveDelete.Location = new Point(52, 331);
+            SaveDelete.Location = new Point(48, 402);
             SaveDelete.Name = "SaveDelete";
             SaveDelete.Size = new Size(300, 50);
             SaveDelete.TabIndex = 15;
@@ -174,7 +177,7 @@
             // SaveUpdate
             // 
             SaveUpdate.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            SaveUpdate.Location = new Point(52, 365);
+            SaveUpdate.Location = new Point(48, 352);
             SaveUpdate.Name = "SaveUpdate";
             SaveUpdate.Size = new Size(300, 50);
             SaveUpdate.TabIndex = 14;
@@ -221,18 +224,20 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(71, 153);
+            label4.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(70, 138);
             label4.Name = "label4";
-            label4.Size = new Size(71, 15);
+            label4.Size = new Size(126, 30);
             label4.TabIndex = 35;
             label4.Text = "Id Motorista";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(202, 153);
+            label5.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Location = new Point(202, 141);
             label5.Name = "label5";
-            label5.Size = new Size(57, 15);
+            label5.Size = new Size(101, 30);
             label5.TabIndex = 36;
             label5.Text = "Id Cliente";
             // 
@@ -252,9 +257,9 @@
             label7.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             label7.Location = new Point(139, 209);
             label7.Name = "label7";
-            label7.Size = new Size(100, 30);
+            label7.Size = new Size(122, 30);
             label7.TabIndex = 38;
-            label7.Text = "Id Pedido";
+            label7.Text = "Tipo Pedido";
             // 
             // label8
             // 
@@ -266,31 +271,29 @@
             label8.TabIndex = 39;
             label8.Text = "Data Pedido";
             // 
-            // textBox2
+            // txtVolume
             // 
-            textBox2.BackColor = Color.White;
-            textBox2.Enabled = false;
-            textBox2.Location = new Point(8, 242);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(125, 23);
-            textBox2.TabIndex = 40;
+            txtVolume.BackColor = Color.White;
+            txtVolume.Location = new Point(8, 242);
+            txtVolume.Name = "txtVolume";
+            txtVolume.Size = new Size(125, 23);
+            txtVolume.TabIndex = 40;
             // 
-            // textBox3
+            // txtTipoPedido
             // 
-            textBox3.BackColor = Color.White;
-            textBox3.Enabled = false;
-            textBox3.Location = new Point(139, 242);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(125, 23);
-            textBox3.TabIndex = 41;
+            txtTipoPedido.BackColor = Color.White;
+            txtTipoPedido.Location = new Point(139, 242);
+            txtTipoPedido.Name = "txtTipoPedido";
+            txtTipoPedido.Size = new Size(125, 23);
+            txtTipoPedido.TabIndex = 41;
             // 
             // CRUDPedido
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
+            Controls.Add(txtTipoPedido);
+            Controls.Add(txtVolume);
             Controls.Add(label8);
             Controls.Add(label7);
             Controls.Add(label6);
@@ -300,7 +303,7 @@
             Controls.Add(labelidpedido);
             Controls.Add(txtDataPed);
             Controls.Add(txtIdMoto);
-            Controls.Add(dataGridCRUD);
+            Controls.Add(dgPedido);
             Controls.Add(toolStrip1);
             Controls.Add(txtIdCliente);
             Controls.Add(SaveCreate);
@@ -310,7 +313,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "CRUDPedido";
             Load += CRUDPedido_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridCRUD).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgPedido).EndInit();
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();
             ResumeLayout(false);
@@ -319,7 +322,7 @@
 
         #endregion
 
-        private DataGridView dataGridCRUD;
+        private DataGridView dgPedido;
         private ToolStrip toolStrip1;
         private ToolStripButton btnReturn;
         private ToolStripButton btnAtualizar;
@@ -353,7 +356,7 @@
         private Label label6;
         private Label label7;
         private Label label8;
-        private TextBox textBox2;
-        private TextBox textBox3;
+        private TextBox txtVolume;
+        private TextBox txtTipoPedido;
     }
 }

@@ -15,8 +15,8 @@ namespace GuizzoLtda
     public partial class CRUDPedido : Form
     {
         Conexao conexaosql = new Conexao();
-        MotoristaModelo MotoristaModelo = new MotoristaModelo();
-        MotoristaControle Controle = new MotoristaControle();
+        PedidoModelo PedidoModelo = new PedidoModelo();
+        PedidoControle Controle = new PedidoControle();
         int id;
         public CRUDPedido()
         {
@@ -25,12 +25,83 @@ namespace GuizzoLtda
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
-
+            AdminMenu fmenureturn = new AdminMenu();
+            this.Hide();
+            fmenureturn.Show();
         }
 
         private void CRUDPedido_Load(object sender, EventArgs e)
         {
-            dataGridCRUD.DataSource = conexaosql.verDados("SELECT * FROM tb_motorista");
+            dgPedido.DataSource = conexaosql.verDados("SELECT * FROM tb_pedido");
+        }
+
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+            SaveUpdate.Visible = true;
+            SaveDelete.Visible = false;
+            SaveCreate.Visible = false;
+
+            txtIdPedido.Visible = true;
+            txtIdCliente.Visible = true;
+            txtIdMoto.Visible = true;
+            txtVolume.Visible = true;
+            txtDataPed.Visible = true;
+            txtTipoPedido.Visible = true;
+
+            labelidpedido.Visible = true;
+            label4.Visible = true;
+            label5.Visible = true;
+            label6.Visible = true;
+            label7.Visible = true;
+            label8.Visible = true;
+
+            dgPedido.Visible = true;
+        }
+
+        private void btnCad_Click(object sender, EventArgs e)
+        {
+            SaveUpdate.Visible = false;
+            SaveDelete.Visible = false;
+            SaveCreate.Visible = true;
+
+            txtIdPedido.Visible = true;
+            txtIdCliente.Visible = true;
+            txtIdMoto.Visible = true;
+            txtVolume.Visible = true;
+            txtDataPed.Visible = true;
+            txtTipoPedido.Visible = true;
+
+            labelidpedido.Visible = true;
+            label4.Visible = true;
+            label5.Visible = true;
+            label6.Visible = true;
+            label7.Visible = true;
+            label8.Visible = true;
+
+            dgPedido.Visible = false;
+        }
+
+        private void btnApaga_Click(object sender, EventArgs e)
+        {
+            SaveUpdate.Visible = false;
+            SaveDelete.Visible = true;
+            SaveCreate.Visible = false;
+
+            txtIdPedido.Visible = true;
+            txtIdCliente.Visible = true;
+            txtIdMoto.Visible = true;
+            txtVolume.Visible = true;
+            txtDataPed.Visible = true;
+            txtTipoPedido.Visible = true;
+
+            labelidpedido.Visible = true;
+            label4.Visible = true;
+            label5.Visible = true;
+            label6.Visible = true;
+            label7.Visible = true;
+            label8.Visible = true;
+
+            dgPedido.Visible = true;
         }
     }
 }
