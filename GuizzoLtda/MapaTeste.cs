@@ -40,9 +40,7 @@ namespace GuizzoLtda
             double lat = Convert.ToDouble(txtLat.Text);
             double lng = Convert.ToDouble(txtLong.Text);
             MapaBr.Position = new PointLatLng(lat, lng);
-            MapaBr.MinZoom = 5;
-            MapaBr.MaxZoom = 10;
-            MapaBr.Zoom = 8;
+
 
 
             PointLatLng point = new PointLatLng(lat, lng);
@@ -62,7 +60,10 @@ namespace GuizzoLtda
             MapaBr.DragButton = MouseButtons.Left;
             MapaBr.MapProvider = GMapProviders.GoogleMap;
             MapaBr.SetPositionByKeywords("Curitiba, Brazil");
-
+            MapaBr.MinZoom = 5;
+            MapaBr.MaxZoom = 18;
+            MapaBr.Zoom = 10;
+            
         }
 
         private void btnPara_Click(object sender, EventArgs e)
