@@ -42,20 +42,17 @@ namespace GuizzoLtda
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            if (!(txtLat.Text.Trim().Equals("") && txtLong.Text.Trim().Equals("")))
+            { }
             double lat = Convert.ToDouble(txtLat.Text);
             double lng = Convert.ToDouble(txtLong.Text);
             MapaBr.Position = new PointLatLng(lat, lng);
 
-
-
             PointLatLng point = new PointLatLng(lat, lng);
             GMapMarker marker = new GMarkerGoogle(point, GMarkerGoogleType.red_pushpin);
-
             GMapOverlay markers = new GMapOverlay("markers");
 
             markers.Markers.Add(marker);
-
             MapaBr.Overlays.Add(markers);
         }
 
