@@ -15,6 +15,10 @@ namespace GuizzoLtda
 {
     public partial class FuncionarioCadLog : Form
     {
+        int idcliente;
+        EmpresaControle usu = new EmpresaControle();
+        EmpresaModelo us = new EmpresaModelo();
+
         UsuarioModelo UsuarioModelo = new UsuarioModelo();
         UsuarioControle Controle = new UsuarioControle();
         public FuncionarioCadLog()
@@ -52,7 +56,7 @@ namespace GuizzoLtda
             {
                 if (Controle.Login(UsuarioModelo) >= 1)
                 {
-                    FuncionarioMenu ffuncmenu = new FuncionarioMenu();
+                    FuncionarioMenu ffuncmenu = new FuncionarioMenu(us, idcliente);
                     this.Hide();
                     ffuncmenu.Show();
                 }
@@ -67,7 +71,7 @@ namespace GuizzoLtda
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            Principal fprincipalreturn = new Principal();
+            Principal fprincipalreturn = new Principal(us, idcliente);
             this.Hide();
             fprincipalreturn.Show();
         }

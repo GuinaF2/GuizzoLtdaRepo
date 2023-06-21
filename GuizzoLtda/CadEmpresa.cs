@@ -16,6 +16,11 @@ namespace GuizzoLtda
 
     public partial class CadEmpresa : Form
     {
+        int idcliente;
+        EmpresaControle usu = new EmpresaControle();
+        EmpresaModelo us = new EmpresaModelo();
+
+
         EnderecoModelo EnderecoModelo = new EnderecoModelo();
         EnderecoControle Controle = new EnderecoControle();
 
@@ -109,7 +114,7 @@ namespace GuizzoLtda
                     {
 
                         MessageBox.Show("Cliente Cadastrado com Sucesso");
-                        Principal fprincipalreturn = new Principal();
+                        Principal fprincipalreturn = new Principal(us,idcliente);
                         this.Hide();
                         fprincipalreturn.Show();
 

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Controle;
+using Modelos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,8 +14,14 @@ namespace GuizzoLtda
 {
     public partial class FuncionarioMenu : Form
     {
-        public FuncionarioMenu()
+        int idcliente;
+        EmpresaControle usu = new EmpresaControle();
+        EmpresaModelo us = new EmpresaModelo();
+        public FuncionarioMenu(EmpresaModelo um, int id)
         {
+           
+            us = um;
+            idcliente = id;
             InitializeComponent();
             pbFotoMenuFunc.Image = Program.thePictureBox.Image;
         }
@@ -35,7 +43,7 @@ namespace GuizzoLtda
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            Principal fprincipalreturn = new Principal();
+            Principal fprincipalreturn = new Principal(us,idcliente);
             this.Hide();
             fprincipalreturn.Show();
         }

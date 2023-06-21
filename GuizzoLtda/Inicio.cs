@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Controle;
+using Modelos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,8 +14,13 @@ namespace GuizzoLtda
 {
     public partial class Inicio : Form
     {
+        int idcliente;
+        EmpresaControle usu = new EmpresaControle();
+        EmpresaModelo us = new EmpresaModelo();
+        int id;
         public Inicio()
         {
+            idcliente = id;
             InitializeComponent();
 
         }
@@ -33,7 +40,7 @@ namespace GuizzoLtda
 
         private void btnAcessarSys_Click(object sender, EventArgs e)
         {
-            Principal fcomeco = new Principal();
+            Principal fcomeco = new Principal(us, idcliente);
             this.Hide();
             fcomeco.Show();
         }
