@@ -149,7 +149,7 @@
             // 
             labeltipo.AutoSize = true;
             labeltipo.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            labeltipo.Location = new Point(43, 156);
+            labeltipo.Location = new Point(43, 158);
             labeltipo.Name = "labeltipo";
             labeltipo.Size = new Size(126, 30);
             labeltipo.TabIndex = 21;
@@ -244,7 +244,7 @@
             cbTipo.DropDownStyle = ComboBoxStyle.DropDownList;
             cbTipo.FormattingEnabled = true;
             cbTipo.Items.AddRange(new object[] { "Carro", "Moto", "Caminhão", "Fiorino", "Manual" });
-            cbTipo.Location = new Point(50, 189);
+            cbTipo.Location = new Point(50, 191);
             cbTipo.Name = "cbTipo";
             cbTipo.Size = new Size(121, 23);
             cbTipo.TabIndex = 32;

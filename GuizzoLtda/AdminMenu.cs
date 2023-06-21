@@ -1,4 +1,5 @@
-﻿using Modelos;
+﻿using Controle;
+using Modelos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,8 +14,14 @@ namespace GuizzoLtda
 {
     public partial class AdminMenu : Form
     {
-        public AdminMenu()
+        int idcliente;
+        EmpresaControle usu = new EmpresaControle();
+        EmpresaModelo us = new EmpresaModelo();
+
+        public AdminMenu(EmpresaModelo um, int id)
         {
+            us = um;
+            idcliente = id;
             InitializeComponent();
             pbFotoAdminMenu.Image = Program.thePictureBox.Image;
         }
@@ -23,7 +30,7 @@ namespace GuizzoLtda
 
         private void pedidosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CRUDPedido fpedidocrud = new CRUDPedido();
+            CRUDPedido fpedidocrud = new CRUDPedido(us,idcliente);
             fpedidocrud.Show();
             Hide();
         }
@@ -42,26 +49,26 @@ namespace GuizzoLtda
 
         private void veiculosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CRUDVeiculo fveiculocrud = new CRUDVeiculo();
+            CRUDVeiculo fveiculocrud = new CRUDVeiculo(us, idcliente);
             fveiculocrud.Show();
             Hide();
         }
 
         private void AdminMenu_Load(object sender, EventArgs e)
         {
-
+            us = usu.CarregaEmpresa(idcliente);
         }
 
         private void empresasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CRUDEmpresa fcrudemp = new CRUDEmpresa();
+            CRUDEmpresa fcrudemp = new CRUDEmpresa(us, idcliente);
             fcrudemp.Show();
             Hide();
         }
 
         private void motoristasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CRUDMotorista fmotoristacrud = new CRUDMotorista();
+            CRUDMotorista fmotoristacrud = new CRUDMotorista(us,idcliente);
             fmotoristacrud.Show();
             Hide();
         }
@@ -80,7 +87,7 @@ namespace GuizzoLtda
                 if (resposta == DialogResult.Yes)
                 {
                     this.Close();
-                    Principal logout = new Principal();
+                    Principal logout = new Principal(us,idcliente);
                     logout.Show();
                 }
             }
@@ -92,7 +99,7 @@ namespace GuizzoLtda
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
-            AdminLogin freturnlogin = new AdminLogin();
+            AdminLogin freturnlogin = new AdminLogin(us,idcliente);
             freturnlogin.Show();
             Hide();
         }

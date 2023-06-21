@@ -9,25 +9,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.ComponentModel.Design.ObjectSelectorEditor;
 
 namespace GuizzoLtda
 {
     public partial class SelecionarVeiculo : Form
     {
-        public int idped;
-        int idusuario;
+        public int idveic;
+        int idcliente;
         Conexao conexaosql = new Conexao();
-        VeiculoModelo VeiculoModelo = new VeiculoModelo();
-        VeiculoControle Controle = new VeiculoControle();
-        UsuarioModelo us = new UsuarioModelo();
-        public SelecionarVeiculo()
+        EmpresaControle usu = new EmpresaControle();
+        EmpresaModelo us = new EmpresaModelo();
+
+        public SelecionarVeiculo(EmpresaModelo um, int id)
         {
+            us = um;
+            idcliente = id;
             InitializeComponent();
         }
 
         private void SelecionarVeiculo_Load(object sender, EventArgs e)
         {
-            dgSelectVeiculo.DataSource = conexaosql.verDados("SELECT * FROM tb_veiculo");
+            us = usu.CarregaEmpresa(idcliente);
+            dgSelectVeiculo.DataSource = conexaosql.verDados("SELECT * FROM tb_veiculo RIGHT JOIN tb_cliente ON tb_veiculo.idcliente = tb_cliente.idcliente WHERE idcliente != '' AND tb_veiculo.idcliente = " + us.CodCliente.ToString());
         }
 
         private void dgSelectVeiculo_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -40,7 +44,7 @@ namespace GuizzoLtda
             if (dgSelectVeiculo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
             {
                 dgSelectVeiculo.CurrentRow.Selected = true;
-                idped = Convert.ToInt32(dgSelectVeiculo.Rows[e.RowIndex].Cells["idveiculo"].FormattedValue);
+                idveic = Convert.ToInt32(dgSelectVeiculo.Rows[e.RowIndex].Cells["idveiculo"].FormattedValue);
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }

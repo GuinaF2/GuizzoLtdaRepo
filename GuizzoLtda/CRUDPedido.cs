@@ -14,24 +14,32 @@ namespace GuizzoLtda
 {
     public partial class CRUDPedido : Form
     {
+        int idcliente;
+        EmpresaControle usu = new EmpresaControle();
+        EmpresaModelo us = new EmpresaModelo();
+
         Conexao conexaosql = new Conexao();
         PedidoModelo PedidoModelo = new PedidoModelo();
         PedidoControle Controle = new PedidoControle();
         int id;
-        public CRUDPedido()
+        public CRUDPedido(EmpresaModelo um,int id)
         {
+            us = um;
+            idcliente = id;
             InitializeComponent();
         }
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
-            AdminMenu fmenureturn = new AdminMenu();
+            AdminMenu fmenureturn = new AdminMenu(us, idcliente);
             this.Hide();
             fmenureturn.Show();
         }
 
         private void CRUDPedido_Load(object sender, EventArgs e)
         {
+            us = usu.CarregaEmpresa(idcliente);
+
             dgPedido.DataSource = conexaosql.verDados("SELECT * FROM tb_pedido");
         }
 

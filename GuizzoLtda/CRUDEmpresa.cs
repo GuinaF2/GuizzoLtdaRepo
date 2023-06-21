@@ -14,17 +14,26 @@ namespace GuizzoLtda
 {
     public partial class CRUDEmpresa : Form
     {
+        int idcliente;
+        EmpresaControle usu = new EmpresaControle();
+        EmpresaModelo us = new EmpresaModelo();
+
         Conexao conexaosql = new Conexao();
         EmpresaModelo EmpresaModelo = new EmpresaModelo();
         EmpresaControle Controle = new EmpresaControle();
         int id;
-        public CRUDEmpresa()
+        public CRUDEmpresa(EmpresaModelo um,int id)
         {
+            us = um;
+            idcliente = id;
             InitializeComponent();
         }
 
         private void CRUDEmpresa_Load(object sender, EventArgs e)
         {
+            us = usu.CarregaEmpresa(idcliente);
+
+
             dataGridCRUDEmpresa.DataSource = conexaosql.verDados("SELECT * FROM tb_cliente");
 
             SaveUpdate.Visible = false;
@@ -46,7 +55,7 @@ namespace GuizzoLtda
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
-            AdminMenu fmenureturn = new AdminMenu();
+            AdminMenu fmenureturn = new AdminMenu(us,idcliente);
             this.Hide();
             fmenureturn.Show();
         }
@@ -133,7 +142,7 @@ namespace GuizzoLtda
             {
                 MessageBox.Show("Processo Cancelado.");
             }
-            CRUDEmpresa fempresacrud = new CRUDEmpresa();
+            CRUDEmpresa fempresacrud = new CRUDEmpresa(us, idcliente);
             this.Hide();
             fempresacrud.Show();
         }
@@ -149,7 +158,7 @@ namespace GuizzoLtda
             {
                 MessageBox.Show("Cadastro Atualizado.");
 
-                CRUDEmpresa fempresacrud = new CRUDEmpresa();
+                CRUDEmpresa fempresacrud = new CRUDEmpresa(us, idcliente);
                 this.Hide();
                 fempresacrud.Show();
             }

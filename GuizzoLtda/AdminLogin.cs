@@ -17,9 +17,14 @@ namespace GuizzoLtda
         Conexao conexaosql = new Conexao();
         UsuarioModelo UsuarioModelo = new UsuarioModelo();
         UsuarioControle Controle = new UsuarioControle();
+        int idcliente;
+        EmpresaControle usu = new EmpresaControle();
+        EmpresaModelo us = new EmpresaModelo();
 
-        public AdminLogin()
+        public AdminLogin(EmpresaModelo um, int id)
         {
+            us = um;
+            idcliente = id;
             InitializeComponent();
         }
 
@@ -51,7 +56,7 @@ namespace GuizzoLtda
             {
                 MessageBox.Show("Preencha todos os campos.");
 
-                AdminLogin fadmlogin = new AdminLogin();
+                AdminLogin fadmlogin = new AdminLogin(us, idcliente);
                 fadmlogin.Show();
                 Hide();
             }
@@ -59,7 +64,7 @@ namespace GuizzoLtda
             {
                 if (Controle.LogarAdm(UsuarioModelo) >= 1)
                 {
-                    AdminMenu fmenuadm = new AdminMenu();
+                    AdminMenu fmenuadm = new AdminMenu(us, idcliente);
                     this.Hide();
                     fmenuadm.Show();
                 }
@@ -89,7 +94,7 @@ namespace GuizzoLtda
             {
                 MessageBox.Show("Preencha todos os campos.");
 
-                AdminLogin fadmlogin = new AdminLogin();
+                AdminLogin fadmlogin = new AdminLogin(us, idcliente);
                 fadmlogin.Show();
                 Hide();
             }
@@ -97,7 +102,7 @@ namespace GuizzoLtda
             {
                 if (Controle.LogarAdm(UsuarioModelo) >= 1)
                 {
-                    AdminMenu fmenuadm = new AdminMenu();
+                    AdminMenu fmenuadm = new AdminMenu(us, idcliente);
                     this.Hide();
                     fmenuadm.Show();
                 }
@@ -110,9 +115,14 @@ namespace GuizzoLtda
 
         private void btnReturn_Click_1(object sender, EventArgs e)
         {
-            Principal fprincipalreturn = new Principal();
+            Principal fprincipalreturn = new Principal(us, idcliente);
             this.Hide();
             fprincipalreturn.Show();
+        }
+
+        private void AdminLogin_Load_2(object sender, EventArgs e)
+        {
+            us = usu.CarregaEmpresa(idcliente);
         }
     }
 }

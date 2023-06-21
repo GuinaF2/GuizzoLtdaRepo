@@ -1,4 +1,6 @@
+using Controle;
 using Microsoft.VisualBasic.Logging;
+using Modelos;
 using System.Windows.Forms;
 
 namespace GuizzoLtda
@@ -8,9 +10,15 @@ namespace GuizzoLtda
         OpenFileDialog Abrirfoto;
         Image Foto;
         string caminhofoto = "\\foto";
-
-        public Principal()
+        int idcliente;
+        EmpresaControle usu = new EmpresaControle();
+        EmpresaModelo us = new EmpresaModelo();
+        public Principal(EmpresaModelo um, int id)
         {
+            us = um;
+            idcliente = id;
+
+
             InitializeComponent();
             PBEmpresa.Image = Program.thePictureBox.Image;
 
@@ -20,7 +28,7 @@ namespace GuizzoLtda
 
         private void Principal_Load_1(object sender, EventArgs e)
         {
-            
+            us = usu.CarregaEmpresa(idcliente);
         }
 
         private void btnUsuario_Click_1(object sender, EventArgs e)
@@ -32,7 +40,7 @@ namespace GuizzoLtda
 
         private void btnAdmin_Click_1(object sender, EventArgs e)
         {
-            AdminLogin fadminlog = new AdminLogin();
+            AdminLogin fadminlog = new AdminLogin(us,idcliente);
             this.Hide();
             fadminlog.Show();
         }

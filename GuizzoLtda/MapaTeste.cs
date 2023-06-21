@@ -11,11 +11,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using GMap.NET.WindowsForms;
 using GMap.NET.WindowsForms.Markers;
+using Controle;
+using Modelos;
 
 namespace GuizzoLtda
 {
     public partial class MapaTeste : Form
     {
+        int idcliente;
+        EmpresaControle usu = new EmpresaControle();
+        EmpresaModelo us = new EmpresaModelo();
+
         private List<PointLatLng> _points;
 
         public MapaTeste()
@@ -97,7 +103,7 @@ namespace GuizzoLtda
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
-            AdminMenu fmenureturn = new AdminMenu();
+            AdminMenu fmenureturn = new AdminMenu(us,idcliente);
             this.Hide();
             fmenureturn.Show();
         }

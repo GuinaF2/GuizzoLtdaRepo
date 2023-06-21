@@ -14,6 +14,10 @@ namespace GuizzoLtda
 {
     public partial class CRUDUser : Form
     {
+        int idcliente;
+        EmpresaControle usu = new EmpresaControle();
+        EmpresaModelo us = new EmpresaModelo();
+
         Conexao conexaosql = new Conexao();
         UsuarioModelo UsuarioModelo = new UsuarioModelo();
         UsuarioControle Controle = new UsuarioControle();
@@ -98,7 +102,7 @@ namespace GuizzoLtda
 
         private void btnReturn_Click_2(object sender, EventArgs e)
         {
-            AdminMenu fmenureturn = new AdminMenu();
+            AdminMenu fmenureturn = new AdminMenu(us,idcliente);
             this.Hide();
             fmenureturn.Show();
         }
@@ -227,13 +231,16 @@ namespace GuizzoLtda
 
         private void btnReturn_Click_1(object sender, EventArgs e)
         {
-            AdminMenu fmenureturn = new AdminMenu();
+            AdminMenu fmenureturn = new AdminMenu(us,idcliente);
             this.Hide();
             fmenureturn.Show();
         }
 
         private void CRUDUser_Load(object sender, EventArgs e)
         {
+            us = usu.CarregaEmpresa(idcliente);
+
+
             dataGridCRUD.DataSource = conexaosql.verDados("SELECT * FROM tb_funcionario");
 
             SaveUpdate.Visible = false;

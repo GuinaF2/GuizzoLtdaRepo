@@ -14,13 +14,20 @@ namespace GuizzoLtda
 {
     public partial class CRUDMotorista : Form
     {
+        int idcliente;
+
         Conexao conexaosql = new Conexao();
         MotoristaModelo MotoristaModelo = new MotoristaModelo();
         MotoristaControle Controle = new MotoristaControle();
-        int id;
-        public CRUDMotorista()
+        EmpresaControle usu = new EmpresaControle();
+        EmpresaModelo us = new EmpresaModelo();
+
+        public CRUDMotorista(EmpresaModelo um, int id)
         {
-            InitializeComponent();
+            us = um;
+            idcliente = id;
+
+            InitializeComponent();;
         }
 
         private void SaveDelete_Click(object sender, EventArgs e)
@@ -39,7 +46,7 @@ namespace GuizzoLtda
             {
                 MessageBox.Show("Processo cancelado.");
             }
-            CRUDMotorista fmotoristacrud = new CRUDMotorista();
+            CRUDMotorista fmotoristacrud = new CRUDMotorista(us,idcliente);
             this.Hide();
             fmotoristacrud.Show();
         }
@@ -62,7 +69,7 @@ namespace GuizzoLtda
                 if (Controle.CadastrarMotorista(MotoristaModelo) >= 1)
                 {
                     MessageBox.Show("Motorista Cadastrado Com Sucesso!");
-                    CRUDMotorista fmotoristacrud = new CRUDMotorista();
+                    CRUDMotorista fmotoristacrud = new CRUDMotorista(us,idcliente);
                     this.Hide();
                     fmotoristacrud.Show();
                 }
@@ -86,7 +93,7 @@ namespace GuizzoLtda
             {
                 MessageBox.Show("Cadastro Atualizado.");
 
-                CRUDMotorista fmotoristacrud = new CRUDMotorista();
+                CRUDMotorista fmotoristacrud = new CRUDMotorista(us, idcliente);
                 this.Hide();
                 fmotoristacrud.Show();
             }
@@ -100,6 +107,8 @@ namespace GuizzoLtda
 
         private void CRUDMotorista_Load(object sender, EventArgs e)
         {
+            us = usu.CarregaEmpresa(idcliente);
+
             dataGridMotorista.DataSource = conexaosql.verDados("SELECT * FROM tb_motorista");
 
             SaveUpdate.Visible = false;
@@ -233,7 +242,7 @@ namespace GuizzoLtda
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
-            AdminMenu fmenureturn = new AdminMenu();
+            AdminMenu fmenureturn = new AdminMenu(us,idcliente);
             this.Hide();
             fmenureturn.Show();
         }
@@ -254,12 +263,12 @@ namespace GuizzoLtda
 
         private void txtIdVeiculo_Click(object sender, EventArgs e)
         {
-            SelecionarVeiculo cselectveic = new SelecionarVeiculo();
+            SelecionarVeiculo cselectveic = new SelecionarVeiculo(us, idcliente);
             cselectveic.ShowDialog();
 
             if (cselectveic.DialogResult == DialogResult.OK)
             {
-                txtIdVeiculo.Text = cselectveic.idped.ToString();
+                txtIdVeiculo.Text = cselectveic.idveic.ToString();
             }
             else
             {

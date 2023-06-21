@@ -15,12 +15,19 @@ namespace GuizzoLtda
 {
     public partial class CRUDVeiculo : Form
     {
+        int idcliente;
+        EmpresaControle usu = new EmpresaControle();
+        EmpresaModelo us = new EmpresaModelo();
+
         Conexao conexaosql = new Conexao();
         VeiculoModelo VeiculoModelo = new VeiculoModelo();
         VeiculoControle Controle = new VeiculoControle();
+
         int id;
-        public CRUDVeiculo()
+        public CRUDVeiculo(EmpresaModelo um, int id)
         {
+            us = um;
+            idcliente = id;
             InitializeComponent();
         }
 
@@ -36,7 +43,7 @@ namespace GuizzoLtda
             SaveDelete.Visible = false;
             SaveCreate.Visible = false;
 
-            cbTipo.Enabled=false;
+            cbTipo.Enabled = false;
             txtIdVeic.Enabled = false;
             txtRenavam.Enabled = false;
             txtPlaca.Enabled = true;
@@ -131,6 +138,8 @@ namespace GuizzoLtda
 
         private void CRUDVeiculo_Load(object sender, EventArgs e)
         {
+            us = usu.CarregaEmpresa(idcliente);
+
             dataGridVeiculo.DataSource = conexaosql.verDados("SELECT * FROM tb_veiculo");
 
             SaveUpdate.Visible = false;
@@ -165,7 +174,7 @@ namespace GuizzoLtda
                 if (Controle.DeletarVeiculo(VeiculoModelo) == true)
                 {
                     MessageBox.Show("Veiculo deletado.");
-                    CRUDVeiculo fveiculocrud = new CRUDVeiculo();
+                    CRUDVeiculo fveiculocrud = new CRUDVeiculo(us, idcliente);
                     this.Hide();
                     fveiculocrud.Show();
                 }
@@ -193,7 +202,7 @@ namespace GuizzoLtda
                 if (Controle.CadastrarVeiculo(VeiculoModelo) >= 1)
                 {
                     MessageBox.Show("Veiculo Cadastrado Com Sucesso!");
-                    CRUDVeiculo fveiculocrud = new CRUDVeiculo();
+                    CRUDVeiculo fveiculocrud = new CRUDVeiculo(us,idcliente);
                     this.Hide();
                     fveiculocrud.Show();
                 }
@@ -227,7 +236,7 @@ namespace GuizzoLtda
                 {
                     MessageBox.Show("Cadastro Atualizado.");
 
-                    CRUDVeiculo fveiculocrud = new CRUDVeiculo();
+                    CRUDVeiculo fveiculocrud = new CRUDVeiculo(us,idcliente);
                     this.Hide();
                     fveiculocrud.Show();
                 }
@@ -281,7 +290,7 @@ namespace GuizzoLtda
 
         private void btnReturn_Click_1(object sender, EventArgs e)
         {
-            AdminMenu fmenureturn = new AdminMenu();
+            AdminMenu fmenureturn = new AdminMenu(us, idcliente);
             this.Hide();
             fmenureturn.Show();
         }
@@ -330,6 +339,6 @@ namespace GuizzoLtda
             e.Handled = (e.KeyChar == (char)Keys.Space);
         }
 
-       
+
     }
 }

@@ -147,7 +147,7 @@
             // 
             txtIdCliente.BackColor = Color.White;
             txtIdCliente.Enabled = false;
-            txtIdCliente.Location = new Point(202, 171);
+            txtIdCliente.Location = new Point(12, 227);
             txtIdCliente.Name = "txtIdCliente";
             txtIdCliente.Size = new Size(125, 23);
             txtIdCliente.TabIndex = 18;
@@ -155,7 +155,7 @@
             // SaveCreate
             // 
             SaveCreate.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            SaveCreate.Location = new Point(48, 296);
+            SaveCreate.Location = new Point(48, 350);
             SaveCreate.Name = "SaveCreate";
             SaveCreate.Size = new Size(300, 50);
             SaveCreate.TabIndex = 16;
@@ -166,7 +166,7 @@
             // SaveDelete
             // 
             SaveDelete.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            SaveDelete.Location = new Point(48, 402);
+            SaveDelete.Location = new Point(48, 350);
             SaveDelete.Name = "SaveDelete";
             SaveDelete.Size = new Size(300, 50);
             SaveDelete.TabIndex = 15;
@@ -177,7 +177,7 @@
             // SaveUpdate
             // 
             SaveUpdate.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            SaveUpdate.Location = new Point(48, 352);
+            SaveUpdate.Location = new Point(48, 350);
             SaveUpdate.Name = "SaveUpdate";
             SaveUpdate.Size = new Size(300, 50);
             SaveUpdate.TabIndex = 14;
@@ -189,7 +189,7 @@
             // 
             txtIdMoto.BackColor = Color.White;
             txtIdMoto.Enabled = false;
-            txtIdMoto.Location = new Point(71, 171);
+            txtIdMoto.Location = new Point(12, 171);
             txtIdMoto.Name = "txtIdMoto";
             txtIdMoto.Size = new Size(125, 23);
             txtIdMoto.TabIndex = 30;
@@ -197,7 +197,7 @@
             // txtDataPed
             // 
             txtDataPed.BackColor = Color.White;
-            txtDataPed.Location = new Point(270, 242);
+            txtDataPed.Location = new Point(220, 227);
             txtDataPed.Name = "txtDataPed";
             txtDataPed.Size = new Size(125, 23);
             txtDataPed.TabIndex = 31;
@@ -206,7 +206,7 @@
             // 
             txtIdPedido.BackColor = Color.White;
             txtIdPedido.Enabled = false;
-            txtIdPedido.Location = new Point(139, 112);
+            txtIdPedido.Location = new Point(12, 112);
             txtIdPedido.Name = "txtIdPedido";
             txtIdPedido.Size = new Size(125, 23);
             txtIdPedido.TabIndex = 34;
@@ -215,7 +215,7 @@
             // 
             labelidpedido.AutoSize = true;
             labelidpedido.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            labelidpedido.Location = new Point(139, 79);
+            labelidpedido.Location = new Point(12, 79);
             labelidpedido.Name = "labelidpedido";
             labelidpedido.Size = new Size(100, 30);
             labelidpedido.TabIndex = 33;
@@ -225,7 +225,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(70, 138);
+            label4.Location = new Point(11, 138);
             label4.Name = "label4";
             label4.Size = new Size(126, 30);
             label4.TabIndex = 35;
@@ -235,7 +235,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(202, 141);
+            label5.Location = new Point(12, 197);
             label5.Name = "label5";
             label5.Size = new Size(101, 30);
             label5.TabIndex = 36;
@@ -245,7 +245,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(8, 209);
+            label6.Location = new Point(223, 82);
             label6.Name = "label6";
             label6.Size = new Size(123, 30);
             label6.TabIndex = 37;
@@ -255,7 +255,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(139, 209);
+            label7.Location = new Point(223, 138);
             label7.Name = "label7";
             label7.Size = new Size(122, 30);
             label7.TabIndex = 38;
@@ -265,7 +265,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(270, 209);
+            label8.Location = new Point(220, 194);
             label8.Name = "label8";
             label8.Size = new Size(126, 30);
             label8.TabIndex = 39;
@@ -274,7 +274,7 @@
             // txtVolume
             // 
             txtVolume.BackColor = Color.White;
-            txtVolume.Location = new Point(8, 242);
+            txtVolume.Location = new Point(223, 115);
             txtVolume.Name = "txtVolume";
             txtVolume.Size = new Size(125, 23);
             txtVolume.TabIndex = 40;
@@ -282,7 +282,7 @@
             // txtTipoPedido
             // 
             txtTipoPedido.BackColor = Color.White;
-            txtTipoPedido.Location = new Point(139, 242);
+            txtTipoPedido.Location = new Point(223, 171);
             txtTipoPedido.Name = "txtTipoPedido";
             txtTipoPedido.Size = new Size(125, 23);
             txtTipoPedido.TabIndex = 41;

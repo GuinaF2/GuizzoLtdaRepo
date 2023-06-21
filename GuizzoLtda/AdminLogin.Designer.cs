@@ -132,6 +132,7 @@
             Name = "AdminLogin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "AdminLogin";
+            Load += AdminLogin_Load_2;
             ResumeLayout(false);
             PerformLayout();
         }

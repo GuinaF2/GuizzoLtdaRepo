@@ -58,15 +58,20 @@ namespace Controle
 
                 MySqlCommand cmd = con.CreateCommand();
 
-                cmd.CommandText = "SELECT idcliente from tb_cliente where idcliente = @idcliente";
-                cmd.Parameters.AddWithValue("@idcliente", id);
+                cmd.CommandText = "SELECT * from tb_cliente where idcliente = @id";
+                cmd.Parameters.AddWithValue("@id", id);
 
                 MySqlDataReader registro = cmd.ExecuteReader();
 
                 if (registro.HasRows)
                 {
                     registro.Read();
-                    
+                    us.CodCliente = Convert.ToInt32(registro.GetString("idcliente"));
+                    us.CnpjUser = registro.GetString("cnpj");
+                    us.RazaoSocialUser = registro.GetString("razao_social");
+                    us.InscEstadUser = registro.GetString("inscricao_estadual");
+                    us.CodEndereco = Convert.ToInt32(registro.GetString("idendereco"));
+                    us.LogoEmpresa = registro.GetString("logo");
 
                 }
                 con.Close();

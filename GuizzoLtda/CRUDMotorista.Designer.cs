@@ -58,6 +58,8 @@
             txtCnh = new TextBox();
             labeltipocnh = new Label();
             cbTipoCnh = new ComboBox();
+            labelidcliente = new Label();
+            txtIdEmpresa = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridMotorista).BeginInit();
             toolStrip1.SuspendLayout();
             SuspendLayout();
@@ -207,7 +209,7 @@
             // SaveCreate
             // 
             SaveCreate.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            SaveCreate.Location = new Point(51, 367);
+            SaveCreate.Location = new Point(50, 388);
             SaveCreate.Name = "SaveCreate";
             SaveCreate.Size = new Size(300, 50);
             SaveCreate.TabIndex = 16;
@@ -219,7 +221,7 @@
             // SaveDelete
             // 
             SaveDelete.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            SaveDelete.Location = new Point(51, 367);
+            SaveDelete.Location = new Point(50, 388);
             SaveDelete.Name = "SaveDelete";
             SaveDelete.Size = new Size(300, 50);
             SaveDelete.TabIndex = 15;
@@ -231,7 +233,7 @@
             // SaveUpdate
             // 
             SaveUpdate.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            SaveUpdate.Location = new Point(51, 367);
+            SaveUpdate.Location = new Point(50, 388);
             SaveUpdate.Name = "SaveUpdate";
             SaveUpdate.Size = new Size(300, 50);
             SaveUpdate.TabIndex = 14;
@@ -303,7 +305,7 @@
             // 
             labelcnh.AutoSize = true;
             labelcnh.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            labelcnh.Location = new Point(228, 276);
+            labelcnh.Location = new Point(228, 262);
             labelcnh.Name = "labelcnh";
             labelcnh.Size = new Size(167, 21);
             labelcnh.TabIndex = 34;
@@ -313,7 +315,7 @@
             // txtCnh
             // 
             txtCnh.BackColor = Color.White;
-            txtCnh.Location = new Point(243, 300);
+            txtCnh.Location = new Point(243, 286);
             txtCnh.Name = "txtCnh";
             txtCnh.Size = new Size(125, 23);
             txtCnh.TabIndex = 33;
@@ -322,7 +324,7 @@
             // 
             labeltipocnh.AutoSize = true;
             labeltipocnh.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            labeltipocnh.Location = new Point(22, 224);
+            labeltipocnh.Location = new Point(225, 312);
             labeltipocnh.Name = "labeltipocnh";
             labeltipocnh.Size = new Size(160, 30);
             labeltipocnh.TabIndex = 36;
@@ -332,16 +334,37 @@
             // 
             cbTipoCnh.FormattingEnabled = true;
             cbTipoCnh.Items.AddRange(new object[] { "A", "B", "C", "D", "E" });
-            cbTipoCnh.Location = new Point(22, 274);
+            cbTipoCnh.Location = new Point(277, 345);
             cbTipoCnh.Name = "cbTipoCnh";
             cbTipoCnh.Size = new Size(55, 23);
             cbTipoCnh.TabIndex = 37;
+            // 
+            // labelidcliente
+            // 
+            labelidcliente.AutoSize = true;
+            labelidcliente.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            labelidcliente.Location = new Point(22, 231);
+            labelidcliente.Name = "labelidcliente";
+            labelidcliente.Size = new Size(152, 30);
+            labelidcliente.TabIndex = 39;
+            labelidcliente.Text = "Codigo Veiculo";
+            // 
+            // txtIdEmpresa
+            // 
+            txtIdEmpresa.BackColor = Color.White;
+            txtIdEmpresa.Location = new Point(22, 264);
+            txtIdEmpresa.Name = "txtIdEmpresa";
+            txtIdEmpresa.ReadOnly = true;
+            txtIdEmpresa.Size = new Size(125, 23);
+            txtIdEmpresa.TabIndex = 38;
             // 
             // CRUDMotorista
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(labelidcliente);
+            Controls.Add(txtIdEmpresa);
             Controls.Add(cbTipoCnh);
             Controls.Add(labeltipocnh);
             Controls.Add(labelcnh);
@@ -405,5 +428,7 @@
         private TextBox txtCnh;
         private Label labeltipocnh;
         private ComboBox cbTipoCnh;
+        private Label labelidcliente;
+        private TextBox txtIdEmpresa;
     }
 }
