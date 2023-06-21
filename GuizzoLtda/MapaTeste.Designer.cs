@@ -46,6 +46,7 @@
             btnRota = new ToolStripButton();
             toolStripSeparator = new ToolStripSeparator();
             toolStripButton1 = new ToolStripButton();
+            txtEndereco = new TextBox();
             toolStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -218,11 +219,19 @@
             toolStripButton1.Text = "Escolher Destino";
             toolStripButton1.Click += toolStripButton1_Click;
             // 
+            // txtEndereco
+            // 
+            txtEndereco.Location = new Point(486, 262);
+            txtEndereco.Name = "txtEndereco";
+            txtEndereco.Size = new Size(100, 23);
+            txtEndereco.TabIndex = 28;
+            // 
             // MapaTeste
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(txtEndereco);
             Controls.Add(toolStrip1);
             Controls.Add(labeldistancia);
             Controls.Add(button1);
@@ -259,5 +268,6 @@
         private ToolStripButton btnRota;
         private ToolStripSeparator toolStripSeparator;
         private ToolStripButton toolStripButton1;
+        private TextBox txtEndereco;
     }
 }

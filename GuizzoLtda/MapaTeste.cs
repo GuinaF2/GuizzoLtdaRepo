@@ -39,21 +39,34 @@ namespace GuizzoLtda
         {
 
         }
-
+        GMapOverlay markers = new GMapOverlay("markers");
         private void button1_Click(object sender, EventArgs e)
         {
             if (!(txtLat.Text.Trim().Equals("") && txtLong.Text.Trim().Equals("")))
-            { }
-            double lat = Convert.ToDouble(txtLat.Text);
-            double lng = Convert.ToDouble(txtLong.Text);
-            MapaBr.Position = new PointLatLng(lat, lng);
+            {
+                MessageBox.Show("Reverse Geocoding");
+                //reverse geocoding
+                double lat = Convert.ToDouble(txtLat.Text);
+                double lng = Convert.ToDouble(txtLong.Text);
+                MapaBr.Position = new PointLatLng(lat, lng);
+                PointLatLng point = new PointLatLng(lat, lng);
+                GMapMarker marker = new GMarkerGoogle(point, GMarkerGoogleType.red_pushpin);
+                markers.Markers.Add(marker);
+                MapaBr.Overlays.Add(markers);
+            }
+            else
+            { 
+                //geocoding
+                if (!txtEndereco.Text.Trim().Equals(""))
+                {
+                    MessageBox.Show("Geocoding");
+                }
+                else 
+                {
+                    MessageBox.Show("Invalid data to load");
+                }
+            }
 
-            PointLatLng point = new PointLatLng(lat, lng);
-            GMapMarker marker = new GMarkerGoogle(point, GMarkerGoogleType.red_pushpin);
-            GMapOverlay markers = new GMapOverlay("markers");
-
-            markers.Markers.Add(marker);
-            MapaBr.Overlays.Add(markers);
         }
 
         private void MapaTeste_Load(object sender, EventArgs e)
@@ -66,7 +79,7 @@ namespace GuizzoLtda
             MapaBr.MinZoom = 5;
             MapaBr.MaxZoom = 18;
             MapaBr.Zoom = 10;
-            
+
         }
 
         private void btnPara_Click(object sender, EventArgs e)
@@ -100,7 +113,7 @@ namespace GuizzoLtda
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
-            AdminMenu fmenureturn = new AdminMenu(us,idcliente);
+            AdminMenu fmenureturn = new AdminMenu(us, idcliente);
             this.Hide();
             fmenureturn.Show();
         }
