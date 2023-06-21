@@ -16,14 +16,20 @@ namespace GuizzoLtda
 {
     public partial class SelecionarEmpresa : Form
     {
+        int idcliente;
+        EmpresaControle usu = new EmpresaControle();
+        EmpresaModelo us = new EmpresaModelo();
+
         Conexao conexaosql = new Conexao();
 
         EmpresaModelo EmpresaModelo = new EmpresaModelo();
         EmpresaControle Controle = new EmpresaControle();
 
         int id;
-        public SelecionarEmpresa()
+        public SelecionarEmpresa(EmpresaModelo um, int id)
         {
+            us = um;
+            idcliente = id;
             InitializeComponent();
             Program.thePictureBox = pbLogoEmp;
 

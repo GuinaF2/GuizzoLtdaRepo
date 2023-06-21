@@ -14,11 +14,17 @@ namespace GuizzoLtda
 {
     public partial class PedidoFunc : Form
     {
+        int idcliente;
+        EmpresaControle usu = new EmpresaControle();
+        EmpresaModelo us = new EmpresaModelo();
+
         Conexao conexaosql = new Conexao();
         PedidoModelo PedidoModelo = new PedidoModelo();
         PedidoControle Controle = new PedidoControle();
-        public PedidoFunc()
+        public PedidoFunc(EmpresaModelo um, int id)
         {
+            us = um;
+            idcliente = id;
             InitializeComponent();
         }
 
@@ -51,7 +57,7 @@ namespace GuizzoLtda
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
-            FuncionarioMenu fmenureturn = new FuncionarioMenu();
+            FuncionarioMenu fmenureturn = new FuncionarioMenu(us, idcliente);
             this.Hide();
             fmenureturn.Show();
         }

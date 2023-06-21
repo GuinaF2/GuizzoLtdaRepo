@@ -18,6 +18,9 @@ namespace GuizzoLtda
         public int idveic;
         int idcliente;
         Conexao conexaosql = new Conexao();
+
+        VeiculoModelo ve = new VeiculoModelo();
+        VeiculoControle vei = new VeiculoControle();
         EmpresaControle usu = new EmpresaControle();
         EmpresaModelo us = new EmpresaModelo();
 
@@ -31,7 +34,8 @@ namespace GuizzoLtda
         private void SelecionarVeiculo_Load(object sender, EventArgs e)
         {
             us = usu.CarregaEmpresa(idcliente);
-            dgSelectVeiculo.DataSource = conexaosql.verDados("SELECT * FROM tb_veiculo RIGHT JOIN tb_cliente ON tb_veiculo.idcliente = tb_cliente.idcliente WHERE idcliente != '' AND tb_veiculo.idcliente = " + us.CodCliente.ToString());
+            MessageBox.Show(us.CodCliente.ToString());
+            dgSelectVeiculo.DataSource = conexaosql.verDados("SELECT idveiculo,placa_motorista,tipo_veiculo,seguro_data,renavam FROM tb_veiculo");
         }
 
         private void dgSelectVeiculo_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -40,6 +44,11 @@ namespace GuizzoLtda
         }
 
         private void dgSelectVeiculo_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgSelectVeiculo_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dgSelectVeiculo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
             {
@@ -50,7 +59,7 @@ namespace GuizzoLtda
             }
             else if (dgSelectVeiculo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value == null)
             {
-                MessageBox.Show("Favor selecionar ID do pedido.");
+                MessageBox.Show("Favor selecionar ID do Veiculo.");
             }
         }
     }

@@ -58,8 +58,6 @@
             txtCnh = new TextBox();
             labeltipocnh = new Label();
             cbTipoCnh = new ComboBox();
-            labelidcliente = new Label();
-            txtIdEmpresa = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridMotorista).BeginInit();
             toolStrip1.SuspendLayout();
             SuspendLayout();
@@ -178,6 +176,7 @@
             txtRg.Name = "txtRg";
             txtRg.Size = new Size(125, 23);
             txtRg.TabIndex = 20;
+            txtRg.KeyPress += txtRg_KeyPress;
             // 
             // txtCpf
             // 
@@ -186,12 +185,13 @@
             txtCpf.Name = "txtCpf";
             txtCpf.Size = new Size(125, 23);
             txtCpf.TabIndex = 19;
+            txtCpf.KeyPress += txtCpf_KeyPress;
             // 
             // txtIdMoto
             // 
             txtIdMoto.BackColor = Color.White;
             txtIdMoto.Enabled = false;
-            txtIdMoto.Location = new Point(22, 131);
+            txtIdMoto.Location = new Point(25, 192);
             txtIdMoto.Name = "txtIdMoto";
             txtIdMoto.Size = new Size(125, 23);
             txtIdMoto.TabIndex = 18;
@@ -200,7 +200,7 @@
             // 
             labelIdMoto.AutoSize = true;
             labelIdMoto.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            labelIdMoto.Location = new Point(22, 98);
+            labelIdMoto.Location = new Point(25, 159);
             labelIdMoto.Name = "labelIdMoto";
             labelIdMoto.Size = new Size(174, 30);
             labelIdMoto.TabIndex = 17;
@@ -256,7 +256,7 @@
             // 
             labelIdVeiculo.AutoSize = true;
             labelIdVeiculo.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            labelIdVeiculo.Location = new Point(22, 157);
+            labelIdVeiculo.Location = new Point(25, 218);
             labelIdVeiculo.Name = "labelIdVeiculo";
             labelIdVeiculo.Size = new Size(152, 30);
             labelIdVeiculo.TabIndex = 29;
@@ -269,11 +269,12 @@
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(125, 23);
             txtNome.TabIndex = 28;
+            txtNome.KeyPress += txtNome_KeyPress;
             // 
             // txtIdVeiculo
             // 
             txtIdVeiculo.BackColor = Color.White;
-            txtIdVeiculo.Location = new Point(22, 190);
+            txtIdVeiculo.Location = new Point(25, 251);
             txtIdVeiculo.Name = "txtIdVeiculo";
             txtIdVeiculo.ReadOnly = true;
             txtIdVeiculo.Size = new Size(125, 23);
@@ -285,7 +286,7 @@
             // 
             labelcodigo.AutoSize = true;
             labelcodigo.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            labelcodigo.Location = new Point(39, 41);
+            labelcodigo.Location = new Point(50, 105);
             labelcodigo.Name = "labelcodigo";
             labelcodigo.Size = new Size(81, 25);
             labelcodigo.TabIndex = 31;
@@ -319,6 +320,7 @@
             txtCnh.Name = "txtCnh";
             txtCnh.Size = new Size(125, 23);
             txtCnh.TabIndex = 33;
+            txtCnh.KeyPress += txtCnh_KeyPress;
             // 
             // labeltipocnh
             // 
@@ -339,32 +341,11 @@
             cbTipoCnh.Size = new Size(55, 23);
             cbTipoCnh.TabIndex = 37;
             // 
-            // labelidcliente
-            // 
-            labelidcliente.AutoSize = true;
-            labelidcliente.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            labelidcliente.Location = new Point(22, 231);
-            labelidcliente.Name = "labelidcliente";
-            labelidcliente.Size = new Size(152, 30);
-            labelidcliente.TabIndex = 39;
-            labelidcliente.Text = "Codigo Veiculo";
-            // 
-            // txtIdEmpresa
-            // 
-            txtIdEmpresa.BackColor = Color.White;
-            txtIdEmpresa.Location = new Point(22, 264);
-            txtIdEmpresa.Name = "txtIdEmpresa";
-            txtIdEmpresa.ReadOnly = true;
-            txtIdEmpresa.Size = new Size(125, 23);
-            txtIdEmpresa.TabIndex = 38;
-            // 
             // CRUDMotorista
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(labelidcliente);
-            Controls.Add(txtIdEmpresa);
             Controls.Add(cbTipoCnh);
             Controls.Add(labeltipocnh);
             Controls.Add(labelcnh);

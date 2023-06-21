@@ -22,7 +22,7 @@ namespace GuizzoLtda
         PedidoModelo PedidoModelo = new PedidoModelo();
         PedidoControle Controle = new PedidoControle();
         int id;
-        public CRUDPedido(EmpresaModelo um,int id)
+        public CRUDPedido(EmpresaModelo um, int id)
         {
             us = um;
             idcliente = id;

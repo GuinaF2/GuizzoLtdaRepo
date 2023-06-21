@@ -19,7 +19,7 @@ namespace GuizzoLtda
         EmpresaModelo us = new EmpresaModelo();
         public FuncionarioMenu(EmpresaModelo um, int id)
         {
-           
+
             us = um;
             idcliente = id;
             InitializeComponent();
@@ -29,21 +29,21 @@ namespace GuizzoLtda
 
         private void toolStripButton14_Click(object sender, EventArgs e)
         {
-            VerificarEmp fempresaver = new VerificarEmp();
+            VerificarEmp fempresaver = new VerificarEmp(us, idcliente);
             this.Hide();
             fempresaver.Show();
         }
 
         private void toolStripButton16_Click(object sender, EventArgs e)
         {
-            PedidoFunc fpedidofuncionario = new PedidoFunc();
+            PedidoFunc fpedidofuncionario = new PedidoFunc(us, idcliente);
             this.Hide();
             fpedidofuncionario.Show();
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            Principal fprincipalreturn = new Principal(us,idcliente);
+            Principal fprincipalreturn = new Principal(us, idcliente);
             this.Hide();
             fprincipalreturn.Show();
         }
@@ -54,6 +54,11 @@ namespace GuizzoLtda
         }
 
         private void toolStripButton15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
         {
 
         }

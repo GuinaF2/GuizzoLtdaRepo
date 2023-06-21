@@ -23,6 +23,7 @@ namespace GuizzoLtda
         UsuarioControle Controle = new UsuarioControle();
         public FuncionarioCadLog()
         {
+
             InitializeComponent();
         }
 

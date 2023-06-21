@@ -46,6 +46,7 @@
             dgSelectVeiculo.TabIndex = 0;
             dgSelectVeiculo.CellClick += dgSelectVeiculo_CellClick;
             dgSelectVeiculo.CellContentClick += dgSelectVeiculo_CellContentClick;
+            dgSelectVeiculo.CellDoubleClick += dgSelectVeiculo_CellDoubleClick;
             // 
             // SelecionarVeiculo
             // 

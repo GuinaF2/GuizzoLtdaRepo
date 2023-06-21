@@ -114,9 +114,9 @@ namespace GuizzoLtda
                     {
 
                         MessageBox.Show("Cliente Cadastrado com Sucesso");
-                        Principal fprincipalreturn = new Principal(us,idcliente);
+                        SelecionarEmpresa freturnselect = new SelecionarEmpresa(us, idcliente);
                         this.Hide();
-                        fprincipalreturn.Show();
+                        freturnselect.Show();
 
                     }
                 }
@@ -156,7 +156,7 @@ namespace GuizzoLtda
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            SelecionarEmpresa fprincipalreturn = new SelecionarEmpresa();
+            SelecionarEmpresa fprincipalreturn = new SelecionarEmpresa(us, idcliente);
             this.Hide();
             fprincipalreturn.Show();
         }

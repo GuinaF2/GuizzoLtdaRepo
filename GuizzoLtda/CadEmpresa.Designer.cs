@@ -44,6 +44,8 @@
             btnCadEndereco = new Button();
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
+            txtIncEstad = new TextBox();
+            txtCnpj = new TextBox();
             toolStrip1 = new ToolStrip();
             toolStripButton1 = new ToolStripButton();
             tabPage2 = new TabPage();
@@ -54,8 +56,6 @@
             txtRua = new MaskedTextBox();
             tabPage3 = new TabPage();
             textBox1 = new TextBox();
-            txtCnpj = new TextBox();
-            txtIncEstad = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pbFotoEmp).BeginInit();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
@@ -168,7 +168,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(534, 95);
+            label8.Location = new Point(534, 71);
             label8.Name = "label8";
             label8.Size = new Size(109, 21);
             label8.TabIndex = 19;
@@ -178,7 +178,7 @@
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.Location = new Point(534, 36);
+            label9.Location = new Point(534, 12);
             label9.Name = "label9";
             label9.Size = new Size(68, 21);
             label9.TabIndex = 18;
@@ -187,7 +187,7 @@
             // txtComple
             // 
             txtComple.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtComple.Location = new Point(534, 119);
+            txtComple.Location = new Point(534, 95);
             txtComple.Name = "txtComple";
             txtComple.Size = new Size(100, 29);
             txtComple.TabIndex = 17;
@@ -233,6 +233,22 @@
             tabPage1.Size = new Size(793, 343);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Dados";
+            // 
+            // txtIncEstad
+            // 
+            txtIncEstad.Location = new Point(30, 197);
+            txtIncEstad.Name = "txtIncEstad";
+            txtIncEstad.Size = new Size(140, 23);
+            txtIncEstad.TabIndex = 13;
+            txtIncEstad.KeyPress += txtIncEstad_KeyPress_1;
+            // 
+            // txtCnpj
+            // 
+            txtCnpj.Location = new Point(30, 122);
+            txtCnpj.Name = "txtCnpj";
+            txtCnpj.Size = new Size(171, 23);
+            txtCnpj.TabIndex = 12;
+            txtCnpj.KeyPress += txtCnpj_KeyPress_1;
             // 
             // toolStrip1
             // 
@@ -306,7 +322,7 @@
             // 
             // txtNumero
             // 
-            txtNumero.Location = new Point(534, 69);
+            txtNumero.Location = new Point(534, 45);
             txtNumero.Name = "txtNumero";
             txtNumero.Size = new Size(100, 23);
             txtNumero.TabIndex = 23;
@@ -346,22 +362,6 @@
             textBox1.Size = new Size(230, 23);
             textBox1.TabIndex = 2;
             textBox1.TextChanged += textBox1_TextChanged;
-            // 
-            // txtCnpj
-            // 
-            txtCnpj.Location = new Point(30, 122);
-            txtCnpj.Name = "txtCnpj";
-            txtCnpj.Size = new Size(171, 23);
-            txtCnpj.TabIndex = 12;
-            txtCnpj.KeyPress += txtCnpj_KeyPress_1;
-            // 
-            // txtIncEstad
-            // 
-            txtIncEstad.Location = new Point(30, 197);
-            txtIncEstad.Name = "txtIncEstad";
-            txtIncEstad.Size = new Size(140, 23);
-            txtIncEstad.TabIndex = 13;
-            txtIncEstad.KeyPress += txtIncEstad_KeyPress_1;
             // 
             // CadEmpresa
             // 

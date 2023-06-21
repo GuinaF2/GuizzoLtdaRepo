@@ -27,11 +27,13 @@ namespace GuizzoLtda
             us = um;
             idcliente = id;
 
-            InitializeComponent();;
+            InitializeComponent(); ;
         }
 
         private void SaveDelete_Click(object sender, EventArgs e)
         {
+           
+
             MotoristaModelo.CodMotorista = Convert.ToInt32(txtIdMoto.Text);
             var resposta = DialogResult;
             resposta = MessageBox.Show("Tem certeza que deseja deletar o Motorista?", "! Aviso !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
@@ -46,7 +48,7 @@ namespace GuizzoLtda
             {
                 MessageBox.Show("Processo cancelado.");
             }
-            CRUDMotorista fmotoristacrud = new CRUDMotorista(us,idcliente);
+            CRUDMotorista fmotoristacrud = new CRUDMotorista(us, idcliente);
             this.Hide();
             fmotoristacrud.Show();
         }
@@ -60,7 +62,10 @@ namespace GuizzoLtda
             MotoristaModelo.CnhMotorista = txtCnh.Text;
             MotoristaModelo.TipoCnhMotorista = cbTipoCnh.Text;
 
-            if (txtCpf.Text == "" || txtRg.Text == "" || txtNome.Text == "" || txtCnh.Text == "" || cbTipoCnh.Text == "")
+            
+
+
+            if (txtCpf.Text == "" || txtRg.Text == "" || txtNome.Text == "" || txtCnh.Text == "" || cbTipoCnh.Text == "" || txtIdVeiculo.Text == "")
             {
                 MessageBox.Show("Campos obrigatórios não preenchidos");
             }
@@ -69,7 +74,7 @@ namespace GuizzoLtda
                 if (Controle.CadastrarMotorista(MotoristaModelo) >= 1)
                 {
                     MessageBox.Show("Motorista Cadastrado Com Sucesso!");
-                    CRUDMotorista fmotoristacrud = new CRUDMotorista(us,idcliente);
+                    CRUDMotorista fmotoristacrud = new CRUDMotorista(us, idcliente);
                     this.Hide();
                     fmotoristacrud.Show();
                 }
@@ -179,6 +184,13 @@ namespace GuizzoLtda
             cbTipoCnh.Visible = true;
             txtCnh.Visible = true;
 
+            txtIdVeiculo.Enabled = true;
+            txtRg.Enabled = true;
+            txtNome.Enabled = true;
+            txtCnh.Enabled = true;
+            txtCpf.Enabled = true;
+            cbTipoCnh.Enabled = true;
+
             labelcodigo.Visible = true;
             labeltipocnh.Visible = true;
             labelcnh.Visible = true;
@@ -203,6 +215,13 @@ namespace GuizzoLtda
             txtRg.Visible = true;
             cbTipoCnh.Visible = true;
             txtCnh.Visible = true;
+
+            txtIdVeiculo.Enabled = true;
+            txtRg.Enabled = true;
+            txtNome.Enabled = true;
+            txtCnh.Enabled = true;
+            txtCpf.Enabled = true;
+            cbTipoCnh.Enabled = true;
 
             labelcodigo.Visible = true;
             labeltipocnh.Visible = true;
@@ -229,6 +248,14 @@ namespace GuizzoLtda
             cbTipoCnh.Visible = true;
             txtCnh.Visible = true;
 
+            txtIdVeiculo.Enabled = false;
+            txtIdMoto.Enabled = false;
+            txtRg.Enabled = false;
+            txtNome.Enabled = false;
+            txtCnh.Enabled = false;
+            txtCpf.Enabled = false;
+            cbTipoCnh.Enabled = false;
+
             labelcodigo.Visible = true;
             labeltipocnh.Visible = true;
             labelcnh.Visible = true;
@@ -242,7 +269,7 @@ namespace GuizzoLtda
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
-            AdminMenu fmenureturn = new AdminMenu(us,idcliente);
+            AdminMenu fmenureturn = new AdminMenu(us, idcliente);
             this.Hide();
             fmenureturn.Show();
         }
@@ -272,10 +299,42 @@ namespace GuizzoLtda
             }
             else
             {
-                MessageBox.Show("Erro. Verifique se selecionou um pedido corretamente.");
+                MessageBox.Show("Erro. Verifique se selecionou um Veiculo corretamente.");
             }
 
 
+        }
+
+        private void txtCpf_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            txtCpf.MaxLength = 11;
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtRg_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            txtRg.MaxLength = 9;
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtNome_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+        }
+
+        private void txtCnh_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            txtCnh.MaxLength = 10;
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
         }
     }
 }

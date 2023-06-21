@@ -16,11 +16,18 @@ namespace GuizzoLtda
 {
     public partial class VerificarEmp : Form
     {
+        int idcliente;
+        EmpresaControle usu = new EmpresaControle();
+        EmpresaModelo us = new EmpresaModelo();
+
         Conexao conexaosql = new Conexao();
         EmpresaModelo EmpresaModelo = new EmpresaModelo();
         EmpresaControle Controle = new EmpresaControle();
-        public VerificarEmp()
+
+        public VerificarEmp(EmpresaModelo um,int id)
         {
+            us = um;
+            idcliente = id;
             InitializeComponent();
         }
 
@@ -40,7 +47,7 @@ namespace GuizzoLtda
 
         private void btnMenu_Click(object sender, EventArgs e)
         {
-            FuncionarioMenu fmenureturn = new FuncionarioMenu();
+            FuncionarioMenu fmenureturn = new FuncionarioMenu(us,idcliente);
             this.Hide();
             fmenureturn.Show();
         }
