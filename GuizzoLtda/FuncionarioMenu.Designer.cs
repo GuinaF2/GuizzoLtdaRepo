@@ -37,14 +37,18 @@
             btnVerifyEmp = new ToolStripButton();
             toolStripSeparator5 = new ToolStripSeparator();
             toolStripButton3 = new ToolStripButton();
+            toolStripSeparator2 = new ToolStripSeparator();
+            toolStripButton4 = new ToolStripButton();
             pbFotoMenuFunc = new PictureBox();
+            toolStripSeparator4 = new ToolStripSeparator();
+            toolStripButton5 = new ToolStripButton();
             toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbFotoMenuFunc).BeginInit();
             SuspendLayout();
             // 
             // toolStrip1
             // 
-            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton2, toolStripSeparator1, btnConfirmarPedi, toolStripSeparator3, btnVerifyEmp, toolStripSeparator5, toolStripButton3 });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton2, toolStripSeparator1, btnVerifyEmp, toolStripSeparator3, btnConfirmarPedi, toolStripSeparator5, toolStripButton3, toolStripSeparator2, toolStripButton4, toolStripSeparator4, toolStripButton5 });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(800, 25);
@@ -109,6 +113,22 @@
             toolStripButton3.TextImageRelation = TextImageRelation.TextAboveImage;
             toolStripButton3.Click += toolStripButton3_Click;
             // 
+            // toolStripSeparator2
+            // 
+            toolStripSeparator2.Name = "toolStripSeparator2";
+            toolStripSeparator2.Size = new Size(6, 25);
+            // 
+            // toolStripButton4
+            // 
+            toolStripButton4.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            toolStripButton4.Image = (Image)resources.GetObject("toolStripButton4.Image");
+            toolStripButton4.ImageTransparentColor = Color.Magenta;
+            toolStripButton4.Name = "toolStripButton4";
+            toolStripButton4.Size = new Size(74, 22);
+            toolStripButton4.Text = "Traçar Rotas";
+            toolStripButton4.TextImageRelation = TextImageRelation.TextAboveImage;
+            toolStripButton4.Click += toolStripButton4_Click;
+            // 
             // pbFotoMenuFunc
             // 
             pbFotoMenuFunc.BorderStyle = BorderStyle.Fixed3D;
@@ -118,6 +138,21 @@
             pbFotoMenuFunc.SizeMode = PictureBoxSizeMode.StretchImage;
             pbFotoMenuFunc.TabIndex = 1;
             pbFotoMenuFunc.TabStop = false;
+            // 
+            // toolStripSeparator4
+            // 
+            toolStripSeparator4.Name = "toolStripSeparator4";
+            toolStripSeparator4.Size = new Size(6, 25);
+            // 
+            // toolStripButton5
+            // 
+            toolStripButton5.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            toolStripButton5.Image = (Image)resources.GetObject("toolStripButton5.Image");
+            toolStripButton5.ImageTransparentColor = Color.Magenta;
+            toolStripButton5.Name = "toolStripButton5";
+            toolStripButton5.Size = new Size(123, 22);
+            toolStripButton5.Text = "Solicitar Manutenção";
+            toolStripButton5.TextImageRelation = TextImageRelation.TextAboveImage;
             // 
             // FuncionarioMenu
             // 
@@ -154,5 +189,9 @@
         private ToolStripButton toolStripButton2;
         private ToolStripSeparator toolStripSeparator5;
         private ToolStripButton toolStripButton3;
+        private ToolStripSeparator toolStripSeparator2;
+        private ToolStripButton toolStripButton4;
+        private ToolStripSeparator toolStripSeparator4;
+        private ToolStripButton toolStripButton5;
     }
 }

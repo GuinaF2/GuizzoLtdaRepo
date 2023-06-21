@@ -30,7 +30,7 @@ namespace GuizzoLtda
 
         private void pedidosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CRUDPedido fpedidocrud = new CRUDPedido(us,idcliente);
+            CRUDPedido fpedidocrud = new CRUDPedido(us, idcliente);
             fpedidocrud.Show();
             Hide();
         }
@@ -68,7 +68,7 @@ namespace GuizzoLtda
 
         private void motoristasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CRUDMotorista fmotoristacrud = new CRUDMotorista(us,idcliente);
+            CRUDMotorista fmotoristacrud = new CRUDMotorista(us, idcliente);
             fmotoristacrud.Show();
             Hide();
         }
@@ -87,7 +87,7 @@ namespace GuizzoLtda
                 if (resposta == DialogResult.Yes)
                 {
                     this.Close();
-                    Principal logout = new Principal(us,idcliente);
+                    Principal logout = new Principal(us, idcliente);
                     logout.Show();
                 }
             }
@@ -99,7 +99,7 @@ namespace GuizzoLtda
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
-            AdminLogin freturnlogin = new AdminLogin(us,idcliente);
+            AdminLogin freturnlogin = new AdminLogin(us, idcliente);
             freturnlogin.Show();
             Hide();
         }

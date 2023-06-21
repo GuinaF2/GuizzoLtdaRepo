@@ -17,5 +17,37 @@ namespace Controle
 
         }
 
+        public int CadastrarPedido(PedidoModelo modelo)
+        {
+            //variável de confirmação do banco
+            int valorCadastroPed = -1;
+
+            try
+            {
+                string SQL = "INSERT INTO tb_pedido(cpf,registrogeral,nome,idveiculo,carteiramotorista,tipocarteira) values(@cpf,@registrogeral,@nome,@idveiculo,@carteiramotorista,@tipocarteira)";
+                //declaração de vetor de campos
+                string[] campos = { "@cpf", "@registrogeral", "@nome", "@idveiculo", "@carteiramotorista", "@tipocarteira" };
+                //declaração de vetor de informações
+                string[] valores = { modelo.CodPedido.ToString(), modelo.CodCliente.ToString(),modelo.CodMotorista.ToString(), modelo.PedidoData, modelo.PedidoVolumes, modelo.PedidoStatus, modelo.ValorPedido};
+
+
+
+                if (conexaosql.cadastrar(campos, valores, SQL) >= 1)
+                {
+                    valorCadastroPed = 1;
+                }
+                else
+                {
+                    valorCadastroPed = 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                //Lança erros do sistema
+                throw new Exception(ex.Message);
+            }
+            return valorCadastroPed;
+        }
+
     }
 }

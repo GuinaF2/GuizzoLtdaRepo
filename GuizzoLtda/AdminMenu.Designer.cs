@@ -45,10 +45,8 @@
             toolStripSeparator3 = new ToolStripSeparator();
             toolStripButton1 = new ToolStripButton();
             toolStripSeparator4 = new ToolStripSeparator();
-            toolStripButton2 = new ToolStripButton();
-            pbFotoAdminMenu = new PictureBox();
             toolStripSeparator5 = new ToolStripSeparator();
-            toolStripButton3 = new ToolStripButton();
+            pbFotoAdminMenu = new PictureBox();
             toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbFotoAdminMenu).BeginInit();
             SuspendLayout();
@@ -56,7 +54,7 @@
             // toolStrip1
             // 
             toolStrip1.GripStyle = ToolStripGripStyle.Hidden;
-            toolStrip1.Items.AddRange(new ToolStripItem[] { btnReturn, toolStripSeparator1, toolStripTextBox2, toolStripSeparator2, toolStripSplitButton6, toolStripSplitButton1, toolStripSeparator3, toolStripButton1, toolStripSeparator4, toolStripButton2, toolStripSeparator5, toolStripButton3 });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { btnReturn, toolStripSeparator1, toolStripTextBox2, toolStripSeparator2, toolStripSplitButton6, toolStripSplitButton1, toolStripSeparator3, toolStripButton1, toolStripSeparator4, toolStripSeparator5 });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(800, 25);
@@ -170,16 +168,10 @@
             toolStripSeparator4.Name = "toolStripSeparator4";
             toolStripSeparator4.Size = new Size(6, 25);
             // 
-            // toolStripButton2
+            // toolStripSeparator5
             // 
-            toolStripButton2.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            toolStripButton2.Image = (Image)resources.GetObject("toolStripButton2.Image");
-            toolStripButton2.ImageTransparentColor = Color.Magenta;
-            toolStripButton2.Name = "toolStripButton2";
-            toolStripButton2.Size = new Size(69, 22);
-            toolStripButton2.Text = "Traçar Rota";
-            toolStripButton2.TextImageRelation = TextImageRelation.TextAboveImage;
-            toolStripButton2.Click += toolStripButton2_Click;
+            toolStripSeparator5.Name = "toolStripSeparator5";
+            toolStripSeparator5.Size = new Size(6, 25);
             // 
             // pbFotoAdminMenu
             // 
@@ -191,21 +183,6 @@
             pbFotoAdminMenu.TabIndex = 2;
             pbFotoAdminMenu.TabStop = false;
             pbFotoAdminMenu.Click += pbFotoAdminMenu_Click;
-            // 
-            // toolStripSeparator5
-            // 
-            toolStripSeparator5.Name = "toolStripSeparator5";
-            toolStripSeparator5.Size = new Size(6, 25);
-            // 
-            // toolStripButton3
-            // 
-            toolStripButton3.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            toolStripButton3.Image = (Image)resources.GetObject("toolStripButton3.Image");
-            toolStripButton3.ImageTransparentColor = Color.Magenta;
-            toolStripButton3.Name = "toolStripButton3";
-            toolStripButton3.Size = new Size(83, 22);
-            toolStripButton3.Text = "Calcular Frete";
-            toolStripButton3.TextImageRelation = TextImageRelation.TextAboveImage;
             // 
             // AdminMenu
             // 
@@ -243,9 +220,7 @@
         private ToolStripSeparator toolStripSeparator3;
         private ToolStripButton toolStripButton1;
         private ToolStripSeparator toolStripSeparator4;
-        private ToolStripButton toolStripButton2;
         private ToolStripButton btnReturn;
         private ToolStripSeparator toolStripSeparator5;
-        private ToolStripButton toolStripButton3;
     }
 }

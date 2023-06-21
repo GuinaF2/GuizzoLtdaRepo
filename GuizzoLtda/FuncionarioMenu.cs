@@ -62,5 +62,12 @@ namespace GuizzoLtda
         {
 
         }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            MapaTeste ftestemapa = new MapaTeste();
+            this.Hide();
+            ftestemapa.Show();
+        }
     }
 }

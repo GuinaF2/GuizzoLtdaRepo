@@ -32,7 +32,7 @@ namespace GuizzoLtda
 
         private void SaveDelete_Click(object sender, EventArgs e)
         {
-           
+
 
             MotoristaModelo.CodMotorista = Convert.ToInt32(txtIdMoto.Text);
             var resposta = DialogResult;
@@ -62,7 +62,7 @@ namespace GuizzoLtda
             MotoristaModelo.CnhMotorista = txtCnh.Text;
             MotoristaModelo.TipoCnhMotorista = cbTipoCnh.Text;
 
-            
+
 
 
             if (txtCpf.Text == "" || txtRg.Text == "" || txtNome.Text == "" || txtCnh.Text == "" || cbTipoCnh.Text == "" || txtIdVeiculo.Text == "")
