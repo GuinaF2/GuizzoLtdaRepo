@@ -24,11 +24,11 @@ namespace Controle
 
             try
             {
-                string SQL = "INSERT INTO tb_pedido(cpf,registrogeral,nome,idveiculo,carteiramotorista,tipocarteira) values(@cpf,@registrogeral,@nome,@idveiculo,@carteiramotorista,@tipocarteira)";
+                string SQL = "INSERT INTO tb_pedido(idcliente,idmotorista,nmrvolumes,statuspedido,dtpedido,valorpedido) values(@idcliente,@idmotorista,@nmrvolumes,@statuspedido,@dtpedido,@valorpedido)";
                 //declaração de vetor de campos
-                string[] campos = { "@cpf", "@registrogeral", "@nome", "@idveiculo", "@carteiramotorista", "@tipocarteira" };
+                string[] campos = { "@idcliente", "@idmotorista", "@nmrvolumes", "@statuspedido", "@dtpedido", "@valorpedido" };
                 //declaração de vetor de informações
-                string[] valores = { modelo.CodPedido.ToString(), modelo.CodCliente.ToString(),modelo.CodMotorista.ToString(), modelo.PedidoData, modelo.PedidoVolumes, modelo.PedidoStatus, modelo.ValorPedido};
+                string[] valores = { modelo.CodCliente.ToString(),modelo.CodMotorista.ToString(), modelo.PedidoData, modelo.PedidoVolumes, modelo.PedidoStatus, modelo.ValorPedido};
 
 
 
@@ -48,6 +48,45 @@ namespace Controle
             }
             return valorCadastroPed;
         }
-
+        public bool DeletarPedido(PedidoModelo us)
+        {
+            try
+            {
+                string sql = "DELETE from tb_pedido where idpedido = @codigo";
+                if (conexaosql.deletarDados(us.CodMotorista, sql) >= 1)
+                {
+                    return resultado = true;
+                }
+                else
+                {
+                    return resultado = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+        public bool AtualizarPedido(PedidoModelo us)
+        {
+            try
+            {
+                string sql = "UPDATE tb_pedido set nmrvolumes=@nmrvolumes, statuspedido=@statuspedido,dtpedido=@dtpedido,valorpedido=@valorpedido where idpedido= @codigo";
+                string[] campos = { "@nmrvolumes", "@statuspedido", "@dtpedido", "@valorpedido" };
+                string[] valores = { us.PedidoVolumes, us.PedidoStatus, us.PedidoData, us.ValorPedido };
+                if (conexaosql.atualizarDados(us.CodPedido, campos, valores, sql) >= 1)
+                {
+                    return resultado = true;
+                }
+                else
+                {
+                    return resultado = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }

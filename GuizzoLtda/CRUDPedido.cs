@@ -54,7 +54,7 @@ namespace GuizzoLtda
             txtIdMoto.Visible = true;
             txtVolume.Visible = true;
             txtDataPed.Visible = true;
-            txtTipoPedido.Visible = true;
+            txtStatusPedido.Visible = true;
 
             labelidpedido.Visible = true;
             label4.Visible = true;
@@ -77,7 +77,7 @@ namespace GuizzoLtda
             txtIdMoto.Visible = true;
             txtVolume.Visible = true;
             txtDataPed.Visible = true;
-            txtTipoPedido.Visible = true;
+            txtStatusPedido.Visible = true;
 
             labelidpedido.Visible = true;
             label4.Visible = true;
@@ -100,7 +100,7 @@ namespace GuizzoLtda
             txtIdMoto.Visible = true;
             txtVolume.Visible = true;
             txtDataPed.Visible = true;
-            txtTipoPedido.Visible = true;
+            txtStatusPedido.Visible = true;
 
             labelidpedido.Visible = true;
             label4.Visible = true;
@@ -114,12 +114,55 @@ namespace GuizzoLtda
 
         private void SaveCreate_Click(object sender, EventArgs e)
         {
+            PedidoModelo.CodPedido = Convert.ToInt32(txtIdPedido.Text);
+            PedidoModelo.CodCliente = Convert.ToInt32(txtIdCliente.Text);
+            PedidoModelo.CodMotorista = Convert.ToInt32(txtIdMoto.Text);
+            PedidoModelo.PedidoStatus = txtStatusPedido.Text;
+            PedidoModelo.PedidoData = txtDataPed.Text;
+            PedidoModelo.PedidoVolumes = txtVolume.Text;
 
+
+
+
+            if (txtIdCliente.Text == "" || txtIdMoto.Text == "" || txtStatusPedido.Text == "" || txtDataPed.Text == "" || txtVolume.Text == "")
+            {
+                MessageBox.Show("Campos obrigatórios não preenchidos");
+            }
+            else
+            {
+                if (Controle.CadastrarPedido(PedidoModelo) >= 1)
+                {
+                    MessageBox.Show("Motorista Cadastrado Com Sucesso!");
+                    CRUDMotorista fmotoristacrud = new CRUDMotorista(us, idcliente);
+                    this.Hide();
+                    fmotoristacrud.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Erro no cadastro.");
+                }
+            }
         }
 
         private void SaveDelete_Click(object sender, EventArgs e)
         {
-
+            PedidoModelo.CodPedido = Convert.ToInt32(txtIdPedido.Text);
+            var resposta = DialogResult;
+            resposta = MessageBox.Show("Tem certeza que deseja deletar o Motorista?", "! Aviso !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (resposta == DialogResult.Yes)
+            {
+                if (Controle.DeletarPedido(PedidoModelo) == true)
+                {
+                    MessageBox.Show("Usuário deletado.");
+                }
+            }
+            else if (resposta == DialogResult.No)
+            {
+                MessageBox.Show("Processo cancelado.");
+            }
+            CRUDPedido fmotoristacrud = new CRUDPedido(us,idcliente);
+            this.Hide();
+            fmotoristacrud.Show();
         }
 
         private void SaveUpdate_Click(object sender, EventArgs e)

@@ -15,7 +15,7 @@ namespace Modelos
         private string nmrvolumes;
         private string pedidovalor;
         private string statuspedido;
-        private string datapedido;
+        private string dtpedido;
 
         public PedidoModelo()
         {
@@ -25,7 +25,7 @@ namespace Modelos
             nmrvolumes = "";
             pedidovalor = "";
             statuspedido = "";
-            datapedido = "";
+            dtpedido = "";
         }
 
         public int CodPedido
@@ -52,8 +52,8 @@ namespace Modelos
         }
         public string PedidoData
         {
-            get { return datapedido; }
-            set { datapedido = value; }
+            get { return dtpedido; }
+            set { dtpedido = value; }
 
         }
         public string PedidoStatus
