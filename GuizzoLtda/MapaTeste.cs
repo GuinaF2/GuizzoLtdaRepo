@@ -40,12 +40,12 @@ namespace GuizzoLtda
 
         }
         GMapOverlay markers = new GMapOverlay("markers");
+
         private void button1_Click(object sender, EventArgs e)
         {
             if (!(txtLat.Text.Trim().Equals("") && txtLong.Text.Trim().Equals("")))
             {
-                MessageBox.Show("Reverse Geocoding");
-                //reverse geocoding
+
                 double lat = Convert.ToDouble(txtLat.Text);
                 double lng = Convert.ToDouble(txtLong.Text);
                 MapaBr.Position = new PointLatLng(lat, lng);
@@ -55,13 +55,25 @@ namespace GuizzoLtda
                 MapaBr.Overlays.Add(markers);
             }
             else
-            { 
-                //geocoding
+            {
                 if (!txtEndereco.Text.Trim().Equals(""))
                 {
-                    MessageBox.Show("Geocoding");
+                    GeoCoderStatusCode statusCode;
+                    var pointLatLng = GoogleMapProvider.Instance.GetPoint(txtEndereco.Text.Trim(), out statusCode);
+
+                    if (statusCode == GeoCoderStatusCode.OK)
+                    {
+                        txtLat.Text = pointLatLng?.Lat.ToString();
+                        txtLong.Text = pointLatLng?.Lng.ToString();
+                        button1.PerformClick();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Something Went Wrong. Returned Status Code:" + statusCode);
+                    }
                 }
-                else 
+
+                else
                 {
                     MessageBox.Show("Invalid data to load");
                 }
@@ -113,7 +125,7 @@ namespace GuizzoLtda
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
-            AdminMenu fmenureturn = new AdminMenu(us, idcliente);
+            FuncionarioMenu fmenureturn = new FuncionarioMenu(us, idcliente);
             this.Hide();
             fmenureturn.Show();
         }
@@ -134,20 +146,19 @@ namespace GuizzoLtda
 
         private void btnApaga_Click(object sender, EventArgs e)
         {
-            var route = GoogleMapProvider.Instance
-                .GetRoute(_points[0], _points[1], false, false, 10);
+            var route = GoogleMapProvider.Instance.GetRoute(_points[0], _points[1], false, false, 10);
             var r = new GMapRoute(route.Points, "My Route");
             var routes = new GMapOverlay("Routes");
             routes.Routes.Add(r);
             MapaBr.Overlays.Add(routes);
-
             labeldistancia.Text = route.Distance + "Km";
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            _points.Add(new PointLatLng(Convert.ToDouble(txtLat.Text),
-                Convert.ToDouble(txtLong.Text)));
+          
+
+            _points.Add(new PointLatLng(Convert.ToDouble(txtLat.Text), Convert.ToDouble(txtLong.Text)));
             MapaBr.Zoom = 14;
         }
     }
