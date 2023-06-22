@@ -148,9 +148,9 @@
             // txtIdCliente
             // 
             txtIdCliente.BackColor = Color.White;
-            txtIdCliente.Enabled = false;
             txtIdCliente.Location = new Point(23, 227);
             txtIdCliente.Name = "txtIdCliente";
+            txtIdCliente.ReadOnly = true;
             txtIdCliente.Size = new Size(125, 23);
             txtIdCliente.TabIndex = 18;
             txtIdCliente.Click += txtIdCliente_Click;
@@ -158,7 +158,7 @@
             // SaveCreate
             // 
             SaveCreate.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            SaveCreate.Location = new Point(48, 269);
+            SaveCreate.Location = new Point(48, 350);
             SaveCreate.Name = "SaveCreate";
             SaveCreate.Size = new Size(300, 50);
             SaveCreate.TabIndex = 16;
@@ -170,7 +170,7 @@
             // SaveDelete
             // 
             SaveDelete.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            SaveDelete.Location = new Point(48, 303);
+            SaveDelete.Location = new Point(46, 350);
             SaveDelete.Name = "SaveDelete";
             SaveDelete.Size = new Size(300, 50);
             SaveDelete.TabIndex = 15;
@@ -194,9 +194,9 @@
             // txtIdMoto
             // 
             txtIdMoto.BackColor = Color.White;
-            txtIdMoto.Enabled = false;
             txtIdMoto.Location = new Point(23, 171);
             txtIdMoto.Name = "txtIdMoto";
+            txtIdMoto.ReadOnly = true;
             txtIdMoto.Size = new Size(125, 23);
             txtIdMoto.TabIndex = 30;
             txtIdMoto.Click += txtIdMoto_Click;
