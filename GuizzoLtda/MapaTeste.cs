@@ -156,7 +156,7 @@ namespace GuizzoLtda
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-          
+
 
             _points.Add(new PointLatLng(Convert.ToDouble(txtLat.Text), Convert.ToDouble(txtLong.Text)));
             MapaBr.Zoom = 14;

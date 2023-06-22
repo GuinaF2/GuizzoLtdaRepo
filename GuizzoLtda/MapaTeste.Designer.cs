@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MapaTeste));
             MapaBr = new GMap.NET.WindowsForms.GMapControl();
             label1 = new Label();
             txtLat = new TextBox();
@@ -156,18 +155,19 @@
             // 
             // btnReturn
             // 
+            btnReturn.BackgroundImage = Properties.Resources._688879_arrows_512x512;
+            btnReturn.BackgroundImageLayout = ImageLayout.Stretch;
             btnReturn.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            btnReturn.Image = (Image)resources.GetObject("btnReturn.Image");
             btnReturn.ImageTransparentColor = Color.Magenta;
             btnReturn.Name = "btnReturn";
             btnReturn.Size = new Size(23, 22);
             btnReturn.Text = "Retornar";
+            btnReturn.TextImageRelation = TextImageRelation.TextBeforeImage;
             btnReturn.Click += btnReturn_Click;
             // 
             // btnMarcações
             // 
             btnMarcações.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            btnMarcações.Image = (Image)resources.GetObject("btnMarcações.Image");
             btnMarcações.ImageTransparentColor = Color.Magenta;
             btnMarcações.Name = "btnMarcações";
             btnMarcações.Size = new Size(118, 22);
@@ -182,7 +182,6 @@
             // btnClear
             // 
             btnClear.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            btnClear.Image = (Image)resources.GetObject("btnClear.Image");
             btnClear.ImageTransparentColor = Color.Magenta;
             btnClear.Name = "btnClear";
             btnClear.Size = new Size(75, 22);
@@ -197,7 +196,6 @@
             // btnRota
             // 
             btnRota.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            btnRota.Image = (Image)resources.GetObject("btnRota.Image");
             btnRota.ImageTransparentColor = Color.Magenta;
             btnRota.Name = "btnRota";
             btnRota.Size = new Size(35, 22);
@@ -212,7 +210,6 @@
             // toolStripButton1
             // 
             toolStripButton1.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            toolStripButton1.Image = (Image)resources.GetObject("toolStripButton1.Image");
             toolStripButton1.ImageTransparentColor = Color.Magenta;
             toolStripButton1.Name = "toolStripButton1";
             toolStripButton1.Size = new Size(98, 22);
