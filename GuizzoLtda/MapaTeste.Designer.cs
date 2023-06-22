@@ -46,6 +46,7 @@
             toolStripSeparator = new ToolStripSeparator();
             toolStripButton1 = new ToolStripButton();
             txtEndereco = new TextBox();
+            label3 = new Label();
             toolStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -86,6 +87,7 @@
             label1.Size = new Size(88, 30);
             label1.TabIndex = 2;
             label1.Text = "Latitude";
+            label1.Visible = false;
             // 
             // txtLat
             // 
@@ -94,6 +96,7 @@
             txtLat.Name = "txtLat";
             txtLat.Size = new Size(175, 23);
             txtLat.TabIndex = 3;
+            txtLat.Visible = false;
             // 
             // txtLong
             // 
@@ -102,6 +105,7 @@
             txtLong.Name = "txtLong";
             txtLong.Size = new Size(173, 23);
             txtLong.TabIndex = 4;
+            txtLong.Visible = false;
             // 
             // label2
             // 
@@ -113,6 +117,7 @@
             label2.Size = new Size(106, 30);
             label2.TabIndex = 5;
             label2.Text = "Longitude";
+            label2.Visible = false;
             // 
             // button1
             // 
@@ -218,16 +223,26 @@
             // 
             // txtEndereco
             // 
-            txtEndereco.Location = new Point(486, 262);
+            txtEndereco.Location = new Point(504, 176);
             txtEndereco.Name = "txtEndereco";
-            txtEndereco.Size = new Size(100, 23);
+            txtEndereco.Size = new Size(210, 23);
             txtEndereco.TabIndex = 28;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(469, 158);
+            label3.Name = "label3";
+            label3.Size = new Size(97, 15);
+            label3.TabIndex = 29;
+            label3.Text = "Insira o Endereço";
             // 
             // MapaTeste
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label3);
             Controls.Add(txtEndereco);
             Controls.Add(toolStrip1);
             Controls.Add(labeldistancia);
@@ -266,5 +281,6 @@
         private ToolStripSeparator toolStripSeparator;
         private ToolStripButton toolStripButton1;
         private TextBox txtEndereco;
+        private Label label3;
     }
 }

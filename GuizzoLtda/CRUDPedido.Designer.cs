@@ -200,6 +200,7 @@
             txtIdMoto.Size = new Size(125, 23);
             txtIdMoto.TabIndex = 30;
             txtIdMoto.Click += txtIdMoto_Click;
+            txtIdMoto.TextChanged += txtIdMoto_TextChanged;
             // 
             // txtDataPed
             // 

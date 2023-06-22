@@ -117,7 +117,6 @@ namespace GuizzoLtda
 
         private void SaveCreate_Click(object sender, EventArgs e)
         {
-            PedidoModelo.CodPedido = Convert.ToInt32(txtIdPedido.Text);
             PedidoModelo.CodCliente = Convert.ToInt32(txtIdCliente.Text);
             PedidoModelo.CodMotorista = Convert.ToInt32(txtIdMoto.Text);
             PedidoModelo.PedidoStatus = txtStatusPedido.Text;
@@ -190,17 +189,22 @@ namespace GuizzoLtda
 
         private void txtIdCliente_Click(object sender, EventArgs e)
         {
-            SelecionarCliente cselectmoto = new SelecionarCliente();
-            cselectmoto.ShowDialog();
+            SelecionarCliente cselectemp = new SelecionarCliente();
+            cselectemp.ShowDialog();
 
-            if (cselectmoto.DialogResult == DialogResult.OK)
+            if (cselectemp.DialogResult == DialogResult.OK)
             {
-                txtIdMoto.Text = cselectmoto.idemp.ToString();
+                txtIdCliente.Text = cselectemp.idemp.ToString();
             }
             else
             {
                 MessageBox.Show("Erro. Verifique se selecionou um Veiculo corretamente.");
             }
+
+        }
+
+        private void txtIdMoto_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }
