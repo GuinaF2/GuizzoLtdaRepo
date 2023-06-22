@@ -55,6 +55,7 @@ namespace GuizzoLtda
             txtVolume.Visible = true;
             txtDataPed.Visible = true;
             txtStatusPedido.Visible = true;
+            txtValorPedido.Visible = true;
 
             labelidpedido.Visible = true;
             label4.Visible = true;
@@ -78,6 +79,7 @@ namespace GuizzoLtda
             txtVolume.Visible = true;
             txtDataPed.Visible = true;
             txtStatusPedido.Visible = true;
+            txtValorPedido.Visible = true;
 
             labelidpedido.Visible = true;
             label4.Visible = true;
@@ -101,6 +103,7 @@ namespace GuizzoLtda
             txtVolume.Visible = true;
             txtDataPed.Visible = true;
             txtStatusPedido.Visible = true;
+            txtValorPedido.Visible = true;
 
             labelidpedido.Visible = true;
             label4.Visible = true;
@@ -120,11 +123,11 @@ namespace GuizzoLtda
             PedidoModelo.PedidoStatus = txtStatusPedido.Text;
             PedidoModelo.PedidoData = txtDataPed.Text;
             PedidoModelo.PedidoVolumes = txtVolume.Text;
+            PedidoModelo.ValorPedido = txtValorPedido.Text;
 
 
 
-
-            if (txtIdCliente.Text == "" || txtIdMoto.Text == "" || txtStatusPedido.Text == "" || txtDataPed.Text == "" || txtVolume.Text == "")
+            if (txtIdCliente.Text == "" || txtIdMoto.Text == "" || txtStatusPedido.Text == "" || txtDataPed.Text == "" || txtVolume.Text == "" || txtValorPedido.Text == "")
             {
                 MessageBox.Show("Campos obrigatórios não preenchidos");
             }
@@ -132,10 +135,10 @@ namespace GuizzoLtda
             {
                 if (Controle.CadastrarPedido(PedidoModelo) >= 1)
                 {
-                    MessageBox.Show("Motorista Cadastrado Com Sucesso!");
-                    CRUDMotorista fmotoristacrud = new CRUDMotorista(us, idcliente);
+                    MessageBox.Show("Pedido Cadastrado Com Sucesso!");
+                    CRUDPedido fpedidocrud = new CRUDPedido(us, idcliente);
                     this.Hide();
-                    fmotoristacrud.Show();
+                    fpedidocrud.Show();
                 }
                 else
                 {
@@ -148,7 +151,7 @@ namespace GuizzoLtda
         {
             PedidoModelo.CodPedido = Convert.ToInt32(txtIdPedido.Text);
             var resposta = DialogResult;
-            resposta = MessageBox.Show("Tem certeza que deseja deletar o Motorista?", "! Aviso !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            resposta = MessageBox.Show("Tem certeza que deseja deletar o Pedido?", "! Aviso !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (resposta == DialogResult.Yes)
             {
                 if (Controle.DeletarPedido(PedidoModelo) == true)
@@ -160,13 +163,44 @@ namespace GuizzoLtda
             {
                 MessageBox.Show("Processo cancelado.");
             }
-            CRUDPedido fmotoristacrud = new CRUDPedido(us,idcliente);
+            CRUDPedido fpedidocrud = new CRUDPedido(us, idcliente);
             this.Hide();
-            fmotoristacrud.Show();
+            fpedidocrud.Show();
         }
 
         private void SaveUpdate_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void txtIdMoto_Click(object sender, EventArgs e)
+        {
+            SelecionarMoto cselectmoto = new SelecionarMoto(us, idcliente);
+            cselectmoto.ShowDialog();
+
+            if (cselectmoto.DialogResult == DialogResult.OK)
+            {
+                txtIdMoto.Text = cselectmoto.idmoto.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Erro. Verifique se selecionou um Veiculo corretamente.");
+            }
+        }
+
+        private void txtIdCliente_Click(object sender, EventArgs e)
+        {
+            SelecionarCliente cselectmoto = new SelecionarCliente();
+            cselectmoto.ShowDialog();
+
+            if (cselectmoto.DialogResult == DialogResult.OK)
+            {
+                txtIdMoto.Text = cselectmoto.idemp.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Erro. Verifique se selecionou um Veiculo corretamente.");
+            }
 
         }
     }

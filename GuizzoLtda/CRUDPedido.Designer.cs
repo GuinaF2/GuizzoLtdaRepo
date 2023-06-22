@@ -55,7 +55,7 @@
             txtVolume = new TextBox();
             txtStatusPedido = new TextBox();
             label1 = new Label();
-            textBox1 = new TextBox();
+            txtValorPedido = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dgPedido).BeginInit();
             toolStrip1.SuspendLayout();
             SuspendLayout();
@@ -153,11 +153,12 @@
             txtIdCliente.Name = "txtIdCliente";
             txtIdCliente.Size = new Size(125, 23);
             txtIdCliente.TabIndex = 18;
+            txtIdCliente.Click += txtIdCliente_Click;
             // 
             // SaveCreate
             // 
             SaveCreate.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            SaveCreate.Location = new Point(48, 256);
+            SaveCreate.Location = new Point(48, 269);
             SaveCreate.Name = "SaveCreate";
             SaveCreate.Size = new Size(300, 50);
             SaveCreate.TabIndex = 16;
@@ -198,6 +199,7 @@
             txtIdMoto.Name = "txtIdMoto";
             txtIdMoto.Size = new Size(125, 23);
             txtIdMoto.TabIndex = 30;
+            txtIdMoto.Click += txtIdMoto_Click;
             // 
             // txtDataPed
             // 
@@ -298,17 +300,17 @@
             label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             label1.Location = new Point(220, 210);
             label1.Name = "label1";
-            label1.Size = new Size(126, 30);
+            label1.Size = new Size(128, 30);
             label1.TabIndex = 43;
-            label1.Text = "Data Pedido";
+            label1.Text = "Valor Pedido";
             // 
-            // textBox1
+            // txtValorPedido
             // 
-            textBox1.BackColor = Color.White;
-            textBox1.Location = new Point(221, 240);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 23);
-            textBox1.TabIndex = 42;
+            txtValorPedido.BackColor = Color.White;
+            txtValorPedido.Location = new Point(221, 240);
+            txtValorPedido.Name = "txtValorPedido";
+            txtValorPedido.Size = new Size(125, 23);
+            txtValorPedido.TabIndex = 42;
             // 
             // CRUDPedido
             // 
@@ -316,7 +318,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(label1);
-            Controls.Add(textBox1);
+            Controls.Add(txtValorPedido);
             Controls.Add(txtStatusPedido);
             Controls.Add(txtVolume);
             Controls.Add(label8);
@@ -368,7 +370,7 @@
         private Button SaveCreate;
         private Button SaveDelete;
         private Button SaveUpdate;
-        private TextBox textBox1;
+        private TextBox txtValorPedido;
         private Label label1;
         private TextBox txtIdMoto;
         private Label label2;
