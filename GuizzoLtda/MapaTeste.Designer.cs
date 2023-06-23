@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             MapaBr = new GMap.NET.WindowsForms.GMapControl();
-            label1 = new Label();
+            lblLat = new Label();
             txtLat = new TextBox();
             txtLong = new TextBox();
-            label2 = new Label();
+            lblLon = new Label();
             button1 = new Button();
             labeldistancia = new Label();
             splitter1 = new Splitter();
@@ -77,17 +77,17 @@
             MapaBr.Zoom = 0D;
             MapaBr.Load += gMapControl1_Load;
             // 
-            // label1
+            // lblLat
             // 
-            label1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(504, 57);
-            label1.Name = "label1";
-            label1.Size = new Size(88, 30);
-            label1.TabIndex = 2;
-            label1.Text = "Latitude";
-            label1.Visible = false;
+            lblLat.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblLat.AutoSize = true;
+            lblLat.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            lblLat.Location = new Point(504, 57);
+            lblLat.Name = "lblLat";
+            lblLat.Size = new Size(88, 30);
+            lblLat.TabIndex = 2;
+            lblLat.Text = "Latitude";
+            lblLat.Visible = false;
             // 
             // txtLat
             // 
@@ -107,17 +107,17 @@
             txtLong.TabIndex = 4;
             txtLong.Visible = false;
             // 
-            // label2
+            // lblLon
             // 
-            label2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(504, 134);
-            label2.Name = "label2";
-            label2.Size = new Size(106, 30);
-            label2.TabIndex = 5;
-            label2.Text = "Longitude";
-            label2.Visible = false;
+            lblLon.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblLon.AutoSize = true;
+            lblLon.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            lblLon.Location = new Point(504, 134);
+            lblLon.Name = "lblLon";
+            lblLon.Size = new Size(106, 30);
+            lblLon.TabIndex = 5;
+            lblLon.Text = "Longitude";
+            lblLon.Visible = false;
             // 
             // button1
             // 
@@ -247,10 +247,10 @@
             Controls.Add(toolStrip1);
             Controls.Add(labeldistancia);
             Controls.Add(button1);
-            Controls.Add(label2);
+            Controls.Add(lblLon);
             Controls.Add(txtLong);
             Controls.Add(txtLat);
-            Controls.Add(label1);
+            Controls.Add(lblLat);
             Controls.Add(MapaBr);
             Controls.Add(splitter1);
             Name = "MapaTeste";
@@ -264,10 +264,10 @@
 
         #endregion
         private GMap.NET.WindowsForms.GMapControl MapaBr;
-        private Label label1;
+        private Label lblLat;
         private TextBox txtLat;
         private TextBox txtLong;
-        private Label label2;
+        private Label lblLon;
         private Button button1;
         private Label labeldistancia;
         private Splitter splitter1;

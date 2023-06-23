@@ -1,18 +1,25 @@
 ﻿using GMap.NET;
 using GMap.NET.MapProviders;
+using GMap.NET.WindowsForms;
+using GMap.NET.WindowsForms.Markers;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
+using System.Security;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using GMap.NET.WindowsForms;
-using GMap.NET.WindowsForms.Markers;
-using Controle;
 using Modelos;
+using Controle;
 
 namespace GuizzoLtda
 {
@@ -23,6 +30,46 @@ namespace GuizzoLtda
         EmpresaModelo us = new EmpresaModelo();
 
         private List<PointLatLng> _points;
+
+
+
+
+        double minLat = 0, maxLat = 0, minLon = 0, maxLon = 0;
+
+
+        string m_historyFileName = "MyHistoryBlock.json";
+        GMapRoute line_layer;
+        List<double> m_latList = new List<double>();
+        List<double> m_lonList = new List<double>();
+        String activeKmlFilePath;
+        String saveMainFormText = "";
+
+        Font ToolTipTextFont;
+
+        GMapOverlay overlayMarkers = null;
+        GMapOverlay overlayRoutes = null;
+        GMapOverlay overlayPolygons = null;
+        // GMapOverlay overlayRadar    = null;        
+        GMapOverlay overlayCustom = null;
+
+        GMapPolygon savePoly = null;
+        GMapRoute saveRoute = null;
+        Color saveColorPoly = System.Drawing.Color.White;
+        Color saveColorRoute = System.Drawing.Color.White;
+
+
+        GMapOverlay polygons;
+        GMapOverlay gMapOverlay;
+        GMapOverlay gMapOverlayDraw;
+        GMapOverlay line_overlay;
+
+        private int _xPos;
+        private int _yPos;
+        private bool _dragging;
+        List<PictureBox> pictureBoxes = new List<PictureBox>();
+        GMapMarker gMapMarker;
+        string m_baseDir;
+        Bitmap radar_bmp;
 
         public MapaTeste()
         {
@@ -39,6 +86,7 @@ namespace GuizzoLtda
         {
 
         }
+
         GMapOverlay markers = new GMapOverlay("markers");
 
         private void button1_Click(object sender, EventArgs e)
