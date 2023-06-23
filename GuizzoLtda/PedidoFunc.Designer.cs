@@ -51,18 +51,21 @@
             // dtgPedido
             // 
             dtgPedido.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgPedido.Location = new Point(0, 198);
+            dtgPedido.Location = new Point(0, 264);
+            dtgPedido.Margin = new Padding(3, 4, 3, 4);
             dtgPedido.Name = "dtgPedido";
+            dtgPedido.RowHeadersWidth = 51;
             dtgPedido.RowTemplate.Height = 25;
-            dtgPedido.Size = new Size(803, 251);
+            dtgPedido.Size = new Size(918, 335);
             dtgPedido.TabIndex = 1;
             dtgPedido.Visible = false;
             // 
             // btnConfirma
             // 
-            btnConfirma.Location = new Point(19, 299);
+            btnConfirma.Location = new Point(22, 399);
+            btnConfirma.Margin = new Padding(3, 4, 3, 4);
             btnConfirma.Name = "btnConfirma";
-            btnConfirma.Size = new Size(144, 40);
+            btnConfirma.Size = new Size(165, 53);
             btnConfirma.TabIndex = 4;
             btnConfirma.Text = "Confirmar";
             btnConfirma.UseVisualStyleBackColor = true;
@@ -71,9 +74,10 @@
             // cbAberto
             // 
             cbAberto.AutoSize = true;
-            cbAberto.Location = new Point(19, 150);
+            cbAberto.Location = new Point(22, 200);
+            cbAberto.Margin = new Padding(3, 4, 3, 4);
             cbAberto.Name = "cbAberto";
-            cbAberto.Size = new Size(62, 19);
+            cbAberto.Size = new Size(77, 24);
             cbAberto.TabIndex = 5;
             cbAberto.Text = "Aberto";
             cbAberto.UseVisualStyleBackColor = true;
@@ -82,9 +86,10 @@
             // cbEncerrado
             // 
             cbEncerrado.AutoSize = true;
-            cbEncerrado.Location = new Point(99, 150);
+            cbEncerrado.Location = new Point(113, 200);
+            cbEncerrado.Margin = new Padding(3, 4, 3, 4);
             cbEncerrado.Name = "cbEncerrado";
-            cbEncerrado.Size = new Size(79, 19);
+            cbEncerrado.Size = new Size(98, 24);
             cbEncerrado.TabIndex = 6;
             cbEncerrado.Text = "Encerrado";
             cbEncerrado.UseVisualStyleBackColor = true;
@@ -92,26 +97,28 @@
             // 
             // txtDtPedido
             // 
-            txtDtPedido.Location = new Point(19, 86);
+            txtDtPedido.Location = new Point(22, 115);
+            txtDtPedido.Margin = new Padding(3, 4, 3, 4);
             txtDtPedido.Name = "txtDtPedido";
-            txtDtPedido.Size = new Size(100, 23);
+            txtDtPedido.Size = new Size(114, 27);
             txtDtPedido.TabIndex = 7;
             // 
             // labelDtPedido
             // 
             labelDtPedido.AutoSize = true;
-            labelDtPedido.Location = new Point(19, 68);
+            labelDtPedido.Location = new Point(22, 91);
             labelDtPedido.Name = "labelDtPedido";
-            labelDtPedido.Size = new Size(71, 15);
+            labelDtPedido.Size = new Size(91, 20);
             labelDtPedido.TabIndex = 8;
             labelDtPedido.Text = "Data Pedido";
             // 
             // toolStrip1
             // 
+            toolStrip1.ImageScalingSize = new Size(20, 20);
             toolStrip1.Items.AddRange(new ToolStripItem[] { btnReturn });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(800, 25);
+            toolStrip1.Size = new Size(1062, 27);
             toolStrip1.TabIndex = 9;
             toolStrip1.Text = "toolStrip1";
             toolStrip1.ItemClicked += toolStrip1_ItemClicked;
@@ -122,15 +129,15 @@
             btnReturn.Image = Properties.Resources._688879_arrows_512x512;
             btnReturn.ImageTransparentColor = Color.Magenta;
             btnReturn.Name = "btnReturn";
-            btnReturn.Size = new Size(23, 22);
+            btnReturn.Size = new Size(29, 24);
             btnReturn.Text = "toolStripButton1";
             btnReturn.Click += btnReturn_Click;
             // 
             // PedidoFunc
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1062, 673);
             Controls.Add(toolStrip1);
             Controls.Add(labelDtPedido);
             Controls.Add(txtDtPedido);
@@ -138,6 +145,7 @@
             Controls.Add(cbAberto);
             Controls.Add(btnConfirma);
             Controls.Add(dtgPedido);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "PedidoFunc";
             StartPosition = FormStartPosition.CenterScreen;
             Load += PedidoFunc_Load;

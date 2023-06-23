@@ -76,5 +76,13 @@ namespace GuizzoLtda
             this.Hide();
             fprincipalreturn.Show();
         }
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Principal fprincipalreturn = new Principal(us, idcliente);
+            this.Hide();
+            fprincipalreturn.Show();
+        }
     }
 }

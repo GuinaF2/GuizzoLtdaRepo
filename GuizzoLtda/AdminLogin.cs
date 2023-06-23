@@ -124,5 +124,25 @@ namespace GuizzoLtda
         {
             us = usu.CarregaEmpresa(idcliente);
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSenhaAdm_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

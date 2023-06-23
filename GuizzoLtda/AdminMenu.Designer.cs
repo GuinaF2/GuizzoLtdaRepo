@@ -54,10 +54,11 @@
             // toolStrip1
             // 
             toolStrip1.GripStyle = ToolStripGripStyle.Hidden;
+            toolStrip1.ImageScalingSize = new Size(20, 20);
             toolStrip1.Items.AddRange(new ToolStripItem[] { btnReturn, toolStripSeparator1, toolStripTextBox2, toolStripSeparator2, toolStripSplitButton6, toolStripSplitButton1, toolStripSeparator3, toolStripButton1, toolStripSeparator4, toolStripSeparator5 });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(800, 25);
+            toolStrip1.Size = new Size(1062, 27);
             toolStrip1.TabIndex = 1;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -67,62 +68,62 @@
             btnReturn.Image = Properties.Resources._688879_arrows_512x512;
             btnReturn.ImageTransparentColor = Color.Magenta;
             btnReturn.Name = "btnReturn";
-            btnReturn.Size = new Size(23, 22);
+            btnReturn.Size = new Size(29, 24);
             btnReturn.Text = "toolStripButton1";
             btnReturn.Click += btnReturn_Click;
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(6, 25);
+            toolStripSeparator1.Size = new Size(6, 27);
             // 
             // toolStripTextBox2
             // 
             toolStripTextBox2.DropDownItems.AddRange(new ToolStripItem[] { abrirPedidoToolStripMenuItem, pedidosToolStripMenuItem, veiculosToolStripMenuItem, motoristasToolStripMenuItem, empresasToolStripMenuItem });
             toolStripTextBox2.Name = "toolStripTextBox2";
-            toolStripTextBox2.Size = new Size(58, 22);
+            toolStripTextBox2.Size = new Size(73, 24);
             toolStripTextBox2.Text = "Alterar";
             toolStripTextBox2.ButtonClick += toolStripTextBox2_ButtonClick;
             // 
             // abrirPedidoToolStripMenuItem
             // 
             abrirPedidoToolStripMenuItem.Name = "abrirPedidoToolStripMenuItem";
-            abrirPedidoToolStripMenuItem.Size = new Size(142, 22);
+            abrirPedidoToolStripMenuItem.Size = new Size(175, 26);
             abrirPedidoToolStripMenuItem.Text = "Funcionarios";
             abrirPedidoToolStripMenuItem.Click += abrirPedidoToolStripMenuItem_Click_1;
             // 
             // pedidosToolStripMenuItem
             // 
             pedidosToolStripMenuItem.Name = "pedidosToolStripMenuItem";
-            pedidosToolStripMenuItem.Size = new Size(142, 22);
+            pedidosToolStripMenuItem.Size = new Size(175, 26);
             pedidosToolStripMenuItem.Text = "Pedidos";
             pedidosToolStripMenuItem.Click += pedidosToolStripMenuItem_Click;
             // 
             // veiculosToolStripMenuItem
             // 
             veiculosToolStripMenuItem.Name = "veiculosToolStripMenuItem";
-            veiculosToolStripMenuItem.Size = new Size(142, 22);
+            veiculosToolStripMenuItem.Size = new Size(175, 26);
             veiculosToolStripMenuItem.Text = "Veiculos";
             veiculosToolStripMenuItem.Click += veiculosToolStripMenuItem_Click;
             // 
             // motoristasToolStripMenuItem
             // 
             motoristasToolStripMenuItem.Name = "motoristasToolStripMenuItem";
-            motoristasToolStripMenuItem.Size = new Size(142, 22);
+            motoristasToolStripMenuItem.Size = new Size(175, 26);
             motoristasToolStripMenuItem.Text = "Motoristas";
             motoristasToolStripMenuItem.Click += motoristasToolStripMenuItem_Click;
             // 
             // empresasToolStripMenuItem
             // 
             empresasToolStripMenuItem.Name = "empresasToolStripMenuItem";
-            empresasToolStripMenuItem.Size = new Size(142, 22);
+            empresasToolStripMenuItem.Size = new Size(175, 26);
             empresasToolStripMenuItem.Text = "Empresas";
             empresasToolStripMenuItem.Click += empresasToolStripMenuItem_Click;
             // 
             // toolStripSeparator2
             // 
             toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(6, 25);
+            toolStripSeparator2.Size = new Size(6, 27);
             // 
             // toolStripSplitButton6
             // 
@@ -130,7 +131,7 @@
             toolStripSplitButton6.Image = (Image)resources.GetObject("toolStripSplitButton6.Image");
             toolStripSplitButton6.ImageTransparentColor = Color.Magenta;
             toolStripSplitButton6.Name = "toolStripSplitButton6";
-            toolStripSplitButton6.Size = new Size(84, 22);
+            toolStripSplitButton6.Size = new Size(105, 24);
             toolStripSplitButton6.Text = "Devoluções";
             // 
             // toolStripSplitButton1
@@ -138,20 +139,20 @@
             toolStripSplitButton1.Alignment = ToolStripItemAlignment.Right;
             toolStripSplitButton1.DropDownItems.AddRange(new ToolStripItem[] { encerrarToolStripMenuItem });
             toolStripSplitButton1.Name = "toolStripSplitButton1";
-            toolStripSplitButton1.Size = new Size(64, 22);
+            toolStripSplitButton1.Size = new Size(80, 24);
             toolStripSplitButton1.Text = "Sistema";
             // 
             // encerrarToolStripMenuItem
             // 
             encerrarToolStripMenuItem.Name = "encerrarToolStripMenuItem";
-            encerrarToolStripMenuItem.Size = new Size(117, 22);
+            encerrarToolStripMenuItem.Size = new Size(146, 26);
             encerrarToolStripMenuItem.Text = "Encerrar";
             encerrarToolStripMenuItem.Click += encerrarToolStripMenuItem_Click;
             // 
             // toolStripSeparator3
             // 
             toolStripSeparator3.Name = "toolStripSeparator3";
-            toolStripSeparator3.Size = new Size(6, 25);
+            toolStripSeparator3.Size = new Size(6, 27);
             // 
             // toolStripButton1
             // 
@@ -159,26 +160,27 @@
             toolStripButton1.Image = (Image)resources.GetObject("toolStripButton1.Image");
             toolStripButton1.ImageTransparentColor = Color.Magenta;
             toolStripButton1.Name = "toolStripButton1";
-            toolStripButton1.Size = new Size(83, 22);
+            toolStripButton1.Size = new Size(106, 24);
             toolStripButton1.Text = "Rentabilidade";
             toolStripButton1.TextImageRelation = TextImageRelation.TextAboveImage;
             // 
             // toolStripSeparator4
             // 
             toolStripSeparator4.Name = "toolStripSeparator4";
-            toolStripSeparator4.Size = new Size(6, 25);
+            toolStripSeparator4.Size = new Size(6, 27);
             // 
             // toolStripSeparator5
             // 
             toolStripSeparator5.Name = "toolStripSeparator5";
-            toolStripSeparator5.Size = new Size(6, 25);
+            toolStripSeparator5.Size = new Size(6, 27);
             // 
             // pbFotoAdminMenu
             // 
             pbFotoAdminMenu.BorderStyle = BorderStyle.Fixed3D;
-            pbFotoAdminMenu.Location = new Point(401, 28);
+            pbFotoAdminMenu.Location = new Point(458, 37);
+            pbFotoAdminMenu.Margin = new Padding(3, 4, 3, 4);
             pbFotoAdminMenu.Name = "pbFotoAdminMenu";
-            pbFotoAdminMenu.Size = new Size(399, 422);
+            pbFotoAdminMenu.Size = new Size(455, 561);
             pbFotoAdminMenu.SizeMode = PictureBoxSizeMode.StretchImage;
             pbFotoAdminMenu.TabIndex = 2;
             pbFotoAdminMenu.TabStop = false;
@@ -186,11 +188,12 @@
             // 
             // AdminMenu
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1062, 673);
             Controls.Add(pbFotoAdminMenu);
             Controls.Add(toolStrip1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "AdminMenu";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "AdminMenu";

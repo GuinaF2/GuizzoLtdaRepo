@@ -22,7 +22,7 @@ namespace GuizzoLtda
         EmpresaModelo EmpresaModelo = new EmpresaModelo();
         EmpresaControle Controle = new EmpresaControle();
         int id;
-        public CRUDEmpresa(EmpresaModelo um,int id)
+        public CRUDEmpresa(EmpresaModelo um, int id)
         {
             us = um;
             idcliente = id;
@@ -55,7 +55,7 @@ namespace GuizzoLtda
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
-            AdminMenu fmenureturn = new AdminMenu(us,idcliente);
+            AdminMenu fmenureturn = new AdminMenu(us, idcliente);
             this.Hide();
             fmenureturn.Show();
         }

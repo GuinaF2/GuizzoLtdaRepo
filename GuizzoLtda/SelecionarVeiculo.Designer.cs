@@ -39,10 +39,12 @@
             dgSelectVeiculo.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgSelectVeiculo.Dock = DockStyle.Fill;
             dgSelectVeiculo.Location = new Point(0, 0);
+            dgSelectVeiculo.Margin = new Padding(3, 4, 3, 4);
             dgSelectVeiculo.Name = "dgSelectVeiculo";
             dgSelectVeiculo.ReadOnly = true;
+            dgSelectVeiculo.RowHeadersWidth = 51;
             dgSelectVeiculo.RowTemplate.Height = 25;
-            dgSelectVeiculo.Size = new Size(800, 332);
+            dgSelectVeiculo.Size = new Size(1062, 673);
             dgSelectVeiculo.TabIndex = 0;
             dgSelectVeiculo.CellClick += dgSelectVeiculo_CellClick;
             dgSelectVeiculo.CellContentClick += dgSelectVeiculo_CellContentClick;
@@ -50,10 +52,11 @@
             // 
             // SelecionarVeiculo
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 332);
+            ClientSize = new Size(1062, 673);
             Controls.Add(dgSelectVeiculo);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "SelecionarVeiculo";
             Text = "SelecionarVeiculo";
             Load += SelecionarVeiculo_Load;

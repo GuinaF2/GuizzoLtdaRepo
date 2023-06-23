@@ -102,7 +102,7 @@ namespace GuizzoLtda
 
         private void btnReturn_Click_2(object sender, EventArgs e)
         {
-            AdminMenu fmenureturn = new AdminMenu(us,idcliente);
+            AdminMenu fmenureturn = new AdminMenu(us, idcliente);
             this.Hide();
             fmenureturn.Show();
         }
@@ -231,7 +231,7 @@ namespace GuizzoLtda
 
         private void btnReturn_Click_1(object sender, EventArgs e)
         {
-            AdminMenu fmenureturn = new AdminMenu(us,idcliente);
+            AdminMenu fmenureturn = new AdminMenu(us, idcliente);
             this.Hide();
             fmenureturn.Show();
         }

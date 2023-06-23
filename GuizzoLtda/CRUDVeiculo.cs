@@ -202,7 +202,7 @@ namespace GuizzoLtda
                 if (Controle.CadastrarVeiculo(VeiculoModelo) >= 1)
                 {
                     MessageBox.Show("Veiculo Cadastrado Com Sucesso!");
-                    CRUDVeiculo fveiculocrud = new CRUDVeiculo(us,idcliente);
+                    CRUDVeiculo fveiculocrud = new CRUDVeiculo(us, idcliente);
                     this.Hide();
                     fveiculocrud.Show();
                 }
@@ -236,7 +236,7 @@ namespace GuizzoLtda
                 {
                     MessageBox.Show("Cadastro Atualizado.");
 
-                    CRUDVeiculo fveiculocrud = new CRUDVeiculo(us,idcliente);
+                    CRUDVeiculo fveiculocrud = new CRUDVeiculo(us, idcliente);
                     this.Hide();
                     fveiculocrud.Show();
                 }

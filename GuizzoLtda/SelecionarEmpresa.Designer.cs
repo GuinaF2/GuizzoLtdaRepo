@@ -40,9 +40,10 @@
             // pbLogoEmp
             // 
             pbLogoEmp.InitialImage = null;
-            pbLogoEmp.Location = new Point(447, 26);
+            pbLogoEmp.Location = new Point(511, 35);
+            pbLogoEmp.Margin = new Padding(3, 4, 3, 4);
             pbLogoEmp.Name = "pbLogoEmp";
-            pbLogoEmp.Size = new Size(353, 425);
+            pbLogoEmp.Size = new Size(403, 567);
             pbLogoEmp.SizeMode = PictureBoxSizeMode.StretchImage;
             pbLogoEmp.TabIndex = 1;
             pbLogoEmp.TabStop = false;
@@ -53,27 +54,31 @@
             dgViewSelEmp.AllowUserToAddRows = false;
             dgViewSelEmp.AllowUserToDeleteRows = false;
             dgViewSelEmp.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgViewSelEmp.Location = new Point(0, 26);
+            dgViewSelEmp.Location = new Point(0, 35);
+            dgViewSelEmp.Margin = new Padding(3, 4, 3, 4);
             dgViewSelEmp.Name = "dgViewSelEmp";
             dgViewSelEmp.ReadOnly = true;
+            dgViewSelEmp.RowHeadersWidth = 51;
             dgViewSelEmp.RowTemplate.Height = 25;
-            dgViewSelEmp.Size = new Size(450, 425);
+            dgViewSelEmp.Size = new Size(514, 567);
             dgViewSelEmp.TabIndex = 2;
             dgViewSelEmp.CellContentClick += dgViewSelEmp_CellContentClick_1;
             dgViewSelEmp.CellDoubleClick += dgViewSelEmp_CellDoubleClick;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(447, 428);
+            textBox1.Location = new Point(511, 571);
+            textBox1.Margin = new Padding(3, 4, 3, 4);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(353, 23);
+            textBox1.Size = new Size(403, 27);
             textBox1.TabIndex = 3;
             // 
             // toolStrip1
             // 
+            toolStrip1.ImageScalingSize = new Size(20, 20);
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(800, 25);
+            toolStrip1.Size = new Size(1062, 25);
             toolStrip1.TabIndex = 4;
             toolStrip1.Text = "toolStrip1";
             toolStrip1.ItemClicked += toolStrip1_ItemClicked;
@@ -81,9 +86,9 @@
             // linkCadEmp
             // 
             linkCadEmp.AutoSize = true;
-            linkCadEmp.Location = new Point(614, 10);
+            linkCadEmp.Location = new Point(702, 13);
             linkCadEmp.Name = "linkCadEmp";
-            linkCadEmp.Size = new Size(186, 15);
+            linkCadEmp.Size = new Size(232, 20);
             linkCadEmp.TabIndex = 8;
             linkCadEmp.TabStop = true;
             linkCadEmp.Text = "Não Possui Cadastro? Clique Aqui";
@@ -91,15 +96,16 @@
             // 
             // SelecionarEmpresa
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1062, 673);
             ControlBox = false;
             Controls.Add(linkCadEmp);
             Controls.Add(toolStrip1);
             Controls.Add(dgViewSelEmp);
             Controls.Add(pbLogoEmp);
             Controls.Add(textBox1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "SelecionarEmpresa";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "SelecionarEmpresa";

@@ -38,24 +38,26 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(37, 56);
+            label1.Location = new Point(42, 75);
             label1.Name = "label1";
-            label1.Size = new Size(122, 15);
+            label1.Size = new Size(156, 20);
             label1.TabIndex = 0;
             label1.Text = "Insira o Id da Empresa";
             // 
             // txtIdEmpresa
             // 
-            txtIdEmpresa.Location = new Point(37, 74);
+            txtIdEmpresa.Location = new Point(42, 99);
+            txtIdEmpresa.Margin = new Padding(3, 4, 3, 4);
             txtIdEmpresa.Name = "txtIdEmpresa";
-            txtIdEmpresa.Size = new Size(100, 23);
+            txtIdEmpresa.Size = new Size(114, 27);
             txtIdEmpresa.TabIndex = 1;
             // 
             // button1
             // 
-            button1.Location = new Point(37, 263);
+            button1.Location = new Point(42, 351);
+            button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(156, 44);
+            button1.Size = new Size(178, 59);
             button1.TabIndex = 2;
             button1.Text = "Buscar";
             button1.UseVisualStyleBackColor = true;
@@ -64,21 +66,24 @@
             // dgPedidoEmp
             // 
             dgPedidoEmp.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgPedidoEmp.Location = new Point(101, 93);
+            dgPedidoEmp.Location = new Point(115, 124);
+            dgPedidoEmp.Margin = new Padding(3, 4, 3, 4);
             dgPedidoEmp.Name = "dgPedidoEmp";
+            dgPedidoEmp.RowHeadersWidth = 51;
             dgPedidoEmp.RowTemplate.Height = 25;
-            dgPedidoEmp.Size = new Size(641, 243);
+            dgPedidoEmp.Size = new Size(733, 324);
             dgPedidoEmp.TabIndex = 3;
             // 
             // PedidoEmpresa
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1022, 673);
             Controls.Add(dgPedidoEmp);
             Controls.Add(button1);
             Controls.Add(txtIdEmpresa);
             Controls.Add(label1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "PedidoEmpresa";
             Text = "PedidoEmpresa";
             ((System.ComponentModel.ISupportInitialize)dgPedidoEmp).EndInit();
