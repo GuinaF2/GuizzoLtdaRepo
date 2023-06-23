@@ -62,7 +62,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Correios.CEP.Net" Version="1.1.6" />
     <PackageReference Include="GMap.NET.Windows" Version="1.9.2" />
+    <PackageReference Include="GoogleMapsClient" Version="1.0.1.1" />
   </ItemGroup>
 
 </Project>

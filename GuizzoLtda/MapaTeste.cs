@@ -156,13 +156,11 @@ namespace GuizzoLtda
 
         private void btnGetInfo_Click(object sender, EventArgs e)
         {
-            var route = GoogleMapProvider.Instance
-                .GetRoute(_points[0], _points[1], false, false, 10);
+            var route = GoogleMapProvider.Instance.GetRoute(_points[0], _points[1], false, false, 10);
             var r = new GMapRoute(route.Points, "My Route");
             var routes = new GMapOverlay("Routes");
             routes.Routes.Add(r);
             MapaBr.Overlays.Add(routes);
-
             labeldistancia.Text = route.Distance + "Km";
         }
 

@@ -34,7 +34,6 @@
             label2 = new Label();
             label3 = new Label();
             txtRazaosoc = new TextBox();
-            txtBairro = new TextBox();
             label5 = new Label();
             label6 = new Label();
             label7 = new Label();
@@ -49,13 +48,16 @@
             toolStrip1 = new ToolStrip();
             toolStripButton1 = new ToolStripButton();
             tabPage2 = new TabPage();
-            txtCep = new TextBox();
-            cbUniFed = new ComboBox();
-            labelunidadefederal = new Label();
+            label4 = new Label();
+            label10 = new Label();
             txtNumero = new TextBox();
-            txtRua = new MaskedTextBox();
             tabPage3 = new TabPage();
             textBox1 = new TextBox();
+            txtCep = new TextBox();
+            txtCidade = new TextBox();
+            txtEstado = new TextBox();
+            txtBairro = new TextBox();
+            txtRua = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pbFotoEmp).BeginInit();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
@@ -126,19 +128,11 @@
             txtRazaosoc.TabIndex = 6;
             txtRazaosoc.KeyPress += txtRazaosoc_KeyPress;
             // 
-            // txtBairro
-            // 
-            txtBairro.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtBairro.Location = new Point(37, 95);
-            txtBairro.Name = "txtBairro";
-            txtBairro.Size = new Size(220, 29);
-            txtBairro.TabIndex = 11;
-            // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(42, 21);
+            label5.Location = new Point(42, 77);
             label5.Name = "label5";
             label5.Size = new Size(37, 21);
             label5.TabIndex = 13;
@@ -148,7 +142,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(37, 71);
+            label6.Location = new Point(37, 127);
             label6.Name = "label6";
             label6.Size = new Size(52, 21);
             label6.TabIndex = 14;
@@ -158,7 +152,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(37, 133);
+            label7.Location = new Point(42, 21);
             label7.Name = "label7";
             label7.Size = new Size(37, 21);
             label7.TabIndex = 15;
@@ -271,12 +265,14 @@
             // 
             // tabPage2
             // 
-            tabPage2.Controls.Add(txtCep);
-            tabPage2.Controls.Add(cbUniFed);
-            tabPage2.Controls.Add(labelunidadefederal);
-            tabPage2.Controls.Add(txtNumero);
             tabPage2.Controls.Add(txtRua);
             tabPage2.Controls.Add(txtBairro);
+            tabPage2.Controls.Add(txtEstado);
+            tabPage2.Controls.Add(txtCidade);
+            tabPage2.Controls.Add(txtCep);
+            tabPage2.Controls.Add(label4);
+            tabPage2.Controls.Add(label10);
+            tabPage2.Controls.Add(txtNumero);
             tabPage2.Controls.Add(label7);
             tabPage2.Controls.Add(label8);
             tabPage2.Controls.Add(label9);
@@ -291,34 +287,25 @@
             tabPage2.Text = "Endereço";
             tabPage2.UseVisualStyleBackColor = true;
             // 
-            // txtCep
+            // label4
             // 
-            txtCep.Location = new Point(37, 157);
-            txtCep.Name = "txtCep";
-            txtCep.Size = new Size(100, 23);
-            txtCep.TabIndex = 26;
-            txtCep.KeyPress += txtCep_KeyPress_2;
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(37, 253);
+            label4.Name = "label4";
+            label4.Size = new Size(58, 21);
+            label4.TabIndex = 29;
+            label4.Text = "Cidade";
             // 
-            // cbUniFed
+            // label10
             // 
-            cbUniFed.DropDownStyle = ComboBoxStyle.DropDownList;
-            cbUniFed.FormattingEnabled = true;
-            cbUniFed.Items.AddRange(new object[] { "Acre (AC)", "Alagoas (AL)\t", "Amapá (AP)\t", "Amazonas (AM)\t", "Bahia (BA)\tSalvador\t", "Ceará (CE)\tFortaleza\t", "Distrito Federal (DF)\t", "Espírito Santo (ES)\t", "Goiás (GO)\t", "Maranhão (MA)\t", "Mato Grosso (MT)\t", "Mato Grosso do Sul (MS)", "Minas Gerais (MG)\t", "Pará (PA)\tBelém\t", "Paraíba (PB)\t", "Paraná (PR)\t", "Pernambuco (PE)\t", "Piauí (PI)\tTeresina\t", "Rio de Janeiro (RJ)\t", "Rio Grande do Norte (RN)", "Rio Grande do Sul (RS)", "Rondônia (RO)\t", "Roraima (RR)\t", "Santa Catarina (SC)\t", "São Paulo (SP)\t", "Sergipe (SE)\t", "Tocantins (TO)" });
-            cbUniFed.Location = new Point(42, 207);
-            cbUniFed.Name = "cbUniFed";
-            cbUniFed.Size = new Size(197, 23);
-            cbUniFed.TabIndex = 25;
-            cbUniFed.TextChanged += cbUniFed_TextChanged;
-            // 
-            // labelunidadefederal
-            // 
-            labelunidadefederal.AutoSize = true;
-            labelunidadefederal.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            labelunidadefederal.Location = new Point(37, 183);
-            labelunidadefederal.Name = "labelunidadefederal";
-            labelunidadefederal.Size = new Size(123, 21);
-            labelunidadefederal.TabIndex = 24;
-            labelunidadefederal.Text = "Unidade Federal";
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label10.Location = new Point(42, 203);
+            label10.Name = "label10";
+            label10.Size = new Size(56, 21);
+            label10.TabIndex = 28;
+            label10.Text = "Estado";
             // 
             // txtNumero
             // 
@@ -328,17 +315,6 @@
             txtNumero.TabIndex = 23;
             txtNumero.TextChanged += txtNumero_TextChanged;
             txtNumero.KeyPress += txtNumero_KeyPress_1;
-            // 
-            // txtRua
-            // 
-            txtRua.AsciiOnly = true;
-            txtRua.Location = new Point(37, 45);
-            txtRua.Name = "txtRua";
-            txtRua.ShortcutsEnabled = false;
-            txtRua.Size = new Size(225, 23);
-            txtRua.TabIndex = 22;
-            txtRua.MaskInputRejected += txtRua_MaskInputRejected;
-            txtRua.KeyPress += txtRua_KeyPress;
             // 
             // tabPage3
             // 
@@ -362,6 +338,43 @@
             textBox1.Size = new Size(230, 23);
             textBox1.TabIndex = 2;
             textBox1.TextChanged += textBox1_TextChanged;
+            // 
+            // txtCep
+            // 
+            txtCep.Location = new Point(42, 51);
+            txtCep.Name = "txtCep";
+            txtCep.Size = new Size(100, 23);
+            txtCep.TabIndex = 30;
+            txtCep.TextChanged += txtCep_TextChanged_1;
+            txtCep.Leave += txtCep_Leave_1;
+            // 
+            // txtCidade
+            // 
+            txtCidade.Location = new Point(37, 289);
+            txtCidade.Name = "txtCidade";
+            txtCidade.Size = new Size(100, 23);
+            txtCidade.TabIndex = 31;
+            // 
+            // txtEstado
+            // 
+            txtEstado.Location = new Point(42, 227);
+            txtEstado.Name = "txtEstado";
+            txtEstado.Size = new Size(100, 23);
+            txtEstado.TabIndex = 32;
+            // 
+            // txtBairro
+            // 
+            txtBairro.Location = new Point(42, 160);
+            txtBairro.Name = "txtBairro";
+            txtBairro.Size = new Size(100, 23);
+            txtBairro.TabIndex = 33;
+            // 
+            // txtRua
+            // 
+            txtRua.Location = new Point(42, 101);
+            txtRua.Name = "txtRua";
+            txtRua.Size = new Size(100, 23);
+            txtRua.TabIndex = 34;
             // 
             // CadEmpresa
             // 
@@ -395,7 +408,6 @@
         private Label label2;
         private Label label3;
         private TextBox txtRazaosoc;
-        private TextBox txtBairro;
         private Label label5;
         private Label label6;
         private Label label7;
@@ -408,14 +420,17 @@
         private TabPage tabPage2;
         private TabPage tabPage3;
         private TextBox textBox1;
-        private MaskedTextBox txtRua;
         private TextBox txtNumero;
         private ToolStrip toolStrip1;
         private ToolStripButton toolStripButton1;
-        private ComboBox cbUniFed;
-        private Label labelunidadefederal;
-        private TextBox txtCep;
         private TextBox txtIncEstad;
         private TextBox txtCnpj;
+        private Label label4;
+        private Label label10;
+        private TextBox txtRua;
+        private TextBox txtBairro;
+        private TextBox txtEstado;
+        private TextBox txtCidade;
+        private TextBox txtCep;
     }
 }
