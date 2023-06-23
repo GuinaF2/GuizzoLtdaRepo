@@ -45,7 +45,7 @@
             toolStripSeparator3 = new ToolStripSeparator();
             toolStripButton1 = new ToolStripButton();
             toolStripSeparator4 = new ToolStripSeparator();
-            toolStripSeparator5 = new ToolStripSeparator();
+            toolStripButton2 = new ToolStripButton();
             pbFotoAdminMenu = new PictureBox();
             toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbFotoAdminMenu).BeginInit();
@@ -54,7 +54,7 @@
             // toolStrip1
             // 
             toolStrip1.GripStyle = ToolStripGripStyle.Hidden;
-            toolStrip1.Items.AddRange(new ToolStripItem[] { btnReturn, toolStripSeparator1, toolStripTextBox2, toolStripSeparator2, toolStripSplitButton6, toolStripSplitButton1, toolStripSeparator3, toolStripButton1, toolStripSeparator4, toolStripSeparator5 });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { btnReturn, toolStripSeparator1, toolStripTextBox2, toolStripSeparator2, toolStripSplitButton1, toolStripButton1, toolStripSeparator4, toolStripSplitButton6, toolStripSeparator3, toolStripButton2 });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(800, 25);
@@ -159,19 +159,25 @@
             toolStripButton1.Image = (Image)resources.GetObject("toolStripButton1.Image");
             toolStripButton1.ImageTransparentColor = Color.Magenta;
             toolStripButton1.Name = "toolStripButton1";
-            toolStripButton1.Size = new Size(83, 22);
-            toolStripButton1.Text = "Rentabilidade";
+            toolStripButton1.Size = new Size(73, 22);
+            toolStripButton1.Text = "Solicitações";
             toolStripButton1.TextImageRelation = TextImageRelation.TextAboveImage;
+            toolStripButton1.Click += toolStripButton1_Click;
             // 
             // toolStripSeparator4
             // 
             toolStripSeparator4.Name = "toolStripSeparator4";
             toolStripSeparator4.Size = new Size(6, 25);
             // 
-            // toolStripSeparator5
+            // toolStripButton2
             // 
-            toolStripSeparator5.Name = "toolStripSeparator5";
-            toolStripSeparator5.Size = new Size(6, 25);
+            toolStripButton2.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            toolStripButton2.Image = (Image)resources.GetObject("toolStripButton2.Image");
+            toolStripButton2.ImageTransparentColor = Color.Magenta;
+            toolStripButton2.Name = "toolStripButton2";
+            toolStripButton2.Size = new Size(83, 22);
+            toolStripButton2.Text = "Rentabilidade";
+            toolStripButton2.TextImageRelation = TextImageRelation.TextAboveImage;
             // 
             // pbFotoAdminMenu
             // 
@@ -221,6 +227,6 @@
         private ToolStripButton toolStripButton1;
         private ToolStripSeparator toolStripSeparator4;
         private ToolStripButton btnReturn;
-        private ToolStripSeparator toolStripSeparator5;
+        private ToolStripButton toolStripButton2;
     }
 }

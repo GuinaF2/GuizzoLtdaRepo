@@ -110,5 +110,12 @@ namespace GuizzoLtda
             fmapago.Show();
             Hide();
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            AdminSolicitacao solicitacaoadm = new AdminSolicitacao();
+            this.Hide();
+            solicitacaoadm.Show();
+        }
     }
 }

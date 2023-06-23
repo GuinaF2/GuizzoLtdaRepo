@@ -32,16 +32,16 @@
             toolStrip1 = new ToolStrip();
             toolStripButton2 = new ToolStripButton();
             toolStripSeparator1 = new ToolStripSeparator();
-            btnConfirmarPedi = new ToolStripButton();
-            toolStripSeparator3 = new ToolStripSeparator();
             btnVerifyEmp = new ToolStripButton();
+            toolStripSeparator3 = new ToolStripSeparator();
+            btnConfirmarPedi = new ToolStripButton();
             toolStripSeparator5 = new ToolStripSeparator();
             toolStripButton3 = new ToolStripButton();
             toolStripSeparator2 = new ToolStripSeparator();
             toolStripButton4 = new ToolStripButton();
-            pbFotoMenuFunc = new PictureBox();
             toolStripSeparator4 = new ToolStripSeparator();
             toolStripButton5 = new ToolStripButton();
+            pbFotoMenuFunc = new PictureBox();
             toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbFotoMenuFunc).BeginInit();
             SuspendLayout();
@@ -70,22 +70,6 @@
             toolStripSeparator1.Name = "toolStripSeparator1";
             toolStripSeparator1.Size = new Size(6, 25);
             // 
-            // btnConfirmarPedi
-            // 
-            btnConfirmarPedi.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            btnConfirmarPedi.Image = (Image)resources.GetObject("btnConfirmarPedi.Image");
-            btnConfirmarPedi.ImageTransparentColor = Color.Magenta;
-            btnConfirmarPedi.Name = "btnConfirmarPedi";
-            btnConfirmarPedi.Size = new Size(110, 22);
-            btnConfirmarPedi.Text = "Confirmar Pedidos";
-            btnConfirmarPedi.TextImageRelation = TextImageRelation.TextAboveImage;
-            btnConfirmarPedi.Click += toolStripButton16_Click;
-            // 
-            // toolStripSeparator3
-            // 
-            toolStripSeparator3.Name = "toolStripSeparator3";
-            toolStripSeparator3.Size = new Size(6, 25);
-            // 
             // btnVerifyEmp
             // 
             btnVerifyEmp.DisplayStyle = ToolStripItemDisplayStyle.Text;
@@ -96,6 +80,22 @@
             btnVerifyEmp.Text = "Encontrar Cliente";
             btnVerifyEmp.TextImageRelation = TextImageRelation.TextAboveImage;
             btnVerifyEmp.Click += toolStripButton14_Click;
+            // 
+            // toolStripSeparator3
+            // 
+            toolStripSeparator3.Name = "toolStripSeparator3";
+            toolStripSeparator3.Size = new Size(6, 25);
+            // 
+            // btnConfirmarPedi
+            // 
+            btnConfirmarPedi.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            btnConfirmarPedi.Image = (Image)resources.GetObject("btnConfirmarPedi.Image");
+            btnConfirmarPedi.ImageTransparentColor = Color.Magenta;
+            btnConfirmarPedi.Name = "btnConfirmarPedi";
+            btnConfirmarPedi.Size = new Size(110, 22);
+            btnConfirmarPedi.Text = "Confirmar Pedidos";
+            btnConfirmarPedi.TextImageRelation = TextImageRelation.TextAboveImage;
+            btnConfirmarPedi.Click += toolStripButton16_Click;
             // 
             // toolStripSeparator5
             // 
@@ -129,16 +129,6 @@
             toolStripButton4.TextImageRelation = TextImageRelation.TextAboveImage;
             toolStripButton4.Click += toolStripButton4_Click;
             // 
-            // pbFotoMenuFunc
-            // 
-            pbFotoMenuFunc.BorderStyle = BorderStyle.Fixed3D;
-            pbFotoMenuFunc.Location = new Point(428, 28);
-            pbFotoMenuFunc.Name = "pbFotoMenuFunc";
-            pbFotoMenuFunc.Size = new Size(372, 422);
-            pbFotoMenuFunc.SizeMode = PictureBoxSizeMode.StretchImage;
-            pbFotoMenuFunc.TabIndex = 1;
-            pbFotoMenuFunc.TabStop = false;
-            // 
             // toolStripSeparator4
             // 
             toolStripSeparator4.Name = "toolStripSeparator4";
@@ -150,9 +140,20 @@
             toolStripButton5.Image = (Image)resources.GetObject("toolStripButton5.Image");
             toolStripButton5.ImageTransparentColor = Color.Magenta;
             toolStripButton5.Name = "toolStripButton5";
-            toolStripButton5.Size = new Size(123, 22);
-            toolStripButton5.Text = "Solicitar Manutenção";
+            toolStripButton5.Size = new Size(94, 22);
+            toolStripButton5.Text = "Solicitar Serviço";
             toolStripButton5.TextImageRelation = TextImageRelation.TextAboveImage;
+            toolStripButton5.Click += toolStripButton5_Click;
+            // 
+            // pbFotoMenuFunc
+            // 
+            pbFotoMenuFunc.BorderStyle = BorderStyle.Fixed3D;
+            pbFotoMenuFunc.Location = new Point(428, 28);
+            pbFotoMenuFunc.Name = "pbFotoMenuFunc";
+            pbFotoMenuFunc.Size = new Size(372, 422);
+            pbFotoMenuFunc.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbFotoMenuFunc.TabIndex = 1;
+            pbFotoMenuFunc.TabStop = false;
             // 
             // FuncionarioMenu
             // 

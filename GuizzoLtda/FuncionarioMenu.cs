@@ -69,5 +69,12 @@ namespace GuizzoLtda
             this.Hide();
             ftestemapa.Show();
         }
+
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+            FuncionarioSolicit ffuncsoli = new FuncionarioSolicit();
+            this.Hide();
+            ffuncsoli.Show();
+        }
     }
 }
