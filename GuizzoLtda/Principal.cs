@@ -40,7 +40,7 @@ namespace GuizzoLtda
 
         private void btnAdmin_Click_1(object sender, EventArgs e)
         {
-            AdminLogin fadminlog = new AdminLogin(us,idcliente);
+            AdminLogin fadminlog = new AdminLogin(us, idcliente);
             this.Hide();
             fadminlog.Show();
         }
@@ -61,6 +61,11 @@ namespace GuizzoLtda
         }
 
         private void Principal_Activated(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
