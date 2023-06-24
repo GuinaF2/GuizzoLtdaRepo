@@ -76,5 +76,40 @@ namespace GuizzoLtda
             this.Hide();
             ffuncsoli.Show();
         }
+
+        private void btnVerifyEmp_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnConfirmarPedi_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButton3_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButton4_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButton5_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FuncionarioMenu_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButton2_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

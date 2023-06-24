@@ -66,6 +66,7 @@
             toolStripButton2.Name = "toolStripButton2";
             toolStripButton2.Size = new Size(24, 24);
             toolStripButton2.Text = "toolStripButton2";
+            toolStripButton2.Click += toolStripButton2_Click_1;
             // 
             // btnVerifyEmp
             // 
@@ -77,6 +78,7 @@
             btnVerifyEmp.Size = new Size(118, 24);
             btnVerifyEmp.Text = "Encontrar Cliente";
             btnVerifyEmp.TextImageRelation = TextImageRelation.TextAboveImage;
+            btnVerifyEmp.Click += btnVerifyEmp_Click;
             // 
             // toolStripSeparator3
             // 
@@ -93,6 +95,7 @@
             btnConfirmarPedi.Size = new Size(127, 24);
             btnConfirmarPedi.Text = "Confirmar Pedidos";
             btnConfirmarPedi.TextImageRelation = TextImageRelation.TextAboveImage;
+            btnConfirmarPedi.Click += btnConfirmarPedi_Click;
             // 
             // toolStripSeparator5
             // 
@@ -109,6 +112,7 @@
             toolStripButton3.Size = new Size(116, 24);
             toolStripButton3.Text = "Verificar Pedidos";
             toolStripButton3.TextImageRelation = TextImageRelation.TextAboveImage;
+            toolStripButton3.Click += toolStripButton3_Click_1;
             // 
             // toolStripSeparator2
             // 
@@ -125,6 +129,7 @@
             toolStripButton4.Size = new Size(87, 24);
             toolStripButton4.Text = "Traçar Rotas";
             toolStripButton4.TextImageRelation = TextImageRelation.TextAboveImage;
+            toolStripButton4.Click += toolStripButton4_Click_1;
             // 
             // toolStripSeparator4
             // 
@@ -141,6 +146,7 @@
             toolStripButton5.Size = new Size(142, 24);
             toolStripButton5.Text = "Solicitar Manutenção";
             toolStripButton5.TextImageRelation = TextImageRelation.TextAboveImage;
+            toolStripButton5.Click += toolStripButton5_Click_1;
             // 
             // pbFotoMenuFunc
             // 
@@ -167,6 +173,7 @@
             Name = "FuncionarioMenu";
             StartPosition = FormStartPosition.CenterScreen;
             Text = " Funcionario menu";
+            Load += FuncionarioMenu_Load_1;
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pbFotoMenuFunc).EndInit();

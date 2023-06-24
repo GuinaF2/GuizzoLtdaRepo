@@ -37,19 +37,7 @@ namespace GuizzoLtda
 
 
 
-        private void pbFotoEmp_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-
-
-        private void CadEmpresa_Load(object sender, EventArgs e)
-        {
-
-        }
+        
 
 
 
@@ -126,7 +114,7 @@ namespace GuizzoLtda
 
         }
 
-        private void txtNumero_KeyPress_1(object sender, KeyPressEventArgs e)
+        private void txtNumero_KeyPress(object sender, KeyPressEventArgs e)
         {
             txtNumero.MaxLength = 4;
             if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
@@ -175,7 +163,7 @@ namespace GuizzoLtda
 
 
 
-        private void txtComple_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtComple_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
         }
@@ -185,7 +173,7 @@ namespace GuizzoLtda
 
         }
 
-        private void txtCnpj_KeyPress_1(object sender, KeyPressEventArgs e)
+        private void txtCnpj_KeyPress(object sender, KeyPressEventArgs e)
         {
             txtCnpj.MaxLength = 14;
             if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
@@ -194,7 +182,7 @@ namespace GuizzoLtda
             }
         }
 
-        private void txtIncEstad_KeyPress_1(object sender, KeyPressEventArgs e)
+        private void txtIncEstad_KeyPress(object sender, KeyPressEventArgs e)
         {
             txtIncEstad.MaxLength = 14;
             if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
@@ -246,5 +234,39 @@ namespace GuizzoLtda
                 pbFotoEmp.ImageLocation = abririmg.FileName;
             }
         }
+
+        
+
+        private void txtRazaosoc_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void txtEstado_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void txtCidade_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void txtCep_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void txtRua_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void txtBairro_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+       
     }
 }

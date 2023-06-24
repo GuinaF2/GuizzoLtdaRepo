@@ -42,55 +42,60 @@
             // labelCnpj
             // 
             labelCnpj.AutoSize = true;
-            labelCnpj.Location = new Point(48, 64);
+            labelCnpj.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            labelCnpj.Location = new Point(72, 64);
             labelCnpj.Name = "labelCnpj";
-            labelCnpj.Size = new Size(32, 15);
+            labelCnpj.Size = new Size(42, 21);
             labelCnpj.TabIndex = 1;
             labelCnpj.Text = "Cnpj";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(72, 9);
+            label4.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(61, 9);
             label4.Name = "label4";
-            label4.Size = new Size(181, 32);
+            label4.Size = new Size(202, 37);
             label4.TabIndex = 3;
             label4.Text = "Verificar Cliente";
             // 
             // txtCnpj
             // 
-            txtCnpj.Location = new Point(48, 91);
+            txtCnpj.Location = new Point(72, 91);
             txtCnpj.Name = "txtCnpj";
-            txtCnpj.Size = new Size(100, 23);
+            txtCnpj.Size = new Size(176, 23);
             txtCnpj.TabIndex = 5;
+            txtCnpj.KeyPress += txtCnpj_KeyPress;
             // 
             // returnBtn
             // 
             returnBtn.BackgroundImage = Properties.Resources._688879_arrows_512x512;
             returnBtn.BackgroundImageLayout = ImageLayout.Stretch;
-            returnBtn.Location = new Point(0, 1);
+            returnBtn.Location = new Point(0, -1);
             returnBtn.Name = "returnBtn";
             returnBtn.Size = new Size(39, 38);
             returnBtn.TabIndex = 7;
             returnBtn.TextImageRelation = TextImageRelation.TextBeforeImage;
             returnBtn.UseVisualStyleBackColor = true;
+            returnBtn.Click += returnBtn_Click;
             // 
             // btnMenu
             // 
             btnMenu.BackgroundImage = Properties.Resources._688879_arrows_512x512;
             btnMenu.BackgroundImageLayout = ImageLayout.Stretch;
-            btnMenu.Location = new Point(0, 1);
+            btnMenu.Location = new Point(0, -1);
             btnMenu.Name = "btnMenu";
             btnMenu.Size = new Size(39, 38);
             btnMenu.TabIndex = 8;
             btnMenu.TextImageRelation = TextImageRelation.TextBeforeImage;
             btnMenu.UseVisualStyleBackColor = true;
+            btnMenu.Click += btnMenu_Click_1;
             // 
             // dgVerEmp
             // 
             dgVerEmp.AllowUserToAddRows = false;
             dgVerEmp.AllowUserToDeleteRows = false;
+            dgVerEmp.BackgroundColor = SystemColors.ActiveCaptionText;
             dgVerEmp.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgVerEmp.Location = new Point(72, 120);
             dgVerEmp.Name = "dgVerEmp";
@@ -103,17 +108,21 @@
             // 
             // btnConfirmar
             // 
-            btnConfirmar.Location = new Point(48, 393);
+            btnConfirmar.FlatStyle = FlatStyle.Flat;
+            btnConfirmar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnConfirmar.Location = new Point(61, 408);
             btnConfirmar.Name = "btnConfirmar";
-            btnConfirmar.Size = new Size(179, 47);
+            btnConfirmar.Size = new Size(215, 52);
             btnConfirmar.TabIndex = 10;
             btnConfirmar.Text = "Confirmar";
             btnConfirmar.UseVisualStyleBackColor = true;
+            btnConfirmar.Click += btnConfirmar_Click;
             // 
             // VerificarEmp
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Maroon;
             ClientSize = new Size(929, 505);
             Controls.Add(btnConfirmar);
             Controls.Add(btnMenu);
@@ -125,6 +134,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "VerificarEmp";
             Text = "VerificarEmp";
+            Load += VerificarEmp_Load_1;
             ((System.ComponentModel.ISupportInitialize)dgVerEmp).EndInit();
             ResumeLayout(false);
             PerformLayout();

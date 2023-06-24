@@ -227,7 +227,7 @@
             SaveCreate.BackColor = Color.Black;
             SaveCreate.Font = new Font("Leelawadee UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
             SaveCreate.ForeColor = Color.Goldenrod;
-            SaveCreate.Location = new Point(100, 387);
+            SaveCreate.Location = new Point(100, 423);
             SaveCreate.Name = "SaveCreate";
             SaveCreate.Size = new Size(300, 50);
             SaveCreate.TabIndex = 16;
@@ -241,7 +241,7 @@
             SaveDelete.BackColor = Color.Black;
             SaveDelete.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             SaveDelete.ForeColor = Color.Goldenrod;
-            SaveDelete.Location = new Point(100, 337);
+            SaveDelete.Location = new Point(100, 424);
             SaveDelete.Name = "SaveDelete";
             SaveDelete.Size = new Size(300, 50);
             SaveDelete.TabIndex = 15;

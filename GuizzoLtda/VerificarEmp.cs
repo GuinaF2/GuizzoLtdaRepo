@@ -52,7 +52,11 @@ namespace GuizzoLtda
             fmenureturn.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+
+
+
+        private void btnConfirmar_Click(object sender, EventArgs e)
         {
             if (txtCnpj.Text != "")
             {
@@ -87,10 +91,14 @@ namespace GuizzoLtda
                     MessageBox.Show(string.Format(ex.Message));
                 }
             }
+        }
+
+        private void VerificarEmp_Load_1(object sender, EventArgs e)
+        {
 
         }
 
-        private void returnBtn_Click(object sender, EventArgs e)
+        private void btnMenu_Click_1(object sender, EventArgs e)
         {
             txtCnpj.Visible = true;
 
@@ -99,6 +107,18 @@ namespace GuizzoLtda
             btnMenu.Visible = true;
             dgVerEmp.Visible = false;
             returnBtn.Visible = false;
+        }
+
+        private void txtCnpj_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void returnBtn_Click(object sender, EventArgs e)
+        {
+            FuncionarioMenu fmenureturn = new FuncionarioMenu(us, idcliente);
+            this.Hide();
+            fmenureturn.Show();
         }
     }
 }

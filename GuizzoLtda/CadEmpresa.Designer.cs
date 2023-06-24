@@ -86,9 +86,9 @@
             pbFotoEmp.BackColor = Color.Black;
             pbFotoEmp.BackgroundImageLayout = ImageLayout.Stretch;
             pbFotoEmp.BorderStyle = BorderStyle.FixedSingle;
-            pbFotoEmp.Location = new Point(347, 35);
+            pbFotoEmp.Location = new Point(335, 6);
             pbFotoEmp.Name = "pbFotoEmp";
-            pbFotoEmp.Size = new Size(230, 247);
+            pbFotoEmp.Size = new Size(251, 276);
             pbFotoEmp.SizeMode = PictureBoxSizeMode.StretchImage;
             pbFotoEmp.TabIndex = 1;
             pbFotoEmp.TabStop = false;
@@ -137,34 +137,37 @@
             // 
             // txtIncEstad
             // 
-            txtIncEstad.Location = new Point(25, 239);
+            txtIncEstad.Location = new Point(347, 247);
             txtIncEstad.Multiline = true;
             txtIncEstad.Name = "txtIncEstad";
             txtIncEstad.Size = new Size(219, 27);
             txtIncEstad.TabIndex = 13;
+            txtIncEstad.KeyPress += txtIncEstad_KeyPress;
             // 
             // txtCnpj
             // 
-            txtCnpj.Location = new Point(25, 136);
+            txtCnpj.Location = new Point(347, 144);
             txtCnpj.Multiline = true;
             txtCnpj.Name = "txtCnpj";
             txtCnpj.Size = new Size(219, 26);
             txtCnpj.TabIndex = 12;
+            txtCnpj.KeyPress += txtCnpj_KeyPress;
             // 
             // txtRazaosoc
             // 
             txtRazaosoc.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtRazaosoc.Location = new Point(25, 56);
+            txtRazaosoc.Location = new Point(347, 64);
             txtRazaosoc.Name = "txtRazaosoc";
             txtRazaosoc.Size = new Size(219, 29);
             txtRazaosoc.TabIndex = 6;
+            txtRazaosoc.KeyPress += txtRazaosoc_KeyPress_1;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Leelawadee UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(25, 25);
+            label1.Location = new Point(347, 33);
             label1.Name = "label1";
             label1.Size = new Size(97, 21);
             label1.TabIndex = 2;
@@ -175,7 +178,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Leelawadee UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(25, 98);
+            label2.Location = new Point(347, 106);
             label2.Name = "label2";
             label2.Size = new Size(42, 21);
             label2.TabIndex = 3;
@@ -186,7 +189,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Leelawadee UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(25, 188);
+            label3.Location = new Point(347, 196);
             label3.Name = "label3";
             label3.Size = new Size(133, 21);
             label3.TabIndex = 4;
@@ -224,6 +227,7 @@
             txtEstado.Name = "txtEstado";
             txtEstado.Size = new Size(219, 27);
             txtEstado.TabIndex = 31;
+            txtEstado.KeyPress += txtEstado_KeyPress;
             // 
             // txtCidade
             // 
@@ -232,6 +236,7 @@
             txtCidade.Name = "txtCidade";
             txtCidade.Size = new Size(219, 27);
             txtCidade.TabIndex = 28;
+            txtCidade.KeyPress += txtCidade_KeyPress;
             // 
             // label4
             // 
@@ -260,6 +265,7 @@
             txtRua.Name = "txtRua";
             txtRua.Size = new Size(219, 24);
             txtRua.TabIndex = 27;
+            txtRua.KeyPress += txtRua_KeyPress_1;
             // 
             // txtCep
             // 
@@ -268,6 +274,7 @@
             txtCep.Name = "txtCep";
             txtCep.Size = new Size(219, 27);
             txtCep.TabIndex = 26;
+            txtCep.KeyPress += txtCep_KeyPress;
             // 
             // txtNumero
             // 
@@ -276,6 +283,7 @@
             txtNumero.Name = "txtNumero";
             txtNumero.Size = new Size(120, 27);
             txtNumero.TabIndex = 23;
+            txtNumero.KeyPress += txtNumero_KeyPress;
             // 
             // txtBairro
             // 
@@ -284,6 +292,7 @@
             txtBairro.Name = "txtBairro";
             txtBairro.Size = new Size(219, 27);
             txtBairro.TabIndex = 11;
+            txtBairro.KeyPress += txtBairro_KeyPress;
             // 
             // label7
             // 
@@ -342,6 +351,7 @@
             txtComple.Name = "txtComple";
             txtComple.Size = new Size(120, 27);
             txtComple.TabIndex = 17;
+            txtComple.KeyPress += txtComple_KeyPress_1;
             // 
             // tabPage3
             // 

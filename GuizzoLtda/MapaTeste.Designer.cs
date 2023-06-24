@@ -29,254 +29,255 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MapaTeste));
-            this.MapaBr = new GMap.NET.WindowsForms.GMapControl();
-            this.lblLat = new System.Windows.Forms.Label();
-            this.txtLat = new System.Windows.Forms.TextBox();
-            this.txtLong = new System.Windows.Forms.TextBox();
-            this.lblLon = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.labeldistancia = new System.Windows.Forms.Label();
-            this.splitter1 = new System.Windows.Forms.Splitter();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.btnReturn = new System.Windows.Forms.ToolStripButton();
-            this.btnMarcações = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnClear = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnRota = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.txtEndereco = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.toolStrip1.SuspendLayout();
-            this.SuspendLayout();
+            MapaBr = new GMap.NET.WindowsForms.GMapControl();
+            lblLat = new Label();
+            txtLat = new TextBox();
+            txtLong = new TextBox();
+            lblLon = new Label();
+            btnConfirmar = new Button();
+            labeldistancia = new Label();
+            splitter1 = new Splitter();
+            toolStrip1 = new ToolStrip();
+            btnReturn = new ToolStripButton();
+            btnMarcações = new ToolStripButton();
+            toolStripSeparator1 = new ToolStripSeparator();
+            btnClear = new ToolStripButton();
+            toolStripSeparator2 = new ToolStripSeparator();
+            btnRota = new ToolStripButton();
+            toolStripSeparator = new ToolStripSeparator();
+            btnMarcaPonto = new ToolStripButton();
+            txtEndereco = new TextBox();
+            label3 = new Label();
+            label1 = new Label();
+            toolStrip1.SuspendLayout();
+            SuspendLayout();
             // 
             // MapaBr
             // 
-            this.MapaBr.Bearing = 0F;
-            this.MapaBr.CanDragMap = true;
-            this.MapaBr.EmptyTileColor = System.Drawing.Color.Navy;
-            this.MapaBr.GrayScaleMode = false;
-            this.MapaBr.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
-            this.MapaBr.LevelsKeepInMemmory = 5;
-            this.MapaBr.Location = new System.Drawing.Point(0, 0);
-            this.MapaBr.MarkersEnabled = true;
-            this.MapaBr.MaxZoom = 50;
-            this.MapaBr.MinZoom = 5;
-            this.MapaBr.MouseWheelZoomEnabled = true;
-            this.MapaBr.MouseWheelZoomType = GMap.NET.MouseWheelZoomType.MousePositionAndCenter;
-            this.MapaBr.Name = "MapaBr";
-            this.MapaBr.NegativeMode = false;
-            this.MapaBr.PolygonsEnabled = true;
-            this.MapaBr.RetryLoadTile = 0;
-            this.MapaBr.RoutesEnabled = true;
-            this.MapaBr.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
-            this.MapaBr.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
-            this.MapaBr.ShowTileGridLines = false;
-            this.MapaBr.Size = new System.Drawing.Size(400, 450);
-            this.MapaBr.TabIndex = 1;
-            this.MapaBr.Zoom = 0D;
+            MapaBr.Bearing = 0F;
+            MapaBr.CanDragMap = true;
+            MapaBr.EmptyTileColor = Color.Navy;
+            MapaBr.GrayScaleMode = false;
+            MapaBr.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
+            MapaBr.LevelsKeepInMemmory = 5;
+            MapaBr.Location = new Point(0, 0);
+            MapaBr.MarkersEnabled = true;
+            MapaBr.MaxZoom = 50;
+            MapaBr.MinZoom = 5;
+            MapaBr.MouseWheelZoomEnabled = true;
+            MapaBr.MouseWheelZoomType = GMap.NET.MouseWheelZoomType.MousePositionAndCenter;
+            MapaBr.Name = "MapaBr";
+            MapaBr.NegativeMode = false;
+            MapaBr.PolygonsEnabled = true;
+            MapaBr.RetryLoadTile = 0;
+            MapaBr.RoutesEnabled = true;
+            MapaBr.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
+            MapaBr.SelectedAreaFillColor = Color.FromArgb(33, 65, 105, 225);
+            MapaBr.ShowTileGridLines = false;
+            MapaBr.Size = new Size(400, 450);
+            MapaBr.TabIndex = 1;
+            MapaBr.Zoom = 0D;
+            MapaBr.Load += MapaBr_Load;
             // 
             // lblLat
             // 
-            this.lblLat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblLat.AutoSize = true;
-            this.lblLat.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblLat.Location = new System.Drawing.Point(600, 259);
-            this.lblLat.Name = "lblLat";
-            this.lblLat.Size = new System.Drawing.Size(88, 30);
-            this.lblLat.TabIndex = 2;
-            this.lblLat.Text = "Latitude";
-            this.lblLat.Visible = false;
+            lblLat.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblLat.AutoSize = true;
+            lblLat.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            lblLat.Location = new Point(600, 259);
+            lblLat.Name = "lblLat";
+            lblLat.Size = new Size(88, 30);
+            lblLat.TabIndex = 2;
+            lblLat.Text = "Latitude";
+            lblLat.Visible = false;
             // 
             // txtLat
             // 
-            this.txtLat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtLat.Location = new System.Drawing.Point(600, 295);
-            this.txtLat.Name = "txtLat";
-            this.txtLat.Size = new System.Drawing.Size(175, 23);
-            this.txtLat.TabIndex = 3;
-            this.txtLat.Visible = false;
+            txtLat.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            txtLat.Location = new Point(600, 295);
+            txtLat.Name = "txtLat";
+            txtLat.Size = new Size(175, 23);
+            txtLat.TabIndex = 3;
+            txtLat.Visible = false;
             // 
             // txtLong
             // 
-            this.txtLong.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtLong.Location = new System.Drawing.Point(600, 242);
-            this.txtLong.Name = "txtLong";
-            this.txtLong.Size = new System.Drawing.Size(173, 23);
-            this.txtLong.TabIndex = 4;
-            this.txtLong.Visible = false;
+            txtLong.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            txtLong.Location = new Point(600, 242);
+            txtLong.Name = "txtLong";
+            txtLong.Size = new Size(173, 23);
+            txtLong.TabIndex = 4;
+            txtLong.Visible = false;
             // 
             // lblLon
             // 
-            this.lblLon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblLon.AutoSize = true;
-            this.lblLon.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblLon.Location = new System.Drawing.Point(600, 209);
-            this.lblLon.Name = "lblLon";
-            this.lblLon.Size = new System.Drawing.Size(106, 30);
-            this.lblLon.TabIndex = 5;
-            this.lblLon.Text = "Longitude";
-            this.lblLon.Visible = false;
+            lblLon.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblLon.AutoSize = true;
+            lblLon.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            lblLon.Location = new Point(600, 209);
+            lblLon.Name = "lblLon";
+            lblLon.Size = new Size(106, 30);
+            lblLon.TabIndex = 5;
+            lblLon.Text = "Longitude";
+            lblLon.Visible = false;
             // 
-            // button1
+            // btnConfirmar
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(478, 356);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(253, 65);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Confirmar";
-            this.button1.UseVisualStyleBackColor = true;
+            btnConfirmar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnConfirmar.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            btnConfirmar.Location = new Point(478, 356);
+            btnConfirmar.Name = "btnConfirmar";
+            btnConfirmar.Size = new Size(253, 65);
+            btnConfirmar.TabIndex = 6;
+            btnConfirmar.Text = "Confirmar";
+            btnConfirmar.UseVisualStyleBackColor = true;
+            btnConfirmar.Click += button1_Click_1;
             // 
             // labeldistancia
             // 
-            this.labeldistancia.AutoSize = true;
-            this.labeldistancia.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labeldistancia.Location = new System.Drawing.Point(506, 202);
-            this.labeldistancia.Name = "labeldistancia";
-            this.labeldistancia.Size = new System.Drawing.Size(73, 21);
-            this.labeldistancia.TabIndex = 10;
-            this.labeldistancia.Text = "Distancia";
+            labeldistancia.AutoSize = true;
+            labeldistancia.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            labeldistancia.Location = new Point(506, 202);
+            labeldistancia.Name = "labeldistancia";
+            labeldistancia.Size = new Size(73, 21);
+            labeldistancia.TabIndex = 10;
+            labeldistancia.Text = "Distancia";
             // 
             // splitter1
             // 
-            this.splitter1.Location = new System.Drawing.Point(0, 0);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(400, 450);
-            this.splitter1.TabIndex = 12;
-            this.splitter1.TabStop = false;
+            splitter1.Location = new Point(0, 0);
+            splitter1.Name = "splitter1";
+            splitter1.Size = new Size(400, 450);
+            splitter1.TabIndex = 12;
+            splitter1.TabStop = false;
             // 
             // toolStrip1
             // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnReturn,
-            this.btnMarcações,
-            this.toolStripSeparator1,
-            this.btnClear,
-            this.toolStripSeparator2,
-            this.btnRota,
-            this.toolStripSeparator,
-            this.toolStripButton1});
-            this.toolStrip1.Location = new System.Drawing.Point(400, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(400, 25);
-            this.toolStrip1.TabIndex = 27;
-            this.toolStrip1.Text = "toolStrip1";
+            toolStrip1.Items.AddRange(new ToolStripItem[] { btnReturn, btnMarcações, toolStripSeparator1, btnClear, toolStripSeparator2, btnRota, toolStripSeparator, btnMarcaPonto });
+            toolStrip1.Location = new Point(400, 0);
+            toolStrip1.Name = "toolStrip1";
+            toolStrip1.Size = new Size(400, 25);
+            toolStrip1.TabIndex = 27;
+            toolStrip1.Text = "toolStrip1";
             // 
             // btnReturn
             // 
-            this.btnReturn.BackgroundImage = global::GuizzoLtda.Properties.Resources._688879_arrows_512x512;
-            this.btnReturn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnReturn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnReturn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(23, 22);
-            this.btnReturn.Text = "Retornar";
-            this.btnReturn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            btnReturn.BackgroundImage = Properties.Resources._688879_arrows_512x512;
+            btnReturn.BackgroundImageLayout = ImageLayout.Stretch;
+            btnReturn.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btnReturn.ImageTransparentColor = Color.Magenta;
+            btnReturn.Name = "btnReturn";
+            btnReturn.Size = new Size(23, 22);
+            btnReturn.Text = "Retornar";
+            btnReturn.TextImageRelation = TextImageRelation.TextBeforeImage;
+            btnReturn.Click += btnReturn_Click_1;
             // 
             // btnMarcações
             // 
-            this.btnMarcações.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btnMarcações.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnMarcações.Name = "btnMarcações";
-            this.btnMarcações.Size = new System.Drawing.Size(118, 22);
-            this.btnMarcações.Text = "Remover Marcações";
+            btnMarcações.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            btnMarcações.ImageTransparentColor = Color.Magenta;
+            btnMarcações.Name = "btnMarcações";
+            btnMarcações.Size = new Size(118, 22);
+            btnMarcações.Text = "Remover Marcações";
+            btnMarcações.Click += btnMarcações_Click;
             // 
             // toolStripSeparator1
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            toolStripSeparator1.Size = new Size(6, 25);
             // 
             // btnClear
             // 
-            this.btnClear.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btnClear.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(75, 22);
-            this.btnClear.Text = "Limpar Rota";
+            btnClear.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            btnClear.ImageTransparentColor = Color.Magenta;
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(75, 22);
+            btnClear.Text = "Limpar Rota";
+            btnClear.Click += btnClear_Click_1;
             // 
             // toolStripSeparator2
             // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            toolStripSeparator2.Name = "toolStripSeparator2";
+            toolStripSeparator2.Size = new Size(6, 25);
             // 
             // btnRota
             // 
-            this.btnRota.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btnRota.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnRota.Name = "btnRota";
-            this.btnRota.Size = new System.Drawing.Size(35, 22);
-            this.btnRota.Text = "Rota";
+            btnRota.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            btnRota.ImageTransparentColor = Color.Magenta;
+            btnRota.Name = "btnRota";
+            btnRota.Size = new Size(35, 22);
+            btnRota.Text = "Rota";
+            btnRota.Click += btnRota_Click;
             // 
             // toolStripSeparator
             // 
-            this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(6, 25);
+            toolStripSeparator.Name = "toolStripSeparator";
+            toolStripSeparator.Size = new Size(6, 25);
             // 
-            // toolStripButton1
+            // btnMarcaPonto
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(98, 22);
-            this.toolStripButton1.Text = "Escolher Destino";
+            btnMarcaPonto.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            btnMarcaPonto.ImageTransparentColor = Color.Magenta;
+            btnMarcaPonto.Name = "btnMarcaPonto";
+            btnMarcaPonto.Size = new Size(83, 22);
+            btnMarcaPonto.Text = "Marcar Ponto";
+            btnMarcaPonto.Visible = false;
+            btnMarcaPonto.Click += toolStripButton1_Click_1;
             // 
             // txtEndereco
             // 
-            this.txtEndereco.Location = new System.Drawing.Point(506, 163);
-            this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(210, 23);
-            this.txtEndereco.TabIndex = 28;
+            txtEndereco.Location = new Point(506, 163);
+            txtEndereco.Name = "txtEndereco";
+            txtEndereco.Size = new Size(210, 23);
+            txtEndereco.TabIndex = 28;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(506, 110);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(176, 32);
-            this.label3.TabIndex = 29;
-            this.label3.Text = "Insira a Origem";
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(506, 110);
+            label3.Name = "label3";
+            label3.Size = new Size(176, 32);
+            label3.TabIndex = 29;
+            label3.Text = "Insira a Origem";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(506, 110);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(180, 32);
-            this.label1.TabIndex = 30;
-            this.label1.Text = "Insira o Destino";
-            this.label1.Visible = false;
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(506, 110);
+            label1.Name = "label1";
+            label1.Size = new Size(180, 32);
+            label1.TabIndex = 30;
+            label1.Text = "Insira o Destino";
+            label1.Visible = false;
             // 
             // MapaTeste
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtEndereco);
-            this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.labeldistancia);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.lblLon);
-            this.Controls.Add(this.txtLong);
-            this.Controls.Add(this.txtLat);
-            this.Controls.Add(this.lblLat);
-            this.Controls.Add(this.MapaBr);
-            this.Controls.Add(this.splitter1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "MapaTeste";
-            this.Text = "MapaTeste";
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AcceptButton = btnConfirmar;
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(label1);
+            Controls.Add(label3);
+            Controls.Add(txtEndereco);
+            Controls.Add(toolStrip1);
+            Controls.Add(labeldistancia);
+            Controls.Add(btnConfirmar);
+            Controls.Add(lblLon);
+            Controls.Add(txtLong);
+            Controls.Add(txtLat);
+            Controls.Add(lblLat);
+            Controls.Add(MapaBr);
+            Controls.Add(splitter1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Name = "MapaTeste";
+            Text = "MapaTeste";
+            Load += MapaTeste_Load_1;
+            toolStrip1.ResumeLayout(false);
+            toolStrip1.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -285,7 +286,7 @@
         private TextBox txtLat;
         private TextBox txtLong;
         private Label lblLon;
-        private Button button1;
+        private Button btnConfirmar;
         private Label labeldistancia;
         private Splitter splitter1;
         private ToolStrip toolStrip1;
@@ -296,7 +297,7 @@
         private ToolStripSeparator toolStripSeparator2;
         private ToolStripButton btnRota;
         private ToolStripSeparator toolStripSeparator;
-        private ToolStripButton toolStripButton1;
+        private ToolStripButton btnMarcaPonto;
         private TextBox txtEndereco;
         private Label label3;
         private Label label1;
