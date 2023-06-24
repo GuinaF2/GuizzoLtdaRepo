@@ -14,6 +14,7 @@ namespace Modelos
         private int idendereco;
         private string razao_social;
         private string inscricao_estadual;
+        private string statuscadastro;
         private string logo;
         public EmpresaModelo() 
         {
@@ -22,6 +23,8 @@ namespace Modelos
             idendereco = 0;
             razao_social = "";
             inscricao_estadual = "";
+            statuscadastro = "";
+
             logo = "";
         }
         public int CodCliente
@@ -58,6 +61,12 @@ namespace Modelos
         {
             get { return logo; }
             set { logo = value; }
+
+        }
+        public string StatusCadastro
+        {
+            get { return statuscadastro; }
+            set { statuscadastro = value; }
 
         }
     }

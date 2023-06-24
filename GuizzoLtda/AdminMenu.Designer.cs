@@ -40,10 +40,10 @@
             toolStripSeparator2 = new ToolStripSeparator();
             toolStripSplitButton1 = new ToolStripSplitButton();
             encerrarToolStripMenuItem = new ToolStripMenuItem();
-            toolStripSplitButton2 = new ToolStripSplitButton();
-            toolStripMenuItem1 = new ToolStripMenuItem();
-            toolStripMenuItem2 = new ToolStripMenuItem();
             pbFotoAdminMenu = new PictureBox();
+            toolStripButton1 = new ToolStripButton();
+            toolStripSeparator1 = new ToolStripSeparator();
+            toolStripSplitButton2 = new ToolStripButton();
             toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbFotoAdminMenu).BeginInit();
             SuspendLayout();
@@ -54,7 +54,7 @@
             toolStrip1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             toolStrip1.GripStyle = ToolStripGripStyle.Hidden;
             toolStrip1.ImageScalingSize = new Size(20, 20);
-            toolStrip1.Items.AddRange(new ToolStripItem[] { btnReturn, toolStripTextBox2, toolStripSeparator2, toolStripSplitButton1, toolStripSplitButton2 });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { btnReturn, toolStripTextBox2, toolStripSeparator2, toolStripSplitButton1, toolStripSplitButton2, toolStripSeparator1, toolStripButton1 });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(929, 27);
@@ -135,30 +135,6 @@
             encerrarToolStripMenuItem.Size = new Size(125, 22);
             encerrarToolStripMenuItem.Text = "Encerrar";
             // 
-            // toolStripSplitButton2
-            // 
-            toolStripSplitButton2.DropDownItems.AddRange(new ToolStripItem[] { toolStripMenuItem1, toolStripMenuItem2 });
-            toolStripSplitButton2.Font = new Font("Leelawadee UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            toolStripSplitButton2.ForeColor = Color.Goldenrod;
-            toolStripSplitButton2.Name = "toolStripSplitButton2";
-            toolStripSplitButton2.Size = new Size(78, 24);
-            toolStripSplitButton2.Text = "Aprovar";
-            toolStripSplitButton2.ButtonClick += toolStripSplitButton2_ButtonClick;
-            // 
-            // toolStripMenuItem1
-            // 
-            toolStripMenuItem1.Name = "toolStripMenuItem1";
-            toolStripMenuItem1.Size = new Size(180, 24);
-            toolStripMenuItem1.Text = "Solicitações";
-            toolStripMenuItem1.Click += toolStripMenuItem1_Click;
-            // 
-            // toolStripMenuItem2
-            // 
-            toolStripMenuItem2.Name = "toolStripMenuItem2";
-            toolStripMenuItem2.Size = new Size(180, 24);
-            toolStripMenuItem2.Text = "Cadastros";
-            toolStripMenuItem2.Click += toolStripMenuItem2_Click;
-            // 
             // pbFotoAdminMenu
             // 
             pbFotoAdminMenu.BackColor = Color.Black;
@@ -169,6 +145,36 @@
             pbFotoAdminMenu.SizeMode = PictureBoxSizeMode.StretchImage;
             pbFotoAdminMenu.TabIndex = 2;
             pbFotoAdminMenu.TabStop = false;
+            // 
+            // toolStripButton1
+            // 
+            toolStripButton1.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            toolStripButton1.Font = new Font("Leelawadee UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            toolStripButton1.ForeColor = Color.Goldenrod;
+            toolStripButton1.Image = (Image)resources.GetObject("toolStripButton1.Image");
+            toolStripButton1.ImageTransparentColor = Color.Magenta;
+            toolStripButton1.Name = "toolStripButton1";
+            toolStripButton1.Size = new Size(128, 24);
+            toolStripButton1.Text = "Cadastros Cliente";
+            toolStripButton1.Click += toolStripButton1_Click;
+            // 
+            // toolStripSeparator1
+            // 
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            toolStripSeparator1.Size = new Size(6, 27);
+            // 
+            // toolStripSplitButton2
+            // 
+            toolStripSplitButton2.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            toolStripSplitButton2.Font = new Font("Leelawadee UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            toolStripSplitButton2.ForeColor = Color.Goldenrod;
+            toolStripSplitButton2.Image = (Image)resources.GetObject("toolStripSplitButton2.Image");
+            toolStripSplitButton2.ImageTransparentColor = Color.Magenta;
+            toolStripSplitButton2.Name = "toolStripSplitButton2";
+            toolStripSplitButton2.Size = new Size(92, 24);
+            toolStripSplitButton2.Text = "Solicitações";
+            toolStripSplitButton2.TextImageRelation = TextImageRelation.TextAboveImage;
+            toolStripSplitButton2.Click += toolStripSplitButton2_Click;
             // 
             // AdminMenu
             // 
@@ -203,8 +209,8 @@
         private PictureBox pbFotoAdminMenu;
         private ToolStripSeparator toolStripSeparator2;
         private ToolStripButton btnReturn;
-        private ToolStripSplitButton toolStripSplitButton2;
-        private ToolStripMenuItem toolStripMenuItem1;
-        private ToolStripMenuItem toolStripMenuItem2;
+        private ToolStripSeparator toolStripSeparator1;
+        private ToolStripButton toolStripButton1;
+        private ToolStripButton toolStripSplitButton2;
     }
 }

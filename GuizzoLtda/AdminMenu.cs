@@ -104,7 +104,7 @@ namespace GuizzoLtda
             Hide();
         }
 
-       
+
 
         private void toolStripSeparator5_Click(object sender, EventArgs e)
         {
@@ -120,7 +120,7 @@ namespace GuizzoLtda
 
         }
 
-        
+
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -130,6 +130,20 @@ namespace GuizzoLtda
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void toolStripSplitButton2_Click(object sender, EventArgs e)
+        {
+            AdminSolicitacao freturnlogin = new AdminSolicitacao();
+            freturnlogin.Show();
+            Hide();
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            CadastroAprov faprov = new CadastroAprov();
+            faprov.Show();
+            Hide();
         }
     }
 }

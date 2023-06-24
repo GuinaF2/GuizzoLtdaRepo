@@ -154,6 +154,12 @@ namespace GuizzoLtda
             MapaBr.Overlays.Add(routes);
             labeldistancia.Text = route.Distance + "Km";
             MessageBox.Show("Rota Encontrada");
+
+            btnClear.Visible = true;
+            btnRota.Visible = false;
+            btnMarcações.Visible = true;
+            btnMarcaPonto.Visible=false;
+
         }
 
 

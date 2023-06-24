@@ -127,5 +127,10 @@ namespace GuizzoLtda
         {
 
         }
+
+        private void AdminSolicitacao_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
