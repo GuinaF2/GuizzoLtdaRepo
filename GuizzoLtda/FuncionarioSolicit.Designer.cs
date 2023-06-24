@@ -40,89 +40,91 @@
             // 
             // btnConfirmar
             // 
-            this.btnConfirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(11)))), ((int)(((byte)(0)))));
-            this.btnConfirmar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnConfirmar.ForeColor = System.Drawing.Color.Goldenrod;
-            this.btnConfirmar.Location = new System.Drawing.Point(590, 200);
-            this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Size = new System.Drawing.Size(191, 42);
-            this.btnConfirmar.TabIndex = 0;
-            this.btnConfirmar.Text = "Confirmar";
-            this.btnConfirmar.UseVisualStyleBackColor = false;
+            btnConfirmar.BackColor = Color.FromArgb(173, 11, 0);
+            btnConfirmar.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            btnConfirmar.ForeColor = Color.Goldenrod;
+            btnConfirmar.Location = new Point(674, 266);
+            btnConfirmar.Margin = new Padding(3, 4, 3, 4);
+            btnConfirmar.Name = "btnConfirmar";
+            btnConfirmar.Size = new Size(218, 56);
+            btnConfirmar.TabIndex = 0;
+            btnConfirmar.Text = "Confirmar";
+            btnConfirmar.UseVisualStyleBackColor = false;
+            btnConfirmar.Click += button1_Click;
             // 
             // labeltipo
             // 
-            this.labeltipo.AutoSize = true;
-            this.labeltipo.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labeltipo.ForeColor = System.Drawing.Color.Goldenrod;
-            this.labeltipo.Location = new System.Drawing.Point(60, 15);
-            this.labeltipo.Name = "labeltipo";
-            this.labeltipo.Size = new System.Drawing.Size(171, 25);
-            this.labeltipo.TabIndex = 1;
-            this.labeltipo.Text = "Tipo de Solicitação";
+            labeltipo.AutoSize = true;
+            labeltipo.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            labeltipo.ForeColor = Color.Goldenrod;
+            labeltipo.Location = new Point(69, 20);
+            labeltipo.Name = "labeltipo";
+            labeltipo.Size = new Size(215, 32);
+            labeltipo.TabIndex = 1;
+            labeltipo.Text = "Tipo de Solicitação";
+            labeltipo.Click += labeltipo_Click;
             // 
             // labeldesc
             // 
-            this.labeldesc.AutoSize = true;
-            this.labeldesc.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labeldesc.ForeColor = System.Drawing.Color.Goldenrod;
-            this.labeldesc.Location = new System.Drawing.Point(60, 82);
-            this.labeldesc.Name = "labeldesc";
-            this.labeldesc.Size = new System.Drawing.Size(99, 25);
-            this.labeldesc.TabIndex = 2;
-            this.labeldesc.Text = "Descrição ";
+            labeldesc.AutoSize = true;
+            labeldesc.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            labeldesc.ForeColor = Color.Goldenrod;
+            labeldesc.Location = new Point(69, 110);
+            labeldesc.Name = "labeldesc";
+            labeldesc.Size = new Size(123, 32);
+            labeldesc.TabIndex = 2;
+            labeldesc.Text = "Descrição ";
+            labeldesc.Click += labeldesc_Click;
             // 
             // cbTipoSolicit
             // 
-            this.cbTipoSolicit.FormattingEnabled = true;
-            this.cbTipoSolicit.Items.AddRange(new object[] {
-            "Manutenção",
-            "Requisitar Processos",
-            "Atualização de Dados"});
-            this.cbTipoSolicit.Location = new System.Drawing.Point(60, 51);
-            this.cbTipoSolicit.Name = "cbTipoSolicit";
-            this.cbTipoSolicit.Size = new System.Drawing.Size(121, 23);
-            this.cbTipoSolicit.TabIndex = 3;
+            cbTipoSolicit.FormattingEnabled = true;
+            cbTipoSolicit.Items.AddRange(new object[] { "Manutenção", "Requisitar Processos", "Atualização de Dados" });
+            cbTipoSolicit.Location = new Point(69, 68);
+            cbTipoSolicit.Margin = new Padding(3, 4, 3, 4);
+            cbTipoSolicit.Name = "cbTipoSolicit";
+            cbTipoSolicit.Size = new Size(138, 28);
+            cbTipoSolicit.TabIndex = 3;
             // 
             // txtDescricao
             // 
-            this.txtDescricao.Location = new System.Drawing.Point(60, 118);
-            this.txtDescricao.Multiline = true;
-            this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(491, 224);
-            this.txtDescricao.TabIndex = 4;
+            txtDescricao.Location = new Point(69, 158);
+            txtDescricao.Margin = new Padding(3, 4, 3, 4);
+            txtDescricao.Multiline = true;
+            txtDescricao.Name = "txtDescricao";
+            txtDescricao.Size = new Size(561, 298);
+            txtDescricao.TabIndex = 4;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(607, -3);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(173, 178);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(694, -4);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(198, 238);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 5;
+            pictureBox1.TabStop = false;
             // 
             // FuncionarioSolicit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.txtDescricao);
-            this.Controls.Add(this.cbTipoSolicit);
-            this.Controls.Add(this.labeldesc);
-            this.Controls.Add(this.labeltipo);
-            this.Controls.Add(this.btnConfirmar);
-            this.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "FuncionarioSolicit";
-            this.Text = "Funcionario";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Black;
+            ClientSize = new Size(914, 600);
+            Controls.Add(pictureBox1);
+            Controls.Add(txtDescricao);
+            Controls.Add(cbTipoSolicit);
+            Controls.Add(labeldesc);
+            Controls.Add(labeltipo);
+            Controls.Add(btnConfirmar);
+            ForeColor = SystemColors.Highlight;
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "FuncionarioSolicit";
+            Text = "Funcionario";
+            Load += FuncionarioSolicit_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

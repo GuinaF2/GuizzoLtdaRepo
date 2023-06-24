@@ -28,135 +28,162 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PedidoFunc));
-            this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
-            this.dtgPedido = new System.Windows.Forms.DataGridView();
-            this.btnConfirma = new System.Windows.Forms.Button();
-            this.cbAberto = new System.Windows.Forms.CheckBox();
-            this.cbEncerrado = new System.Windows.Forms.CheckBox();
-            this.txtDtPedido = new System.Windows.Forms.TextBox();
-            this.labelDtPedido = new System.Windows.Forms.Label();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.btnReturn = new System.Windows.Forms.ToolStripButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgPedido)).BeginInit();
-            this.toolStrip1.SuspendLayout();
-            this.SuspendLayout();
+            mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
+            dtgPedido = new DataGridView();
+            btnConfirma = new Button();
+            cbAberto = new CheckBox();
+            cbEncerrado = new CheckBox();
+            txtDtPedido = new TextBox();
+            labelDtPedido = new Label();
+            toolStrip1 = new ToolStrip();
+            btnReturn = new ToolStripButton();
+            ((System.ComponentModel.ISupportInitialize)dtgPedido).BeginInit();
+            toolStrip1.SuspendLayout();
+            SuspendLayout();
             // 
             // mySqlCommand1
             // 
-            this.mySqlCommand1.CacheAge = 0;
-            this.mySqlCommand1.Connection = null;
-            this.mySqlCommand1.EnableCaching = false;
-            this.mySqlCommand1.Transaction = null;
+            mySqlCommand1.CacheAge = 0;
+            mySqlCommand1.Connection = null;
+            mySqlCommand1.EnableCaching = false;
+            mySqlCommand1.Transaction = null;
             // 
             // dtgPedido
             // 
-            this.dtgPedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgPedido.Location = new System.Drawing.Point(0, 198);
-            this.dtgPedido.Name = "dtgPedido";
-            this.dtgPedido.RowHeadersWidth = 51;
-            this.dtgPedido.RowTemplate.Height = 25;
-            this.dtgPedido.Size = new System.Drawing.Size(803, 251);
-            this.dtgPedido.TabIndex = 1;
-            this.dtgPedido.Visible = false;
+            dtgPedido.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dtgPedido.Location = new Point(0, 264);
+            dtgPedido.Margin = new Padding(3, 4, 3, 4);
+            dtgPedido.Name = "dtgPedido";
+            dtgPedido.RowHeadersWidth = 51;
+            dtgPedido.RowTemplate.Height = 25;
+            dtgPedido.Size = new Size(918, 335);
+            dtgPedido.TabIndex = 1;
+            dtgPedido.Visible = false;
             // 
             // btnConfirma
             // 
-            this.btnConfirma.Location = new System.Drawing.Point(19, 299);
-            this.btnConfirma.Name = "btnConfirma";
-            this.btnConfirma.Size = new System.Drawing.Size(144, 40);
-            this.btnConfirma.TabIndex = 4;
-            this.btnConfirma.Text = "Confirmar";
-            this.btnConfirma.UseVisualStyleBackColor = true;
+            btnConfirma.Location = new Point(22, 399);
+            btnConfirma.Margin = new Padding(3, 4, 3, 4);
+            btnConfirma.Name = "btnConfirma";
+            btnConfirma.Size = new Size(165, 53);
+            btnConfirma.TabIndex = 4;
+            btnConfirma.Text = "Confirmar";
+            btnConfirma.UseVisualStyleBackColor = true;
+            btnConfirma.Click += btnConfirma_Click;
             // 
             // cbAberto
             // 
-            this.cbAberto.AutoSize = true;
-            this.cbAberto.Location = new System.Drawing.Point(19, 150);
-            this.cbAberto.Name = "cbAberto";
-            this.cbAberto.Size = new System.Drawing.Size(62, 19);
-            this.cbAberto.TabIndex = 5;
-            this.cbAberto.Text = "Aberto";
-            this.cbAberto.UseVisualStyleBackColor = true;
+            cbAberto.AutoSize = true;
+            cbAberto.Location = new Point(22, 200);
+            cbAberto.Margin = new Padding(3, 4, 3, 4);
+            cbAberto.Name = "cbAberto";
+            cbAberto.Size = new Size(77, 24);
+            cbAberto.TabIndex = 5;
+            cbAberto.Text = "Aberto";
+            cbAberto.UseVisualStyleBackColor = true;
+            cbAberto.CheckedChanged += cbAberto_CheckedChanged;
             // 
             // cbEncerrado
             // 
-            this.cbEncerrado.AutoSize = true;
-            this.cbEncerrado.Location = new System.Drawing.Point(99, 150);
-            this.cbEncerrado.Name = "cbEncerrado";
-            this.cbEncerrado.Size = new System.Drawing.Size(79, 19);
-            this.cbEncerrado.TabIndex = 6;
-            this.cbEncerrado.Text = "Encerrado";
-            this.cbEncerrado.UseVisualStyleBackColor = true;
+            cbEncerrado.AutoSize = true;
+            cbEncerrado.Location = new Point(113, 200);
+            cbEncerrado.Margin = new Padding(3, 4, 3, 4);
+            cbEncerrado.Name = "cbEncerrado";
+            cbEncerrado.Size = new Size(98, 24);
+            cbEncerrado.TabIndex = 6;
+            cbEncerrado.Text = "Encerrado";
+            cbEncerrado.UseVisualStyleBackColor = true;
+            cbEncerrado.CheckedChanged += cbEncerrado_CheckedChanged;
             // 
             // txtDtPedido
             // 
-            this.txtDtPedido.Location = new System.Drawing.Point(19, 86);
-            this.txtDtPedido.Name = "txtDtPedido";
-            this.txtDtPedido.Size = new System.Drawing.Size(100, 23);
-            this.txtDtPedido.TabIndex = 7;
+            txtDtPedido.Location = new Point(22, 115);
+            txtDtPedido.Margin = new Padding(3, 4, 3, 4);
+            txtDtPedido.Name = "txtDtPedido";
+            txtDtPedido.Size = new Size(114, 27);
+            txtDtPedido.TabIndex = 7;
             // 
             // labelDtPedido
             // 
-            this.labelDtPedido.AutoSize = true;
-            this.labelDtPedido.Location = new System.Drawing.Point(19, 68);
-            this.labelDtPedido.Name = "labelDtPedido";
-            this.labelDtPedido.Size = new System.Drawing.Size(71, 15);
-            this.labelDtPedido.TabIndex = 8;
-            this.labelDtPedido.Text = "Data Pedido";
+            labelDtPedido.AutoSize = true;
+            labelDtPedido.Location = new Point(22, 91);
+            labelDtPedido.Name = "labelDtPedido";
+            labelDtPedido.Size = new Size(91, 20);
+            labelDtPedido.TabIndex = 8;
+            labelDtPedido.Text = "Data Pedido";
             // 
             // toolStrip1
             // 
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnReturn});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(929, 27);
-            this.toolStrip1.TabIndex = 9;
-            this.toolStrip1.Text = "toolStrip1";
+            toolStrip1.ImageScalingSize = new Size(20, 20);
+            toolStrip1.Items.AddRange(new ToolStripItem[] { btnReturn });
+            toolStrip1.Location = new Point(0, 0);
+            toolStrip1.Name = "toolStrip1";
+            toolStrip1.Size = new Size(1062, 27);
+            toolStrip1.TabIndex = 9;
+            toolStrip1.Text = "toolStrip1";
+            toolStrip1.ItemClicked += toolStrip1_ItemClicked;
             // 
             // btnReturn
             // 
-            this.btnReturn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnReturn.Image = global::GuizzoLtda.Properties.Resources._688879_arrows_512x512;
-            this.btnReturn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(24, 24);
-            this.btnReturn.Text = "toolStripButton1";
+            btnReturn.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btnReturn.Image = Properties.Resources._688879_arrows_512x512;
+            btnReturn.ImageTransparentColor = Color.Magenta;
+            btnReturn.Name = "btnReturn";
+            btnReturn.Size = new Size(29, 24);
+            btnReturn.Text = "toolStripButton1";
+            btnReturn.Click += btnReturn_Click;
+            // 
+            // dtPedido
+            // 
+            dtPedido.Location = new Point(19, 107);
+            dtPedido.MaxDate = new DateTime(2030, 1, 1, 0, 0, 0, 0);
+            dtPedido.MinDate = new DateTime(1900, 1, 1, 0, 0, 0, 0);
+            dtPedido.Name = "dtPedido";
+            dtPedido.Size = new Size(200, 23);
+            dtPedido.TabIndex = 10;
+            dtPedido.Value = new DateTime(2023, 6, 24, 0, 0, 0, 0);
+            // 
+            // dtPedido2
+            // 
+            dtPedido2.Location = new Point(307, 107);
+            dtPedido2.MaxDate = new DateTime(2030, 1, 1, 0, 0, 0, 0);
+            dtPedido2.MinDate = new DateTime(1900, 1, 1, 0, 0, 0, 0);
+            dtPedido2.Name = "dtPedido2";
+            dtPedido2.Size = new Size(200, 23);
+            dtPedido2.TabIndex = 11;
             // 
             // PedidoFunc
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(929, 505);
-            this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.labelDtPedido);
-            this.Controls.Add(this.txtDtPedido);
-            this.Controls.Add(this.cbEncerrado);
-            this.Controls.Add(this.cbAberto);
-            this.Controls.Add(this.btnConfirma);
-            this.Controls.Add(this.dtgPedido);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "PedidoFunc";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            ((System.ComponentModel.ISupportInitialize)(this.dtgPedido)).EndInit();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1062, 673);
+            Controls.Add(toolStrip1);
+            Controls.Add(labelDtPedido);
+            Controls.Add(txtDtPedido);
+            Controls.Add(cbEncerrado);
+            Controls.Add(cbAberto);
+            Controls.Add(btnConfirma);
+            Controls.Add(dtgPedido);
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "PedidoFunc";
+            StartPosition = FormStartPosition.CenterScreen;
+            Load += PedidoFunc_Load;
+            ((System.ComponentModel.ISupportInitialize)dtgPedido).EndInit();
+            toolStrip1.ResumeLayout(false);
+            toolStrip1.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-        private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
         private DataGridView dtgPedido;
         private Button btnConfirma;
         private CheckBox cbAberto;
         private CheckBox cbEncerrado;
-        private TextBox txtDtPedido;
         private Label labelDtPedido;
         private ToolStrip toolStrip1;
         private ToolStripButton btnReturn;
+        private DateTimePicker dtPedido;
+        private DateTimePicker dtPedido2;
     }
 }
