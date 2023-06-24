@@ -202,7 +202,7 @@ namespace GuizzoLtda
 
         }
 
-        
+
 
         private void txtRazaoSocial_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -219,6 +219,6 @@ namespace GuizzoLtda
 
         }
 
-        
+
     }
 }

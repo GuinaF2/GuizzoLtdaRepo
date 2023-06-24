@@ -312,15 +312,7 @@ namespace GuizzoLtda
 
         }
 
-        private void dataSeguro_KeyPress_2(object sender, KeyPressEventArgs e)
-        {
 
-            dataSeguro.MaxLength = 8;
-            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
-            {
-                e.Handled = true;
-            }
-        }
 
         private void txtRenavam_KeyPress_1(object sender, KeyPressEventArgs e)
         {
@@ -342,64 +334,6 @@ namespace GuizzoLtda
 
         }
 
-        private void btnAtualizar_Click_1(object sender, EventArgs e)
-        {
 
-        }
-
-        private void btnCad_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnApaga_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnReturn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SaveCreate_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtRenavam_KeyPress_1(object sender, KeyPressEventArgs e)
-        {
-
-        }
-
-        private void txtPlaca_KeyPress_1(object sender, KeyPressEventArgs e)
-        {
-
-        }
-
-        private void dataSeguro_KeyPress_2(object sender, KeyPressEventArgs e)
-        {
-
-        }
-
-        private void SaveUpdate_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SaveDelete_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CRUDVeiculo_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridVeiculo_CellClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

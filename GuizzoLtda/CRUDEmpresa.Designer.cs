@@ -193,7 +193,7 @@
             SaveDelete.BackColor = Color.Black;
             SaveDelete.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             SaveDelete.ForeColor = Color.Goldenrod;
-            SaveDelete.Location = new Point(103, 336);
+            SaveDelete.Location = new Point(116, 392);
             SaveDelete.Name = "SaveDelete";
             SaveDelete.Size = new Size(300, 50);
             SaveDelete.TabIndex = 15;

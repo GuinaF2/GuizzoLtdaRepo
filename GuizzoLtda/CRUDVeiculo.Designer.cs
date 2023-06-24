@@ -195,7 +195,7 @@
             SaveCreate.BackColor = Color.Black;
             SaveCreate.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             SaveCreate.ForeColor = Color.Goldenrod;
-            SaveCreate.Location = new Point(127, 440);
+            SaveCreate.Location = new Point(127, 576);
             SaveCreate.Margin = new Padding(3, 4, 3, 4);
             SaveCreate.Name = "SaveCreate";
             SaveCreate.Size = new Size(343, 67);
@@ -225,7 +225,7 @@
             SaveUpdate.BackColor = Color.Black;
             SaveUpdate.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             SaveUpdate.ForeColor = Color.Goldenrod;
-            SaveUpdate.Location = new Point(133, 515);
+            SaveUpdate.Location = new Point(127, 576);
             SaveUpdate.Margin = new Padding(3, 4, 3, 4);
             SaveUpdate.Name = "SaveUpdate";
             SaveUpdate.Size = new Size(343, 67);
