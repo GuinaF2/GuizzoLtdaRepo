@@ -54,14 +54,12 @@ namespace GuizzoLtda
             txtIdMoto.Visible = true;
             txtVolume.Visible = true;
             txtDataPed.Visible = true;
-            txtStatusPedido.Visible = true;
             txtValorPedido.Visible = true;
 
             labelidpedido.Visible = true;
             label4.Visible = true;
             label5.Visible = true;
             label6.Visible = true;
-            label7.Visible = true;
             label8.Visible = true;
 
             dgPedido.Visible = true;
@@ -78,14 +76,12 @@ namespace GuizzoLtda
             txtIdMoto.Visible = true;
             txtVolume.Visible = true;
             txtDataPed.Visible = true;
-            txtStatusPedido.Visible = true;
             txtValorPedido.Visible = true;
 
             labelidpedido.Visible = true;
             label4.Visible = true;
             label5.Visible = true;
             label6.Visible = true;
-            label7.Visible = true;
             label8.Visible = true;
 
             dgPedido.Visible = false;
@@ -102,14 +98,12 @@ namespace GuizzoLtda
             txtIdMoto.Visible = true;
             txtVolume.Visible = true;
             txtDataPed.Visible = true;
-            txtStatusPedido.Visible = true;
             txtValorPedido.Visible = true;
 
             labelidpedido.Visible = true;
             label4.Visible = true;
             label5.Visible = true;
             label6.Visible = true;
-            label7.Visible = true;
             label8.Visible = true;
 
             dgPedido.Visible = true;
@@ -119,14 +113,13 @@ namespace GuizzoLtda
         {
             PedidoModelo.CodCliente = Convert.ToInt32(txtIdCliente.Text);
             PedidoModelo.CodMotorista = Convert.ToInt32(txtIdMoto.Text);
-            PedidoModelo.PedidoStatus = txtStatusPedido.Text;
             PedidoModelo.PedidoData = txtDataPed.Text;
             PedidoModelo.PedidoVolumes = txtVolume.Text;
             PedidoModelo.ValorPedido = txtValorPedido.Text;
 
 
 
-            if (txtIdCliente.Text == "" || txtIdMoto.Text == "" || txtStatusPedido.Text == "" || txtDataPed.Text == "" || txtVolume.Text == "" || txtValorPedido.Text == "")
+            if (txtIdCliente.Text == "" || txtIdMoto.Text == "" || txtDataPed.Text == "" || txtVolume.Text == "" || txtValorPedido.Text == "")
             {
                 MessageBox.Show("Campos obrigatórios não preenchidos");
             }
@@ -206,6 +199,35 @@ namespace GuizzoLtda
         private void txtIdMoto_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgPedido_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+
+                if (dgPedido.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+                {
+                    dgPedido.CurrentRow.Selected = true;
+
+                    txtIdPedido.Text = dgPedido.Rows[e.RowIndex].Cells["idpedido"].Value.ToString();
+                    txtIdCliente.Text = dgPedido.Rows[e.RowIndex].Cells["idcliente"].Value.ToString();
+                    txtIdMoto.Text = dgPedido.Rows[e.RowIndex].Cells["idmotorista"].Value.ToString();
+                    txtDataPed.Text = dgPedido.Rows[e.RowIndex].Cells["dtpedido"].Value.ToString();
+                    txtValorPedido.Text = dgPedido.Rows[e.RowIndex].Cells["valorpedido"].Value.ToString();
+                    txtVolume.Text = dgPedido.Rows[e.RowIndex].Cells["nmrvolumes"].Value.ToString();
+                }
+
+                else
+                {
+                    MessageBox.Show("Favor selecionar ID da Empresa");
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("\t\t    Favor selecionar ID do Motorista. \n\nERRO: " + ex.Message);
+            }
         }
     }
 }

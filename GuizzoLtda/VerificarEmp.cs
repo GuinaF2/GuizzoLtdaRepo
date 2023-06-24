@@ -24,7 +24,7 @@ namespace GuizzoLtda
         EmpresaModelo EmpresaModelo = new EmpresaModelo();
         EmpresaControle Controle = new EmpresaControle();
 
-        public VerificarEmp(EmpresaModelo um,int id)
+        public VerificarEmp(EmpresaModelo um, int id)
         {
             us = um;
             idcliente = id;
@@ -47,7 +47,7 @@ namespace GuizzoLtda
 
         private void btnMenu_Click(object sender, EventArgs e)
         {
-            FuncionarioMenu fmenureturn = new FuncionarioMenu(us,idcliente);
+            FuncionarioMenu fmenureturn = new FuncionarioMenu(us, idcliente);
             this.Hide();
             fmenureturn.Show();
         }

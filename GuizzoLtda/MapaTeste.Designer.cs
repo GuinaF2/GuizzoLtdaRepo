@@ -47,6 +47,7 @@
             toolStripButton1 = new ToolStripButton();
             txtEndereco = new TextBox();
             label3 = new Label();
+            label1 = new Label();
             toolStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -82,7 +83,7 @@
             lblLat.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblLat.AutoSize = true;
             lblLat.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            lblLat.Location = new Point(504, 57);
+            lblLat.Location = new Point(600, 259);
             lblLat.Name = "lblLat";
             lblLat.Size = new Size(88, 30);
             lblLat.TabIndex = 2;
@@ -92,7 +93,7 @@
             // txtLat
             // 
             txtLat.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            txtLat.Location = new Point(504, 93);
+            txtLat.Location = new Point(600, 295);
             txtLat.Name = "txtLat";
             txtLat.Size = new Size(175, 23);
             txtLat.TabIndex = 3;
@@ -101,7 +102,7 @@
             // txtLong
             // 
             txtLong.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            txtLong.Location = new Point(504, 167);
+            txtLong.Location = new Point(600, 242);
             txtLong.Name = "txtLong";
             txtLong.Size = new Size(173, 23);
             txtLong.TabIndex = 4;
@@ -112,7 +113,7 @@
             lblLon.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblLon.AutoSize = true;
             lblLon.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            lblLon.Location = new Point(504, 134);
+            lblLon.Location = new Point(600, 209);
             lblLon.Name = "lblLon";
             lblLon.Size = new Size(106, 30);
             lblLon.TabIndex = 5;
@@ -135,7 +136,7 @@
             // 
             labeldistancia.AutoSize = true;
             labeldistancia.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            labeldistancia.Location = new Point(555, 202);
+            labeldistancia.Location = new Point(506, 202);
             labeldistancia.Name = "labeldistancia";
             labeldistancia.Size = new Size(73, 21);
             labeldistancia.TabIndex = 10;
@@ -223,7 +224,7 @@
             // 
             // txtEndereco
             // 
-            txtEndereco.Location = new Point(504, 176);
+            txtEndereco.Location = new Point(506, 163);
             txtEndereco.Name = "txtEndereco";
             txtEndereco.Size = new Size(210, 23);
             txtEndereco.TabIndex = 28;
@@ -231,17 +232,30 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(469, 158);
+            label3.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(506, 110);
             label3.Name = "label3";
-            label3.Size = new Size(97, 15);
+            label3.Size = new Size(176, 32);
             label3.TabIndex = 29;
-            label3.Text = "Insira o Endereço";
+            label3.Text = "Insira a Origem";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(506, 110);
+            label1.Name = "label1";
+            label1.Size = new Size(180, 32);
+            label1.TabIndex = 30;
+            label1.Text = "Insira o Destino";
+            label1.Visible = false;
             // 
             // MapaTeste
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label1);
             Controls.Add(label3);
             Controls.Add(txtEndereco);
             Controls.Add(toolStrip1);
@@ -282,5 +296,6 @@
         private ToolStripButton toolStripButton1;
         private TextBox txtEndereco;
         private Label label3;
+        private Label label1;
     }
 }

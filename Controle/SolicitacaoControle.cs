@@ -24,9 +24,9 @@ namespace Controle
             int valorCadastro = -1;
             try
             {
-                string SQL = "INSERT INTO tb_solicitacao(idfuncionario, tipo_solicit, descricao, condicao) values(@codigo, @tipo_solicit, @descricao, @status)";
-                string[] campos = { "@codigo", "@tipo_solicit", "@descricao", "@status" };
-                string[] valores = { modelo.CodFuncionario.ToString(), modelo.TipoSolicitacao, modelo.DescSolicitacao, modelo.StatusSolicitacao };
+                string SQL = "INSERT INTO tb_solicitacao(tipo_solicit, descricao, condicao) values( @tipo_solicit, @descricao, @status)";
+                string[] campos = {  "@tipo_solicit", "@descricao", "@status" };
+                string[] valores = {  modelo.TipoSolicitacao, modelo.DescSolicitacao, modelo.StatusSolicitacao };
 
                 if (conexaosql.cadastrar(campos, valores, SQL) >= 1)
                 {

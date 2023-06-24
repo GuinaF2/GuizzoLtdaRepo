@@ -13,6 +13,7 @@ namespace Modelos
         private string tipo_solicit;
         private string descricao;
         private string status;
+        private string nomeuser;
 
         public SolicitacaoModelo()
         {
@@ -21,6 +22,7 @@ namespace Modelos
             tipo_solicit = "";
             descricao = "";
             status = "";
+            nomeuser = "";
         }
         public int CodSolicitacao
         {
@@ -36,6 +38,11 @@ namespace Modelos
         {
             get { return tipo_solicit; }
             set { tipo_solicit = value; }
+        }
+        public string NomeUser
+        {
+            get { return nomeuser; }
+            set { nomeuser = value; }
         }
         public string DescSolicitacao
         {

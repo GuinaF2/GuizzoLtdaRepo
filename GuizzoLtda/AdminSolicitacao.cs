@@ -29,7 +29,7 @@ namespace GuizzoLtda
 
         private void btnAprovar_Click(object sender, EventArgs e)
         {
-            if (txtIdReq.Text == "" || txtDescricao.Text == "" || cbStatus.Text == "" || cbTipo.Text == "")
+            if (txtDescricao.Text == "" || cbStatus.Text == "" || cbTipo.Text == "")
             {
                 MessageBox.Show("Favor selecionar uma solicitação.");
             }
@@ -54,7 +54,7 @@ namespace GuizzoLtda
 
         private void btnRecusar_Click(object sender, EventArgs e)
         {
-            if (txtIdReq.Text == "" || txtDescricao.Text == "" || cbStatus.Text == "" || cbTipo.Text == "")
+            if (txtDescricao.Text == "" || cbStatus.Text == "" || cbTipo.Text == "")
             {
                 MessageBox.Show("Favor selecionar uma solicitação.");
             }
@@ -98,6 +98,34 @@ namespace GuizzoLtda
                 linkLabel1.Text = "Ver solicitações finalizadas";
                 dgSolicitacao.DataSource = conexaosql.verDados("SELECT * FROM tb_solicitacao WHERE condicao = 'Pendente'");
             }
+        }
+
+        private void dgSolicitacao_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (dgSolicitacao.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+                {
+                    dgSolicitacao.CurrentRow.Selected = true;
+
+                    txtDescricao.Text = dgSolicitacao.Rows[e.RowIndex].Cells["descricao"].Value.ToString();
+                    txtStatus.Text = dgSolicitacao.Rows[e.RowIndex].Cells["condicao"].Value.ToString();
+                    txtTipoSoli.Text = dgSolicitacao.Rows[e.RowIndex].Cells["tipo_solicit"].Value.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Favor selecionar ID da Requisição");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("\t\t    Favor selecionar ID da Solicitação. \n\nERRO\t\t: " + ex.Message);
+            }
+        }
+
+        private void dgSolicitacao_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

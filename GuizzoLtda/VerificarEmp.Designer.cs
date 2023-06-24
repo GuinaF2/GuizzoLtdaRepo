@@ -41,7 +41,7 @@
             // labelCnpj
             // 
             labelCnpj.AutoSize = true;
-            labelCnpj.Location = new Point(48, 64);
+            labelCnpj.Location = new Point(72, 64);
             labelCnpj.Name = "labelCnpj";
             labelCnpj.Size = new Size(32, 15);
             labelCnpj.TabIndex = 1;
@@ -59,7 +59,7 @@
             // 
             // txtCnpj
             // 
-            txtCnpj.Location = new Point(48, 91);
+            txtCnpj.Location = new Point(72, 91);
             txtCnpj.Name = "txtCnpj";
             txtCnpj.Size = new Size(100, 23);
             txtCnpj.TabIndex = 5;

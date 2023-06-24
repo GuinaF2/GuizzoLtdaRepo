@@ -50,10 +50,8 @@
             label4 = new Label();
             label5 = new Label();
             label6 = new Label();
-            label7 = new Label();
             label8 = new Label();
             txtVolume = new TextBox();
-            txtStatusPedido = new TextBox();
             label1 = new Label();
             txtValorPedido = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dgPedido).BeginInit();
@@ -71,6 +69,7 @@
             dgPedido.RowTemplate.Height = 25;
             dgPedido.Size = new Size(389, 453);
             dgPedido.TabIndex = 23;
+            dgPedido.CellClick += dgPedido_CellClick;
             // 
             // toolStrip1
             // 
@@ -170,7 +169,7 @@
             // SaveDelete
             // 
             SaveDelete.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            SaveDelete.Location = new Point(46, 350);
+            SaveDelete.Location = new Point(48, 350);
             SaveDelete.Name = "SaveDelete";
             SaveDelete.Size = new Size(300, 50);
             SaveDelete.TabIndex = 15;
@@ -205,7 +204,7 @@
             // txtDataPed
             // 
             txtDataPed.BackColor = Color.White;
-            txtDataPed.Location = new Point(223, 184);
+            txtDataPed.Location = new Point(225, 171);
             txtDataPed.Name = "txtDataPed";
             txtDataPed.Size = new Size(125, 23);
             txtDataPed.TabIndex = 31;
@@ -253,27 +252,17 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(223, 36);
+            label6.Location = new Point(225, 82);
             label6.Name = "label6";
             label6.Size = new Size(123, 30);
             label6.TabIndex = 37;
             label6.Text = "Nº Volumes";
             // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(223, 95);
-            label7.Name = "label7";
-            label7.Size = new Size(138, 30);
-            label7.TabIndex = 38;
-            label7.Text = "Status Pedido";
-            // 
             // label8
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(222, 154);
+            label8.Location = new Point(224, 141);
             label8.Name = "label8";
             label8.Size = new Size(126, 30);
             label8.TabIndex = 39;
@@ -282,24 +271,16 @@
             // txtVolume
             // 
             txtVolume.BackColor = Color.White;
-            txtVolume.Location = new Point(223, 69);
+            txtVolume.Location = new Point(225, 115);
             txtVolume.Name = "txtVolume";
             txtVolume.Size = new Size(125, 23);
             txtVolume.TabIndex = 40;
-            // 
-            // txtStatusPedido
-            // 
-            txtStatusPedido.BackColor = Color.White;
-            txtStatusPedido.Location = new Point(223, 128);
-            txtStatusPedido.Name = "txtStatusPedido";
-            txtStatusPedido.Size = new Size(125, 23);
-            txtStatusPedido.TabIndex = 41;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(220, 210);
+            label1.Location = new Point(222, 197);
             label1.Name = "label1";
             label1.Size = new Size(128, 30);
             label1.TabIndex = 43;
@@ -308,7 +289,7 @@
             // txtValorPedido
             // 
             txtValorPedido.BackColor = Color.White;
-            txtValorPedido.Location = new Point(221, 240);
+            txtValorPedido.Location = new Point(223, 227);
             txtValorPedido.Name = "txtValorPedido";
             txtValorPedido.Size = new Size(125, 23);
             txtValorPedido.TabIndex = 42;
@@ -320,10 +301,8 @@
             ClientSize = new Size(800, 450);
             Controls.Add(label1);
             Controls.Add(txtValorPedido);
-            Controls.Add(txtStatusPedido);
             Controls.Add(txtVolume);
             Controls.Add(label8);
-            Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
@@ -382,9 +361,7 @@
         private Label label4;
         private Label label5;
         private Label label6;
-        private Label label7;
         private Label label8;
         private TextBox txtVolume;
-        private TextBox txtStatusPedido;
     }
 }

@@ -28,25 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             dtgPedido = new DataGridView();
             btnConfirma = new Button();
             cbAberto = new CheckBox();
             cbEncerrado = new CheckBox();
             txtDtPedido = new TextBox();
             labelDtPedido = new Label();
-            toolStrip1 = new ToolStrip();
             btnReturn = new ToolStripButton();
+            toolStrip1 = new ToolStrip();
             ((System.ComponentModel.ISupportInitialize)dtgPedido).BeginInit();
             toolStrip1.SuspendLayout();
             SuspendLayout();
-            // 
-            // mySqlCommand1
-            // 
-            mySqlCommand1.CacheAge = 0;
-            mySqlCommand1.Connection = null;
-            mySqlCommand1.EnableCaching = false;
-            mySqlCommand1.Transaction = null;
             // 
             // dtgPedido
             // 
@@ -106,16 +98,6 @@
             labelDtPedido.TabIndex = 8;
             labelDtPedido.Text = "Data Pedido";
             // 
-            // toolStrip1
-            // 
-            toolStrip1.Items.AddRange(new ToolStripItem[] { btnReturn });
-            toolStrip1.Location = new Point(0, 0);
-            toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(800, 25);
-            toolStrip1.TabIndex = 9;
-            toolStrip1.Text = "toolStrip1";
-            toolStrip1.ItemClicked += toolStrip1_ItemClicked;
-            // 
             // btnReturn
             // 
             btnReturn.DisplayStyle = ToolStripItemDisplayStyle.Image;
@@ -125,6 +107,16 @@
             btnReturn.Size = new Size(23, 22);
             btnReturn.Text = "toolStripButton1";
             btnReturn.Click += btnReturn_Click;
+            // 
+            // toolStrip1
+            // 
+            toolStrip1.Items.AddRange(new ToolStripItem[] { btnReturn });
+            toolStrip1.Location = new Point(0, 0);
+            toolStrip1.Name = "toolStrip1";
+            toolStrip1.Size = new Size(800, 25);
+            toolStrip1.TabIndex = 9;
+            toolStrip1.Text = "toolStrip1";
+            toolStrip1.ItemClicked += toolStrip1_ItemClicked;
             // 
             // PedidoFunc
             // 
@@ -149,14 +141,13 @@
         }
 
         #endregion
-        private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
         private DataGridView dtgPedido;
         private Button btnConfirma;
         private CheckBox cbAberto;
         private CheckBox cbEncerrado;
         private TextBox txtDtPedido;
         private Label labelDtPedido;
-        private ToolStrip toolStrip1;
         private ToolStripButton btnReturn;
+        private ToolStrip toolStrip1;
     }
 }

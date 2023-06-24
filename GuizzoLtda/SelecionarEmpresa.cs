@@ -63,7 +63,7 @@ namespace GuizzoLtda
         private void SelecionarEmpresa_Load_1(object sender, EventArgs e)
         {
 
-            dgViewSelEmp.DataSource = conexaosql.verDados("SELECT idcliente, razao_social,logo FROM tb_cliente");
+            dgViewSelEmp.DataSource = conexaosql.verDados("SELECT idcliente, razao_social,logo FROM tb_cliente WHERE statuscadastro= 'Aprovado'");
         }
 
         private void dgViewSelEmp_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
