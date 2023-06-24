@@ -29,106 +29,105 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VerificarEmp));
-            this.labelCnpj = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtCnpj = new System.Windows.Forms.TextBox();
-            this.returnBtn = new System.Windows.Forms.Button();
-            this.btnMenu = new System.Windows.Forms.Button();
-            this.dgVerEmp = new System.Windows.Forms.DataGridView();
-            this.btnConfirmar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgVerEmp)).BeginInit();
-            this.SuspendLayout();
+            labelCnpj = new Label();
+            label4 = new Label();
+            txtCnpj = new TextBox();
+            returnBtn = new Button();
+            btnMenu = new Button();
+            dgVerEmp = new DataGridView();
+            btnConfirmar = new Button();
+            ((System.ComponentModel.ISupportInitialize)dgVerEmp).BeginInit();
+            SuspendLayout();
             // 
             // labelCnpj
             // 
-            this.labelCnpj.AutoSize = true;
-            this.labelCnpj.Location = new System.Drawing.Point(48, 64);
-            this.labelCnpj.Name = "labelCnpj";
-            this.labelCnpj.Size = new System.Drawing.Size(32, 15);
-            this.labelCnpj.TabIndex = 1;
-            this.labelCnpj.Text = "Cnpj";
+            labelCnpj.AutoSize = true;
+            labelCnpj.Location = new Point(48, 64);
+            labelCnpj.Name = "labelCnpj";
+            labelCnpj.Size = new Size(32, 15);
+            labelCnpj.TabIndex = 1;
+            labelCnpj.Text = "Cnpj";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(72, 9);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(181, 32);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Verificar Cliente";
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(72, 9);
+            label4.Name = "label4";
+            label4.Size = new Size(181, 32);
+            label4.TabIndex = 3;
+            label4.Text = "Verificar Cliente";
             // 
             // txtCnpj
             // 
-            this.txtCnpj.Location = new System.Drawing.Point(48, 91);
-            this.txtCnpj.Name = "txtCnpj";
-            this.txtCnpj.Size = new System.Drawing.Size(100, 23);
-            this.txtCnpj.TabIndex = 5;
+            txtCnpj.Location = new Point(48, 91);
+            txtCnpj.Name = "txtCnpj";
+            txtCnpj.Size = new Size(100, 23);
+            txtCnpj.TabIndex = 5;
             // 
             // returnBtn
             // 
-            this.returnBtn.BackgroundImage = global::GuizzoLtda.Properties.Resources._688879_arrows_512x512;
-            this.returnBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.returnBtn.Location = new System.Drawing.Point(0, 1);
-            this.returnBtn.Name = "returnBtn";
-            this.returnBtn.Size = new System.Drawing.Size(39, 38);
-            this.returnBtn.TabIndex = 7;
-            this.returnBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.returnBtn.UseVisualStyleBackColor = true;
+            returnBtn.BackgroundImage = Properties.Resources._688879_arrows_512x512;
+            returnBtn.BackgroundImageLayout = ImageLayout.Stretch;
+            returnBtn.Location = new Point(0, 1);
+            returnBtn.Name = "returnBtn";
+            returnBtn.Size = new Size(39, 38);
+            returnBtn.TabIndex = 7;
+            returnBtn.TextImageRelation = TextImageRelation.TextBeforeImage;
+            returnBtn.UseVisualStyleBackColor = true;
             // 
             // btnMenu
             // 
-            this.btnMenu.BackgroundImage = global::GuizzoLtda.Properties.Resources._688879_arrows_512x512;
-            this.btnMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMenu.Location = new System.Drawing.Point(0, 1);
-            this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(39, 38);
-            this.btnMenu.TabIndex = 8;
-            this.btnMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnMenu.UseVisualStyleBackColor = true;
+            btnMenu.BackgroundImage = Properties.Resources._688879_arrows_512x512;
+            btnMenu.BackgroundImageLayout = ImageLayout.Stretch;
+            btnMenu.Location = new Point(0, 1);
+            btnMenu.Name = "btnMenu";
+            btnMenu.Size = new Size(39, 38);
+            btnMenu.TabIndex = 8;
+            btnMenu.TextImageRelation = TextImageRelation.TextBeforeImage;
+            btnMenu.UseVisualStyleBackColor = true;
             // 
             // dgVerEmp
             // 
-            this.dgVerEmp.AllowUserToAddRows = false;
-            this.dgVerEmp.AllowUserToDeleteRows = false;
-            this.dgVerEmp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgVerEmp.Location = new System.Drawing.Point(72, 120);
-            this.dgVerEmp.Name = "dgVerEmp";
-            this.dgVerEmp.ReadOnly = true;
-            this.dgVerEmp.RowHeadersWidth = 51;
-            this.dgVerEmp.RowTemplate.Height = 25;
-            this.dgVerEmp.Size = new System.Drawing.Size(665, 244);
-            this.dgVerEmp.TabIndex = 9;
-            this.dgVerEmp.Visible = false;
+            dgVerEmp.AllowUserToAddRows = false;
+            dgVerEmp.AllowUserToDeleteRows = false;
+            dgVerEmp.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgVerEmp.Location = new Point(72, 120);
+            dgVerEmp.Name = "dgVerEmp";
+            dgVerEmp.ReadOnly = true;
+            dgVerEmp.RowHeadersWidth = 51;
+            dgVerEmp.RowTemplate.Height = 25;
+            dgVerEmp.Size = new Size(665, 244);
+            dgVerEmp.TabIndex = 9;
+            dgVerEmp.Visible = false;
             // 
             // btnConfirmar
             // 
-            this.btnConfirmar.Location = new System.Drawing.Point(48, 339);
-            this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Size = new System.Drawing.Size(179, 47);
-            this.btnConfirmar.TabIndex = 10;
-            this.btnConfirmar.Text = "Confirmar";
-            this.btnConfirmar.UseVisualStyleBackColor = true;
+            btnConfirmar.Location = new Point(48, 393);
+            btnConfirmar.Name = "btnConfirmar";
+            btnConfirmar.Size = new Size(179, 47);
+            btnConfirmar.TabIndex = 10;
+            btnConfirmar.Text = "Confirmar";
+            btnConfirmar.UseVisualStyleBackColor = true;
             // 
             // VerificarEmp
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(929, 505);
-            this.Controls.Add(this.btnConfirmar);
-            this.Controls.Add(this.btnMenu);
-            this.Controls.Add(this.returnBtn);
-            this.Controls.Add(this.txtCnpj);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.labelCnpj);
-            this.Controls.Add(this.dgVerEmp);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "VerificarEmp";
-            this.Text = "VerificarEmp";
-            ((System.ComponentModel.ISupportInitialize)(this.dgVerEmp)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(929, 505);
+            Controls.Add(btnConfirmar);
+            Controls.Add(btnMenu);
+            Controls.Add(returnBtn);
+            Controls.Add(txtCnpj);
+            Controls.Add(label4);
+            Controls.Add(labelCnpj);
+            Controls.Add(dgVerEmp);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Name = "VerificarEmp";
+            Text = "VerificarEmp";
+            ((System.ComponentModel.ISupportInitialize)dgVerEmp).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

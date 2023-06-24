@@ -28,44 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             dtgPedido = new DataGridView();
             btnConfirma = new Button();
             cbAberto = new CheckBox();
             cbEncerrado = new CheckBox();
-            txtDtPedido = new TextBox();
+            dtPedido = new DateTimePicker();
             labelDtPedido = new Label();
-            toolStrip1 = new ToolStrip();
-            btnReturn = new ToolStripButton();
+            dateTimePicker1 = new DateTimePicker();
+            dateTimePicker2 = new DateTimePicker();
+            label1 = new Label();
+            btnReturnMenu = new Button();
+            btnReturn = new Button();
             ((System.ComponentModel.ISupportInitialize)dtgPedido).BeginInit();
-            toolStrip1.SuspendLayout();
             SuspendLayout();
-            // 
-            // mySqlCommand1
-            // 
-            mySqlCommand1.CacheAge = 0;
-            mySqlCommand1.Connection = null;
-            mySqlCommand1.EnableCaching = false;
-            mySqlCommand1.Transaction = null;
             // 
             // dtgPedido
             // 
             dtgPedido.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgPedido.Location = new Point(0, 264);
-            dtgPedido.Margin = new Padding(3, 4, 3, 4);
+            dtgPedido.Location = new Point(0, 198);
             dtgPedido.Name = "dtgPedido";
             dtgPedido.RowHeadersWidth = 51;
             dtgPedido.RowTemplate.Height = 25;
-            dtgPedido.Size = new Size(918, 335);
+            dtgPedido.Size = new Size(803, 251);
             dtgPedido.TabIndex = 1;
             dtgPedido.Visible = false;
             // 
             // btnConfirma
             // 
-            btnConfirma.Location = new Point(22, 399);
-            btnConfirma.Margin = new Padding(3, 4, 3, 4);
+            btnConfirma.Location = new Point(19, 299);
             btnConfirma.Name = "btnConfirma";
-            btnConfirma.Size = new Size(165, 53);
+            btnConfirma.Size = new Size(144, 40);
             btnConfirma.TabIndex = 4;
             btnConfirma.Text = "Confirmar";
             btnConfirma.UseVisualStyleBackColor = true;
@@ -74,10 +66,9 @@
             // cbAberto
             // 
             cbAberto.AutoSize = true;
-            cbAberto.Location = new Point(22, 200);
-            cbAberto.Margin = new Padding(3, 4, 3, 4);
+            cbAberto.Location = new Point(14, 158);
             cbAberto.Name = "cbAberto";
-            cbAberto.Size = new Size(77, 24);
+            cbAberto.Size = new Size(62, 19);
             cbAberto.TabIndex = 5;
             cbAberto.Text = "Aberto";
             cbAberto.UseVisualStyleBackColor = true;
@@ -86,52 +77,13 @@
             // cbEncerrado
             // 
             cbEncerrado.AutoSize = true;
-            cbEncerrado.Location = new Point(113, 200);
-            cbEncerrado.Margin = new Padding(3, 4, 3, 4);
+            cbEncerrado.Location = new Point(94, 158);
             cbEncerrado.Name = "cbEncerrado";
-            cbEncerrado.Size = new Size(98, 24);
+            cbEncerrado.Size = new Size(79, 19);
             cbEncerrado.TabIndex = 6;
             cbEncerrado.Text = "Encerrado";
             cbEncerrado.UseVisualStyleBackColor = true;
             cbEncerrado.CheckedChanged += cbEncerrado_CheckedChanged;
-            // 
-            // txtDtPedido
-            // 
-            txtDtPedido.Location = new Point(22, 115);
-            txtDtPedido.Margin = new Padding(3, 4, 3, 4);
-            txtDtPedido.Name = "txtDtPedido";
-            txtDtPedido.Size = new Size(114, 27);
-            txtDtPedido.TabIndex = 7;
-            // 
-            // labelDtPedido
-            // 
-            labelDtPedido.AutoSize = true;
-            labelDtPedido.Location = new Point(22, 91);
-            labelDtPedido.Name = "labelDtPedido";
-            labelDtPedido.Size = new Size(91, 20);
-            labelDtPedido.TabIndex = 8;
-            labelDtPedido.Text = "Data Pedido";
-            // 
-            // toolStrip1
-            // 
-            toolStrip1.ImageScalingSize = new Size(20, 20);
-            toolStrip1.Items.AddRange(new ToolStripItem[] { btnReturn });
-            toolStrip1.Location = new Point(0, 0);
-            toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(1062, 27);
-            toolStrip1.TabIndex = 9;
-            toolStrip1.Text = "toolStrip1";
-            toolStrip1.ItemClicked += toolStrip1_ItemClicked;
-            // 
-            // btnReturn
-            // 
-            btnReturn.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            btnReturn.Image = Properties.Resources._688879_arrows_512x512;
-            btnReturn.ImageTransparentColor = Color.Magenta;
-            btnReturn.Name = "btnReturn";
-            btnReturn.Size = new Size(29, 24);
-            btnReturn.Text = "toolStripButton1";
-            btnReturn.Click += btnReturn_Click;
             // 
             // dtPedido
             // 
@@ -143,34 +95,78 @@
             dtPedido.TabIndex = 10;
             dtPedido.Value = new DateTime(2023, 6, 24, 0, 0, 0, 0);
             // 
-            // dtPedido2
+            // labelDtPedido
             // 
-            dtPedido2.Location = new Point(307, 107);
-            dtPedido2.MaxDate = new DateTime(2030, 1, 1, 0, 0, 0, 0);
-            dtPedido2.MinDate = new DateTime(1900, 1, 1, 0, 0, 0, 0);
-            dtPedido2.Name = "dtPedido2";
-            dtPedido2.Size = new Size(200, 23);
-            dtPedido2.TabIndex = 11;
+            labelDtPedido.AutoSize = true;
+            labelDtPedido.Location = new Point(213, 27);
+            labelDtPedido.Name = "labelDtPedido";
+            labelDtPedido.Size = new Size(71, 15);
+            labelDtPedido.TabIndex = 8;
+            labelDtPedido.Text = "Data Pedido";
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Location = new Point(19, 106);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(200, 23);
+            dateTimePicker1.TabIndex = 10;
+            // 
+            // dateTimePicker2
+            // 
+            dateTimePicker2.Location = new Point(281, 106);
+            dateTimePicker2.Name = "dateTimePicker2";
+            dateTimePicker2.Size = new Size(200, 23);
+            dateTimePicker2.TabIndex = 11;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(237, 114);
+            label1.Name = "label1";
+            label1.Size = new Size(25, 15);
+            label1.TabIndex = 12;
+            label1.Text = "Até";
+            // 
+            // btnReturnMenu
+            // 
+            btnReturnMenu.BackgroundImage = Properties.Resources._688879_arrows_512x512;
+            btnReturnMenu.BackgroundImageLayout = ImageLayout.Stretch;
+            btnReturnMenu.Location = new Point(0, -1);
+            btnReturnMenu.Name = "btnReturnMenu";
+            btnReturnMenu.Size = new Size(34, 26);
+            btnReturnMenu.TabIndex = 13;
+            btnReturnMenu.UseVisualStyleBackColor = true;
+            btnReturnMenu.Click += btnReturnMenu_Click;
+            // 
+            // btnReturn
+            // 
+            btnReturn.BackgroundImage = Properties.Resources._688879_arrows_512x512;
+            btnReturn.BackgroundImageLayout = ImageLayout.Stretch;
+            btnReturn.Location = new Point(12, -1);
+            btnReturn.Name = "btnReturn";
+            btnReturn.Size = new Size(34, 26);
+            btnReturn.TabIndex = 14;
+            btnReturn.UseVisualStyleBackColor = true;
             // 
             // PedidoFunc
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1062, 673);
-            Controls.Add(toolStrip1);
+            ClientSize = new Size(929, 505);
+            Controls.Add(btnReturn);
+            Controls.Add(btnReturnMenu);
+            Controls.Add(label1);
+            Controls.Add(dateTimePicker2);
+            Controls.Add(dateTimePicker1);
             Controls.Add(labelDtPedido);
-            Controls.Add(txtDtPedido);
             Controls.Add(cbEncerrado);
             Controls.Add(cbAberto);
             Controls.Add(btnConfirma);
             Controls.Add(dtgPedido);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "PedidoFunc";
             StartPosition = FormStartPosition.CenterScreen;
             Load += PedidoFunc_Load;
             ((System.ComponentModel.ISupportInitialize)dtgPedido).EndInit();
-            toolStrip1.ResumeLayout(false);
-            toolStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -181,9 +177,12 @@
         private CheckBox cbAberto;
         private CheckBox cbEncerrado;
         private Label labelDtPedido;
-        private ToolStrip toolStrip1;
-        private ToolStripButton btnReturn;
         private DateTimePicker dtPedido;
         private DateTimePicker dtPedido2;
+        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dateTimePicker2;
+        private Label label1;
+        private Button btnReturnMenu;
+        private Button btnReturn;
     }
 }

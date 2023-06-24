@@ -73,5 +73,13 @@ namespace GuizzoLtda
         {
 
         }
+
+        private void SelectEmp_Click(object sender, EventArgs e)
+        {
+            var form2Obj = new SelecionarEmpresa(us, idcliente);
+            form2Obj.Shown += (o, args) => { btnAcessarSys.Enabled = false; };
+            form2Obj.FormClosed += (o, args) => { btnAcessarSys.Enabled = true; };
+            form2Obj.Show();
+        }
     }
 }

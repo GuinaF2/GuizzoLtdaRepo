@@ -39,12 +39,8 @@ namespace GuizzoLtda
 
         }
 
-        private void txtSenhaAdm_TextChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void btnLoginAdmin_Click_1(object sender, EventArgs e)
+        private void btnLoginAdmin_Click_2(object sender, EventArgs e)
         {
             UsuarioModelo.NomeUser = txtUserAdm.Text;
 
@@ -75,45 +71,7 @@ namespace GuizzoLtda
             }
         }
 
-
-
-        private void AdminLogin_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnLoginAdmin_Click(object sender, EventArgs e)
-        {
-            UsuarioModelo.NomeUser = txtUserAdm.Text;
-
-            UsuarioModelo.SenhaUser = txtSenhaAdm.Text;
-
-
-
-            if (txtUserAdm.Text == "" || txtSenhaAdm.Text == "")
-            {
-                MessageBox.Show("Preencha todos os campos.");
-
-                AdminLogin fadmlogin = new AdminLogin(us, idcliente);
-                fadmlogin.Show();
-                Hide();
-            }
-            else
-            {
-                if (Controle.LogarAdm(UsuarioModelo) >= 1)
-                {
-                    AdminMenu fmenuadm = new AdminMenu(us, idcliente);
-                    this.Hide();
-                    fmenuadm.Show();
-                }
-                else
-                {
-                    MessageBox.Show("Usuário ou Senha não encontrados");
-                }
-            }
-        }
-
-        private void btnReturn_Click_1(object sender, EventArgs e)
+        private void btnReturn_Click(object sender, EventArgs e)
         {
             Principal fprincipalreturn = new Principal(us, idcliente);
             this.Hide();
@@ -144,5 +102,7 @@ namespace GuizzoLtda
         {
 
         }
+
+   
     }
 }

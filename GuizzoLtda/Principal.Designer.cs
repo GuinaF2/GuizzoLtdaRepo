@@ -29,88 +29,90 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
-            this.btnUsuario = new System.Windows.Forms.Button();
-            this.btnAdmin = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.PBEmpresa = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.PBEmpresa)).BeginInit();
-            this.SuspendLayout();
+            btnUsuario = new Button();
+            btnAdmin = new Button();
+            label1 = new Label();
+            PBEmpresa = new PictureBox();
+            button1 = new Button();
+            ((System.ComponentModel.ISupportInitialize)PBEmpresa).BeginInit();
+            SuspendLayout();
             // 
             // btnUsuario
             // 
-            this.btnUsuario.BackColor = System.Drawing.Color.Black;
-            this.btnUsuario.Font = new System.Drawing.Font("Leelawadee UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnUsuario.ForeColor = System.Drawing.Color.White;
-            this.btnUsuario.Location = new System.Drawing.Point(172, 140);
-            this.btnUsuario.Name = "btnUsuario";
-            this.btnUsuario.Size = new System.Drawing.Size(261, 89);
-            this.btnUsuario.TabIndex = 1;
-            this.btnUsuario.Text = "Funcionário";
-            this.btnUsuario.UseVisualStyleBackColor = false;
+            btnUsuario.BackColor = Color.Black;
+            btnUsuario.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            btnUsuario.ForeColor = Color.White;
+            btnUsuario.Location = new Point(172, 140);
+            btnUsuario.Name = "btnUsuario";
+            btnUsuario.Size = new Size(261, 89);
+            btnUsuario.TabIndex = 1;
+            btnUsuario.Text = "Funcionário";
+            btnUsuario.UseVisualStyleBackColor = false;
+            btnUsuario.Click += btnUsuario_Click;
             // 
             // btnAdmin
             // 
-            this.btnAdmin.BackColor = System.Drawing.Color.Black;
-            this.btnAdmin.Font = new System.Drawing.Font("Leelawadee UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAdmin.ForeColor = System.Drawing.Color.White;
-            this.btnAdmin.Location = new System.Drawing.Point(172, 319);
-            this.btnAdmin.Name = "btnAdmin";
-            this.btnAdmin.Size = new System.Drawing.Size(261, 87);
-            this.btnAdmin.TabIndex = 1;
-            this.btnAdmin.Text = "Admin";
-            this.btnAdmin.UseVisualStyleBackColor = false;
+            btnAdmin.BackColor = Color.Black;
+            btnAdmin.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            btnAdmin.ForeColor = Color.White;
+            btnAdmin.Location = new Point(172, 319);
+            btnAdmin.Name = "btnAdmin";
+            btnAdmin.Size = new Size(261, 87);
+            btnAdmin.TabIndex = 1;
+            btnAdmin.Text = "Admin";
+            btnAdmin.UseVisualStyleBackColor = false;
+            btnAdmin.Click += btnAdmin_Click;
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Leelawadee UI", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(128, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(348, 38);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Selecione seu Acesso";
+            label1.Font = new Font("Leelawadee UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(128, 40);
+            label1.Name = "label1";
+            label1.Size = new Size(348, 38);
+            label1.TabIndex = 2;
+            label1.Text = "Selecione seu Acesso";
             // 
             // PBEmpresa
             // 
-            this.PBEmpresa.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.PBEmpresa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PBEmpresa.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.PBEmpresa.Location = new System.Drawing.Point(559, -2);
-            this.PBEmpresa.Name = "PBEmpresa";
-            this.PBEmpresa.Size = new System.Drawing.Size(371, 507);
-            this.PBEmpresa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PBEmpresa.TabIndex = 3;
-            this.PBEmpresa.TabStop = false;
+            PBEmpresa.BackColor = SystemColors.MenuBar;
+            PBEmpresa.BackgroundImageLayout = ImageLayout.Stretch;
+            PBEmpresa.BorderStyle = BorderStyle.Fixed3D;
+            PBEmpresa.Location = new Point(559, -2);
+            PBEmpresa.Name = "PBEmpresa";
+            PBEmpresa.Size = new Size(371, 507);
+            PBEmpresa.SizeMode = PictureBoxSizeMode.StretchImage;
+            PBEmpresa.TabIndex = 3;
+            PBEmpresa.TabStop = false;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(598, 237);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            button1.Location = new Point(598, 237);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 0;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
             // 
             // Principal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(11)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(929, 505);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnAdmin);
-            this.Controls.Add(this.btnUsuario);
-            this.Controls.Add(this.PBEmpresa);
-            this.Controls.Add(this.button1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Principal";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Selecione Usuario";
-            ((System.ComponentModel.ISupportInitialize)(this.PBEmpresa)).EndInit();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
+            BackColor = Color.FromArgb(173, 11, 0);
+            ClientSize = new Size(929, 505);
+            Controls.Add(label1);
+            Controls.Add(btnAdmin);
+            Controls.Add(btnUsuario);
+            Controls.Add(PBEmpresa);
+            Controls.Add(button1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Name = "Principal";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Selecione Usuario";
+            Load += Principal_Load_1;
+            ((System.ComponentModel.ISupportInitialize)PBEmpresa).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion

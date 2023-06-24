@@ -29,147 +29,149 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FuncionarioCadLog));
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtLogin = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnLoginFunc = new System.Windows.Forms.Button();
-            this.txtSenha = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnreturn = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.SuspendLayout();
+            label1 = new Label();
+            txtLogin = new TextBox();
+            label3 = new Label();
+            btnLoginFunc = new Button();
+            txtSenha = new TextBox();
+            label4 = new Label();
+            pictureBox1 = new PictureBox();
+            btnreturn = new Button();
+            pictureBox2 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Leelawadee UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(193, 87);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 30);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nome";
+            label1.AutoSize = true;
+            label1.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(193, 87);
+            label1.Name = "label1";
+            label1.Size = new Size(73, 30);
+            label1.TabIndex = 0;
+            label1.Text = "Nome";
             // 
             // txtLogin
             // 
-            this.txtLogin.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtLogin.Location = new System.Drawing.Point(193, 136);
-            this.txtLogin.Name = "txtLogin";
-            this.txtLogin.Size = new System.Drawing.Size(184, 35);
-            this.txtLogin.TabIndex = 2;
+            txtLogin.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            txtLogin.Location = new Point(193, 136);
+            txtLogin.Name = "txtLogin";
+            txtLogin.Size = new Size(184, 35);
+            txtLogin.TabIndex = 2;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Leelawadee UI", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(193, 20);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(122, 51);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Login";
+            label3.AutoSize = true;
+            label3.Font = new Font("Leelawadee UI", 28.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(193, 20);
+            label3.Name = "label3";
+            label3.Size = new Size(122, 51);
+            label3.TabIndex = 4;
+            label3.Text = "Login";
             // 
             // btnLoginFunc
             // 
-            this.btnLoginFunc.BackColor = System.Drawing.Color.Black;
-            this.btnLoginFunc.FlatAppearance.BorderSize = 0;
-            this.btnLoginFunc.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLoginFunc.Font = new System.Drawing.Font("Leelawadee UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnLoginFunc.ForeColor = System.Drawing.Color.White;
-            this.btnLoginFunc.Location = new System.Drawing.Point(178, 309);
-            this.btnLoginFunc.Name = "btnLoginFunc";
-            this.btnLoginFunc.Size = new System.Drawing.Size(218, 66);
-            this.btnLoginFunc.TabIndex = 4;
-            this.btnLoginFunc.Text = "Fazer Login";
-            this.btnLoginFunc.UseVisualStyleBackColor = false;
+            btnLoginFunc.BackColor = Color.Black;
+            btnLoginFunc.FlatAppearance.BorderSize = 0;
+            btnLoginFunc.FlatStyle = FlatStyle.Popup;
+            btnLoginFunc.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            btnLoginFunc.ForeColor = Color.White;
+            btnLoginFunc.Location = new Point(178, 309);
+            btnLoginFunc.Name = "btnLoginFunc";
+            btnLoginFunc.Size = new Size(218, 66);
+            btnLoginFunc.TabIndex = 4;
+            btnLoginFunc.Text = "Fazer Login";
+            btnLoginFunc.UseVisualStyleBackColor = false;
+            btnLoginFunc.Click += btnLoginFunc_Click;
             // 
             // txtSenha
             // 
-            this.txtSenha.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtSenha.Location = new System.Drawing.Point(193, 239);
-            this.txtSenha.Name = "txtSenha";
-            this.txtSenha.PasswordChar = '*';
-            this.txtSenha.Size = new System.Drawing.Size(184, 35);
-            this.txtSenha.TabIndex = 3;
-            this.txtSenha.UseSystemPasswordChar = true;
+            txtSenha.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            txtSenha.Location = new Point(193, 239);
+            txtSenha.Name = "txtSenha";
+            txtSenha.PasswordChar = '*';
+            txtSenha.Size = new Size(184, 35);
+            txtSenha.TabIndex = 3;
+            txtSenha.UseSystemPasswordChar = true;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Leelawadee UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(193, 185);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 30);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "Senha";
+            label4.AutoSize = true;
+            label4.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(193, 185);
+            label4.Name = "label4";
+            label4.Size = new Size(72, 30);
+            label4.TabIndex = 13;
+            label4.Text = "Senha";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(536, -1);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(393, 505);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(536, -1);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(393, 505);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 15;
+            pictureBox1.TabStop = false;
             // 
             // btnreturn
             // 
-            this.btnreturn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(11)))), ((int)(((byte)(0)))));
-            this.btnreturn.BackgroundImage = global::GuizzoLtda.Properties.Resources._688879_arrows_512x512;
-            this.btnreturn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnreturn.FlatAppearance.BorderSize = 0;
-            this.btnreturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnreturn.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnreturn.ForeColor = System.Drawing.Color.Black;
-            this.btnreturn.Location = new System.Drawing.Point(37, 20);
-            this.btnreturn.Name = "btnreturn";
-            this.btnreturn.Size = new System.Drawing.Size(76, 62);
-            this.btnreturn.TabIndex = 17;
-            this.btnreturn.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnreturn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnreturn.UseVisualStyleBackColor = false;
+            btnreturn.BackColor = Color.FromArgb(173, 11, 0);
+            btnreturn.BackgroundImage = Properties.Resources._688879_arrows_512x512;
+            btnreturn.BackgroundImageLayout = ImageLayout.Stretch;
+            btnreturn.FlatAppearance.BorderSize = 0;
+            btnreturn.FlatStyle = FlatStyle.Flat;
+            btnreturn.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            btnreturn.ForeColor = Color.Black;
+            btnreturn.Location = new Point(37, 20);
+            btnreturn.Name = "btnreturn";
+            btnreturn.Size = new Size(76, 62);
+            btnreturn.TabIndex = 17;
+            btnreturn.TextAlign = ContentAlignment.TopLeft;
+            btnreturn.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnreturn.UseVisualStyleBackColor = false;
+            btnreturn.Click += btnreturn_Click;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Black;
-            this.pictureBox2.Location = new System.Drawing.Point(522, -1);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(18, 505);
-            this.pictureBox2.TabIndex = 18;
-            this.pictureBox2.TabStop = false;
+            pictureBox2.BackColor = Color.Black;
+            pictureBox2.Location = new Point(522, -1);
+            pictureBox2.Margin = new Padding(3, 2, 3, 2);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(18, 505);
+            pictureBox2.TabIndex = 18;
+            pictureBox2.TabStop = false;
             // 
             // FuncionarioCadLog
             // 
-            this.AcceptButton = this.btnLoginFunc;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(11)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(929, 505);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.btnreturn);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.txtSenha);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.btnLoginFunc);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtLogin);
-            this.Controls.Add(this.label1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "FuncionarioCadLog";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FuncionarioCadLog";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AcceptButton = btnLoginFunc;
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(173, 11, 0);
+            ClientSize = new Size(929, 505);
+            Controls.Add(pictureBox2);
+            Controls.Add(btnreturn);
+            Controls.Add(pictureBox1);
+            Controls.Add(txtSenha);
+            Controls.Add(label4);
+            Controls.Add(btnLoginFunc);
+            Controls.Add(label3);
+            Controls.Add(txtLogin);
+            Controls.Add(label1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Name = "FuncionarioCadLog";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "FuncionarioCadLog";
+            Load += FuncionarioCadLog_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

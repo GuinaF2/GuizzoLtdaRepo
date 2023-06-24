@@ -47,15 +47,15 @@ namespace GuizzoLtda
 
         private void btnConfirma_Click(object sender, EventArgs e)
         {
-             conexaosql = new Conexao();
-                    MySqlConnection con = conexaosql.getConexao();
-                    con.Open();
+            conexaosql = new Conexao();
+            MySqlConnection con = conexaosql.getConexao();
+            con.Open();
 
             MySqlCommand command = new MySqlCommand("SELECT `idpedido`, `statuspedido`, `nmrvolumes`, `valorpedido` FROM `student` WHERE `dtpedido` BETWEEN @d1 AND @d2", con);
-            
+
             command.Parameters.Add("@d1", MySqlDbType.Date).Value = dtPedido.Value;
             command.Parameters.Add("@d2", MySqlDbType.Date).Value = dtPedido2.Value;
-            
+
             dtgPedido.Visible = true;
             labelDtPedido.Visible = false;
             cbAberto.Visible = false;
@@ -78,6 +78,13 @@ namespace GuizzoLtda
         private void PedidoFunc_Load(object sender, EventArgs e)
         {
             dtgPedido.DataSource = conexaosql.verDados("SELECT * FROM tb_pedido");
+        }
+
+        private void btnReturnMenu_Click(object sender, EventArgs e)
+        {
+            FuncionarioMenu fmenufunc = new FuncionarioMenu(us,idcliente);
+            this.Hide();
+            fmenufunc.Show();
         }
     }
 }

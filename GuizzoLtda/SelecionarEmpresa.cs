@@ -81,7 +81,7 @@ namespace GuizzoLtda
 
         }
 
-        private void linkCadEmp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void linkCadEmp_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
             CadEmpresa fcadastro = new CadEmpresa();
             this.Hide();
@@ -92,5 +92,7 @@ namespace GuizzoLtda
         {
 
         }
+
+        
     }
 }

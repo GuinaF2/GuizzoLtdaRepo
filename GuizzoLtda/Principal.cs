@@ -31,14 +31,14 @@ namespace GuizzoLtda
             us = usu.CarregaEmpresa(idcliente);
         }
 
-        private void btnUsuario_Click_1(object sender, EventArgs e)
+        private void btnUsuario_Click(object sender, EventArgs e)
         {
             FuncionarioCadLog ffunccad = new FuncionarioCadLog();
             this.Hide();
             ffunccad.Show();
         }
 
-        private void btnAdmin_Click_1(object sender, EventArgs e)
+        private void btnAdmin_Click(object sender, EventArgs e)
         {
             AdminLogin fadminlog = new AdminLogin(us, idcliente);
             this.Hide();

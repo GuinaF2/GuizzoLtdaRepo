@@ -37,7 +37,7 @@ namespace GuizzoLtda
 
         }
 
-        private void btnLoginFunc_Click_1(object sender, EventArgs e)
+        private void btnLoginFunc_Click(object sender, EventArgs e)
         {
             UsuarioModelo.NomeUser = txtLogin.Text;
 
@@ -70,7 +70,7 @@ namespace GuizzoLtda
 
 
 
-        private void toolStripButton1_Click(object sender, EventArgs e)
+        private void btnreturn_Click(object sender, EventArgs e)
         {
             Principal fprincipalreturn = new Principal(us, idcliente);
             this.Hide();
@@ -78,11 +78,9 @@ namespace GuizzoLtda
         }
 
 
-        private void button1_Click(object sender, EventArgs e)
+        private void FuncionarioCadLog_Load(object sender, EventArgs e)
         {
-            Principal fprincipalreturn = new Principal(us, idcliente);
-            this.Hide();
-            fprincipalreturn.Show();
+
         }
     }
 }
