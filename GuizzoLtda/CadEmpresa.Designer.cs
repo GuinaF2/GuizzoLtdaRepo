@@ -66,16 +66,18 @@
             // 
             // btnEscolherFotoEmp
             // 
+            btnEscolherFotoEmp.BackColor = Color.Black;
             btnEscolherFotoEmp.FlatAppearance.BorderSize = 0;
             btnEscolherFotoEmp.FlatStyle = FlatStyle.Flat;
-            btnEscolherFotoEmp.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            btnEscolherFotoEmp.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            btnEscolherFotoEmp.ForeColor = Color.White;
             btnEscolherFotoEmp.Location = new Point(499, 235);
             btnEscolherFotoEmp.Margin = new Padding(3, 4, 3, 4);
             btnEscolherFotoEmp.Name = "btnEscolherFotoEmp";
             btnEscolherFotoEmp.Size = new Size(263, 73);
             btnEscolherFotoEmp.TabIndex = 0;
             btnEscolherFotoEmp.Text = "Escolher Foto";
-            btnEscolherFotoEmp.UseVisualStyleBackColor = true;
+            btnEscolherFotoEmp.UseVisualStyleBackColor = false;
             btnEscolherFotoEmp.Click += btnEscolherFotoEmp_Click;
             // 
             // pbFotoEmp
@@ -92,7 +94,8 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Font = new Font("Leelawadee UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = Color.Black;
             label1.Location = new Point(29, 33);
             label1.Name = "label1";
             label1.Size = new Size(122, 28);
@@ -102,8 +105,9 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(29, 109);
+            label2.Font = new Font("Leelawadee UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.ForeColor = Color.Black;
+            label2.Location = new Point(29, 131);
             label2.Name = "label2";
             label2.Size = new Size(52, 28);
             label2.TabIndex = 3;
@@ -112,8 +116,9 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(29, 197);
+            label3.Font = new Font("Leelawadee UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.ForeColor = Color.Black;
+            label3.Location = new Point(29, 250);
             label3.Name = "label3";
             label3.Size = new Size(166, 28);
             label3.TabIndex = 4;
@@ -122,10 +127,10 @@
             // txtRazaosoc
             // 
             txtRazaosoc.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtRazaosoc.Location = new Point(34, 68);
+            txtRazaosoc.Location = new Point(29, 74);
             txtRazaosoc.Margin = new Padding(3, 4, 3, 4);
             txtRazaosoc.Name = "txtRazaosoc";
-            txtRazaosoc.Size = new Size(251, 34);
+            txtRazaosoc.Size = new Size(250, 34);
             txtRazaosoc.TabIndex = 6;
             txtRazaosoc.KeyPress += txtRazaosoc_KeyPress;
             // 
@@ -135,14 +140,14 @@
             txtBairro.Location = new Point(42, 127);
             txtBairro.Margin = new Padding(3, 4, 3, 4);
             txtBairro.Name = "txtBairro";
-            txtBairro.Size = new Size(251, 34);
+            txtBairro.Size = new Size(250, 34);
             txtBairro.TabIndex = 11;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(48, 28);
+            label5.Font = new Font("Leelawadee UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Location = new Point(42, 28);
             label5.Name = "label5";
             label5.Size = new Size(45, 28);
             label5.TabIndex = 13;
@@ -151,7 +156,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.Font = new Font("Leelawadee UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label6.Location = new Point(42, 95);
             label6.Name = "label6";
             label6.Size = new Size(64, 28);
@@ -161,8 +166,8 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(42, 177);
+            label7.Font = new Font("Leelawadee UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label7.Location = new Point(42, 165);
             label7.Name = "label7";
             label7.Size = new Size(46, 28);
             label7.TabIndex = 15;
@@ -171,8 +176,8 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(610, 95);
+            label8.Font = new Font("Leelawadee UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label8.Location = new Point(610, 113);
             label8.Name = "label8";
             label8.Size = new Size(137, 28);
             label8.TabIndex = 19;
@@ -181,7 +186,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label9.Font = new Font("Leelawadee UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label9.Location = new Point(610, 16);
             label9.Name = "label9";
             label9.Size = new Size(84, 28);
@@ -191,19 +196,20 @@
             // txtComple
             // 
             txtComple.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtComple.Location = new Point(610, 127);
+            txtComple.Location = new Point(610, 159);
             txtComple.Margin = new Padding(3, 4, 3, 4);
             txtComple.Name = "txtComple";
-            txtComple.Size = new Size(114, 34);
+            txtComple.Size = new Size(137, 34);
             txtComple.TabIndex = 17;
             txtComple.KeyPress += txtComple_KeyPress;
             // 
             // btnCadEndereco
             // 
-            btnCadEndereco.BackColor = Color.Transparent;
+            btnCadEndereco.BackColor = Color.Black;
             btnCadEndereco.FlatStyle = FlatStyle.Flat;
             btnCadEndereco.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            btnCadEndereco.Location = new Point(325, 511);
+            btnCadEndereco.ForeColor = Color.White;
+            btnCadEndereco.Location = new Point(263, 526);
             btnCadEndereco.Margin = new Padding(3, 4, 3, 4);
             btnCadEndereco.Name = "btnCadEndereco";
             btnCadEndereco.Size = new Size(263, 73);
@@ -226,7 +232,7 @@
             // 
             // tabPage1
             // 
-            tabPage1.BackColor = Color.WhiteSmoke;
+            tabPage1.BackColor = Color.Goldenrod;
             tabPage1.Controls.Add(txtIncEstad);
             tabPage1.Controls.Add(txtCnpj);
             tabPage1.Controls.Add(toolStrip1);
@@ -244,19 +250,21 @@
             // 
             // txtIncEstad
             // 
-            txtIncEstad.Location = new Point(34, 263);
+            txtIncEstad.Location = new Point(29, 319);
             txtIncEstad.Margin = new Padding(3, 4, 3, 4);
+            txtIncEstad.Multiline = true;
             txtIncEstad.Name = "txtIncEstad";
-            txtIncEstad.Size = new Size(159, 27);
+            txtIncEstad.Size = new Size(250, 35);
             txtIncEstad.TabIndex = 13;
             txtIncEstad.KeyPress += txtIncEstad_KeyPress_1;
             // 
             // txtCnpj
             // 
-            txtCnpj.Location = new Point(34, 163);
+            txtCnpj.Location = new Point(29, 182);
             txtCnpj.Margin = new Padding(3, 4, 3, 4);
+            txtCnpj.Multiline = true;
             txtCnpj.Name = "txtCnpj";
-            txtCnpj.Size = new Size(195, 27);
+            txtCnpj.Size = new Size(250, 34);
             txtCnpj.TabIndex = 12;
             txtCnpj.KeyPress += txtCnpj_KeyPress_1;
             // 
@@ -282,6 +290,7 @@
             // 
             // tabPage2
             // 
+            tabPage2.BackColor = Color.Goldenrod;
             tabPage2.Controls.Add(txtCep);
             tabPage2.Controls.Add(cbUniFed);
             tabPage2.Controls.Add(labelunidadefederal);
@@ -301,14 +310,13 @@
             tabPage2.Size = new Size(907, 462);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Endereço";
-            tabPage2.UseVisualStyleBackColor = true;
             // 
             // txtCep
             // 
-            txtCep.Location = new Point(42, 209);
+            txtCep.Location = new Point(42, 213);
             txtCep.Margin = new Padding(3, 4, 3, 4);
             txtCep.Name = "txtCep";
-            txtCep.Size = new Size(114, 27);
+            txtCep.Size = new Size(250, 27);
             txtCep.TabIndex = 26;
             txtCep.KeyPress += txtCep_KeyPress_2;
             // 
@@ -317,17 +325,17 @@
             cbUniFed.DropDownStyle = ComboBoxStyle.DropDownList;
             cbUniFed.FormattingEnabled = true;
             cbUniFed.Items.AddRange(new object[] { "Acre (AC)", "Alagoas (AL)\t", "Amapá (AP)\t", "Amazonas (AM)\t", "Bahia (BA)\tSalvador\t", "Ceará (CE)\tFortaleza\t", "Distrito Federal (DF)\t", "Espírito Santo (ES)\t", "Goiás (GO)\t", "Maranhão (MA)\t", "Mato Grosso (MT)\t", "Mato Grosso do Sul (MS)", "Minas Gerais (MG)\t", "Pará (PA)\tBelém\t", "Paraíba (PB)\t", "Paraná (PR)\t", "Pernambuco (PE)\t", "Piauí (PI)\tTeresina\t", "Rio de Janeiro (RJ)\t", "Rio Grande do Norte (RN)", "Rio Grande do Sul (RS)", "Rondônia (RO)\t", "Roraima (RR)\t", "Santa Catarina (SC)\t", "São Paulo (SP)\t", "Sergipe (SE)\t", "Tocantins (TO)" });
-            cbUniFed.Location = new Point(48, 276);
+            cbUniFed.Location = new Point(42, 287);
             cbUniFed.Margin = new Padding(3, 4, 3, 4);
             cbUniFed.Name = "cbUniFed";
-            cbUniFed.Size = new Size(225, 28);
+            cbUniFed.Size = new Size(250, 28);
             cbUniFed.TabIndex = 25;
             cbUniFed.TextChanged += cbUniFed_TextChanged;
             // 
             // labelunidadefederal
             // 
             labelunidadefederal.AutoSize = true;
-            labelunidadefederal.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            labelunidadefederal.Font = new Font("Leelawadee UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             labelunidadefederal.Location = new Point(42, 244);
             labelunidadefederal.Name = "labelunidadefederal";
             labelunidadefederal.Size = new Size(155, 28);
@@ -339,7 +347,7 @@
             txtNumero.Location = new Point(610, 60);
             txtNumero.Margin = new Padding(3, 4, 3, 4);
             txtNumero.Name = "txtNumero";
-            txtNumero.Size = new Size(114, 27);
+            txtNumero.Size = new Size(137, 27);
             txtNumero.TabIndex = 23;
             txtNumero.TextChanged += txtNumero_TextChanged;
             txtNumero.KeyPress += txtNumero_KeyPress_1;
@@ -351,13 +359,14 @@
             txtRua.Margin = new Padding(3, 4, 3, 4);
             txtRua.Name = "txtRua";
             txtRua.ShortcutsEnabled = false;
-            txtRua.Size = new Size(257, 27);
+            txtRua.Size = new Size(250, 27);
             txtRua.TabIndex = 22;
             txtRua.MaskInputRejected += txtRua_MaskInputRejected;
             txtRua.KeyPress += txtRua_KeyPress;
             // 
             // tabPage3
             // 
+            tabPage3.BackColor = Color.Goldenrod;
             tabPage3.Controls.Add(pbFotoEmp);
             tabPage3.Controls.Add(btnEscolherFotoEmp);
             tabPage3.Controls.Add(textBox1);
@@ -368,7 +377,6 @@
             tabPage3.Size = new Size(907, 462);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Imagem";
-            tabPage3.UseVisualStyleBackColor = true;
             tabPage3.Click += tabPage3_Click;
             // 
             // textBox1
@@ -385,6 +393,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(173, 11, 0);
             ClientSize = new Size(1062, 673);
             Controls.Add(tabControl1);
             Controls.Add(btnCadEndereco);

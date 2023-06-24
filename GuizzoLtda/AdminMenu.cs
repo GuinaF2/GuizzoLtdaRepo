@@ -110,5 +110,10 @@ namespace GuizzoLtda
             fmapago.Show();
             Hide();
         }
+
+        private void toolStripSeparator5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

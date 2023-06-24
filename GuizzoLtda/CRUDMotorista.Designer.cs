@@ -67,19 +67,20 @@
             dataGridMotorista.AllowUserToAddRows = false;
             dataGridMotorista.AllowUserToDeleteRows = false;
             dataGridMotorista.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridMotorista.Location = new Point(470, -1);
+            dataGridMotorista.Location = new Point(660, 0);
             dataGridMotorista.Margin = new Padding(3, 4, 3, 4);
             dataGridMotorista.Name = "dataGridMotorista";
             dataGridMotorista.ReadOnly = true;
             dataGridMotorista.RowHeadersWidth = 51;
             dataGridMotorista.RowTemplate.Height = 25;
-            dataGridMotorista.Size = new Size(445, 604);
+            dataGridMotorista.Size = new Size(402, 675);
             dataGridMotorista.TabIndex = 23;
             dataGridMotorista.CellClick += dataGridMotorista_CellClick;
             dataGridMotorista.CellContentClick += dataGridMotorista_CellContentClick;
             // 
             // toolStrip1
             // 
+            toolStrip1.BackColor = Color.Black;
             toolStrip1.ImageScalingSize = new Size(20, 20);
             toolStrip1.Items.AddRange(new ToolStripItem[] { btnReturn, btnAtualizar, toolStripSeparator1, btnCad, toolStripSeparator2, btnApaga, toolStripSeparator, ajudaToolStripButton });
             toolStrip1.Location = new Point(0, 0);
@@ -90,6 +91,7 @@
             // 
             // btnReturn
             // 
+            btnReturn.BackColor = Color.Goldenrod;
             btnReturn.DisplayStyle = ToolStripItemDisplayStyle.Image;
             btnReturn.Image = (Image)resources.GetObject("btnReturn.Image");
             btnReturn.ImageTransparentColor = Color.Magenta;
@@ -101,6 +103,7 @@
             // btnAtualizar
             // 
             btnAtualizar.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            btnAtualizar.ForeColor = Color.Goldenrod;
             btnAtualizar.Image = (Image)resources.GetObject("btnAtualizar.Image");
             btnAtualizar.ImageTransparentColor = Color.Magenta;
             btnAtualizar.Name = "btnAtualizar";
@@ -116,6 +119,7 @@
             // btnCad
             // 
             btnCad.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            btnCad.ForeColor = Color.Goldenrod;
             btnCad.Image = (Image)resources.GetObject("btnCad.Image");
             btnCad.ImageTransparentColor = Color.Magenta;
             btnCad.Name = "btnCad";
@@ -131,6 +135,7 @@
             // btnApaga
             // 
             btnApaga.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            btnApaga.ForeColor = Color.Goldenrod;
             btnApaga.Image = (Image)resources.GetObject("btnApaga.Image");
             btnApaga.ImageTransparentColor = Color.Magenta;
             btnApaga.Name = "btnApaga";
@@ -155,40 +160,42 @@
             // labelrg
             // 
             labelrg.AutoSize = true;
-            labelrg.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            labelrg.Location = new Point(278, 264);
+            labelrg.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            labelrg.ForeColor = Color.Goldenrod;
+            labelrg.Location = new Point(29, 269);
             labelrg.Name = "labelrg";
-            labelrg.Size = new Size(184, 37);
+            labelrg.Size = new Size(192, 38);
             labelrg.TabIndex = 22;
             labelrg.Text = "Registro Geral";
             // 
             // labelcpf
             // 
             labelcpf.AutoSize = true;
-            labelcpf.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            labelcpf.Location = new Point(278, 181);
+            labelcpf.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            labelcpf.ForeColor = Color.Goldenrod;
+            labelcpf.Location = new Point(29, 175);
             labelcpf.Name = "labelcpf";
-            labelcpf.Size = new Size(58, 37);
+            labelcpf.Size = new Size(59, 38);
             labelcpf.TabIndex = 21;
             labelcpf.Text = "Cpf";
             // 
             // txtRg
             // 
             txtRg.BackColor = Color.White;
-            txtRg.Location = new Point(278, 308);
+            txtRg.Location = new Point(29, 319);
             txtRg.Margin = new Padding(3, 4, 3, 4);
             txtRg.Name = "txtRg";
-            txtRg.Size = new Size(142, 27);
+            txtRg.Size = new Size(211, 27);
             txtRg.TabIndex = 20;
             txtRg.KeyPress += txtRg_KeyPress;
             // 
             // txtCpf
             // 
             txtCpf.BackColor = Color.White;
-            txtCpf.Location = new Point(278, 225);
+            txtCpf.Location = new Point(29, 225);
             txtCpf.Margin = new Padding(3, 4, 3, 4);
             txtCpf.Name = "txtCpf";
-            txtCpf.Size = new Size(142, 27);
+            txtCpf.Size = new Size(211, 27);
             txtCpf.TabIndex = 19;
             txtCpf.KeyPress += txtCpf_KeyPress;
             // 
@@ -196,7 +203,7 @@
             // 
             txtIdMoto.BackColor = Color.White;
             txtIdMoto.Enabled = false;
-            txtIdMoto.Location = new Point(29, 256);
+            txtIdMoto.Location = new Point(363, 129);
             txtIdMoto.Margin = new Padding(3, 4, 3, 4);
             txtIdMoto.Name = "txtIdMoto";
             txtIdMoto.Size = new Size(142, 27);
@@ -205,86 +212,95 @@
             // labelIdMoto
             // 
             labelIdMoto.AutoSize = true;
-            labelIdMoto.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            labelIdMoto.Location = new Point(29, 212);
+            labelIdMoto.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            labelIdMoto.ForeColor = Color.Orange;
+            labelIdMoto.Location = new Point(363, 87);
             labelIdMoto.Name = "labelIdMoto";
-            labelIdMoto.Size = new Size(227, 37);
+            labelIdMoto.Size = new Size(231, 38);
             labelIdMoto.TabIndex = 17;
             labelIdMoto.Text = "Codigo Motorista";
             // 
             // SaveCreate
             // 
-            SaveCreate.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            SaveCreate.Location = new Point(78, 403);
+            SaveCreate.BackColor = Color.Black;
+            SaveCreate.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            SaveCreate.ForeColor = Color.Goldenrod;
+            SaveCreate.Location = new Point(114, 566);
             SaveCreate.Margin = new Padding(3, 4, 3, 4);
             SaveCreate.Name = "SaveCreate";
             SaveCreate.Size = new Size(343, 67);
             SaveCreate.TabIndex = 16;
             SaveCreate.Text = "Salvar Cadastro";
-            SaveCreate.UseVisualStyleBackColor = true;
+            SaveCreate.UseVisualStyleBackColor = false;
             SaveCreate.Visible = false;
             SaveCreate.Click += SaveCreate_Click;
             // 
             // SaveDelete
             // 
-            SaveDelete.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            SaveDelete.Location = new Point(67, 460);
+            SaveDelete.BackColor = Color.Black;
+            SaveDelete.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            SaveDelete.ForeColor = Color.Goldenrod;
+            SaveDelete.Location = new Point(114, 566);
             SaveDelete.Margin = new Padding(3, 4, 3, 4);
             SaveDelete.Name = "SaveDelete";
             SaveDelete.Size = new Size(343, 67);
             SaveDelete.TabIndex = 15;
             SaveDelete.Text = "Salvar Alteração";
-            SaveDelete.UseVisualStyleBackColor = true;
+            SaveDelete.UseVisualStyleBackColor = false;
             SaveDelete.Visible = false;
             SaveDelete.Click += SaveDelete_Click;
             // 
             // SaveUpdate
             // 
-            SaveUpdate.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            SaveUpdate.Location = new Point(57, 517);
+            SaveUpdate.BackColor = Color.Black;
+            SaveUpdate.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            SaveUpdate.ForeColor = Color.Goldenrod;
+            SaveUpdate.Location = new Point(114, 566);
             SaveUpdate.Margin = new Padding(3, 4, 3, 4);
             SaveUpdate.Name = "SaveUpdate";
             SaveUpdate.Size = new Size(343, 67);
             SaveUpdate.TabIndex = 14;
             SaveUpdate.Text = "Salvar Alteração";
-            SaveUpdate.UseVisualStyleBackColor = true;
+            SaveUpdate.UseVisualStyleBackColor = false;
             SaveUpdate.Visible = false;
             SaveUpdate.Click += SaveUpdate_Click;
             // 
             // labelNome
             // 
             labelNome.AutoSize = true;
-            labelNome.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            labelNome.Location = new Point(278, 103);
+            labelNome.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            labelNome.ForeColor = Color.Goldenrod;
+            labelNome.Location = new Point(29, 88);
             labelNome.Name = "labelNome";
-            labelNome.Size = new Size(90, 37);
+            labelNome.Size = new Size(93, 38);
             labelNome.TabIndex = 30;
             labelNome.Text = "Nome";
             // 
             // labelIdVeiculo
             // 
             labelIdVeiculo.AutoSize = true;
-            labelIdVeiculo.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            labelIdVeiculo.Location = new Point(29, 291);
+            labelIdVeiculo.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            labelIdVeiculo.ForeColor = Color.Goldenrod;
+            labelIdVeiculo.Location = new Point(363, 183);
             labelIdVeiculo.Name = "labelIdVeiculo";
-            labelIdVeiculo.Size = new Size(198, 37);
+            labelIdVeiculo.Size = new Size(204, 38);
             labelIdVeiculo.TabIndex = 29;
             labelIdVeiculo.Text = "Codigo Veiculo";
             // 
             // txtNome
             // 
             txtNome.BackColor = Color.White;
-            txtNome.Location = new Point(278, 147);
+            txtNome.Location = new Point(29, 129);
             txtNome.Margin = new Padding(3, 4, 3, 4);
             txtNome.Name = "txtNome";
-            txtNome.Size = new Size(142, 27);
+            txtNome.Size = new Size(211, 27);
             txtNome.TabIndex = 28;
             txtNome.KeyPress += txtNome_KeyPress;
             // 
             // txtIdVeiculo
             // 
             txtIdVeiculo.BackColor = Color.White;
-            txtIdVeiculo.Location = new Point(29, 335);
+            txtIdVeiculo.Location = new Point(363, 225);
             txtIdVeiculo.Margin = new Padding(3, 4, 3, 4);
             txtIdVeiculo.Name = "txtIdVeiculo";
             txtIdVeiculo.ReadOnly = true;
@@ -296,30 +312,33 @@
             // labelcodigo
             // 
             labelcodigo.AutoSize = true;
-            labelcodigo.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            labelcodigo.Location = new Point(57, 140);
+            labelcodigo.Font = new Font("Leelawadee UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            labelcodigo.ForeColor = Color.White;
+            labelcodigo.Location = new Point(363, 27);
             labelcodigo.Name = "labelcodigo";
-            labelcodigo.Size = new Size(101, 32);
+            labelcodigo.Size = new Size(101, 31);
             labelcodigo.TabIndex = 31;
             labelcodigo.Text = "Códigos";
             // 
             // labelinfo
             // 
             labelinfo.AutoSize = true;
-            labelinfo.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            labelinfo.Location = new Point(278, 55);
+            labelinfo.Font = new Font("Leelawadee UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            labelinfo.ForeColor = Color.White;
+            labelinfo.Location = new Point(29, 27);
             labelinfo.Name = "labelinfo";
-            labelinfo.Size = new Size(145, 32);
+            labelinfo.Size = new Size(147, 31);
             labelinfo.TabIndex = 32;
             labelinfo.Text = "Informações";
             // 
             // labelcnh
             // 
             labelcnh.AutoSize = true;
-            labelcnh.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            labelcnh.Location = new Point(261, 349);
+            labelcnh.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            labelcnh.ForeColor = Color.Goldenrod;
+            labelcnh.Location = new Point(29, 364);
             labelcnh.Name = "labelcnh";
-            labelcnh.Size = new Size(211, 28);
+            labelcnh.Size = new Size(297, 38);
             labelcnh.TabIndex = 34;
             labelcnh.Text = "Carteira de Habilitação";
             labelcnh.Click += label1_Click;
@@ -327,20 +346,21 @@
             // txtCnh
             // 
             txtCnh.BackColor = Color.White;
-            txtCnh.Location = new Point(278, 381);
+            txtCnh.Location = new Point(29, 418);
             txtCnh.Margin = new Padding(3, 4, 3, 4);
             txtCnh.Name = "txtCnh";
-            txtCnh.Size = new Size(142, 27);
+            txtCnh.Size = new Size(211, 27);
             txtCnh.TabIndex = 33;
             txtCnh.KeyPress += txtCnh_KeyPress;
             // 
             // labeltipocnh
             // 
             labeltipocnh.AutoSize = true;
-            labeltipocnh.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            labeltipocnh.Location = new Point(257, 416);
+            labeltipocnh.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            labeltipocnh.ForeColor = Color.Goldenrod;
+            labeltipocnh.Location = new Point(363, 277);
             labeltipocnh.Name = "labeltipocnh";
-            labeltipocnh.Size = new Size(207, 37);
+            labeltipocnh.Size = new Size(214, 38);
             labeltipocnh.TabIndex = 36;
             labeltipocnh.Text = "Tipo de Carteira";
             // 
@@ -348,7 +368,7 @@
             // 
             cbTipoCnh.FormattingEnabled = true;
             cbTipoCnh.Items.AddRange(new object[] { "A", "B", "C", "D", "E" });
-            cbTipoCnh.Location = new Point(317, 460);
+            cbTipoCnh.Location = new Point(363, 319);
             cbTipoCnh.Margin = new Padding(3, 4, 3, 4);
             cbTipoCnh.Name = "cbTipoCnh";
             cbTipoCnh.Size = new Size(62, 28);
@@ -358,6 +378,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(173, 11, 0);
             ClientSize = new Size(1062, 673);
             Controls.Add(cbTipoCnh);
             Controls.Add(labeltipocnh);
