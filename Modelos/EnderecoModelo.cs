@@ -17,6 +17,8 @@ namespace Modelos
         private string numero;
         private string complemento;
         private string unidade_federal;
+        private string cidade;
+        private string estado;
 
         public EnderecoModelo()
         {
@@ -27,6 +29,8 @@ namespace Modelos
             numero = "";
             complemento = "";
             unidade_federal = "";
+            cidade = "";
+            estado = "";
         }
 
         public int CodEndereco
@@ -70,6 +74,18 @@ namespace Modelos
         {
             get { return unidade_federal; }
             set { unidade_federal= value; }
+
+        }
+        public string CidadeUser
+        {
+            get { return cidade; }
+            set { cidade = value; }
+
+        }
+        public string EstadoUser
+        {
+            get { return estado; }
+            set { estado = value; }
 
         }
     }

@@ -34,7 +34,7 @@ namespace GuizzoLtda
         private void SelecionarVeiculo_Load(object sender, EventArgs e)
         {
             us = usu.CarregaEmpresa(idcliente);
-            MessageBox.Show(us.CodCliente.ToString());
+
             dgSelectVeiculo.DataSource = conexaosql.verDados("SELECT idveiculo,placa_motorista,tipo_veiculo,seguro_data,renavam FROM tb_veiculo");
         }
 

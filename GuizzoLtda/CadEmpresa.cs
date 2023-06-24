@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using Correios.Net;
 
 namespace GuizzoLtda
 {
@@ -97,9 +98,11 @@ namespace GuizzoLtda
 
             EnderecoModelo.CompUser = txtComple.Text;
 
-            EnderecoModelo.UniFederalUser = cbUniFed.Text;
+            EnderecoModelo.CidadeUser = txtCidade.Text;
 
-            if (cbUniFed.Text == "" || textBox1.Text == "" || txtCnpj.Text == "" || txtRazaosoc.Text == "" || txtIncEstad.Text == "" || txtRua.Text == "" || txtBairro.Text == "" || txtCep.Text == "" || txtNumero.Text == "")
+            EnderecoModelo.EstadoUser = txtEstado.Text;
+
+            if (txtComple.Text == "" || txtNumero.Text == "")
             {
                 MessageBox.Show("Preencha todos os campos.");
 
@@ -191,11 +194,7 @@ namespace GuizzoLtda
 
         private void txtCep_KeyPress_2(object sender, KeyPressEventArgs e)
         {
-            txtCep.MaxLength = 8;
-            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
-            {
-                e.Handled = true;
-            }
+
         }
 
         private void txtCnpj_KeyPress_1(object sender, KeyPressEventArgs e)
@@ -215,5 +214,51 @@ namespace GuizzoLtda
                 e.Handled = true;
             }
         }
+
+       
+       
+
+        private void txtCep_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCidade_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCep_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCep_Leave_1(object sender, EventArgs e)
+        {
+            LocalizarCEP();
+        }
+        private void LocalizarCEP()
+        {
+            if (!string.IsNullOrWhiteSpace(txtCep.Text))
+            {
+                Address endereco = SearchZip.GetAddress("15000000");
+                if (endereco.Zip != null)
+                {
+                    txtEstado.Text = endereco.State;
+                    txtCidade.Text = endereco.City;
+                    txtBairro.Text = endereco.District;
+                    txtRua.Text = endereco.Street;
+                }
+                else
+                {
+                    MessageBox.Show("Cep não localizado...");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Informe um CEP válido");
+            }
+        }
+
     }
 }
