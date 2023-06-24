@@ -48,6 +48,7 @@
             // 
             // toolStrip1
             // 
+            toolStrip1.BackColor = Color.Black;
             toolStrip1.ImageScalingSize = new Size(20, 20);
             toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton2, toolStripSeparator1, btnVerifyEmp, toolStripSeparator3, btnConfirmarPedi, toolStripSeparator5, toolStripButton3, toolStripSeparator2, toolStripButton4, toolStripSeparator4, toolStripButton5 });
             toolStrip1.Location = new Point(0, 0);
@@ -58,6 +59,7 @@
             // 
             // toolStripButton2
             // 
+            toolStripButton2.BackColor = Color.Goldenrod;
             toolStripButton2.DisplayStyle = ToolStripItemDisplayStyle.Image;
             toolStripButton2.Image = Properties.Resources._688879_arrows_512x512;
             toolStripButton2.ImageTransparentColor = Color.Magenta;
@@ -74,6 +76,7 @@
             // btnVerifyEmp
             // 
             btnVerifyEmp.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            btnVerifyEmp.ForeColor = Color.Goldenrod;
             btnVerifyEmp.Image = (Image)resources.GetObject("btnVerifyEmp.Image");
             btnVerifyEmp.ImageTransparentColor = Color.Magenta;
             btnVerifyEmp.Name = "btnVerifyEmp";
@@ -90,6 +93,7 @@
             // btnConfirmarPedi
             // 
             btnConfirmarPedi.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            btnConfirmarPedi.ForeColor = Color.Goldenrod;
             btnConfirmarPedi.Image = (Image)resources.GetObject("btnConfirmarPedi.Image");
             btnConfirmarPedi.ImageTransparentColor = Color.Magenta;
             btnConfirmarPedi.Name = "btnConfirmarPedi";
@@ -106,6 +110,7 @@
             // toolStripButton3
             // 
             toolStripButton3.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            toolStripButton3.ForeColor = Color.Goldenrod;
             toolStripButton3.Image = (Image)resources.GetObject("toolStripButton3.Image");
             toolStripButton3.ImageTransparentColor = Color.Magenta;
             toolStripButton3.Name = "toolStripButton3";
@@ -122,6 +127,7 @@
             // toolStripButton4
             // 
             toolStripButton4.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            toolStripButton4.ForeColor = Color.Goldenrod;
             toolStripButton4.Image = (Image)resources.GetObject("toolStripButton4.Image");
             toolStripButton4.ImageTransparentColor = Color.Magenta;
             toolStripButton4.Name = "toolStripButton4";
@@ -138,6 +144,7 @@
             // toolStripButton5
             // 
             toolStripButton5.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            toolStripButton5.ForeColor = Color.Goldenrod;
             toolStripButton5.Image = (Image)resources.GetObject("toolStripButton5.Image");
             toolStripButton5.ImageTransparentColor = Color.Magenta;
             toolStripButton5.Name = "toolStripButton5";
@@ -148,10 +155,10 @@
             // pbFotoMenuFunc
             // 
             pbFotoMenuFunc.BorderStyle = BorderStyle.Fixed3D;
-            pbFotoMenuFunc.Location = new Point(489, 37);
+            pbFotoMenuFunc.Location = new Point(621, 27);
             pbFotoMenuFunc.Margin = new Padding(3, 4, 3, 4);
             pbFotoMenuFunc.Name = "pbFotoMenuFunc";
-            pbFotoMenuFunc.Size = new Size(425, 561);
+            pbFotoMenuFunc.Size = new Size(441, 650);
             pbFotoMenuFunc.SizeMode = PictureBoxSizeMode.StretchImage;
             pbFotoMenuFunc.TabIndex = 1;
             pbFotoMenuFunc.TabStop = false;
@@ -160,9 +167,11 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(173, 11, 0);
             ClientSize = new Size(1062, 673);
             Controls.Add(toolStrip1);
             Controls.Add(pbFotoMenuFunc);
+            ForeColor = Color.Goldenrod;
             Margin = new Padding(3, 4, 3, 4);
             Name = "FuncionarioMenu";
             StartPosition = FormStartPosition.CenterScreen;

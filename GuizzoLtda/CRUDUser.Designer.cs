@@ -56,19 +56,20 @@
             dataGridCRUD.AllowUserToAddRows = false;
             dataGridCRUD.AllowUserToDeleteRows = false;
             dataGridCRUD.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridCRUD.Location = new Point(470, -1);
+            dataGridCRUD.Location = new Point(605, 27);
             dataGridCRUD.Margin = new Padding(3, 4, 3, 4);
             dataGridCRUD.Name = "dataGridCRUD";
             dataGridCRUD.ReadOnly = true;
             dataGridCRUD.RowHeadersWidth = 51;
             dataGridCRUD.RowTemplate.Height = 25;
-            dataGridCRUD.Size = new Size(445, 604);
+            dataGridCRUD.Size = new Size(457, 648);
             dataGridCRUD.TabIndex = 36;
             dataGridCRUD.CellClick += dataGridCRUD_CellClick;
             dataGridCRUD.CellContentClick += dataGridCRUD_CellContentClick_1;
             // 
             // toolStrip1
             // 
+            toolStrip1.BackColor = Color.Black;
             toolStrip1.ImageScalingSize = new Size(20, 20);
             toolStrip1.Items.AddRange(new ToolStripItem[] { btnReturn, btnAtualizar, toolStripSeparator1, btnCad, toolStripSeparator2, ajudaToolStripButton });
             toolStrip1.Location = new Point(0, 0);
@@ -79,6 +80,7 @@
             // 
             // btnReturn
             // 
+            btnReturn.BackColor = Color.Goldenrod;
             btnReturn.DisplayStyle = ToolStripItemDisplayStyle.Image;
             btnReturn.Image = (Image)resources.GetObject("btnReturn.Image");
             btnReturn.ImageTransparentColor = Color.Magenta;
@@ -129,9 +131,11 @@
             // labelcargo
             // 
             labelcargo.AutoSize = true;
-            labelcargo.Location = new Point(154, 392);
+            labelcargo.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            labelcargo.ForeColor = Color.White;
+            labelcargo.Location = new Point(400, 59);
             labelcargo.Name = "labelcargo";
-            labelcargo.Size = new Size(49, 20);
+            labelcargo.Size = new Size(50, 20);
             labelcargo.TabIndex = 38;
             labelcargo.Text = "Cargo";
             // 
@@ -140,7 +144,7 @@
             cbCargo.DropDownStyle = ComboBoxStyle.DropDownList;
             cbCargo.FormattingEnabled = true;
             cbCargo.Items.AddRange(new object[] { "1", "2" });
-            cbCargo.Location = new Point(225, 388);
+            cbCargo.Location = new Point(470, 56);
             cbCargo.Margin = new Padding(3, 4, 3, 4);
             cbCargo.Name = "cbCargo";
             cbCargo.Size = new Size(71, 28);
@@ -150,7 +154,8 @@
             // 
             labelsenha.AutoSize = true;
             labelsenha.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            labelsenha.Location = new Point(154, 264);
+            labelsenha.ForeColor = Color.White;
+            labelsenha.Location = new Point(75, 308);
             labelsenha.Name = "labelsenha";
             labelsenha.Size = new Size(89, 37);
             labelsenha.TabIndex = 35;
@@ -160,7 +165,8 @@
             // 
             labelnome.AutoSize = true;
             labelnome.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            labelnome.Location = new Point(154, 185);
+            labelnome.ForeColor = Color.White;
+            labelnome.Location = new Point(75, 178);
             labelnome.Name = "labelnome";
             labelnome.Size = new Size(90, 37);
             labelnome.TabIndex = 34;
@@ -169,7 +175,7 @@
             // txtSenha
             // 
             txtSenha.BackColor = Color.White;
-            txtSenha.Location = new Point(154, 308);
+            txtSenha.Location = new Point(75, 369);
             txtSenha.Margin = new Padding(3, 4, 3, 4);
             txtSenha.Name = "txtSenha";
             txtSenha.Size = new Size(142, 27);
@@ -180,7 +186,7 @@
             // txtNome
             // 
             txtNome.BackColor = Color.White;
-            txtNome.Location = new Point(154, 229);
+            txtNome.Location = new Point(75, 247);
             txtNome.Margin = new Padding(3, 4, 3, 4);
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(142, 27);
@@ -193,7 +199,7 @@
             // 
             txtID.BackColor = Color.White;
             txtID.Enabled = false;
-            txtID.Location = new Point(154, 133);
+            txtID.Location = new Point(75, 124);
             txtID.Margin = new Padding(3, 4, 3, 4);
             txtID.Name = "txtID";
             txtID.Size = new Size(142, 27);
@@ -204,7 +210,8 @@
             // 
             labelid.AutoSize = true;
             labelid.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            labelid.Location = new Point(154, 89);
+            labelid.ForeColor = Color.White;
+            labelid.Location = new Point(75, 59);
             labelid.Name = "labelid";
             labelid.Size = new Size(138, 37);
             labelid.TabIndex = 30;
@@ -212,27 +219,31 @@
             // 
             // SaveCreate
             // 
+            SaveCreate.BackColor = Color.Black;
             SaveCreate.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            SaveCreate.Location = new Point(57, 451);
+            SaveCreate.ForeColor = Color.Goldenrod;
+            SaveCreate.Location = new Point(107, 495);
             SaveCreate.Margin = new Padding(3, 4, 3, 4);
             SaveCreate.Name = "SaveCreate";
             SaveCreate.Size = new Size(343, 67);
             SaveCreate.TabIndex = 29;
             SaveCreate.Text = "Salvar Cadastro";
-            SaveCreate.UseVisualStyleBackColor = true;
+            SaveCreate.UseVisualStyleBackColor = false;
             SaveCreate.Visible = false;
             SaveCreate.Click += SaveCreate_Click_1;
             // 
             // SaveUpdate
             // 
+            SaveUpdate.BackColor = Color.Black;
             SaveUpdate.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            SaveUpdate.Location = new Point(57, 491);
+            SaveUpdate.ForeColor = Color.Goldenrod;
+            SaveUpdate.Location = new Point(107, 495);
             SaveUpdate.Margin = new Padding(3, 4, 3, 4);
             SaveUpdate.Name = "SaveUpdate";
             SaveUpdate.Size = new Size(343, 67);
             SaveUpdate.TabIndex = 27;
             SaveUpdate.Text = "Salvar Alteração";
-            SaveUpdate.UseVisualStyleBackColor = true;
+            SaveUpdate.UseVisualStyleBackColor = false;
             SaveUpdate.Visible = false;
             SaveUpdate.Click += SaveUpdate_Click_1;
             // 
@@ -240,6 +251,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(173, 11, 0);
             ClientSize = new Size(1062, 673);
             Controls.Add(dataGridCRUD);
             Controls.Add(toolStrip1);
@@ -253,6 +265,7 @@
             Controls.Add(labelid);
             Controls.Add(SaveCreate);
             Controls.Add(SaveUpdate);
+            ForeColor = Color.Goldenrod;
             Margin = new Padding(3, 4, 3, 4);
             Name = "CRUDUser";
             StartPosition = FormStartPosition.CenterScreen;

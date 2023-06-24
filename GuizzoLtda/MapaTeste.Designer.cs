@@ -72,7 +72,7 @@
             MapaBr.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
             MapaBr.SelectedAreaFillColor = Color.FromArgb(33, 65, 105, 225);
             MapaBr.ShowTileGridLines = false;
-            MapaBr.Size = new Size(457, 600);
+            MapaBr.Size = new Size(457, 673);
             MapaBr.TabIndex = 1;
             MapaBr.Zoom = 0D;
             MapaBr.Load += gMapControl1_Load;
@@ -151,6 +151,7 @@
             // 
             // toolStrip1
             // 
+            toolStrip1.BackColor = Color.Black;
             toolStrip1.ImageScalingSize = new Size(20, 20);
             toolStrip1.Items.AddRange(new ToolStripItem[] { btnReturn, btnMarcações, toolStripSeparator1, btnClear, toolStripSeparator2, btnRota, toolStripSeparator, toolStripButton1 });
             toolStrip1.Location = new Point(457, 0);
@@ -161,6 +162,7 @@
             // 
             // btnReturn
             // 
+            btnReturn.BackColor = Color.Goldenrod;
             btnReturn.BackgroundImage = Properties.Resources._688879_arrows_512x512;
             btnReturn.BackgroundImageLayout = ImageLayout.Stretch;
             btnReturn.DisplayStyle = ToolStripItemDisplayStyle.Image;
@@ -174,6 +176,7 @@
             // btnMarcações
             // 
             btnMarcações.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            btnMarcações.ForeColor = Color.Goldenrod;
             btnMarcações.ImageTransparentColor = Color.Magenta;
             btnMarcações.Name = "btnMarcações";
             btnMarcações.Size = new Size(147, 24);
@@ -188,6 +191,7 @@
             // btnClear
             // 
             btnClear.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            btnClear.ForeColor = Color.Goldenrod;
             btnClear.ImageTransparentColor = Color.Magenta;
             btnClear.Name = "btnClear";
             btnClear.Size = new Size(94, 24);
@@ -202,6 +206,7 @@
             // btnRota
             // 
             btnRota.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            btnRota.ForeColor = Color.Goldenrod;
             btnRota.ImageTransparentColor = Color.Magenta;
             btnRota.Name = "btnRota";
             btnRota.Size = new Size(44, 24);
@@ -234,9 +239,10 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(173, 11, 0);
             ClientSize = new Size(1062, 673);
-            Controls.Add(txtEndereco);
             Controls.Add(toolStrip1);
+            Controls.Add(txtEndereco);
             Controls.Add(labeldistancia);
             Controls.Add(button1);
             Controls.Add(label2);

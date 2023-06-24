@@ -52,7 +52,6 @@
             txtRenavam = new TextBox();
             labelrenavam = new Label();
             labelespecifics = new Label();
-            labeldados = new Label();
             dataSeguro = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridVeiculo).BeginInit();
             toolStrip1.SuspendLayout();
@@ -63,19 +62,20 @@
             dataGridVeiculo.AllowUserToAddRows = false;
             dataGridVeiculo.AllowUserToDeleteRows = false;
             dataGridVeiculo.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridVeiculo.Location = new Point(470, -1);
+            dataGridVeiculo.Location = new Point(601, 27);
             dataGridVeiculo.Margin = new Padding(3, 4, 3, 4);
             dataGridVeiculo.Name = "dataGridVeiculo";
             dataGridVeiculo.ReadOnly = true;
             dataGridVeiculo.RowHeadersWidth = 51;
             dataGridVeiculo.RowTemplate.Height = 25;
-            dataGridVeiculo.Size = new Size(445, 604);
+            dataGridVeiculo.Size = new Size(461, 648);
             dataGridVeiculo.TabIndex = 23;
             dataGridVeiculo.CellClick += dataGridVeiculo_CellClick;
             dataGridVeiculo.CellContentClick += dataGridVeiculo_CellContentClick;
             // 
             // toolStrip1
             // 
+            toolStrip1.BackColor = Color.Black;
             toolStrip1.ImageScalingSize = new Size(20, 20);
             toolStrip1.Items.AddRange(new ToolStripItem[] { btnReturn, btnAtualizar, toolStripSeparator1, btnCad, toolStripSeparator2, btnApaga, toolStripSeparator, ajudaToolStripButton });
             toolStrip1.Location = new Point(0, 0);
@@ -83,9 +83,11 @@
             toolStrip1.Size = new Size(1062, 27);
             toolStrip1.TabIndex = 26;
             toolStrip1.Text = "toolStrip1";
+            toolStrip1.ItemClicked += toolStrip1_ItemClicked;
             // 
             // btnReturn
             // 
+            btnReturn.BackColor = Color.Goldenrod;
             btnReturn.DisplayStyle = ToolStripItemDisplayStyle.Image;
             btnReturn.Image = (Image)resources.GetObject("btnReturn.Image");
             btnReturn.ImageTransparentColor = Color.Magenta;
@@ -96,7 +98,10 @@
             // 
             // btnAtualizar
             // 
+            btnAtualizar.BackColor = Color.Black;
             btnAtualizar.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            btnAtualizar.Font = new Font("Leelawadee UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnAtualizar.ForeColor = Color.Goldenrod;
             btnAtualizar.Image = (Image)resources.GetObject("btnAtualizar.Image");
             btnAtualizar.ImageTransparentColor = Color.Magenta;
             btnAtualizar.Name = "btnAtualizar";
@@ -111,7 +116,10 @@
             // 
             // btnCad
             // 
+            btnCad.BackColor = Color.Black;
             btnCad.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            btnCad.Font = new Font("Leelawadee UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnCad.ForeColor = Color.Goldenrod;
             btnCad.Image = (Image)resources.GetObject("btnCad.Image");
             btnCad.ImageTransparentColor = Color.Magenta;
             btnCad.Name = "btnCad";
@@ -126,7 +134,10 @@
             // 
             // btnApaga
             // 
+            btnApaga.BackColor = Color.Black;
             btnApaga.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            btnApaga.Font = new Font("Leelawadee UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnApaga.ForeColor = Color.Goldenrod;
             btnApaga.Image = (Image)resources.GetObject("btnApaga.Image");
             btnApaga.ImageTransparentColor = Color.Magenta;
             btnApaga.Name = "btnApaga";
@@ -151,79 +162,88 @@
             // labeltipo
             // 
             labeltipo.AutoSize = true;
-            labeltipo.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            labeltipo.Location = new Point(49, 211);
+            labeltipo.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            labeltipo.ForeColor = Color.White;
+            labeltipo.Location = new Point(16, 341);
             labeltipo.Name = "labeltipo";
-            labeltipo.Size = new Size(163, 37);
+            labeltipo.Size = new Size(170, 38);
             labeltipo.TabIndex = 21;
             labeltipo.Text = "Tipo Veiculo";
             // 
             // txtPlaca
             // 
             txtPlaca.BackColor = Color.White;
-            txtPlaca.Location = new Point(273, 335);
+            txtPlaca.Location = new Point(273, 287);
             txtPlaca.Margin = new Padding(3, 4, 3, 4);
             txtPlaca.Name = "txtPlaca";
-            txtPlaca.Size = new Size(142, 27);
+            txtPlaca.Size = new Size(170, 27);
             txtPlaca.TabIndex = 18;
             txtPlaca.KeyPress += txtPlaca_KeyPress;
             // 
             // labelplaca
             // 
             labelplaca.AutoSize = true;
-            labelplaca.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            labelplaca.Location = new Point(265, 291);
+            labelplaca.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            labelplaca.ForeColor = Color.White;
+            labelplaca.Location = new Point(273, 218);
             labelplaca.Name = "labelplaca";
-            labelplaca.Size = new Size(172, 37);
+            labelplaca.Size = new Size(180, 38);
             labelplaca.TabIndex = 17;
             labelplaca.Text = "Placa Veiculo";
             // 
             // SaveCreate
             // 
-            SaveCreate.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            SaveCreate.Location = new Point(57, 491);
+            SaveCreate.BackColor = Color.Black;
+            SaveCreate.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            SaveCreate.ForeColor = Color.Goldenrod;
+            SaveCreate.Location = new Point(226, 500);
             SaveCreate.Margin = new Padding(3, 4, 3, 4);
             SaveCreate.Name = "SaveCreate";
             SaveCreate.Size = new Size(343, 67);
             SaveCreate.TabIndex = 16;
             SaveCreate.Text = "Salvar Cadastro";
-            SaveCreate.UseVisualStyleBackColor = true;
+            SaveCreate.UseVisualStyleBackColor = false;
             SaveCreate.Visible = false;
             SaveCreate.Click += SaveCreate_Click;
             // 
             // SaveDelete
             // 
-            SaveDelete.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            SaveDelete.Location = new Point(57, 491);
+            SaveDelete.BackColor = Color.Black;
+            SaveDelete.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            SaveDelete.ForeColor = Color.Goldenrod;
+            SaveDelete.Location = new Point(226, 500);
             SaveDelete.Margin = new Padding(3, 4, 3, 4);
             SaveDelete.Name = "SaveDelete";
             SaveDelete.Size = new Size(343, 67);
             SaveDelete.TabIndex = 15;
             SaveDelete.Text = "Deletar Usuário";
-            SaveDelete.UseVisualStyleBackColor = true;
+            SaveDelete.UseVisualStyleBackColor = false;
             SaveDelete.Visible = false;
             SaveDelete.Click += SaveDelete_Click;
             // 
             // SaveUpdate
             // 
-            SaveUpdate.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            SaveUpdate.Location = new Point(57, 491);
+            SaveUpdate.BackColor = Color.Black;
+            SaveUpdate.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            SaveUpdate.ForeColor = Color.Goldenrod;
+            SaveUpdate.Location = new Point(226, 500);
             SaveUpdate.Margin = new Padding(3, 4, 3, 4);
             SaveUpdate.Name = "SaveUpdate";
             SaveUpdate.Size = new Size(343, 67);
             SaveUpdate.TabIndex = 14;
             SaveUpdate.Text = "Salvar Alteração";
-            SaveUpdate.UseVisualStyleBackColor = true;
+            SaveUpdate.UseVisualStyleBackColor = false;
             SaveUpdate.Visible = false;
             SaveUpdate.Click += SaveUpdate_Click;
             // 
             // labelseguro
             // 
             labelseguro.AutoSize = true;
-            labelseguro.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            labelseguro.Location = new Point(265, 193);
+            labelseguro.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            labelseguro.ForeColor = Color.White;
+            labelseguro.Location = new Point(273, 84);
             labelseguro.Name = "labelseguro";
-            labelseguro.Size = new Size(164, 37);
+            labelseguro.Size = new Size(170, 38);
             labelseguro.TabIndex = 29;
             labelseguro.Text = "Data Seguro";
             // 
@@ -231,78 +251,72 @@
             // 
             txtIdVeic.BackColor = Color.White;
             txtIdVeic.Enabled = false;
-            txtIdVeic.Location = new Point(57, 157);
+            txtIdVeic.Location = new Point(16, 159);
             txtIdVeic.Margin = new Padding(3, 4, 3, 4);
             txtIdVeic.Name = "txtIdVeic";
-            txtIdVeic.Size = new Size(142, 27);
+            txtIdVeic.Size = new Size(170, 27);
             txtIdVeic.TabIndex = 31;
             // 
             // labelIdVeic
             // 
             labelIdVeic.AutoSize = true;
-            labelIdVeic.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            labelIdVeic.Location = new Point(49, 113);
+            labelIdVeic.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            labelIdVeic.ForeColor = Color.White;
+            labelIdVeic.Location = new Point(16, 84);
             labelIdVeic.Name = "labelIdVeic";
-            labelIdVeic.Size = new Size(133, 37);
+            labelIdVeic.Size = new Size(139, 38);
             labelIdVeic.TabIndex = 30;
             labelIdVeic.Text = "Id Veiculo";
             // 
             // cbTipo
             // 
             cbTipo.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbTipo.ForeColor = Color.White;
             cbTipo.FormattingEnabled = true;
             cbTipo.Items.AddRange(new object[] { "Carro", "Moto", "Caminhão", "Fiorino", "Manual" });
-            cbTipo.Location = new Point(57, 255);
+            cbTipo.Location = new Point(16, 403);
             cbTipo.Margin = new Padding(3, 4, 3, 4);
             cbTipo.Name = "cbTipo";
-            cbTipo.Size = new Size(138, 28);
+            cbTipo.Size = new Size(170, 28);
             cbTipo.TabIndex = 32;
             // 
             // txtRenavam
             // 
-            txtRenavam.Location = new Point(273, 143);
+            txtRenavam.Location = new Point(16, 287);
             txtRenavam.Margin = new Padding(3, 4, 3, 4);
             txtRenavam.Name = "txtRenavam";
-            txtRenavam.Size = new Size(100, 27);
+            txtRenavam.Size = new Size(170, 27);
             txtRenavam.TabIndex = 34;
             txtRenavam.KeyPress += txtRenavam_KeyPress;
             // 
             // labelrenavam
             // 
             labelrenavam.AutoSize = true;
-            labelrenavam.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            labelrenavam.Location = new Point(273, 99);
+            labelrenavam.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            labelrenavam.ForeColor = Color.White;
+            labelrenavam.Location = new Point(16, 218);
             labelrenavam.Name = "labelrenavam";
-            labelrenavam.Size = new Size(125, 37);
+            labelrenavam.Size = new Size(130, 38);
             labelrenavam.TabIndex = 36;
             labelrenavam.Text = "Renavam";
             // 
             // labelespecifics
             // 
             labelespecifics.AutoSize = true;
-            labelespecifics.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            labelespecifics.Location = new Point(26, 45);
+            labelespecifics.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            labelespecifics.ForeColor = Color.White;
+            labelespecifics.Location = new Point(12, 27);
             labelespecifics.Name = "labelespecifics";
-            labelespecifics.Size = new Size(227, 25);
+            labelespecifics.Size = new Size(349, 38);
             labelespecifics.TabIndex = 37;
             labelespecifics.Text = "Especificações do Veículo";
             // 
-            // labeldados
-            // 
-            labeldados.AutoSize = true;
-            labeldados.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            labeldados.Location = new Point(273, 43);
-            labeldados.Name = "labeldados";
-            labeldados.Size = new Size(68, 28);
-            labeldados.TabIndex = 38;
-            labeldados.Text = "Dados";
-            // 
             // dataSeguro
             // 
-            dataSeguro.Location = new Point(273, 237);
+            dataSeguro.Location = new Point(273, 159);
             dataSeguro.Margin = new Padding(3, 4, 3, 4);
             dataSeguro.Name = "dataSeguro";
-            dataSeguro.Size = new Size(114, 27);
+            dataSeguro.Size = new Size(170, 27);
             dataSeguro.TabIndex = 39;
             dataSeguro.KeyPress += dataSeguro_KeyPress_1;
             // 
@@ -313,7 +327,6 @@
             BackColor = Color.FromArgb(173, 11, 0);
             ClientSize = new Size(1062, 673);
             Controls.Add(dataSeguro);
-            Controls.Add(labeldados);
             Controls.Add(labelespecifics);
             Controls.Add(labelrenavam);
             Controls.Add(txtRenavam);
@@ -329,6 +342,8 @@
             Controls.Add(SaveCreate);
             Controls.Add(SaveDelete);
             Controls.Add(SaveUpdate);
+            Font = new Font("Leelawadee UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            ForeColor = Color.Goldenrod;
             Margin = new Padding(3, 4, 3, 4);
             Name = "CRUDVeiculo";
             StartPosition = FormStartPosition.CenterScreen;
@@ -366,7 +381,6 @@
         private TextBox txtRenavam;
         private Label labelrenavam;
         private Label labelespecifics;
-        private Label labeldados;
         private TextBox dataSeguro;
     }
 }

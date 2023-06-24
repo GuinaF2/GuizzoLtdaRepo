@@ -55,5 +55,14 @@ namespace GuizzoLtda
                 }
             }
         }
+
+        private void labeltipo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labeldesc_Click(object sender, EventArgs e)
+        {
+        }
     }
 }

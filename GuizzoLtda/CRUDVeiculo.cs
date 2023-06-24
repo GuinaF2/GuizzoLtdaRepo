@@ -56,7 +56,7 @@ namespace GuizzoLtda
             txtRenavam.Visible = true;
 
             labelespecifics.Visible = true;
-            labeldados.Visible = true;
+
 
             labelrenavam.Visible = true;
             labelIdVeic.Visible = true;
@@ -92,7 +92,7 @@ namespace GuizzoLtda
             dataGridVeiculo.Visible = false;
 
             labelespecifics.Visible = true;
-            labeldados.Visible = true;
+
 
             labelrenavam.Visible = true;
             labelIdVeic.Visible = true;
@@ -127,7 +127,6 @@ namespace GuizzoLtda
             dataGridVeiculo.Visible = true;
 
             labelespecifics.Visible = true;
-            labeldados.Visible = true;
 
             labelrenavam.Visible = true;
             labelIdVeic.Visible = true;
@@ -153,7 +152,6 @@ namespace GuizzoLtda
             txtRenavam.Visible = false;
 
             labelespecifics.Visible = false;
-            labeldados.Visible = false;
 
             labelrenavam.Visible = false;
             labelIdVeic.Visible = false;
@@ -339,6 +337,9 @@ namespace GuizzoLtda
             e.Handled = (e.KeyChar == (char)Keys.Space);
         }
 
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
 
+        }
     }
 }

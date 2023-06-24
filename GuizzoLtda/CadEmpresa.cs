@@ -98,9 +98,9 @@ namespace GuizzoLtda
 
             EnderecoModelo.CompUser = txtComple.Text;
 
-            EnderecoModelo.CidadeUser = txtCidade.Text;
+ 
 
-            EnderecoModelo.EstadoUser = txtEstado.Text;
+         
 
             if (txtComple.Text == "" || txtNumero.Text == "")
             {
@@ -244,8 +244,7 @@ namespace GuizzoLtda
                 Address endereco = SearchZip.GetAddress("15000000");
                 if (endereco.Zip != null)
                 {
-                    txtEstado.Text = endereco.State;
-                    txtCidade.Text = endereco.City;
+                 
                     txtBairro.Text = endereco.District;
                     txtRua.Text = endereco.Street;
                 }
