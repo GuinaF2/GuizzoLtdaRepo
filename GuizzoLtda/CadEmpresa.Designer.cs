@@ -28,391 +28,388 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnEscolherFotoEmp = new Button();
-            pbFotoEmp = new PictureBox();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            txtRazaosoc = new TextBox();
-            txtBairro = new TextBox();
-            label5 = new Label();
-            label6 = new Label();
-            label7 = new Label();
-            label8 = new Label();
-            label9 = new Label();
-            txtComple = new TextBox();
-            btnCadEndereco = new Button();
-            tabControl1 = new TabControl();
-            tabPage1 = new TabPage();
-            txtIncEstad = new TextBox();
-            txtCnpj = new TextBox();
-            toolStrip1 = new ToolStrip();
-            toolStripButton1 = new ToolStripButton();
-            tabPage2 = new TabPage();
-            txtCep = new TextBox();
-            cbUniFed = new ComboBox();
-            labelunidadefederal = new Label();
-            txtNumero = new TextBox();
-            txtRua = new MaskedTextBox();
-            tabPage3 = new TabPage();
-            textBox1 = new TextBox();
-            ((System.ComponentModel.ISupportInitialize)pbFotoEmp).BeginInit();
-            tabControl1.SuspendLayout();
-            tabPage1.SuspendLayout();
-            toolStrip1.SuspendLayout();
-            tabPage2.SuspendLayout();
-            tabPage3.SuspendLayout();
-            SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadEmpresa));
+            this.btnEscolherFotoEmp = new System.Windows.Forms.Button();
+            this.pbFotoEmp = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtRazaosoc = new System.Windows.Forms.TextBox();
+            this.txtBairro = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtComple = new System.Windows.Forms.TextBox();
+            this.btnCadEndereco = new System.Windows.Forms.Button();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.txtIncEstad = new System.Windows.Forms.TextBox();
+            this.txtCnpj = new System.Windows.Forms.TextBox();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.txtCep = new System.Windows.Forms.TextBox();
+            this.cbUniFed = new System.Windows.Forms.ComboBox();
+            this.labelunidadefederal = new System.Windows.Forms.Label();
+            this.txtNumero = new System.Windows.Forms.TextBox();
+            this.txtRua = new System.Windows.Forms.MaskedTextBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFotoEmp)).BeginInit();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.SuspendLayout();
             // 
             // btnEscolherFotoEmp
             // 
-            btnEscolherFotoEmp.BackColor = Color.Black;
-            btnEscolherFotoEmp.FlatAppearance.BorderSize = 0;
-            btnEscolherFotoEmp.FlatStyle = FlatStyle.Flat;
-            btnEscolherFotoEmp.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
-            btnEscolherFotoEmp.ForeColor = Color.White;
-            btnEscolherFotoEmp.Location = new Point(499, 235);
-            btnEscolherFotoEmp.Margin = new Padding(3, 4, 3, 4);
-            btnEscolherFotoEmp.Name = "btnEscolherFotoEmp";
-            btnEscolherFotoEmp.Size = new Size(263, 73);
-            btnEscolherFotoEmp.TabIndex = 0;
-            btnEscolherFotoEmp.Text = "Escolher Foto";
-            btnEscolherFotoEmp.UseVisualStyleBackColor = false;
-            btnEscolherFotoEmp.Click += btnEscolherFotoEmp_Click;
+            this.btnEscolherFotoEmp.BackColor = System.Drawing.Color.Black;
+            this.btnEscolherFotoEmp.FlatAppearance.BorderSize = 0;
+            this.btnEscolherFotoEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEscolherFotoEmp.Font = new System.Drawing.Font("Leelawadee UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnEscolherFotoEmp.ForeColor = System.Drawing.Color.White;
+            this.btnEscolherFotoEmp.Location = new System.Drawing.Point(437, 176);
+            this.btnEscolherFotoEmp.Name = "btnEscolherFotoEmp";
+            this.btnEscolherFotoEmp.Size = new System.Drawing.Size(230, 55);
+            this.btnEscolherFotoEmp.TabIndex = 0;
+            this.btnEscolherFotoEmp.Text = "Escolher Foto";
+            this.btnEscolherFotoEmp.UseVisualStyleBackColor = false;
             // 
             // pbFotoEmp
             // 
-            pbFotoEmp.BorderStyle = BorderStyle.Fixed3D;
-            pbFotoEmp.Location = new Point(66, 72);
-            pbFotoEmp.Margin = new Padding(3, 4, 3, 4);
-            pbFotoEmp.Name = "pbFotoEmp";
-            pbFotoEmp.Size = new Size(262, 328);
-            pbFotoEmp.SizeMode = PictureBoxSizeMode.StretchImage;
-            pbFotoEmp.TabIndex = 1;
-            pbFotoEmp.TabStop = false;
+            this.pbFotoEmp.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pbFotoEmp.Location = new System.Drawing.Point(58, 54);
+            this.pbFotoEmp.Name = "pbFotoEmp";
+            this.pbFotoEmp.Size = new System.Drawing.Size(230, 247);
+            this.pbFotoEmp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbFotoEmp.TabIndex = 1;
+            this.pbFotoEmp.TabStop = false;
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Leelawadee UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = Color.Black;
-            label1.Location = new Point(29, 33);
-            label1.Name = "label1";
-            label1.Size = new Size(122, 28);
-            label1.TabIndex = 2;
-            label1.Text = "Razão Social";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(25, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(97, 21);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Razão Social";
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Leelawadee UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.ForeColor = Color.Black;
-            label2.Location = new Point(29, 131);
-            label2.Name = "label2";
-            label2.Size = new Size(52, 28);
-            label2.TabIndex = 3;
-            label2.Text = "Cnpj";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(25, 98);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(42, 21);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Cnpj";
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Leelawadee UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.ForeColor = Color.Black;
-            label3.Location = new Point(29, 250);
-            label3.Name = "label3";
-            label3.Size = new Size(166, 28);
-            label3.TabIndex = 4;
-            label3.Text = "Inscrição Estadual";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(25, 188);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(133, 21);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Inscrição Estadual";
             // 
             // txtRazaosoc
             // 
-            txtRazaosoc.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtRazaosoc.Location = new Point(29, 74);
-            txtRazaosoc.Margin = new Padding(3, 4, 3, 4);
-            txtRazaosoc.Name = "txtRazaosoc";
-            txtRazaosoc.Size = new Size(250, 34);
-            txtRazaosoc.TabIndex = 6;
-            txtRazaosoc.KeyPress += txtRazaosoc_KeyPress;
+            this.txtRazaosoc.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtRazaosoc.Location = new System.Drawing.Point(25, 56);
+            this.txtRazaosoc.Name = "txtRazaosoc";
+            this.txtRazaosoc.Size = new System.Drawing.Size(219, 29);
+            this.txtRazaosoc.TabIndex = 6;
             // 
             // txtBairro
             // 
-            txtBairro.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtBairro.Location = new Point(42, 127);
-            txtBairro.Margin = new Padding(3, 4, 3, 4);
-            txtBairro.Name = "txtBairro";
-            txtBairro.Size = new Size(250, 34);
-            txtBairro.TabIndex = 11;
+            this.txtBairro.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtBairro.Location = new System.Drawing.Point(37, 95);
+            this.txtBairro.Name = "txtBairro";
+            this.txtBairro.Size = new System.Drawing.Size(219, 29);
+            this.txtBairro.TabIndex = 11;
             // 
             // label5
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Leelawadee UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(42, 28);
-            label5.Name = "label5";
-            label5.Size = new Size(45, 28);
-            label5.TabIndex = 13;
-            label5.Text = "Rua";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(37, 21);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(37, 21);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Rua";
             // 
             // label6
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Leelawadee UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(42, 95);
-            label6.Name = "label6";
-            label6.Size = new Size(64, 28);
-            label6.TabIndex = 14;
-            label6.Text = "Bairro";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(37, 71);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(52, 21);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Bairro";
             // 
             // label7
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Leelawadee UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(42, 165);
-            label7.Name = "label7";
-            label7.Size = new Size(46, 28);
-            label7.TabIndex = 15;
-            label7.Text = "Cep";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(37, 124);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(37, 21);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Cep";
             // 
             // label8
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Leelawadee UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(610, 113);
-            label8.Name = "label8";
-            label8.Size = new Size(137, 28);
-            label8.TabIndex = 19;
-            label8.Text = "Complemento";
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label8.Location = new System.Drawing.Point(534, 85);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(109, 21);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "Complemento";
             // 
             // label9
             // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Leelawadee UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.Location = new Point(610, 16);
-            label9.Name = "label9";
-            label9.Size = new Size(84, 28);
-            label9.TabIndex = 18;
-            label9.Text = "Numero";
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label9.Location = new System.Drawing.Point(534, 12);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(68, 21);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Numero";
             // 
             // txtComple
             // 
-            txtComple.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtComple.Location = new Point(610, 159);
-            txtComple.Margin = new Padding(3, 4, 3, 4);
-            txtComple.Name = "txtComple";
-            txtComple.Size = new Size(137, 34);
-            txtComple.TabIndex = 17;
-            txtComple.KeyPress += txtComple_KeyPress;
+            this.txtComple.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtComple.Location = new System.Drawing.Point(534, 119);
+            this.txtComple.Name = "txtComple";
+            this.txtComple.Size = new System.Drawing.Size(120, 29);
+            this.txtComple.TabIndex = 17;
             // 
             // btnCadEndereco
             // 
-            btnCadEndereco.BackColor = Color.Black;
-            btnCadEndereco.FlatStyle = FlatStyle.Flat;
-            btnCadEndereco.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            btnCadEndereco.ForeColor = Color.White;
-            btnCadEndereco.Location = new Point(263, 526);
-            btnCadEndereco.Margin = new Padding(3, 4, 3, 4);
-            btnCadEndereco.Name = "btnCadEndereco";
-            btnCadEndereco.Size = new Size(263, 73);
-            btnCadEndereco.TabIndex = 21;
-            btnCadEndereco.Text = "Cadastrar";
-            btnCadEndereco.UseVisualStyleBackColor = false;
-            btnCadEndereco.Click += btnCadEndereco_Click;
+            this.btnCadEndereco.BackColor = System.Drawing.Color.Black;
+            this.btnCadEndereco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadEndereco.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnCadEndereco.ForeColor = System.Drawing.Color.White;
+            this.btnCadEndereco.Location = new System.Drawing.Point(230, 394);
+            this.btnCadEndereco.Name = "btnCadEndereco";
+            this.btnCadEndereco.Size = new System.Drawing.Size(230, 55);
+            this.btnCadEndereco.TabIndex = 21;
+            this.btnCadEndereco.Text = "Cadastrar";
+            this.btnCadEndereco.UseVisualStyleBackColor = false;
             // 
             // tabControl1
             // 
-            tabControl1.Controls.Add(tabPage1);
-            tabControl1.Controls.Add(tabPage2);
-            tabControl1.Controls.Add(tabPage3);
-            tabControl1.Location = new Point(-1, 8);
-            tabControl1.Margin = new Padding(3, 4, 3, 4);
-            tabControl1.Name = "tabControl1";
-            tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(915, 495);
-            tabControl1.TabIndex = 22;
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Location = new System.Drawing.Point(-1, 6);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(801, 371);
+            this.tabControl1.TabIndex = 22;
             // 
             // tabPage1
             // 
-            tabPage1.BackColor = Color.Goldenrod;
-            tabPage1.Controls.Add(txtIncEstad);
-            tabPage1.Controls.Add(txtCnpj);
-            tabPage1.Controls.Add(toolStrip1);
-            tabPage1.Controls.Add(txtRazaosoc);
-            tabPage1.Controls.Add(label1);
-            tabPage1.Controls.Add(label2);
-            tabPage1.Controls.Add(label3);
-            tabPage1.Location = new Point(4, 29);
-            tabPage1.Margin = new Padding(3, 4, 3, 4);
-            tabPage1.Name = "tabPage1";
-            tabPage1.Padding = new Padding(3, 4, 3, 4);
-            tabPage1.Size = new Size(907, 462);
-            tabPage1.TabIndex = 0;
-            tabPage1.Text = "Dados";
+            this.tabPage1.BackColor = System.Drawing.Color.Goldenrod;
+            this.tabPage1.Controls.Add(this.txtIncEstad);
+            this.tabPage1.Controls.Add(this.txtCnpj);
+            this.tabPage1.Controls.Add(this.toolStrip1);
+            this.tabPage1.Controls.Add(this.txtRazaosoc);
+            this.tabPage1.Controls.Add(this.label1);
+            this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Controls.Add(this.label3);
+            this.tabPage1.Location = new System.Drawing.Point(4, 24);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Size = new System.Drawing.Size(793, 343);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Dados";
             // 
             // txtIncEstad
             // 
-            txtIncEstad.Location = new Point(29, 319);
-            txtIncEstad.Margin = new Padding(3, 4, 3, 4);
-            txtIncEstad.Multiline = true;
-            txtIncEstad.Name = "txtIncEstad";
-            txtIncEstad.Size = new Size(250, 35);
-            txtIncEstad.TabIndex = 13;
-            txtIncEstad.KeyPress += txtIncEstad_KeyPress_1;
+            this.txtIncEstad.Location = new System.Drawing.Point(25, 239);
+            this.txtIncEstad.Multiline = true;
+            this.txtIncEstad.Name = "txtIncEstad";
+            this.txtIncEstad.Size = new System.Drawing.Size(219, 27);
+            this.txtIncEstad.TabIndex = 13;
             // 
             // txtCnpj
             // 
-            txtCnpj.Location = new Point(29, 182);
-            txtCnpj.Margin = new Padding(3, 4, 3, 4);
-            txtCnpj.Multiline = true;
-            txtCnpj.Name = "txtCnpj";
-            txtCnpj.Size = new Size(250, 34);
-            txtCnpj.TabIndex = 12;
-            txtCnpj.KeyPress += txtCnpj_KeyPress_1;
+            this.txtCnpj.Location = new System.Drawing.Point(25, 136);
+            this.txtCnpj.Multiline = true;
+            this.txtCnpj.Name = "txtCnpj";
+            this.txtCnpj.Size = new System.Drawing.Size(219, 26);
+            this.txtCnpj.TabIndex = 12;
             // 
             // toolStrip1
             // 
-            toolStrip1.ImageScalingSize = new Size(20, 20);
-            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton1 });
-            toolStrip1.Location = new Point(3, 4);
-            toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(901, 27);
-            toolStrip1.TabIndex = 11;
-            toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1});
+            this.toolStrip1.Location = new System.Drawing.Point(3, 3);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(787, 27);
+            this.toolStrip1.TabIndex = 11;
+            this.toolStrip1.Text = "toolStrip1";
             // 
             // toolStripButton1
             // 
-            toolStripButton1.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            toolStripButton1.Image = Properties.Resources._688879_arrows_512x512;
-            toolStripButton1.ImageTransparentColor = Color.Magenta;
-            toolStripButton1.Name = "toolStripButton1";
-            toolStripButton1.Size = new Size(29, 24);
-            toolStripButton1.Text = "toolStripButton1";
-            toolStripButton1.Click += toolStripButton1_Click;
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = global::GuizzoLtda.Properties.Resources._688879_arrows_512x512;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton1.Text = "toolStripButton1";
             // 
             // tabPage2
             // 
-            tabPage2.BackColor = Color.Goldenrod;
-            tabPage2.Controls.Add(txtCep);
-            tabPage2.Controls.Add(cbUniFed);
-            tabPage2.Controls.Add(labelunidadefederal);
-            tabPage2.Controls.Add(txtNumero);
-            tabPage2.Controls.Add(txtRua);
-            tabPage2.Controls.Add(txtBairro);
-            tabPage2.Controls.Add(label7);
-            tabPage2.Controls.Add(label8);
-            tabPage2.Controls.Add(label9);
-            tabPage2.Controls.Add(label6);
-            tabPage2.Controls.Add(label5);
-            tabPage2.Controls.Add(txtComple);
-            tabPage2.Location = new Point(4, 29);
-            tabPage2.Margin = new Padding(3, 4, 3, 4);
-            tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new Padding(3, 4, 3, 4);
-            tabPage2.Size = new Size(907, 462);
-            tabPage2.TabIndex = 1;
-            tabPage2.Text = "Endereço";
+            this.tabPage2.BackColor = System.Drawing.Color.Goldenrod;
+            this.tabPage2.Controls.Add(this.txtCep);
+            this.tabPage2.Controls.Add(this.cbUniFed);
+            this.tabPage2.Controls.Add(this.labelunidadefederal);
+            this.tabPage2.Controls.Add(this.txtNumero);
+            this.tabPage2.Controls.Add(this.txtRua);
+            this.tabPage2.Controls.Add(this.txtBairro);
+            this.tabPage2.Controls.Add(this.label7);
+            this.tabPage2.Controls.Add(this.label8);
+            this.tabPage2.Controls.Add(this.label9);
+            this.tabPage2.Controls.Add(this.label6);
+            this.tabPage2.Controls.Add(this.label5);
+            this.tabPage2.Controls.Add(this.txtComple);
+            this.tabPage2.Location = new System.Drawing.Point(4, 24);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Size = new System.Drawing.Size(793, 343);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Endereço";
             // 
             // txtCep
             // 
-            txtCep.Location = new Point(42, 213);
-            txtCep.Margin = new Padding(3, 4, 3, 4);
-            txtCep.Name = "txtCep";
-            txtCep.Size = new Size(250, 27);
-            txtCep.TabIndex = 26;
-            txtCep.KeyPress += txtCep_KeyPress_2;
+            this.txtCep.Location = new System.Drawing.Point(37, 160);
+            this.txtCep.Name = "txtCep";
+            this.txtCep.Size = new System.Drawing.Size(219, 23);
+            this.txtCep.TabIndex = 26;
             // 
             // cbUniFed
             // 
-            cbUniFed.DropDownStyle = ComboBoxStyle.DropDownList;
-            cbUniFed.FormattingEnabled = true;
-            cbUniFed.Items.AddRange(new object[] { "Acre (AC)", "Alagoas (AL)\t", "Amapá (AP)\t", "Amazonas (AM)\t", "Bahia (BA)\tSalvador\t", "Ceará (CE)\tFortaleza\t", "Distrito Federal (DF)\t", "Espírito Santo (ES)\t", "Goiás (GO)\t", "Maranhão (MA)\t", "Mato Grosso (MT)\t", "Mato Grosso do Sul (MS)", "Minas Gerais (MG)\t", "Pará (PA)\tBelém\t", "Paraíba (PB)\t", "Paraná (PR)\t", "Pernambuco (PE)\t", "Piauí (PI)\tTeresina\t", "Rio de Janeiro (RJ)\t", "Rio Grande do Norte (RN)", "Rio Grande do Sul (RS)", "Rondônia (RO)\t", "Roraima (RR)\t", "Santa Catarina (SC)\t", "São Paulo (SP)\t", "Sergipe (SE)\t", "Tocantins (TO)" });
-            cbUniFed.Location = new Point(42, 287);
-            cbUniFed.Margin = new Padding(3, 4, 3, 4);
-            cbUniFed.Name = "cbUniFed";
-            cbUniFed.Size = new Size(250, 28);
-            cbUniFed.TabIndex = 25;
-            cbUniFed.TextChanged += cbUniFed_TextChanged;
+            this.cbUniFed.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbUniFed.FormattingEnabled = true;
+            this.cbUniFed.Items.AddRange(new object[] {
+            "Acre (AC)",
+            "Alagoas (AL)\t",
+            "Amapá (AP)\t",
+            "Amazonas (AM)\t",
+            "Bahia (BA)\tSalvador\t",
+            "Ceará (CE)\tFortaleza\t",
+            "Distrito Federal (DF)\t",
+            "Espírito Santo (ES)\t",
+            "Goiás (GO)\t",
+            "Maranhão (MA)\t",
+            "Mato Grosso (MT)\t",
+            "Mato Grosso do Sul (MS)",
+            "Minas Gerais (MG)\t",
+            "Pará (PA)\tBelém\t",
+            "Paraíba (PB)\t",
+            "Paraná (PR)\t",
+            "Pernambuco (PE)\t",
+            "Piauí (PI)\tTeresina\t",
+            "Rio de Janeiro (RJ)\t",
+            "Rio Grande do Norte (RN)",
+            "Rio Grande do Sul (RS)",
+            "Rondônia (RO)\t",
+            "Roraima (RR)\t",
+            "Santa Catarina (SC)\t",
+            "São Paulo (SP)\t",
+            "Sergipe (SE)\t",
+            "Tocantins (TO)"});
+            this.cbUniFed.Location = new System.Drawing.Point(37, 215);
+            this.cbUniFed.Name = "cbUniFed";
+            this.cbUniFed.Size = new System.Drawing.Size(219, 23);
+            this.cbUniFed.TabIndex = 25;
             // 
             // labelunidadefederal
             // 
-            labelunidadefederal.AutoSize = true;
-            labelunidadefederal.Font = new Font("Leelawadee UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            labelunidadefederal.Location = new Point(42, 244);
-            labelunidadefederal.Name = "labelunidadefederal";
-            labelunidadefederal.Size = new Size(155, 28);
-            labelunidadefederal.TabIndex = 24;
-            labelunidadefederal.Text = "Unidade Federal";
+            this.labelunidadefederal.AutoSize = true;
+            this.labelunidadefederal.Font = new System.Drawing.Font("Leelawadee UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelunidadefederal.Location = new System.Drawing.Point(37, 183);
+            this.labelunidadefederal.Name = "labelunidadefederal";
+            this.labelunidadefederal.Size = new System.Drawing.Size(123, 21);
+            this.labelunidadefederal.TabIndex = 24;
+            this.labelunidadefederal.Text = "Unidade Federal";
             // 
             // txtNumero
             // 
-            txtNumero.Location = new Point(610, 60);
-            txtNumero.Margin = new Padding(3, 4, 3, 4);
-            txtNumero.Name = "txtNumero";
-            txtNumero.Size = new Size(137, 27);
-            txtNumero.TabIndex = 23;
-            txtNumero.TextChanged += txtNumero_TextChanged;
-            txtNumero.KeyPress += txtNumero_KeyPress_1;
+            this.txtNumero.Location = new System.Drawing.Point(534, 45);
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.Size = new System.Drawing.Size(120, 23);
+            this.txtNumero.TabIndex = 23;
             // 
             // txtRua
             // 
-            txtRua.AsciiOnly = true;
-            txtRua.Location = new Point(42, 60);
-            txtRua.Margin = new Padding(3, 4, 3, 4);
-            txtRua.Name = "txtRua";
-            txtRua.ShortcutsEnabled = false;
-            txtRua.Size = new Size(250, 27);
-            txtRua.TabIndex = 22;
-            txtRua.MaskInputRejected += txtRua_MaskInputRejected;
-            txtRua.KeyPress += txtRua_KeyPress;
+            this.txtRua.AsciiOnly = true;
+            this.txtRua.Location = new System.Drawing.Point(37, 45);
+            this.txtRua.Name = "txtRua";
+            this.txtRua.ShortcutsEnabled = false;
+            this.txtRua.Size = new System.Drawing.Size(219, 23);
+            this.txtRua.TabIndex = 22;
             // 
             // tabPage3
             // 
-            tabPage3.BackColor = Color.Goldenrod;
-            tabPage3.Controls.Add(pbFotoEmp);
-            tabPage3.Controls.Add(btnEscolherFotoEmp);
-            tabPage3.Controls.Add(textBox1);
-            tabPage3.Location = new Point(4, 29);
-            tabPage3.Margin = new Padding(3, 4, 3, 4);
-            tabPage3.Name = "tabPage3";
-            tabPage3.Padding = new Padding(3, 4, 3, 4);
-            tabPage3.Size = new Size(907, 462);
-            tabPage3.TabIndex = 2;
-            tabPage3.Text = "Imagem";
-            tabPage3.Click += tabPage3_Click;
+            this.tabPage3.BackColor = System.Drawing.Color.Goldenrod;
+            this.tabPage3.Controls.Add(this.pbFotoEmp);
+            this.tabPage3.Controls.Add(this.btnEscolherFotoEmp);
+            this.tabPage3.Controls.Add(this.textBox1);
+            this.tabPage3.Location = new System.Drawing.Point(4, 24);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage3.Size = new System.Drawing.Size(793, 343);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Imagem";
             // 
             // textBox1
             // 
-            textBox1.Enabled = false;
-            textBox1.Location = new Point(66, 353);
-            textBox1.Margin = new Padding(3, 4, 3, 4);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(262, 27);
-            textBox1.TabIndex = 2;
-            textBox1.TextChanged += textBox1_TextChanged;
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(58, 265);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(230, 23);
+            this.textBox1.TabIndex = 2;
             // 
             // CadEmpresa
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(173, 11, 0);
-            ClientSize = new Size(1062, 673);
-            Controls.Add(tabControl1);
-            Controls.Add(btnCadEndereco);
-            Margin = new Padding(3, 4, 3, 4);
-            Name = "CadEmpresa";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "CadEmpresa";
-            Load += CadEmpresa_Load_1;
-            ((System.ComponentModel.ISupportInitialize)pbFotoEmp).EndInit();
-            tabControl1.ResumeLayout(false);
-            tabPage1.ResumeLayout(false);
-            tabPage1.PerformLayout();
-            toolStrip1.ResumeLayout(false);
-            toolStrip1.PerformLayout();
-            tabPage2.ResumeLayout(false);
-            tabPage2.PerformLayout();
-            tabPage3.ResumeLayout(false);
-            tabPage3.PerformLayout();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(11)))), ((int)(((byte)(0)))));
+            this.ClientSize = new System.Drawing.Size(929, 505);
+            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.btnCadEndereco);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "CadEmpresa";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "CadEmpresa";
+            ((System.ComponentModel.ISupportInitialize)(this.pbFotoEmp)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         #endregion

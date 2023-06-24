@@ -28,132 +28,129 @@
         /// </summary>
         private void InitializeComponent()
         {
-            labeldescricao = new Label();
-            txtDescricao = new TextBox();
-            labeltipo = new Label();
-            labelstatus = new Label();
-            btnAprovar = new Button();
-            btnRecusar = new Button();
-            linkLabel1 = new LinkLabel();
-            dgSolicitacao = new DataGridView();
-            txtTipoSoli = new TextBox();
-            txtStatus = new TextBox();
-            ((System.ComponentModel.ISupportInitialize)dgSolicitacao).BeginInit();
-            SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminSolicitacao));
+            this.labeldescricao = new System.Windows.Forms.Label();
+            this.txtDescricao = new System.Windows.Forms.TextBox();
+            this.labeltipo = new System.Windows.Forms.Label();
+            this.labelstatus = new System.Windows.Forms.Label();
+            this.btnAprovar = new System.Windows.Forms.Button();
+            this.btnRecusar = new System.Windows.Forms.Button();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.dgSolicitacao = new System.Windows.Forms.DataGridView();
+            this.txtTipoSoli = new System.Windows.Forms.TextBox();
+            this.txtStatus = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgSolicitacao)).BeginInit();
+            this.SuspendLayout();
             // 
             // labeldescricao
             // 
-            labeldescricao.AutoSize = true;
-            labeldescricao.Location = new Point(240, 32);
-            labeldescricao.Name = "labeldescricao";
-            labeldescricao.Size = new Size(58, 15);
-            labeldescricao.TabIndex = 2;
-            labeldescricao.Text = "Descrição";
+            this.labeldescricao.AutoSize = true;
+            this.labeldescricao.Location = new System.Drawing.Point(240, 32);
+            this.labeldescricao.Name = "labeldescricao";
+            this.labeldescricao.Size = new System.Drawing.Size(58, 15);
+            this.labeldescricao.TabIndex = 2;
+            this.labeldescricao.Text = "Descrição";
             // 
             // txtDescricao
             // 
-            txtDescricao.Enabled = false;
-            txtDescricao.Location = new Point(244, 60);
-            txtDescricao.Multiline = true;
-            txtDescricao.Name = "txtDescricao";
-            txtDescricao.Size = new Size(258, 110);
-            txtDescricao.TabIndex = 3;
+            this.txtDescricao.Enabled = false;
+            this.txtDescricao.Location = new System.Drawing.Point(244, 60);
+            this.txtDescricao.Multiline = true;
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.Size = new System.Drawing.Size(258, 110);
+            this.txtDescricao.TabIndex = 3;
             // 
             // labeltipo
             // 
-            labeltipo.AutoSize = true;
-            labeltipo.Location = new Point(565, 60);
-            labeltipo.Name = "labeltipo";
-            labeltipo.Size = new Size(90, 15);
-            labeltipo.TabIndex = 4;
-            labeltipo.Text = "Tipo Solicitação";
+            this.labeltipo.AutoSize = true;
+            this.labeltipo.Location = new System.Drawing.Point(565, 60);
+            this.labeltipo.Name = "labeltipo";
+            this.labeltipo.Size = new System.Drawing.Size(90, 15);
+            this.labeltipo.TabIndex = 4;
+            this.labeltipo.Text = "Tipo Solicitação";
             // 
             // labelstatus
             // 
-            labelstatus.AutoSize = true;
-            labelstatus.Location = new Point(565, 118);
-            labelstatus.Name = "labelstatus";
-            labelstatus.Size = new Size(39, 15);
-            labelstatus.TabIndex = 6;
-            labelstatus.Text = "Status";
+            this.labelstatus.AutoSize = true;
+            this.labelstatus.Location = new System.Drawing.Point(565, 118);
+            this.labelstatus.Name = "labelstatus";
+            this.labelstatus.Size = new System.Drawing.Size(39, 15);
+            this.labelstatus.TabIndex = 6;
+            this.labelstatus.Text = "Status";
             // 
             // btnAprovar
             // 
-            btnAprovar.Location = new Point(623, 223);
-            btnAprovar.Name = "btnAprovar";
-            btnAprovar.Size = new Size(99, 39);
-            btnAprovar.TabIndex = 8;
-            btnAprovar.Text = "Aprovar";
-            btnAprovar.UseVisualStyleBackColor = true;
-            btnAprovar.Click += btnAprovar_Click;
+            this.btnAprovar.Location = new System.Drawing.Point(623, 223);
+            this.btnAprovar.Name = "btnAprovar";
+            this.btnAprovar.Size = new System.Drawing.Size(99, 39);
+            this.btnAprovar.TabIndex = 8;
+            this.btnAprovar.Text = "Aprovar";
+            this.btnAprovar.UseVisualStyleBackColor = true;
             // 
             // btnRecusar
             // 
-            btnRecusar.Location = new Point(518, 223);
-            btnRecusar.Name = "btnRecusar";
-            btnRecusar.Size = new Size(99, 39);
-            btnRecusar.TabIndex = 9;
-            btnRecusar.Text = "Recusar";
-            btnRecusar.UseVisualStyleBackColor = true;
-            btnRecusar.Click += btnRecusar_Click;
+            this.btnRecusar.Location = new System.Drawing.Point(518, 223);
+            this.btnRecusar.Name = "btnRecusar";
+            this.btnRecusar.Size = new System.Drawing.Size(99, 39);
+            this.btnRecusar.TabIndex = 9;
+            this.btnRecusar.Text = "Recusar";
+            this.btnRecusar.UseVisualStyleBackColor = true;
             // 
             // linkLabel1
             // 
-            linkLabel1.AutoSize = true;
-            linkLabel1.Location = new Point(553, 191);
-            linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(129, 15);
-            linkLabel1.TabIndex = 10;
-            linkLabel1.TabStop = true;
-            linkLabel1.Text = "Requisições Finalizadas";
-            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(553, 191);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(129, 15);
+            this.linkLabel1.TabIndex = 10;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Requisições Finalizadas";
             // 
             // dgSolicitacao
             // 
-            dgSolicitacao.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgSolicitacao.Location = new Point(34, 268);
-            dgSolicitacao.Name = "dgSolicitacao";
-            dgSolicitacao.RowTemplate.Height = 25;
-            dgSolicitacao.Size = new Size(564, 150);
-            dgSolicitacao.TabIndex = 11;
-            dgSolicitacao.CellClick += dgSolicitacao_CellClick;
-            dgSolicitacao.CellContentClick += dgSolicitacao_CellContentClick;
+            this.dgSolicitacao.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgSolicitacao.Location = new System.Drawing.Point(34, 268);
+            this.dgSolicitacao.Name = "dgSolicitacao";
+            this.dgSolicitacao.RowTemplate.Height = 25;
+            this.dgSolicitacao.Size = new System.Drawing.Size(564, 150);
+            this.dgSolicitacao.TabIndex = 11;
             // 
             // txtTipoSoli
             // 
-            txtTipoSoli.Location = new Point(573, 95);
-            txtTipoSoli.Name = "txtTipoSoli";
-            txtTipoSoli.Size = new Size(100, 23);
-            txtTipoSoli.TabIndex = 12;
+            this.txtTipoSoli.Location = new System.Drawing.Point(573, 95);
+            this.txtTipoSoli.Name = "txtTipoSoli";
+            this.txtTipoSoli.Size = new System.Drawing.Size(100, 23);
+            this.txtTipoSoli.TabIndex = 12;
             // 
             // txtStatus
             // 
-            txtStatus.Location = new Point(573, 156);
-            txtStatus.Name = "txtStatus";
-            txtStatus.Size = new Size(100, 23);
-            txtStatus.TabIndex = 13;
+            this.txtStatus.Location = new System.Drawing.Point(573, 156);
+            this.txtStatus.Name = "txtStatus";
+            this.txtStatus.Size = new System.Drawing.Size(100, 23);
+            this.txtStatus.TabIndex = 13;
             // 
             // AdminSolicitacao
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(txtStatus);
-            Controls.Add(txtTipoSoli);
-            Controls.Add(dgSolicitacao);
-            Controls.Add(linkLabel1);
-            Controls.Add(btnRecusar);
-            Controls.Add(btnAprovar);
-            Controls.Add(labelstatus);
-            Controls.Add(labeltipo);
-            Controls.Add(txtDescricao);
-            Controls.Add(labeldescricao);
-            Name = "AdminSolicitacao";
-            Text = "AdminSolicitacao";
-            Load += AdminSolicitacao_Load;
-            ((System.ComponentModel.ISupportInitialize)dgSolicitacao).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtStatus);
+            this.Controls.Add(this.txtTipoSoli);
+            this.Controls.Add(this.dgSolicitacao);
+            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.btnRecusar);
+            this.Controls.Add(this.btnAprovar);
+            this.Controls.Add(this.labelstatus);
+            this.Controls.Add(this.labeltipo);
+            this.Controls.Add(this.txtDescricao);
+            this.Controls.Add(this.labeldescricao);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "AdminSolicitacao";
+            this.Text = "AdminSolicitacao";
+            ((System.ComponentModel.ISupportInitialize)(this.dgSolicitacao)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

@@ -28,132 +28,124 @@
         /// </summary>
         private void InitializeComponent()
         {
-            mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
-            dtgPedido = new DataGridView();
-            btnConfirma = new Button();
-            cbAberto = new CheckBox();
-            cbEncerrado = new CheckBox();
-            txtDtPedido = new TextBox();
-            labelDtPedido = new Label();
-            toolStrip1 = new ToolStrip();
-            btnReturn = new ToolStripButton();
-            ((System.ComponentModel.ISupportInitialize)dtgPedido).BeginInit();
-            toolStrip1.SuspendLayout();
-            SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PedidoFunc));
+            this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
+            this.dtgPedido = new System.Windows.Forms.DataGridView();
+            this.btnConfirma = new System.Windows.Forms.Button();
+            this.cbAberto = new System.Windows.Forms.CheckBox();
+            this.cbEncerrado = new System.Windows.Forms.CheckBox();
+            this.txtDtPedido = new System.Windows.Forms.TextBox();
+            this.labelDtPedido = new System.Windows.Forms.Label();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.btnReturn = new System.Windows.Forms.ToolStripButton();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgPedido)).BeginInit();
+            this.toolStrip1.SuspendLayout();
+            this.SuspendLayout();
             // 
             // mySqlCommand1
             // 
-            mySqlCommand1.CacheAge = 0;
-            mySqlCommand1.Connection = null;
-            mySqlCommand1.EnableCaching = false;
-            mySqlCommand1.Transaction = null;
+            this.mySqlCommand1.CacheAge = 0;
+            this.mySqlCommand1.Connection = null;
+            this.mySqlCommand1.EnableCaching = false;
+            this.mySqlCommand1.Transaction = null;
             // 
             // dtgPedido
             // 
-            dtgPedido.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgPedido.Location = new Point(0, 264);
-            dtgPedido.Margin = new Padding(3, 4, 3, 4);
-            dtgPedido.Name = "dtgPedido";
-            dtgPedido.RowHeadersWidth = 51;
-            dtgPedido.RowTemplate.Height = 25;
-            dtgPedido.Size = new Size(918, 335);
-            dtgPedido.TabIndex = 1;
-            dtgPedido.Visible = false;
+            this.dtgPedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgPedido.Location = new System.Drawing.Point(0, 198);
+            this.dtgPedido.Name = "dtgPedido";
+            this.dtgPedido.RowHeadersWidth = 51;
+            this.dtgPedido.RowTemplate.Height = 25;
+            this.dtgPedido.Size = new System.Drawing.Size(803, 251);
+            this.dtgPedido.TabIndex = 1;
+            this.dtgPedido.Visible = false;
             // 
             // btnConfirma
             // 
-            btnConfirma.Location = new Point(22, 399);
-            btnConfirma.Margin = new Padding(3, 4, 3, 4);
-            btnConfirma.Name = "btnConfirma";
-            btnConfirma.Size = new Size(165, 53);
-            btnConfirma.TabIndex = 4;
-            btnConfirma.Text = "Confirmar";
-            btnConfirma.UseVisualStyleBackColor = true;
-            btnConfirma.Click += btnConfirma_Click;
+            this.btnConfirma.Location = new System.Drawing.Point(19, 299);
+            this.btnConfirma.Name = "btnConfirma";
+            this.btnConfirma.Size = new System.Drawing.Size(144, 40);
+            this.btnConfirma.TabIndex = 4;
+            this.btnConfirma.Text = "Confirmar";
+            this.btnConfirma.UseVisualStyleBackColor = true;
             // 
             // cbAberto
             // 
-            cbAberto.AutoSize = true;
-            cbAberto.Location = new Point(22, 200);
-            cbAberto.Margin = new Padding(3, 4, 3, 4);
-            cbAberto.Name = "cbAberto";
-            cbAberto.Size = new Size(77, 24);
-            cbAberto.TabIndex = 5;
-            cbAberto.Text = "Aberto";
-            cbAberto.UseVisualStyleBackColor = true;
-            cbAberto.CheckedChanged += cbAberto_CheckedChanged;
+            this.cbAberto.AutoSize = true;
+            this.cbAberto.Location = new System.Drawing.Point(19, 150);
+            this.cbAberto.Name = "cbAberto";
+            this.cbAberto.Size = new System.Drawing.Size(62, 19);
+            this.cbAberto.TabIndex = 5;
+            this.cbAberto.Text = "Aberto";
+            this.cbAberto.UseVisualStyleBackColor = true;
             // 
             // cbEncerrado
             // 
-            cbEncerrado.AutoSize = true;
-            cbEncerrado.Location = new Point(113, 200);
-            cbEncerrado.Margin = new Padding(3, 4, 3, 4);
-            cbEncerrado.Name = "cbEncerrado";
-            cbEncerrado.Size = new Size(98, 24);
-            cbEncerrado.TabIndex = 6;
-            cbEncerrado.Text = "Encerrado";
-            cbEncerrado.UseVisualStyleBackColor = true;
-            cbEncerrado.CheckedChanged += cbEncerrado_CheckedChanged;
+            this.cbEncerrado.AutoSize = true;
+            this.cbEncerrado.Location = new System.Drawing.Point(99, 150);
+            this.cbEncerrado.Name = "cbEncerrado";
+            this.cbEncerrado.Size = new System.Drawing.Size(79, 19);
+            this.cbEncerrado.TabIndex = 6;
+            this.cbEncerrado.Text = "Encerrado";
+            this.cbEncerrado.UseVisualStyleBackColor = true;
             // 
             // txtDtPedido
             // 
-            txtDtPedido.Location = new Point(22, 115);
-            txtDtPedido.Margin = new Padding(3, 4, 3, 4);
-            txtDtPedido.Name = "txtDtPedido";
-            txtDtPedido.Size = new Size(114, 27);
-            txtDtPedido.TabIndex = 7;
+            this.txtDtPedido.Location = new System.Drawing.Point(19, 86);
+            this.txtDtPedido.Name = "txtDtPedido";
+            this.txtDtPedido.Size = new System.Drawing.Size(100, 23);
+            this.txtDtPedido.TabIndex = 7;
             // 
             // labelDtPedido
             // 
-            labelDtPedido.AutoSize = true;
-            labelDtPedido.Location = new Point(22, 91);
-            labelDtPedido.Name = "labelDtPedido";
-            labelDtPedido.Size = new Size(91, 20);
-            labelDtPedido.TabIndex = 8;
-            labelDtPedido.Text = "Data Pedido";
+            this.labelDtPedido.AutoSize = true;
+            this.labelDtPedido.Location = new System.Drawing.Point(19, 68);
+            this.labelDtPedido.Name = "labelDtPedido";
+            this.labelDtPedido.Size = new System.Drawing.Size(71, 15);
+            this.labelDtPedido.TabIndex = 8;
+            this.labelDtPedido.Text = "Data Pedido";
             // 
             // toolStrip1
             // 
-            toolStrip1.ImageScalingSize = new Size(20, 20);
-            toolStrip1.Items.AddRange(new ToolStripItem[] { btnReturn });
-            toolStrip1.Location = new Point(0, 0);
-            toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(1062, 27);
-            toolStrip1.TabIndex = 9;
-            toolStrip1.Text = "toolStrip1";
-            toolStrip1.ItemClicked += toolStrip1_ItemClicked;
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnReturn});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(929, 27);
+            this.toolStrip1.TabIndex = 9;
+            this.toolStrip1.Text = "toolStrip1";
             // 
             // btnReturn
             // 
-            btnReturn.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            btnReturn.Image = Properties.Resources._688879_arrows_512x512;
-            btnReturn.ImageTransparentColor = Color.Magenta;
-            btnReturn.Name = "btnReturn";
-            btnReturn.Size = new Size(29, 24);
-            btnReturn.Text = "toolStripButton1";
-            btnReturn.Click += btnReturn_Click;
+            this.btnReturn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnReturn.Image = global::GuizzoLtda.Properties.Resources._688879_arrows_512x512;
+            this.btnReturn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Size = new System.Drawing.Size(24, 24);
+            this.btnReturn.Text = "toolStripButton1";
             // 
             // PedidoFunc
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1062, 673);
-            Controls.Add(toolStrip1);
-            Controls.Add(labelDtPedido);
-            Controls.Add(txtDtPedido);
-            Controls.Add(cbEncerrado);
-            Controls.Add(cbAberto);
-            Controls.Add(btnConfirma);
-            Controls.Add(dtgPedido);
-            Margin = new Padding(3, 4, 3, 4);
-            Name = "PedidoFunc";
-            StartPosition = FormStartPosition.CenterScreen;
-            Load += PedidoFunc_Load;
-            ((System.ComponentModel.ISupportInitialize)dtgPedido).EndInit();
-            toolStrip1.ResumeLayout(false);
-            toolStrip1.PerformLayout();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(929, 505);
+            this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.labelDtPedido);
+            this.Controls.Add(this.txtDtPedido);
+            this.Controls.Add(this.cbEncerrado);
+            this.Controls.Add(this.cbAberto);
+            this.Controls.Add(this.btnConfirma);
+            this.Controls.Add(this.dtgPedido);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "PedidoFunc";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            ((System.ComponentModel.ISupportInitialize)(this.dtgPedido)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

@@ -28,93 +28,85 @@
         /// </summary>
         private void InitializeComponent()
         {
-            pbLogoEmp = new PictureBox();
-            dgViewSelEmp = new DataGridView();
-            textBox1 = new TextBox();
-            toolStrip1 = new ToolStrip();
-            linkCadEmp = new LinkLabel();
-            ((System.ComponentModel.ISupportInitialize)pbLogoEmp).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dgViewSelEmp).BeginInit();
-            SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SelecionarEmpresa));
+            this.pbLogoEmp = new System.Windows.Forms.PictureBox();
+            this.dgViewSelEmp = new System.Windows.Forms.DataGridView();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.linkCadEmp = new System.Windows.Forms.LinkLabel();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogoEmp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgViewSelEmp)).BeginInit();
+            this.SuspendLayout();
             // 
             // pbLogoEmp
             // 
-            pbLogoEmp.InitialImage = null;
-            pbLogoEmp.Location = new Point(511, 35);
-            pbLogoEmp.Margin = new Padding(3, 4, 3, 4);
-            pbLogoEmp.Name = "pbLogoEmp";
-            pbLogoEmp.Size = new Size(403, 567);
-            pbLogoEmp.SizeMode = PictureBoxSizeMode.StretchImage;
-            pbLogoEmp.TabIndex = 1;
-            pbLogoEmp.TabStop = false;
-            pbLogoEmp.Click += pbLogoEmp_Click;
+            this.pbLogoEmp.InitialImage = null;
+            this.pbLogoEmp.Location = new System.Drawing.Point(447, 26);
+            this.pbLogoEmp.Name = "pbLogoEmp";
+            this.pbLogoEmp.Size = new System.Drawing.Size(353, 425);
+            this.pbLogoEmp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLogoEmp.TabIndex = 1;
+            this.pbLogoEmp.TabStop = false;
             // 
             // dgViewSelEmp
             // 
-            dgViewSelEmp.AllowUserToAddRows = false;
-            dgViewSelEmp.AllowUserToDeleteRows = false;
-            dgViewSelEmp.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgViewSelEmp.Location = new Point(0, 35);
-            dgViewSelEmp.Margin = new Padding(3, 4, 3, 4);
-            dgViewSelEmp.Name = "dgViewSelEmp";
-            dgViewSelEmp.ReadOnly = true;
-            dgViewSelEmp.RowHeadersWidth = 51;
-            dgViewSelEmp.RowTemplate.Height = 25;
-            dgViewSelEmp.Size = new Size(514, 567);
-            dgViewSelEmp.TabIndex = 2;
-            dgViewSelEmp.CellContentClick += dgViewSelEmp_CellContentClick_1;
-            dgViewSelEmp.CellDoubleClick += dgViewSelEmp_CellDoubleClick;
+            this.dgViewSelEmp.AllowUserToAddRows = false;
+            this.dgViewSelEmp.AllowUserToDeleteRows = false;
+            this.dgViewSelEmp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgViewSelEmp.Location = new System.Drawing.Point(0, 26);
+            this.dgViewSelEmp.Name = "dgViewSelEmp";
+            this.dgViewSelEmp.ReadOnly = true;
+            this.dgViewSelEmp.RowHeadersWidth = 51;
+            this.dgViewSelEmp.RowTemplate.Height = 25;
+            this.dgViewSelEmp.Size = new System.Drawing.Size(450, 425);
+            this.dgViewSelEmp.TabIndex = 2;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(511, 571);
-            textBox1.Margin = new Padding(3, 4, 3, 4);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(403, 27);
-            textBox1.TabIndex = 3;
+            this.textBox1.Location = new System.Drawing.Point(447, 428);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(353, 23);
+            this.textBox1.TabIndex = 3;
             // 
             // toolStrip1
             // 
-            toolStrip1.ImageScalingSize = new Size(20, 20);
-            toolStrip1.Location = new Point(0, 0);
-            toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(1062, 25);
-            toolStrip1.TabIndex = 4;
-            toolStrip1.Text = "toolStrip1";
-            toolStrip1.ItemClicked += toolStrip1_ItemClicked;
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(929, 25);
+            this.toolStrip1.TabIndex = 4;
+            this.toolStrip1.Text = "toolStrip1";
             // 
             // linkCadEmp
             // 
-            linkCadEmp.AutoSize = true;
-            linkCadEmp.Location = new Point(702, 13);
-            linkCadEmp.Name = "linkCadEmp";
-            linkCadEmp.Size = new Size(232, 20);
-            linkCadEmp.TabIndex = 8;
-            linkCadEmp.TabStop = true;
-            linkCadEmp.Text = "Não Possui Cadastro? Clique Aqui";
-            linkCadEmp.LinkClicked += linkCadEmp_LinkClicked;
+            this.linkCadEmp.AutoSize = true;
+            this.linkCadEmp.Location = new System.Drawing.Point(614, 10);
+            this.linkCadEmp.Name = "linkCadEmp";
+            this.linkCadEmp.Size = new System.Drawing.Size(186, 15);
+            this.linkCadEmp.TabIndex = 8;
+            this.linkCadEmp.TabStop = true;
+            this.linkCadEmp.Text = "Não Possui Cadastro? Clique Aqui";
             // 
             // SelecionarEmpresa
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1062, 673);
-            ControlBox = false;
-            Controls.Add(linkCadEmp);
-            Controls.Add(toolStrip1);
-            Controls.Add(dgViewSelEmp);
-            Controls.Add(pbLogoEmp);
-            Controls.Add(textBox1);
-            Margin = new Padding(3, 4, 3, 4);
-            Name = "SelecionarEmpresa";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "SelecionarEmpresa";
-            FormClosing += SelecionarEmpresa_FormClosing;
-            Load += SelecionarEmpresa_Load_1;
-            ((System.ComponentModel.ISupportInitialize)pbLogoEmp).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dgViewSelEmp).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(929, 505);
+            this.ControlBox = false;
+            this.Controls.Add(this.linkCadEmp);
+            this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.dgViewSelEmp);
+            this.Controls.Add(this.pbLogoEmp);
+            this.Controls.Add(this.textBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "SelecionarEmpresa";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "SelecionarEmpresa";
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogoEmp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgViewSelEmp)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

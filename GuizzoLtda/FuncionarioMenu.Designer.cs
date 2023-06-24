@@ -29,159 +29,164 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FuncionarioMenu));
-            toolStrip1 = new ToolStrip();
-            toolStripButton2 = new ToolStripButton();
-            toolStripSeparator1 = new ToolStripSeparator();
-            btnVerifyEmp = new ToolStripButton();
-            toolStripSeparator3 = new ToolStripSeparator();
-            btnConfirmarPedi = new ToolStripButton();
-            toolStripSeparator5 = new ToolStripSeparator();
-            toolStripButton3 = new ToolStripButton();
-            toolStripSeparator2 = new ToolStripSeparator();
-            toolStripButton4 = new ToolStripButton();
-            toolStripSeparator4 = new ToolStripSeparator();
-            toolStripButton5 = new ToolStripButton();
-            pbFotoMenuFunc = new PictureBox();
-            toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pbFotoMenuFunc).BeginInit();
-            SuspendLayout();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnVerifyEmp = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnConfirmarPedi = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.pbFotoMenuFunc = new System.Windows.Forms.PictureBox();
+            this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFotoMenuFunc)).BeginInit();
+            this.SuspendLayout();
             // 
             // toolStrip1
             // 
-            toolStrip1.BackColor = Color.Black;
-            toolStrip1.ImageScalingSize = new Size(20, 20);
-            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton2, toolStripSeparator1, btnVerifyEmp, toolStripSeparator3, btnConfirmarPedi, toolStripSeparator5, toolStripButton3, toolStripSeparator2, toolStripButton4, toolStripSeparator4, toolStripButton5 });
-            toolStrip1.Location = new Point(0, 0);
-            toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(1062, 27);
-            toolStrip1.TabIndex = 0;
-            toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.BackColor = System.Drawing.Color.Black;
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton2,
+            this.toolStripSeparator1,
+            this.btnVerifyEmp,
+            this.toolStripSeparator3,
+            this.btnConfirmarPedi,
+            this.toolStripSeparator5,
+            this.toolStripButton3,
+            this.toolStripSeparator2,
+            this.toolStripButton4,
+            this.toolStripSeparator4,
+            this.toolStripButton5});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(929, 27);
+            this.toolStrip1.TabIndex = 0;
+            this.toolStrip1.Text = "toolStrip1";
             // 
             // toolStripButton2
             // 
-            toolStripButton2.BackColor = Color.Goldenrod;
-            toolStripButton2.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            toolStripButton2.Image = Properties.Resources._688879_arrows_512x512;
-            toolStripButton2.ImageTransparentColor = Color.Magenta;
-            toolStripButton2.Name = "toolStripButton2";
-            toolStripButton2.Size = new Size(29, 24);
-            toolStripButton2.Text = "toolStripButton2";
-            toolStripButton2.Click += toolStripButton2_Click;
+            this.toolStripButton2.BackColor = System.Drawing.Color.Goldenrod;
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = global::GuizzoLtda.Properties.Resources._688879_arrows_512x512;
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton2.Text = "toolStripButton2";
             // 
             // toolStripSeparator1
             // 
-            toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(6, 27);
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // btnVerifyEmp
             // 
-            btnVerifyEmp.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            btnVerifyEmp.ForeColor = Color.Goldenrod;
-            btnVerifyEmp.Image = (Image)resources.GetObject("btnVerifyEmp.Image");
-            btnVerifyEmp.ImageTransparentColor = Color.Magenta;
-            btnVerifyEmp.Name = "btnVerifyEmp";
-            btnVerifyEmp.Size = new Size(126, 24);
-            btnVerifyEmp.Text = "Encontrar Cliente";
-            btnVerifyEmp.TextImageRelation = TextImageRelation.TextAboveImage;
-            btnVerifyEmp.Click += toolStripButton14_Click;
+            this.btnVerifyEmp.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnVerifyEmp.ForeColor = System.Drawing.Color.Goldenrod;
+            this.btnVerifyEmp.Image = ((System.Drawing.Image)(resources.GetObject("btnVerifyEmp.Image")));
+            this.btnVerifyEmp.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnVerifyEmp.Name = "btnVerifyEmp";
+            this.btnVerifyEmp.Size = new System.Drawing.Size(102, 24);
+            this.btnVerifyEmp.Text = "Encontrar Cliente";
+            this.btnVerifyEmp.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             // 
             // toolStripSeparator3
             // 
-            toolStripSeparator3.Name = "toolStripSeparator3";
-            toolStripSeparator3.Size = new Size(6, 27);
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 27);
             // 
             // btnConfirmarPedi
             // 
-            btnConfirmarPedi.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            btnConfirmarPedi.ForeColor = Color.Goldenrod;
-            btnConfirmarPedi.Image = (Image)resources.GetObject("btnConfirmarPedi.Image");
-            btnConfirmarPedi.ImageTransparentColor = Color.Magenta;
-            btnConfirmarPedi.Name = "btnConfirmarPedi";
-            btnConfirmarPedi.Size = new Size(135, 24);
-            btnConfirmarPedi.Text = "Confirmar Pedidos";
-            btnConfirmarPedi.TextImageRelation = TextImageRelation.TextAboveImage;
-            btnConfirmarPedi.Click += toolStripButton16_Click;
+            this.btnConfirmarPedi.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnConfirmarPedi.ForeColor = System.Drawing.Color.Goldenrod;
+            this.btnConfirmarPedi.Image = ((System.Drawing.Image)(resources.GetObject("btnConfirmarPedi.Image")));
+            this.btnConfirmarPedi.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnConfirmarPedi.Name = "btnConfirmarPedi";
+            this.btnConfirmarPedi.Size = new System.Drawing.Size(110, 24);
+            this.btnConfirmarPedi.Text = "Confirmar Pedidos";
+            this.btnConfirmarPedi.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             // 
             // toolStripSeparator5
             // 
-            toolStripSeparator5.Name = "toolStripSeparator5";
-            toolStripSeparator5.Size = new Size(6, 27);
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripButton3
             // 
-            toolStripButton3.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            toolStripButton3.ForeColor = Color.Goldenrod;
-            toolStripButton3.Image = (Image)resources.GetObject("toolStripButton3.Image");
-            toolStripButton3.ImageTransparentColor = Color.Magenta;
-            toolStripButton3.Name = "toolStripButton3";
-            toolStripButton3.Size = new Size(123, 24);
-            toolStripButton3.Text = "Verificar Pedidos";
-            toolStripButton3.TextImageRelation = TextImageRelation.TextAboveImage;
-            toolStripButton3.Click += toolStripButton3_Click;
+            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton3.ForeColor = System.Drawing.Color.Goldenrod;
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(98, 24);
+            this.toolStripButton3.Text = "Verificar Pedidos";
+            this.toolStripButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             // 
             // toolStripSeparator2
             // 
-            toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(6, 27);
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripButton4
             // 
-            toolStripButton4.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            toolStripButton4.ForeColor = Color.Goldenrod;
-            toolStripButton4.Image = (Image)resources.GetObject("toolStripButton4.Image");
-            toolStripButton4.ImageTransparentColor = Color.Magenta;
-            toolStripButton4.Name = "toolStripButton4";
-            toolStripButton4.Size = new Size(94, 24);
-            toolStripButton4.Text = "Traçar Rotas";
-            toolStripButton4.TextImageRelation = TextImageRelation.TextAboveImage;
-            toolStripButton4.Click += toolStripButton4_Click;
+            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton4.ForeColor = System.Drawing.Color.Goldenrod;
+            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
+            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.Size = new System.Drawing.Size(74, 24);
+            this.toolStripButton4.Text = "Traçar Rotas";
+            this.toolStripButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             // 
             // toolStripSeparator4
             // 
-            toolStripSeparator4.Name = "toolStripSeparator4";
-            toolStripSeparator4.Size = new Size(6, 27);
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripButton5
             // 
-            toolStripButton5.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            toolStripButton5.ForeColor = Color.Goldenrod;
-            toolStripButton5.Image = (Image)resources.GetObject("toolStripButton5.Image");
-            toolStripButton5.ImageTransparentColor = Color.Magenta;
-            toolStripButton5.Name = "toolStripButton5";
-            toolStripButton5.Size = new Size(153, 24);
-            toolStripButton5.Text = "Solicitar Manutenção";
-            toolStripButton5.TextImageRelation = TextImageRelation.TextAboveImage;
+            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton5.ForeColor = System.Drawing.Color.Goldenrod;
+            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
+            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton5.Name = "toolStripButton5";
+            this.toolStripButton5.Size = new System.Drawing.Size(123, 24);
+            this.toolStripButton5.Text = "Solicitar Manutenção";
+            this.toolStripButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             // 
             // pbFotoMenuFunc
             // 
-            pbFotoMenuFunc.BorderStyle = BorderStyle.Fixed3D;
-            pbFotoMenuFunc.Location = new Point(621, 27);
-            pbFotoMenuFunc.Margin = new Padding(3, 4, 3, 4);
-            pbFotoMenuFunc.Name = "pbFotoMenuFunc";
-            pbFotoMenuFunc.Size = new Size(441, 650);
-            pbFotoMenuFunc.SizeMode = PictureBoxSizeMode.StretchImage;
-            pbFotoMenuFunc.TabIndex = 1;
-            pbFotoMenuFunc.TabStop = false;
+            this.pbFotoMenuFunc.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pbFotoMenuFunc.Location = new System.Drawing.Point(543, 20);
+            this.pbFotoMenuFunc.Name = "pbFotoMenuFunc";
+            this.pbFotoMenuFunc.Size = new System.Drawing.Size(386, 488);
+            this.pbFotoMenuFunc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbFotoMenuFunc.TabIndex = 1;
+            this.pbFotoMenuFunc.TabStop = false;
             // 
             // FuncionarioMenu
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(173, 11, 0);
-            ClientSize = new Size(1062, 673);
-            Controls.Add(toolStrip1);
-            Controls.Add(pbFotoMenuFunc);
-            ForeColor = Color.Goldenrod;
-            Margin = new Padding(3, 4, 3, 4);
-            Name = "FuncionarioMenu";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = " ";
-            Load += FuncionarioMenu_Load;
-            toolStrip1.ResumeLayout(false);
-            toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pbFotoMenuFunc).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(11)))), ((int)(((byte)(0)))));
+            this.ClientSize = new System.Drawing.Size(929, 505);
+            this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.pbFotoMenuFunc);
+            this.ForeColor = System.Drawing.Color.Goldenrod;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "FuncionarioMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = " Funcionario menu";
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFotoMenuFunc)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

@@ -54,7 +54,7 @@ namespace GuizzoLtda
             txtIdMoto.Visible = true;
             txtVolume.Visible = true;
             txtDataPed.Visible = true;
-            txtValorPedido.Visible = true;
+            
 
             labelidpedido.Visible = true;
             label4.Visible = true;
@@ -76,7 +76,7 @@ namespace GuizzoLtda
             txtIdMoto.Visible = true;
             txtVolume.Visible = true;
             txtDataPed.Visible = true;
-            txtValorPedido.Visible = true;
+            
 
             labelidpedido.Visible = true;
             label4.Visible = true;
@@ -98,7 +98,7 @@ namespace GuizzoLtda
             txtIdMoto.Visible = true;
             txtVolume.Visible = true;
             txtDataPed.Visible = true;
-            txtValorPedido.Visible = true;
+            
 
             labelidpedido.Visible = true;
             label4.Visible = true;
@@ -115,11 +115,11 @@ namespace GuizzoLtda
             PedidoModelo.CodMotorista = Convert.ToInt32(txtIdMoto.Text);
             PedidoModelo.PedidoData = txtDataPed.Text;
             PedidoModelo.PedidoVolumes = txtVolume.Text;
-            PedidoModelo.ValorPedido = txtValorPedido.Text;
+           
 
 
 
-            if (txtIdCliente.Text == "" || txtIdMoto.Text == "" || txtDataPed.Text == "" || txtVolume.Text == "" || txtValorPedido.Text == "")
+            if (txtIdCliente.Text == "" || txtIdMoto.Text == "" || txtDataPed.Text == "" || txtVolume.Text == "" )
             {
                 MessageBox.Show("Campos obrigatórios não preenchidos");
             }
@@ -214,7 +214,6 @@ namespace GuizzoLtda
                     txtIdCliente.Text = dgPedido.Rows[e.RowIndex].Cells["idcliente"].Value.ToString();
                     txtIdMoto.Text = dgPedido.Rows[e.RowIndex].Cells["idmotorista"].Value.ToString();
                     txtDataPed.Text = dgPedido.Rows[e.RowIndex].Cells["dtpedido"].Value.ToString();
-                    txtValorPedido.Text = dgPedido.Rows[e.RowIndex].Cells["valorpedido"].Value.ToString();
                     txtVolume.Text = dgPedido.Rows[e.RowIndex].Cells["nmrvolumes"].Value.ToString();
                 }
 

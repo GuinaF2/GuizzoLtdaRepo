@@ -28,35 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dgCliente = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dgCliente).BeginInit();
-            SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SelecionarCliente));
+            this.dgCliente = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgCliente)).BeginInit();
+            this.SuspendLayout();
             // 
             // dgCliente
             // 
-            dgCliente.AllowUserToAddRows = false;
-            dgCliente.AllowUserToDeleteRows = false;
-            dgCliente.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgCliente.Dock = DockStyle.Fill;
-            dgCliente.Location = new Point(0, 0);
-            dgCliente.Name = "dgCliente";
-            dgCliente.ReadOnly = true;
-            dgCliente.RowTemplate.Height = 25;
-            dgCliente.Size = new Size(800, 450);
-            dgCliente.TabIndex = 0;
-            dgCliente.CellDoubleClick += dgVeiculo_CellDoubleClick;
+            this.dgCliente.AllowUserToAddRows = false;
+            this.dgCliente.AllowUserToDeleteRows = false;
+            this.dgCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgCliente.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgCliente.Location = new System.Drawing.Point(0, 0);
+            this.dgCliente.Name = "dgCliente";
+            this.dgCliente.ReadOnly = true;
+            this.dgCliente.RowTemplate.Height = 25;
+            this.dgCliente.Size = new System.Drawing.Size(800, 450);
+            this.dgCliente.TabIndex = 0;
             // 
             // SelecionarCliente
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(dgCliente);
-            Name = "SelecionarCliente";
-            Text = "SelecionarCliente";
-            Load += SelecionarCliente_Load;
-            ((System.ComponentModel.ISupportInitialize)dgCliente).EndInit();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dgCliente);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "SelecionarCliente";
+            this.Text = "SelecionarCliente";
+            ((System.ComponentModel.ISupportInitialize)(this.dgCliente)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion

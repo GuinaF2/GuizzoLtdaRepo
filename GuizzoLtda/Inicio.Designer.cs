@@ -29,97 +29,90 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
-            SelectEmp = new Button();
-            btnAcessarSys = new Button();
-            button1 = new Button();
-            label1 = new Label();
-            pictureBox1 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            SuspendLayout();
+            this.SelectEmp = new System.Windows.Forms.Button();
+            this.btnAcessarSys = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.SuspendLayout();
             // 
             // SelectEmp
             // 
-            SelectEmp.FlatStyle = FlatStyle.Popup;
-            SelectEmp.Font = new Font("Leelawadee UI", 22.2F, FontStyle.Regular, GraphicsUnit.Point);
-            SelectEmp.ForeColor = Color.White;
-            SelectEmp.Location = new Point(350, 313);
-            SelectEmp.Margin = new Padding(3, 4, 3, 4);
-            SelectEmp.Name = "SelectEmp";
-            SelectEmp.Size = new Size(380, 112);
-            SelectEmp.TabIndex = 2;
-            SelectEmp.Text = "Selecionar Empresa";
-            SelectEmp.UseVisualStyleBackColor = true;
-            SelectEmp.Click += button1_Click;
+            this.SelectEmp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.SelectEmp.Font = new System.Drawing.Font("Leelawadee UI", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.SelectEmp.ForeColor = System.Drawing.Color.White;
+            this.SelectEmp.Location = new System.Drawing.Point(311, 267);
+            this.SelectEmp.Name = "SelectEmp";
+            this.SelectEmp.Size = new System.Drawing.Size(332, 84);
+            this.SelectEmp.TabIndex = 2;
+            this.SelectEmp.Text = "Selecionar Empresa";
+            this.SelectEmp.UseVisualStyleBackColor = true;
             // 
             // btnAcessarSys
             // 
-            btnAcessarSys.Enabled = false;
-            btnAcessarSys.FlatStyle = FlatStyle.Popup;
-            btnAcessarSys.Font = new Font("Leelawadee UI", 22.2F, FontStyle.Regular, GraphicsUnit.Point);
-            btnAcessarSys.ForeColor = Color.White;
-            btnAcessarSys.Location = new Point(350, 158);
-            btnAcessarSys.Margin = new Padding(3, 4, 3, 4);
-            btnAcessarSys.Name = "btnAcessarSys";
-            btnAcessarSys.Size = new Size(380, 112);
-            btnAcessarSys.TabIndex = 2;
-            btnAcessarSys.Text = "Acessar Sistema";
-            btnAcessarSys.UseVisualStyleBackColor = true;
-            btnAcessarSys.EnabledChanged += btnAcessarSys_EnabledChanged;
-            btnAcessarSys.Click += btnAcessarSys_Click;
+            this.btnAcessarSys.Enabled = false;
+            this.btnAcessarSys.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAcessarSys.Font = new System.Drawing.Font("Leelawadee UI", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAcessarSys.ForeColor = System.Drawing.Color.White;
+            this.btnAcessarSys.Location = new System.Drawing.Point(311, 150);
+            this.btnAcessarSys.Name = "btnAcessarSys";
+            this.btnAcessarSys.Size = new System.Drawing.Size(332, 84);
+            this.btnAcessarSys.TabIndex = 2;
+            this.btnAcessarSys.Text = "Acessar Sistema";
+            this.btnAcessarSys.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            button1.BackColor = Color.FromArgb(173, 11, 0);
-            button1.Location = new Point(290, 0);
-            button1.Name = "button1";
-            button1.Size = new Size(500, 1000);
-            button1.TabIndex = 1;
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click_1;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.FromArgb(173, 11, 0);
-            label1.Font = new Font("Leelawadee UI", 31.8000011F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(386, 43);
-            label1.Name = "label1";
-            label1.Size = new Size(321, 72);
-            label1.TabIndex = 3;
-            label1.Text = "Oieeeeee :3";
-            label1.Click += label1_Click;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(11)))), ((int)(((byte)(0)))));
+            this.button1.Location = new System.Drawing.Point(254, 0);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(438, 750);
+            this.button1.TabIndex = 1;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(295, 430);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(492, 305);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 4;
-            pictureBox1.TabStop = false;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(258, 322);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(430, 229);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(10)))), ((int)(((byte)(0)))));
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(340, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(281, 103);
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
             // 
             // Inicio
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Black;
-            ClientSize = new Size(1062, 673);
-            Controls.Add(pictureBox1);
-            Controls.Add(label1);
-            Controls.Add(btnAcessarSys);
-            Controls.Add(SelectEmp);
-            Controls.Add(button1);
-            Margin = new Padding(3, 4, 3, 4);
-            Name = "Inicio";
-            Text = "Inicio";
-            FormClosed += Inicio_FormClosed;
-            Load += Inicio_Load;
-            Leave += Inicio_Leave;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
+            this.ClientSize = new System.Drawing.Size(929, 505);
+            this.Controls.Add(this.btnAcessarSys);
+            this.Controls.Add(this.SelectEmp);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.button1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "Inicio";
+            this.Text = "Inicio";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
@@ -127,7 +120,7 @@
         private Button SelectEmp;
         public Button btnAcessarSys;
         private Button button1;
-        private Label label1;
         private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
     }
 }
