@@ -41,7 +41,7 @@ namespace GuizzoLtda
             fpedidofuncionario.Show();
         }
 
-        private void toolStripButton2_Click(object sender, EventArgs e)
+        private void toolStripButton2_Click_1(object sender, EventArgs e)
         {
             Principal fprincipalreturn = new Principal(us, idcliente);
             this.Hide();
@@ -63,14 +63,14 @@ namespace GuizzoLtda
 
         }
 
-        private void toolStripButton4_Click(object sender, EventArgs e)
+        private void toolStripButton4_Click_1(object sender, EventArgs e)
         {
             MapaTeste ftestemapa = new MapaTeste();
             this.Hide();
             ftestemapa.Show();
         }
 
-        private void toolStripButton5_Click(object sender, EventArgs e)
+        private void toolStripButton5_Click_1(object sender, EventArgs e)
         {
             FuncionarioSolicit ffuncsoli = new FuncionarioSolicit();
             this.Hide();
@@ -92,24 +92,13 @@ namespace GuizzoLtda
 
         }
 
-        private void toolStripButton4_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripButton5_Click_1(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void FuncionarioMenu_Load_1(object sender, EventArgs e)
         {
 
         }
 
-        private void toolStripButton2_Click_1(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

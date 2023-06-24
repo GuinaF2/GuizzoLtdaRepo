@@ -25,20 +25,13 @@ namespace GuizzoLtda
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            var form2Obj = new SelecionarEmpresa(us, idcliente);
-            form2Obj.Shown += (o, args) => { btnAcessarSys.Enabled = false; };
-            form2Obj.FormClosed += (o, args) => { btnAcessarSys.Enabled = true; };
-            form2Obj.Show();
-        }
-
+        
         private void Inicio_Load(object sender, EventArgs e)
         {
 
         }
 
-       
+
 
         private void Inicio_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -71,23 +64,20 @@ namespace GuizzoLtda
 
         private void SelectEmp_Click(object sender, EventArgs e)
         {
-            var form2Obj = new SelecionarEmpresa(us, idcliente);
-            form2Obj.Shown += (o, args) => { btnAcessarSys.Enabled = false; };
-            form2Obj.FormClosed += (o, args) => { btnAcessarSys.Enabled = true; };
-            form2Obj.Show();
+            SelecionarEmpresa fadminsol = new SelecionarEmpresa(us,idcliente);
+            this.Hide();
+            fadminsol.Show();
         }
 
         private void Inicio_Load_1(object sender, EventArgs e)
         {
             us = usu.CarregaEmpresa(idcliente);
-            MessageBox.Show(us.CodCliente.ToString());
+
         }
 
         private void btnAcessarSys_Click_1(object sender, EventArgs e)
         {
-            Principal fcomeco = new Principal(us, idcliente);
-            this.Hide();
-            fcomeco.Show();
+
         }
     }
 }

@@ -37,33 +37,10 @@ namespace GuizzoLtda
 
 
 
-
-
-        private void dgViewSelEmp_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                if (dgViewSelEmp.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
-                {
-                    dgViewSelEmp.CurrentRow.Selected = true;
-                    textBox1.Text = dgViewSelEmp.Rows[e.RowIndex].Cells["logo"].Value.ToString();
-                    pbLogoEmp.ImageLocation = textBox1.Text;
-
-
-
-
-                }
-            }
-            catch
-            {
-                MessageBox.Show("Selecione your company plese!!!!!!");
-            }
-        }
-
         private void SelecionarEmpresa_Load(object sender, EventArgs e)
         {
 
-            dgViewSelEmp.DataSource = conexaosql.verDados("SELECT idcliente, razao_social,logo FROM tb_cliente WHERE statuscadastro= 'Aprovado'");
+            dgViewSelEmp.DataSource = conexaosql.verDados("SELECT idcliente, razao_social,logo FROM tb_cliente WHERE statuscadastro= 'Aprovada'");
 
         }
 
@@ -94,7 +71,23 @@ namespace GuizzoLtda
 
         }
 
-        private void dgViewSelEmp_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+
+
+
+        
+
+
+        private void dgViewSelEmp_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            
+            this.Close();
+            Principal fcomeco = new Principal(us, idcliente);
+            this.Hide();
+            fcomeco.Show();
+
+        }
+
+        private void dgViewSelEmp_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
@@ -104,21 +97,13 @@ namespace GuizzoLtda
                     textBox1.Text = dgViewSelEmp.Rows[e.RowIndex].Cells["logo"].Value.ToString();
                     pbLogoEmp.ImageLocation = textBox1.Text;
                 }
+                
             }
             catch
             {
                 MessageBox.Show("Selecione your company plese!!!!!!");
             }
         }
-
-        private void dgViewSelEmp_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dgViewSelEmp_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }
+

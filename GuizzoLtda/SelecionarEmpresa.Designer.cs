@@ -45,7 +45,7 @@
             pbLogoEmp.BackColor = SystemColors.ButtonHighlight;
             pbLogoEmp.BackgroundImageLayout = ImageLayout.Stretch;
             pbLogoEmp.InitialImage = null;
-            pbLogoEmp.Location = new Point(447, 26);
+            pbLogoEmp.Location = new Point(447, 38);
             pbLogoEmp.Name = "pbLogoEmp";
             pbLogoEmp.Size = new Size(482, 480);
             pbLogoEmp.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -58,20 +58,20 @@
             dgViewSelEmp.AllowUserToDeleteRows = false;
             dgViewSelEmp.BackgroundColor = SystemColors.ActiveCaptionText;
             dgViewSelEmp.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgViewSelEmp.Location = new Point(0, 28);
+            dgViewSelEmp.Location = new Point(0, 40);
             dgViewSelEmp.Name = "dgViewSelEmp";
             dgViewSelEmp.ReadOnly = true;
             dgViewSelEmp.RowHeadersWidth = 51;
             dgViewSelEmp.RowTemplate.Height = 25;
             dgViewSelEmp.Size = new Size(450, 478);
             dgViewSelEmp.TabIndex = 2;
-            dgViewSelEmp.CellContentClick += dgViewSelEmp_CellContentClick;
-            dgViewSelEmp.CellContentDoubleClick += dgViewSelEmp_CellContentDoubleClick;
+            dgViewSelEmp.CellClick += dgViewSelEmp_CellClick;
+
             dgViewSelEmp.CellDoubleClick += dgViewSelEmp_CellDoubleClick_1;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(447, 428);
+            textBox1.Location = new Point(512, 435);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(353, 23);
             textBox1.TabIndex = 3;
@@ -95,6 +95,9 @@
             // 
             panel1.BackColor = Color.Black;
             panel1.Controls.Add(label1);
+            panel1.Controls.Add(dgViewSelEmp);
+            panel1.Controls.Add(pbLogoEmp);
+            panel1.Controls.Add(textBox1);
             panel1.Location = new Point(0, -12);
             panel1.Name = "panel1";
             panel1.Size = new Size(929, 518);
@@ -118,9 +121,6 @@
             ClientSize = new Size(929, 505);
             ControlBox = false;
             Controls.Add(linkCadEmp);
-            Controls.Add(dgViewSelEmp);
-            Controls.Add(pbLogoEmp);
-            Controls.Add(textBox1);
             Controls.Add(panel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "SelecionarEmpresa";

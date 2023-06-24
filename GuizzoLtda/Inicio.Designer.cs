@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
             SelectEmp = new Button();
-            btnAcessarSys = new Button();
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
             pictureBox3 = new PictureBox();
@@ -47,28 +46,13 @@
             SelectEmp.FlatStyle = FlatStyle.Popup;
             SelectEmp.Font = new Font("Leelawadee UI", 22.2F, FontStyle.Regular, GraphicsUnit.Point);
             SelectEmp.ForeColor = Color.White;
-            SelectEmp.Location = new Point(176, 320);
+            SelectEmp.Location = new Point(176, 279);
             SelectEmp.Name = "SelectEmp";
             SelectEmp.Size = new Size(332, 84);
             SelectEmp.TabIndex = 2;
             SelectEmp.Text = "Selecionar Empresa";
             SelectEmp.UseVisualStyleBackColor = false;
             SelectEmp.Click += SelectEmp_Click;
-            // 
-            // btnAcessarSys
-            // 
-            btnAcessarSys.BackColor = Color.Black;
-            btnAcessarSys.Enabled = false;
-            btnAcessarSys.FlatStyle = FlatStyle.Popup;
-            btnAcessarSys.Font = new Font("Leelawadee UI", 22.2F, FontStyle.Regular, GraphicsUnit.Point);
-            btnAcessarSys.ForeColor = Color.White;
-            btnAcessarSys.Location = new Point(176, 189);
-            btnAcessarSys.Name = "btnAcessarSys";
-            btnAcessarSys.Size = new Size(332, 84);
-            btnAcessarSys.TabIndex = 2;
-            btnAcessarSys.Text = "Acessar Sistema";
-            btnAcessarSys.UseVisualStyleBackColor = false;
-            btnAcessarSys.Click += btnAcessarSys_Click_1;
             // 
             // pictureBox2
             // 
@@ -108,7 +92,6 @@
             panel1.BackColor = Color.FromArgb(173, 14, 0);
             panel1.Controls.Add(SelectEmp);
             panel1.Controls.Add(pictureBox2);
-            panel1.Controls.Add(btnAcessarSys);
             panel1.Location = new Point(135, -3);
             panel1.Name = "panel1";
             panel1.Size = new Size(645, 523);
@@ -137,7 +120,6 @@
         #endregion
 
         private Button SelectEmp;
-        public Button btnAcessarSys;
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
         private PictureBox pictureBox3;
