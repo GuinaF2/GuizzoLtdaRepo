@@ -71,9 +71,9 @@ namespace Controle
         {
             try
             {
-                string sql = "UPDATE tb_pedido set nmrvolumes=@nmrvolumes, statuspedido=@statuspedido,dtpedido=@dtpedido,valorpedido=@valorpedido where idpedido= @codigo";
-                string[] campos = { "@nmrvolumes", "@statuspedido", "@dtpedido", "@valorpedido" };
-                string[] valores = { us.PedidoVolumes, us.PedidoStatus, us.PedidoData, us.ValorPedido };
+                string sql = "UPDATE tb_pedido set idcliente=@idcliente,idmotorista=@idmotorista,nmrvolumes=@nmrvolumes, statuspedido=@statuspedido,dtpedido=@dtpedido,valorpedido=@valorpedido where idpedido= @codigo";
+                string[] campos = { "@idcliente","@idmotorista","@nmrvolumes", "@statuspedido", "@dtpedido", "@valorpedido" };
+                string[] valores = { us.CodCliente.ToString(), us.CodMotorista.ToString(), us.PedidoVolumes, us.PedidoStatus, us.PedidoData, us.ValorPedido };
                 if (conexaosql.atualizarDados(us.CodPedido, campos, valores, sql) >= 1)
                 {
                     return resultado = true;

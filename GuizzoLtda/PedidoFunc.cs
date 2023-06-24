@@ -1,5 +1,6 @@
 ﻿using Controle;
 using Modelos;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -46,9 +47,16 @@ namespace GuizzoLtda
 
         private void btnConfirma_Click(object sender, EventArgs e)
         {
-            dtgPedido.Visible = true;
+             conexaosql = new Conexao();
+                    MySqlConnection con = conexaosql.getConexao();
+                    con.Open();
 
-            txtDtPedido.Visible = false;
+            MySqlCommand command = new MySqlCommand("SELECT `idpedido`, `statuspedido`, `nmrvolumes`, `valorpedido` FROM `student` WHERE `dtpedido` BETWEEN @d1 AND @d2", con);
+            
+            command.Parameters.Add("@d1", MySqlDbType.Date).Value = dtPedido.Value;
+            command.Parameters.Add("@d2", MySqlDbType.Date).Value = dtPedido2.Value;
+            
+            dtgPedido.Visible = true;
             labelDtPedido.Visible = false;
             cbAberto.Visible = false;
             cbEncerrado.Visible = false;
