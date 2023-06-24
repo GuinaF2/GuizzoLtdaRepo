@@ -29,21 +29,21 @@ namespace GuizzoLtda
             InitializeComponent();
         }
 
-        private void btnReturn_Click(object sender, EventArgs e)
+        private void btnReturn_Click_1(object sender, EventArgs e)
         {
             AdminMenu fmenureturn = new AdminMenu(us, idcliente);
             this.Hide();
             fmenureturn.Show();
         }
 
-        private void CRUDPedido_Load(object sender, EventArgs e)
+        private void CRUDPedido_Load_1(object sender, EventArgs e)
         {
             us = usu.CarregaEmpresa(idcliente);
 
             dgPedido.DataSource = conexaosql.verDados("SELECT * FROM tb_pedido");
         }
 
-        private void btnAtualizar_Click(object sender, EventArgs e)
+        private void btnAtualizar_Click_1(object sender, EventArgs e)
         {
             SaveUpdate.Visible = true;
             SaveDelete.Visible = false;
@@ -87,7 +87,7 @@ namespace GuizzoLtda
             dgPedido.Visible = false;
         }
 
-        private void btnApaga_Click(object sender, EventArgs e)
+        private void btnApaga_Click_1(object sender, EventArgs e)
         {
             SaveUpdate.Visible = false;
             SaveDelete.Visible = true;
@@ -139,7 +139,7 @@ namespace GuizzoLtda
             }
         }
 
-        private void SaveDelete_Click(object sender, EventArgs e)
+        private void SaveDelete_Click_1(object sender, EventArgs e)
         {
             PedidoModelo.CodPedido = Convert.ToInt32(txtIdPedido.Text);
             var resposta = DialogResult;
@@ -165,7 +165,7 @@ namespace GuizzoLtda
 
         }
 
-        private void txtIdMoto_Click(object sender, EventArgs e)
+        private void txtIdMoto_Click_1(object sender, EventArgs e)
         {
             SelecionarMoto cselectmoto = new SelecionarMoto(us, idcliente);
             cselectmoto.ShowDialog();
@@ -180,7 +180,7 @@ namespace GuizzoLtda
             }
         }
 
-        private void txtIdCliente_Click(object sender, EventArgs e)
+        private void txtIdCliente_Click_1(object sender, EventArgs e)
         {
             SelecionarCliente cselectemp = new SelecionarCliente();
             cselectemp.ShowDialog();
@@ -201,7 +201,7 @@ namespace GuizzoLtda
 
         }
 
-        private void dgPedido_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgPedido_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
@@ -238,5 +238,12 @@ namespace GuizzoLtda
         {
 
         }
+
+        private void SaveUpdate_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }

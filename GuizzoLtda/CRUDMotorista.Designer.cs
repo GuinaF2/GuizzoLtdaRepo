@@ -75,6 +75,7 @@
             dataGridMotorista.RowTemplate.Height = 25;
             dataGridMotorista.Size = new Size(352, 506);
             dataGridMotorista.TabIndex = 23;
+            dataGridMotorista.CellClick += dataGridMotorista_CellClick_1;
             // 
             // toolStrip1
             // 
@@ -96,6 +97,7 @@
             btnReturn.Name = "btnReturn";
             btnReturn.Size = new Size(24, 25);
             btnReturn.Text = "Retornar";
+            btnReturn.Click += btnReturn_Click_1;
             // 
             // btnAtualizar
             // 
@@ -107,6 +109,7 @@
             btnAtualizar.Name = "btnAtualizar";
             btnAtualizar.Size = new Size(75, 25);
             btnAtualizar.Text = "Atualizar";
+            btnAtualizar.Click += btnAtualizar_Click_1;
             // 
             // toolStripSeparator1
             // 
@@ -123,6 +126,7 @@
             btnCad.Name = "btnCad";
             btnCad.Size = new Size(81, 25);
             btnCad.Text = "Cadastrar";
+            btnCad.Click += btnCad_Click_1;
             // 
             // toolStripSeparator2
             // 
@@ -139,6 +143,7 @@
             btnApaga.Name = "btnApaga";
             btnApaga.Size = new Size(64, 25);
             btnApaga.Text = "Deletar";
+            btnApaga.Click += btnApaga_Click_1;
             // 
             // toolStripSeparator
             // 
@@ -184,6 +189,7 @@
             txtRg.Name = "txtRg";
             txtRg.Size = new Size(185, 27);
             txtRg.TabIndex = 20;
+            txtRg.KeyPress += txtRg_KeyPress_1;
             // 
             // txtCpf
             // 
@@ -193,6 +199,7 @@
             txtCpf.Name = "txtCpf";
             txtCpf.Size = new Size(185, 27);
             txtCpf.TabIndex = 19;
+            txtCpf.KeyPress += txtCpf_KeyPress_1;
             // 
             // txtIdMoto
             // 
@@ -220,26 +227,28 @@
             SaveCreate.BackColor = Color.Black;
             SaveCreate.Font = new Font("Leelawadee UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
             SaveCreate.ForeColor = Color.Goldenrod;
-            SaveCreate.Location = new Point(100, 423);
+            SaveCreate.Location = new Point(100, 387);
             SaveCreate.Name = "SaveCreate";
             SaveCreate.Size = new Size(300, 50);
             SaveCreate.TabIndex = 16;
             SaveCreate.Text = "Salvar Cadastro";
             SaveCreate.UseVisualStyleBackColor = false;
             SaveCreate.Visible = false;
+            SaveCreate.Click += SaveCreate_Click_1;
             // 
             // SaveDelete
             // 
             SaveDelete.BackColor = Color.Black;
             SaveDelete.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             SaveDelete.ForeColor = Color.Goldenrod;
-            SaveDelete.Location = new Point(100, 424);
+            SaveDelete.Location = new Point(100, 337);
             SaveDelete.Name = "SaveDelete";
             SaveDelete.Size = new Size(300, 50);
             SaveDelete.TabIndex = 15;
             SaveDelete.Text = "Salvar Alteração";
             SaveDelete.UseVisualStyleBackColor = false;
             SaveDelete.Visible = false;
+            SaveDelete.Click += SaveDelete_Click_1;
             // 
             // SaveUpdate
             // 
@@ -253,6 +262,7 @@
             SaveUpdate.Text = "Salvar Alteração";
             SaveUpdate.UseVisualStyleBackColor = false;
             SaveUpdate.Visible = false;
+            SaveUpdate.Click += SaveUpdate_Click_1;
             // 
             // labelNome
             // 
@@ -284,6 +294,7 @@
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(185, 27);
             txtNome.TabIndex = 28;
+            txtNome.KeyPress += txtNome_KeyPress_1;
             // 
             // txtIdVeiculo
             // 
@@ -294,6 +305,7 @@
             txtIdVeiculo.ReadOnly = true;
             txtIdVeiculo.Size = new Size(125, 27);
             txtIdVeiculo.TabIndex = 27;
+            txtIdVeiculo.Click += txtIdVeiculo_Click_1;
             // 
             // labelcodigo
             // 
@@ -336,6 +348,7 @@
             txtCnh.Name = "txtCnh";
             txtCnh.Size = new Size(185, 27);
             txtCnh.TabIndex = 33;
+            txtCnh.KeyPress += txtCnh_KeyPress_1;
             // 
             // labeltipocnh
             // 
@@ -388,6 +401,7 @@
             Name = "CRUDMotorista";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "CRUDMotorista";
+            Load += CRUDMotorista_Load_1;
             ((System.ComponentModel.ISupportInitialize)dataGridMotorista).EndInit();
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();

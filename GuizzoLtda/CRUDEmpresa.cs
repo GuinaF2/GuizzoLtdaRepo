@@ -29,7 +29,7 @@ namespace GuizzoLtda
             InitializeComponent();
         }
 
-        private void CRUDEmpresa_Load(object sender, EventArgs e)
+        private void CRUDEmpresa_Load_1(object sender, EventArgs e)
         {
             us = usu.CarregaEmpresa(idcliente);
 
@@ -53,14 +53,14 @@ namespace GuizzoLtda
             labelrazaosocial.Visible = false;
         }
 
-        private void btnReturn_Click(object sender, EventArgs e)
+        private void btnReturn_Click_1(object sender, EventArgs e)
         {
             AdminMenu fmenureturn = new AdminMenu(us, idcliente);
             this.Hide();
             fmenureturn.Show();
         }
 
-        private void btnAtualizar_Click(object sender, EventArgs e)
+        private void btnAtualizar_Click_1(object sender, EventArgs e)
         {
             txtIdEmpresa.Text = String.Empty;
             txtCnpj.Text = String.Empty;
@@ -90,7 +90,7 @@ namespace GuizzoLtda
             labelrazaosocial.Visible = true;
         }
 
-        private void btnApaga_Click(object sender, EventArgs e)
+        private void btnApaga_Click_1(object sender, EventArgs e)
         {
             txtIdEmpresa.Text = String.Empty;
             txtCnpj.Text = String.Empty;
@@ -126,7 +126,7 @@ namespace GuizzoLtda
 
         }
 
-        private void SaveDelete_Click(object sender, EventArgs e)
+        private void SaveDelete_Click_1(object sender, EventArgs e)
         {
             EmpresaModelo.CodCliente = Convert.ToInt32(txtIdEmpresa.Text);
             var resposta = DialogResult;
@@ -147,7 +147,7 @@ namespace GuizzoLtda
             fempresacrud.Show();
         }
 
-        private void SaveUpdate_Click(object sender, EventArgs e)
+        private void SaveUpdate_Click_1(object sender, EventArgs e)
         {
             EmpresaModelo.CodCliente = Convert.ToInt32(txtIdEmpresa.Text);
             EmpresaModelo.CnpjUser = txtCnpj.Text;
@@ -170,7 +170,7 @@ namespace GuizzoLtda
             this.InitializeComponent();
         }
 
-        private void dataGridCRUDEmpresa_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridCRUDEmpresa_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
@@ -202,9 +202,23 @@ namespace GuizzoLtda
 
         }
 
-        private void SaveDelete_Click_1(object sender, EventArgs e)
+        
+
+        private void txtRazaoSocial_KeyPress(object sender, KeyPressEventArgs e)
         {
 
         }
+
+        private void txtCnpj_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void txtInscEstadual_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        
     }
 }

@@ -71,6 +71,7 @@
             dataGridVeiculo.RowTemplate.Height = 25;
             dataGridVeiculo.Size = new Size(461, 648);
             dataGridVeiculo.TabIndex = 23;
+            dataGridVeiculo.CellClick += dataGridVeiculo_CellClick_1;
             // 
             // toolStrip1
             // 
@@ -92,6 +93,7 @@
             btnReturn.Name = "btnReturn";
             btnReturn.Size = new Size(24, 24);
             btnReturn.Text = "Retornar";
+            btnReturn.Click += btnReturn_Click;
             // 
             // btnAtualizar
             // 
@@ -104,6 +106,7 @@
             btnAtualizar.Name = "btnAtualizar";
             btnAtualizar.Size = new Size(72, 24);
             btnAtualizar.Text = "Atualizar";
+            btnAtualizar.Click += btnAtualizar_Click_1;
             // 
             // toolStripSeparator1
             // 
@@ -121,6 +124,7 @@
             btnCad.Name = "btnCad";
             btnCad.Size = new Size(76, 24);
             btnCad.Text = "Cadastrar";
+            btnCad.Click += btnCad_Click_1;
             // 
             // toolStripSeparator2
             // 
@@ -138,6 +142,7 @@
             btnApaga.Name = "btnApaga";
             btnApaga.Size = new Size(62, 24);
             btnApaga.Text = "Deletar";
+            btnApaga.Click += btnApaga_Click_1;
             // 
             // toolStripSeparator
             // 
@@ -172,6 +177,7 @@
             txtPlaca.Name = "txtPlaca";
             txtPlaca.Size = new Size(170, 23);
             txtPlaca.TabIndex = 18;
+            txtPlaca.KeyPress += txtPlaca_KeyPress_1;
             // 
             // labelplaca
             // 
@@ -189,7 +195,7 @@
             SaveCreate.BackColor = Color.Black;
             SaveCreate.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             SaveCreate.ForeColor = Color.Goldenrod;
-            SaveCreate.Location = new Point(133, 515);
+            SaveCreate.Location = new Point(127, 440);
             SaveCreate.Margin = new Padding(3, 4, 3, 4);
             SaveCreate.Name = "SaveCreate";
             SaveCreate.Size = new Size(343, 67);
@@ -197,13 +203,14 @@
             SaveCreate.Text = "Salvar Cadastro";
             SaveCreate.UseVisualStyleBackColor = false;
             SaveCreate.Visible = false;
+            SaveCreate.Click += SaveCreate_Click_1;
             // 
             // SaveDelete
             // 
             SaveDelete.BackColor = Color.Black;
             SaveDelete.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             SaveDelete.ForeColor = Color.Goldenrod;
-            SaveDelete.Location = new Point(133, 515);
+            SaveDelete.Location = new Point(127, 576);
             SaveDelete.Margin = new Padding(3, 4, 3, 4);
             SaveDelete.Name = "SaveDelete";
             SaveDelete.Size = new Size(343, 67);
@@ -211,6 +218,7 @@
             SaveDelete.Text = "Deletar Usuário";
             SaveDelete.UseVisualStyleBackColor = false;
             SaveDelete.Visible = false;
+            SaveDelete.Click += SaveDelete_Click_1;
             // 
             // SaveUpdate
             // 
@@ -225,6 +233,7 @@
             SaveUpdate.Text = "Salvar Alteração";
             SaveUpdate.UseVisualStyleBackColor = false;
             SaveUpdate.Visible = false;
+            SaveUpdate.Click += SaveUpdate_Click_1;
             // 
             // labelseguro
             // 
@@ -277,6 +286,7 @@
             txtRenavam.Name = "txtRenavam";
             txtRenavam.Size = new Size(170, 23);
             txtRenavam.TabIndex = 34;
+            txtRenavam.KeyPress += txtRenavam_KeyPress_1;
             // 
             // labelrenavam
             // 
@@ -307,6 +317,7 @@
             dataSeguro.Name = "dataSeguro";
             dataSeguro.Size = new Size(170, 23);
             dataSeguro.TabIndex = 39;
+            dataSeguro.KeyPress += dataSeguro_KeyPress_2;
             // 
             // CRUDVeiculo
             // 
@@ -337,6 +348,7 @@
             Name = "CRUDVeiculo";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "CRUDVeiculo";
+            Load += CRUDVeiculo_Load_1;
             ((System.ComponentModel.ISupportInitialize)dataGridVeiculo).EndInit();
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();

@@ -32,7 +32,7 @@ namespace GuizzoLtda
 
         }
 
-        private void SaveCreate_Click_1(object sender, EventArgs e)
+        private void SaveCreate_Click(object sender, EventArgs e)
         {
 
 
@@ -100,14 +100,14 @@ namespace GuizzoLtda
         }
 
 
-        private void btnReturn_Click_2(object sender, EventArgs e)
+        private void btnReturn_Click(object sender, EventArgs e)
         {
             AdminMenu fmenureturn = new AdminMenu(us, idcliente);
             this.Hide();
             fmenureturn.Show();
         }
 
-        private void btnAtualizar_Click_1(object sender, EventArgs e)
+        private void btnAtualizar_Click(object sender, EventArgs e)
         {
             txtNome.Text = String.Empty;
             txtSenha.Text = String.Empty;
@@ -140,7 +140,7 @@ namespace GuizzoLtda
             dataGridCRUD.Focus();
         }
 
-        private void btnCad_Click_1(object sender, EventArgs e)
+        private void btnCad_Click(object sender, EventArgs e)
         {
             txtNome.Text = String.Empty;
             txtSenha.Text = String.Empty;
@@ -167,7 +167,7 @@ namespace GuizzoLtda
             labelsenha.Visible = true;
         }
 
-        private void btnApaga_Click_1(object sender, EventArgs e)
+        private void btnApaga_Click(object sender, EventArgs e)
         {
             dataGridCRUD.Visible = true;
 
@@ -229,14 +229,9 @@ namespace GuizzoLtda
             }
         }
 
-        private void btnReturn_Click_1(object sender, EventArgs e)
-        {
-            AdminMenu fmenureturn = new AdminMenu(us, idcliente);
-            this.Hide();
-            fmenureturn.Show();
-        }
 
-        private void CRUDUser_Load(object sender, EventArgs e)
+
+        private void CRUDUser_Load_1(object sender, EventArgs e)
         {
             us = usu.CarregaEmpresa(idcliente);
 
@@ -284,16 +279,25 @@ namespace GuizzoLtda
 
         }
 
-        private void txtNome_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtNome_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             //Só permite Letras, não permite espaço
             e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
         }
 
-        private void txtSenha_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtSenha_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             //Permite todo tipo de entrada, não aceita espaços
             e.Handled = (e.KeyChar == (char)Keys.Space);
         }
+
+
+
+        private void dataGridCRUD_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        
     }
 }

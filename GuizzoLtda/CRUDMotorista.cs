@@ -30,7 +30,7 @@ namespace GuizzoLtda
             InitializeComponent(); ;
         }
 
-        private void SaveDelete_Click(object sender, EventArgs e)
+        private void SaveDelete_Click_1(object sender, EventArgs e)
         {
 
 
@@ -53,7 +53,7 @@ namespace GuizzoLtda
             fmotoristacrud.Show();
         }
 
-        private void SaveCreate_Click(object sender, EventArgs e)
+        private void SaveCreate_Click_1(object sender, EventArgs e)
         {
             MotoristaModelo.CodVeiculo = Convert.ToInt32(txtIdVeiculo.Text);
             MotoristaModelo.cpfMotorista = txtCpf.Text;
@@ -85,7 +85,7 @@ namespace GuizzoLtda
             }
         }
 
-        private void SaveUpdate_Click(object sender, EventArgs e)
+        private void SaveUpdate_Click_1(object sender, EventArgs e)
         {
             MotoristaModelo.CodMotorista = Convert.ToInt32(txtIdMoto.Text);
             MotoristaModelo.cpfMotorista = txtCpf.Text;
@@ -110,7 +110,7 @@ namespace GuizzoLtda
             this.InitializeComponent();
         }
 
-        private void CRUDMotorista_Load(object sender, EventArgs e)
+        private void CRUDMotorista_Load_1(object sender, EventArgs e)
         {
             us = usu.CarregaEmpresa(idcliente);
 
@@ -139,7 +139,7 @@ namespace GuizzoLtda
             labelrg.Visible = false;
         }
 
-        private void dataGridMotorista_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridMotorista_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
@@ -170,7 +170,7 @@ namespace GuizzoLtda
             }
         }
 
-        private void btnAtualizar_Click(object sender, EventArgs e)
+        private void btnAtualizar_Click_1(object sender, EventArgs e)
         {
             SaveUpdate.Visible = true;
             SaveDelete.Visible = false;
@@ -202,7 +202,7 @@ namespace GuizzoLtda
             labelrg.Visible = true;
         }
 
-        private void btnCad_Click(object sender, EventArgs e)
+        private void btnCad_Click_1(object sender, EventArgs e)
         {
             SaveUpdate.Visible = false;
             SaveDelete.Visible = false;
@@ -234,7 +234,7 @@ namespace GuizzoLtda
             labelrg.Visible = true;
         }
 
-        private void btnApaga_Click(object sender, EventArgs e)
+        private void btnApaga_Click_1(object sender, EventArgs e)
         {
             SaveUpdate.Visible = false;
             SaveDelete.Visible = true;
@@ -267,7 +267,7 @@ namespace GuizzoLtda
             labelrg.Visible = true;
         }
 
-        private void btnReturn_Click(object sender, EventArgs e)
+        private void btnReturn_Click_1(object sender, EventArgs e)
         {
             AdminMenu fmenureturn = new AdminMenu(us, idcliente);
             this.Hide();
@@ -288,7 +288,7 @@ namespace GuizzoLtda
 
         }
 
-        private void txtIdVeiculo_Click(object sender, EventArgs e)
+        private void txtIdVeiculo_Click_1(object sender, EventArgs e)
         {
             SelecionarVeiculo cselectveic = new SelecionarVeiculo(us, idcliente);
             cselectveic.ShowDialog();
@@ -305,7 +305,7 @@ namespace GuizzoLtda
 
         }
 
-        private void txtCpf_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtCpf_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             txtCpf.MaxLength = 11;
             if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
@@ -314,7 +314,7 @@ namespace GuizzoLtda
             }
         }
 
-        private void txtRg_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtRg_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             txtRg.MaxLength = 9;
             if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
@@ -323,12 +323,12 @@ namespace GuizzoLtda
             }
         }
 
-        private void txtNome_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtNome_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
         }
 
-        private void txtCnh_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtCnh_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             txtCnh.MaxLength = 10;
             if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
@@ -336,5 +336,7 @@ namespace GuizzoLtda
                 e.Handled = true;
             }
         }
+
+       
     }
 }

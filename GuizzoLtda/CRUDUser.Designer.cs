@@ -64,6 +64,8 @@
             dataGridCRUD.RowTemplate.Height = 25;
             dataGridCRUD.Size = new Size(400, 486);
             dataGridCRUD.TabIndex = 36;
+            dataGridCRUD.CellClick += dataGridCRUD_CellClick;
+            dataGridCRUD.CellContentClick += dataGridCRUD_CellContentClick_2;
             // 
             // toolStrip1
             // 
@@ -85,6 +87,7 @@
             btnReturn.Name = "btnReturn";
             btnReturn.Size = new Size(24, 24);
             btnReturn.Text = "Retornar";
+            btnReturn.Click += btnReturn_Click;
             // 
             // btnAtualizar
             // 
@@ -95,6 +98,7 @@
             btnAtualizar.Name = "btnAtualizar";
             btnAtualizar.Size = new Size(72, 24);
             btnAtualizar.Text = "Atualizar";
+            btnAtualizar.Click += btnAtualizar_Click;
             // 
             // toolStripSeparator1
             // 
@@ -110,6 +114,7 @@
             btnCad.Name = "btnCad";
             btnCad.Size = new Size(76, 24);
             btnCad.Text = "Cadastrar";
+            btnCad.Click += btnCad_Click;
             // 
             // toolStripSeparator2
             // 
@@ -175,6 +180,7 @@
             txtSenha.Name = "txtSenha";
             txtSenha.Size = new Size(125, 23);
             txtSenha.TabIndex = 33;
+            txtSenha.KeyPress += txtSenha_KeyPress_1;
             // 
             // txtNome
             // 
@@ -183,6 +189,7 @@
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(125, 23);
             txtNome.TabIndex = 32;
+            txtNome.KeyPress += txtNome_KeyPress_1;
             // 
             // txtID
             // 
@@ -209,26 +216,28 @@
             SaveCreate.BackColor = Color.Black;
             SaveCreate.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             SaveCreate.ForeColor = Color.Goldenrod;
-            SaveCreate.Location = new Point(94, 371);
+            SaveCreate.Location = new Point(94, 388);
             SaveCreate.Name = "SaveCreate";
             SaveCreate.Size = new Size(300, 50);
             SaveCreate.TabIndex = 29;
             SaveCreate.Text = "Salvar Cadastro";
             SaveCreate.UseVisualStyleBackColor = false;
             SaveCreate.Visible = false;
+            SaveCreate.Click += SaveCreate_Click;
             // 
             // SaveUpdate
             // 
             SaveUpdate.BackColor = Color.Black;
             SaveUpdate.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             SaveUpdate.ForeColor = Color.Goldenrod;
-            SaveUpdate.Location = new Point(94, 371);
+            SaveUpdate.Location = new Point(94, 388);
             SaveUpdate.Name = "SaveUpdate";
             SaveUpdate.Size = new Size(300, 50);
             SaveUpdate.TabIndex = 27;
             SaveUpdate.Text = "Salvar Alteração";
             SaveUpdate.UseVisualStyleBackColor = false;
             SaveUpdate.Visible = false;
+            SaveUpdate.Click += SaveUpdate_Click_1;
             // 
             // CRUDUser
             // 
@@ -253,6 +262,7 @@
             Name = "CRUDUser";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "AdministradorCRUD";
+            Load += CRUDUser_Load_1;
             ((System.ComponentModel.ISupportInitialize)dataGridCRUD).EndInit();
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();

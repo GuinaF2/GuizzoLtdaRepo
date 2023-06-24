@@ -84,32 +84,37 @@
             // abrirPedidoToolStripMenuItem
             // 
             abrirPedidoToolStripMenuItem.Name = "abrirPedidoToolStripMenuItem";
-            abrirPedidoToolStripMenuItem.Size = new Size(161, 24);
+            abrirPedidoToolStripMenuItem.Size = new Size(180, 24);
             abrirPedidoToolStripMenuItem.Text = "Funcionarios";
+            abrirPedidoToolStripMenuItem.Click += abrirPedidoToolStripMenuItem_Click;
             // 
             // pedidosToolStripMenuItem
             // 
             pedidosToolStripMenuItem.Name = "pedidosToolStripMenuItem";
-            pedidosToolStripMenuItem.Size = new Size(161, 24);
+            pedidosToolStripMenuItem.Size = new Size(180, 24);
             pedidosToolStripMenuItem.Text = "Pedidos";
+            pedidosToolStripMenuItem.Click += pedidosToolStripMenuItem_Click_1;
             // 
             // veiculosToolStripMenuItem
             // 
             veiculosToolStripMenuItem.Name = "veiculosToolStripMenuItem";
-            veiculosToolStripMenuItem.Size = new Size(161, 24);
+            veiculosToolStripMenuItem.Size = new Size(180, 24);
             veiculosToolStripMenuItem.Text = "Veiculos";
+            veiculosToolStripMenuItem.Click += veiculosToolStripMenuItem_Click_1;
             // 
             // motoristasToolStripMenuItem
             // 
             motoristasToolStripMenuItem.Name = "motoristasToolStripMenuItem";
-            motoristasToolStripMenuItem.Size = new Size(161, 24);
+            motoristasToolStripMenuItem.Size = new Size(180, 24);
             motoristasToolStripMenuItem.Text = "Motoristas";
+            motoristasToolStripMenuItem.Click += motoristasToolStripMenuItem_Click_1;
             // 
             // empresasToolStripMenuItem
             // 
             empresasToolStripMenuItem.Name = "empresasToolStripMenuItem";
-            empresasToolStripMenuItem.Size = new Size(161, 24);
+            empresasToolStripMenuItem.Size = new Size(180, 24);
             empresasToolStripMenuItem.Text = "Empresas";
+            empresasToolStripMenuItem.Click += empresasToolStripMenuItem_Click_1;
             // 
             // toolStripSeparator2
             // 
@@ -143,14 +148,16 @@
             // toolStripMenuItem1
             // 
             toolStripMenuItem1.Name = "toolStripMenuItem1";
-            toolStripMenuItem1.Size = new Size(157, 24);
+            toolStripMenuItem1.Size = new Size(180, 24);
             toolStripMenuItem1.Text = "Solicitações";
+            toolStripMenuItem1.Click += toolStripMenuItem1_Click;
             // 
             // toolStripMenuItem2
             // 
             toolStripMenuItem2.Name = "toolStripMenuItem2";
-            toolStripMenuItem2.Size = new Size(157, 24);
+            toolStripMenuItem2.Size = new Size(180, 24);
             toolStripMenuItem2.Text = "Cadastros";
+            toolStripMenuItem2.Click += toolStripMenuItem2_Click;
             // 
             // pbFotoAdminMenu
             // 

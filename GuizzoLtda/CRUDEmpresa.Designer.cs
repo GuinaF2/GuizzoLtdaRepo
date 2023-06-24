@@ -64,6 +64,7 @@
             dataGridCRUDEmpresa.RowTemplate.Height = 25;
             dataGridCRUDEmpresa.Size = new Size(389, 485);
             dataGridCRUDEmpresa.TabIndex = 23;
+            dataGridCRUDEmpresa.CellClick += dataGridCRUDEmpresa_CellClick_1;
             // 
             // toolStrip1
             // 
@@ -85,6 +86,7 @@
             btnReturn.Name = "btnReturn";
             btnReturn.Size = new Size(24, 25);
             btnReturn.Text = "Retornar";
+            btnReturn.Click += btnReturn_Click_1;
             // 
             // btnAtualizar
             // 
@@ -96,6 +98,7 @@
             btnAtualizar.Name = "btnAtualizar";
             btnAtualizar.Size = new Size(75, 25);
             btnAtualizar.Text = "Atualizar";
+            btnAtualizar.Click += btnAtualizar_Click_1;
             // 
             // toolStripSeparator1
             // 
@@ -112,6 +115,7 @@
             btnApaga.Name = "btnApaga";
             btnApaga.Size = new Size(64, 25);
             btnApaga.Text = "Deletar";
+            btnApaga.Click += btnApaga_Click_1;
             // 
             // toolStripSeparator
             // 
@@ -154,6 +158,7 @@
             txtCnpj.Name = "txtCnpj";
             txtCnpj.Size = new Size(206, 23);
             txtCnpj.TabIndex = 20;
+            txtCnpj.KeyPress += txtCnpj_KeyPress;
             // 
             // txtRazaoSocial
             // 
@@ -162,6 +167,7 @@
             txtRazaoSocial.Name = "txtRazaoSocial";
             txtRazaoSocial.Size = new Size(206, 23);
             txtRazaoSocial.TabIndex = 19;
+            txtRazaoSocial.KeyPress += txtRazaoSocial_KeyPress;
             // 
             // txtIdEmpresa
             // 
@@ -187,7 +193,7 @@
             SaveDelete.BackColor = Color.Black;
             SaveDelete.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             SaveDelete.ForeColor = Color.Goldenrod;
-            SaveDelete.Location = new Point(116, 392);
+            SaveDelete.Location = new Point(103, 336);
             SaveDelete.Name = "SaveDelete";
             SaveDelete.Size = new Size(300, 50);
             SaveDelete.TabIndex = 15;
@@ -208,6 +214,7 @@
             SaveUpdate.Text = "Salvar Alteração";
             SaveUpdate.UseVisualStyleBackColor = false;
             SaveUpdate.Visible = false;
+            SaveUpdate.Click += SaveUpdate_Click_1;
             // 
             // labelinscestad
             // 
@@ -226,6 +233,7 @@
             txtInscEstadual.Name = "txtInscEstadual";
             txtInscEstadual.Size = new Size(206, 23);
             txtInscEstadual.TabIndex = 27;
+            txtInscEstadual.KeyPress += txtInscEstadual_KeyPress;
             // 
             // CRUDEmpresa
             // 
@@ -249,6 +257,7 @@
             Name = "CRUDEmpresa";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "CRUDEmpresa";
+            Load += CRUDEmpresa_Load_1;
             ((System.ComponentModel.ISupportInitialize)dataGridCRUDEmpresa).EndInit();
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();

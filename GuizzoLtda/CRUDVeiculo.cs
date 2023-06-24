@@ -31,7 +31,7 @@ namespace GuizzoLtda
             InitializeComponent();
         }
 
-        private void btnAtualizar_Click(object sender, EventArgs e)
+        private void btnAtualizar_Click_1(object sender, EventArgs e)
         {
             txtIdVeic.Text = String.Empty;
             txtRenavam.Text = String.Empty;
@@ -66,7 +66,7 @@ namespace GuizzoLtda
             dataGridVeiculo.Visible = true;
         }
 
-        private void btnCad_Click(object sender, EventArgs e)
+        private void btnCad_Click_1(object sender, EventArgs e)
         {
             txtIdVeic.Text = String.Empty;
             txtRenavam.Text = String.Empty;
@@ -101,7 +101,7 @@ namespace GuizzoLtda
             labelseguro.Visible = true;
         }
 
-        private void btnApaga_Click(object sender, EventArgs e)
+        private void btnApaga_Click_1(object sender, EventArgs e)
         {
             txtIdVeic.Text = String.Empty;
             txtRenavam.Text = String.Empty;
@@ -135,7 +135,7 @@ namespace GuizzoLtda
             labelseguro.Visible = true;
         }
 
-        private void CRUDVeiculo_Load(object sender, EventArgs e)
+        private void CRUDVeiculo_Load_1(object sender, EventArgs e)
         {
             us = usu.CarregaEmpresa(idcliente);
 
@@ -160,7 +160,7 @@ namespace GuizzoLtda
             labeltipo.Visible = false;
         }
 
-        private void SaveDelete_Click(object sender, EventArgs e)
+        private void SaveDelete_Click_1(object sender, EventArgs e)
         {
 
             VeiculoModelo.CodVeiculo = Convert.ToInt32(txtIdVeic.Text);
@@ -184,7 +184,7 @@ namespace GuizzoLtda
 
         }
 
-        private void SaveCreate_Click(object sender, EventArgs e)
+        private void SaveCreate_Click_1(object sender, EventArgs e)
         {
             VeiculoModelo.PlacaVeiculo = txtPlaca.Text;
             VeiculoModelo.TipoVeiculo = cbTipo.Text;
@@ -211,7 +211,7 @@ namespace GuizzoLtda
             }
         }
 
-        private void SaveUpdate_Click(object sender, EventArgs e)
+        private void SaveUpdate_Click_1(object sender, EventArgs e)
         {
             if (txtIdVeic.Text == "")
             {
@@ -247,7 +247,7 @@ namespace GuizzoLtda
             }
         }
 
-        private void dataGridVeiculo_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridVeiculo_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
@@ -286,7 +286,7 @@ namespace GuizzoLtda
 
         }
 
-        private void btnReturn_Click_1(object sender, EventArgs e)
+        private void btnReturn_Click(object sender, EventArgs e)
         {
             AdminMenu fmenureturn = new AdminMenu(us, idcliente);
             this.Hide();
@@ -298,7 +298,7 @@ namespace GuizzoLtda
 
         }
 
-        private void dataSeguro_KeyPress(object sender, KeyPressEventArgs e)
+        private void dataSeguro_KeyPress_2(object sender, KeyPressEventArgs e)
         {
             dataSeguro.MaxLength = 8;
             if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
@@ -312,7 +312,7 @@ namespace GuizzoLtda
 
         }
 
-        private void dataSeguro_KeyPress_1(object sender, KeyPressEventArgs e)
+        private void dataSeguro_KeyPress_2(object sender, KeyPressEventArgs e)
         {
 
             dataSeguro.MaxLength = 8;
@@ -322,7 +322,7 @@ namespace GuizzoLtda
             }
         }
 
-        private void txtRenavam_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtRenavam_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             txtRenavam.MaxLength = 11;
             if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
@@ -331,13 +331,73 @@ namespace GuizzoLtda
             }
         }
 
-        private void txtPlaca_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtPlaca_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             txtPlaca.MaxLength = 7;
             e.Handled = (e.KeyChar == (char)Keys.Space);
         }
 
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void btnAtualizar_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCad_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnApaga_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SaveCreate_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtRenavam_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void txtPlaca_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void dataSeguro_KeyPress_2(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void SaveUpdate_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SaveDelete_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CRUDVeiculo_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridVeiculo_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
         }

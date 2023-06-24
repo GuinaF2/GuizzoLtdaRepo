@@ -75,6 +75,7 @@
             dgPedido.RowTemplate.Height = 25;
             dgPedido.Size = new Size(468, 646);
             dgPedido.TabIndex = 23;
+            dgPedido.CellClick += dgPedido_CellClick_1;
             // 
             // toolStrip1
             // 
@@ -96,6 +97,7 @@
             btnReturn.Name = "btnReturn";
             btnReturn.Size = new Size(24, 24);
             btnReturn.Text = "Retornar";
+            btnReturn.Click += btnReturn_Click_1;
             // 
             // btnAtualizar
             // 
@@ -107,6 +109,7 @@
             btnAtualizar.Name = "btnAtualizar";
             btnAtualizar.Size = new Size(72, 24);
             btnAtualizar.Text = "Atualizar";
+            btnAtualizar.Click += btnAtualizar_Click_1;
             // 
             // toolStripSeparator1
             // 
@@ -140,6 +143,7 @@
             btnApaga.Name = "btnApaga";
             btnApaga.Size = new Size(62, 24);
             btnApaga.Text = "Deletar";
+            btnApaga.Click += btnApaga_Click_1;
             // 
             // toolStripSeparator
             // 
@@ -164,13 +168,14 @@
             txtIdCliente.Name = "txtIdCliente";
             txtIdCliente.Size = new Size(142, 22);
             txtIdCliente.TabIndex = 18;
+            txtIdCliente.Click += txtIdCliente_Click_1;
             // 
             // SaveCreate
             // 
             SaveCreate.BackColor = Color.Black;
             SaveCreate.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             SaveCreate.ForeColor = Color.Goldenrod;
-            SaveCreate.Location = new Point(95, 455);
+            SaveCreate.Location = new Point(96, 455);
             SaveCreate.Margin = new Padding(3, 4, 3, 4);
             SaveCreate.Name = "SaveCreate";
             SaveCreate.Size = new Size(343, 64);
@@ -185,7 +190,7 @@
             SaveDelete.BackColor = Color.Black;
             SaveDelete.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             SaveDelete.ForeColor = Color.Goldenrod;
-            SaveDelete.Location = new Point(95, 455);
+            SaveDelete.Location = new Point(94, 455);
             SaveDelete.Margin = new Padding(3, 4, 3, 4);
             SaveDelete.Name = "SaveDelete";
             SaveDelete.Size = new Size(343, 64);
@@ -193,6 +198,7 @@
             SaveDelete.Text = "Salvar Alteração";
             SaveDelete.UseVisualStyleBackColor = false;
             SaveDelete.Visible = false;
+            SaveDelete.Click += SaveDelete_Click_1;
             // 
             // SaveUpdate
             // 
@@ -207,6 +213,7 @@
             SaveUpdate.Text = "Salvar Alteração";
             SaveUpdate.UseVisualStyleBackColor = false;
             SaveUpdate.Visible = false;
+            SaveUpdate.Click += SaveUpdate_Click_1;
             // 
             // txtIdMoto
             // 
@@ -217,6 +224,7 @@
             txtIdMoto.Name = "txtIdMoto";
             txtIdMoto.Size = new Size(142, 22);
             txtIdMoto.TabIndex = 30;
+            txtIdMoto.Click += txtIdMoto_Click_1;
             txtIdMoto.TextChanged += txtIdMoto_TextChanged_1;
             // 
             // txtIdPedido
@@ -386,6 +394,7 @@
             Name = "CRUDPedido";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "CRUDPedido";
+            Load += CRUDPedido_Load_1;
             ((System.ComponentModel.ISupportInitialize)dgPedido).EndInit();
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();

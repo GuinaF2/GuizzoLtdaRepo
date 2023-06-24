@@ -28,26 +28,26 @@ namespace GuizzoLtda
 
 
 
-        private void pedidosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void pedidosToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             CRUDPedido fpedidocrud = new CRUDPedido(us, idcliente);
             fpedidocrud.Show();
             Hide();
         }
 
-        private void abrirPedidoToolStripMenuItem_Click_1(object sender, EventArgs e)
+        private void abrirPedidoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CRUDUser fcrudusuario = new CRUDUser();
             fcrudusuario.Show();
             Hide();
         }
 
-        private void toolStripTextBox2_ButtonClick(object sender, EventArgs e)
+        private void toolStripTextBox2_ButtonClick_1(object sender, EventArgs e)
         {
 
         }
 
-        private void veiculosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void veiculosToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             CRUDVeiculo fveiculocrud = new CRUDVeiculo(us, idcliente);
             fveiculocrud.Show();
@@ -59,14 +59,14 @@ namespace GuizzoLtda
             us = usu.CarregaEmpresa(idcliente);
         }
 
-        private void empresasToolStripMenuItem_Click(object sender, EventArgs e)
+        private void empresasToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             CRUDEmpresa fcrudemp = new CRUDEmpresa(us, idcliente);
             fcrudemp.Show();
             Hide();
         }
 
-        private void motoristasToolStripMenuItem_Click(object sender, EventArgs e)
+        private void motoristasToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             CRUDMotorista fmotoristacrud = new CRUDMotorista(us, idcliente);
             fmotoristacrud.Show();
@@ -104,12 +104,7 @@ namespace GuizzoLtda
             Hide();
         }
 
-        private void toolStripButton2_Click(object sender, EventArgs e)
-        {
-            MapaTeste fmapago = new MapaTeste();
-            fmapago.Show();
-            Hide();
-        }
+       
 
         private void toolStripSeparator5_Click(object sender, EventArgs e)
         {
@@ -121,6 +116,18 @@ namespace GuizzoLtda
         }
 
         private void toolStripSplitButton2_ButtonClick(object sender, EventArgs e)
+        {
+
+        }
+
+        
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
 
         }
