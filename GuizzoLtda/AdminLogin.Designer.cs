@@ -37,9 +37,9 @@
             btnReturn = new Button();
             txtUserAdm = new MaskedTextBox();
             pictureBox1 = new PictureBox();
-            pictureBox2 = new PictureBox();
+            panel1 = new Panel();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -60,7 +60,7 @@
             label2.AutoSize = true;
             label2.BackColor = Color.Goldenrod;
             label2.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.ForeColor = Color.Black;
+            label2.ForeColor = Color.White;
             label2.ImeMode = ImeMode.NoControl;
             label2.Location = new Point(581, 100);
             label2.Name = "label2";
@@ -73,7 +73,7 @@
             label3.AutoSize = true;
             label3.BackColor = Color.Goldenrod;
             label3.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.ForeColor = Color.Black;
+            label3.ForeColor = Color.White;
             label3.ImeMode = ImeMode.NoControl;
             label3.Location = new Point(581, 222);
             label3.Name = "label3";
@@ -83,10 +83,10 @@
             // 
             // btnLoginAdmin
             // 
-            btnLoginAdmin.BackColor = Color.White;
+            btnLoginAdmin.BackColor = Color.FromArgb(192, 0, 0);
             btnLoginAdmin.FlatStyle = FlatStyle.Popup;
             btnLoginAdmin.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            btnLoginAdmin.ForeColor = Color.Black;
+            btnLoginAdmin.ForeColor = Color.Transparent;
             btnLoginAdmin.ImeMode = ImeMode.NoControl;
             btnLoginAdmin.Location = new Point(566, 356);
             btnLoginAdmin.Name = "btnLoginAdmin";
@@ -98,10 +98,12 @@
             // 
             // txtSenhaAdm
             // 
+            txtSenhaAdm.BorderStyle = BorderStyle.FixedSingle;
+            txtSenhaAdm.Font = new Font("Segoe UI", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
             txtSenhaAdm.Location = new Point(581, 283);
             txtSenhaAdm.Name = "txtSenhaAdm";
             txtSenhaAdm.PasswordChar = '*';
-            txtSenhaAdm.Size = new Size(184, 23);
+            txtSenhaAdm.Size = new Size(184, 30);
             txtSenhaAdm.TabIndex = 2;
             txtSenhaAdm.UseSystemPasswordChar = true;
             // 
@@ -125,9 +127,11 @@
             // 
             // txtUserAdm
             // 
-            txtUserAdm.Location = new Point(581, 166);
+            txtUserAdm.BorderStyle = BorderStyle.FixedSingle;
+            txtUserAdm.Font = new Font("Segoe UI", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
+            txtUserAdm.Location = new Point(90, 131);
             txtUserAdm.Name = "txtUserAdm";
-            txtUserAdm.Size = new Size(184, 23);
+            txtUserAdm.Size = new Size(184, 30);
             txtUserAdm.TabIndex = 1;
             // 
             // pictureBox1
@@ -141,16 +145,14 @@
             pictureBox1.TabIndex = 5;
             pictureBox1.TabStop = false;
             // 
-            // pictureBox2
+            // panel1
             // 
-            pictureBox2.BackColor = Color.Goldenrod;
-            pictureBox2.BorderStyle = BorderStyle.FixedSingle;
-            pictureBox2.Location = new Point(494, 9);
-            pictureBox2.Margin = new Padding(3, 2, 3, 2);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(373, 487);
-            pictureBox2.TabIndex = 6;
-            pictureBox2.TabStop = false;
+            panel1.BackColor = Color.Goldenrod;
+            panel1.Controls.Add(txtUserAdm);
+            panel1.Location = new Point(491, 21);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(371, 454);
+            panel1.TabIndex = 6;
             // 
             // AdminLogin
             // 
@@ -161,20 +163,20 @@
             BackColor = Color.FromArgb(173, 11, 0);
             ClientSize = new Size(929, 505);
             Controls.Add(btnReturn);
-            Controls.Add(txtUserAdm);
             Controls.Add(txtSenhaAdm);
             Controls.Add(btnLoginAdmin);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
-            Controls.Add(pictureBox2);
+            Controls.Add(panel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "AdminLogin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "AdminLogin";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -189,6 +191,6 @@
         private Button btnReturn;
         private MaskedTextBox txtUserAdm;
         private PictureBox pictureBox1;
-        private PictureBox pictureBox2;
+        private Panel panel1;
     }
 }

@@ -115,5 +115,14 @@ namespace GuizzoLtda
         {
 
         }
+
+        private void toolStripMenuItem5_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void toolStripSplitButton2_ButtonClick(object sender, EventArgs e)
+        {
+
+        }
     }
 }

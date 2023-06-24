@@ -29,35 +29,35 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SelecionarMoto));
-            this.dgSelectMoto = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dgSelectMoto)).BeginInit();
-            this.SuspendLayout();
+            dgSelectMoto = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dgSelectMoto).BeginInit();
+            SuspendLayout();
             // 
             // dgSelectMoto
             // 
-            this.dgSelectMoto.AllowUserToAddRows = false;
-            this.dgSelectMoto.AllowUserToDeleteRows = false;
-            this.dgSelectMoto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgSelectMoto.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgSelectMoto.Location = new System.Drawing.Point(0, 0);
-            this.dgSelectMoto.Name = "dgSelectMoto";
-            this.dgSelectMoto.ReadOnly = true;
-            this.dgSelectMoto.RowTemplate.Height = 25;
-            this.dgSelectMoto.Size = new System.Drawing.Size(800, 450);
-            this.dgSelectMoto.TabIndex = 0;
+            dgSelectMoto.AllowUserToAddRows = false;
+            dgSelectMoto.AllowUserToDeleteRows = false;
+            dgSelectMoto.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgSelectMoto.Dock = DockStyle.Fill;
+            dgSelectMoto.Location = new Point(0, 0);
+            dgSelectMoto.Name = "dgSelectMoto";
+            dgSelectMoto.ReadOnly = true;
+            dgSelectMoto.RowTemplate.Height = 25;
+            dgSelectMoto.Size = new Size(800, 450);
+            dgSelectMoto.TabIndex = 0;
             // 
             // SelecionarMoto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dgSelectMoto);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "SelecionarMoto";
-            this.Text = "SelecionarMoto";
-            ((System.ComponentModel.ISupportInitialize)(this.dgSelectMoto)).EndInit();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(dgSelectMoto);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Name = "SelecionarMoto";
+            Text = "SelecionarMoto";
+            Load += SelecionarMoto_Load_1;
+            ((System.ComponentModel.ISupportInitialize)dgSelectMoto).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion

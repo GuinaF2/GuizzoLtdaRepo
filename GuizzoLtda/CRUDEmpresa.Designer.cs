@@ -29,261 +29,231 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CRUDEmpresa));
-            this.dataGridCRUDEmpresa = new System.Windows.Forms.DataGridView();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.btnReturn = new System.Windows.Forms.ToolStripButton();
-            this.btnAtualizar = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnApaga = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.ajudaToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.labelfoto = new System.Windows.Forms.Label();
-            this.labelcnpj = new System.Windows.Forms.Label();
-            this.labelrazaosocial = new System.Windows.Forms.Label();
-            this.txtCnpj = new System.Windows.Forms.TextBox();
-            this.txtRazaoSocial = new System.Windows.Forms.TextBox();
-            this.txtIdEmpresa = new System.Windows.Forms.TextBox();
-            this.labelid = new System.Windows.Forms.Label();
-            this.SaveDelete = new System.Windows.Forms.Button();
-            this.SaveUpdate = new System.Windows.Forms.Button();
-            this.labelinscestad = new System.Windows.Forms.Label();
-            this.txtInscEstadual = new System.Windows.Forms.TextBox();
-            this.btnFoto = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridCRUDEmpresa)).BeginInit();
-            this.toolStrip1.SuspendLayout();
-            this.SuspendLayout();
+            dataGridCRUDEmpresa = new DataGridView();
+            toolStrip1 = new ToolStrip();
+            btnReturn = new ToolStripButton();
+            btnAtualizar = new ToolStripButton();
+            toolStripSeparator1 = new ToolStripSeparator();
+            btnApaga = new ToolStripButton();
+            toolStripSeparator = new ToolStripSeparator();
+            ajudaToolStripButton = new ToolStripButton();
+            labelcnpj = new Label();
+            labelrazaosocial = new Label();
+            txtCnpj = new TextBox();
+            txtRazaoSocial = new TextBox();
+            txtIdEmpresa = new TextBox();
+            labelid = new Label();
+            SaveDelete = new Button();
+            SaveUpdate = new Button();
+            labelinscestad = new Label();
+            txtInscEstadual = new TextBox();
+            ((System.ComponentModel.ISupportInitialize)dataGridCRUDEmpresa).BeginInit();
+            toolStrip1.SuspendLayout();
+            SuspendLayout();
             // 
             // dataGridCRUDEmpresa
             // 
-            this.dataGridCRUDEmpresa.AllowUserToAddRows = false;
-            this.dataGridCRUDEmpresa.AllowUserToDeleteRows = false;
-            this.dataGridCRUDEmpresa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridCRUDEmpresa.Location = new System.Drawing.Point(540, 20);
-            this.dataGridCRUDEmpresa.Name = "dataGridCRUDEmpresa";
-            this.dataGridCRUDEmpresa.ReadOnly = true;
-            this.dataGridCRUDEmpresa.RowHeadersWidth = 51;
-            this.dataGridCRUDEmpresa.RowTemplate.Height = 25;
-            this.dataGridCRUDEmpresa.Size = new System.Drawing.Size(389, 422);
-            this.dataGridCRUDEmpresa.TabIndex = 23;
+            dataGridCRUDEmpresa.AllowUserToAddRows = false;
+            dataGridCRUDEmpresa.AllowUserToDeleteRows = false;
+            dataGridCRUDEmpresa.BackgroundColor = Color.Black;
+            dataGridCRUDEmpresa.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridCRUDEmpresa.Location = new Point(540, 20);
+            dataGridCRUDEmpresa.Name = "dataGridCRUDEmpresa";
+            dataGridCRUDEmpresa.ReadOnly = true;
+            dataGridCRUDEmpresa.RowHeadersWidth = 51;
+            dataGridCRUDEmpresa.RowTemplate.Height = 25;
+            dataGridCRUDEmpresa.Size = new Size(389, 485);
+            dataGridCRUDEmpresa.TabIndex = 23;
             // 
             // toolStrip1
             // 
-            this.toolStrip1.BackColor = System.Drawing.Color.Black;
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnReturn,
-            this.btnAtualizar,
-            this.toolStripSeparator1,
-            this.btnApaga,
-            this.toolStripSeparator,
-            this.ajudaToolStripButton});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(929, 27);
-            this.toolStrip1.TabIndex = 26;
-            this.toolStrip1.Text = "toolStrip1";
+            toolStrip1.BackColor = Color.Black;
+            toolStrip1.ImageScalingSize = new Size(20, 20);
+            toolStrip1.Items.AddRange(new ToolStripItem[] { btnReturn, btnAtualizar, toolStripSeparator1, btnApaga, toolStripSeparator, ajudaToolStripButton });
+            toolStrip1.Location = new Point(0, 0);
+            toolStrip1.Name = "toolStrip1";
+            toolStrip1.Size = new Size(929, 28);
+            toolStrip1.TabIndex = 26;
+            toolStrip1.Text = "toolStrip1";
             // 
             // btnReturn
             // 
-            this.btnReturn.BackColor = System.Drawing.Color.Goldenrod;
-            this.btnReturn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnReturn.Image = ((System.Drawing.Image)(resources.GetObject("btnReturn.Image")));
-            this.btnReturn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(24, 24);
-            this.btnReturn.Text = "Retornar";
+            btnReturn.BackColor = Color.Goldenrod;
+            btnReturn.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btnReturn.Image = (Image)resources.GetObject("btnReturn.Image");
+            btnReturn.ImageTransparentColor = Color.Magenta;
+            btnReturn.Name = "btnReturn";
+            btnReturn.Size = new Size(24, 25);
+            btnReturn.Text = "Retornar";
             // 
             // btnAtualizar
             // 
-            this.btnAtualizar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btnAtualizar.ForeColor = System.Drawing.Color.Goldenrod;
-            this.btnAtualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnAtualizar.Image")));
-            this.btnAtualizar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnAtualizar.Name = "btnAtualizar";
-            this.btnAtualizar.Size = new System.Drawing.Size(57, 24);
-            this.btnAtualizar.Text = "Atualizar";
+            btnAtualizar.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            btnAtualizar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnAtualizar.ForeColor = Color.Goldenrod;
+            btnAtualizar.Image = (Image)resources.GetObject("btnAtualizar.Image");
+            btnAtualizar.ImageTransparentColor = Color.Magenta;
+            btnAtualizar.Name = "btnAtualizar";
+            btnAtualizar.Size = new Size(75, 25);
+            btnAtualizar.Text = "Atualizar";
             // 
             // toolStripSeparator1
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            toolStripSeparator1.Size = new Size(6, 28);
             // 
             // btnApaga
             // 
-            this.btnApaga.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btnApaga.ForeColor = System.Drawing.Color.Goldenrod;
-            this.btnApaga.Image = ((System.Drawing.Image)(resources.GetObject("btnApaga.Image")));
-            this.btnApaga.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnApaga.Name = "btnApaga";
-            this.btnApaga.Size = new System.Drawing.Size(48, 24);
-            this.btnApaga.Text = "Deletar";
+            btnApaga.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            btnApaga.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnApaga.ForeColor = Color.Goldenrod;
+            btnApaga.Image = (Image)resources.GetObject("btnApaga.Image");
+            btnApaga.ImageTransparentColor = Color.Magenta;
+            btnApaga.Name = "btnApaga";
+            btnApaga.Size = new Size(64, 25);
+            btnApaga.Text = "Deletar";
             // 
             // toolStripSeparator
             // 
-            this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(6, 27);
+            toolStripSeparator.Name = "toolStripSeparator";
+            toolStripSeparator.Size = new Size(6, 28);
             // 
             // ajudaToolStripButton
             // 
-            this.ajudaToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.ajudaToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("ajudaToolStripButton.Image")));
-            this.ajudaToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.ajudaToolStripButton.Name = "ajudaToolStripButton";
-            this.ajudaToolStripButton.Size = new System.Drawing.Size(24, 24);
-            this.ajudaToolStripButton.Text = "Aju&da";
-            // 
-            // labelfoto
-            // 
-            this.labelfoto.AutoSize = true;
-            this.labelfoto.Font = new System.Drawing.Font("Leelawadee UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelfoto.ForeColor = System.Drawing.Color.White;
-            this.labelfoto.Location = new System.Drawing.Point(441, 50);
-            this.labelfoto.Name = "labelfoto";
-            this.labelfoto.Size = new System.Drawing.Size(76, 15);
-            this.labelfoto.TabIndex = 25;
-            this.labelfoto.Text = "Alterar Logo";
+            ajudaToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            ajudaToolStripButton.Image = (Image)resources.GetObject("ajudaToolStripButton.Image");
+            ajudaToolStripButton.ImageTransparentColor = Color.Magenta;
+            ajudaToolStripButton.Name = "ajudaToolStripButton";
+            ajudaToolStripButton.Size = new Size(24, 25);
+            ajudaToolStripButton.Text = "Aju&da";
             // 
             // labelcnpj
             // 
-            this.labelcnpj.AutoSize = true;
-            this.labelcnpj.Font = new System.Drawing.Font("Leelawadee UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelcnpj.Location = new System.Drawing.Point(90, 178);
-            this.labelcnpj.Name = "labelcnpj";
-            this.labelcnpj.Size = new System.Drawing.Size(57, 30);
-            this.labelcnpj.TabIndex = 22;
-            this.labelcnpj.Text = "Cnpj";
+            labelcnpj.AutoSize = true;
+            labelcnpj.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            labelcnpj.Location = new Point(155, 215);
+            labelcnpj.Name = "labelcnpj";
+            labelcnpj.Size = new Size(57, 30);
+            labelcnpj.TabIndex = 22;
+            labelcnpj.Text = "Cnpj";
             // 
             // labelrazaosocial
             // 
-            this.labelrazaosocial.AutoSize = true;
-            this.labelrazaosocial.Font = new System.Drawing.Font("Leelawadee UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelrazaosocial.Location = new System.Drawing.Point(90, 106);
-            this.labelrazaosocial.Name = "labelrazaosocial";
-            this.labelrazaosocial.Size = new System.Drawing.Size(133, 30);
-            this.labelrazaosocial.TabIndex = 21;
-            this.labelrazaosocial.Text = "Razão Social";
+            labelrazaosocial.AutoSize = true;
+            labelrazaosocial.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            labelrazaosocial.Location = new Point(155, 143);
+            labelrazaosocial.Name = "labelrazaosocial";
+            labelrazaosocial.Size = new Size(133, 30);
+            labelrazaosocial.TabIndex = 21;
+            labelrazaosocial.Text = "Razão Social";
             // 
             // txtCnpj
             // 
-            this.txtCnpj.BackColor = System.Drawing.Color.White;
-            this.txtCnpj.Location = new System.Drawing.Point(90, 222);
-            this.txtCnpj.Name = "txtCnpj";
-            this.txtCnpj.Size = new System.Drawing.Size(206, 23);
-            this.txtCnpj.TabIndex = 20;
+            txtCnpj.BackColor = Color.White;
+            txtCnpj.Location = new Point(155, 259);
+            txtCnpj.Name = "txtCnpj";
+            txtCnpj.Size = new Size(206, 23);
+            txtCnpj.TabIndex = 20;
             // 
             // txtRazaoSocial
             // 
-            this.txtRazaoSocial.BackColor = System.Drawing.Color.White;
-            this.txtRazaoSocial.Location = new System.Drawing.Point(90, 146);
-            this.txtRazaoSocial.Name = "txtRazaoSocial";
-            this.txtRazaoSocial.Size = new System.Drawing.Size(206, 23);
-            this.txtRazaoSocial.TabIndex = 19;
+            txtRazaoSocial.BackColor = Color.White;
+            txtRazaoSocial.Location = new Point(155, 183);
+            txtRazaoSocial.Name = "txtRazaoSocial";
+            txtRazaoSocial.Size = new Size(206, 23);
+            txtRazaoSocial.TabIndex = 19;
             // 
             // txtIdEmpresa
             // 
-            this.txtIdEmpresa.BackColor = System.Drawing.Color.White;
-            this.txtIdEmpresa.Enabled = false;
-            this.txtIdEmpresa.Location = new System.Drawing.Point(90, 75);
-            this.txtIdEmpresa.Name = "txtIdEmpresa";
-            this.txtIdEmpresa.Size = new System.Drawing.Size(206, 23);
-            this.txtIdEmpresa.TabIndex = 18;
+            txtIdEmpresa.BackColor = Color.White;
+            txtIdEmpresa.Enabled = false;
+            txtIdEmpresa.Location = new Point(155, 112);
+            txtIdEmpresa.Name = "txtIdEmpresa";
+            txtIdEmpresa.Size = new Size(206, 23);
+            txtIdEmpresa.TabIndex = 18;
             // 
             // labelid
             // 
-            this.labelid.AutoSize = true;
-            this.labelid.Font = new System.Drawing.Font("Leelawadee UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelid.Location = new System.Drawing.Point(90, 37);
-            this.labelid.Name = "labelid";
-            this.labelid.Size = new System.Drawing.Size(121, 30);
-            this.labelid.TabIndex = 17;
-            this.labelid.Text = "Id Empresa";
+            labelid.AutoSize = true;
+            labelid.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            labelid.Location = new Point(155, 74);
+            labelid.Name = "labelid";
+            labelid.Size = new Size(121, 30);
+            labelid.TabIndex = 17;
+            labelid.Text = "Id Empresa";
             // 
             // SaveDelete
             // 
-            this.SaveDelete.BackColor = System.Drawing.Color.Black;
-            this.SaveDelete.Font = new System.Drawing.Font("Leelawadee UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SaveDelete.ForeColor = System.Drawing.Color.Goldenrod;
-            this.SaveDelete.Location = new System.Drawing.Point(116, 340);
-            this.SaveDelete.Name = "SaveDelete";
-            this.SaveDelete.Size = new System.Drawing.Size(300, 50);
-            this.SaveDelete.TabIndex = 15;
-            this.SaveDelete.Text = "Salvar Alteração";
-            this.SaveDelete.UseVisualStyleBackColor = false;
-            this.SaveDelete.Visible = false;
+            SaveDelete.BackColor = Color.Black;
+            SaveDelete.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            SaveDelete.ForeColor = Color.Goldenrod;
+            SaveDelete.Location = new Point(116, 392);
+            SaveDelete.Name = "SaveDelete";
+            SaveDelete.Size = new Size(300, 50);
+            SaveDelete.TabIndex = 15;
+            SaveDelete.Text = "Salvar Alteração";
+            SaveDelete.UseVisualStyleBackColor = false;
+            SaveDelete.Visible = false;
+            SaveDelete.Click += SaveDelete_Click_1;
             // 
             // SaveUpdate
             // 
-            this.SaveUpdate.BackColor = System.Drawing.Color.Black;
-            this.SaveUpdate.Font = new System.Drawing.Font("Leelawadee UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SaveUpdate.ForeColor = System.Drawing.Color.Goldenrod;
-            this.SaveUpdate.Location = new System.Drawing.Point(116, 340);
-            this.SaveUpdate.Name = "SaveUpdate";
-            this.SaveUpdate.Size = new System.Drawing.Size(300, 50);
-            this.SaveUpdate.TabIndex = 14;
-            this.SaveUpdate.Text = "Salvar Alteração";
-            this.SaveUpdate.UseVisualStyleBackColor = false;
-            this.SaveUpdate.Visible = false;
+            SaveUpdate.BackColor = Color.Black;
+            SaveUpdate.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            SaveUpdate.ForeColor = Color.Goldenrod;
+            SaveUpdate.Location = new Point(116, 392);
+            SaveUpdate.Name = "SaveUpdate";
+            SaveUpdate.Size = new Size(300, 50);
+            SaveUpdate.TabIndex = 14;
+            SaveUpdate.Text = "Salvar Alteração";
+            SaveUpdate.UseVisualStyleBackColor = false;
+            SaveUpdate.Visible = false;
             // 
             // labelinscestad
             // 
-            this.labelinscestad.AutoSize = true;
-            this.labelinscestad.Font = new System.Drawing.Font("Leelawadee UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelinscestad.Location = new System.Drawing.Point(90, 254);
-            this.labelinscestad.Name = "labelinscestad";
-            this.labelinscestad.Size = new System.Drawing.Size(182, 30);
-            this.labelinscestad.TabIndex = 28;
-            this.labelinscestad.Text = "Inscrição Estadual";
+            labelinscestad.AutoSize = true;
+            labelinscestad.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            labelinscestad.Location = new Point(155, 291);
+            labelinscestad.Name = "labelinscestad";
+            labelinscestad.Size = new Size(182, 30);
+            labelinscestad.TabIndex = 28;
+            labelinscestad.Text = "Inscrição Estadual";
             // 
             // txtInscEstadual
             // 
-            this.txtInscEstadual.BackColor = System.Drawing.Color.White;
-            this.txtInscEstadual.Location = new System.Drawing.Point(90, 295);
-            this.txtInscEstadual.Name = "txtInscEstadual";
-            this.txtInscEstadual.Size = new System.Drawing.Size(206, 23);
-            this.txtInscEstadual.TabIndex = 27;
-            // 
-            // btnFoto
-            // 
-            this.btnFoto.BackColor = System.Drawing.Color.Black;
-            this.btnFoto.Font = new System.Drawing.Font("Leelawadee UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnFoto.ForeColor = System.Drawing.Color.Goldenrod;
-            this.btnFoto.Location = new System.Drawing.Point(446, 70);
-            this.btnFoto.Name = "btnFoto";
-            this.btnFoto.Size = new System.Drawing.Size(75, 23);
-            this.btnFoto.TabIndex = 29;
-            this.btnFoto.Text = "Alterar";
-            this.btnFoto.UseVisualStyleBackColor = false;
+            txtInscEstadual.BackColor = Color.White;
+            txtInscEstadual.Location = new Point(155, 332);
+            txtInscEstadual.Name = "txtInscEstadual";
+            txtInscEstadual.Size = new Size(206, 23);
+            txtInscEstadual.TabIndex = 27;
             // 
             // CRUDEmpresa
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(11)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(929, 505);
-            this.Controls.Add(this.btnFoto);
-            this.Controls.Add(this.labelinscestad);
-            this.Controls.Add(this.txtInscEstadual);
-            this.Controls.Add(this.dataGridCRUDEmpresa);
-            this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.labelfoto);
-            this.Controls.Add(this.labelcnpj);
-            this.Controls.Add(this.labelrazaosocial);
-            this.Controls.Add(this.txtCnpj);
-            this.Controls.Add(this.txtRazaoSocial);
-            this.Controls.Add(this.txtIdEmpresa);
-            this.Controls.Add(this.labelid);
-            this.Controls.Add(this.SaveDelete);
-            this.Controls.Add(this.SaveUpdate);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "CRUDEmpresa";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CRUDEmpresa";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridCRUDEmpresa)).EndInit();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(173, 11, 0);
+            ClientSize = new Size(929, 505);
+            Controls.Add(labelinscestad);
+            Controls.Add(txtInscEstadual);
+            Controls.Add(toolStrip1);
+            Controls.Add(labelcnpj);
+            Controls.Add(labelrazaosocial);
+            Controls.Add(txtCnpj);
+            Controls.Add(txtRazaoSocial);
+            Controls.Add(txtIdEmpresa);
+            Controls.Add(labelid);
+            Controls.Add(SaveDelete);
+            Controls.Add(SaveUpdate);
+            Controls.Add(dataGridCRUDEmpresa);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Name = "CRUDEmpresa";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "CRUDEmpresa";
+            ((System.ComponentModel.ISupportInitialize)dataGridCRUDEmpresa).EndInit();
+            toolStrip1.ResumeLayout(false);
+            toolStrip1.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

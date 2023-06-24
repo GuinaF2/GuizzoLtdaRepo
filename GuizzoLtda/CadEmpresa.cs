@@ -10,7 +10,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using Correios.Net;
 
 namespace GuizzoLtda
 {
@@ -52,22 +51,9 @@ namespace GuizzoLtda
 
         }
 
-        private void btnEscolherFotoEmp_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog abririmg = new OpenFileDialog();
-            abririmg.FilterIndex = 2;
-            abririmg.RestoreDirectory = true;
-            abririmg.Filter = "Image Files(*.jpg;*.png;*.jpeg;*.bmp;)|*.jpg;*.png;*.jpeg;*.bmp;";
 
-            if (abririmg.ShowDialog() == DialogResult.OK)
-            {
-                textBox1.Text = abririmg.FileName;
-                pbFotoEmp.Image = new Bitmap(abririmg.FileName);
-                pbFotoEmp.ImageLocation = abririmg.FileName;
-            }
-        }
 
-        private void btnCadEndereco_Click(object sender, EventArgs e)
+        private void btnCadEndereco_Click_1(object sender, EventArgs e)
         {
             string usuariowin = Environment.UserName;
             string letradisco = Path.GetPathRoot(Environment.CurrentDirectory);
@@ -97,10 +83,12 @@ namespace GuizzoLtda
             EnderecoModelo.NmrUser = txtNumero.Text;
 
             EnderecoModelo.CompUser = txtComple.Text;
+            EnderecoModelo.CidadeUser = txtCidade.Text;
+            EnderecoModelo.EstadoUser = txtEstado.Text;
 
- 
 
-         
+
+
 
             if (txtComple.Text == "" || txtNumero.Text == "")
             {
@@ -215,8 +203,8 @@ namespace GuizzoLtda
             }
         }
 
-       
-       
+
+
 
         private void txtCep_TextChanged(object sender, EventArgs e)
         {
@@ -233,31 +221,30 @@ namespace GuizzoLtda
 
         }
 
-        private void txtCep_Leave_1(object sender, EventArgs e)
+
+        private void CadEmpresa_Load_2(object sender, EventArgs e)
         {
-            LocalizarCEP();
-        }
-        private void LocalizarCEP()
-        {
-            if (!string.IsNullOrWhiteSpace(txtCep.Text))
-            {
-                Address endereco = SearchZip.GetAddress("txt.Cep");
-                if (endereco.Zip != null)
-                {
-                 
-                    txtBairro.Text = endereco.District;
-                    txtRua.Text = endereco.Street;
-                }
-                else
-                {
-                    MessageBox.Show("Cep não localizado...");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Informe um CEP válido");
-            }
+
         }
 
+        private void toolStripButton1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEscolherFotoEmp_Click_1(object sender, EventArgs e)
+        {
+            OpenFileDialog abririmg = new OpenFileDialog();
+            abririmg.FilterIndex = 2;
+            abririmg.RestoreDirectory = true;
+            abririmg.Filter = "Image Files(*.jpg;*.png;*.jpeg;*.bmp;)|*.jpg;*.png;*.jpeg;*.bmp;";
+
+            if (abririmg.ShowDialog() == DialogResult.OK)
+            {
+                textBox1.Text = abririmg.FileName;
+                pbFotoEmp.Image = new Bitmap(abririmg.FileName);
+                pbFotoEmp.ImageLocation = abririmg.FileName;
+            }
+        }
     }
 }

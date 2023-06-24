@@ -53,5 +53,10 @@ namespace GuizzoLtda
                 MessageBox.Show("Favor selecionar ID do Veiculo.");
             }
         }
+
+        private void SelecionarMoto_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

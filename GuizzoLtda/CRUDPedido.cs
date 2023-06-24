@@ -65,7 +65,7 @@ namespace GuizzoLtda
             dgPedido.Visible = true;
         }
 
-        private void btnCad_Click(object sender, EventArgs e)
+        private void btnCad_Click_1(object sender, EventArgs e)
         {
             SaveUpdate.Visible = false;
             SaveDelete.Visible = false;
@@ -230,6 +230,11 @@ namespace GuizzoLtda
         }
 
         private void SaveCreate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtIdMoto_TextChanged_1(object sender, EventArgs e)
         {
 
         }

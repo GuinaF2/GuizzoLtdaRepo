@@ -47,7 +47,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(193, 87);
+            label1.Location = new Point(162, 120);
             label1.Name = "label1";
             label1.Size = new Size(73, 30);
             label1.TabIndex = 0;
@@ -56,7 +56,7 @@
             // txtLogin
             // 
             txtLogin.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txtLogin.Location = new Point(193, 136);
+            txtLogin.Location = new Point(162, 169);
             txtLogin.Name = "txtLogin";
             txtLogin.Size = new Size(184, 35);
             txtLogin.TabIndex = 2;
@@ -66,7 +66,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Leelawadee UI", 28.2F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(193, 20);
+            label3.Location = new Point(184, 51);
             label3.Name = "label3";
             label3.Size = new Size(122, 51);
             label3.TabIndex = 4;
@@ -75,13 +75,13 @@
             // btnLoginFunc
             // 
             btnLoginFunc.BackColor = Color.Black;
+            btnLoginFunc.FlatAppearance.BorderColor = SystemColors.ActiveBorder;
             btnLoginFunc.FlatAppearance.BorderSize = 0;
-            btnLoginFunc.FlatStyle = FlatStyle.Popup;
-            btnLoginFunc.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            btnLoginFunc.Font = new Font("Leelawadee UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
             btnLoginFunc.ForeColor = Color.White;
-            btnLoginFunc.Location = new Point(178, 309);
+            btnLoginFunc.Location = new Point(100, 378);
             btnLoginFunc.Name = "btnLoginFunc";
-            btnLoginFunc.Size = new Size(218, 66);
+            btnLoginFunc.Size = new Size(306, 74);
             btnLoginFunc.TabIndex = 4;
             btnLoginFunc.Text = "Fazer Login";
             btnLoginFunc.UseVisualStyleBackColor = false;
@@ -90,7 +90,7 @@
             // txtSenha
             // 
             txtSenha.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txtSenha.Location = new Point(193, 239);
+            txtSenha.Location = new Point(162, 272);
             txtSenha.Name = "txtSenha";
             txtSenha.PasswordChar = '*';
             txtSenha.Size = new Size(184, 35);
@@ -102,7 +102,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(193, 185);
+            label4.Location = new Point(162, 218);
             label4.Name = "label4";
             label4.Size = new Size(72, 30);
             label4.TabIndex = 13;
@@ -111,10 +111,10 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(536, -1);
+            pictureBox1.Location = new Point(539, -1);
             pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(393, 505);
+            pictureBox1.Size = new Size(390, 505);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 15;
             pictureBox1.TabStop = false;
@@ -128,9 +128,9 @@
             btnreturn.FlatStyle = FlatStyle.Flat;
             btnreturn.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             btnreturn.ForeColor = Color.Black;
-            btnreturn.Location = new Point(37, 20);
+            btnreturn.Location = new Point(-2, -1);
             btnreturn.Name = "btnreturn";
-            btnreturn.Size = new Size(76, 62);
+            btnreturn.Size = new Size(49, 44);
             btnreturn.TabIndex = 17;
             btnreturn.TextAlign = ContentAlignment.TopLeft;
             btnreturn.TextImageRelation = TextImageRelation.ImageBeforeText;

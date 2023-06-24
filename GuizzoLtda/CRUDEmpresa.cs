@@ -196,5 +196,15 @@ namespace GuizzoLtda
                 MessageBox.Show("\t\t    Favor selecionar ID do Motorista. \n\nERRO: " + ex.Message);
             }
         }
+
+        private void btnFoto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SaveDelete_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

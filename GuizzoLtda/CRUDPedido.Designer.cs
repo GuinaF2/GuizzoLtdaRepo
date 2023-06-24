@@ -65,6 +65,7 @@
             // 
             dgPedido.AllowUserToAddRows = false;
             dgPedido.AllowUserToDeleteRows = false;
+            dgPedido.BackgroundColor = SystemColors.ActiveCaptionText;
             dgPedido.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgPedido.Location = new Point(594, 0);
             dgPedido.Margin = new Padding(3, 4, 3, 4);
@@ -99,12 +100,12 @@
             // btnAtualizar
             // 
             btnAtualizar.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            btnAtualizar.Font = new Font("Leelawadee UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnAtualizar.Font = new Font("Leelawadee UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             btnAtualizar.ForeColor = Color.Goldenrod;
             btnAtualizar.Image = (Image)resources.GetObject("btnAtualizar.Image");
             btnAtualizar.ImageTransparentColor = Color.Magenta;
             btnAtualizar.Name = "btnAtualizar";
-            btnAtualizar.Size = new Size(57, 24);
+            btnAtualizar.Size = new Size(72, 24);
             btnAtualizar.Text = "Atualizar";
             // 
             // toolStripSeparator1
@@ -115,13 +116,14 @@
             // btnCad
             // 
             btnCad.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            btnCad.Font = new Font("Leelawadee UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnCad.Font = new Font("Leelawadee UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             btnCad.ForeColor = Color.Goldenrod;
             btnCad.Image = (Image)resources.GetObject("btnCad.Image");
             btnCad.ImageTransparentColor = Color.Magenta;
             btnCad.Name = "btnCad";
-            btnCad.Size = new Size(61, 24);
+            btnCad.Size = new Size(76, 24);
             btnCad.Text = "Cadastrar";
+            btnCad.Click += btnCad_Click_1;
             // 
             // toolStripSeparator2
             // 
@@ -131,12 +133,12 @@
             // btnApaga
             // 
             btnApaga.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            btnApaga.Font = new Font("Leelawadee UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnApaga.Font = new Font("Leelawadee UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             btnApaga.ForeColor = Color.Goldenrod;
             btnApaga.Image = (Image)resources.GetObject("btnApaga.Image");
             btnApaga.ImageTransparentColor = Color.Magenta;
             btnApaga.Name = "btnApaga";
-            btnApaga.Size = new Size(48, 24);
+            btnApaga.Size = new Size(62, 24);
             btnApaga.Text = "Deletar";
             // 
             // toolStripSeparator
@@ -215,6 +217,7 @@
             txtIdMoto.Name = "txtIdMoto";
             txtIdMoto.Size = new Size(142, 22);
             txtIdMoto.TabIndex = 30;
+            txtIdMoto.TextChanged += txtIdMoto_TextChanged_1;
             // 
             // txtIdPedido
             // 
@@ -370,12 +373,12 @@
             Controls.Add(txtIdPedido);
             Controls.Add(labelidpedido);
             Controls.Add(txtIdMoto);
-            Controls.Add(dgPedido);
             Controls.Add(toolStrip1);
             Controls.Add(txtIdCliente);
             Controls.Add(SaveCreate);
             Controls.Add(SaveDelete);
             Controls.Add(SaveUpdate);
+            Controls.Add(dgPedido);
             Font = new Font("Leelawadee UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             ForeColor = Color.White;
             Icon = (Icon)resources.GetObject("$this.Icon");
