@@ -27,12 +27,12 @@ namespace GuizzoLtda
             InitializeComponent();
         }
 
-        private void SelecionarCliente_Load(object sender, EventArgs e)
+        private void SelecionarCliente_Load_1(object sender, EventArgs e)
         {
             dgCliente.DataSource = conexaosql.verDados("SELECT * FROM tb_cliente");
         }
 
-        private void dgVeiculo_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void dgCliente_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dgCliente.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
             {

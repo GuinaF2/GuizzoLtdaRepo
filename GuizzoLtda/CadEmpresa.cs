@@ -212,7 +212,7 @@ namespace GuizzoLtda
 
         private void CadEmpresa_Load_2(object sender, EventArgs e)
         {
-
+            us = usu.CarregaEmpresa(idcliente);
         }
 
         private void toolStripButton1_Click_1(object sender, EventArgs e)

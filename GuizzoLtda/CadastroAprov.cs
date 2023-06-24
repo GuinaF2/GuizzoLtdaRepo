@@ -14,7 +14,7 @@ namespace GuizzoLtda
 {
     public partial class CadastroAprov : Form
     {
-        
+
         Conexao conexaosql = new Conexao();
         EmpresaModelo EmpresaModelo = new EmpresaModelo();
         EmpresaControle Controle = new EmpresaControle();

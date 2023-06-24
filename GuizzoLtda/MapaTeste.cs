@@ -158,7 +158,7 @@ namespace GuizzoLtda
             btnClear.Visible = true;
             btnRota.Visible = false;
             btnMarcações.Visible = true;
-            btnMarcaPonto.Visible=false;
+            btnMarcaPonto.Visible = false;
 
         }
 

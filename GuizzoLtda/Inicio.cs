@@ -20,7 +20,8 @@ namespace GuizzoLtda
         int id;
         public Inicio()
         {
-            idcliente = id;
+
+ 
             InitializeComponent();
 
         }

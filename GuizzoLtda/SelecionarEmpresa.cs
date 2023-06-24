@@ -39,7 +39,7 @@ namespace GuizzoLtda
 
         private void SelecionarEmpresa_Load(object sender, EventArgs e)
         {
-
+            us = usu.CarregaEmpresa(idcliente);
             dgViewSelEmp.DataSource = conexaosql.verDados("SELECT idcliente, razao_social,logo FROM tb_cliente WHERE statuscadastro= 'Aprovada'");
 
         }
@@ -81,6 +81,7 @@ namespace GuizzoLtda
         {
             
             this.Close();
+            us = usu.CarregaEmpresa(idcliente);
             Principal fcomeco = new Principal(us, idcliente);
             this.Hide();
             fcomeco.Show();

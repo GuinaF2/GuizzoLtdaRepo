@@ -39,7 +39,12 @@ namespace GuizzoLtda
 
         }
 
-        private void dgSelectMoto_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void SelecionarMoto_Load_1(object sender, EventArgs e)
+        {
+            dgSelectMoto.DataSource = conexaosql.verDados("SELECT * FROM tb_motorista");
+        }
+
+        private void dgSelectMoto_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)
         {
             if (dgSelectMoto.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
             {
@@ -52,11 +57,6 @@ namespace GuizzoLtda
             {
                 MessageBox.Show("Favor selecionar ID do Veiculo.");
             }
-        }
-
-        private void SelecionarMoto_Load_1(object sender, EventArgs e)
-        {
-
         }
     }
 }

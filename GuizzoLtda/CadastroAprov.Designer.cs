@@ -49,7 +49,7 @@
             // 
             // txtIdEndereco
             // 
-            txtIdEndereco.Location = new Point(223, 72);
+            txtIdEndereco.Location = new Point(205, 72);
             txtIdEndereco.Name = "txtIdEndereco";
             txtIdEndereco.Size = new Size(100, 23);
             txtIdEndereco.TabIndex = 20;
@@ -96,7 +96,7 @@
             // 
             labelendereco.AutoSize = true;
             labelendereco.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            labelendereco.Location = new Point(223, 43);
+            labelendereco.Location = new Point(205, 43);
             labelendereco.Name = "labelendereco";
             labelendereco.Size = new Size(88, 20);
             labelendereco.TabIndex = 15;
@@ -165,7 +165,7 @@
             // 
             // txtStatus
             // 
-            txtStatus.Location = new Point(300, 157);
+            txtStatus.Location = new Point(39, 153);
             txtStatus.Name = "txtStatus";
             txtStatus.Size = new Size(100, 23);
             txtStatus.TabIndex = 28;
@@ -174,7 +174,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(300, 128);
+            label4.Location = new Point(39, 124);
             label4.Name = "label4";
             label4.Size = new Size(88, 20);
             label4.TabIndex = 27;

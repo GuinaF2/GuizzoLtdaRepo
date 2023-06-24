@@ -162,10 +162,10 @@
             // txtIdCliente
             // 
             txtIdCliente.BackColor = Color.White;
-            txtIdCliente.Enabled = false;
             txtIdCliente.Location = new Point(57, 314);
             txtIdCliente.Margin = new Padding(3, 4, 3, 4);
             txtIdCliente.Name = "txtIdCliente";
+            txtIdCliente.ReadOnly = true;
             txtIdCliente.Size = new Size(142, 22);
             txtIdCliente.TabIndex = 18;
             txtIdCliente.Click += txtIdCliente_Click_1;
@@ -218,10 +218,10 @@
             // txtIdMoto
             // 
             txtIdMoto.BackColor = Color.White;
-            txtIdMoto.Enabled = false;
             txtIdMoto.Location = new Point(57, 217);
             txtIdMoto.Margin = new Padding(3, 4, 3, 4);
             txtIdMoto.Name = "txtIdMoto";
+            txtIdMoto.ReadOnly = true;
             txtIdMoto.Size = new Size(142, 22);
             txtIdMoto.TabIndex = 30;
             txtIdMoto.Click += txtIdMoto_Click_1;

@@ -31,12 +31,6 @@ namespace GuizzoLtda
             InitializeComponent();
         }
 
-        private void SelecionarVeiculo_Load(object sender, EventArgs e)
-        {
-            us = usu.CarregaEmpresa(idcliente);
-
-            dgSelectVeiculo.DataSource = conexaosql.verDados("SELECT idveiculo,placa_motorista,tipo_veiculo,seguro_data,renavam FROM tb_veiculo");
-        }
 
         private void dgSelectVeiculo_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -48,7 +42,15 @@ namespace GuizzoLtda
 
         }
 
-        private void dgSelectVeiculo_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+
+        private void SelecionarVeiculo_Load_1(object sender, EventArgs e)
+        {
+            us = usu.CarregaEmpresa(idcliente);
+
+            dgSelectVeiculo.DataSource = conexaosql.verDados("SELECT idveiculo,placa_motorista,tipo_veiculo,seguro_data,renavam FROM tb_veiculo");
+        }
+
+        private void dgSelectVeiculo_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)
         {
             if (dgSelectVeiculo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
             {

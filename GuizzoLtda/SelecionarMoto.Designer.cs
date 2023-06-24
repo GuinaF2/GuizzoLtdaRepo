@@ -45,6 +45,7 @@
             dgSelectMoto.RowTemplate.Height = 25;
             dgSelectMoto.Size = new Size(800, 450);
             dgSelectMoto.TabIndex = 0;
+            dgSelectMoto.CellDoubleClick += dgSelectMoto_CellDoubleClick_1;
             // 
             // SelecionarMoto
             // 

@@ -44,14 +44,15 @@ namespace GuizzoLtda
                 cbAberto.Checked = false;
             }
         }
-        
+
         private void btnConfirma_Click(object sender, EventArgs e)
         {
-            if (cbAberto.Checked) {
+            if (cbAberto.Checked)
+            {
                 conexaosql = new Conexao();
                 MySqlConnection con = conexaosql.getConexao();
                 con.Open();
-                MySqlCommand command = new MySqlCommand("SELECT `idpedido`, `statuspedido`, `nmrvolumes`, `valorpedido` FROM `student` WHERE `dtpedido` BETWEEN @d1 AND @d2 AND statuspedido='PENDENTE'", con);
+                MySqlCommand command = new MySqlCommand("SELECT `idpedido`, `statuspedido`, `nmrvolumes`, `valorpedido` FROM `tb_pedido` WHERE `dtpedido` BETWEEN @d1 AND @d2 AND statuspedido='PENDENTE'", con);
 
                 command.Parameters.Add("@d1", MySqlDbType.Date).Value = dtPedido.Value;
                 command.Parameters.Add("@d2", MySqlDbType.Date).Value = dtPedido2.Value;
@@ -62,12 +63,12 @@ namespace GuizzoLtda
                 cbEncerrado.Visible = false;
                 btnConfirma.Visible = false;
             }
-            if(cbEncerrado.Checked)
+            if (cbEncerrado.Checked)
             {
                 conexaosql = new Conexao();
                 MySqlConnection con = conexaosql.getConexao();
                 con.Open();
-                MySqlCommand command = new MySqlCommand("SELECT `idpedido`, `statuspedido`, `nmrvolumes`, `valorpedido` FROM `student` WHERE `dtpedido` BETWEEN @d1 AND @d2 AND statuspedido='PENDENTE'", con);
+                MySqlCommand command = new MySqlCommand("SELECT `idpedido`, `statuspedido`, `nmrvolumes`, `valorpedido` FROM `tb_pedido` WHERE `dtpedido` BETWEEN @d1 AND @d2 AND statuspedido='PENDENTE'", con);
 
                 command.Parameters.Add("@d1", MySqlDbType.Date).Value = dtPedido.Value;
                 command.Parameters.Add("@d2", MySqlDbType.Date).Value = dtPedido2.Value;
@@ -99,7 +100,7 @@ namespace GuizzoLtda
 
         private void btnReturnMenu_Click(object sender, EventArgs e)
         {
-            FuncionarioMenu fmenufunc = new FuncionarioMenu(us,idcliente);
+            FuncionarioMenu fmenufunc = new FuncionarioMenu(us, idcliente);
             this.Hide();
             fmenufunc.Show();
         }

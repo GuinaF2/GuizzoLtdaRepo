@@ -29,7 +29,7 @@ namespace GuizzoLtda
         private void Principal_Load_1(object sender, EventArgs e)
         {
             us = usu.CarregaEmpresa(idcliente);
-            MessageBox.Show();
+            MessageBox.Show(idcliente.ToString());
         }
 
         private void btnUsuario_Click(object sender, EventArgs e)

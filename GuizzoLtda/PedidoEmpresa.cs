@@ -54,5 +54,9 @@ namespace GuizzoLtda
             }
         }
 
+        private void PedidoEmpresa_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

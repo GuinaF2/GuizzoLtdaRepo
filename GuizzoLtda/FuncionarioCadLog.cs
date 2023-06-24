@@ -80,7 +80,7 @@ namespace GuizzoLtda
 
         private void FuncionarioCadLog_Load(object sender, EventArgs e)
         {
-
+            us = usu.CarregaEmpresa(idcliente);
         }
     }
 }

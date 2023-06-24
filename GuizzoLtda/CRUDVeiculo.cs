@@ -49,6 +49,7 @@ namespace GuizzoLtda
             txtPlaca.Enabled = true;
             dataSeguro.Enabled = true;
 
+
             txtIdVeic.Visible = true;
             txtPlaca.Visible = true;
             cbTipo.Visible = true;

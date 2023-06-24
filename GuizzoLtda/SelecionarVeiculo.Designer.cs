@@ -29,36 +29,37 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SelecionarVeiculo));
-            this.dgSelectVeiculo = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dgSelectVeiculo)).BeginInit();
-            this.SuspendLayout();
+            dgSelectVeiculo = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dgSelectVeiculo).BeginInit();
+            SuspendLayout();
             // 
             // dgSelectVeiculo
             // 
-            this.dgSelectVeiculo.AllowUserToAddRows = false;
-            this.dgSelectVeiculo.AllowUserToDeleteRows = false;
-            this.dgSelectVeiculo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgSelectVeiculo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgSelectVeiculo.Location = new System.Drawing.Point(0, 0);
-            this.dgSelectVeiculo.Name = "dgSelectVeiculo";
-            this.dgSelectVeiculo.ReadOnly = true;
-            this.dgSelectVeiculo.RowHeadersWidth = 51;
-            this.dgSelectVeiculo.RowTemplate.Height = 25;
-            this.dgSelectVeiculo.Size = new System.Drawing.Size(929, 505);
-            this.dgSelectVeiculo.TabIndex = 0;
+            dgSelectVeiculo.AllowUserToAddRows = false;
+            dgSelectVeiculo.AllowUserToDeleteRows = false;
+            dgSelectVeiculo.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgSelectVeiculo.Dock = DockStyle.Fill;
+            dgSelectVeiculo.Location = new Point(0, 0);
+            dgSelectVeiculo.Name = "dgSelectVeiculo";
+            dgSelectVeiculo.ReadOnly = true;
+            dgSelectVeiculo.RowHeadersWidth = 51;
+            dgSelectVeiculo.RowTemplate.Height = 25;
+            dgSelectVeiculo.Size = new Size(929, 505);
+            dgSelectVeiculo.TabIndex = 0;
+            dgSelectVeiculo.CellDoubleClick += dgSelectVeiculo_CellDoubleClick_1;
             // 
             // SelecionarVeiculo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(929, 505);
-            this.Controls.Add(this.dgSelectVeiculo);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "SelecionarVeiculo";
-            this.Text = "SelecionarVeiculo";
-            ((System.ComponentModel.ISupportInitialize)(this.dgSelectVeiculo)).EndInit();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(929, 505);
+            Controls.Add(dgSelectVeiculo);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Name = "SelecionarVeiculo";
+            Text = "SelecionarVeiculo";
+            Load += SelecionarVeiculo_Load_1;
+            ((System.ComponentModel.ISupportInitialize)dgSelectVeiculo).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion

@@ -29,64 +29,64 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PedidoEmpresa));
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtIdEmpresa = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dgPedidoEmp = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dgPedidoEmp)).BeginInit();
-            this.SuspendLayout();
+            label1 = new Label();
+            txtIdEmpresa = new TextBox();
+            button1 = new Button();
+            dgPedidoEmp = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dgPedidoEmp).BeginInit();
+            SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(37, 56);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Insira o Id da Empresa";
+            label1.AutoSize = true;
+            label1.Location = new Point(37, 56);
+            label1.Name = "label1";
+            label1.Size = new Size(122, 15);
+            label1.TabIndex = 0;
+            label1.Text = "Insira o Id da Empresa";
             // 
             // txtIdEmpresa
             // 
-            this.txtIdEmpresa.Location = new System.Drawing.Point(37, 74);
-            this.txtIdEmpresa.Name = "txtIdEmpresa";
-            this.txtIdEmpresa.Size = new System.Drawing.Size(100, 23);
-            this.txtIdEmpresa.TabIndex = 1;
+            txtIdEmpresa.Location = new Point(37, 74);
+            txtIdEmpresa.Name = "txtIdEmpresa";
+            txtIdEmpresa.Size = new Size(100, 23);
+            txtIdEmpresa.TabIndex = 1;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(37, 263);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(156, 44);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = true;
+            button1.Location = new Point(37, 263);
+            button1.Name = "button1";
+            button1.Size = new Size(156, 44);
+            button1.TabIndex = 2;
+            button1.Text = "Buscar";
+            button1.UseVisualStyleBackColor = true;
             // 
             // dgPedidoEmp
             // 
-            this.dgPedidoEmp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgPedidoEmp.Location = new System.Drawing.Point(101, 93);
-            this.dgPedidoEmp.Name = "dgPedidoEmp";
-            this.dgPedidoEmp.RowHeadersWidth = 51;
-            this.dgPedidoEmp.RowTemplate.Height = 25;
-            this.dgPedidoEmp.Size = new System.Drawing.Size(641, 243);
-            this.dgPedidoEmp.TabIndex = 3;
+            dgPedidoEmp.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgPedidoEmp.Location = new Point(101, 93);
+            dgPedidoEmp.Name = "dgPedidoEmp";
+            dgPedidoEmp.RowHeadersWidth = 51;
+            dgPedidoEmp.RowTemplate.Height = 25;
+            dgPedidoEmp.Size = new Size(641, 243);
+            dgPedidoEmp.TabIndex = 3;
             // 
             // PedidoEmpresa
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(894, 505);
-            this.Controls.Add(this.dgPedidoEmp);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.txtIdEmpresa);
-            this.Controls.Add(this.label1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "PedidoEmpresa";
-            this.Text = "PedidoEmpresa";
-            ((System.ComponentModel.ISupportInitialize)(this.dgPedidoEmp)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(894, 505);
+            Controls.Add(dgPedidoEmp);
+            Controls.Add(button1);
+            Controls.Add(txtIdEmpresa);
+            Controls.Add(label1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Name = "PedidoEmpresa";
+            Text = "PedidoEmpresa";
+            Load += PedidoEmpresa_Load;
+            ((System.ComponentModel.ISupportInitialize)dgPedidoEmp).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

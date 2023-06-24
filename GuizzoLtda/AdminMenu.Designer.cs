@@ -40,10 +40,10 @@
             toolStripSeparator2 = new ToolStripSeparator();
             toolStripSplitButton1 = new ToolStripSplitButton();
             encerrarToolStripMenuItem = new ToolStripMenuItem();
-            pbFotoAdminMenu = new PictureBox();
-            toolStripButton1 = new ToolStripButton();
-            toolStripSeparator1 = new ToolStripSeparator();
             toolStripSplitButton2 = new ToolStripButton();
+            toolStripSeparator1 = new ToolStripSeparator();
+            toolStripButton1 = new ToolStripButton();
+            pbFotoAdminMenu = new PictureBox();
             toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbFotoAdminMenu).BeginInit();
             SuspendLayout();
@@ -84,35 +84,35 @@
             // abrirPedidoToolStripMenuItem
             // 
             abrirPedidoToolStripMenuItem.Name = "abrirPedidoToolStripMenuItem";
-            abrirPedidoToolStripMenuItem.Size = new Size(180, 24);
+            abrirPedidoToolStripMenuItem.Size = new Size(161, 24);
             abrirPedidoToolStripMenuItem.Text = "Funcionarios";
             abrirPedidoToolStripMenuItem.Click += abrirPedidoToolStripMenuItem_Click;
             // 
             // pedidosToolStripMenuItem
             // 
             pedidosToolStripMenuItem.Name = "pedidosToolStripMenuItem";
-            pedidosToolStripMenuItem.Size = new Size(180, 24);
+            pedidosToolStripMenuItem.Size = new Size(161, 24);
             pedidosToolStripMenuItem.Text = "Pedidos";
             pedidosToolStripMenuItem.Click += pedidosToolStripMenuItem_Click_1;
             // 
             // veiculosToolStripMenuItem
             // 
             veiculosToolStripMenuItem.Name = "veiculosToolStripMenuItem";
-            veiculosToolStripMenuItem.Size = new Size(180, 24);
+            veiculosToolStripMenuItem.Size = new Size(161, 24);
             veiculosToolStripMenuItem.Text = "Veiculos";
             veiculosToolStripMenuItem.Click += veiculosToolStripMenuItem_Click_1;
             // 
             // motoristasToolStripMenuItem
             // 
             motoristasToolStripMenuItem.Name = "motoristasToolStripMenuItem";
-            motoristasToolStripMenuItem.Size = new Size(180, 24);
+            motoristasToolStripMenuItem.Size = new Size(161, 24);
             motoristasToolStripMenuItem.Text = "Motoristas";
             motoristasToolStripMenuItem.Click += motoristasToolStripMenuItem_Click_1;
             // 
             // empresasToolStripMenuItem
             // 
             empresasToolStripMenuItem.Name = "empresasToolStripMenuItem";
-            empresasToolStripMenuItem.Size = new Size(180, 24);
+            empresasToolStripMenuItem.Size = new Size(161, 24);
             empresasToolStripMenuItem.Text = "Empresas";
             empresasToolStripMenuItem.Click += empresasToolStripMenuItem_Click_1;
             // 
@@ -135,34 +135,6 @@
             encerrarToolStripMenuItem.Size = new Size(125, 22);
             encerrarToolStripMenuItem.Text = "Encerrar";
             // 
-            // pbFotoAdminMenu
-            // 
-            pbFotoAdminMenu.BackColor = Color.Black;
-            pbFotoAdminMenu.BorderStyle = BorderStyle.Fixed3D;
-            pbFotoAdminMenu.Location = new Point(498, 23);
-            pbFotoAdminMenu.Name = "pbFotoAdminMenu";
-            pbFotoAdminMenu.Size = new Size(432, 485);
-            pbFotoAdminMenu.SizeMode = PictureBoxSizeMode.StretchImage;
-            pbFotoAdminMenu.TabIndex = 2;
-            pbFotoAdminMenu.TabStop = false;
-            // 
-            // toolStripButton1
-            // 
-            toolStripButton1.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            toolStripButton1.Font = new Font("Leelawadee UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            toolStripButton1.ForeColor = Color.Goldenrod;
-            toolStripButton1.Image = (Image)resources.GetObject("toolStripButton1.Image");
-            toolStripButton1.ImageTransparentColor = Color.Magenta;
-            toolStripButton1.Name = "toolStripButton1";
-            toolStripButton1.Size = new Size(128, 24);
-            toolStripButton1.Text = "Cadastros Cliente";
-            toolStripButton1.Click += toolStripButton1_Click;
-            // 
-            // toolStripSeparator1
-            // 
-            toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(6, 27);
-            // 
             // toolStripSplitButton2
             // 
             toolStripSplitButton2.DisplayStyle = ToolStripItemDisplayStyle.Text;
@@ -176,6 +148,34 @@
             toolStripSplitButton2.TextImageRelation = TextImageRelation.TextAboveImage;
             toolStripSplitButton2.Click += toolStripSplitButton2_Click;
             // 
+            // toolStripSeparator1
+            // 
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            toolStripSeparator1.Size = new Size(6, 27);
+            // 
+            // toolStripButton1
+            // 
+            toolStripButton1.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            toolStripButton1.Font = new Font("Leelawadee UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            toolStripButton1.ForeColor = Color.Goldenrod;
+            toolStripButton1.Image = (Image)resources.GetObject("toolStripButton1.Image");
+            toolStripButton1.ImageTransparentColor = Color.Magenta;
+            toolStripButton1.Name = "toolStripButton1";
+            toolStripButton1.Size = new Size(128, 24);
+            toolStripButton1.Text = "Cadastros Cliente";
+            toolStripButton1.Click += toolStripButton1_Click;
+            // 
+            // pbFotoAdminMenu
+            // 
+            pbFotoAdminMenu.BackColor = Color.Black;
+            pbFotoAdminMenu.BorderStyle = BorderStyle.Fixed3D;
+            pbFotoAdminMenu.Location = new Point(498, 23);
+            pbFotoAdminMenu.Name = "pbFotoAdminMenu";
+            pbFotoAdminMenu.Size = new Size(432, 485);
+            pbFotoAdminMenu.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbFotoAdminMenu.TabIndex = 2;
+            pbFotoAdminMenu.TabStop = false;
+            // 
             // AdminMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -188,6 +188,7 @@
             Name = "AdminMenu";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "AdminMenu";
+            Load += AdminMenu_Load_1;
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pbFotoAdminMenu).EndInit();

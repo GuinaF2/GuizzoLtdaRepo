@@ -142,7 +142,7 @@
             // 
             btnReturn.BackgroundImage = Properties.Resources._688879_arrows_512x512;
             btnReturn.BackgroundImageLayout = ImageLayout.Stretch;
-            btnReturn.Location = new Point(12, -1);
+            btnReturn.Location = new Point(0, -1);
             btnReturn.Name = "btnReturn";
             btnReturn.Size = new Size(34, 26);
             btnReturn.TabIndex = 14;

@@ -145,5 +145,10 @@ namespace GuizzoLtda
             faprov.Show();
             Hide();
         }
+
+        private void AdminMenu_Load_1(object sender, EventArgs e)
+        {
+            us = usu.CarregaEmpresa(idcliente);
+        }
     }
 }

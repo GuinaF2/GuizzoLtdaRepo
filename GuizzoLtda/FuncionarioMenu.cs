@@ -79,7 +79,9 @@ namespace GuizzoLtda
 
         private void btnVerifyEmp_Click(object sender, EventArgs e)
         {
-
+            VerificarEmp verifyemp = new VerificarEmp(us,idcliente);
+            this.Hide();
+            verifyemp.Show();
         }
 
         private void btnConfirmarPedi_Click(object sender, EventArgs e)
@@ -96,7 +98,7 @@ namespace GuizzoLtda
 
         private void FuncionarioMenu_Load_1(object sender, EventArgs e)
         {
-
+            us = usu.CarregaEmpresa(idcliente);
         }
 
         
