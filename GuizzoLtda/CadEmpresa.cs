@@ -241,7 +241,7 @@ namespace GuizzoLtda
         {
             if (!string.IsNullOrWhiteSpace(txtCep.Text))
             {
-                Address endereco = SearchZip.GetAddress("15000000");
+                Address endereco = SearchZip.GetAddress("txt.Cep");
                 if (endereco.Zip != null)
                 {
                  

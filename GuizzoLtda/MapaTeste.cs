@@ -93,7 +93,6 @@ namespace GuizzoLtda
         {
             if (!(txtLat.Text.Trim().Equals("") && txtLong.Text.Trim().Equals("")))
             {
-
                 double lat = Convert.ToDouble(txtLat.Text);
                 double lng = Convert.ToDouble(txtLong.Text);
                 MapaBr.Position = new PointLatLng(lat, lng);
@@ -187,7 +186,11 @@ namespace GuizzoLtda
 
         private void btnCad_Click(object sender, EventArgs e)
         {
+
             _points.Clear();
+            labeldistancia.Text = "Distância";
+            MessageBox.Show("Rota Apagada");
+
         }
 
         private void btnApaga_Click(object sender, EventArgs e)
@@ -198,14 +201,20 @@ namespace GuizzoLtda
             routes.Routes.Add(r);
             MapaBr.Overlays.Add(routes);
             labeldistancia.Text = route.Distance + "Km";
+            MessageBox.Show("Rota Encontrada");
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
 
-
+            label1.Visible = true;
             _points.Add(new PointLatLng(Convert.ToDouble(txtLat.Text), Convert.ToDouble(txtLong.Text)));
             MapaBr.Zoom = 14;
+            txtLat.Text = "";
+            txtLong.Text = "";
+            txtEndereco.Text = "";
+
+
         }
     }
 }
