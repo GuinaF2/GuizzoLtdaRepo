@@ -21,18 +21,20 @@ namespace GuizzoLtda
         int idcliente;
         EmpresaControle usu = new EmpresaControle();
         EmpresaModelo us = new EmpresaModelo();
-        public AdminSolicitacao()
+        public AdminSolicitacao(EmpresaModelo um,int id)
         {
+            us = um;
+            idcliente = id;
             InitializeComponent();
         }
 
-        private void AdminSolicitacao_Load(object sender, EventArgs e)
+        private void AdminSolicitacao_Load_1(object sender, EventArgs e)
         {
             us = usu.CarregaEmpresa(idcliente);
             dgSolicitacao.DataSource = conexaosql.verDados("SELECT * FROM tb_solicitacao WHERE condicao = 'Pendente'");
         }
 
-        private void btnAprovar_Click(object sender, EventArgs e)
+        private void btnAprovar_Click_1(object sender, EventArgs e)
         {
             if (txtDescricao.Text == "" || cbStatus.Text == "" || cbTipo.Text == "")
             {
@@ -46,7 +48,7 @@ namespace GuizzoLtda
                 if (SolicitacaoC.AtualizarSolicitacao(SolicitacaoM) == true)
                 {
                     MessageBox.Show("Solicitação Aprovada.");
-                    AdminSolicitacao fadminsol = new AdminSolicitacao();
+                    AdminSolicitacao fadminsol = new AdminSolicitacao(us,idcliente);
                     this.Hide();
                     fadminsol.Show();
                 }
@@ -57,7 +59,7 @@ namespace GuizzoLtda
             }
         }
 
-        private void btnRecusar_Click(object sender, EventArgs e)
+        private void btnRecusar_Click_1(object sender, EventArgs e)
         {
             if (txtDescricao.Text == "" || cbStatus.Text == "" || cbTipo.Text == "")
             {
@@ -71,7 +73,7 @@ namespace GuizzoLtda
                 if (SolicitacaoC.AtualizarSolicitacao(SolicitacaoM) == true)
                 {
                     MessageBox.Show("Solicitação Aprovada.");
-                    AdminSolicitacao fadminsol = new AdminSolicitacao();
+                    AdminSolicitacao fadminsol = new AdminSolicitacao(us,idcliente);
                     this.Hide();
                     fadminsol.Show();
                 }
@@ -82,7 +84,7 @@ namespace GuizzoLtda
             }
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
             if (linkLabel1.Text == "Ver solicitações finalizadas")
             {
@@ -105,7 +107,7 @@ namespace GuizzoLtda
             }
         }
 
-        private void dgSolicitacao_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgSolicitacao_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
@@ -128,26 +130,11 @@ namespace GuizzoLtda
             }
         }
 
-        private void dgSolicitacao_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnReturn_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void AdminSolicitacao_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtDescricao_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            AdminMenu fmenureturn = new AdminMenu(us,idcliente);
+            AdminMenu fadminlog = new AdminMenu(us, idcliente);
             this.Hide();
-            fmenureturn.Show();
+            fadminlog.Show();
         }
     }
 }

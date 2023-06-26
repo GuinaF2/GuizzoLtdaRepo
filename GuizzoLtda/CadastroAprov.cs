@@ -14,17 +14,23 @@ namespace GuizzoLtda
 {
     public partial class CadastroAprov : Form
     {
+        int idcliente;
+        EmpresaControle usu = new EmpresaControle();
+        EmpresaModelo us = new EmpresaModelo();
 
         Conexao conexaosql = new Conexao();
         EmpresaModelo EmpresaModelo = new EmpresaModelo();
         EmpresaControle Controle = new EmpresaControle();
-        public CadastroAprov()
+        public CadastroAprov(EmpresaModelo um, int id)
         {
+            us = um;
+            idcliente = id;
             InitializeComponent();
         }
 
         private void CadastroAprov_Load(object sender, EventArgs e)
         {
+            us = usu.CarregaEmpresa(idcliente);
             dgSolicitacao.DataSource = conexaosql.verDados("SELECT * FROM tb_cliente WHERE statuscadastro = 'Pendente'");
         }
 
@@ -42,7 +48,7 @@ namespace GuizzoLtda
                 if (Controle.AtualizarEmpresa(EmpresaModelo) == true)
                 {
                     MessageBox.Show("Solicitação Aprovada.");
-                    AdminSolicitacao fadminsol = new AdminSolicitacao();
+                    AdminSolicitacao fadminsol = new AdminSolicitacao(us,idcliente);
                     this.Hide();
                     fadminsol.Show();
                 }
@@ -67,7 +73,7 @@ namespace GuizzoLtda
                 if (Controle.AtualizarEmpresa(EmpresaModelo) == true)
                 {
                     MessageBox.Show("Solicitação Aprovada.");
-                    AdminSolicitacao fadminsol = new AdminSolicitacao();
+                    AdminSolicitacao fadminsol = new AdminSolicitacao(us, idcliente);
                     this.Hide();
                     fadminsol.Show();
                 }
@@ -132,6 +138,13 @@ namespace GuizzoLtda
                 linkLabel1.Text = "Ver solicitações finalizadas";
                 dgSolicitacao.DataSource = conexaosql.verDados("SELECT * FROM tb_empresa WHERE statuscadastro = 'Pendente'");
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AdminMenu fmenureturn = new AdminMenu(us, idcliente);
+            this.Hide();
+            fmenureturn.Show();
         }
     }
 }

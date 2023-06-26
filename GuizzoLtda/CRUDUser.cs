@@ -21,9 +21,11 @@ namespace GuizzoLtda
         Conexao conexaosql = new Conexao();
         UsuarioModelo UsuarioModelo = new UsuarioModelo();
         UsuarioControle Controle = new UsuarioControle();
-        int id;
-        public CRUDUser()
+
+        public CRUDUser(EmpresaModelo um,int id)
         {
+            us = um;
+            idcliente = id;
             InitializeComponent();
         }
 
@@ -48,7 +50,7 @@ namespace GuizzoLtda
                 if (Controle.Cadastrar(UsuarioModelo) >= 1)
                 {
                     MessageBox.Show("Usuário Cadastrado.");
-                    CRUDUser fadmincrud = new CRUDUser();
+                    CRUDUser fadmincrud = new CRUDUser(us,idcliente);
                     this.Hide();
                     fadmincrud.Show();
                     dataGridCRUD.Visible = true;
@@ -86,7 +88,7 @@ namespace GuizzoLtda
                     {
                         MessageBox.Show("Dados Atualizados.");
                     }
-                    CRUDUser fadmincrud = new CRUDUser();
+                    CRUDUser fadmincrud = new CRUDUser(us,idcliente);
                     this.Hide();
                     fadmincrud.Show();
                 }
@@ -233,6 +235,7 @@ namespace GuizzoLtda
 
         private void CRUDUser_Load_1(object sender, EventArgs e)
         {
+            MessageBox.Show(idcliente.ToString());
             us = usu.CarregaEmpresa(idcliente);
 
 

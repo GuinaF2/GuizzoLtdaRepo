@@ -65,14 +65,14 @@ namespace GuizzoLtda
 
         private void toolStripButton4_Click_1(object sender, EventArgs e)
         {
-            MapaTeste ftestemapa = new MapaTeste();
+            MapaTeste ftestemapa = new MapaTeste(us,idcliente);
             this.Hide();
             ftestemapa.Show();
         }
 
         private void toolStripButton5_Click_1(object sender, EventArgs e)
         {
-            FuncionarioSolicit ffuncsoli = new FuncionarioSolicit();
+            FuncionarioSolicit ffuncsoli = new FuncionarioSolicit(us,idcliente);
             this.Hide();
             ffuncsoli.Show();
         }
@@ -91,7 +91,9 @@ namespace GuizzoLtda
 
         private void toolStripButton3_Click_1(object sender, EventArgs e)
         {
-
+            PedidoFunc verifyemp = new PedidoFunc(us, idcliente);
+            this.Hide();
+            verifyemp.Show();
         }
 
         

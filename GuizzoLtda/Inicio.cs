@@ -17,7 +17,6 @@ namespace GuizzoLtda
         int idcliente;
         EmpresaControle usu = new EmpresaControle();
         EmpresaModelo us = new EmpresaModelo();
-        int id;
         public Inicio()
         {
 

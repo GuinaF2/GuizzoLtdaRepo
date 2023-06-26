@@ -31,6 +31,7 @@ namespace GuizzoLtda
 
         private void CRUDEmpresa_Load_1(object sender, EventArgs e)
         {
+            MessageBox.Show(idcliente.ToString());
             us = usu.CarregaEmpresa(idcliente);
 
 
@@ -44,9 +45,8 @@ namespace GuizzoLtda
             txtInscEstadual.Visible = false;
             txtRazaoSocial.Visible = false;
 
-            labelfoto.Visible = false;
 
-            btnFoto.Visible = false;
+
             labelid.Visible = false;
             labelinscestad.Visible = false;
             labelcnpj.Visible = false;
@@ -75,15 +75,13 @@ namespace GuizzoLtda
             txtCnpj.Enabled = true;
             txtInscEstadual.Enabled = true;
             txtRazaoSocial.Enabled = true;
-            btnFoto.Enabled = true;
+
 
             txtIdEmpresa.Visible = true;
             txtCnpj.Visible = true;
             txtInscEstadual.Visible = true;
             txtRazaoSocial.Visible = true;
-            btnFoto.Visible = true;
 
-            labelfoto.Visible = true;
             labelid.Visible = true;
             labelinscestad.Visible = true;
             labelcnpj.Visible = true;
@@ -96,7 +94,7 @@ namespace GuizzoLtda
             txtCnpj.Text = String.Empty;
             txtInscEstadual.Text = String.Empty;
             txtRazaoSocial.Text = String.Empty;
-            btnFoto.Text = String.Empty;
+
 
             SaveUpdate.Visible = false;
             SaveDelete.Visible = true;
@@ -105,15 +103,15 @@ namespace GuizzoLtda
             txtCnpj.Enabled = false;
             txtInscEstadual.Enabled = false;
             txtRazaoSocial.Enabled = false;
-            btnFoto.Enabled = false;
+
 
             txtIdEmpresa.Visible = true;
             txtCnpj.Visible = true;
             txtInscEstadual.Visible = true;
             txtRazaoSocial.Visible = true;
-            btnFoto.Visible = true;
 
-            labelfoto.Visible = true;
+
+ 
             labelid.Visible = true;
             labelinscestad.Visible = true;
             labelcnpj.Visible = true;

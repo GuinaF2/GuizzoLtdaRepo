@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CRUDMotorista));
-            dataGridMotorista = new DataGridView();
             toolStrip1 = new ToolStrip();
             btnReturn = new ToolStripButton();
             btnAtualizar = new ToolStripButton();
@@ -58,24 +57,10 @@
             txtCnh = new TextBox();
             labeltipocnh = new Label();
             cbTipoCnh = new ComboBox();
-            ((System.ComponentModel.ISupportInitialize)dataGridMotorista).BeginInit();
+            dataGridMotorista = new DataGridView();
             toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridMotorista).BeginInit();
             SuspendLayout();
-            // 
-            // dataGridMotorista
-            // 
-            dataGridMotorista.AllowUserToAddRows = false;
-            dataGridMotorista.AllowUserToDeleteRows = false;
-            dataGridMotorista.BackgroundColor = SystemColors.ActiveCaptionText;
-            dataGridMotorista.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridMotorista.Location = new Point(578, 0);
-            dataGridMotorista.Name = "dataGridMotorista";
-            dataGridMotorista.ReadOnly = true;
-            dataGridMotorista.RowHeadersWidth = 51;
-            dataGridMotorista.RowTemplate.Height = 25;
-            dataGridMotorista.Size = new Size(352, 506);
-            dataGridMotorista.TabIndex = 23;
-            dataGridMotorista.CellClick += dataGridMotorista_CellClick_1;
             // 
             // toolStrip1
             // 
@@ -370,6 +355,20 @@
             cbTipoCnh.Size = new Size(55, 23);
             cbTipoCnh.TabIndex = 37;
             // 
+            // dataGridMotorista
+            // 
+            dataGridMotorista.AllowUserToAddRows = false;
+            dataGridMotorista.AllowUserToDeleteRows = false;
+            dataGridMotorista.BackgroundColor = Color.Black;
+            dataGridMotorista.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridMotorista.GridColor = Color.Black;
+            dataGridMotorista.Location = new Point(523, 5);
+            dataGridMotorista.Name = "dataGridMotorista";
+            dataGridMotorista.ReadOnly = true;
+            dataGridMotorista.RowTemplate.Height = 25;
+            dataGridMotorista.Size = new Size(406, 502);
+            dataGridMotorista.TabIndex = 38;
+            // 
             // CRUDMotorista
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -402,9 +401,9 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "CRUDMotorista";
             Load += CRUDMotorista_Load_1;
-            ((System.ComponentModel.ISupportInitialize)dataGridMotorista).EndInit();
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridMotorista).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -442,5 +441,6 @@
         private ComboBox cbTipoCnh;
         private Label labelidcliente;
         private TextBox txtIdEmpresa;
+        private DataGridView dataGridView1;
     }
 }

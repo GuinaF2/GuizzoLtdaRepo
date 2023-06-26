@@ -96,18 +96,14 @@ namespace GuizzoLtda
         private void VerificarEmp_Load_1(object sender, EventArgs e)
         {
             us = usu.CarregaEmpresa(idcliente);
-         
+
         }
 
         private void btnMenu_Click_1(object sender, EventArgs e)
         {
-            txtCnpj.Visible = true;
-
-            labelCnpj.Visible = true;
-            btnConfirmar.Visible = true;
-            btnMenu.Visible = true;
-            dgVerEmp.Visible = false;
-            returnBtn.Visible = false;
+            FuncionarioMenu fmenureturn = new FuncionarioMenu(us, idcliente);
+            this.Hide();
+            fmenureturn.Show();
         }
 
         private void txtCnpj_KeyPress(object sender, KeyPressEventArgs e)
@@ -117,9 +113,13 @@ namespace GuizzoLtda
 
         private void returnBtn_Click(object sender, EventArgs e)
         {
-            FuncionarioMenu fmenureturn = new FuncionarioMenu(us, idcliente);
-            this.Hide();
-            fmenureturn.Show();
+            txtCnpj.Visible = true;
+            labelCnpj.Visible = true;
+            btnConfirmar.Visible = true;
+            btnMenu.Visible = true;
+            dgVerEmp.Visible = false;
+            returnBtn.Visible = false;
+
         }
     }
 }

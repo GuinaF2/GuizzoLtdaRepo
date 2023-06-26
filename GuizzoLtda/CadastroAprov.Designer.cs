@@ -44,6 +44,7 @@
             txtStatus = new TextBox();
             label4 = new Label();
             linkLabel1 = new LinkLabel();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dgSolicitacao).BeginInit();
             SuspendLayout();
             // 
@@ -191,11 +192,24 @@
             linkLabel1.Text = "Requisições Finalizadas";
             linkLabel1.LinkClicked += linkLabel1_LinkClicked;
             // 
+            // button1
+            // 
+            button1.BackColor = SystemColors.ButtonFace;
+            button1.BackgroundImage = Properties.Resources._688879_arrows_512x512;
+            button1.BackgroundImageLayout = ImageLayout.Stretch;
+            button1.Location = new Point(0, 2);
+            button1.Name = "button1";
+            button1.Size = new Size(41, 32);
+            button1.TabIndex = 30;
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
             // CadastroAprov
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button1);
             Controls.Add(linkLabel1);
             Controls.Add(txtStatus);
             Controls.Add(label4);
@@ -238,5 +252,6 @@
         private TextBox txtStatus;
         private Label label4;
         private LinkLabel linkLabel1;
+        private Button button1;
     }
 }

@@ -38,6 +38,8 @@
             labeldistancia = new Label();
             splitter1 = new Splitter();
             toolStrip1 = new ToolStrip();
+            toolStripButton1 = new ToolStripButton();
+            toolStripSeparator3 = new ToolStripSeparator();
             btnMarcações = new ToolStripButton();
             toolStripSeparator1 = new ToolStripSeparator();
             btnClear = new ToolStripButton();
@@ -48,8 +50,6 @@
             txtEndereco = new TextBox();
             label3 = new Label();
             label1 = new Label();
-            toolStripButton1 = new ToolStripButton();
-            toolStripSeparator3 = new ToolStripSeparator();
             toolStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -165,6 +165,24 @@
             toolStrip1.TabIndex = 27;
             toolStrip1.Text = "toolStrip1";
             // 
+            // toolStripButton1
+            // 
+            toolStripButton1.BackColor = Color.Goldenrod;
+            toolStripButton1.BackgroundImage = Properties.Resources._688879_arrows_512x512;
+            toolStripButton1.BackgroundImageLayout = ImageLayout.Stretch;
+            toolStripButton1.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            toolStripButton1.Image = Properties.Resources._688879_arrows_512x512;
+            toolStripButton1.ImageTransparentColor = Color.Magenta;
+            toolStripButton1.Name = "toolStripButton1";
+            toolStripButton1.Size = new Size(23, 22);
+            toolStripButton1.Text = "toolStripButton1";
+            toolStripButton1.Click += toolStripButton1_Click;
+            // 
+            // toolStripSeparator3
+            // 
+            toolStripSeparator3.Name = "toolStripSeparator3";
+            toolStripSeparator3.Size = new Size(6, 25);
+            // 
             // btnMarcações
             // 
             btnMarcações.DisplayStyle = ToolStripItemDisplayStyle.Text;
@@ -254,23 +272,6 @@
             label1.TabIndex = 30;
             label1.Text = "Insira o Destino";
             label1.Visible = false;
-            // 
-            // toolStripButton1
-            // 
-            toolStripButton1.BackColor = Color.Goldenrod;
-            toolStripButton1.BackgroundImage = Properties.Resources._688879_arrows_512x512;
-            toolStripButton1.BackgroundImageLayout = ImageLayout.Stretch;
-            toolStripButton1.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            toolStripButton1.Image = Properties.Resources._688879_arrows_512x512;
-            toolStripButton1.ImageTransparentColor = Color.Magenta;
-            toolStripButton1.Name = "toolStripButton1";
-            toolStripButton1.Size = new Size(23, 22);
-            toolStripButton1.Text = "toolStripButton1";
-            // 
-            // toolStripSeparator3
-            // 
-            toolStripSeparator3.Name = "toolStripSeparator3";
-            toolStripSeparator3.Size = new Size(6, 25);
             // 
             // MapaTeste
             // 

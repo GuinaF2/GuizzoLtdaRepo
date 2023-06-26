@@ -33,11 +33,13 @@ namespace GuizzoLtda
         private List<PointLatLng> _points;
 
 
-        public MapaTeste()
+        public MapaTeste(EmpresaModelo um,int id)
         {
+            us = um;
+            idcliente = id;
             InitializeComponent();
             _points = new List<PointLatLng>();
-            us = usu.CarregaEmpresa(idcliente);
+            
         }
 
 
@@ -48,6 +50,7 @@ namespace GuizzoLtda
 
         private void MapaTeste_Load_1(object sender, EventArgs e)
         {
+            us = usu.CarregaEmpresa(idcliente);
             GMapProviders.GoogleMap.ApiKey = @"AIzaSyAoYjaVsfQLcNYmjyBdRjyqKGjc9YIABLo";
             MapaBr.ShowCenter = false;
             MapaBr.DragButton = MouseButtons.Left;
@@ -58,25 +61,6 @@ namespace GuizzoLtda
             MapaBr.Zoom = 10;
 
         }
-
-
-
-
-
-
-
-        private void btnReturn_Click_1(object sender, EventArgs e)
-        {
-            FuncionarioMenu fmenureturn = new FuncionarioMenu(us, idcliente);
-            this.Hide();
-            fmenureturn.Show();
-        }
-
-
-
-
-
-
         private void toolStripButton1_Click_1(object sender, EventArgs e)
         {
 
@@ -170,6 +154,13 @@ namespace GuizzoLtda
         private void MapaBr_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            FuncionarioMenu fmenureturn = new FuncionarioMenu(us, idcliente);
+            this.Hide();
+            fmenureturn.Show();
         }
     }
 }

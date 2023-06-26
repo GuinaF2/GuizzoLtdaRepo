@@ -15,18 +15,23 @@ namespace GuizzoLtda
 {
     public partial class FuncionarioSolicit : Form
     {
-        UsuarioControle usu = new UsuarioControle();
-        UsuarioModelo us = new UsuarioModelo();
         SolicitacaoControle sc = new SolicitacaoControle();
         SolicitacaoModelo sm = new SolicitacaoModelo();
-        public FuncionarioSolicit()
+
+        int idcliente;
+        EmpresaControle usu = new EmpresaControle();
+        EmpresaModelo us = new EmpresaModelo();
+        public FuncionarioSolicit(EmpresaModelo um, int id)
         {
+            us = um;
+            idcliente = id;
             InitializeComponent();
         }
 
         private void FuncionarioSolicit_Load(object sender, EventArgs e)
         {
 
+            us = usu.CarregaEmpresa(idcliente);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -45,7 +50,7 @@ namespace GuizzoLtda
                 {
                     MessageBox.Show("Solicitação enviada.");
 
-                    FuncionarioSolicit cliente = new FuncionarioSolicit();
+                    FuncionarioSolicit cliente = new FuncionarioSolicit(us, idcliente);
                     this.Hide();
                     cliente.Show();
                 }
@@ -63,6 +68,13 @@ namespace GuizzoLtda
 
         private void labeldesc_Click(object sender, EventArgs e)
         {
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            FuncionarioMenu ffuncmenu = new FuncionarioMenu(us, idcliente);
+            this.Hide();
+            ffuncmenu.Show();
         }
     }
 }

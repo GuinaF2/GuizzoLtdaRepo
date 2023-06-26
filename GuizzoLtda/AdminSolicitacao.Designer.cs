@@ -90,6 +90,7 @@
             btnAprovar.TabIndex = 8;
             btnAprovar.Text = "Aprovar";
             btnAprovar.UseVisualStyleBackColor = true;
+            btnAprovar.Click += btnAprovar_Click_1;
             // 
             // btnRecusar
             // 
@@ -99,6 +100,7 @@
             btnRecusar.TabIndex = 9;
             btnRecusar.Text = "Recusar";
             btnRecusar.UseVisualStyleBackColor = true;
+            btnRecusar.Click += btnRecusar_Click_1;
             // 
             // linkLabel1
             // 
@@ -109,6 +111,7 @@
             linkLabel1.TabIndex = 10;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Requisições Finalizadas";
+            linkLabel1.LinkClicked += linkLabel1_LinkClicked_1;
             // 
             // dgSolicitacao
             // 
@@ -118,6 +121,7 @@
             dgSolicitacao.RowTemplate.Height = 25;
             dgSolicitacao.Size = new Size(731, 170);
             dgSolicitacao.TabIndex = 11;
+            dgSolicitacao.CellClick += dgSolicitacao_CellClick_1;
             // 
             // txtTipoSoli
             // 
@@ -142,7 +146,7 @@
             btnReturn.Size = new Size(37, 40);
             btnReturn.TabIndex = 14;
             btnReturn.UseVisualStyleBackColor = true;
-            btnReturn.Click += button1_Click;
+            btnReturn.Click += btnReturn_Click;
             // 
             // AdminSolicitacao
             // 

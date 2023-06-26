@@ -37,7 +37,7 @@ namespace GuizzoLtda
 
         private void abrirPedidoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CRUDUser fcrudusuario = new CRUDUser();
+            CRUDUser fcrudusuario = new CRUDUser(us,idcliente);
             fcrudusuario.Show();
             Hide();
         }
@@ -134,14 +134,14 @@ namespace GuizzoLtda
 
         private void toolStripSplitButton2_Click(object sender, EventArgs e)
         {
-            AdminSolicitacao freturnlogin = new AdminSolicitacao();
+            AdminSolicitacao freturnlogin = new AdminSolicitacao(us,idcliente);
             freturnlogin.Show();
             Hide();
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            CadastroAprov faprov = new CadastroAprov();
+            CadastroAprov faprov = new CadastroAprov(us,idcliente);
             faprov.Show();
             Hide();
         }

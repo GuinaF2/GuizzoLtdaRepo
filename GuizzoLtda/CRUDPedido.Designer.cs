@@ -67,6 +67,7 @@
             dgPedido.AllowUserToDeleteRows = false;
             dgPedido.BackgroundColor = SystemColors.ActiveCaptionText;
             dgPedido.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgPedido.GridColor = Color.Goldenrod;
             dgPedido.Location = new Point(594, 0);
             dgPedido.Margin = new Padding(3, 4, 3, 4);
             dgPedido.Name = "dgPedido";
