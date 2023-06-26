@@ -98,6 +98,7 @@ namespace GuizzoLtda
 
         private void FuncionarioMenu_Load_1(object sender, EventArgs e)
         {
+            MessageBox.Show(idcliente.ToString());
             us = usu.CarregaEmpresa(idcliente);
         }
 

@@ -147,6 +147,7 @@
             btnReturn.Size = new Size(34, 26);
             btnReturn.TabIndex = 14;
             btnReturn.UseVisualStyleBackColor = true;
+            btnReturn.Click += btnReturn_Click_1;
             // 
             // PedidoFunc
             // 

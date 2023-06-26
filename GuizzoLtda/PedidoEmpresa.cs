@@ -18,9 +18,14 @@ namespace GuizzoLtda
         Conexao conexaosql = new Conexao();
         EmpresaModelo EmpresaModelo = new EmpresaModelo();
         EmpresaControle Controle = new EmpresaControle();
+
+        int idcliente;
+        EmpresaControle usu = new EmpresaControle();
+        EmpresaModelo us = new EmpresaModelo();
         public PedidoEmpresa()
         {
             InitializeComponent();
+            us = usu.CarregaEmpresa(idcliente);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -57,6 +62,13 @@ namespace GuizzoLtda
         private void PedidoEmpresa_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FuncionarioMenu fmenureturn = new FuncionarioMenu(us, idcliente);
+            this.Hide();
+            fmenureturn.Show();
         }
     }
 }

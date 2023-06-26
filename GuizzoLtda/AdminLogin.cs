@@ -17,6 +17,7 @@ namespace GuizzoLtda
         Conexao conexaosql = new Conexao();
         UsuarioModelo UsuarioModelo = new UsuarioModelo();
         UsuarioControle Controle = new UsuarioControle();
+
         int idcliente;
         EmpresaControle usu = new EmpresaControle();
         EmpresaModelo us = new EmpresaModelo();
@@ -103,6 +104,14 @@ namespace GuizzoLtda
 
         }
 
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
 
+        }
+
+        private void AdminLogin_Load_1(object sender, EventArgs e)
+        {
+            us = usu.CarregaEmpresa(idcliente);
+        }
     }
 }

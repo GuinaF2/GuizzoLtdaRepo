@@ -95,7 +95,8 @@ namespace GuizzoLtda
 
         private void VerificarEmp_Load_1(object sender, EventArgs e)
         {
-
+            us = usu.CarregaEmpresa(idcliente);
+         
         }
 
         private void btnMenu_Click_1(object sender, EventArgs e)

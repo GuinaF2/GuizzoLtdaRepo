@@ -33,6 +33,7 @@
             txtIdEmpresa = new TextBox();
             button1 = new Button();
             dgPedidoEmp = new DataGridView();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)dgPedidoEmp).BeginInit();
             SuspendLayout();
             // 
@@ -71,11 +72,23 @@
             dgPedidoEmp.Size = new Size(641, 243);
             dgPedidoEmp.TabIndex = 3;
             // 
+            // button2
+            // 
+            button2.BackgroundImage = Properties.Resources._688879_arrows_512x512;
+            button2.BackgroundImageLayout = ImageLayout.Stretch;
+            button2.Location = new Point(1, 0);
+            button2.Name = "button2";
+            button2.Size = new Size(45, 36);
+            button2.TabIndex = 4;
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // PedidoEmpresa
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(894, 505);
+            Controls.Add(button2);
             Controls.Add(dgPedidoEmp);
             Controls.Add(button1);
             Controls.Add(txtIdEmpresa);
@@ -95,5 +108,6 @@
         private TextBox txtIdEmpresa;
         private Button button1;
         private DataGridView dgPedidoEmp;
+        private Button button2;
     }
 }

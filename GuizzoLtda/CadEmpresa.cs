@@ -92,7 +92,7 @@ namespace GuizzoLtda
 
                     {
 
-                        MessageBox.Show("Cliente Cadastrado com Sucesso");
+                        MessageBox.Show("Pronto! Aguarde seu cadastro ser aprovado");
                         SelecionarEmpresa freturnselect = new SelecionarEmpresa(us, idcliente);
                         this.Hide();
                         freturnselect.Show();

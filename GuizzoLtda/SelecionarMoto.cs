@@ -41,6 +41,7 @@ namespace GuizzoLtda
 
         private void SelecionarMoto_Load_1(object sender, EventArgs e)
         {
+            us = usu.CarregaEmpresa(idcliente);
             dgSelectMoto.DataSource = conexaosql.verDados("SELECT * FROM tb_motorista");
         }
 

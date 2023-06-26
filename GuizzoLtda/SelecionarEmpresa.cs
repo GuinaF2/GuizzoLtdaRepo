@@ -39,7 +39,7 @@ namespace GuizzoLtda
 
         private void SelecionarEmpresa_Load(object sender, EventArgs e)
         {
-            us = usu.CarregaEmpresa(idcliente);
+
             dgViewSelEmp.DataSource = conexaosql.verDados("SELECT idcliente, razao_social,logo FROM tb_cliente WHERE statuscadastro= 'Aprovada'");
 
         }
@@ -79,9 +79,9 @@ namespace GuizzoLtda
 
         private void dgViewSelEmp_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            
-            this.Close();
             us = usu.CarregaEmpresa(idcliente);
+            this.Close();
+            idcliente = us.CodCliente;
             Principal fcomeco = new Principal(us, idcliente);
             this.Hide();
             fcomeco.Show();
@@ -97,8 +97,10 @@ namespace GuizzoLtda
                     dgViewSelEmp.CurrentRow.Selected = true;
                     textBox1.Text = dgViewSelEmp.Rows[e.RowIndex].Cells["logo"].Value.ToString();
                     pbLogoEmp.ImageLocation = textBox1.Text;
+                    idcliente = Convert.ToInt32(dgViewSelEmp.Rows[e.RowIndex].Cells["idcliente"].FormattedValue);
                 }
-                
+
+               
             }
             catch
             {

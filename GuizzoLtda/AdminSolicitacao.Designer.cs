@@ -39,6 +39,7 @@
             dgSolicitacao = new DataGridView();
             txtTipoSoli = new TextBox();
             txtStatus = new TextBox();
+            btnReturn = new Button();
             ((System.ComponentModel.ISupportInitialize)dgSolicitacao).BeginInit();
             SuspendLayout();
             // 
@@ -132,11 +133,23 @@
             txtStatus.Size = new Size(100, 23);
             txtStatus.TabIndex = 13;
             // 
+            // btnReturn
+            // 
+            btnReturn.BackgroundImage = Properties.Resources._688879_arrows_512x512;
+            btnReturn.BackgroundImageLayout = ImageLayout.Stretch;
+            btnReturn.Location = new Point(1, 1);
+            btnReturn.Name = "btnReturn";
+            btnReturn.Size = new Size(37, 40);
+            btnReturn.TabIndex = 14;
+            btnReturn.UseVisualStyleBackColor = true;
+            btnReturn.Click += button1_Click;
+            // 
             // AdminSolicitacao
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnReturn);
             Controls.Add(txtStatus);
             Controls.Add(txtTipoSoli);
             Controls.Add(dgSolicitacao);
@@ -172,5 +185,6 @@
         private DataGridView dgSolicitacao;
         private TextBox txtTipoSoli;
         private TextBox txtStatus;
+        private Button btnReturn;
     }
 }

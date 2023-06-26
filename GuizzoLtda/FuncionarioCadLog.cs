@@ -21,9 +21,10 @@ namespace GuizzoLtda
 
         UsuarioModelo UsuarioModelo = new UsuarioModelo();
         UsuarioControle Controle = new UsuarioControle();
-        public FuncionarioCadLog()
+        public FuncionarioCadLog(EmpresaModelo um,int id)
         {
-
+            us = um;
+            idcliente = id;
             InitializeComponent();
         }
 
@@ -49,7 +50,7 @@ namespace GuizzoLtda
             {
                 MessageBox.Show("Preencha todos os campos.");
 
-                FuncionarioCadLog ffunccadreturn = new FuncionarioCadLog();
+                FuncionarioCadLog ffunccadreturn = new FuncionarioCadLog(us,idcliente);
                 ffunccadreturn.Show();
                 Hide();
             }

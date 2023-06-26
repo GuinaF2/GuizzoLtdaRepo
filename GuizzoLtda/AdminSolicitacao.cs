@@ -17,6 +17,10 @@ namespace GuizzoLtda
         Conexao conexaosql = new Conexao();
         SolicitacaoModelo SolicitacaoM = new SolicitacaoModelo();
         SolicitacaoControle SolicitacaoC = new SolicitacaoControle();
+
+        int idcliente;
+        EmpresaControle usu = new EmpresaControle();
+        EmpresaModelo us = new EmpresaModelo();
         public AdminSolicitacao()
         {
             InitializeComponent();
@@ -24,6 +28,7 @@ namespace GuizzoLtda
 
         private void AdminSolicitacao_Load(object sender, EventArgs e)
         {
+            us = usu.CarregaEmpresa(idcliente);
             dgSolicitacao.DataSource = conexaosql.verDados("SELECT * FROM tb_solicitacao WHERE condicao = 'Pendente'");
         }
 
@@ -131,6 +136,18 @@ namespace GuizzoLtda
         private void AdminSolicitacao_Load_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtDescricao_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AdminMenu fmenureturn = new AdminMenu(us,idcliente);
+            this.Hide();
+            fmenureturn.Show();
         }
     }
 }

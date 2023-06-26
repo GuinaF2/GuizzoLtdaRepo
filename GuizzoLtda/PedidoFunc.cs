@@ -81,7 +81,7 @@ namespace GuizzoLtda
             }
         }
 
-        private void btnReturn_Click(object sender, EventArgs e)
+        private void btnReturn_Click_1(object sender, EventArgs e)
         {
             FuncionarioMenu fmenureturn = new FuncionarioMenu(us, idcliente);
             this.Hide();
@@ -95,6 +95,7 @@ namespace GuizzoLtda
 
         private void PedidoFunc_Load(object sender, EventArgs e)
         {
+            us = usu.CarregaEmpresa(idcliente);
             dtgPedido.DataSource = conexaosql.verDados("SELECT * FROM tb_pedido");
         }
 

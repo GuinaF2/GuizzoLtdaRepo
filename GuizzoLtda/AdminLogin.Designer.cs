@@ -144,6 +144,7 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 5;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click_1;
             // 
             // panel1
             // 
@@ -174,6 +175,7 @@
             Name = "AdminLogin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "AdminLogin";
+            Load += AdminLogin_Load_1;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

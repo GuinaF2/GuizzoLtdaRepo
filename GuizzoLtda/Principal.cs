@@ -7,9 +7,6 @@ namespace GuizzoLtda
 {
     public partial class Principal : Form
     {
-        OpenFileDialog Abrirfoto;
-        Image Foto;
-        string caminhofoto = "\\foto";
         int idcliente;
         EmpresaControle usu = new EmpresaControle();
         EmpresaModelo us = new EmpresaModelo();
@@ -17,8 +14,6 @@ namespace GuizzoLtda
         {
             us = um;
             idcliente = id;
-
-
             InitializeComponent();
             PBEmpresa.Image = Program.thePictureBox.Image;
 
@@ -28,13 +23,14 @@ namespace GuizzoLtda
 
         private void Principal_Load_1(object sender, EventArgs e)
         {
+
             us = usu.CarregaEmpresa(idcliente);
             MessageBox.Show(idcliente.ToString());
         }
 
         private void btnUsuario_Click(object sender, EventArgs e)
         {
-            FuncionarioCadLog ffunccad = new FuncionarioCadLog();
+            FuncionarioCadLog ffunccad = new FuncionarioCadLog(us,idcliente);
             this.Hide();
             ffunccad.Show();
         }

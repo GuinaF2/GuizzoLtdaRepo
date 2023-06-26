@@ -29,6 +29,7 @@ namespace GuizzoLtda
         EmpresaControle usu = new EmpresaControle();
         EmpresaModelo us = new EmpresaModelo();
 
+
         private List<PointLatLng> _points;
 
 
@@ -36,6 +37,7 @@ namespace GuizzoLtda
         {
             InitializeComponent();
             _points = new List<PointLatLng>();
+            us = usu.CarregaEmpresa(idcliente);
         }
 
 
