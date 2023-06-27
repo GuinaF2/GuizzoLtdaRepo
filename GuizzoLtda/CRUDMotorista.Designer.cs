@@ -362,11 +362,11 @@
             dataGridMotorista.BackgroundColor = Color.Black;
             dataGridMotorista.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridMotorista.GridColor = Color.Black;
-            dataGridMotorista.Location = new Point(523, 5);
+            dataGridMotorista.Location = new Point(538, 27);
             dataGridMotorista.Name = "dataGridMotorista";
             dataGridMotorista.ReadOnly = true;
             dataGridMotorista.RowTemplate.Height = 25;
-            dataGridMotorista.Size = new Size(406, 502);
+            dataGridMotorista.Size = new Size(391, 480);
             dataGridMotorista.TabIndex = 38;
             // 
             // CRUDMotorista

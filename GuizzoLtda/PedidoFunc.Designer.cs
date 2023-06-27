@@ -45,7 +45,7 @@
             // dtgPedido
             // 
             dtgPedido.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgPedido.Location = new Point(0, 198);
+            dtgPedido.Location = new Point(69, 219);
             dtgPedido.Name = "dtgPedido";
             dtgPedido.RowHeadersWidth = 51;
             dtgPedido.RowTemplate.Height = 25;

@@ -34,23 +34,26 @@
             button1 = new Button();
             dgPedidoEmp = new DataGridView();
             button2 = new Button();
+            label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)dgPedidoEmp).BeginInit();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             label1.Location = new Point(37, 56);
             label1.Name = "label1";
-            label1.Size = new Size(122, 15);
+            label1.Size = new Size(156, 20);
             label1.TabIndex = 0;
             label1.Text = "Insira o Id da Empresa";
             // 
             // txtIdEmpresa
             // 
-            txtIdEmpresa.Location = new Point(37, 74);
+            txtIdEmpresa.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtIdEmpresa.Location = new Point(37, 87);
             txtIdEmpresa.Name = "txtIdEmpresa";
-            txtIdEmpresa.Size = new Size(100, 23);
+            txtIdEmpresa.Size = new Size(100, 27);
             txtIdEmpresa.TabIndex = 1;
             // 
             // button1
@@ -65,7 +68,7 @@
             // dgPedidoEmp
             // 
             dgPedidoEmp.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgPedidoEmp.Location = new Point(101, 93);
+            dgPedidoEmp.Location = new Point(123, 120);
             dgPedidoEmp.Name = "dgPedidoEmp";
             dgPedidoEmp.RowHeadersWidth = 51;
             dgPedidoEmp.RowTemplate.Height = 25;
@@ -83,11 +86,22 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(52, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(218, 45);
+            label2.TabIndex = 5;
+            label2.Text = "Verificar Label";
+            // 
             // PedidoEmpresa
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(894, 505);
+            Controls.Add(label2);
             Controls.Add(button2);
             Controls.Add(dgPedidoEmp);
             Controls.Add(button1);
@@ -109,5 +123,6 @@
         private Button button1;
         private DataGridView dgPedidoEmp;
         private Button button2;
+        private Label label2;
     }
 }

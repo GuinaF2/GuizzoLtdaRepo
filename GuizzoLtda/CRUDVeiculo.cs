@@ -138,7 +138,6 @@ namespace GuizzoLtda
 
         private void CRUDVeiculo_Load_1(object sender, EventArgs e)
         {
-            MessageBox.Show(idcliente.ToString());
             us = usu.CarregaEmpresa(idcliente);
 
             dataGridVeiculo.DataSource = conexaosql.verDados("SELECT * FROM tb_veiculo");

@@ -31,7 +31,7 @@ namespace GuizzoLtda
 
         private void CRUDEmpresa_Load_1(object sender, EventArgs e)
         {
-            MessageBox.Show(idcliente.ToString());
+           
             us = usu.CarregaEmpresa(idcliente);
 
 
@@ -66,7 +66,6 @@ namespace GuizzoLtda
             txtCnpj.Text = String.Empty;
             txtInscEstadual.Text = String.Empty;
             txtRazaoSocial.Text = String.Empty;
-            btnFoto.Text = String.Empty;
 
             SaveUpdate.Visible = true;
             SaveDelete.Visible = false;

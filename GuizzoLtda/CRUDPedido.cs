@@ -38,7 +38,7 @@ namespace GuizzoLtda
 
         private void CRUDPedido_Load_1(object sender, EventArgs e)
         {
-            MessageBox.Show(idcliente.ToString());
+        
             us = usu.CarregaEmpresa(idcliente);
 
             dgPedido.DataSource = conexaosql.verDados("SELECT * FROM tb_pedido");

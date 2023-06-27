@@ -65,21 +65,21 @@ namespace GuizzoLtda
 
         private void toolStripButton4_Click_1(object sender, EventArgs e)
         {
-            MapaTeste ftestemapa = new MapaTeste(us,idcliente);
+            MapaTeste ftestemapa = new MapaTeste(us, idcliente);
             this.Hide();
             ftestemapa.Show();
         }
 
         private void toolStripButton5_Click_1(object sender, EventArgs e)
         {
-            FuncionarioSolicit ffuncsoli = new FuncionarioSolicit(us,idcliente);
+            FuncionarioSolicit ffuncsoli = new FuncionarioSolicit(us, idcliente);
             this.Hide();
             ffuncsoli.Show();
         }
 
         private void btnVerifyEmp_Click(object sender, EventArgs e)
         {
-            VerificarEmp verifyemp = new VerificarEmp(us,idcliente);
+            VerificarEmp verifyemp = new VerificarEmp(us, idcliente);
             this.Hide();
             verifyemp.Show();
         }
@@ -96,7 +96,7 @@ namespace GuizzoLtda
             verifyemp.Show();
         }
 
-        
+
 
         private void FuncionarioMenu_Load_1(object sender, EventArgs e)
         {
@@ -104,6 +104,6 @@ namespace GuizzoLtda
             us = usu.CarregaEmpresa(idcliente);
         }
 
-        
+
     }
 }

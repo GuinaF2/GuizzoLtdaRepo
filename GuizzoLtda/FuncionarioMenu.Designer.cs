@@ -33,8 +33,6 @@
             toolStripButton2 = new ToolStripButton();
             btnVerifyEmp = new ToolStripButton();
             toolStripSeparator3 = new ToolStripSeparator();
-            btnConfirmarPedi = new ToolStripButton();
-            toolStripSeparator5 = new ToolStripSeparator();
             toolStripButton3 = new ToolStripButton();
             toolStripSeparator2 = new ToolStripSeparator();
             toolStripButton4 = new ToolStripButton();
@@ -50,7 +48,7 @@
             toolStrip1.BackColor = Color.Black;
             toolStrip1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             toolStrip1.ImageScalingSize = new Size(20, 20);
-            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton2, btnVerifyEmp, toolStripSeparator3, btnConfirmarPedi, toolStripSeparator5, toolStripButton3, toolStripSeparator2, toolStripButton4, toolStripSeparator4, toolStripButton5 });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton2, btnVerifyEmp, toolStripSeparator3, toolStripButton3, toolStripSeparator2, toolStripButton4, toolStripSeparator4, toolStripButton5 });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(929, 27);
@@ -85,23 +83,6 @@
             toolStripSeparator3.Name = "toolStripSeparator3";
             toolStripSeparator3.Size = new Size(6, 27);
             // 
-            // btnConfirmarPedi
-            // 
-            btnConfirmarPedi.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            btnConfirmarPedi.ForeColor = Color.Goldenrod;
-            btnConfirmarPedi.Image = (Image)resources.GetObject("btnConfirmarPedi.Image");
-            btnConfirmarPedi.ImageTransparentColor = Color.Magenta;
-            btnConfirmarPedi.Name = "btnConfirmarPedi";
-            btnConfirmarPedi.Size = new Size(127, 24);
-            btnConfirmarPedi.Text = "Confirmar Pedidos";
-            btnConfirmarPedi.TextImageRelation = TextImageRelation.TextAboveImage;
-            btnConfirmarPedi.Click += btnConfirmarPedi_Click;
-            // 
-            // toolStripSeparator5
-            // 
-            toolStripSeparator5.Name = "toolStripSeparator5";
-            toolStripSeparator5.Size = new Size(6, 27);
-            // 
             // toolStripButton3
             // 
             toolStripButton3.DisplayStyle = ToolStripItemDisplayStyle.Text;
@@ -109,8 +90,8 @@
             toolStripButton3.Image = (Image)resources.GetObject("toolStripButton3.Image");
             toolStripButton3.ImageTransparentColor = Color.Magenta;
             toolStripButton3.Name = "toolStripButton3";
-            toolStripButton3.Size = new Size(116, 24);
-            toolStripButton3.Text = "Verificar Pedidos";
+            toolStripButton3.Size = new Size(113, 24);
+            toolStripButton3.Text = "Receber Pedidos";
             toolStripButton3.TextImageRelation = TextImageRelation.TextAboveImage;
             toolStripButton3.Click += toolStripButton3_Click_1;
             // 
@@ -190,12 +171,10 @@
         private ToolStripSplitButton toolStripSplitButton2;
         private ToolStripSplitButton toolStripSplitButton4;
         private ToolStripSplitButton toolStripSplitButton3;
-        private ToolStripButton btnConfirmarPedi;
         private ToolStripButton btnVerifyEmp;
         private PictureBox pbFotoMenuFunc;
         private ToolStripSeparator toolStripSeparator3;
         private ToolStripButton toolStripButton2;
-        private ToolStripSeparator toolStripSeparator5;
         private ToolStripButton toolStripButton3;
         private ToolStripSeparator toolStripSeparator2;
         private ToolStripButton toolStripButton4;

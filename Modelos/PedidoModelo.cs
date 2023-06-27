@@ -13,7 +13,7 @@ namespace Modelos
         private int idCliente;
         private int idMotorista;
         private string nmrvolumes;
-        private string pedidovalor;
+        private float pedidovalor;
         private string statuspedido;
         private string dtpedido;
 
@@ -23,7 +23,7 @@ namespace Modelos
             idMotorista = 0;
             idCliente = 0;
             nmrvolumes = "";
-            pedidovalor = "";
+            pedidovalor = 0;
             statuspedido = "";
             dtpedido = "";
         }
@@ -62,7 +62,7 @@ namespace Modelos
             set { statuspedido = value; }
 
         }
-        public string ValorPedido
+        public float ValorPedido
         {
             get { return pedidovalor; }
             set { pedidovalor = value; }

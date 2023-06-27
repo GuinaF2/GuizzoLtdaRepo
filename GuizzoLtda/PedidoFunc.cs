@@ -47,7 +47,7 @@ namespace GuizzoLtda
 
         private void btnConfirma_Click(object sender, EventArgs e)
         {
-            if (cbAberto.Checked)
+                if (cbAberto.Checked)
             {
                 conexaosql = new Conexao();
                 MySqlConnection con = conexaosql.getConexao();

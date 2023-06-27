@@ -71,6 +71,7 @@
             btnReturn.Name = "btnReturn";
             btnReturn.Size = new Size(24, 24);
             btnReturn.Text = "toolStripButton1";
+            btnReturn.Click += btnReturn_Click_1;
             // 
             // toolStripTextBox2
             // 

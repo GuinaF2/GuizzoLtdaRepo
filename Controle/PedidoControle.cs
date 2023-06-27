@@ -26,7 +26,7 @@ namespace Controle
             {
                 string SQL = "INSERT INTO tb_pedido(idcliente,idmotorista,nmrvolumes,dtpedido,valorpedido) values(@idcliente,@idmotorista,@nmrvolumes,@dtpedido,@valorpedido)";
                 //declaração de vetor de campos
-                string[] campos = { "@idcliente", "@idmotorista", "@nmrvolumes", "@dtpedido", "@valorpedido" };
+                string[] campos = {"@idcliente", "@idmotorista", "@nmrvolumes", "@dtpedido", "@valorpedido" };
                 //declaração de vetor de informações
                 string[] valores = { modelo.CodCliente.ToString(),modelo.CodMotorista.ToString(), modelo.PedidoVolumes, modelo.PedidoData, modelo.ValorPedido};
 

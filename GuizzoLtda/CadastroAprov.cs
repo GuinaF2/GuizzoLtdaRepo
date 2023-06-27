@@ -48,9 +48,9 @@ namespace GuizzoLtda
                 if (Controle.AtualizarEmpresa(EmpresaModelo) == true)
                 {
                     MessageBox.Show("Solicitação Aprovada.");
-                    AdminSolicitacao fadminsol = new AdminSolicitacao(us,idcliente);
+                    CadastroAprov fadminaprov = new CadastroAprov(us,idcliente);
                     this.Hide();
-                    fadminsol.Show();
+                    fadminaprov.Show();
                 }
                 else
                 {
@@ -73,9 +73,9 @@ namespace GuizzoLtda
                 if (Controle.AtualizarEmpresa(EmpresaModelo) == true)
                 {
                     MessageBox.Show("Solicitação Aprovada.");
-                    AdminSolicitacao fadminsol = new AdminSolicitacao(us, idcliente);
+                    CadastroAprov faprovcad = new CadastroAprov(us, idcliente);
                     this.Hide();
-                    fadminsol.Show();
+                    faprovcad.Show();
                 }
                 else
                 {
