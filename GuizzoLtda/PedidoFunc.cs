@@ -52,7 +52,7 @@ namespace GuizzoLtda
                 conexaosql = new Conexao();
                 MySqlConnection con = conexaosql.getConexao();
                 con.Open();
-                MySqlCommand command = new MySqlCommand("SELECT `idpedido`, `statuspedido`, `nmrvolumes`, `valorpedido` FROM `tb_pedido` WHERE `dtpedido` BETWEEN @d1 AND @d2 and statuspedido = 'Pendente'", con);
+                MySqlCommand command = new MySqlCommand("SELECT `idpedido`,'idcliente', `statuspedido`, `nmrvolumes`, `valorpedido` FROM `tb_pedido` WHERE `dtpedido` BETWEEN @d1 AND @d2 and statuspedido = 'Pendente'", con);
 
                 command.Parameters.Add("@d1", MySqlDbType.Date).Value = dateTimePicker1.Value;
                 command.Parameters.Add("@d2", MySqlDbType.Date).Value = dateTimePicker2.Value;
@@ -82,7 +82,7 @@ namespace GuizzoLtda
                 conexaosql = new Conexao();
                 MySqlConnection con = conexaosql.getConexao();
                 con.Open();
-                MySqlCommand command = new MySqlCommand("SELECT `idpedido`, `statuspedido`, `nmrvolumes`, `valorpedido` FROM `tb_pedido` WHERE `dtpedido` BETWEEN @d1 AND @d2 AND statuspedido='Aprovada'", con);
+                MySqlCommand command = new MySqlCommand("SELECT `idpedido`, `dtpedido`, `idcliente`, `statuspedido`,`nmrvolumes`,`valorpedido` FROM `tb_pedido` WHERE `dtpedido` BETWEEN @d1 AND @d2 AND statuspedido='Aprovada'", con);
                 command.Parameters.Add("@d1", MySqlDbType.Date).Value = dateTimePicker1.Text;
                 command.Parameters.Add("@d2", MySqlDbType.Date).Value = dateTimePicker2.Text;
 
@@ -142,9 +142,13 @@ namespace GuizzoLtda
                     dtgPedido.CurrentRow.Selected = true;
 
                     txtIdPedido.Text = dtgPedido.Rows[e.RowIndex].Cells["idpedido"].Value.ToString();
+                    txtIdCliente.Text = dtgPedido.Rows[e.RowIndex].Cells["idcliente"].Value.ToString();
                     txtNmrVolumes.Text = dtgPedido.Rows[e.RowIndex].Cells["nmrvolumes"].Value.ToString();
                     txtStatusPedido.Text = dtgPedido.Rows[e.RowIndex].Cells["statuspedido"].Value.ToString();
                     txtValorPedido.Text = dtgPedido.Rows[e.RowIndex].Cells["valorpedido"].Value.ToString();
+                    txtDtPedido.Text = dtgPedido.Rows[e.RowIndex].Cells["dtpedido"].Value.ToString();
+
+
                 }
                 else
                 {
@@ -197,6 +201,11 @@ namespace GuizzoLtda
             cbAberto.Visible = true;
             cbEncerrado.Visible = true;
             btnConfirma.Visible = true;
+        }
+
+        private void dtgPedido_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

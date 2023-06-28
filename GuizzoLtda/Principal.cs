@@ -25,7 +25,6 @@ namespace GuizzoLtda
         {
 
             us = usu.CarregaEmpresa(idcliente);
-            MessageBox.Show(idcliente.ToString());
         }
 
         private void btnUsuario_Click(object sender, EventArgs e)

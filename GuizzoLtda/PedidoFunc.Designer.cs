@@ -44,6 +44,8 @@
             txtNmrVolumes = new TextBox();
             txtValorPedido = new TextBox();
             btnVoltar = new Button();
+            txtIdCliente = new TextBox();
+            txtDtPedido = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dtgPedido).BeginInit();
             SuspendLayout();
             // 
@@ -61,6 +63,7 @@
             dtgPedido.TabIndex = 1;
             dtgPedido.Visible = false;
             dtgPedido.CellClick += dtgPedido_CellClick;
+            dtgPedido.CellContentClick += dtgPedido_CellContentClick;
             // 
             // btnConfirma
             // 
@@ -206,11 +209,29 @@
             btnVoltar.UseVisualStyleBackColor = true;
             btnVoltar.Click += btnVoltar_Click;
             // 
+            // txtIdCliente
+            // 
+            txtIdCliente.Location = new Point(750, 44);
+            txtIdCliente.Name = "txtIdCliente";
+            txtIdCliente.Size = new Size(100, 23);
+            txtIdCliente.TabIndex = 21;
+            txtIdCliente.Visible = false;
+            // 
+            // txtDtPedido
+            // 
+            txtDtPedido.Location = new Point(750, 78);
+            txtDtPedido.Name = "txtDtPedido";
+            txtDtPedido.Size = new Size(100, 23);
+            txtDtPedido.TabIndex = 22;
+            txtDtPedido.Visible = false;
+            // 
             // PedidoFunc
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(929, 505);
+            Controls.Add(txtDtPedido);
+            Controls.Add(txtIdCliente);
             Controls.Add(btnVoltar);
             Controls.Add(txtValorPedido);
             Controls.Add(txtNmrVolumes);
@@ -253,5 +274,7 @@
         private TextBox txtNmrVolumes;
         private TextBox txtValorPedido;
         private Button btnVoltar;
+        private TextBox txtIdCliente;
+        private TextBox txtDtPedido;
     }
 }
