@@ -28,7 +28,7 @@ namespace Controle
                 //declaração de vetor de campos
                 string[] campos = {"@idcliente", "@idmotorista", "@nmrvolumes", "@dtpedido", "@valorpedido" };
                 //declaração de vetor de informações
-                string[] valores = { modelo.CodCliente.ToString(),modelo.CodMotorista.ToString(), modelo.PedidoVolumes, modelo.PedidoData, modelo.ValorPedido};
+                string[] valores = { modelo.CodCliente.ToString(),modelo.CodMotorista.ToString(), modelo.PedidoVolumes, modelo.PedidoData.ToString(), modelo.ValorPedido.ToString()};
 
 
 
@@ -73,7 +73,28 @@ namespace Controle
             {
                 string sql = "UPDATE tb_pedido set idcliente=@idcliente,idmotorista=@idmotorista,nmrvolumes=@nmrvolumes, statuspedido=@statuspedido,dtpedido=@dtpedido,valorpedido=@valorpedido where idpedido= @codigo";
                 string[] campos = { "@idcliente","@idmotorista","@nmrvolumes", "@statuspedido", "@dtpedido", "@valorpedido" };
-                string[] valores = { us.CodCliente.ToString(), us.CodMotorista.ToString(), us.PedidoVolumes, us.PedidoStatus, us.PedidoData, us.ValorPedido };
+                string[] valores = { us.CodCliente.ToString(), us.CodMotorista.ToString(), us.PedidoVolumes, us.PedidoStatus, us.PedidoData, us.ValorPedido.ToString() };
+                if (conexaosql.atualizarDados(us.CodPedido, campos, valores, sql) >= 1)
+                {
+                    return resultado = true;
+                }
+                else
+                {
+                    return resultado = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+        public bool AprovarPedido(PedidoModelo us)
+        {
+            try
+            {
+                string sql = "UPDATE tb_pedido set statuspedido=@statuspedido where idpedido= @codigo";
+                string[] campos = { "@statuspedido" };
+                string[] valores = { us.PedidoStatus };
                 if (conexaosql.atualizarDados(us.CodPedido, campos, valores, sql) >= 1)
                 {
                     return resultado = true;

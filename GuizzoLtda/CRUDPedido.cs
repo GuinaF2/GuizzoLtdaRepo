@@ -3,6 +3,7 @@ using Modelos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.Design;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -27,6 +28,9 @@ namespace GuizzoLtda
             us = um;
             idcliente = id;
             InitializeComponent();
+
+            var data = DateTime.Today;
+            dtPedido.Text = data.ToString(@"yyyy-MM-dd");
         }
 
         private void btnReturn_Click_1(object sender, EventArgs e)
@@ -38,7 +42,7 @@ namespace GuizzoLtda
 
         private void CRUDPedido_Load_1(object sender, EventArgs e)
         {
-        
+
             us = usu.CarregaEmpresa(idcliente);
 
             dgPedido.DataSource = conexaosql.verDados("SELECT * FROM tb_pedido");

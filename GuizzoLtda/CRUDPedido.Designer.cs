@@ -67,14 +67,14 @@
             dgPedido.AllowUserToDeleteRows = false;
             dgPedido.BackgroundColor = SystemColors.ActiveCaptionText;
             dgPedido.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgPedido.GridColor = Color.Goldenrod;
-            dgPedido.Location = new Point(594, 0);
+            dgPedido.GridColor = Color.Red;
+            dgPedido.Location = new Point(633, 24);
             dgPedido.Margin = new Padding(3, 4, 3, 4);
             dgPedido.Name = "dgPedido";
             dgPedido.ReadOnly = true;
             dgPedido.RowHeadersWidth = 51;
             dgPedido.RowTemplate.Height = 25;
-            dgPedido.Size = new Size(468, 646);
+            dgPedido.Size = new Size(393, 523);
             dgPedido.TabIndex = 23;
             dgPedido.CellClick += dgPedido_CellClick_1;
             // 
@@ -357,9 +357,13 @@
             // 
             // dtPedido
             // 
-            dtPedido.Location = new Point(294, 310);
+            dtPedido.CustomFormat = "yyyy-MM-dd";
+            dtPedido.Format = DateTimePickerFormat.Custom;
+            dtPedido.Location = new Point(323, 310);
+            dtPedido.MaxDate = new DateTime(3000, 1, 1, 0, 0, 0, 0);
+            dtPedido.MinDate = new DateTime(1900, 1, 1, 0, 0, 0, 0);
             dtPedido.Name = "dtPedido";
-            dtPedido.Size = new Size(200, 22);
+            dtPedido.Size = new Size(85, 22);
             dtPedido.TabIndex = 42;
             // 
             // CRUDPedido

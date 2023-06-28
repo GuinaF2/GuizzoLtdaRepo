@@ -15,7 +15,7 @@ namespace Controle
         static private string db = "bdguizzo";
         static private string usuario = "root";
         static private string senha = "";
-        static private string StrConexao = "server=" + servidor + ";database=" + db + ";user id=" + usuario + ";password=" + senha;
+        static private string StrConexao = "server=" + servidor + ";database=" + db + ";user id=" + usuario + ";password=" + senha ;
         //variável da conexão
         public MySqlConnection conexaosql = null;
         //método de conexão

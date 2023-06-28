@@ -47,33 +47,60 @@ namespace GuizzoLtda
 
         private void btnConfirma_Click(object sender, EventArgs e)
         {
-                if (cbAberto.Checked)
+            if (cbAberto.Checked == true)
             {
                 conexaosql = new Conexao();
                 MySqlConnection con = conexaosql.getConexao();
                 con.Open();
-                MySqlCommand command = new MySqlCommand("SELECT `idpedido`, `statuspedido`, `nmrvolumes`, `valorpedido` FROM `tb_pedido` WHERE `dtpedido` BETWEEN @d1 AND @d2 AND statuspedido='PENDENTE'", con);
+                MySqlCommand command = new MySqlCommand("SELECT `idpedido`, `statuspedido`, `nmrvolumes`, `valorpedido` FROM `tb_pedido` WHERE `dtpedido` BETWEEN @d1 AND @d2 and statuspedido = 'Pendente'", con);
 
-                command.Parameters.Add("@d1", MySqlDbType.Date).Value = dtPedido.Value;
-                command.Parameters.Add("@d2", MySqlDbType.Date).Value = dtPedido2.Value;
+                command.Parameters.Add("@d1", MySqlDbType.Date).Value = dateTimePicker1.Value;
+                command.Parameters.Add("@d2", MySqlDbType.Date).Value = dateTimePicker2.Value;
+
+                DataTable SearchDataTable = new DataTable();
+                using (MySqlDataAdapter adaptor = new MySqlDataAdapter(command))
+                {
+                    adaptor.Fill(SearchDataTable);
+                }
+                dtgPedido.DataSource = SearchDataTable;
+
 
                 dtgPedido.Visible = true;
+                button1.Visible = true;
+
+                btnVoltar.Enabled = true;
+                dateTimePicker2.Visible = false;
+                dateTimePicker1.Visible = false;
+                label1.Visible = false;
                 labelDtPedido.Visible = false;
                 cbAberto.Visible = false;
                 cbEncerrado.Visible = false;
                 btnConfirma.Visible = false;
             }
-            if (cbEncerrado.Checked)
+            if (cbEncerrado.Checked == true)
             {
                 conexaosql = new Conexao();
                 MySqlConnection con = conexaosql.getConexao();
                 con.Open();
-                MySqlCommand command = new MySqlCommand("SELECT `idpedido`, `statuspedido`, `nmrvolumes`, `valorpedido` FROM `tb_pedido` WHERE `dtpedido` BETWEEN @d1 AND @d2 AND statuspedido='PENDENTE'", con);
+                MySqlCommand command = new MySqlCommand("SELECT `idpedido`, `statuspedido`, `nmrvolumes`, `valorpedido` FROM `tb_pedido` WHERE `dtpedido` BETWEEN @d1 AND @d2 AND statuspedido='Aprovada'", con);
+                command.Parameters.Add("@d1", MySqlDbType.Date).Value = dateTimePicker1.Text;
+                command.Parameters.Add("@d2", MySqlDbType.Date).Value = dateTimePicker2.Text;
 
-                command.Parameters.Add("@d1", MySqlDbType.Date).Value = dtPedido.Value;
-                command.Parameters.Add("@d2", MySqlDbType.Date).Value = dtPedido2.Value;
+                DataTable SearchDataTable = new DataTable();
+                using (MySqlDataAdapter adaptor = new MySqlDataAdapter(command))
+                {
+                    adaptor.Fill(SearchDataTable);
+                }
+                dtgPedido.DataSource = SearchDataTable;
 
                 dtgPedido.Visible = true;
+                button1.Visible = true;
+
+                button1.Visible = false;
+                btnVoltar.Enabled = true;
+                dateTimePicker2.Visible = false;
+                dateTimePicker1.Visible = false;
+                label1.Visible = false;
                 labelDtPedido.Visible = false;
                 cbAberto.Visible = false;
                 cbEncerrado.Visible = false;
@@ -104,6 +131,72 @@ namespace GuizzoLtda
             FuncionarioMenu fmenufunc = new FuncionarioMenu(us, idcliente);
             this.Hide();
             fmenufunc.Show();
+        }
+
+        private void dtgPedido_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (dtgPedido.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+                {
+                    dtgPedido.CurrentRow.Selected = true;
+
+                    txtIdPedido.Text = dtgPedido.Rows[e.RowIndex].Cells["idpedido"].Value.ToString();
+                    txtNmrVolumes.Text = dtgPedido.Rows[e.RowIndex].Cells["nmrvolumes"].Value.ToString();
+                    txtStatusPedido.Text = dtgPedido.Rows[e.RowIndex].Cells["statuspedido"].Value.ToString();
+                    txtValorPedido.Text = dtgPedido.Rows[e.RowIndex].Cells["valorpedido"].Value.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Favor selecionar ID da Requisição");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("\t\t    Favor selecionar ID da Solicitação. \n\nERRO\t\t: " + ex.Message);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (txtValorPedido.Text == "" || txtStatusPedido.Text == "" || txtNmrVolumes.Text == "" || txtIdPedido.Text == "")
+            {
+                MessageBox.Show("Favor selecionar um pedido.");
+            }
+            else
+            {
+                PedidoModelo.CodPedido = Convert.ToInt32(txtIdPedido.Text);
+                PedidoModelo.PedidoStatus = "Aprovada";
+
+                if (Controle.AprovarPedido(PedidoModelo) == true)
+                {
+                    MessageBox.Show("Pedido Aprovado.");
+                    PedidoFunc fadminsol = new PedidoFunc(us, idcliente);
+                    this.Hide();
+                    fadminsol.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Erro na atualização.");
+                }
+            }
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+
+
+            dtgPedido.Visible = false;
+            button1.Visible = false;
+            btnVoltar.Enabled = false;
+
+            dateTimePicker2.Visible = true;
+            dateTimePicker1.Visible = true;
+            label1.Visible = true;
+            labelDtPedido.Visible = true;
+            cbAberto.Visible = true;
+            cbEncerrado.Visible = true;
+            btnConfirma.Visible = true;
         }
     }
 }
