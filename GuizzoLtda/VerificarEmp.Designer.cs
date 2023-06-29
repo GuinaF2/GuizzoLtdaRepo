@@ -32,28 +32,32 @@
             labelCnpj = new Label();
             label4 = new Label();
             txtCnpj = new TextBox();
-            returnBtn = new Button();
-            btnMenu = new Button();
             dgVerEmp = new DataGridView();
             btnConfirmar = new Button();
+            toolStrip1 = new ToolStrip();
+            btnMenu = new ToolStripButton();
+            toolStripSeparator1 = new ToolStripSeparator();
+            returnBtn = new ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)dgVerEmp).BeginInit();
+            toolStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // labelCnpj
             // 
             labelCnpj.AutoSize = true;
-            labelCnpj.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            labelCnpj.Location = new Point(72, 64);
+            labelCnpj.FlatStyle = FlatStyle.Popup;
+            labelCnpj.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            labelCnpj.Location = new Point(72, 79);
             labelCnpj.Name = "labelCnpj";
-            labelCnpj.Size = new Size(42, 21);
+            labelCnpj.Size = new Size(55, 25);
             labelCnpj.TabIndex = 1;
-            labelCnpj.Text = "Cnpj";
+            labelCnpj.Text = "CNPJ";
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(61, 9);
+            label4.Location = new Point(61, 27);
             label4.Name = "label4";
             label4.Size = new Size(202, 37);
             label4.TabIndex = 3;
@@ -61,35 +65,14 @@
             // 
             // txtCnpj
             // 
-            txtCnpj.Location = new Point(72, 91);
+            txtCnpj.BackColor = Color.Black;
+            txtCnpj.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtCnpj.ForeColor = Color.Goldenrod;
+            txtCnpj.Location = new Point(72, 107);
             txtCnpj.Name = "txtCnpj";
-            txtCnpj.Size = new Size(176, 23);
+            txtCnpj.Size = new Size(176, 27);
             txtCnpj.TabIndex = 5;
             txtCnpj.KeyPress += txtCnpj_KeyPress;
-            // 
-            // returnBtn
-            // 
-            returnBtn.BackgroundImage = Properties.Resources._688879_arrows_512x512;
-            returnBtn.BackgroundImageLayout = ImageLayout.Stretch;
-            returnBtn.Location = new Point(0, -1);
-            returnBtn.Name = "returnBtn";
-            returnBtn.Size = new Size(39, 38);
-            returnBtn.TabIndex = 7;
-            returnBtn.TextImageRelation = TextImageRelation.TextBeforeImage;
-            returnBtn.UseVisualStyleBackColor = true;
-            returnBtn.Click += returnBtn_Click;
-            // 
-            // btnMenu
-            // 
-            btnMenu.BackgroundImage = Properties.Resources._688879_arrows_512x512;
-            btnMenu.BackgroundImageLayout = ImageLayout.Stretch;
-            btnMenu.Location = new Point(0, -1);
-            btnMenu.Name = "btnMenu";
-            btnMenu.Size = new Size(39, 38);
-            btnMenu.TabIndex = 8;
-            btnMenu.TextImageRelation = TextImageRelation.TextBeforeImage;
-            btnMenu.UseVisualStyleBackColor = true;
-            btnMenu.Click += btnMenu_Click_1;
             // 
             // dgVerEmp
             // 
@@ -97,7 +80,8 @@
             dgVerEmp.AllowUserToDeleteRows = false;
             dgVerEmp.BackgroundColor = SystemColors.ActiveCaptionText;
             dgVerEmp.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgVerEmp.Location = new Point(72, 120);
+            dgVerEmp.GridColor = Color.Goldenrod;
+            dgVerEmp.Location = new Point(72, 140);
             dgVerEmp.Name = "dgVerEmp";
             dgVerEmp.ReadOnly = true;
             dgVerEmp.RowHeadersWidth = 51;
@@ -108,15 +92,53 @@
             // 
             // btnConfirmar
             // 
+            btnConfirmar.BackColor = Color.Black;
             btnConfirmar.FlatStyle = FlatStyle.Flat;
-            btnConfirmar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnConfirmar.Location = new Point(61, 408);
+            btnConfirmar.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            btnConfirmar.ForeColor = Color.Goldenrod;
+            btnConfirmar.Location = new Point(72, 390);
             btnConfirmar.Name = "btnConfirmar";
-            btnConfirmar.Size = new Size(215, 52);
+            btnConfirmar.Size = new Size(235, 68);
             btnConfirmar.TabIndex = 10;
             btnConfirmar.Text = "Confirmar";
-            btnConfirmar.UseVisualStyleBackColor = true;
+            btnConfirmar.UseVisualStyleBackColor = false;
             btnConfirmar.Click += btnConfirmar_Click;
+            // 
+            // toolStrip1
+            // 
+            toolStrip1.BackColor = Color.Maroon;
+            toolStrip1.Items.AddRange(new ToolStripItem[] { btnMenu, toolStripSeparator1, returnBtn });
+            toolStrip1.Location = new Point(0, 0);
+            toolStrip1.Name = "toolStrip1";
+            toolStrip1.Size = new Size(929, 25);
+            toolStrip1.TabIndex = 11;
+            toolStrip1.Text = "toolStrip1";
+            // 
+            // btnMenu
+            // 
+            btnMenu.ForeColor = Color.Goldenrod;
+            btnMenu.Image = Properties.Resources._688879_arrows_512x512;
+            btnMenu.ImageTransparentColor = Color.Magenta;
+            btnMenu.Name = "btnMenu";
+            btnMenu.Size = new Size(58, 22);
+            btnMenu.Text = "Menu";
+            btnMenu.Click += btnMenu_Click_2;
+            // 
+            // toolStripSeparator1
+            // 
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            toolStripSeparator1.Size = new Size(6, 25);
+            // 
+            // returnBtn
+            // 
+            returnBtn.Enabled = false;
+            returnBtn.ForeColor = Color.Goldenrod;
+            returnBtn.Image = Properties.Resources.FlechaReturn;
+            returnBtn.ImageTransparentColor = Color.Magenta;
+            returnBtn.Name = "returnBtn";
+            returnBtn.Size = new Size(72, 22);
+            returnBtn.Text = "Retornar";
+            returnBtn.Click += returnBtn_Click_1;
             // 
             // VerificarEmp
             // 
@@ -124,9 +146,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Maroon;
             ClientSize = new Size(929, 505);
+            Controls.Add(toolStrip1);
             Controls.Add(btnConfirmar);
-            Controls.Add(btnMenu);
-            Controls.Add(returnBtn);
             Controls.Add(txtCnpj);
             Controls.Add(label4);
             Controls.Add(labelCnpj);
@@ -136,6 +157,8 @@
             Text = "VerificarEmp";
             Load += VerificarEmp_Load_1;
             ((System.ComponentModel.ISupportInitialize)dgVerEmp).EndInit();
+            toolStrip1.ResumeLayout(false);
+            toolStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -149,9 +172,11 @@
         private TextBox txtRazaoSoc;
         private TextBox txtCnpj;
         private TextBox txtInscriEstad;
-        private Button returnBtn;
-        private Button btnMenu;
         private DataGridView dgVerEmp;
         private Button btnConfirmar;
+        private ToolStrip toolStrip1;
+        private ToolStripButton btnMenu;
+        private ToolStripSeparator toolStripSeparator1;
+        private ToolStripButton returnBtn;
     }
 }

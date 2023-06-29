@@ -31,20 +31,6 @@ namespace GuizzoLtda
             InitializeComponent();
         }
 
-        private void VerificarEmp_Load(object sender, EventArgs e)
-        {
-            dgVerEmp.DataSource = conexaosql.verDados("SELECT * FROM tb_cliente");
-        }
-
-        private void dgVerEmp_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-        }
-
-        private void txtRazaoSoc_Click(object sender, EventArgs e)
-        {
-            txtRazaoSoc.Text = "";
-        }
-
         private void btnMenu_Click(object sender, EventArgs e)
         {
             FuncionarioMenu fmenureturn = new FuncionarioMenu(us, idcliente);
@@ -82,9 +68,10 @@ namespace GuizzoLtda
 
                     labelCnpj.Visible = false;
                     btnConfirmar.Visible = false;
-                    btnMenu.Visible = false;
+                    btnMenu.Visible = true;
                     dgVerEmp.Visible = true;
-                    returnBtn.Visible = true;
+                    returnBtn.Enabled = true;
+
                 }
                 catch (Exception ex)
                 {
@@ -108,18 +95,30 @@ namespace GuizzoLtda
 
         private void txtCnpj_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            txtCnpj.MaxLength = 14;
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
         }
 
-        private void returnBtn_Click(object sender, EventArgs e)
+
+
+        private void returnBtn_Click_1(object sender, EventArgs e)
         {
             txtCnpj.Visible = true;
             labelCnpj.Visible = true;
             btnConfirmar.Visible = true;
             btnMenu.Visible = true;
             dgVerEmp.Visible = false;
-            returnBtn.Visible = false;
+            returnBtn.Enabled = false;
+        }
 
+        private void btnMenu_Click_2(object sender, EventArgs e)
+        {
+            FuncionarioMenu fmenureturn = new FuncionarioMenu(us, idcliente);
+            this.Hide();
+            fmenureturn.Show();
         }
     }
 }

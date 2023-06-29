@@ -66,7 +66,7 @@ namespace GuizzoLtda
 
 
                 dtgPedido.Visible = true;
-                button1.Visible = true;
+                btnAprovar.Visible = true;
 
                 btnVoltar.Enabled = true;
                 dateTimePicker2.Visible = false;
@@ -94,9 +94,9 @@ namespace GuizzoLtda
                 dtgPedido.DataSource = SearchDataTable;
 
                 dtgPedido.Visible = true;
-                button1.Visible = true;
+                btnAprovar.Visible = true;
 
-                button1.Visible = false;
+                btnAprovar.Visible = false;
                 btnVoltar.Enabled = true;
                 dateTimePicker2.Visible = false;
                 dateTimePicker1.Visible = false;
@@ -108,31 +108,11 @@ namespace GuizzoLtda
             }
         }
 
-        private void btnReturn_Click_1(object sender, EventArgs e)
-        {
-            FuncionarioMenu fmenureturn = new FuncionarioMenu(us, idcliente);
-            this.Hide();
-            fmenureturn.Show();
-        }
-
-        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
         private void PedidoFunc_Load(object sender, EventArgs e)
         {
             us = usu.CarregaEmpresa(idcliente);
             dtgPedido.DataSource = conexaosql.verDados("SELECT * FROM tb_pedido");
         }
-
-        private void btnReturnMenu_Click(object sender, EventArgs e)
-        {
-            FuncionarioMenu fmenufunc = new FuncionarioMenu(us, idcliente);
-            this.Hide();
-            fmenufunc.Show();
-        }
-
         private void dtgPedido_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -161,7 +141,28 @@ namespace GuizzoLtda
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+
+        private void dtgPedido_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            PedidoFunc fpedfunc = new PedidoFunc(us, idcliente);
+            this.Hide();
+            fpedfunc.Show();
+        }
+
+        private void btnReturnMenu_Click_1(object sender, EventArgs e)
+        {
+            FuncionarioMenu fmenufunc = new FuncionarioMenu(us, idcliente);
+            this.Hide();
+            fmenufunc.Show();
+        }
+
+        private void btnAprovar_Click(object sender, EventArgs e)
         {
             if (txtValorPedido.Text == "" || txtStatusPedido.Text == "" || txtNmrVolumes.Text == "" || txtIdPedido.Text == "")
             {
@@ -184,28 +185,6 @@ namespace GuizzoLtda
                     MessageBox.Show("Erro na atualização.");
                 }
             }
-        }
-
-        private void btnVoltar_Click(object sender, EventArgs e)
-        {
-
-
-            dtgPedido.Visible = false;
-            button1.Visible = false;
-            btnVoltar.Enabled = false;
-
-            dateTimePicker2.Visible = true;
-            dateTimePicker1.Visible = true;
-            label1.Visible = true;
-            labelDtPedido.Visible = true;
-            cbAberto.Visible = true;
-            cbEncerrado.Visible = true;
-            btnConfirma.Visible = true;
-        }
-
-        private void dtgPedido_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }
