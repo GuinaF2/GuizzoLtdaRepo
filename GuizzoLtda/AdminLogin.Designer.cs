@@ -101,6 +101,7 @@
             txtSenhaAdm.BackColor = Color.Black;
             txtSenhaAdm.BorderStyle = BorderStyle.FixedSingle;
             txtSenhaAdm.Font = new Font("Segoe UI", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
+            txtSenhaAdm.ForeColor = Color.Goldenrod;
             txtSenhaAdm.Location = new Point(581, 283);
             txtSenhaAdm.Name = "txtSenhaAdm";
             txtSenhaAdm.PasswordChar = '*';
