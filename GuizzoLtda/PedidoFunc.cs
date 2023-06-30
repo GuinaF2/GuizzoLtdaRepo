@@ -45,7 +45,7 @@ namespace GuizzoLtda
             }
         }
 
-        private void btnConfirma_Click(object sender, EventArgs e)
+        private void btnConfirma_Click_1(object sender, EventArgs e)
         {
             if (cbAberto.Checked == true)
             {
@@ -108,12 +108,12 @@ namespace GuizzoLtda
             }
         }
 
-        private void PedidoFunc_Load(object sender, EventArgs e)
+        private void PedidoFunc_Load_1(object sender, EventArgs e)
         {
             us = usu.CarregaEmpresa(idcliente);
             dtgPedido.DataSource = conexaosql.verDados("SELECT * FROM tb_pedido");
         }
-        private void dtgPedido_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dtgPedido_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
@@ -148,21 +148,21 @@ namespace GuizzoLtda
 
         }
 
-        private void toolStripButton3_Click(object sender, EventArgs e)
+        private void toolStripButton3_Click_1(object sender, EventArgs e)
         {
             PedidoFunc fpedfunc = new PedidoFunc(us, idcliente);
             this.Hide();
             fpedfunc.Show();
         }
 
-        private void btnReturnMenu_Click_1(object sender, EventArgs e)
+        private void btnReturnMenu_Click(object sender, EventArgs e)
         {
             FuncionarioMenu fmenufunc = new FuncionarioMenu(us, idcliente);
             this.Hide();
             fmenufunc.Show();
         }
 
-        private void btnAprovar_Click(object sender, EventArgs e)
+        private void btnAprovar_Click_1(object sender, EventArgs e)
         {
             if (txtValorPedido.Text == "" || txtStatusPedido.Text == "" || txtNmrVolumes.Text == "" || txtIdPedido.Text == "")
             {
@@ -186,5 +186,16 @@ namespace GuizzoLtda
                 }
             }
         }
+
+
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            PedidoFunc fpedfunc = new PedidoFunc(us, idcliente);
+            this.Hide();
+            fpedfunc.Show();
+        }
+
+       
     }
 }

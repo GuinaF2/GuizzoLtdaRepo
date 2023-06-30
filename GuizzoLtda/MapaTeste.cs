@@ -33,13 +33,13 @@ namespace GuizzoLtda
         private List<PointLatLng> _points;
 
 
-        public MapaTeste(EmpresaModelo um,int id)
+        public MapaTeste(EmpresaModelo um, int id)
         {
             us = um;
             idcliente = id;
             InitializeComponent();
             _points = new List<PointLatLng>();
-            
+
         }
 
 

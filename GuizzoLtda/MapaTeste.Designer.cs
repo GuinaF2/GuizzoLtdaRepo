@@ -36,10 +36,8 @@
             lblLon = new Label();
             btnConfirmar = new Button();
             labeldistancia = new Label();
-            splitter1 = new Splitter();
             toolStrip1 = new ToolStrip();
             toolStripButton1 = new ToolStripButton();
-            toolStripSeparator3 = new ToolStripSeparator();
             btnMarcações = new ToolStripButton();
             toolStripSeparator1 = new ToolStripSeparator();
             btnClear = new ToolStripButton();
@@ -50,6 +48,8 @@
             txtEndereco = new TextBox();
             label3 = new Label();
             label1 = new Label();
+            toolStripSeparator3 = new ToolStripSeparator();
+            splitter1 = new Splitter();
             toolStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -61,7 +61,7 @@
             MapaBr.GrayScaleMode = false;
             MapaBr.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
             MapaBr.LevelsKeepInMemmory = 5;
-            MapaBr.Location = new Point(0, 0);
+            MapaBr.Location = new Point(0, 27);
             MapaBr.MarkersEnabled = true;
             MapaBr.MaxZoom = 50;
             MapaBr.MinZoom = 5;
@@ -75,7 +75,7 @@
             MapaBr.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
             MapaBr.SelectedAreaFillColor = Color.FromArgb(33, 65, 105, 225);
             MapaBr.ShowTileGridLines = false;
-            MapaBr.Size = new Size(371, 450);
+            MapaBr.Size = new Size(405, 428);
             MapaBr.TabIndex = 1;
             MapaBr.Zoom = 0D;
             MapaBr.Load += MapaBr_Load;
@@ -125,7 +125,8 @@
             // btnConfirmar
             // 
             btnConfirmar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnConfirmar.FlatStyle = FlatStyle.Popup;
+            btnConfirmar.BackColor = Color.Black;
+            btnConfirmar.FlatStyle = FlatStyle.Flat;
             btnConfirmar.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
             btnConfirmar.ForeColor = Color.Goldenrod;
             btnConfirmar.Location = new Point(478, 356);
@@ -133,121 +134,110 @@
             btnConfirmar.Size = new Size(253, 65);
             btnConfirmar.TabIndex = 6;
             btnConfirmar.Text = "Confirmar";
-            btnConfirmar.UseVisualStyleBackColor = true;
+            btnConfirmar.UseVisualStyleBackColor = false;
             btnConfirmar.Click += button1_Click_1;
             // 
             // labeldistancia
             // 
             labeldistancia.AutoSize = true;
             labeldistancia.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            labeldistancia.ForeColor = Color.Goldenrod;
+            labeldistancia.ForeColor = Color.Black;
             labeldistancia.Location = new Point(506, 189);
             labeldistancia.Name = "labeldistancia";
             labeldistancia.Size = new Size(73, 21);
             labeldistancia.TabIndex = 10;
-            labeldistancia.Text = "Distancia";
-            // 
-            // splitter1
-            // 
-            splitter1.Location = new Point(0, 0);
-            splitter1.Name = "splitter1";
-            splitter1.Size = new Size(371, 450);
-            splitter1.TabIndex = 12;
-            splitter1.TabStop = false;
+            labeldistancia.Text = "Distância";
             // 
             // toolStrip1
             // 
-            toolStrip1.BackColor = Color.FromArgb(64, 0, 0);
+            toolStrip1.BackColor = Color.FromArgb(173, 11, 0);
             toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton1, toolStripSeparator3, btnMarcações, toolStripSeparator1, btnClear, toolStripSeparator2, btnRota, toolStripSeparator, btnMarcaPonto });
-            toolStrip1.Location = new Point(371, 0);
+            toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(429, 25);
+            toolStrip1.Size = new Size(800, 27);
             toolStrip1.TabIndex = 27;
             toolStrip1.Text = "toolStrip1";
             // 
             // toolStripButton1
             // 
-            toolStripButton1.BackColor = Color.Goldenrod;
-            toolStripButton1.BackgroundImage = Properties.Resources._688879_arrows_512x512;
+            toolStripButton1.BackColor = Color.Transparent;
             toolStripButton1.BackgroundImageLayout = ImageLayout.Stretch;
-            toolStripButton1.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            toolStripButton1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            toolStripButton1.ForeColor = Color.Goldenrod;
             toolStripButton1.Image = Properties.Resources._688879_arrows_512x512;
             toolStripButton1.ImageTransparentColor = Color.Magenta;
             toolStripButton1.Name = "toolStripButton1";
-            toolStripButton1.Size = new Size(23, 22);
-            toolStripButton1.Text = "toolStripButton1";
+            toolStripButton1.Size = new Size(69, 24);
+            toolStripButton1.Text = "Menu";
             toolStripButton1.Click += toolStripButton1_Click;
-            // 
-            // toolStripSeparator3
-            // 
-            toolStripSeparator3.Name = "toolStripSeparator3";
-            toolStripSeparator3.Size = new Size(6, 25);
             // 
             // btnMarcações
             // 
             btnMarcações.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            btnMarcações.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            btnMarcações.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnMarcações.ForeColor = Color.Goldenrod;
             btnMarcações.ImageTransparentColor = Color.Magenta;
             btnMarcações.Name = "btnMarcações";
-            btnMarcações.Size = new Size(132, 22);
+            btnMarcações.Size = new Size(154, 24);
             btnMarcações.Text = "Remover Marcações";
             btnMarcações.Click += btnMarcações_Click;
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(6, 25);
+            toolStripSeparator1.Size = new Size(6, 27);
             // 
             // btnClear
             // 
             btnClear.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            btnClear.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            btnClear.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnClear.ForeColor = Color.Goldenrod;
             btnClear.ImageTransparentColor = Color.Magenta;
             btnClear.Name = "btnClear";
-            btnClear.Size = new Size(83, 22);
+            btnClear.Size = new Size(99, 24);
             btnClear.Text = "Limpar Rota";
             btnClear.Click += btnClear_Click_1;
             // 
             // toolStripSeparator2
             // 
             toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(6, 25);
+            toolStripSeparator2.Size = new Size(6, 27);
             // 
             // btnRota
             // 
             btnRota.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            btnRota.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            btnRota.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnRota.ForeColor = Color.Goldenrod;
             btnRota.ImageTransparentColor = Color.Magenta;
             btnRota.Name = "btnRota";
-            btnRota.Size = new Size(39, 22);
+            btnRota.Size = new Size(46, 24);
             btnRota.Text = "Rota";
             btnRota.Click += btnRota_Click;
             // 
             // toolStripSeparator
             // 
             toolStripSeparator.Name = "toolStripSeparator";
-            toolStripSeparator.Size = new Size(6, 25);
+            toolStripSeparator.Size = new Size(6, 27);
             // 
             // btnMarcaPonto
             // 
             btnMarcaPonto.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            btnMarcaPonto.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            btnMarcaPonto.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnMarcaPonto.ForeColor = Color.Goldenrod;
             btnMarcaPonto.ImageTransparentColor = Color.Magenta;
             btnMarcaPonto.Name = "btnMarcaPonto";
-            btnMarcaPonto.Size = new Size(92, 22);
+            btnMarcaPonto.Size = new Size(108, 24);
             btnMarcaPonto.Text = "Marcar Ponto";
             btnMarcaPonto.Visible = false;
             btnMarcaPonto.Click += toolStripButton1_Click_1;
             // 
             // txtEndereco
             // 
+            txtEndereco.BackColor = Color.Black;
+            txtEndereco.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             txtEndereco.Location = new Point(506, 163);
             txtEndereco.Name = "txtEndereco";
-            txtEndereco.Size = new Size(210, 23);
+            txtEndereco.Size = new Size(210, 27);
             txtEndereco.TabIndex = 28;
             // 
             // label3
@@ -265,13 +255,26 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = Color.Goldenrod;
+            label1.ForeColor = Color.Black;
             label1.Location = new Point(506, 110);
             label1.Name = "label1";
             label1.Size = new Size(180, 32);
             label1.TabIndex = 30;
             label1.Text = "Insira o Destino";
             label1.Visible = false;
+            // 
+            // toolStripSeparator3
+            // 
+            toolStripSeparator3.Name = "toolStripSeparator3";
+            toolStripSeparator3.Size = new Size(6, 27);
+            // 
+            // splitter1
+            // 
+            splitter1.Location = new Point(0, 27);
+            splitter1.Name = "splitter1";
+            splitter1.Size = new Size(405, 423);
+            splitter1.TabIndex = 31;
+            splitter1.TabStop = false;
             // 
             // MapaTeste
             // 
@@ -280,6 +283,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(173, 11, 0);
             ClientSize = new Size(800, 450);
+            Controls.Add(MapaBr);
+            Controls.Add(splitter1);
             Controls.Add(label1);
             Controls.Add(label3);
             Controls.Add(txtEndereco);
@@ -290,8 +295,6 @@
             Controls.Add(txtLong);
             Controls.Add(txtLat);
             Controls.Add(lblLat);
-            Controls.Add(MapaBr);
-            Controls.Add(splitter1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "MapaTeste";
             Text = "MapaTeste";
@@ -310,7 +313,6 @@
         private Label lblLon;
         private Button btnConfirmar;
         private Label labeldistancia;
-        private Splitter splitter1;
         private ToolStrip toolStrip1;
         private ToolStripButton btnMarcações;
         private ToolStripSeparator toolStripSeparator1;
@@ -324,5 +326,6 @@
         private Label label1;
         private ToolStripButton toolStripButton1;
         private ToolStripSeparator toolStripSeparator3;
+        private Splitter splitter1;
     }
 }
