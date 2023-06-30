@@ -28,245 +28,253 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dtgPedido = new DataGridView();
-            btnConfirma = new Button();
-            cbAberto = new CheckBox();
-            cbEncerrado = new CheckBox();
-            labelDtPedido = new Label();
-            dateTimePicker1 = new DateTimePicker();
-            dateTimePicker2 = new DateTimePicker();
-            label1 = new Label();
-            txtIdPedido = new TextBox();
-            txtStatusPedido = new TextBox();
-            txtNmrVolumes = new TextBox();
-            txtValorPedido = new TextBox();
-            txtIdCliente = new TextBox();
-            txtDtPedido = new TextBox();
-            toolStrip1 = new ToolStrip();
-            btnReturnMenu = new ToolStripButton();
-            toolStripSeparator1 = new ToolStripSeparator();
-            btnAprovar = new ToolStripButton();
-            toolStripSeparator2 = new ToolStripSeparator();
-            btnVoltar = new ToolStripButton();
-            ((System.ComponentModel.ISupportInitialize)dtgPedido).BeginInit();
-            toolStrip1.SuspendLayout();
-            SuspendLayout();
+            this.dtgPedido = new System.Windows.Forms.DataGridView();
+            this.btnConfirma = new System.Windows.Forms.Button();
+            this.cbAberto = new System.Windows.Forms.CheckBox();
+            this.cbEncerrado = new System.Windows.Forms.CheckBox();
+            this.labelDtPedido = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtIdPedido = new System.Windows.Forms.TextBox();
+            this.txtStatusPedido = new System.Windows.Forms.TextBox();
+            this.txtNmrVolumes = new System.Windows.Forms.TextBox();
+            this.txtValorPedido = new System.Windows.Forms.TextBox();
+            this.txtIdCliente = new System.Windows.Forms.TextBox();
+            this.txtDtPedido = new System.Windows.Forms.TextBox();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.btnReturnMenu = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnAprovar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnVoltar = new System.Windows.Forms.ToolStripButton();
+            this.label2 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgPedido)).BeginInit();
+            this.toolStrip1.SuspendLayout();
+            this.SuspendLayout();
             // 
             // dtgPedido
             // 
-            dtgPedido.AllowUserToAddRows = false;
-            dtgPedido.AllowUserToDeleteRows = false;
-            dtgPedido.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgPedido.Location = new Point(69, 219);
-            dtgPedido.Name = "dtgPedido";
-            dtgPedido.ReadOnly = true;
-            dtgPedido.RowHeadersWidth = 51;
-            dtgPedido.RowTemplate.Height = 25;
-            dtgPedido.Size = new Size(803, 251);
-            dtgPedido.TabIndex = 1;
-            dtgPedido.Visible = false;
-            dtgPedido.CellClick += dtgPedido_CellClick;
-            dtgPedido.CellContentClick += dtgPedido_CellContentClick;
+            this.dtgPedido.AllowUserToAddRows = false;
+            this.dtgPedido.AllowUserToDeleteRows = false;
+            this.dtgPedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgPedido.Location = new System.Drawing.Point(69, 219);
+            this.dtgPedido.Name = "dtgPedido";
+            this.dtgPedido.ReadOnly = true;
+            this.dtgPedido.RowHeadersWidth = 51;
+            this.dtgPedido.RowTemplate.Height = 25;
+            this.dtgPedido.Size = new System.Drawing.Size(803, 251);
+            this.dtgPedido.TabIndex = 1;
+            this.dtgPedido.Visible = false;
             // 
             // btnConfirma
             // 
-            btnConfirma.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            btnConfirma.Location = new Point(19, 299);
-            btnConfirma.Name = "btnConfirma";
-            btnConfirma.Size = new Size(203, 51);
-            btnConfirma.TabIndex = 4;
-            btnConfirma.Text = "Confirmar";
-            btnConfirma.UseVisualStyleBackColor = true;
-            btnConfirma.Click += btnConfirma_Click;
+            this.btnConfirma.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnConfirma.Location = new System.Drawing.Point(19, 299);
+            this.btnConfirma.Name = "btnConfirma";
+            this.btnConfirma.Size = new System.Drawing.Size(203, 51);
+            this.btnConfirma.TabIndex = 4;
+            this.btnConfirma.Text = "Confirmar";
+            this.btnConfirma.UseVisualStyleBackColor = true;
             // 
             // cbAberto
             // 
-            cbAberto.AutoSize = true;
-            cbAberto.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            cbAberto.Location = new Point(19, 159);
-            cbAberto.Name = "cbAberto";
-            cbAberto.Size = new Size(74, 24);
-            cbAberto.TabIndex = 5;
-            cbAberto.Text = "Aberto";
-            cbAberto.UseVisualStyleBackColor = true;
-            cbAberto.CheckedChanged += cbAberto_CheckedChanged;
+            this.cbAberto.AutoSize = true;
+            this.cbAberto.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbAberto.Location = new System.Drawing.Point(19, 159);
+            this.cbAberto.Name = "cbAberto";
+            this.cbAberto.Size = new System.Drawing.Size(74, 24);
+            this.cbAberto.TabIndex = 5;
+            this.cbAberto.Text = "Aberto";
+            this.cbAberto.UseVisualStyleBackColor = true;
             // 
             // cbEncerrado
             // 
-            cbEncerrado.AutoSize = true;
-            cbEncerrado.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            cbEncerrado.Location = new Point(99, 159);
-            cbEncerrado.Name = "cbEncerrado";
-            cbEncerrado.Size = new Size(95, 24);
-            cbEncerrado.TabIndex = 6;
-            cbEncerrado.Text = "Encerrado";
-            cbEncerrado.UseVisualStyleBackColor = true;
-            cbEncerrado.CheckedChanged += cbEncerrado_CheckedChanged;
+            this.cbEncerrado.AutoSize = true;
+            this.cbEncerrado.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbEncerrado.Location = new System.Drawing.Point(99, 159);
+            this.cbEncerrado.Name = "cbEncerrado";
+            this.cbEncerrado.Size = new System.Drawing.Size(95, 24);
+            this.cbEncerrado.TabIndex = 6;
+            this.cbEncerrado.Text = "Encerrado";
+            this.cbEncerrado.UseVisualStyleBackColor = true;
             // 
             // labelDtPedido
             // 
-            labelDtPedido.AutoSize = true;
-            labelDtPedido.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
-            labelDtPedido.Location = new Point(19, 37);
-            labelDtPedido.Name = "labelDtPedido";
-            labelDtPedido.Size = new Size(225, 37);
-            labelDtPedido.TabIndex = 8;
-            labelDtPedido.Text = "Confirmar Pedido";
+            this.labelDtPedido.AutoSize = true;
+            this.labelDtPedido.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelDtPedido.Location = new System.Drawing.Point(19, 37);
+            this.labelDtPedido.Name = "labelDtPedido";
+            this.labelDtPedido.Size = new System.Drawing.Size(225, 37);
+            this.labelDtPedido.TabIndex = 8;
+            this.labelDtPedido.Text = "Confirmar Pedido";
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.CustomFormat = "yyyy-MM-dd";
-            dateTimePicker1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dateTimePicker1.Format = DateTimePickerFormat.Custom;
-            dateTimePicker1.Location = new Point(19, 106);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(109, 27);
-            dateTimePicker1.TabIndex = 10;
+            this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
+            this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(19, 106);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(109, 27);
+            this.dateTimePicker1.TabIndex = 10;
             // 
             // dateTimePicker2
             // 
-            dateTimePicker2.CustomFormat = "yyyy-MM-dd";
-            dateTimePicker2.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dateTimePicker2.Format = DateTimePickerFormat.Custom;
-            dateTimePicker2.Location = new Point(229, 106);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(113, 27);
-            dateTimePicker2.TabIndex = 11;
+            this.dateTimePicker2.CustomFormat = "yyyy-MM-dd";
+            this.dateTimePicker2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker2.Location = new System.Drawing.Point(229, 106);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(113, 27);
+            this.dateTimePicker2.TabIndex = 11;
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(162, 112);
-            label1.Name = "label1";
-            label1.Size = new Size(32, 20);
-            label1.TabIndex = 12;
-            label1.Text = "Até";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(162, 112);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(32, 20);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Até";
             // 
             // txtIdPedido
             // 
-            txtIdPedido.Location = new Point(619, 37);
-            txtIdPedido.Name = "txtIdPedido";
-            txtIdPedido.Size = new Size(100, 23);
-            txtIdPedido.TabIndex = 16;
-            txtIdPedido.Visible = false;
+            this.txtIdPedido.Location = new System.Drawing.Point(619, 37);
+            this.txtIdPedido.Name = "txtIdPedido";
+            this.txtIdPedido.Size = new System.Drawing.Size(100, 23);
+            this.txtIdPedido.TabIndex = 16;
+            this.txtIdPedido.Visible = false;
             // 
             // txtStatusPedido
             // 
-            txtStatusPedido.Location = new Point(619, 78);
-            txtStatusPedido.Name = "txtStatusPedido";
-            txtStatusPedido.Size = new Size(100, 23);
-            txtStatusPedido.TabIndex = 17;
-            txtStatusPedido.Visible = false;
+            this.txtStatusPedido.Location = new System.Drawing.Point(619, 78);
+            this.txtStatusPedido.Name = "txtStatusPedido";
+            this.txtStatusPedido.Size = new System.Drawing.Size(100, 23);
+            this.txtStatusPedido.TabIndex = 17;
+            this.txtStatusPedido.Visible = false;
             // 
             // txtNmrVolumes
             // 
-            txtNmrVolumes.Location = new Point(619, 124);
-            txtNmrVolumes.Name = "txtNmrVolumes";
-            txtNmrVolumes.Size = new Size(100, 23);
-            txtNmrVolumes.TabIndex = 18;
-            txtNmrVolumes.Visible = false;
+            this.txtNmrVolumes.Location = new System.Drawing.Point(619, 124);
+            this.txtNmrVolumes.Name = "txtNmrVolumes";
+            this.txtNmrVolumes.Size = new System.Drawing.Size(100, 23);
+            this.txtNmrVolumes.TabIndex = 18;
+            this.txtNmrVolumes.Visible = false;
             // 
             // txtValorPedido
             // 
-            txtValorPedido.Location = new Point(619, 171);
-            txtValorPedido.Name = "txtValorPedido";
-            txtValorPedido.Size = new Size(100, 23);
-            txtValorPedido.TabIndex = 19;
-            txtValorPedido.Visible = false;
+            this.txtValorPedido.Location = new System.Drawing.Point(619, 171);
+            this.txtValorPedido.Name = "txtValorPedido";
+            this.txtValorPedido.Size = new System.Drawing.Size(100, 23);
+            this.txtValorPedido.TabIndex = 19;
+            this.txtValorPedido.Visible = false;
             // 
             // txtIdCliente
             // 
-            txtIdCliente.Location = new Point(750, 44);
-            txtIdCliente.Name = "txtIdCliente";
-            txtIdCliente.Size = new Size(100, 23);
-            txtIdCliente.TabIndex = 21;
-            txtIdCliente.Visible = false;
+            this.txtIdCliente.Location = new System.Drawing.Point(750, 44);
+            this.txtIdCliente.Name = "txtIdCliente";
+            this.txtIdCliente.Size = new System.Drawing.Size(100, 23);
+            this.txtIdCliente.TabIndex = 21;
+            this.txtIdCliente.Visible = false;
             // 
             // txtDtPedido
             // 
-            txtDtPedido.Location = new Point(750, 78);
-            txtDtPedido.Name = "txtDtPedido";
-            txtDtPedido.Size = new Size(100, 23);
-            txtDtPedido.TabIndex = 22;
-            txtDtPedido.Visible = false;
+            this.txtDtPedido.Location = new System.Drawing.Point(750, 78);
+            this.txtDtPedido.Name = "txtDtPedido";
+            this.txtDtPedido.Size = new System.Drawing.Size(100, 23);
+            this.txtDtPedido.TabIndex = 22;
+            this.txtDtPedido.Visible = false;
             // 
             // toolStrip1
             // 
-            toolStrip1.Items.AddRange(new ToolStripItem[] { btnReturnMenu, toolStripSeparator1, btnAprovar, toolStripSeparator2, btnVoltar });
-            toolStrip1.Location = new Point(0, 0);
-            toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(929, 25);
-            toolStrip1.TabIndex = 23;
-            toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnReturnMenu,
+            this.toolStripSeparator1,
+            this.btnAprovar,
+            this.toolStripSeparator2,
+            this.btnVoltar});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(929, 25);
+            this.toolStrip1.TabIndex = 23;
+            this.toolStrip1.Text = "toolStrip1";
             // 
             // btnReturnMenu
             // 
-            btnReturnMenu.Image = Properties.Resources._688879_arrows_512x512;
-            btnReturnMenu.ImageTransparentColor = Color.Magenta;
-            btnReturnMenu.Name = "btnReturnMenu";
-            btnReturnMenu.Size = new Size(58, 22);
-            btnReturnMenu.Text = "Menu";
-            btnReturnMenu.Click += btnReturnMenu_Click_1;
+            this.btnReturnMenu.Image = global::GuizzoLtda.Properties.Resources._688879_arrows_512x512;
+            this.btnReturnMenu.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnReturnMenu.Name = "btnReturnMenu";
+            this.btnReturnMenu.Size = new System.Drawing.Size(58, 22);
+            this.btnReturnMenu.Text = "Menu";
             // 
             // toolStripSeparator1
             // 
-            toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(6, 25);
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // btnAprovar
             // 
-            btnAprovar.BackColor = SystemColors.Control;
-            btnAprovar.Image = Properties.Resources.checkimage;
-            btnAprovar.ImageTransparentColor = Color.Magenta;
-            btnAprovar.Name = "btnAprovar";
-            btnAprovar.Size = new Size(97, 22);
-            btnAprovar.Text = "Recebimento";
-            btnAprovar.Click += btnAprovar_Click;
+            this.btnAprovar.BackColor = System.Drawing.SystemColors.Control;
+            this.btnAprovar.Image = global::GuizzoLtda.Properties.Resources.checkimage;
+            this.btnAprovar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnAprovar.Name = "btnAprovar";
+            this.btnAprovar.Size = new System.Drawing.Size(97, 22);
+            this.btnAprovar.Text = "Recebimento";
             // 
             // toolStripSeparator2
             // 
-            toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(6, 25);
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // btnVoltar
             // 
-            btnVoltar.Enabled = false;
-            btnVoltar.Image = Properties.Resources.FlechaReturn;
-            btnVoltar.ImageTransparentColor = Color.Magenta;
-            btnVoltar.Name = "btnVoltar";
-            btnVoltar.Size = new Size(72, 22);
-            btnVoltar.Text = "Retornar";
-            btnVoltar.Click += toolStripButton3_Click;
+            this.btnVoltar.Enabled = false;
+            this.btnVoltar.Image = global::GuizzoLtda.Properties.Resources.FlechaReturn;
+            this.btnVoltar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(72, 22);
+            this.btnVoltar.Text = "Retornar";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(436, 39);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(72, 15);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "RESOLVIDUS";
             // 
             // PedidoFunc
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(929, 505);
-            Controls.Add(toolStrip1);
-            Controls.Add(txtDtPedido);
-            Controls.Add(txtIdCliente);
-            Controls.Add(txtValorPedido);
-            Controls.Add(txtNmrVolumes);
-            Controls.Add(txtStatusPedido);
-            Controls.Add(txtIdPedido);
-            Controls.Add(label1);
-            Controls.Add(dateTimePicker2);
-            Controls.Add(dateTimePicker1);
-            Controls.Add(labelDtPedido);
-            Controls.Add(cbEncerrado);
-            Controls.Add(cbAberto);
-            Controls.Add(btnConfirma);
-            Controls.Add(dtgPedido);
-            Name = "PedidoFunc";
-            StartPosition = FormStartPosition.CenterScreen;
-            Load += PedidoFunc_Load;
-            ((System.ComponentModel.ISupportInitialize)dtgPedido).EndInit();
-            toolStrip1.ResumeLayout(false);
-            toolStrip1.PerformLayout();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(929, 505);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.txtDtPedido);
+            this.Controls.Add(this.txtIdCliente);
+            this.Controls.Add(this.txtValorPedido);
+            this.Controls.Add(this.txtNmrVolumes);
+            this.Controls.Add(this.txtStatusPedido);
+            this.Controls.Add(this.txtIdPedido);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.labelDtPedido);
+            this.Controls.Add(this.cbEncerrado);
+            this.Controls.Add(this.cbAberto);
+            this.Controls.Add(this.btnConfirma);
+            this.Controls.Add(this.dtgPedido);
+            this.Name = "PedidoFunc";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            ((System.ComponentModel.ISupportInitialize)(this.dtgPedido)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
@@ -293,5 +301,6 @@
         private ToolStripSeparator toolStripSeparator2;
         private ToolStripButton btnVoltar;
         private ToolStripButton btnAprovar;
+        private Label label2;
     }
 }
