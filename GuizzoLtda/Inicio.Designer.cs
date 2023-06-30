@@ -44,7 +44,7 @@
             // 
             SelectEmp.BackColor = Color.Black;
             SelectEmp.FlatStyle = FlatStyle.Flat;
-            SelectEmp.Font = new Font("Leelawadee UI", 22.2F, FontStyle.Regular, GraphicsUnit.Point);
+            SelectEmp.Font = new Font("Leelawadee UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
             SelectEmp.ForeColor = Color.Goldenrod;
             SelectEmp.Location = new Point(175, 326);
             SelectEmp.Name = "SelectEmp";

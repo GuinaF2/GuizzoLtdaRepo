@@ -34,7 +34,7 @@ namespace GuizzoLtda
             dgSolicitacao.DataSource = conexaosql.verDados("SELECT * FROM tb_cliente WHERE statuscadastro = 'Pendente'");
         }
 
-        private void btnAprovar_Click(object sender, EventArgs e)
+        private void btnAprovar_Click_1(object sender, EventArgs e)
         {
             if (txtInscEstad.Text == "" || txtRazaoSoc.Text == "" || txtCnpj.Text == "")
             {
@@ -48,7 +48,7 @@ namespace GuizzoLtda
                 if (Controle.AtualizarEmpresa(EmpresaModelo) == true)
                 {
                     MessageBox.Show("Solicitação Aprovada.");
-                    CadastroAprov fadminaprov = new CadastroAprov(us,idcliente);
+                    CadastroAprov fadminaprov = new CadastroAprov(us, idcliente);
                     this.Hide();
                     fadminaprov.Show();
                 }
@@ -59,7 +59,7 @@ namespace GuizzoLtda
             }
         }
 
-        private void btnRecusar_Click(object sender, EventArgs e)
+        private void btnRecusar_Click_1(object sender, EventArgs e)
         {
             if (txtInscEstad.Text == "" || txtRazaoSoc.Text == "" || txtCnpj.Text == "")
             {
@@ -140,7 +140,7 @@ namespace GuizzoLtda
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
             AdminMenu fmenureturn = new AdminMenu(us, idcliente);
             this.Hide();

@@ -21,7 +21,7 @@ namespace GuizzoLtda
         int idcliente;
         EmpresaControle usu = new EmpresaControle();
         EmpresaModelo us = new EmpresaModelo();
-        public AdminSolicitacao(EmpresaModelo um,int id)
+        public AdminSolicitacao(EmpresaModelo um, int id)
         {
             us = um;
             idcliente = id;
@@ -34,7 +34,7 @@ namespace GuizzoLtda
             dgSolicitacao.DataSource = conexaosql.verDados("SELECT * FROM tb_solicitacao WHERE condicao = 'Pendente'");
         }
 
-        private void btnAprovar_Click_1(object sender, EventArgs e)
+        private void btnAprovar_Click(object sender, EventArgs e)
         {
             if (txtDescricao.Text == "" || cbStatus.Text == "" || cbTipo.Text == "")
             {
@@ -48,7 +48,7 @@ namespace GuizzoLtda
                 if (SolicitacaoC.AtualizarSolicitacao(SolicitacaoM) == true)
                 {
                     MessageBox.Show("Solicitação Aprovada.");
-                    AdminSolicitacao fadminsol = new AdminSolicitacao(us,idcliente);
+                    AdminSolicitacao fadminsol = new AdminSolicitacao(us, idcliente);
                     this.Hide();
                     fadminsol.Show();
                 }
@@ -59,7 +59,7 @@ namespace GuizzoLtda
             }
         }
 
-        private void btnRecusar_Click_1(object sender, EventArgs e)
+        private void btnRecusar_Click(object sender, EventArgs e)
         {
             if (txtDescricao.Text == "" || cbStatus.Text == "" || cbTipo.Text == "")
             {
@@ -73,7 +73,7 @@ namespace GuizzoLtda
                 if (SolicitacaoC.AtualizarSolicitacao(SolicitacaoM) == true)
                 {
                     MessageBox.Show("Solicitação Aprovada.");
-                    AdminSolicitacao fadminsol = new AdminSolicitacao(us,idcliente);
+                    AdminSolicitacao fadminsol = new AdminSolicitacao(us, idcliente);
                     this.Hide();
                     fadminsol.Show();
                 }
@@ -130,7 +130,7 @@ namespace GuizzoLtda
             }
         }
 
-        private void btnReturn_Click(object sender, EventArgs e)
+        private void btnReturn_Click_1(object sender, EventArgs e)
         {
             AdminMenu fadminlog = new AdminMenu(us, idcliente);
             this.Hide();

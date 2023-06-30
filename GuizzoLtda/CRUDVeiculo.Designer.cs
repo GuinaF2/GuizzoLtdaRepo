@@ -178,6 +178,7 @@
             // SaveCreate
             // 
             SaveCreate.BackColor = Color.Black;
+            SaveCreate.FlatStyle = FlatStyle.Flat;
             SaveCreate.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             SaveCreate.ForeColor = Color.Goldenrod;
             SaveCreate.Location = new Point(127, 576);

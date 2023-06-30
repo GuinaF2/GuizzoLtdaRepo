@@ -79,7 +79,7 @@
             // 
             // toolStrip1
             // 
-            toolStrip1.BackColor = Color.FromArgb(193, 11, 0);
+            toolStrip1.BackColor = Color.FromArgb(173, 11, 0);
             toolStrip1.ImageScalingSize = new Size(20, 20);
             toolStrip1.Items.AddRange(new ToolStripItem[] { btnReturn, toolStripSeparator3, btnAtualizar, toolStripSeparator1, btnCad, toolStripSeparator2, btnApaga });
             toolStrip1.Location = new Point(0, 0);
@@ -90,7 +90,7 @@
             // 
             // btnReturn
             // 
-            btnReturn.BackColor = Color.FromArgb(193, 11, 0);
+            btnReturn.BackColor = Color.FromArgb(173, 11, 0);
             btnReturn.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnReturn.ForeColor = Color.Goldenrod;
             btnReturn.Image = (Image)resources.GetObject("btnReturn.Image");
@@ -147,12 +147,13 @@
             // txtIdCliente
             // 
             txtIdCliente.BackColor = Color.Black;
+            txtIdCliente.Font = new Font("Leelawadee UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             txtIdCliente.ForeColor = Color.Goldenrod;
             txtIdCliente.Location = new Point(57, 314);
             txtIdCliente.Margin = new Padding(3, 4, 3, 4);
             txtIdCliente.Name = "txtIdCliente";
             txtIdCliente.ReadOnly = true;
-            txtIdCliente.Size = new Size(142, 22);
+            txtIdCliente.Size = new Size(142, 27);
             txtIdCliente.TabIndex = 18;
             txtIdCliente.Click += txtIdCliente_Click_1;
             // 
@@ -205,12 +206,13 @@
             // txtIdMoto
             // 
             txtIdMoto.BackColor = Color.Black;
+            txtIdMoto.Font = new Font("Leelawadee UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             txtIdMoto.ForeColor = Color.Goldenrod;
             txtIdMoto.Location = new Point(57, 217);
             txtIdMoto.Margin = new Padding(3, 4, 3, 4);
             txtIdMoto.Name = "txtIdMoto";
             txtIdMoto.ReadOnly = true;
-            txtIdMoto.Size = new Size(142, 22);
+            txtIdMoto.Size = new Size(142, 27);
             txtIdMoto.TabIndex = 30;
             txtIdMoto.Click += txtIdMoto_Click_1;
             txtIdMoto.TextChanged += txtIdMoto_TextChanged_1;
@@ -219,11 +221,12 @@
             // 
             txtIdPedido.BackColor = Color.Black;
             txtIdPedido.Enabled = false;
+            txtIdPedido.Font = new Font("Leelawadee UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             txtIdPedido.ForeColor = Color.Goldenrod;
             txtIdPedido.Location = new Point(57, 116);
             txtIdPedido.Margin = new Padding(3, 4, 3, 4);
             txtIdPedido.Name = "txtIdPedido";
-            txtIdPedido.Size = new Size(142, 22);
+            txtIdPedido.Size = new Size(142, 27);
             txtIdPedido.TabIndex = 34;
             // 
             // labelidpedido

@@ -33,21 +33,26 @@
             txtDescricao = new TextBox();
             labeltipo = new Label();
             labelstatus = new Label();
-            btnAprovar = new Button();
-            btnRecusar = new Button();
             linkLabel1 = new LinkLabel();
             dgSolicitacao = new DataGridView();
             txtTipoSoli = new TextBox();
             txtStatus = new TextBox();
-            btnReturn = new Button();
+            toolStrip1 = new ToolStrip();
+            btnReturn = new ToolStripButton();
+            toolStripSeparator1 = new ToolStripSeparator();
+            btnAprovar = new ToolStripButton();
+            toolStripSeparator2 = new ToolStripSeparator();
+            btnRecusar = new ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)dgSolicitacao).BeginInit();
+            toolStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // labeldescricao
             // 
             labeldescricao.AutoSize = true;
             labeldescricao.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            labeldescricao.Location = new Point(30, 9);
+            labeldescricao.ForeColor = Color.Black;
+            labeldescricao.Location = new Point(34, 75);
             labeldescricao.Name = "labeldescricao";
             labeldescricao.Size = new Size(77, 21);
             labeldescricao.TabIndex = 2;
@@ -56,7 +61,7 @@
             // txtDescricao
             // 
             txtDescricao.Enabled = false;
-            txtDescricao.Location = new Point(34, 37);
+            txtDescricao.Location = new Point(34, 99);
             txtDescricao.Multiline = true;
             txtDescricao.Name = "txtDescricao";
             txtDescricao.Size = new Size(391, 110);
@@ -65,47 +70,30 @@
             // labeltipo
             // 
             labeltipo.AutoSize = true;
-            labeltipo.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            labeltipo.Location = new Point(448, 56);
+            labeltipo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            labeltipo.ForeColor = Color.Black;
+            labeltipo.Location = new Point(482, 117);
             labeltipo.Name = "labeltipo";
-            labeltipo.Size = new Size(116, 20);
+            labeltipo.Size = new Size(118, 21);
             labeltipo.TabIndex = 4;
             labeltipo.Text = "Tipo Solicitação";
             // 
             // labelstatus
             // 
             labelstatus.AutoSize = true;
-            labelstatus.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            labelstatus.Location = new Point(640, 62);
+            labelstatus.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            labelstatus.ForeColor = Color.Black;
+            labelstatus.Location = new Point(640, 117);
             labelstatus.Name = "labelstatus";
-            labelstatus.Size = new Size(49, 20);
+            labelstatus.Size = new Size(52, 21);
             labelstatus.TabIndex = 6;
             labelstatus.Text = "Status";
-            // 
-            // btnAprovar
-            // 
-            btnAprovar.Location = new Point(437, 223);
-            btnAprovar.Name = "btnAprovar";
-            btnAprovar.Size = new Size(161, 39);
-            btnAprovar.TabIndex = 8;
-            btnAprovar.Text = "Aprovar";
-            btnAprovar.UseVisualStyleBackColor = true;
-            btnAprovar.Click += btnAprovar_Click_1;
-            // 
-            // btnRecusar
-            // 
-            btnRecusar.Location = new Point(604, 223);
-            btnRecusar.Name = "btnRecusar";
-            btnRecusar.Size = new Size(161, 39);
-            btnRecusar.TabIndex = 9;
-            btnRecusar.Text = "Recusar";
-            btnRecusar.UseVisualStyleBackColor = true;
-            btnRecusar.Click += btnRecusar_Click_1;
             // 
             // linkLabel1
             // 
             linkLabel1.AutoSize = true;
-            linkLabel1.Location = new Point(157, 150);
+            linkLabel1.LinkColor = Color.Black;
+            linkLabel1.Location = new Point(164, 212);
             linkLabel1.Name = "linkLabel1";
             linkLabel1.Size = new Size(129, 15);
             linkLabel1.TabIndex = 10;
@@ -115,7 +103,9 @@
             // 
             // dgSolicitacao
             // 
+            dgSolicitacao.BackgroundColor = Color.Black;
             dgSolicitacao.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgSolicitacao.GridColor = Color.Goldenrod;
             dgSolicitacao.Location = new Point(34, 268);
             dgSolicitacao.Name = "dgSolicitacao";
             dgSolicitacao.RowTemplate.Height = 25;
@@ -125,50 +115,91 @@
             // 
             // txtTipoSoli
             // 
-            txtTipoSoli.Location = new Point(456, 91);
+            txtTipoSoli.Location = new Point(482, 146);
             txtTipoSoli.Name = "txtTipoSoli";
             txtTipoSoli.Size = new Size(100, 23);
             txtTipoSoli.TabIndex = 12;
             // 
             // txtStatus
             // 
-            txtStatus.Location = new Point(640, 91);
+            txtStatus.Location = new Point(640, 146);
             txtStatus.Name = "txtStatus";
             txtStatus.Size = new Size(100, 23);
             txtStatus.TabIndex = 13;
             // 
+            // toolStrip1
+            // 
+            toolStrip1.BackColor = Color.FromArgb(173, 11, 0);
+            toolStrip1.Items.AddRange(new ToolStripItem[] { btnReturn, toolStripSeparator1, btnAprovar, toolStripSeparator2, btnRecusar });
+            toolStrip1.Location = new Point(0, 0);
+            toolStrip1.Name = "toolStrip1";
+            toolStrip1.Size = new Size(800, 27);
+            toolStrip1.TabIndex = 15;
+            toolStrip1.Text = "toolStrip1";
+            // 
             // btnReturn
             // 
-            btnReturn.BackgroundImage = Properties.Resources._688879_arrows_512x512;
-            btnReturn.BackgroundImageLayout = ImageLayout.Stretch;
-            btnReturn.Location = new Point(1, 1);
+            btnReturn.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnReturn.Image = (Image)resources.GetObject("btnReturn.Image");
+            btnReturn.ImageTransparentColor = Color.Magenta;
             btnReturn.Name = "btnReturn";
-            btnReturn.Size = new Size(37, 40);
-            btnReturn.TabIndex = 14;
-            btnReturn.UseVisualStyleBackColor = true;
-            btnReturn.Click += btnReturn_Click;
+            btnReturn.Size = new Size(69, 24);
+            btnReturn.Text = "Menu";
+            btnReturn.Click += btnReturn_Click_1;
+            // 
+            // toolStripSeparator1
+            // 
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            toolStripSeparator1.Size = new Size(6, 27);
+            // 
+            // btnAprovar
+            // 
+            btnAprovar.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAprovar.Image = (Image)resources.GetObject("btnAprovar.Image");
+            btnAprovar.ImageTransparentColor = Color.Magenta;
+            btnAprovar.Name = "btnAprovar";
+            btnAprovar.Size = new Size(121, 24);
+            btnAprovar.Text = "Recebimento";
+            btnAprovar.Click += btnAprovar_Click;
+            // 
+            // toolStripSeparator2
+            // 
+            toolStripSeparator2.Name = "toolStripSeparator2";
+            toolStripSeparator2.Size = new Size(6, 27);
+            // 
+            // btnRecusar
+            // 
+            btnRecusar.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnRecusar.Image = (Image)resources.GetObject("btnRecusar.Image");
+            btnRecusar.ImageTransparentColor = Color.Magenta;
+            btnRecusar.Name = "btnRecusar";
+            btnRecusar.Size = new Size(84, 24);
+            btnRecusar.Text = "Recusar";
+            btnRecusar.Click += btnRecusar_Click;
             // 
             // AdminSolicitacao
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(173, 11, 0);
             ClientSize = new Size(800, 450);
-            Controls.Add(btnReturn);
+            Controls.Add(toolStrip1);
             Controls.Add(txtStatus);
             Controls.Add(txtTipoSoli);
             Controls.Add(dgSolicitacao);
             Controls.Add(linkLabel1);
-            Controls.Add(btnRecusar);
-            Controls.Add(btnAprovar);
             Controls.Add(labelstatus);
             Controls.Add(labeltipo);
             Controls.Add(txtDescricao);
             Controls.Add(labeldescricao);
+            ForeColor = Color.Goldenrod;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "AdminSolicitacao";
             Text = "AdminSolicitacao";
             Load += AdminSolicitacao_Load_1;
             ((System.ComponentModel.ISupportInitialize)dgSolicitacao).EndInit();
+            toolStrip1.ResumeLayout(false);
+            toolStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -183,12 +214,15 @@
         private ComboBox cbTipo;
         private ComboBox cbStatus;
         private Label labelstatus;
-        private Button btnAprovar;
-        private Button btnRecusar;
         private LinkLabel linkLabel1;
         private DataGridView dgSolicitacao;
         private TextBox txtTipoSoli;
         private TextBox txtStatus;
-        private Button btnReturn;
+        private ToolStrip toolStrip1;
+        private ToolStripButton btnReturn;
+        private ToolStripSeparator toolStripSeparator1;
+        private ToolStripButton btnAprovar;
+        private ToolStripSeparator toolStripSeparator2;
+        private ToolStripButton btnRecusar;
     }
 }

@@ -43,9 +43,9 @@
             btnConfirmar.FlatStyle = FlatStyle.Flat;
             btnConfirmar.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             btnConfirmar.ForeColor = Color.Goldenrod;
-            btnConfirmar.Location = new Point(261, 371);
+            btnConfirmar.Location = new Point(261, 363);
             btnConfirmar.Name = "btnConfirmar";
-            btnConfirmar.Size = new Size(261, 54);
+            btnConfirmar.Size = new Size(268, 62);
             btnConfirmar.TabIndex = 0;
             btnConfirmar.Text = "Confirmar";
             btnConfirmar.UseVisualStyleBackColor = false;

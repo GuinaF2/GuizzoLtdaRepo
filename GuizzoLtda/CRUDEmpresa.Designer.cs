@@ -138,20 +138,22 @@
             // txtCnpj
             // 
             txtCnpj.BackColor = Color.Black;
-            txtCnpj.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtCnpj.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtCnpj.ForeColor = Color.Goldenrod;
             txtCnpj.Location = new Point(155, 259);
             txtCnpj.Name = "txtCnpj";
-            txtCnpj.Size = new Size(206, 27);
+            txtCnpj.Size = new Size(206, 24);
             txtCnpj.TabIndex = 20;
             txtCnpj.KeyPress += txtCnpj_KeyPress;
             // 
             // txtRazaoSocial
             // 
             txtRazaoSocial.BackColor = Color.Black;
-            txtRazaoSocial.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtRazaoSocial.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtRazaoSocial.ForeColor = Color.Goldenrod;
             txtRazaoSocial.Location = new Point(155, 183);
             txtRazaoSocial.Name = "txtRazaoSocial";
-            txtRazaoSocial.Size = new Size(206, 27);
+            txtRazaoSocial.Size = new Size(206, 24);
             txtRazaoSocial.TabIndex = 19;
             txtRazaoSocial.KeyPress += txtRazaoSocial_KeyPress;
             // 
@@ -159,10 +161,11 @@
             // 
             txtIdEmpresa.BackColor = Color.Black;
             txtIdEmpresa.Enabled = false;
-            txtIdEmpresa.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtIdEmpresa.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtIdEmpresa.ForeColor = Color.Goldenrod;
             txtIdEmpresa.Location = new Point(155, 112);
             txtIdEmpresa.Name = "txtIdEmpresa";
-            txtIdEmpresa.Size = new Size(206, 27);
+            txtIdEmpresa.Size = new Size(206, 24);
             txtIdEmpresa.TabIndex = 18;
             // 
             // labelid
@@ -217,11 +220,11 @@
             // txtInscEstadual
             // 
             txtInscEstadual.BackColor = Color.Black;
-            txtInscEstadual.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtInscEstadual.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             txtInscEstadual.ForeColor = Color.Goldenrod;
             txtInscEstadual.Location = new Point(155, 332);
             txtInscEstadual.Name = "txtInscEstadual";
-            txtInscEstadual.Size = new Size(206, 27);
+            txtInscEstadual.Size = new Size(206, 24);
             txtInscEstadual.TabIndex = 27;
             txtInscEstadual.KeyPress += txtInscEstadual_KeyPress;
             // 

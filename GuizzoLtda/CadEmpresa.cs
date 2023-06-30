@@ -37,7 +37,7 @@ namespace GuizzoLtda
 
 
 
-        
+
 
 
 
@@ -235,7 +235,7 @@ namespace GuizzoLtda
             }
         }
 
-        
+
 
         private void txtRazaosoc_KeyPress_1(object sender, KeyPressEventArgs e)
         {
@@ -267,6 +267,6 @@ namespace GuizzoLtda
 
         }
 
-       
+
     }
 }

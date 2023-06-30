@@ -74,6 +74,7 @@
             button1.TabIndex = 2;
             button1.Text = "Buscar";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click_1;
             // 
             // dgPedidoEmp
             // 
@@ -86,16 +87,17 @@
             dgPedidoEmp.RowTemplate.Height = 25;
             dgPedidoEmp.Size = new Size(721, 260);
             dgPedidoEmp.TabIndex = 3;
+            dgPedidoEmp.Visible = false;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(48, 22);
+            label2.Location = new Point(29, 27);
             label2.Name = "label2";
-            label2.Size = new Size(218, 45);
+            label2.Size = new Size(264, 45);
             label2.TabIndex = 5;
-            label2.Text = "Verificar Label";
+            label2.Text = "Verificar Empresa";
             // 
             // toolStrip1
             // 
@@ -125,6 +127,7 @@
             // 
             // toolStripButton2
             // 
+            toolStripButton2.Enabled = false;
             toolStripButton2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             toolStripButton2.ForeColor = Color.Goldenrod;
             toolStripButton2.Image = (Image)resources.GetObject("toolStripButton2.Image");

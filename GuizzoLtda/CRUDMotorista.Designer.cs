@@ -74,7 +74,7 @@
             // 
             // btnReturn
             // 
-            btnReturn.BackColor = Color.FromArgb(193, 11, 0);
+            btnReturn.BackColor = Color.FromArgb(173, 11, 0);
             btnReturn.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnReturn.ForeColor = Color.Goldenrod;
             btnReturn.Image = (Image)resources.GetObject("btnReturn.Image");

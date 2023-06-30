@@ -70,7 +70,7 @@
             btnEscolherFotoEmp.BackgroundImage = (Image)resources.GetObject("btnEscolherFotoEmp.BackgroundImage");
             btnEscolherFotoEmp.BackgroundImageLayout = ImageLayout.Stretch;
             btnEscolherFotoEmp.FlatAppearance.BorderSize = 0;
-            btnEscolherFotoEmp.FlatStyle = FlatStyle.Popup;
+            btnEscolherFotoEmp.FlatStyle = FlatStyle.Flat;
             btnEscolherFotoEmp.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             btnEscolherFotoEmp.ForeColor = Color.Black;
             btnEscolherFotoEmp.Location = new Point(430, 288);
@@ -97,11 +97,11 @@
             // 
             btnCadEndereco.BackColor = Color.Black;
             btnCadEndereco.FlatStyle = FlatStyle.Flat;
-            btnCadEndereco.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            btnCadEndereco.ForeColor = Color.White;
-            btnCadEndereco.Location = new Point(350, 400);
+            btnCadEndereco.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            btnCadEndereco.ForeColor = Color.Goldenrod;
+            btnCadEndereco.Location = new Point(320, 408);
             btnCadEndereco.Name = "btnCadEndereco";
-            btnCadEndereco.Size = new Size(230, 55);
+            btnCadEndereco.Size = new Size(284, 61);
             btnCadEndereco.TabIndex = 21;
             btnCadEndereco.Text = "Cadastrar";
             btnCadEndereco.UseVisualStyleBackColor = false;
@@ -137,7 +137,10 @@
             // 
             // txtIncEstad
             // 
-            txtIncEstad.Location = new Point(347, 247);
+            txtIncEstad.BackColor = Color.Black;
+            txtIncEstad.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtIncEstad.ForeColor = Color.Goldenrod;
+            txtIncEstad.Location = new Point(347, 230);
             txtIncEstad.Multiline = true;
             txtIncEstad.Name = "txtIncEstad";
             txtIncEstad.Size = new Size(219, 27);
@@ -146,7 +149,10 @@
             // 
             // txtCnpj
             // 
-            txtCnpj.Location = new Point(347, 144);
+            txtCnpj.BackColor = Color.Black;
+            txtCnpj.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtCnpj.ForeColor = Color.Goldenrod;
+            txtCnpj.Location = new Point(347, 156);
             txtCnpj.Multiline = true;
             txtCnpj.Name = "txtCnpj";
             txtCnpj.Size = new Size(219, 26);
@@ -155,10 +161,12 @@
             // 
             // txtRazaosoc
             // 
-            txtRazaosoc.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtRazaosoc.Location = new Point(347, 64);
+            txtRazaosoc.BackColor = Color.Black;
+            txtRazaosoc.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtRazaosoc.ForeColor = Color.Goldenrod;
+            txtRazaosoc.Location = new Point(347, 86);
             txtRazaosoc.Name = "txtRazaosoc";
-            txtRazaosoc.Size = new Size(219, 29);
+            txtRazaosoc.Size = new Size(219, 24);
             txtRazaosoc.TabIndex = 6;
             txtRazaosoc.KeyPress += txtRazaosoc_KeyPress_1;
             // 
@@ -167,7 +175,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Leelawadee UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(347, 33);
+            label1.Location = new Point(347, 62);
             label1.Name = "label1";
             label1.Size = new Size(97, 21);
             label1.TabIndex = 2;
@@ -178,7 +186,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Leelawadee UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(347, 106);
+            label2.Location = new Point(347, 132);
             label2.Name = "label2";
             label2.Size = new Size(42, 21);
             label2.TabIndex = 3;
@@ -189,7 +197,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Leelawadee UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(347, 196);
+            label3.Location = new Point(347, 206);
             label3.Name = "label3";
             label3.Size = new Size(133, 21);
             label3.TabIndex = 4;
@@ -222,19 +230,23 @@
             // 
             // txtEstado
             // 
-            txtEstado.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtEstado.BackColor = Color.Black;
+            txtEstado.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtEstado.ForeColor = Color.Goldenrod;
             txtEstado.Location = new Point(124, 38);
             txtEstado.Name = "txtEstado";
-            txtEstado.Size = new Size(219, 27);
+            txtEstado.Size = new Size(219, 24);
             txtEstado.TabIndex = 31;
             txtEstado.KeyPress += txtEstado_KeyPress;
             // 
             // txtCidade
             // 
-            txtCidade.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtCidade.BackColor = Color.Black;
+            txtCidade.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtCidade.ForeColor = Color.Goldenrod;
             txtCidade.Location = new Point(124, 91);
             txtCidade.Name = "txtCidade";
-            txtCidade.Size = new Size(219, 27);
+            txtCidade.Size = new Size(219, 24);
             txtCidade.TabIndex = 28;
             txtCidade.KeyPress += txtCidade_KeyPress;
             // 
@@ -260,7 +272,9 @@
             // 
             // txtRua
             // 
+            txtRua.BackColor = Color.Black;
             txtRua.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtRua.ForeColor = Color.Goldenrod;
             txtRua.Location = new Point(124, 226);
             txtRua.Name = "txtRua";
             txtRua.Size = new Size(219, 24);
@@ -269,16 +283,20 @@
             // 
             // txtCep
             // 
-            txtCep.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtCep.BackColor = Color.Black;
+            txtCep.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtCep.ForeColor = Color.Goldenrod;
             txtCep.Location = new Point(124, 157);
             txtCep.Name = "txtCep";
-            txtCep.Size = new Size(219, 27);
+            txtCep.Size = new Size(219, 24);
             txtCep.TabIndex = 26;
             txtCep.KeyPress += txtCep_KeyPress;
             // 
             // txtNumero
             // 
+            txtNumero.BackColor = Color.Black;
             txtNumero.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtNumero.ForeColor = Color.Goldenrod;
             txtNumero.Location = new Point(529, 125);
             txtNumero.Name = "txtNumero";
             txtNumero.Size = new Size(120, 27);
@@ -287,10 +305,12 @@
             // 
             // txtBairro
             // 
-            txtBairro.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtBairro.BackColor = Color.Black;
+            txtBairro.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtBairro.ForeColor = Color.Goldenrod;
             txtBairro.Location = new Point(124, 286);
             txtBairro.Name = "txtBairro";
-            txtBairro.Size = new Size(219, 27);
+            txtBairro.Size = new Size(219, 24);
             txtBairro.TabIndex = 11;
             txtBairro.KeyPress += txtBairro_KeyPress;
             // 
@@ -346,7 +366,9 @@
             // 
             // txtComple
             // 
+            txtComple.BackColor = Color.Black;
             txtComple.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtComple.ForeColor = Color.Goldenrod;
             txtComple.Location = new Point(529, 199);
             txtComple.Name = "txtComple";
             txtComple.Size = new Size(120, 27);

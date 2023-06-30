@@ -47,7 +47,7 @@
             labelCnpj.AutoSize = true;
             labelCnpj.FlatStyle = FlatStyle.Popup;
             labelCnpj.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            labelCnpj.Location = new Point(72, 79);
+            labelCnpj.Location = new Point(72, 112);
             labelCnpj.Name = "labelCnpj";
             labelCnpj.Size = new Size(55, 25);
             labelCnpj.TabIndex = 1;
@@ -68,7 +68,7 @@
             txtCnpj.BackColor = Color.Black;
             txtCnpj.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             txtCnpj.ForeColor = Color.Goldenrod;
-            txtCnpj.Location = new Point(72, 107);
+            txtCnpj.Location = new Point(72, 140);
             txtCnpj.Name = "txtCnpj";
             txtCnpj.Size = new Size(176, 27);
             txtCnpj.TabIndex = 5;
@@ -96,7 +96,7 @@
             btnConfirmar.FlatStyle = FlatStyle.Flat;
             btnConfirmar.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             btnConfirmar.ForeColor = Color.Goldenrod;
-            btnConfirmar.Location = new Point(72, 390);
+            btnConfirmar.Location = new Point(72, 355);
             btnConfirmar.Name = "btnConfirmar";
             btnConfirmar.Size = new Size(235, 68);
             btnConfirmar.TabIndex = 10;
@@ -110,33 +110,35 @@
             toolStrip1.Items.AddRange(new ToolStripItem[] { btnMenu, toolStripSeparator1, returnBtn });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(929, 25);
+            toolStrip1.Size = new Size(929, 27);
             toolStrip1.TabIndex = 11;
             toolStrip1.Text = "toolStrip1";
             // 
             // btnMenu
             // 
+            btnMenu.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnMenu.ForeColor = Color.Goldenrod;
             btnMenu.Image = Properties.Resources._688879_arrows_512x512;
             btnMenu.ImageTransparentColor = Color.Magenta;
             btnMenu.Name = "btnMenu";
-            btnMenu.Size = new Size(58, 22);
+            btnMenu.Size = new Size(69, 24);
             btnMenu.Text = "Menu";
             btnMenu.Click += btnMenu_Click_2;
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(6, 25);
+            toolStripSeparator1.Size = new Size(6, 27);
             // 
             // returnBtn
             // 
             returnBtn.Enabled = false;
+            returnBtn.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             returnBtn.ForeColor = Color.Goldenrod;
             returnBtn.Image = Properties.Resources.FlechaReturn;
             returnBtn.ImageTransparentColor = Color.Magenta;
             returnBtn.Name = "returnBtn";
-            returnBtn.Size = new Size(72, 22);
+            returnBtn.Size = new Size(91, 24);
             returnBtn.Text = "Retornar";
             returnBtn.Click += returnBtn_Click_1;
             // 

@@ -157,5 +157,10 @@ namespace GuizzoLtda
             flogout.Show();
             Hide();
         }
+
+        private void toolStripTextBox2_ButtonClick(object sender, EventArgs e)
+        {
+
+        }
     }
 }

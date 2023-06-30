@@ -22,15 +22,37 @@ namespace GuizzoLtda
         int idcliente;
         EmpresaControle usu = new EmpresaControle();
         EmpresaModelo us = new EmpresaModelo();
-        public PedidoEmpresa()
+        public PedidoEmpresa(EmpresaModelo um, int id)
         {
+            us = um;
+            idcliente = id;
             InitializeComponent();
             us = usu.CarregaEmpresa(idcliente);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void PedidoEmpresa_Load(object sender, EventArgs e)
         {
 
+        }
+
+
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            FuncionarioMenu fmenureturn = new FuncionarioMenu(us, idcliente);
+            this.Hide();
+            fmenureturn.Show();
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            PedidoEmpresa fmenureturn = new PedidoEmpresa(us, idcliente);
+            this.Hide();
+            fmenureturn.Show();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
             if (txtIdEmpresa.Text != "")
             {
                 try
@@ -47,6 +69,12 @@ namespace GuizzoLtda
                         adaptor.Fill(SearchDataTable);
                     }
                     dgPedidoEmp.DataSource = SearchDataTable;
+                    dgPedidoEmp.Visible = true;
+                    label1.Visible = false;
+                    label2.Visible = false;
+                    txtIdEmpresa.Visible = false;
+                    button1.Visible = false;
+                    toolStripButton2.Enabled = true;
 
                     con.Close();
                 }
@@ -57,28 +85,6 @@ namespace GuizzoLtda
 
 
             }
-        }
-
-        private void PedidoEmpresa_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            FuncionarioMenu fmenureturn = new FuncionarioMenu(us, idcliente);
-            this.Hide();
-            fmenureturn.Show();
-        }
-
-        private void toolStripButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripButton2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -44,17 +44,18 @@
             toolStripSeparator1 = new ToolStripSeparator();
             toolStripButton1 = new ToolStripButton();
             pbFotoAdminMenu = new PictureBox();
+            toolStripSeparator3 = new ToolStripSeparator();
             toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbFotoAdminMenu).BeginInit();
             SuspendLayout();
             // 
             // toolStrip1
             // 
-            toolStrip1.BackColor = Color.FromArgb(192, 11, 0);
+            toolStrip1.BackColor = Color.FromArgb(173, 11, 0);
             toolStrip1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             toolStrip1.GripStyle = ToolStripGripStyle.Hidden;
             toolStrip1.ImageScalingSize = new Size(20, 20);
-            toolStrip1.Items.AddRange(new ToolStripItem[] { btnReturn, toolStripTextBox2, toolStripSeparator2, toolStripSplitButton1, toolStripSplitButton2, toolStripSeparator1, toolStripButton1 });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { btnReturn, toolStripSeparator3, toolStripTextBox2, toolStripSeparator2, toolStripSplitButton1, toolStripSplitButton2, toolStripSeparator1, toolStripButton1 });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(929, 27);
@@ -63,24 +64,25 @@
             // 
             // btnReturn
             // 
-            btnReturn.BackColor = Color.Goldenrod;
-            btnReturn.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btnReturn.BackColor = Color.Transparent;
+            btnReturn.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnReturn.ForeColor = Color.Goldenrod;
             btnReturn.Image = Properties.Resources._688879_arrows_512x512;
             btnReturn.ImageTransparentColor = Color.Magenta;
             btnReturn.Name = "btnReturn";
-            btnReturn.Size = new Size(24, 24);
-            btnReturn.Text = "toolStripButton1";
+            btnReturn.Size = new Size(73, 24);
+            btnReturn.Text = "Menu";
             btnReturn.Click += btnReturn_Click_1;
             // 
             // toolStripTextBox2
             // 
             toolStripTextBox2.DropDownItems.AddRange(new ToolStripItem[] { abrirPedidoToolStripMenuItem, pedidosToolStripMenuItem, veiculosToolStripMenuItem, motoristasToolStripMenuItem, empresasToolStripMenuItem });
-            toolStripTextBox2.Font = new Font("Leelawadee UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            toolStripTextBox2.Font = new Font("Leelawadee UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             toolStripTextBox2.ForeColor = Color.Goldenrod;
             toolStripTextBox2.Name = "toolStripTextBox2";
-            toolStripTextBox2.Size = new Size(70, 24);
+            toolStripTextBox2.Size = new Size(74, 24);
             toolStripTextBox2.Text = "Alterar";
+            toolStripTextBox2.ButtonClick += toolStripTextBox2_ButtonClick;
             // 
             // abrirPedidoToolStripMenuItem
             // 
@@ -139,12 +141,12 @@
             // toolStripSplitButton2
             // 
             toolStripSplitButton2.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            toolStripSplitButton2.Font = new Font("Leelawadee UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            toolStripSplitButton2.Font = new Font("Leelawadee UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             toolStripSplitButton2.ForeColor = Color.Goldenrod;
             toolStripSplitButton2.Image = (Image)resources.GetObject("toolStripSplitButton2.Image");
             toolStripSplitButton2.ImageTransparentColor = Color.Magenta;
             toolStripSplitButton2.Name = "toolStripSplitButton2";
-            toolStripSplitButton2.Size = new Size(92, 24);
+            toolStripSplitButton2.Size = new Size(94, 24);
             toolStripSplitButton2.Text = "Solicitações";
             toolStripSplitButton2.TextImageRelation = TextImageRelation.TextAboveImage;
             toolStripSplitButton2.Click += toolStripSplitButton2_Click;
@@ -157,12 +159,12 @@
             // toolStripButton1
             // 
             toolStripButton1.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            toolStripButton1.Font = new Font("Leelawadee UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            toolStripButton1.Font = new Font("Leelawadee UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             toolStripButton1.ForeColor = Color.Goldenrod;
             toolStripButton1.Image = (Image)resources.GetObject("toolStripButton1.Image");
             toolStripButton1.ImageTransparentColor = Color.Magenta;
             toolStripButton1.Name = "toolStripButton1";
-            toolStripButton1.Size = new Size(128, 24);
+            toolStripButton1.Size = new Size(134, 24);
             toolStripButton1.Text = "Cadastros Cliente";
             toolStripButton1.Click += toolStripButton1_Click;
             // 
@@ -176,6 +178,11 @@
             pbFotoAdminMenu.SizeMode = PictureBoxSizeMode.StretchImage;
             pbFotoAdminMenu.TabIndex = 2;
             pbFotoAdminMenu.TabStop = false;
+            // 
+            // toolStripSeparator3
+            // 
+            toolStripSeparator3.Name = "toolStripSeparator3";
+            toolStripSeparator3.Size = new Size(6, 27);
             // 
             // AdminMenu
             // 
@@ -214,5 +221,6 @@
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripButton toolStripButton1;
         private ToolStripButton toolStripSplitButton2;
+        private ToolStripSeparator toolStripSeparator3;
     }
 }
