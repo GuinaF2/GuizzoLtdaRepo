@@ -35,8 +35,6 @@
             btnAtualizar = new ToolStripButton();
             toolStripSeparator1 = new ToolStripSeparator();
             btnCad = new ToolStripButton();
-            toolStripSeparator2 = new ToolStripSeparator();
-            ajudaToolStripButton = new ToolStripButton();
             labelcargo = new Label();
             cbCargo = new ComboBox();
             labelsenha = new Label();
@@ -47,6 +45,7 @@
             labelid = new Label();
             SaveCreate = new Button();
             SaveUpdate = new Button();
+            toolStripSeparator2 = new ToolStripSeparator();
             ((System.ComponentModel.ISupportInitialize)dataGridCRUD).BeginInit();
             toolStrip1.SuspendLayout();
             SuspendLayout();
@@ -69,9 +68,9 @@
             // 
             // toolStrip1
             // 
-            toolStrip1.BackColor = Color.Black;
+            toolStrip1.BackColor = Color.FromArgb(173, 11, 0);
             toolStrip1.ImageScalingSize = new Size(20, 20);
-            toolStrip1.Items.AddRange(new ToolStripItem[] { btnReturn, btnAtualizar, toolStripSeparator1, btnCad, toolStripSeparator2, ajudaToolStripButton });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { btnReturn, toolStripSeparator2, btnAtualizar, toolStripSeparator1, btnCad });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(929, 27);
@@ -80,24 +79,25 @@
             // 
             // btnReturn
             // 
-            btnReturn.BackColor = Color.Goldenrod;
-            btnReturn.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btnReturn.BackColor = Color.FromArgb(193, 11, 0);
+            btnReturn.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnReturn.ForeColor = Color.Goldenrod;
             btnReturn.Image = (Image)resources.GetObject("btnReturn.Image");
             btnReturn.ImageTransparentColor = Color.Magenta;
             btnReturn.Name = "btnReturn";
-            btnReturn.Size = new Size(24, 24);
-            btnReturn.Text = "Retornar";
+            btnReturn.Size = new Size(73, 24);
+            btnReturn.Text = "Menu";
             btnReturn.Click += btnReturn_Click;
             // 
             // btnAtualizar
             // 
-            btnAtualizar.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            btnAtualizar.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnAtualizar.BackColor = Color.FromArgb(193, 11, 0);
+            btnAtualizar.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnAtualizar.Image = (Image)resources.GetObject("btnAtualizar.Image");
             btnAtualizar.ImageTransparentColor = Color.Magenta;
             btnAtualizar.Name = "btnAtualizar";
-            btnAtualizar.Size = new Size(72, 24);
-            btnAtualizar.Text = "Atualizar";
+            btnAtualizar.Size = new Size(82, 24);
+            btnAtualizar.Text = "Alterar";
             btnAtualizar.Click += btnAtualizar_Click;
             // 
             // toolStripSeparator1
@@ -108,45 +108,32 @@
             // btnCad
             // 
             btnCad.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            btnCad.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnCad.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnCad.Image = (Image)resources.GetObject("btnCad.Image");
             btnCad.ImageTransparentColor = Color.Magenta;
             btnCad.Name = "btnCad";
-            btnCad.Size = new Size(76, 24);
+            btnCad.Size = new Size(80, 24);
             btnCad.Text = "Cadastrar";
             btnCad.Click += btnCad_Click;
-            // 
-            // toolStripSeparator2
-            // 
-            toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(6, 27);
-            // 
-            // ajudaToolStripButton
-            // 
-            ajudaToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            ajudaToolStripButton.Image = (Image)resources.GetObject("ajudaToolStripButton.Image");
-            ajudaToolStripButton.ImageTransparentColor = Color.Magenta;
-            ajudaToolStripButton.Name = "ajudaToolStripButton";
-            ajudaToolStripButton.Size = new Size(24, 24);
-            ajudaToolStripButton.Text = "Aju&da";
             // 
             // labelcargo
             // 
             labelcargo.AutoSize = true;
-            labelcargo.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            labelcargo.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             labelcargo.ForeColor = Color.Black;
-            labelcargo.Location = new Point(207, 295);
+            labelcargo.Location = new Point(207, 307);
             labelcargo.Name = "labelcargo";
-            labelcargo.Size = new Size(50, 20);
+            labelcargo.Size = new Size(49, 20);
             labelcargo.TabIndex = 38;
             labelcargo.Text = "Cargo";
             // 
             // cbCargo
             // 
+            cbCargo.BackColor = Color.Black;
             cbCargo.DropDownStyle = ComboBoxStyle.DropDownList;
             cbCargo.FormattingEnabled = true;
             cbCargo.Items.AddRange(new object[] { "1", "2" });
-            cbCargo.Location = new Point(207, 318);
+            cbCargo.Location = new Point(207, 330);
             cbCargo.Name = "cbCargo";
             cbCargo.Size = new Size(63, 23);
             cbCargo.TabIndex = 37;
@@ -156,7 +143,7 @@
             labelsenha.AutoSize = true;
             labelsenha.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             labelsenha.ForeColor = Color.Black;
-            labelsenha.Location = new Point(181, 223);
+            labelsenha.Location = new Point(181, 226);
             labelsenha.Name = "labelsenha";
             labelsenha.Size = new Size(70, 30);
             labelsenha.TabIndex = 35;
@@ -175,29 +162,35 @@
             // 
             // txtSenha
             // 
-            txtSenha.BackColor = Color.White;
+            txtSenha.BackColor = Color.Black;
+            txtSenha.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtSenha.ForeColor = Color.Goldenrod;
             txtSenha.Location = new Point(181, 269);
             txtSenha.Name = "txtSenha";
-            txtSenha.Size = new Size(125, 23);
+            txtSenha.Size = new Size(125, 27);
             txtSenha.TabIndex = 33;
             txtSenha.KeyPress += txtSenha_KeyPress_1;
             // 
             // txtNome
             // 
-            txtNome.BackColor = Color.White;
+            txtNome.BackColor = Color.Black;
+            txtNome.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtNome.ForeColor = Color.Goldenrod;
             txtNome.Location = new Point(181, 196);
             txtNome.Name = "txtNome";
-            txtNome.Size = new Size(125, 23);
+            txtNome.Size = new Size(125, 27);
             txtNome.TabIndex = 32;
             txtNome.KeyPress += txtNome_KeyPress_1;
             // 
             // txtID
             // 
-            txtID.BackColor = Color.White;
+            txtID.BackColor = Color.Black;
             txtID.Enabled = false;
-            txtID.Location = new Point(181, 119);
+            txtID.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtID.ForeColor = Color.Goldenrod;
+            txtID.Location = new Point(181, 115);
             txtID.Name = "txtID";
-            txtID.Size = new Size(125, 23);
+            txtID.Size = new Size(125, 27);
             txtID.TabIndex = 31;
             // 
             // labelid
@@ -205,20 +198,21 @@
             labelid.AutoSize = true;
             labelid.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             labelid.ForeColor = Color.Black;
-            labelid.Location = new Point(181, 70);
+            labelid.Location = new Point(181, 66);
             labelid.Name = "labelid";
             labelid.Size = new Size(107, 30);
             labelid.TabIndex = 30;
-            labelid.Text = "Id Usuario";
+            labelid.Text = "Id Usuário";
             // 
             // SaveCreate
             // 
             SaveCreate.BackColor = Color.Black;
-            SaveCreate.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            SaveCreate.FlatStyle = FlatStyle.Flat;
+            SaveCreate.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
             SaveCreate.ForeColor = Color.Goldenrod;
             SaveCreate.Location = new Point(94, 388);
             SaveCreate.Name = "SaveCreate";
-            SaveCreate.Size = new Size(300, 50);
+            SaveCreate.Size = new Size(300, 65);
             SaveCreate.TabIndex = 29;
             SaveCreate.Text = "Salvar Cadastro";
             SaveCreate.UseVisualStyleBackColor = false;
@@ -238,6 +232,11 @@
             SaveUpdate.UseVisualStyleBackColor = false;
             SaveUpdate.Visible = false;
             SaveUpdate.Click += SaveUpdate_Click_1;
+            // 
+            // toolStripSeparator2
+            // 
+            toolStripSeparator2.Name = "toolStripSeparator2";
+            toolStripSeparator2.Size = new Size(6, 27);
             // 
             // CRUDUser
             // 
@@ -278,7 +277,6 @@
         private ToolStripButton btnAtualizar;
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripButton btnCad;
-        private ToolStripButton ajudaToolStripButton;
         private Label labelcargo;
         private ComboBox cbCargo;
         private Label labelsenha;

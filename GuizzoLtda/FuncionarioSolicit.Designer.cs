@@ -34,15 +34,14 @@
             labeldesc = new Label();
             cbTipoSolicit = new ComboBox();
             txtDescricao = new TextBox();
-            pictureBox1 = new PictureBox();
             button1 = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // btnConfirmar
             // 
-            btnConfirmar.BackColor = Color.FromArgb(173, 11, 0);
-            btnConfirmar.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            btnConfirmar.BackColor = Color.Black;
+            btnConfirmar.FlatStyle = FlatStyle.Flat;
+            btnConfirmar.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             btnConfirmar.ForeColor = Color.Goldenrod;
             btnConfirmar.Location = new Point(261, 371);
             btnConfirmar.Name = "btnConfirmar";
@@ -56,7 +55,7 @@
             // 
             labeltipo.AutoSize = true;
             labeltipo.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            labeltipo.ForeColor = Color.Goldenrod;
+            labeltipo.ForeColor = Color.Black;
             labeltipo.Location = new Point(142, 9);
             labeltipo.Name = "labeltipo";
             labeltipo.Size = new Size(171, 25);
@@ -78,38 +77,36 @@
             // 
             // cbTipoSolicit
             // 
+            cbTipoSolicit.BackColor = Color.Black;
+            cbTipoSolicit.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            cbTipoSolicit.ForeColor = Color.Goldenrod;
             cbTipoSolicit.FormattingEnabled = true;
             cbTipoSolicit.Items.AddRange(new object[] { "Manutenção", "Requisitar Processos", "Atualização de Dados" });
-            cbTipoSolicit.Location = new Point(162, 47);
+            cbTipoSolicit.Location = new Point(157, 37);
             cbTipoSolicit.Name = "cbTipoSolicit";
-            cbTipoSolicit.Size = new Size(121, 23);
+            cbTipoSolicit.Size = new Size(121, 28);
             cbTipoSolicit.TabIndex = 3;
             // 
             // txtDescricao
             // 
+            txtDescricao.BackColor = Color.Black;
+            txtDescricao.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtDescricao.ForeColor = Color.Goldenrod;
             txtDescricao.Location = new Point(142, 110);
             txtDescricao.Multiline = true;
             txtDescricao.Name = "txtDescricao";
             txtDescricao.Size = new Size(491, 224);
             txtDescricao.TabIndex = 4;
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(650, -18);
-            pictureBox1.Margin = new Padding(3, 2, 3, 2);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(173, 178);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 5;
-            pictureBox1.TabStop = false;
-            // 
             // button1
             // 
-            button1.BackColor = Color.Goldenrod;
-            button1.BackgroundImage = Properties.Resources._688879_arrows_512x512;
+            button1.BackColor = Color.FromArgb(173, 11, 0);
+            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
             button1.BackgroundImageLayout = ImageLayout.Stretch;
-            button1.Location = new Point(1, 0);
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.ForeColor = Color.Transparent;
+            button1.Location = new Point(-1, 0);
             button1.Name = "button1";
             button1.Size = new Size(52, 34);
             button1.TabIndex = 6;
@@ -121,10 +118,9 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Black;
+            BackColor = Color.FromArgb(173, 11, 0);
             ClientSize = new Size(800, 450);
             Controls.Add(button1);
-            Controls.Add(pictureBox1);
             Controls.Add(txtDescricao);
             Controls.Add(cbTipoSolicit);
             Controls.Add(labeldesc);
@@ -134,7 +130,6 @@
             Name = "FuncionarioSolicit";
             Text = "Funcionario";
             Load += FuncionarioSolicit_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -146,7 +141,6 @@
         private Label labeldesc;
         private ComboBox cbTipoSolicit;
         private TextBox txtDescricao;
-        private PictureBox pictureBox1;
         private Button button1;
     }
 }

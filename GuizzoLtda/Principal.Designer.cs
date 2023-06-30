@@ -40,8 +40,9 @@
             // btnUsuario
             // 
             btnUsuario.BackColor = Color.Black;
+            btnUsuario.FlatStyle = FlatStyle.Flat;
             btnUsuario.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
-            btnUsuario.ForeColor = Color.White;
+            btnUsuario.ForeColor = Color.Goldenrod;
             btnUsuario.Location = new Point(172, 140);
             btnUsuario.Name = "btnUsuario";
             btnUsuario.Size = new Size(261, 89);
@@ -53,8 +54,9 @@
             // btnAdmin
             // 
             btnAdmin.BackColor = Color.Black;
+            btnAdmin.FlatStyle = FlatStyle.Flat;
             btnAdmin.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
-            btnAdmin.ForeColor = Color.White;
+            btnAdmin.ForeColor = Color.Goldenrod;
             btnAdmin.Location = new Point(172, 319);
             btnAdmin.Name = "btnAdmin";
             btnAdmin.Size = new Size(261, 87);
@@ -66,7 +68,7 @@
             // label1
             // 
             label1.Font = new Font("Leelawadee UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.White;
+            label1.ForeColor = Color.Black;
             label1.Location = new Point(128, 40);
             label1.Name = "label1";
             label1.Size = new Size(348, 38);

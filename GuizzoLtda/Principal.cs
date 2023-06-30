@@ -29,7 +29,7 @@ namespace GuizzoLtda
 
         private void btnUsuario_Click(object sender, EventArgs e)
         {
-            FuncionarioCadLog ffunccad = new FuncionarioCadLog(us,idcliente);
+            FuncionarioCadLog ffunccad = new FuncionarioCadLog(us, idcliente);
             this.Hide();
             ffunccad.Show();
         }

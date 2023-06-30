@@ -50,7 +50,7 @@
             // 
             // toolStrip1
             // 
-            toolStrip1.BackColor = Color.Black;
+            toolStrip1.BackColor = Color.FromArgb(192, 11, 0);
             toolStrip1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             toolStrip1.GripStyle = ToolStripGripStyle.Hidden;
             toolStrip1.ImageScalingSize = new Size(20, 20);
@@ -85,35 +85,35 @@
             // abrirPedidoToolStripMenuItem
             // 
             abrirPedidoToolStripMenuItem.Name = "abrirPedidoToolStripMenuItem";
-            abrirPedidoToolStripMenuItem.Size = new Size(161, 24);
+            abrirPedidoToolStripMenuItem.Size = new Size(180, 24);
             abrirPedidoToolStripMenuItem.Text = "Funcionarios";
             abrirPedidoToolStripMenuItem.Click += abrirPedidoToolStripMenuItem_Click;
             // 
             // pedidosToolStripMenuItem
             // 
             pedidosToolStripMenuItem.Name = "pedidosToolStripMenuItem";
-            pedidosToolStripMenuItem.Size = new Size(161, 24);
+            pedidosToolStripMenuItem.Size = new Size(180, 24);
             pedidosToolStripMenuItem.Text = "Pedidos";
             pedidosToolStripMenuItem.Click += pedidosToolStripMenuItem_Click_1;
             // 
             // veiculosToolStripMenuItem
             // 
             veiculosToolStripMenuItem.Name = "veiculosToolStripMenuItem";
-            veiculosToolStripMenuItem.Size = new Size(161, 24);
+            veiculosToolStripMenuItem.Size = new Size(180, 24);
             veiculosToolStripMenuItem.Text = "Veiculos";
             veiculosToolStripMenuItem.Click += veiculosToolStripMenuItem_Click_1;
             // 
             // motoristasToolStripMenuItem
             // 
             motoristasToolStripMenuItem.Name = "motoristasToolStripMenuItem";
-            motoristasToolStripMenuItem.Size = new Size(161, 24);
+            motoristasToolStripMenuItem.Size = new Size(180, 24);
             motoristasToolStripMenuItem.Text = "Motoristas";
             motoristasToolStripMenuItem.Click += motoristasToolStripMenuItem_Click_1;
             // 
             // empresasToolStripMenuItem
             // 
             empresasToolStripMenuItem.Name = "empresasToolStripMenuItem";
-            empresasToolStripMenuItem.Size = new Size(161, 24);
+            empresasToolStripMenuItem.Size = new Size(180, 24);
             empresasToolStripMenuItem.Text = "Empresas";
             empresasToolStripMenuItem.Click += empresasToolStripMenuItem_Click_1;
             // 

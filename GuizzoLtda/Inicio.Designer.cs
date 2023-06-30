@@ -43,10 +43,10 @@
             // SelectEmp
             // 
             SelectEmp.BackColor = Color.Black;
-            SelectEmp.FlatStyle = FlatStyle.Popup;
+            SelectEmp.FlatStyle = FlatStyle.Flat;
             SelectEmp.Font = new Font("Leelawadee UI", 22.2F, FontStyle.Regular, GraphicsUnit.Point);
-            SelectEmp.ForeColor = Color.White;
-            SelectEmp.Location = new Point(176, 279);
+            SelectEmp.ForeColor = Color.Goldenrod;
+            SelectEmp.Location = new Point(175, 326);
             SelectEmp.Name = "SelectEmp";
             SelectEmp.Size = new Size(332, 84);
             SelectEmp.TabIndex = 2;
@@ -56,7 +56,7 @@
             // 
             // pictureBox2
             // 
-            pictureBox2.BackColor = Color.FromArgb(173, 10, 0);
+            pictureBox2.BackColor = Color.FromArgb(173, 11, 0);
             pictureBox2.BackgroundImage = (Image)resources.GetObject("pictureBox2.BackgroundImage");
             pictureBox2.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox2.Location = new Point(117, 0);
@@ -89,7 +89,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(173, 14, 0);
+            panel1.BackColor = Color.FromArgb(173, 11, 0);
             panel1.Controls.Add(SelectEmp);
             panel1.Controls.Add(pictureBox2);
             panel1.Location = new Point(135, -3);

@@ -31,7 +31,7 @@ namespace GuizzoLtda
 
         private void CRUDEmpresa_Load_1(object sender, EventArgs e)
         {
-           
+
             us = usu.CarregaEmpresa(idcliente);
 
 
@@ -110,7 +110,7 @@ namespace GuizzoLtda
             txtRazaoSocial.Visible = true;
 
 
- 
+
             labelid.Visible = true;
             labelinscestad.Visible = true;
             labelcnpj.Visible = true;

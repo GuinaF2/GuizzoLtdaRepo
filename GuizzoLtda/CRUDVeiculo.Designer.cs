@@ -37,8 +37,6 @@
             btnCad = new ToolStripButton();
             toolStripSeparator2 = new ToolStripSeparator();
             btnApaga = new ToolStripButton();
-            toolStripSeparator = new ToolStripSeparator();
-            ajudaToolStripButton = new ToolStripButton();
             labeltipo = new Label();
             txtPlaca = new TextBox();
             labelplaca = new Label();
@@ -53,6 +51,7 @@
             labelrenavam = new Label();
             labelespecifics = new Label();
             dataSeguro = new TextBox();
+            toolStripSeparator3 = new ToolStripSeparator();
             ((System.ComponentModel.ISupportInitialize)dataGridVeiculo).BeginInit();
             toolStrip1.SuspendLayout();
             SuspendLayout();
@@ -75,9 +74,9 @@
             // 
             // toolStrip1
             // 
-            toolStrip1.BackColor = Color.Black;
+            toolStrip1.BackColor = Color.FromArgb(173, 11, 0);
             toolStrip1.ImageScalingSize = new Size(20, 20);
-            toolStrip1.Items.AddRange(new ToolStripItem[] { btnReturn, btnAtualizar, toolStripSeparator1, btnCad, toolStripSeparator2, btnApaga, toolStripSeparator, ajudaToolStripButton });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { btnReturn, toolStripSeparator3, btnAtualizar, toolStripSeparator1, btnCad, toolStripSeparator2, btnApaga });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(1062, 27);
@@ -86,25 +85,24 @@
             // 
             // btnReturn
             // 
-            btnReturn.BackColor = Color.Goldenrod;
-            btnReturn.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btnReturn.BackColor = Color.FromArgb(173, 11, 0);
+            btnReturn.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnReturn.Image = (Image)resources.GetObject("btnReturn.Image");
             btnReturn.ImageTransparentColor = Color.Magenta;
             btnReturn.Name = "btnReturn";
-            btnReturn.Size = new Size(24, 24);
-            btnReturn.Text = "Retornar";
+            btnReturn.Size = new Size(73, 24);
+            btnReturn.Text = "Menu";
             btnReturn.Click += btnReturn_Click;
             // 
             // btnAtualizar
             // 
-            btnAtualizar.BackColor = Color.Black;
-            btnAtualizar.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            btnAtualizar.Font = new Font("Leelawadee UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnAtualizar.BackColor = Color.FromArgb(173, 11, 0);
+            btnAtualizar.Font = new Font("Leelawadee UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnAtualizar.ForeColor = Color.Goldenrod;
             btnAtualizar.Image = (Image)resources.GetObject("btnAtualizar.Image");
             btnAtualizar.ImageTransparentColor = Color.Magenta;
             btnAtualizar.Name = "btnAtualizar";
-            btnAtualizar.Size = new Size(72, 24);
+            btnAtualizar.Size = new Size(96, 24);
             btnAtualizar.Text = "Atualizar";
             btnAtualizar.Click += btnAtualizar_Click_1;
             // 
@@ -115,14 +113,14 @@
             // 
             // btnCad
             // 
-            btnCad.BackColor = Color.Black;
+            btnCad.BackColor = Color.FromArgb(173, 11, 0);
             btnCad.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            btnCad.Font = new Font("Leelawadee UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnCad.Font = new Font("Leelawadee UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnCad.ForeColor = Color.Goldenrod;
             btnCad.Image = (Image)resources.GetObject("btnCad.Image");
             btnCad.ImageTransparentColor = Color.Magenta;
             btnCad.Name = "btnCad";
-            btnCad.Size = new Size(76, 24);
+            btnCad.Size = new Size(80, 24);
             btnCad.Text = "Cadastrar";
             btnCad.Click += btnCad_Click_1;
             // 
@@ -133,30 +131,15 @@
             // 
             // btnApaga
             // 
-            btnApaga.BackColor = Color.Black;
-            btnApaga.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            btnApaga.Font = new Font("Leelawadee UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnApaga.BackColor = Color.FromArgb(173, 11, 0);
+            btnApaga.Font = new Font("Leelawadee UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnApaga.ForeColor = Color.Goldenrod;
             btnApaga.Image = (Image)resources.GetObject("btnApaga.Image");
             btnApaga.ImageTransparentColor = Color.Magenta;
             btnApaga.Name = "btnApaga";
-            btnApaga.Size = new Size(62, 24);
+            btnApaga.Size = new Size(84, 24);
             btnApaga.Text = "Deletar";
             btnApaga.Click += btnApaga_Click_1;
-            // 
-            // toolStripSeparator
-            // 
-            toolStripSeparator.Name = "toolStripSeparator";
-            toolStripSeparator.Size = new Size(6, 27);
-            // 
-            // ajudaToolStripButton
-            // 
-            ajudaToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            ajudaToolStripButton.Image = (Image)resources.GetObject("ajudaToolStripButton.Image");
-            ajudaToolStripButton.ImageTransparentColor = Color.Magenta;
-            ajudaToolStripButton.Name = "ajudaToolStripButton";
-            ajudaToolStripButton.Size = new Size(24, 24);
-            ajudaToolStripButton.Text = "Aju&da";
             // 
             // labeltipo
             // 
@@ -171,11 +154,13 @@
             // 
             // txtPlaca
             // 
-            txtPlaca.BackColor = Color.White;
+            txtPlaca.BackColor = Color.Black;
+            txtPlaca.Font = new Font("Leelawadee UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtPlaca.ForeColor = Color.Goldenrod;
             txtPlaca.Location = new Point(337, 289);
             txtPlaca.Margin = new Padding(3, 4, 3, 4);
             txtPlaca.Name = "txtPlaca";
-            txtPlaca.Size = new Size(170, 23);
+            txtPlaca.Size = new Size(170, 27);
             txtPlaca.TabIndex = 18;
             txtPlaca.KeyPress += txtPlaca_KeyPress_1;
             // 
@@ -183,7 +168,7 @@
             // 
             labelplaca.AutoSize = true;
             labelplaca.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
-            labelplaca.ForeColor = Color.White;
+            labelplaca.ForeColor = Color.Black;
             labelplaca.Location = new Point(337, 220);
             labelplaca.Name = "labelplaca";
             labelplaca.Size = new Size(139, 30);
@@ -239,7 +224,7 @@
             // 
             labelseguro.AutoSize = true;
             labelseguro.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
-            labelseguro.ForeColor = Color.White;
+            labelseguro.ForeColor = Color.Black;
             labelseguro.Location = new Point(337, 106);
             labelseguro.Name = "labelseguro";
             labelseguro.Size = new Size(133, 30);
@@ -248,19 +233,21 @@
             // 
             // txtIdVeic
             // 
-            txtIdVeic.BackColor = Color.White;
+            txtIdVeic.BackColor = Color.Black;
             txtIdVeic.Enabled = false;
+            txtIdVeic.Font = new Font("Leelawadee UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtIdVeic.ForeColor = Color.Goldenrod;
             txtIdVeic.Location = new Point(80, 181);
             txtIdVeic.Margin = new Padding(3, 4, 3, 4);
             txtIdVeic.Name = "txtIdVeic";
-            txtIdVeic.Size = new Size(170, 23);
+            txtIdVeic.Size = new Size(170, 27);
             txtIdVeic.TabIndex = 31;
             // 
             // labelIdVeic
             // 
             labelIdVeic.AutoSize = true;
             labelIdVeic.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
-            labelIdVeic.ForeColor = Color.White;
+            labelIdVeic.ForeColor = Color.Black;
             labelIdVeic.Location = new Point(80, 106);
             labelIdVeic.Name = "labelIdVeic";
             labelIdVeic.Size = new Size(109, 30);
@@ -269,6 +256,7 @@
             // 
             // cbTipo
             // 
+            cbTipo.BackColor = Color.Black;
             cbTipo.DropDownStyle = ComboBoxStyle.DropDownList;
             cbTipo.ForeColor = Color.White;
             cbTipo.FormattingEnabled = true;
@@ -281,10 +269,13 @@
             // 
             // txtRenavam
             // 
+            txtRenavam.BackColor = Color.Black;
+            txtRenavam.Font = new Font("Leelawadee UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtRenavam.ForeColor = Color.Goldenrod;
             txtRenavam.Location = new Point(80, 289);
             txtRenavam.Margin = new Padding(3, 4, 3, 4);
             txtRenavam.Name = "txtRenavam";
-            txtRenavam.Size = new Size(170, 23);
+            txtRenavam.Size = new Size(170, 27);
             txtRenavam.TabIndex = 34;
             txtRenavam.KeyPress += txtRenavam_KeyPress_1;
             // 
@@ -292,7 +283,7 @@
             // 
             labelrenavam.AutoSize = true;
             labelrenavam.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
-            labelrenavam.ForeColor = Color.White;
+            labelrenavam.ForeColor = Color.Black;
             labelrenavam.Location = new Point(80, 220);
             labelrenavam.Name = "labelrenavam";
             labelrenavam.Size = new Size(102, 30);
@@ -303,7 +294,7 @@
             // 
             labelespecifics.AutoSize = true;
             labelespecifics.Font = new Font("Leelawadee UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            labelespecifics.ForeColor = Color.White;
+            labelespecifics.ForeColor = Color.Black;
             labelespecifics.Location = new Point(153, 53);
             labelespecifics.Name = "labelespecifics";
             labelespecifics.Size = new Size(307, 32);
@@ -312,12 +303,20 @@
             // 
             // dataSeguro
             // 
+            dataSeguro.BackColor = Color.Black;
+            dataSeguro.Font = new Font("Leelawadee UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataSeguro.ForeColor = Color.Goldenrod;
             dataSeguro.Location = new Point(337, 181);
             dataSeguro.Margin = new Padding(3, 4, 3, 4);
             dataSeguro.Name = "dataSeguro";
-            dataSeguro.Size = new Size(170, 23);
+            dataSeguro.Size = new Size(170, 27);
             dataSeguro.TabIndex = 39;
             dataSeguro.KeyPress += dataSeguro_KeyPress_2;
+            // 
+            // toolStripSeparator3
+            // 
+            toolStripSeparator3.Name = "toolStripSeparator3";
+            toolStripSeparator3.Size = new Size(6, 27);
             // 
             // CRUDVeiculo
             // 
@@ -366,8 +365,6 @@
         private ToolStripButton btnCad;
         private ToolStripSeparator toolStripSeparator2;
         private ToolStripButton btnApaga;
-        private ToolStripSeparator toolStripSeparator;
-        private ToolStripButton ajudaToolStripButton;
         private Label labeltipo;
         private TextBox txtPlaca;
         private Label labelplaca;
@@ -382,5 +379,6 @@
         private Label labelrenavam;
         private Label labelespecifics;
         private TextBox dataSeguro;
+        private ToolStripSeparator toolStripSeparator3;
     }
 }

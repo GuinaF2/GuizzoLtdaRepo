@@ -20,16 +20,16 @@ namespace GuizzoLtda
         public Inicio()
         {
 
- 
+
             InitializeComponent();
 
         }
 
-        
-        
+
+
         private void SelectEmp_Click(object sender, EventArgs e)
         {
-            SelecionarEmpresa fadminsol = new SelecionarEmpresa(us,idcliente);
+            SelecionarEmpresa fadminsol = new SelecionarEmpresa(us, idcliente);
             this.Hide();
             fadminsol.Show();
         }

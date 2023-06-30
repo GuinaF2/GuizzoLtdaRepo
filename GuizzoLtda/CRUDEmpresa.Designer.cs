@@ -35,8 +35,6 @@
             btnAtualizar = new ToolStripButton();
             toolStripSeparator1 = new ToolStripSeparator();
             btnApaga = new ToolStripButton();
-            toolStripSeparator = new ToolStripSeparator();
-            ajudaToolStripButton = new ToolStripButton();
             labelcnpj = new Label();
             labelrazaosocial = new Label();
             txtCnpj = new TextBox();
@@ -47,6 +45,7 @@
             SaveUpdate = new Button();
             labelinscestad = new Label();
             txtInscEstadual = new TextBox();
+            toolStripSeparator2 = new ToolStripSeparator();
             ((System.ComponentModel.ISupportInitialize)dataGridCRUDEmpresa).BeginInit();
             toolStrip1.SuspendLayout();
             SuspendLayout();
@@ -68,9 +67,9 @@
             // 
             // toolStrip1
             // 
-            toolStrip1.BackColor = Color.Black;
+            toolStrip1.BackColor = Color.FromArgb(173, 11, 0);
             toolStrip1.ImageScalingSize = new Size(20, 20);
-            toolStrip1.Items.AddRange(new ToolStripItem[] { btnReturn, btnAtualizar, toolStripSeparator1, btnApaga, toolStripSeparator, ajudaToolStripButton });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { btnReturn, toolStripSeparator2, btnAtualizar, toolStripSeparator1, btnApaga });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(929, 28);
@@ -79,24 +78,24 @@
             // 
             // btnReturn
             // 
-            btnReturn.BackColor = Color.Goldenrod;
-            btnReturn.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btnReturn.BackColor = Color.Transparent;
+            btnReturn.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnReturn.ForeColor = Color.Goldenrod;
             btnReturn.Image = (Image)resources.GetObject("btnReturn.Image");
             btnReturn.ImageTransparentColor = Color.Magenta;
             btnReturn.Name = "btnReturn";
-            btnReturn.Size = new Size(24, 25);
-            btnReturn.Text = "Retornar";
+            btnReturn.Size = new Size(73, 25);
+            btnReturn.Text = "Menu";
             btnReturn.Click += btnReturn_Click_1;
             // 
             // btnAtualizar
             // 
-            btnAtualizar.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            btnAtualizar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnAtualizar.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnAtualizar.ForeColor = Color.Goldenrod;
             btnAtualizar.Image = (Image)resources.GetObject("btnAtualizar.Image");
             btnAtualizar.ImageTransparentColor = Color.Magenta;
             btnAtualizar.Name = "btnAtualizar";
-            btnAtualizar.Size = new Size(75, 25);
+            btnAtualizar.Size = new Size(103, 25);
             btnAtualizar.Text = "Atualizar";
             btnAtualizar.Click += btnAtualizar_Click_1;
             // 
@@ -107,29 +106,14 @@
             // 
             // btnApaga
             // 
-            btnApaga.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            btnApaga.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnApaga.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnApaga.ForeColor = Color.Goldenrod;
             btnApaga.Image = (Image)resources.GetObject("btnApaga.Image");
             btnApaga.ImageTransparentColor = Color.Magenta;
             btnApaga.Name = "btnApaga";
-            btnApaga.Size = new Size(64, 25);
+            btnApaga.Size = new Size(90, 25);
             btnApaga.Text = "Deletar";
             btnApaga.Click += btnApaga_Click_1;
-            // 
-            // toolStripSeparator
-            // 
-            toolStripSeparator.Name = "toolStripSeparator";
-            toolStripSeparator.Size = new Size(6, 28);
-            // 
-            // ajudaToolStripButton
-            // 
-            ajudaToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            ajudaToolStripButton.Image = (Image)resources.GetObject("ajudaToolStripButton.Image");
-            ajudaToolStripButton.ImageTransparentColor = Color.Magenta;
-            ajudaToolStripButton.Name = "ajudaToolStripButton";
-            ajudaToolStripButton.Size = new Size(24, 25);
-            ajudaToolStripButton.Text = "Aju&da";
             // 
             // labelcnpj
             // 
@@ -153,29 +137,32 @@
             // 
             // txtCnpj
             // 
-            txtCnpj.BackColor = Color.White;
+            txtCnpj.BackColor = Color.Black;
+            txtCnpj.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             txtCnpj.Location = new Point(155, 259);
             txtCnpj.Name = "txtCnpj";
-            txtCnpj.Size = new Size(206, 23);
+            txtCnpj.Size = new Size(206, 27);
             txtCnpj.TabIndex = 20;
             txtCnpj.KeyPress += txtCnpj_KeyPress;
             // 
             // txtRazaoSocial
             // 
-            txtRazaoSocial.BackColor = Color.White;
+            txtRazaoSocial.BackColor = Color.Black;
+            txtRazaoSocial.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             txtRazaoSocial.Location = new Point(155, 183);
             txtRazaoSocial.Name = "txtRazaoSocial";
-            txtRazaoSocial.Size = new Size(206, 23);
+            txtRazaoSocial.Size = new Size(206, 27);
             txtRazaoSocial.TabIndex = 19;
             txtRazaoSocial.KeyPress += txtRazaoSocial_KeyPress;
             // 
             // txtIdEmpresa
             // 
-            txtIdEmpresa.BackColor = Color.White;
+            txtIdEmpresa.BackColor = Color.Black;
             txtIdEmpresa.Enabled = false;
+            txtIdEmpresa.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             txtIdEmpresa.Location = new Point(155, 112);
             txtIdEmpresa.Name = "txtIdEmpresa";
-            txtIdEmpresa.Size = new Size(206, 23);
+            txtIdEmpresa.Size = new Size(206, 27);
             txtIdEmpresa.TabIndex = 18;
             // 
             // labelid
@@ -191,11 +178,12 @@
             // SaveDelete
             // 
             SaveDelete.BackColor = Color.Black;
+            SaveDelete.FlatStyle = FlatStyle.Flat;
             SaveDelete.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             SaveDelete.ForeColor = Color.Goldenrod;
             SaveDelete.Location = new Point(116, 392);
             SaveDelete.Name = "SaveDelete";
-            SaveDelete.Size = new Size(300, 50);
+            SaveDelete.Size = new Size(320, 74);
             SaveDelete.TabIndex = 15;
             SaveDelete.Text = "Salvar Alteração";
             SaveDelete.UseVisualStyleBackColor = false;
@@ -228,12 +216,19 @@
             // 
             // txtInscEstadual
             // 
-            txtInscEstadual.BackColor = Color.White;
+            txtInscEstadual.BackColor = Color.Black;
+            txtInscEstadual.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtInscEstadual.ForeColor = Color.Goldenrod;
             txtInscEstadual.Location = new Point(155, 332);
             txtInscEstadual.Name = "txtInscEstadual";
-            txtInscEstadual.Size = new Size(206, 23);
+            txtInscEstadual.Size = new Size(206, 27);
             txtInscEstadual.TabIndex = 27;
             txtInscEstadual.KeyPress += txtInscEstadual_KeyPress;
+            // 
+            // toolStripSeparator2
+            // 
+            toolStripSeparator2.Name = "toolStripSeparator2";
+            toolStripSeparator2.Size = new Size(6, 28);
             // 
             // CRUDEmpresa
             // 
@@ -275,8 +270,6 @@
         private ToolStripButton btnCad;
         private ToolStripSeparator toolStripSeparator2;
         private ToolStripButton btnApaga;
-        private ToolStripSeparator toolStripSeparator;
-        private ToolStripButton ajudaToolStripButton;
         private Label labelfoto;
         private Label labelcnpj;
         private Label labelrazaosocial;

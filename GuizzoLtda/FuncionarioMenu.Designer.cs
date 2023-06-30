@@ -39,16 +39,17 @@
             toolStripSeparator4 = new ToolStripSeparator();
             toolStripButton5 = new ToolStripButton();
             pbFotoMenuFunc = new PictureBox();
+            toolStripSeparator1 = new ToolStripSeparator();
             toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbFotoMenuFunc).BeginInit();
             SuspendLayout();
             // 
             // toolStrip1
             // 
-            toolStrip1.BackColor = Color.Black;
+            toolStrip1.BackColor = Color.Transparent;
             toolStrip1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             toolStrip1.ImageScalingSize = new Size(20, 20);
-            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton2, btnVerifyEmp, toolStripSeparator3, toolStripButton3, toolStripSeparator2, toolStripButton4, toolStripSeparator4, toolStripButton5 });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton2, toolStripSeparator1, btnVerifyEmp, toolStripSeparator3, toolStripButton3, toolStripSeparator2, toolStripButton4, toolStripSeparator4, toolStripButton5 });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(929, 27);
@@ -57,23 +58,23 @@
             // 
             // toolStripButton2
             // 
-            toolStripButton2.BackColor = Color.Goldenrod;
-            toolStripButton2.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            toolStripButton2.BackColor = Color.Transparent;
             toolStripButton2.Image = Properties.Resources._688879_arrows_512x512;
             toolStripButton2.ImageTransparentColor = Color.Magenta;
             toolStripButton2.Name = "toolStripButton2";
-            toolStripButton2.Size = new Size(24, 24);
-            toolStripButton2.Text = "toolStripButton2";
+            toolStripButton2.Size = new Size(67, 24);
+            toolStripButton2.Text = "Menu";
             toolStripButton2.Click += toolStripButton2_Click_1;
             // 
             // btnVerifyEmp
             // 
             btnVerifyEmp.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            btnVerifyEmp.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnVerifyEmp.ForeColor = Color.Goldenrod;
             btnVerifyEmp.Image = (Image)resources.GetObject("btnVerifyEmp.Image");
             btnVerifyEmp.ImageTransparentColor = Color.Magenta;
             btnVerifyEmp.Name = "btnVerifyEmp";
-            btnVerifyEmp.Size = new Size(118, 24);
+            btnVerifyEmp.Size = new Size(133, 24);
             btnVerifyEmp.Text = "Encontrar Cliente";
             btnVerifyEmp.TextImageRelation = TextImageRelation.TextAboveImage;
             btnVerifyEmp.Click += btnVerifyEmp_Click;
@@ -86,11 +87,12 @@
             // toolStripButton3
             // 
             toolStripButton3.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            toolStripButton3.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             toolStripButton3.ForeColor = Color.Goldenrod;
             toolStripButton3.Image = (Image)resources.GetObject("toolStripButton3.Image");
             toolStripButton3.ImageTransparentColor = Color.Magenta;
             toolStripButton3.Name = "toolStripButton3";
-            toolStripButton3.Size = new Size(113, 24);
+            toolStripButton3.Size = new Size(128, 24);
             toolStripButton3.Text = "Receber Pedidos";
             toolStripButton3.TextImageRelation = TextImageRelation.TextAboveImage;
             toolStripButton3.Click += toolStripButton3_Click_1;
@@ -103,11 +105,12 @@
             // toolStripButton4
             // 
             toolStripButton4.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            toolStripButton4.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             toolStripButton4.ForeColor = Color.Goldenrod;
             toolStripButton4.Image = (Image)resources.GetObject("toolStripButton4.Image");
             toolStripButton4.ImageTransparentColor = Color.Magenta;
             toolStripButton4.Name = "toolStripButton4";
-            toolStripButton4.Size = new Size(87, 24);
+            toolStripButton4.Size = new Size(100, 24);
             toolStripButton4.Text = "Traçar Rotas";
             toolStripButton4.TextImageRelation = TextImageRelation.TextAboveImage;
             toolStripButton4.Click += toolStripButton4_Click_1;
@@ -120,11 +123,12 @@
             // toolStripButton5
             // 
             toolStripButton5.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            toolStripButton5.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             toolStripButton5.ForeColor = Color.Goldenrod;
             toolStripButton5.Image = (Image)resources.GetObject("toolStripButton5.Image");
             toolStripButton5.ImageTransparentColor = Color.Magenta;
             toolStripButton5.Name = "toolStripButton5";
-            toolStripButton5.Size = new Size(142, 24);
+            toolStripButton5.Size = new Size(160, 24);
             toolStripButton5.Text = "Solicitar Manutenção";
             toolStripButton5.TextImageRelation = TextImageRelation.TextAboveImage;
             toolStripButton5.Click += toolStripButton5_Click_1;
@@ -139,6 +143,11 @@
             pbFotoMenuFunc.SizeMode = PictureBoxSizeMode.StretchImage;
             pbFotoMenuFunc.TabIndex = 1;
             pbFotoMenuFunc.TabStop = false;
+            // 
+            // toolStripSeparator1
+            // 
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            toolStripSeparator1.Size = new Size(6, 27);
             // 
             // FuncionarioMenu
             // 
@@ -180,5 +189,6 @@
         private ToolStripButton toolStripButton4;
         private ToolStripSeparator toolStripSeparator4;
         private ToolStripButton toolStripButton5;
+        private ToolStripSeparator toolStripSeparator1;
     }
 }

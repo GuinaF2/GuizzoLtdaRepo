@@ -60,7 +60,7 @@
             label2.AutoSize = true;
             label2.BackColor = Color.Goldenrod;
             label2.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.ForeColor = Color.White;
+            label2.ForeColor = Color.Black;
             label2.ImeMode = ImeMode.NoControl;
             label2.Location = new Point(581, 100);
             label2.Name = "label2";
@@ -73,7 +73,7 @@
             label3.AutoSize = true;
             label3.BackColor = Color.Goldenrod;
             label3.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.ForeColor = Color.White;
+            label3.ForeColor = Color.Black;
             label3.ImeMode = ImeMode.NoControl;
             label3.Location = new Point(581, 222);
             label3.Name = "label3";
@@ -83,10 +83,10 @@
             // 
             // btnLoginAdmin
             // 
-            btnLoginAdmin.BackColor = Color.FromArgb(192, 0, 0);
-            btnLoginAdmin.FlatStyle = FlatStyle.Popup;
+            btnLoginAdmin.BackColor = Color.Black;
+            btnLoginAdmin.FlatStyle = FlatStyle.Flat;
             btnLoginAdmin.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            btnLoginAdmin.ForeColor = Color.Transparent;
+            btnLoginAdmin.ForeColor = Color.Goldenrod;
             btnLoginAdmin.ImeMode = ImeMode.NoControl;
             btnLoginAdmin.Location = new Point(566, 356);
             btnLoginAdmin.Name = "btnLoginAdmin";
@@ -98,6 +98,7 @@
             // 
             // txtSenhaAdm
             // 
+            txtSenhaAdm.BackColor = Color.Black;
             txtSenhaAdm.BorderStyle = BorderStyle.FixedSingle;
             txtSenhaAdm.Font = new Font("Segoe UI", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
             txtSenhaAdm.Location = new Point(581, 283);
@@ -127,8 +128,10 @@
             // 
             // txtUserAdm
             // 
+            txtUserAdm.BackColor = Color.Black;
             txtUserAdm.BorderStyle = BorderStyle.FixedSingle;
             txtUserAdm.Font = new Font("Segoe UI", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
+            txtUserAdm.ForeColor = Color.Goldenrod;
             txtUserAdm.Location = new Point(90, 131);
             txtUserAdm.Name = "txtUserAdm";
             txtUserAdm.Size = new Size(184, 30);

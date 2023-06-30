@@ -36,8 +36,6 @@
             btnCad = new ToolStripButton();
             toolStripSeparator2 = new ToolStripSeparator();
             btnApaga = new ToolStripButton();
-            toolStripSeparator = new ToolStripSeparator();
-            ajudaToolStripButton = new ToolStripButton();
             labelrg = new Label();
             labelcpf = new Label();
             txtRg = new TextBox();
@@ -58,15 +56,16 @@
             labeltipocnh = new Label();
             cbTipoCnh = new ComboBox();
             dataGridMotorista = new DataGridView();
+            toolStripSeparator3 = new ToolStripSeparator();
             toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridMotorista).BeginInit();
             SuspendLayout();
             // 
             // toolStrip1
             // 
-            toolStrip1.BackColor = Color.Black;
+            toolStrip1.BackColor = Color.FromArgb(173, 11, 0);
             toolStrip1.ImageScalingSize = new Size(20, 20);
-            toolStrip1.Items.AddRange(new ToolStripItem[] { btnReturn, btnAtualizar, toolStripSeparator1, btnCad, toolStripSeparator2, btnApaga, toolStripSeparator, ajudaToolStripButton });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { btnReturn, toolStripSeparator3, btnAtualizar, toolStripSeparator1, btnCad, toolStripSeparator2, btnApaga });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(929, 28);
@@ -75,24 +74,24 @@
             // 
             // btnReturn
             // 
-            btnReturn.BackColor = Color.Goldenrod;
-            btnReturn.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btnReturn.BackColor = Color.FromArgb(193, 11, 0);
+            btnReturn.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnReturn.ForeColor = Color.Goldenrod;
             btnReturn.Image = (Image)resources.GetObject("btnReturn.Image");
             btnReturn.ImageTransparentColor = Color.Magenta;
             btnReturn.Name = "btnReturn";
-            btnReturn.Size = new Size(24, 25);
-            btnReturn.Text = "Retornar";
+            btnReturn.Size = new Size(73, 25);
+            btnReturn.Text = "Menu";
             btnReturn.Click += btnReturn_Click_1;
             // 
             // btnAtualizar
             // 
-            btnAtualizar.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            btnAtualizar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnAtualizar.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnAtualizar.ForeColor = Color.Goldenrod;
             btnAtualizar.Image = (Image)resources.GetObject("btnAtualizar.Image");
             btnAtualizar.ImageTransparentColor = Color.Magenta;
             btnAtualizar.Name = "btnAtualizar";
-            btnAtualizar.Size = new Size(75, 25);
+            btnAtualizar.Size = new Size(103, 25);
             btnAtualizar.Text = "Atualizar";
             btnAtualizar.Click += btnAtualizar_Click_1;
             // 
@@ -104,12 +103,12 @@
             // btnCad
             // 
             btnCad.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            btnCad.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnCad.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnCad.ForeColor = Color.Goldenrod;
             btnCad.Image = (Image)resources.GetObject("btnCad.Image");
             btnCad.ImageTransparentColor = Color.Magenta;
             btnCad.Name = "btnCad";
-            btnCad.Size = new Size(81, 25);
+            btnCad.Size = new Size(86, 25);
             btnCad.Text = "Cadastrar";
             btnCad.Click += btnCad_Click_1;
             // 
@@ -120,29 +119,14 @@
             // 
             // btnApaga
             // 
-            btnApaga.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            btnApaga.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnApaga.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnApaga.ForeColor = Color.Goldenrod;
             btnApaga.Image = (Image)resources.GetObject("btnApaga.Image");
             btnApaga.ImageTransparentColor = Color.Magenta;
             btnApaga.Name = "btnApaga";
-            btnApaga.Size = new Size(64, 25);
+            btnApaga.Size = new Size(90, 25);
             btnApaga.Text = "Deletar";
             btnApaga.Click += btnApaga_Click_1;
-            // 
-            // toolStripSeparator
-            // 
-            toolStripSeparator.Name = "toolStripSeparator";
-            toolStripSeparator.Size = new Size(6, 28);
-            // 
-            // ajudaToolStripButton
-            // 
-            ajudaToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            ajudaToolStripButton.Image = (Image)resources.GetObject("ajudaToolStripButton.Image");
-            ajudaToolStripButton.ImageTransparentColor = Color.Magenta;
-            ajudaToolStripButton.Name = "ajudaToolStripButton";
-            ajudaToolStripButton.Size = new Size(24, 25);
-            ajudaToolStripButton.Text = "Aju&da";
             // 
             // labelrg
             // 
@@ -168,8 +152,9 @@
             // 
             // txtRg
             // 
-            txtRg.BackColor = Color.White;
+            txtRg.BackColor = Color.Black;
             txtRg.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtRg.ForeColor = Color.Goldenrod;
             txtRg.Location = new Point(53, 270);
             txtRg.Name = "txtRg";
             txtRg.Size = new Size(185, 27);
@@ -178,8 +163,9 @@
             // 
             // txtCpf
             // 
-            txtCpf.BackColor = Color.White;
+            txtCpf.BackColor = Color.Black;
             txtCpf.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtCpf.ForeColor = Color.Goldenrod;
             txtCpf.Location = new Point(53, 200);
             txtCpf.Name = "txtCpf";
             txtCpf.Size = new Size(185, 27);
@@ -188,9 +174,10 @@
             // 
             // txtIdMoto
             // 
-            txtIdMoto.BackColor = Color.White;
+            txtIdMoto.BackColor = Color.Black;
             txtIdMoto.Enabled = false;
             txtIdMoto.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtIdMoto.ForeColor = Color.Goldenrod;
             txtIdMoto.Location = new Point(334, 128);
             txtIdMoto.Name = "txtIdMoto";
             txtIdMoto.Size = new Size(125, 27);
@@ -201,7 +188,7 @@
             labelIdMoto.AutoSize = true;
             labelIdMoto.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             labelIdMoto.ForeColor = SystemColors.ActiveCaptionText;
-            labelIdMoto.Location = new Point(334, 96);
+            labelIdMoto.Location = new Point(334, 97);
             labelIdMoto.Name = "labelIdMoto";
             labelIdMoto.Size = new Size(183, 30);
             labelIdMoto.TabIndex = 17;
@@ -210,11 +197,12 @@
             // SaveCreate
             // 
             SaveCreate.BackColor = Color.Black;
+            SaveCreate.FlatStyle = FlatStyle.Flat;
             SaveCreate.Font = new Font("Leelawadee UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
             SaveCreate.ForeColor = Color.Goldenrod;
-            SaveCreate.Location = new Point(100, 423);
+            SaveCreate.Location = new Point(100, 409);
             SaveCreate.Name = "SaveCreate";
-            SaveCreate.Size = new Size(300, 50);
+            SaveCreate.Size = new Size(334, 64);
             SaveCreate.TabIndex = 16;
             SaveCreate.Text = "Salvar Cadastro";
             SaveCreate.UseVisualStyleBackColor = false;
@@ -265,7 +253,7 @@
             labelIdVeiculo.AutoSize = true;
             labelIdVeiculo.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             labelIdVeiculo.ForeColor = SystemColors.ActiveCaptionText;
-            labelIdVeiculo.Location = new Point(334, 168);
+            labelIdVeiculo.Location = new Point(334, 167);
             labelIdVeiculo.Name = "labelIdVeiculo";
             labelIdVeiculo.Size = new Size(161, 30);
             labelIdVeiculo.TabIndex = 29;
@@ -273,8 +261,9 @@
             // 
             // txtNome
             // 
-            txtNome.BackColor = Color.White;
+            txtNome.BackColor = Color.Black;
             txtNome.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtNome.ForeColor = Color.Goldenrod;
             txtNome.Location = new Point(53, 128);
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(185, 27);
@@ -283,8 +272,9 @@
             // 
             // txtIdVeiculo
             // 
-            txtIdVeiculo.BackColor = Color.White;
+            txtIdVeiculo.BackColor = Color.Black;
             txtIdVeiculo.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtIdVeiculo.ForeColor = Color.Goldenrod;
             txtIdVeiculo.Location = new Point(334, 200);
             txtIdVeiculo.Name = "txtIdVeiculo";
             txtIdVeiculo.ReadOnly = true;
@@ -296,7 +286,7 @@
             // 
             labelcodigo.AutoSize = true;
             labelcodigo.Font = new Font("Leelawadee UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            labelcodigo.ForeColor = Color.White;
+            labelcodigo.ForeColor = Color.Black;
             labelcodigo.Location = new Point(347, 41);
             labelcodigo.Name = "labelcodigo";
             labelcodigo.Size = new Size(122, 37);
@@ -307,7 +297,7 @@
             // 
             labelinfo.AutoSize = true;
             labelinfo.Font = new Font("Leelawadee UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            labelinfo.ForeColor = Color.White;
+            labelinfo.ForeColor = Color.Black;
             labelinfo.Location = new Point(53, 41);
             labelinfo.Name = "labelinfo";
             labelinfo.Size = new Size(177, 37);
@@ -319,7 +309,7 @@
             labelcnh.AutoSize = true;
             labelcnh.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             labelcnh.ForeColor = SystemColors.ActiveCaptionText;
-            labelcnh.Location = new Point(53, 304);
+            labelcnh.Location = new Point(53, 312);
             labelcnh.Name = "labelcnh";
             labelcnh.Size = new Size(233, 30);
             labelcnh.TabIndex = 34;
@@ -327,8 +317,9 @@
             // 
             // txtCnh
             // 
-            txtCnh.BackColor = Color.White;
+            txtCnh.BackColor = Color.Black;
             txtCnh.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtCnh.ForeColor = Color.Goldenrod;
             txtCnh.Location = new Point(53, 345);
             txtCnh.Name = "txtCnh";
             txtCnh.Size = new Size(185, 27);
@@ -368,6 +359,11 @@
             dataGridMotorista.RowTemplate.Height = 25;
             dataGridMotorista.Size = new Size(391, 480);
             dataGridMotorista.TabIndex = 38;
+            // 
+            // toolStripSeparator3
+            // 
+            toolStripSeparator3.Name = "toolStripSeparator3";
+            toolStripSeparator3.Size = new Size(6, 28);
             // 
             // CRUDMotorista
             // 
@@ -418,8 +414,6 @@
         private ToolStripButton btnCad;
         private ToolStripSeparator toolStripSeparator2;
         private ToolStripButton btnApaga;
-        private ToolStripSeparator toolStripSeparator;
-        private ToolStripButton ajudaToolStripButton;
         private Label labelrg;
         private Label labelcpf;
         private TextBox txtRg;
@@ -442,5 +436,6 @@
         private Label labelidcliente;
         private TextBox txtIdEmpresa;
         private DataGridView dataGridView1;
+        private ToolStripSeparator toolStripSeparator3;
     }
 }

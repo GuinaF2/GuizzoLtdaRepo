@@ -46,7 +46,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = Color.White;
+            label1.ForeColor = Color.Black;
             label1.Location = new Point(162, 120);
             label1.Name = "label1";
             label1.Size = new Size(73, 30);
@@ -55,7 +55,9 @@
             // 
             // txtLogin
             // 
+            txtLogin.BackColor = Color.Black;
             txtLogin.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            txtLogin.ForeColor = Color.Goldenrod;
             txtLogin.Location = new Point(162, 169);
             txtLogin.Name = "txtLogin";
             txtLogin.Size = new Size(184, 35);
@@ -65,7 +67,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Leelawadee UI", 28.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = Color.White;
+            label3.ForeColor = Color.Black;
             label3.Location = new Point(184, 51);
             label3.Name = "label3";
             label3.Size = new Size(122, 51);
@@ -75,10 +77,10 @@
             // btnLoginFunc
             // 
             btnLoginFunc.BackColor = Color.Black;
-            btnLoginFunc.FlatAppearance.BorderColor = SystemColors.ActiveBorder;
-            btnLoginFunc.FlatAppearance.BorderSize = 0;
+            btnLoginFunc.FlatAppearance.BorderColor = Color.Goldenrod;
+            btnLoginFunc.FlatStyle = FlatStyle.Flat;
             btnLoginFunc.Font = new Font("Leelawadee UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
-            btnLoginFunc.ForeColor = Color.White;
+            btnLoginFunc.ForeColor = Color.Goldenrod;
             btnLoginFunc.Location = new Point(100, 378);
             btnLoginFunc.Name = "btnLoginFunc";
             btnLoginFunc.Size = new Size(306, 74);
@@ -89,7 +91,9 @@
             // 
             // txtSenha
             // 
+            txtSenha.BackColor = Color.Black;
             txtSenha.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            txtSenha.ForeColor = Color.Goldenrod;
             txtSenha.Location = new Point(162, 272);
             txtSenha.Name = "txtSenha";
             txtSenha.PasswordChar = '*';
@@ -101,7 +105,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.ForeColor = Color.White;
+            label4.ForeColor = Color.Black;
             label4.Location = new Point(162, 218);
             label4.Name = "label4";
             label4.Size = new Size(72, 30);
