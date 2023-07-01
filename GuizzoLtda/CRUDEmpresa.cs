@@ -125,46 +125,65 @@ namespace GuizzoLtda
 
         private void SaveDelete_Click_1(object sender, EventArgs e)
         {
-            EmpresaModelo.CodCliente = Convert.ToInt32(txtIdEmpresa.Text);
-            var resposta = DialogResult;
-            resposta = MessageBox.Show("Tem certeza que deseja deletar a Empresa?", "! Aviso !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (resposta == DialogResult.Yes)
+            if (txtIdEmpresa.Text == "")
             {
-                if (Controle.DeletarEmpresa(EmpresaModelo) == true)
+                MessageBox.Show("Selecione o Id do Usuario para atualizar");
+                txtCnpj.Text = String.Empty;
+                txtInscEstadual.Text = String.Empty;
+                txtRazaoSocial.Text = String.Empty;
+
+            }
+            else
+            {
+                EmpresaModelo.CodCliente = Convert.ToInt32(txtIdEmpresa.Text);
+                var resposta = DialogResult;
+                resposta = MessageBox.Show("Tem certeza que deseja deletar a Empresa?", "! Aviso !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (resposta == DialogResult.Yes)
                 {
-                    MessageBox.Show("Cliente Deletado!.");
+                    if (Controle.DeletarEmpresa(EmpresaModelo) == true)
+                    {
+                        MessageBox.Show("Cliente Deletado!.");
+                    }
+                }
+                else if (resposta == DialogResult.No)
+                {
+                    MessageBox.Show("Processo Cancelado.");
                 }
             }
-            else if (resposta == DialogResult.No)
-            {
-                MessageBox.Show("Processo Cancelado.");
-            }
-            CRUDEmpresa fempresacrud = new CRUDEmpresa(us, idcliente);
-            this.Hide();
-            fempresacrud.Show();
+            
         }
 
         private void SaveUpdate_Click_1(object sender, EventArgs e)
         {
-            EmpresaModelo.CodCliente = Convert.ToInt32(txtIdEmpresa.Text);
-            EmpresaModelo.CnpjUser = txtCnpj.Text;
-            EmpresaModelo.RazaoSocialUser = txtRazaoSocial.Text;
-            EmpresaModelo.InscEstadUser = txtInscEstadual.Text;
-
-            if (Controle.AtualizarEmpresa(EmpresaModelo) == true)
+            if (txtIdEmpresa.Text == "")
             {
-                MessageBox.Show("Cadastro Atualizado.");
+                MessageBox.Show("Selecione o Id do Usuario para atualizar");
+                txtCnpj.Text = String.Empty;
+                txtInscEstadual.Text = String.Empty;
+                txtRazaoSocial.Text = String.Empty;
 
-                CRUDEmpresa fempresacrud = new CRUDEmpresa(us, idcliente);
-                this.Hide();
-                fempresacrud.Show();
             }
             else
             {
-                MessageBox.Show("Erro na atualização.");
+                EmpresaModelo.CodCliente = Convert.ToInt32(txtIdEmpresa.Text);
+                EmpresaModelo.CnpjUser = txtCnpj.Text;
+                EmpresaModelo.RazaoSocialUser = txtRazaoSocial.Text;
+                EmpresaModelo.InscEstadUser = txtInscEstadual.Text;
+
+                if (Controle.AtualizarEmpresa(EmpresaModelo) == true)
+                {
+                    MessageBox.Show("Cadastro Atualizado.");
+
+                    CRUDEmpresa fempresacrud = new CRUDEmpresa(us, idcliente);
+                    this.Hide();
+                    fempresacrud.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Erro na atualização.");
+                }
             }
-            this.Controls.Clear();
-            this.InitializeComponent();
+            
         }
 
         private void dataGridCRUDEmpresa_CellClick_1(object sender, DataGridViewCellEventArgs e)
@@ -203,17 +222,26 @@ namespace GuizzoLtda
 
         private void txtRazaoSocial_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            //permite letras e espaços
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Space);
         }
 
         private void txtCnpj_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            txtCnpj.MaxLength = 14;
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
         }
 
         private void txtInscEstadual_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            txtInscEstadual.MaxLength = 14;
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
         }
 
 

@@ -32,6 +32,7 @@
             dataGridVeiculo = new DataGridView();
             toolStrip1 = new ToolStrip();
             btnReturn = new ToolStripButton();
+            toolStripSeparator3 = new ToolStripSeparator();
             btnAtualizar = new ToolStripButton();
             toolStripSeparator1 = new ToolStripSeparator();
             btnCad = new ToolStripButton();
@@ -51,7 +52,6 @@
             labelrenavam = new Label();
             labelespecifics = new Label();
             dataSeguro = new TextBox();
-            toolStripSeparator3 = new ToolStripSeparator();
             ((System.ComponentModel.ISupportInitialize)dataGridVeiculo).BeginInit();
             toolStrip1.SuspendLayout();
             SuspendLayout();
@@ -93,6 +93,11 @@
             btnReturn.Size = new Size(73, 24);
             btnReturn.Text = "Menu";
             btnReturn.Click += btnReturn_Click;
+            // 
+            // toolStripSeparator3
+            // 
+            toolStripSeparator3.Name = "toolStripSeparator3";
+            toolStripSeparator3.Size = new Size(6, 27);
             // 
             // btnAtualizar
             // 
@@ -181,7 +186,7 @@
             SaveCreate.FlatStyle = FlatStyle.Flat;
             SaveCreate.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             SaveCreate.ForeColor = Color.Goldenrod;
-            SaveCreate.Location = new Point(127, 576);
+            SaveCreate.Location = new Point(127, 542);
             SaveCreate.Margin = new Padding(3, 4, 3, 4);
             SaveCreate.Name = "SaveCreate";
             SaveCreate.Size = new Size(343, 67);
@@ -313,11 +318,6 @@
             dataSeguro.Size = new Size(170, 27);
             dataSeguro.TabIndex = 39;
             dataSeguro.KeyPress += dataSeguro_KeyPress_2;
-            // 
-            // toolStripSeparator3
-            // 
-            toolStripSeparator3.Name = "toolStripSeparator3";
-            toolStripSeparator3.Size = new Size(6, 27);
             // 
             // CRUDVeiculo
             // 

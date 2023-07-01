@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CRUDMotorista));
             toolStrip1 = new ToolStrip();
             btnReturn = new ToolStripButton();
+            toolStripSeparator3 = new ToolStripSeparator();
             btnAtualizar = new ToolStripButton();
             toolStripSeparator1 = new ToolStripSeparator();
             btnCad = new ToolStripButton();
@@ -56,7 +57,6 @@
             labeltipocnh = new Label();
             cbTipoCnh = new ComboBox();
             dataGridMotorista = new DataGridView();
-            toolStripSeparator3 = new ToolStripSeparator();
             toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridMotorista).BeginInit();
             SuspendLayout();
@@ -83,6 +83,11 @@
             btnReturn.Size = new Size(73, 25);
             btnReturn.Text = "Menu";
             btnReturn.Click += btnReturn_Click_1;
+            // 
+            // toolStripSeparator3
+            // 
+            toolStripSeparator3.Name = "toolStripSeparator3";
+            toolStripSeparator3.Size = new Size(6, 28);
             // 
             // btnAtualizar
             // 
@@ -200,7 +205,7 @@
             SaveCreate.FlatStyle = FlatStyle.Flat;
             SaveCreate.Font = new Font("Leelawadee UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
             SaveCreate.ForeColor = Color.Goldenrod;
-            SaveCreate.Location = new Point(100, 409);
+            SaveCreate.Location = new Point(87, 400);
             SaveCreate.Name = "SaveCreate";
             SaveCreate.Size = new Size(334, 64);
             SaveCreate.TabIndex = 16;
@@ -212,11 +217,12 @@
             // SaveDelete
             // 
             SaveDelete.BackColor = Color.Black;
+            SaveDelete.FlatStyle = FlatStyle.Flat;
             SaveDelete.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             SaveDelete.ForeColor = Color.Goldenrod;
-            SaveDelete.Location = new Point(100, 424);
+            SaveDelete.Location = new Point(87, 401);
             SaveDelete.Name = "SaveDelete";
-            SaveDelete.Size = new Size(300, 50);
+            SaveDelete.Size = new Size(334, 64);
             SaveDelete.TabIndex = 15;
             SaveDelete.Text = "Salvar Alteração";
             SaveDelete.UseVisualStyleBackColor = false;
@@ -226,11 +232,12 @@
             // SaveUpdate
             // 
             SaveUpdate.BackColor = Color.Black;
+            SaveUpdate.FlatStyle = FlatStyle.Flat;
             SaveUpdate.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             SaveUpdate.ForeColor = Color.Goldenrod;
-            SaveUpdate.Location = new Point(100, 424);
+            SaveUpdate.Location = new Point(87, 400);
             SaveUpdate.Name = "SaveUpdate";
-            SaveUpdate.Size = new Size(300, 50);
+            SaveUpdate.Size = new Size(334, 64);
             SaveUpdate.TabIndex = 14;
             SaveUpdate.Text = "Salvar Alteração";
             SaveUpdate.UseVisualStyleBackColor = false;
@@ -273,6 +280,7 @@
             // txtIdVeiculo
             // 
             txtIdVeiculo.BackColor = Color.Black;
+            txtIdVeiculo.Enabled = false;
             txtIdVeiculo.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             txtIdVeiculo.ForeColor = Color.Goldenrod;
             txtIdVeiculo.Location = new Point(334, 200);
@@ -331,7 +339,7 @@
             labeltipocnh.AutoSize = true;
             labeltipocnh.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             labeltipocnh.ForeColor = SystemColors.ActiveCaptionText;
-            labeltipocnh.Location = new Point(334, 239);
+            labeltipocnh.Location = new Point(326, 239);
             labeltipocnh.Name = "labeltipocnh";
             labeltipocnh.Size = new Size(169, 30);
             labeltipocnh.TabIndex = 36;
@@ -341,7 +349,7 @@
             // 
             cbTipoCnh.FormattingEnabled = true;
             cbTipoCnh.Items.AddRange(new object[] { "A", "B", "C", "D", "E" });
-            cbTipoCnh.Location = new Point(379, 273);
+            cbTipoCnh.Location = new Point(366, 272);
             cbTipoCnh.Name = "cbTipoCnh";
             cbTipoCnh.Size = new Size(55, 23);
             cbTipoCnh.TabIndex = 37;
@@ -360,17 +368,14 @@
             dataGridMotorista.Size = new Size(391, 480);
             dataGridMotorista.TabIndex = 38;
             // 
-            // toolStripSeparator3
-            // 
-            toolStripSeparator3.Name = "toolStripSeparator3";
-            toolStripSeparator3.Size = new Size(6, 28);
-            // 
             // CRUDMotorista
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(173, 11, 0);
             ClientSize = new Size(929, 505);
+            Controls.Add(SaveUpdate);
+            Controls.Add(SaveDelete);
             Controls.Add(cbTipoCnh);
             Controls.Add(labeltipocnh);
             Controls.Add(labelcnh);
@@ -389,8 +394,6 @@
             Controls.Add(txtIdMoto);
             Controls.Add(labelIdMoto);
             Controls.Add(SaveCreate);
-            Controls.Add(SaveDelete);
-            Controls.Add(SaveUpdate);
             Controls.Add(dataGridMotorista);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "CRUDMotorista";

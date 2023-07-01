@@ -42,6 +42,22 @@ namespace GuizzoLtda
 
         private void CRUDPedido_Load_1(object sender, EventArgs e)
         {
+            txtTipoPedido.Visible = false;
+            txtVolume.Visible = false;
+            txtIdPedido.Visible = false;
+            txtIdMoto.Visible = false;
+            txtIdCliente.Visible = false;
+
+            label2.Visible = false;
+            label3.Visible = false;
+            dtPedido.Visible = false;
+            labelidpedido.Visible = false;
+            label4.Visible = false;
+            label1.Visible = false;
+            label5.Visible = false;
+            label6.Visible = false;
+
+
 
             us = usu.CarregaEmpresa(idcliente);
 
@@ -50,6 +66,13 @@ namespace GuizzoLtda
 
         private void btnAtualizar_Click_1(object sender, EventArgs e)
         {
+            txtIdPedido.Text = String.Empty;
+            txtIdCliente.Text = String.Empty;
+            txtIdMoto.Text = String.Empty;
+            txtVolume.Text = String.Empty;
+            txtTipoPedido.Text = String.Empty;
+            dtPedido.Text = String.Empty;
+
             SaveUpdate.Visible = true;
             SaveDelete.Visible = false;
             SaveCreate.Visible = false;
@@ -59,19 +82,38 @@ namespace GuizzoLtda
             txtIdMoto.Visible = true;
             txtVolume.Visible = true;
             dtPedido.Visible = true;
+            txtTipoPedido.Visible = true;
 
 
             labelidpedido.Visible = true;
+            label2.Visible = true;
+            label3.Visible = true;
             label4.Visible = true;
             label5.Visible = true;
             label6.Visible = true;
             label8.Visible = true;
+            label1.Visible = true;
 
             dgPedido.Visible = true;
+
+            txtTipoPedido.Enabled = true;
+            txtIdMoto.Enabled = true;
+            txtIdCliente.Enabled = true;
+            txtTipoPedido.Enabled = true;
+            dtPedido.Enabled = true;
+            txtVolume.Enabled = true;
         }
 
         private void btnCad_Click_1(object sender, EventArgs e)
         {
+            txtIdPedido.Text = String.Empty;
+            txtIdCliente.Text = String.Empty;
+            txtIdMoto.Text = String.Empty;
+            txtVolume.Text = String.Empty;
+            txtTipoPedido.Text = String.Empty;
+            dtPedido.Text = String.Empty;
+
+
             SaveUpdate.Visible = false;
             SaveDelete.Visible = false;
             SaveCreate.Visible = true;
@@ -81,19 +123,38 @@ namespace GuizzoLtda
             txtIdMoto.Visible = true;
             txtVolume.Visible = true;
             dtPedido.Visible = true;
+            txtTipoPedido.Visible = true;
 
 
             labelidpedido.Visible = true;
             label4.Visible = true;
             label5.Visible = true;
+            label2.Visible = true;
+            label3.Visible = true;
             label6.Visible = true;
             label8.Visible = true;
+            label1.Visible = true;
 
             dgPedido.Visible = false;
+
+            txtTipoPedido.Enabled = true;
+            txtIdMoto.Enabled = true;
+            txtIdCliente.Enabled = true;
+            txtTipoPedido.Enabled = true;
+            dtPedido.Enabled = true;
+            txtVolume.Enabled = true;
         }
 
         private void btnApaga_Click_1(object sender, EventArgs e)
         {
+            txtIdPedido.Text = String.Empty;
+            txtIdCliente.Text = String.Empty;
+            txtIdMoto.Text = String.Empty;
+            txtVolume.Text = String.Empty;
+            txtTipoPedido.Text = String.Empty;
+            dtPedido.Text = String.Empty;
+
+
             SaveUpdate.Visible = false;
             SaveDelete.Visible = true;
             SaveCreate.Visible = false;
@@ -103,8 +164,18 @@ namespace GuizzoLtda
             txtIdMoto.Visible = true;
             txtVolume.Visible = true;
             dtPedido.Visible = true;
+            txtTipoPedido.Visible = true;
 
+            txtTipoPedido.Enabled = false;
+            txtIdMoto.Enabled = false;
+            txtIdCliente.Enabled = false;
+            txtTipoPedido.Enabled = false;
+            dtPedido.Enabled = false;
+            txtVolume.Enabled = false;
 
+            label1.Visible = true;
+            label2.Visible = true;
+            label3.Visible = true;
             labelidpedido.Visible = true;
             label4.Visible = true;
             label5.Visible = true;
@@ -116,10 +187,7 @@ namespace GuizzoLtda
 
         private void SaveCreate_Click_1(object sender, EventArgs e)
         {
-            PedidoModelo.CodCliente = Convert.ToInt32(txtIdCliente.Text);
-            PedidoModelo.CodMotorista = Convert.ToInt32(txtIdMoto.Text);
-            PedidoModelo.PedidoData = dtPedido.Text;
-            PedidoModelo.PedidoVolumes = txtVolume.Text;
+
 
 
 
@@ -132,6 +200,10 @@ namespace GuizzoLtda
             {
                 if (Controle.CadastrarPedido(PedidoModelo) >= 1)
                 {
+                    PedidoModelo.CodCliente = Convert.ToInt32(txtIdCliente.Text);
+                    PedidoModelo.CodMotorista = Convert.ToInt32(txtIdMoto.Text);
+                    PedidoModelo.PedidoData = dtPedido.Text;
+                    PedidoModelo.PedidoVolumes = txtVolume.Text;
                     MessageBox.Show("Pedido Cadastrado Com Sucesso!");
                     CRUDPedido fpedidocrud = new CRUDPedido(us, idcliente);
                     this.Hide();
@@ -146,23 +218,38 @@ namespace GuizzoLtda
 
         private void SaveDelete_Click_1(object sender, EventArgs e)
         {
-            PedidoModelo.CodPedido = Convert.ToInt32(txtIdPedido.Text);
-            var resposta = DialogResult;
-            resposta = MessageBox.Show("Tem certeza que deseja deletar o Pedido?", "! Aviso !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (resposta == DialogResult.Yes)
+            if (txtIdPedido.Text == "")
             {
-                if (Controle.DeletarPedido(PedidoModelo) == true)
+                MessageBox.Show("Selecione o Id do Pedido");
+                txtVolume.Text = String.Empty;
+                txtTipoPedido.Text = String.Empty;
+                txtIdMoto.Text = String.Empty;
+                dtPedido.Text = String.Empty;
+                txtIdPedido.Text = String.Empty;
+
+
+            }
+            else
+            {
+                PedidoModelo.CodPedido = Convert.ToInt32(txtIdPedido.Text);
+                var resposta = DialogResult;
+                resposta = MessageBox.Show("Tem certeza que deseja deletar o Pedido?", "! Aviso !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (resposta == DialogResult.Yes)
                 {
-                    MessageBox.Show("Usuário deletado.");
+                    if (Controle.DeletarPedido(PedidoModelo) == true)
+                    {
+                        MessageBox.Show("Pedido deletado.");
+                    }
+                    CRUDPedido fpedidocrud = new CRUDPedido(us, idcliente);
+                    this.Hide();
+                    fpedidocrud.Show();
+                }
+                else if (resposta == DialogResult.No)
+                {
+                    MessageBox.Show("Processo cancelado.");
                 }
             }
-            else if (resposta == DialogResult.No)
-            {
-                MessageBox.Show("Processo cancelado.");
-            }
-            CRUDPedido fpedidocrud = new CRUDPedido(us, idcliente);
-            this.Hide();
-            fpedidocrud.Show();
+
         }
 
         private void SaveUpdate_Click(object sender, EventArgs e)
@@ -220,6 +307,7 @@ namespace GuizzoLtda
                     txtIdMoto.Text = dgPedido.Rows[e.RowIndex].Cells["idmotorista"].Value.ToString();
                     dtPedido.Text = dgPedido.Rows[e.RowIndex].Cells["dtpedido"].Value.ToString();
                     txtVolume.Text = dgPedido.Rows[e.RowIndex].Cells["nmrvolumes"].Value.ToString();
+                    txtTipoPedido.Text = dgPedido.Rows[e.RowIndex].Cells["statuspedido"].Value.ToString();
                 }
 
                 else
@@ -230,7 +318,7 @@ namespace GuizzoLtda
             }
             catch (Exception ex)
             {
-                MessageBox.Show("\t\t    Favor selecionar ID do Motorista. \n\nERRO: " + ex.Message);
+                MessageBox.Show("\t\t    Favor selecionar ID do Pedido. \n\nERRO: " + ex.Message);
             }
         }
 
@@ -249,6 +337,25 @@ namespace GuizzoLtda
 
         }
 
+        private void label3_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void txtTipoPedido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            txtTipoPedido.MaxLength = 50;
+            //permite letras e espaços
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Space);
+        }
+
+        private void txtVolume_KeyPress(object sender, KeyPressEventArgs e)
+        {//permite numeros sem espaço
+            txtVolume.MaxLength = 4;
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

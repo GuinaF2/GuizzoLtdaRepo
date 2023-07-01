@@ -163,26 +163,37 @@ namespace GuizzoLtda
 
         private void SaveDelete_Click_1(object sender, EventArgs e)
         {
-
-            VeiculoModelo.CodVeiculo = Convert.ToInt32(txtIdVeic.Text);
-            var resposta = DialogResult;
-            resposta = MessageBox.Show("Tem Certeza Que Deseja Deletar o Veiculo Selecionado?", "! Aviso !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
-            if (resposta == DialogResult.Yes)
+            if (txtIdVeic.Text == "")
             {
-                if (Controle.DeletarVeiculo(VeiculoModelo) == true)
+                MessageBox.Show("Selecione o Id para ser deletado");
+                txtIdVeic.Text = String.Empty;
+                txtRenavam.Text = String.Empty;
+                txtPlaca.Text = String.Empty;
+                dataSeguro.Text = String.Empty;
+                cbTipo.Text = String.Empty;
+            }
+            else
+            {
+                VeiculoModelo.CodVeiculo = Convert.ToInt32(txtIdVeic.Text);
+                var resposta = DialogResult;
+                resposta = MessageBox.Show("Tem Certeza Que Deseja Deletar o Veiculo Selecionado?", "! Aviso !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (resposta == DialogResult.Yes)
                 {
-                    MessageBox.Show("Veiculo deletado.");
-                    CRUDVeiculo fveiculocrud = new CRUDVeiculo(us, idcliente);
-                    this.Hide();
-                    fveiculocrud.Show();
+                    if (Controle.DeletarVeiculo(VeiculoModelo) == true)
+                    {
+                        MessageBox.Show("Veiculo deletado.");
+                        CRUDVeiculo fveiculocrud = new CRUDVeiculo(us, idcliente);
+                        this.Hide();
+                        fveiculocrud.Show();
+                    }
+                }
+
+                else if (resposta == DialogResult.No)
+                {
+                    MessageBox.Show("Processo cancelado.");
                 }
             }
-            else if (resposta == DialogResult.No)
-            {
-                MessageBox.Show("Processo cancelado.");
-            }
-
         }
 
         private void SaveCreate_Click_1(object sender, EventArgs e)

@@ -33,36 +33,37 @@ namespace GuizzoLtda
         private void SaveDelete_Click_1(object sender, EventArgs e)
         {
 
-
-            MotoristaModelo.CodMotorista = Convert.ToInt32(txtIdMoto.Text);
-            var resposta = DialogResult;
-            resposta = MessageBox.Show("Tem certeza que deseja deletar o Motorista?", "! Aviso !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (resposta == DialogResult.Yes)
+            if (txtIdMoto.Text == "")
             {
-                if (Controle.DeletarMotorista(MotoristaModelo) == true)
+                MessageBox.Show("Selecione o Id para ser deletado");
+                txtNome.Text = String.Empty;
+                txtCpf.Text = String.Empty;
+                txtCnh.Text = String.Empty;
+                txtRg.Text = String.Empty;
+
+            }
+            else
+            {
+                MotoristaModelo.CodMotorista = Convert.ToInt32(txtIdMoto.Text);
+                var resposta = DialogResult;
+                resposta = MessageBox.Show("Tem certeza que deseja deletar o Motorista?", "! Aviso !", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (resposta == DialogResult.Yes)
                 {
-                    MessageBox.Show("Usuário deletado.");
+                    if (Controle.DeletarMotorista(MotoristaModelo) == true)
+                    {
+                        MessageBox.Show("Usuário deletado.");
+                    }
+                }
+                else if (resposta == DialogResult.No)
+                {
+                    MessageBox.Show("Processo cancelado.");
                 }
             }
-            else if (resposta == DialogResult.No)
-            {
-                MessageBox.Show("Processo cancelado.");
-            }
-            CRUDMotorista fmotoristacrud = new CRUDMotorista(us, idcliente);
-            this.Hide();
-            fmotoristacrud.Show();
+
         }
 
         private void SaveCreate_Click_1(object sender, EventArgs e)
         {
-            MotoristaModelo.CodVeiculo = Convert.ToInt32(txtIdVeiculo.Text);
-            MotoristaModelo.cpfMotorista = txtCpf.Text;
-            MotoristaModelo.RgMotorista = txtRg.Text;
-            MotoristaModelo.nomeMotorista = txtNome.Text;
-            MotoristaModelo.CnhMotorista = txtCnh.Text;
-            MotoristaModelo.TipoCnhMotorista = cbTipoCnh.Text;
-
-
 
 
             if (txtCpf.Text == "" || txtRg.Text == "" || txtNome.Text == "" || txtCnh.Text == "" || cbTipoCnh.Text == "" || txtIdVeiculo.Text == "")
@@ -71,6 +72,12 @@ namespace GuizzoLtda
             }
             else
             {
+                MotoristaModelo.CodVeiculo = Convert.ToInt32(txtIdVeiculo.Text);
+                MotoristaModelo.cpfMotorista = txtCpf.Text;
+                MotoristaModelo.RgMotorista = txtRg.Text;
+                MotoristaModelo.nomeMotorista = txtNome.Text;
+                MotoristaModelo.CnhMotorista = txtCnh.Text;
+                MotoristaModelo.TipoCnhMotorista = cbTipoCnh.Text;
                 if (Controle.CadastrarMotorista(MotoristaModelo) >= 1)
                 {
                     MessageBox.Show("Motorista Cadastrado Com Sucesso!");
@@ -87,15 +94,19 @@ namespace GuizzoLtda
 
         private void SaveUpdate_Click_1(object sender, EventArgs e)
         {
-            MotoristaModelo.CodMotorista = Convert.ToInt32(txtIdMoto.Text);
-            MotoristaModelo.cpfMotorista = txtCpf.Text;
-            MotoristaModelo.RgMotorista = txtRg.Text;
-            MotoristaModelo.nomeMotorista = txtNome.Text;
-            MotoristaModelo.CnhMotorista = txtCnh.Text;
-            MotoristaModelo.TipoCnhMotorista = cbTipoCnh.Text;
 
-            if (Controle.AtualizarMotorista(MotoristaModelo) == true)
+            if (txtCpf.Text == "" || txtRg.Text == "" || txtNome.Text == "" || txtCnh.Text == "" || cbTipoCnh.Text == "" || txtIdVeiculo.Text == "")
             {
+                MessageBox.Show("Campos obrigatórios não preenchidos");
+            }
+            else if (Controle.AtualizarMotorista(MotoristaModelo) == true)
+            {
+                MotoristaModelo.CodMotorista = Convert.ToInt32(txtIdMoto.Text);
+                MotoristaModelo.cpfMotorista = txtCpf.Text;
+                MotoristaModelo.RgMotorista = txtRg.Text;
+                MotoristaModelo.nomeMotorista = txtNome.Text;
+                MotoristaModelo.CnhMotorista = txtCnh.Text;
+                MotoristaModelo.TipoCnhMotorista = cbTipoCnh.Text;
                 MessageBox.Show("Cadastro Atualizado.");
 
                 CRUDMotorista fmotoristacrud = new CRUDMotorista(us, idcliente);
@@ -106,8 +117,7 @@ namespace GuizzoLtda
             {
                 MessageBox.Show("Erro na atualização.");
             }
-            this.Controls.Clear();
-            this.InitializeComponent();
+
         }
 
         private void CRUDMotorista_Load_1(object sender, EventArgs e)
@@ -172,6 +182,11 @@ namespace GuizzoLtda
 
         private void btnAtualizar_Click_1(object sender, EventArgs e)
         {
+            txtNome.Text = String.Empty;
+            txtCpf.Text = String.Empty;
+            txtCnh.Text = String.Empty;
+            txtRg.Text = String.Empty;
+
             SaveUpdate.Visible = true;
             SaveDelete.Visible = false;
             SaveCreate.Visible = false;
@@ -204,6 +219,11 @@ namespace GuizzoLtda
 
         private void btnCad_Click_1(object sender, EventArgs e)
         {
+            txtNome.Text = String.Empty;
+            txtCpf.Text = String.Empty;
+            txtCnh.Text = String.Empty;
+            txtRg.Text = String.Empty;
+
             SaveUpdate.Visible = false;
             SaveDelete.Visible = false;
             SaveCreate.Visible = true;
@@ -236,6 +256,11 @@ namespace GuizzoLtda
 
         private void btnApaga_Click_1(object sender, EventArgs e)
         {
+            txtNome.Text = String.Empty;
+            txtCpf.Text = String.Empty;
+            txtCnh.Text = String.Empty;
+            txtRg.Text = String.Empty;
+
             SaveUpdate.Visible = false;
             SaveDelete.Visible = true;
             SaveCreate.Visible = false;
@@ -324,8 +349,8 @@ namespace GuizzoLtda
         }
 
         private void txtNome_KeyPress_1(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+        {//permite letras e espaços
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Space);
         }
 
         private void txtCnh_KeyPress_1(object sender, KeyPressEventArgs e)

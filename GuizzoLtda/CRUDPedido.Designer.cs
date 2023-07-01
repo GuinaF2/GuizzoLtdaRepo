@@ -32,6 +32,7 @@
             dgPedido = new DataGridView();
             toolStrip1 = new ToolStrip();
             btnReturn = new ToolStripButton();
+            toolStripSeparator3 = new ToolStripSeparator();
             btnAtualizar = new ToolStripButton();
             toolStripSeparator1 = new ToolStripSeparator();
             btnCad = new ToolStripButton();
@@ -55,7 +56,6 @@
             label2 = new Label();
             label3 = new Label();
             dtPedido = new DateTimePicker();
-            toolStripSeparator3 = new ToolStripSeparator();
             ((System.ComponentModel.ISupportInitialize)dgPedido).BeginInit();
             toolStrip1.SuspendLayout();
             SuspendLayout();
@@ -64,9 +64,9 @@
             // 
             dgPedido.AllowUserToAddRows = false;
             dgPedido.AllowUserToDeleteRows = false;
-            dgPedido.BackgroundColor = SystemColors.ActiveCaptionText;
+            dgPedido.BackgroundColor = Color.Black;
             dgPedido.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgPedido.GridColor = Color.Red;
+            dgPedido.GridColor = Color.Goldenrod;
             dgPedido.Location = new Point(633, 24);
             dgPedido.Margin = new Padding(3, 4, 3, 4);
             dgPedido.Name = "dgPedido";
@@ -99,6 +99,11 @@
             btnReturn.Size = new Size(73, 24);
             btnReturn.Text = "Menu";
             btnReturn.Click += btnReturn_Click_1;
+            // 
+            // toolStripSeparator3
+            // 
+            toolStripSeparator3.Name = "toolStripSeparator3";
+            toolStripSeparator3.Size = new Size(6, 27);
             // 
             // btnAtualizar
             // 
@@ -163,7 +168,7 @@
             SaveCreate.FlatStyle = FlatStyle.Flat;
             SaveCreate.Font = new Font("Leelawadee UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
             SaveCreate.ForeColor = Color.Goldenrod;
-            SaveCreate.Location = new Point(96, 442);
+            SaveCreate.Location = new Point(87, 452);
             SaveCreate.Margin = new Padding(3, 4, 3, 4);
             SaveCreate.Name = "SaveCreate";
             SaveCreate.Size = new Size(355, 77);
@@ -176,12 +181,13 @@
             // SaveDelete
             // 
             SaveDelete.BackColor = Color.Black;
+            SaveDelete.FlatStyle = FlatStyle.Flat;
             SaveDelete.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             SaveDelete.ForeColor = Color.Goldenrod;
-            SaveDelete.Location = new Point(94, 455);
+            SaveDelete.Location = new Point(87, 452);
             SaveDelete.Margin = new Padding(3, 4, 3, 4);
             SaveDelete.Name = "SaveDelete";
-            SaveDelete.Size = new Size(343, 64);
+            SaveDelete.Size = new Size(356, 77);
             SaveDelete.TabIndex = 15;
             SaveDelete.Text = "Salvar Alteração";
             SaveDelete.UseVisualStyleBackColor = false;
@@ -191,12 +197,13 @@
             // SaveUpdate
             // 
             SaveUpdate.BackColor = Color.Black;
+            SaveUpdate.FlatStyle = FlatStyle.Flat;
             SaveUpdate.Font = new Font("Leelawadee UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             SaveUpdate.ForeColor = Color.Goldenrod;
-            SaveUpdate.Location = new Point(95, 455);
+            SaveUpdate.Location = new Point(85, 452);
             SaveUpdate.Margin = new Padding(3, 4, 3, 4);
             SaveUpdate.Name = "SaveUpdate";
-            SaveUpdate.Size = new Size(343, 64);
+            SaveUpdate.Size = new Size(357, 77);
             SaveUpdate.TabIndex = 14;
             SaveUpdate.Text = "Salvar Alteração";
             SaveUpdate.UseVisualStyleBackColor = false;
@@ -304,6 +311,7 @@
             txtVolume.Name = "txtVolume";
             txtVolume.Size = new Size(142, 22);
             txtVolume.TabIndex = 40;
+            txtVolume.KeyPress += txtVolume_KeyPress;
             // 
             // txtTipoPedido
             // 
@@ -314,6 +322,7 @@
             txtTipoPedido.Name = "txtTipoPedido";
             txtTipoPedido.Size = new Size(142, 22);
             txtTipoPedido.TabIndex = 41;
+            txtTipoPedido.KeyPress += txtTipoPedido_KeyPress;
             // 
             // label1
             // 
@@ -336,6 +345,7 @@
             label2.Size = new Size(130, 30);
             label2.TabIndex = 38;
             label2.Text = "Tipo Pedido";
+            label2.Visible = false;
             // 
             // label3
             // 
@@ -347,6 +357,8 @@
             label3.Size = new Size(131, 30);
             label3.TabIndex = 39;
             label3.Text = "Data Pedido";
+            label3.Visible = false;
+            label3.Click += label3_Click;
             // 
             // dtPedido
             // 
@@ -358,11 +370,6 @@
             dtPedido.Name = "dtPedido";
             dtPedido.Size = new Size(85, 22);
             dtPedido.TabIndex = 42;
-            // 
-            // toolStripSeparator3
-            // 
-            toolStripSeparator3.Name = "toolStripSeparator3";
-            toolStripSeparator3.Size = new Size(6, 27);
             // 
             // CRUDPedido
             // 

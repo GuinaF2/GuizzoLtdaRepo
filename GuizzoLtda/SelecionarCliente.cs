@@ -30,7 +30,7 @@ namespace GuizzoLtda
         private void SelecionarCliente_Load_1(object sender, EventArgs e)
         {
             us = usu.CarregaEmpresa(idcliente);
-            dgCliente.DataSource = conexaosql.verDados("SELECT * FROM tb_cliente");
+            dgCliente.DataSource = conexaosql.verDados("SELECT * FROM tb_cliente where statuscadastro='Aprovada'");
         }
 
         private void dgCliente_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
