@@ -9,15 +9,15 @@ This project was developed to demonstrate the knowledge acquired during the cour
 - Implementation of Google Maps API
 
 ## Project Structure
--´ GuizzoLtda/: Main application directory
+-' GuizzoLtda/: Main application directory
 
--´ Modelos/: Contains data models
+-' Modelos/: Contains data models
 
--´ GuizzoLtda.sln: Visual Studio solution file
+-' GuizzoLtda.sln: Visual Studio solution file
 
--´ bdguizzo.sql: SQL script for database setup
+-' bdguizzo.sql: SQL script for database setup
 
--´ README.md: Project documentation
+-' README.md: Project documentation
 
 ## Technologies Used
 - C#: Backend development
