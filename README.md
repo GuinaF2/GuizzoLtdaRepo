@@ -1,6 +1,46 @@
-Guizzo Ltda
+Guizzo Ltda - Transportation Management System
+This project was developed to demonstrate the knowledge acquired during the course.
 
-Esse projeto foi construído com intenção de demonstrar os conhecimentos adquiridos durante o curso
+Features
+Full CRUD operations with permission definitions for different user types
 
-Funções:CRUD completo com definições de permissão para tipos diferentes de usuário, inserção de imagens e implementação de API do Google Maps.
+Image insertion
 
+Implementation of Google Maps API
+
+Project Structure
+GuizzoLtda/: Main application directory
+
+Modelos/: Contains data models
+
+GuizzoLtda.sln: Visual Studio solution file
+
+bdguizzo.sql: SQL script for database setup
+
+README.md: Project documentation
+
+Technologies Used
+C#: Backend development
+
+SQL: Database management
+
+Google Maps API: Integration for mapping functionalities
+
+Getting Started
+Clone the repository:
+
+bash
+Copy
+Edit
+git clone https://github.com/GuinaF2/GuizzoLtda.git
+cd GuizzoLtda
+Open the GuizzoLtda.sln file in Visual Studio.
+
+Set up the database using the bdguizzo.sql script.
+
+Build and run the application.
+
+License
+This project is licensed under the MIT License.
+
+If you need further assistance or additional information, feel free to ask!
