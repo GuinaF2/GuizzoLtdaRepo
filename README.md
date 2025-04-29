@@ -29,9 +29,10 @@ This project was developed to demonstrate the knowledge acquired during the cour
 ## Getting Started
 1. Clone the repository:
    
-```bash
+bash
 Copy
 Edit
+```
 git clone https://github.com/GuinaF2/GuizzoLtda.git
 cd GuizzoLtda
 ```
