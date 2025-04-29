@@ -1,4 +1,4 @@
-##Guizzo Ltda - Transportation Management System
+#Guizzo Ltda - Transportation Management System
 This project was developed to demonstrate the knowledge acquired during the course.
 
 ##Features
@@ -28,12 +28,13 @@ Project Structure
 
 ##Getting Started
 Clone the repository:
-
-bash
+```
+#bash
 Copy
 Edit
 git clone https://github.com/GuinaF2/GuizzoLtda.git
 cd GuizzoLtda
+```
 Open the -´GuizzoLtda.sln file in Visual Studio.
 
 Set up the database using the -´bdguizzo.sql script.
