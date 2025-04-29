@@ -1,6 +1,6 @@
 ## Guizzo Ltda - Transportation Management System
 This project was developed to demonstrate the knowledge acquired during the course.
-
+ 
 ## Features
 - Full CRUD operations with permission definitions for different user types
 
